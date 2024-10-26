@@ -65,7 +65,7 @@ Note: This is a wrapper for a [remote API service](https://netzeroapis.com/redoc
 Signature:
 
 ```python
-sap10.calculate(
+sap10calcs.calculate(
         input_file = None,
         input_lxml = None,
         calculation_method = 'Energy rating',
@@ -79,7 +79,7 @@ sap10.calculate(
 
 Arguments: 
 - **input_file** *(str)*: The filepath of the SAP XML input file. This is an XML file based on the XML schema [SAP-Schema-19.1.0](https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.1.0/SAP).
-- **input_lxml** *(sap10.sap_xml.SAP_Compliance_Report, sap10.sap_xml.SAP_Report or lxml.etree.ElementBase*): An alternative to the `input_file` argument. This is a Python instance (i.e. an object) which holds the XML data instead. This is useful if an XML input file is being edited and means a calculation can be run without saving the XML to a local file first.
+- **input_lxml** *(sap10calcs.sap_xml.SAP_Compliance_Report, sap10calcs.sap_xml.SAP_Report or lxml.etree.ElementBase*): An alternative to the `input_file` argument. This is a Python instance (i.e. an object) which holds the XML data instead. This is useful if an XML input file is being edited and means a calculation can be run without saving the XML to a local file first.
 - **calculation_method** *(str)*: The type of SAP calculation to be run. The options are: *'New dwelling as designed - dwelling emissions'*; *'Energy rating'*; *'EPC costs, emissions and primary energy'*. Default is `Energy rating`.
 - **year** *(int)*: If using *'EPC costs, emissions and primary energy'*, this is the year for the calculation.
 - **month** *(int)*: If using *'EPC costs, emissions and primary energy'*, this is the month for the calculation.
