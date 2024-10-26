@@ -1,5 +1,5 @@
 # sap10calcs
-SAP 10 energy calculation method in Python
+SAP 10.2 energy calculation method in Python
 
 ## Introduction
 
