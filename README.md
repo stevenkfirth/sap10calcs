@@ -1,4 +1,4 @@
-# sap10
+# sap10calcs
 SAP 10 energy calculation method in Python
 
 ## Introduction
