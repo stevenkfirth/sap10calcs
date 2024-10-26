@@ -20,7 +20,7 @@ All documentation for this Python package is contained in the readme file on the
 
 - **example_input_files**: A directory containing a suite of SAP XML files, and the code used to create these files.
 - **examples**: A directory containing examples of how to use this Python package.
-- **sap10**: A directory containing the source code of this Python package.
+- **sap10calcs**: A directory containing the source code of this Python package.
 - **test**: A directory containing unittests to test this Python package.
 
 
@@ -119,7 +119,7 @@ Note: This is used when creating a SAP XML file from scratch. This should be use
 Signature:
 
 ```python
-sap10.create_sap_report_xml()
+sap10calcs.create_sap_report_xml()
 ```
 
 Returns:
