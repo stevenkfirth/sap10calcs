@@ -124,8 +124,8 @@ sap10.create_sap_report_xml()
 
 Returns:
 - A tuple with two items:
-    - `tree`: An lxml.etree with a single root element of a [`SAP_Report`](#sap10sap_xmlsap_compliance_reportsap_report) instance.
-    - `root`: A [`SAP_Report`](#sap10sap_xmlsap_compliance_reportsap_report) instance, where SAP_Report is a subclass of an lxml.element. This is an lxml element and can be used to work with the XML using the normal lxml functions and techniques. It also contains additional class properties and methods which are designed to help working with SAP10 XML files.
+    - `tree`: An lxml.etree with a single root element of a [`SAP_Report`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcssap_xmlsap_compliance_reportsap_report) instance.
+    - `root`: A [`SAP_Report`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcssap_xmlsap_compliance_reportsap_report) instance, where SAP_Report is a subclass of an lxml.element. This is an lxml element and can be used to work with the XML using the normal lxml functions and techniques. It also contains additional class properties and methods which are designed to help working with SAP10 XML files.
 
 [Example - creating a new empty SAP XML file](https://github.com/stevenkfirth/sap10calcs/blob/main/examples/Example%20-%20creating%20a%20new%20empty%20SAP%20XML%20file.ipynb):
 
@@ -168,8 +168,8 @@ Arguments:
 
 Returns:
 - A tuple with two items:
-    - `tree`: An lxml.etree with a single root element of a [`SAP_Report`](#sap10calcssap_xmlsap_report) instance or a [`SAP_Compliance_Report`](#sap10calcssap_xmlsap_compliance_report) instance.
-    - `root`: A [`SAP_Report`](#sap10calcssap_xmlsap_report) instance or a [`SAP_Compliance_Report`](#sap10calcssap_xmlsap_compliance_report) instance. These are an lxml element and can be used to work with the XML using the normal lxml functions and techniques. It also contains additional class properties and methods which are designed to help working with SAP10 XML files.
+    - `tree`: An lxml.etree with a single root element of a [`SAP_Report`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcssap_xmlsap_compliance_reportsap_report) instance or a [`SAP_Compliance_Report`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcssap_xmlsap_compliance_report) instance.
+    - `root`: A [`SAP_Report`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcssap_xmlsap_compliance_reportsap_report) instance or a [`SAP_Compliance_Report`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcssap_xmlsap_compliance_report) instance. These are an lxml element and can be used to work with the XML using the normal lxml functions and techniques. It also contains additional class properties and methods which are designed to help working with SAP10 XML files.
 
 [Example - parsing an existing SAP XML file](https://github.com/stevenkfirth/sap10calcs/blob/main/examples/Example%20-%20parsing%20an%20existing%20SAP%20XML%20file.ipynb):
 
@@ -300,7 +300,7 @@ print(root.display(show_values = True))
 
 Description: A custom lxml.element class which contains additional properties and methods for SAP-Report XML elements. 
 
-Note: This can be the root of a SAP XML file. Instances of this class should arise from using [`create_sap_report_xml()`](#sap10calcscreate_sap_report_xml) or [`parse_xml()`](#sap10calcsparse_xml), and should not created by the user directly. The custom methods and properties can be used to access and create other XML elements.
+Note: This can be the root of a SAP XML file. Instances of this class should arise from using [`create_sap_report_xml()`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcssap_xmlsap_compliance_reportsap_report) or [`parse_xml()`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcsparse_xml), and should not created by the user directly. The custom methods and properties can be used to access and create other XML elements.
 
 [Example - viewing the properties and methods of a SAP_Report element](https://github.com/stevenkfirth/sap10calcs/blob/main/examples/Example%20-%20viewing%20the%20properties%20and%20methods%20of%20a%20SAP_Report%20element.ipynb)
 
@@ -337,9 +337,9 @@ print(sap_report.sap_version)  # access a child element
 
 Description: A custom lxml.element class which contains additional properties and methods for SAP-Compliance-Report XML elements.
 
-Note: This can be the root of a SAP XML file. Instances of this class may arise from using [`parse_xml()`](#sap10calcsparse_xml), and should not created by the user directly. The custom methods and properties can be used to access and create other XML elements.
+Note: This can be the root of a SAP XML file. Instances of this class may arise from using [`parse_xml()`](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcsparse_xml), and should not created by the user directly. The custom methods and properties can be used to access and create other XML elements.
 
-Example - see the [SAP_Report](#sap10calcssap_xmlsap_compliance_reportsap_report) example above.
+Example - see the [SAP_Report](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#sap10calcssap_xmlsap_compliance_reportsap_report) example above.
 
 
 ### sap10calcs.sap_xml.[...many other classes...]
@@ -366,6 +366,6 @@ This blog post discusses how to do this:
 
 RdSAP is a separate process to the main SAP calculation. RdSAP input files are simpler and have less inputs than the full SAP input files, and are typically used for existing buildings where collecting the data for a full SAP input file would be difficult. To run a full SAP calculation using a RdSAP input file, the RdSAP input file must first be converted to a full SAP input file.
 
-This additional functionality is under development. If this is of interest, please [send a request](#issues--requests).
+This additional functionality is under development. If this is of interest, please [send a request](https://github.com/stevenkfirth/sap10calcs/tree/main?tab=readme-ov-file#issues--requests).
 
 
