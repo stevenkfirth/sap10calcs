@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sap10calcs"
+version = "0.0.2"
+authors = [
+  { name="Steven Firth", email="s.k.firth@lboro.ac.uk" },
+]
+description = "SAP 10.2 energy calculation method in Python"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests",
+    "lxml"
+]
+
+[tool.setuptools]
+packages = ["sap10calcs"]
+
+[project.urls]
+Homepage = "https://github.com/stevenkfirth/sap10calcs"

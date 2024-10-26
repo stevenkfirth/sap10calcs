@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+
+
+#%% SAP_Schema_19_1_0
+# - This is an instance of lxml.etree.XMLParser
+
+from lxml import etree
+import importlib
+import os
+from . import classes_SAP_Schema_19_1_0
+
+SAP_Schema_19_1_0_parser = etree.XMLParser(remove_blank_text=True)
+
+def MyLookup_factory():
+    ""
+    
+    class MyLookup(etree.PythonElementClassLookup):
+        ""
+        
+        def lookup(self, document, element):
+            
+            # setup
+            tag = element.tag
+            name = tag.split('}')[1]
+            class_name = name.replace('-','_')
+            #print('name', name)
+            
+            # generate path
+            x = element
+            path = [class_name]
+            
+            while True:
+                parent = x.getparent()
+                if parent is None:
+                    break
+                parent_class_name = parent.tag.split('}')[1].replace('-','_')
+                path.insert(0,parent_class_name)
+                x = parent
+                
+            if path[0] == 'SAP_Report':
+                path.insert(0,'SAP_Compliance_Report')
+            
+            # get class_SAP_Schema_19_1_0
+            x = classes_SAP_Schema_19_1_0
+            for y in path:
+                x = getattr(x,y)
+            class_SAP_Schema_19_1_0 = x
+            
+            if x is None:
+                
+                return etree.ElementBase
+            
+            else:
+                
+                return type(class_name,tuple([class_SAP_Schema_19_1_0]),{})
+    
+    return MyLookup
+
+
+SAP_Schema_19_1_0_parser.set_element_class_lookup(MyLookup_factory()())
+
+#%%
+
+
+
+
+
