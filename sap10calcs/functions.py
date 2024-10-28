@@ -6,6 +6,7 @@ from io import StringIO, BytesIO
 
 
 from .instances import SAP_Schema_19_1_0_parser
+from .instances import RdSAP_Schema_21_0_0_parser
 
 
 #%% calculate
@@ -135,6 +136,37 @@ def create_sap_report_xml():
     return tree, root
     
     
+    
+def create_rdsap_report_xml():
+    ""
+    
+    xml = """
+    <RdSAP-Report xmlns="https://epbr.digital.communities.gov.uk/xsd/rdsap">
+        <Schema-Version-Original>RdSAP-Schema-21.0.0</Schema-Version-Original>
+        <SAP-Version>10.2</SAP-Version>
+    </RdSAP-Report>"""
+
+    tree = etree.parse(
+        StringIO(xml),
+        parser = RdSAP_Schema_21_0_0_parser
+        )
+    
+    root = tree.getroot() 
+    
+    return tree, root
+    
+    
+def parse_rdsap_xml():
+    ""
+    
+    tree = etree.parse(
+        input_file,
+        parser = RdSAP_Schema_21_0_0_parser
+        )
+    
+    root = tree.getroot() 
+    
+    return tree, root
     
     
     

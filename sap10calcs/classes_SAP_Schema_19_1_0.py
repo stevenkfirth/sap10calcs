@@ -68,7 +68,10 @@ class _Base():
     @property
     def sap_xml_methods(self):
         ""
-        return ['copy', 'display'] + [f'add_{x}' for x in self.sap_xml_properties]
+        return (
+            ['copy', 'display'] 
+            + [f'add_{x}' for x in self.sap_xml_properties if not x in ['code', 'value', 'sap_xml_codes']]
+            )
 
 
     @property

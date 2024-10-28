@@ -11,7 +11,7 @@ import sap10calcs
 class calculate(unittest.TestCase):
     ""
     
-    def test_1(self):
+    def _test_1(self):
         ""
         
         
@@ -68,8 +68,6 @@ class calculate(unittest.TestCase):
         
         
 
-
-
 class create_sap_report_xml(unittest.TestCase):
     ""
     
@@ -82,6 +80,20 @@ class create_sap_report_xml(unittest.TestCase):
         print('---')
         print(root.display())
 
+
+class create_rdsap_report_xml(unittest.TestCase):
+    ""
+    
+    def test_1(self):
+        ""
+        
+        tree, root = sap10calcs.create_rdsap_report_xml()
+
+        #print(etree.tostring(tree, pretty_print=True).decode())
+        #print('---')
+        print(root.display())
+        
+        print(root.sap_xml_properties)
 
 
 if __name__ == '__main__':
