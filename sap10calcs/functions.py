@@ -8,6 +8,56 @@ from io import StringIO, BytesIO
 from .instances import SAP_Schema_19_1_0_parser
 from .instances import RdSAP_Schema_21_0_0_parser
 
+#%% rdsap
+
+def rdsap(
+    input_file = None,
+    input_lxml = None,
+    verbose = False,
+    url = 'https://netzeroapis.com/calc/rdsap10',
+    auth_token = None
+    ):
+    ""
+    if verbose:
+        print('url:', url)
+
+    if not input_file is None:
+        files = {'file': open(input_file, 'rb')}
+    elif not input_lxml is None:
+        files = {'file': BytesIO(etree.tostring(input_lxml))}
+    else:
+        raise Exception
+
+    if not auth_token is None:
+        headers = {'Authorization': f'Bearer {auth_token}'}
+    else:
+        headers = {}   
+    if verbose:
+        print('headers:', headers)
+    
+    r = requests.post(
+        url,
+        files = files,
+        headers = headers
+        )
+    
+    if verbose:
+        print('status_code:', r.status_code)
+    
+    if r.status_code == 200:
+
+        result = r.json()
+        result['sap_xml'] = etree.parse(StringIO(result['sap_xml']), parser = SAP_Schema_19_1_0_parser)
+        return result
+
+    elif r.status_code in [401, 404]:
+        raise Exception(str(r.status_code) + ' - ' + str(r.json()['detail']))
+    elif r.status_code == 500:
+        raise Exception(str(r.status_code) + ' - ' + str(r.content.decode()))
+    else:
+        raise Exception(str(r.status_code) + ' - ' + str(r.content.decode()))
+            
+
 
 #%% calculate
 
