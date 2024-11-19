@@ -65,7 +65,15 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **9.80** - *SAP 2005 version 9.80, dated October 2005*    - **9.81** - *SAP version 9.81, dated January 2008*    - **9.82** - *SAP version 9.82, dated Jun 2008*    - **9.83** - *SAP version 9.83, dated Jun 2009*    - **9.90** - *SAP version 9.90, dated Mar 2010*    - **9.91** - *SAP version 9.91, dated Jan 2012*    - **9.92** - *SAP version 9.92, dated Oct 2013*    - **10.2** - *SAP version 10.2, dated Oct 2020*
+    - **9.80** - *SAP 2005 version 9.80, dated October 2005*
+    - **9.81** - *SAP version 9.81, dated January 2008*
+    - **9.82** - *SAP version 9.82, dated Jun 2008*
+    - **9.83** - *SAP version 9.83, dated Jun 2009*
+    - **9.90** - *SAP version 9.90, dated Mar 2010*
+    - **9.91** - *SAP version 9.91, dated Jan 2012*
+    - **9.92** - *SAP version 9.92, dated Oct 2013*
+    - **10.2** - *SAP version 10.2, dated Oct 2020*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP-Data-Version"></a>SAP-Data-Version
 
 `SAP-Compliance-Report/SAP-Report/SAP-Data-Version`
@@ -77,7 +85,15 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **9.80** - *SAP 2005 version 9.80, dated October 2005*    - **9.81** - *SAP version 9.81, dated January 2008*    - **9.82** - *SAP version 9.82, dated Jun 2008*    - **9.83** - *SAP version 9.83, dated Jun 2009*    - **9.90** - *SAP version 9.90, dated Mar 2010*    - **9.91** - *SAP version 9.91, dated Jan 2012*    - **9.92** - *SAP version 9.92, dated Oct 2013*    - **10.2** - *SAP version 10.2, dated Oct 2020*
+    - **9.80** - *SAP 2005 version 9.80, dated October 2005*
+    - **9.81** - *SAP version 9.81, dated January 2008*
+    - **9.82** - *SAP version 9.82, dated Jun 2008*
+    - **9.83** - *SAP version 9.83, dated Jun 2009*
+    - **9.90** - *SAP version 9.90, dated Mar 2010*
+    - **9.91** - *SAP version 9.91, dated Jan 2012*
+    - **9.92** - *SAP version 9.92, dated Oct 2013*
+    - **10.2** - *SAP version 10.2, dated Oct 2020*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/PCDF-Revision-Number"></a>PCDF-Revision-Number
 
 `SAP-Compliance-Report/SAP-Report/PCDF-Revision-Number`
@@ -185,7 +201,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Home Condition Report*    - **2** - *RdSAP Energy Performance Certificate*    - **3** - *SAP Energy Performance Certificate*    - **4** - *Interim RdSAP Energy Performance Certificate (to be superseded by SAP EPC)*
+    - **1** - *Home Condition Report*
+    - **2** - *RdSAP Energy Performance Certificate*
+    - **3** - *SAP Energy Performance Certificate*
+    - **4** - *Interim RdSAP Energy Performance Certificate (to be superseded by SAP EPC)*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Completion-Date"></a>Completion-Date
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Completion-Date`
@@ -221,7 +241,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **cancelled** - *Cancelled*    - **entered** - *entered on the register*    - **appeal** - *under appeal*    - **removed** - *removed*    - **rejected** - *rejected*    - **under investigation** - *under investigation*    - **not for issue** - *not for issue*
+    - **cancelled** - *Cancelled*
+    - **entered** - *entered on the register*
+    - **appeal** - *under appeal*
+    - **removed** - *removed*
+    - **rejected** - *rejected*
+    - **under investigation** - *under investigation*
+    - **not for issue** - *not for issue*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Language-Code"></a>Language-Code
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Language-Code`
@@ -233,7 +260,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *English*    - **2** - *Welsh*
+    - **1** - *English*
+    - **2** - *Welsh*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Tenure"></a>Tenure
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Tenure`
@@ -245,7 +274,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *owner-occupied*    - **2** - *rented (social)*    - **3** - *rented (private)*    - **ND** - *unknown*
+    - **1** - *owner-occupied*
+    - **2** - *rented (social)*
+    - **3** - *rented (private)*
+    - **ND** - *unknown*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Transaction-Type"></a>Transaction-Type
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Transaction-Type`
@@ -257,7 +290,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *marketed sale*    - **2** - *non marketed sale*    - **3** - *rental (social) - this is for backwards compatibility only and should not be used*    - **4** - *rental (private) - this is for backwards compatibility only and should not be used*    - **5** - *none of the above*    - **6** - *new dwelling*    - **7** - *not recorded - this is for backwards compatibility only and should not be used*    - **8** - *rental*    - **9** - *assessment for green deal*    - **10** - *following green deal*    - **11** - *FiT application*
+    - **1** - *marketed sale*
+    - **2** - *non marketed sale*
+    - **3** - *rental (social) - this is for backwards compatibility only and should not be used*
+    - **4** - *rental (private) - this is for backwards compatibility only and should not be used*
+    - **5** - *none of the above*
+    - **6** - *new dwelling*
+    - **7** - *not recorded - this is for backwards compatibility only and should not be used*
+    - **8** - *rental*
+    - **9** - *assessment for green deal*
+    - **10** - *following green deal*
+    - **11** - *FiT application*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Seller-Commission-Report"></a>Seller-Commission-Report
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Seller-Commission-Report`
@@ -269,7 +313,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **Y** - *Yes*    - **N** - *No*
+    - **Y** - *Yes*
+    - **N** - *No*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property-Type"></a>Property-Type
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Property-Type`
@@ -281,7 +327,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *House*    - **1** - *Bungalow*    - **2** - *Flat*    - **3** - *Maisonette*    - **4** - *Park home*
+    - **0** - *House*
+    - **1** - *Bungalow*
+    - **2** - *Flat*
+    - **3** - *Maisonette*
+    - **4** - *Park home*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector"></a>Home-Inspector
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`
@@ -317,7 +368,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **Y** - *Yes*    - **N** - *No*
+    - **Y** - *Yes*
+    - **N** - *No*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address"></a>Contact-Address
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address`
@@ -641,7 +694,31 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Borders*    - **2** - *East Anglia*    - **3** - *East Pennines*    - **4** - *East Scotland*    - **5** - *Highland*    - **6** - *Midlands*    - **7** - *North East England*    - **8** - *North East Scotland*    - **9** - *North West England / South West Scotland*    - **10** - *Northern Ireland*    - **11** - *Orkney*    - **12** - *Severn Valley*    - **13** - *Shetland*    - **14** - *South East England*    - **15** - *South West England*    - **16** - *Southern England*    - **17** - *Thames Valley*    - **18** - *Wales*    - **19** - *West Pennines*    - **20** - *West Scotland*    - **21** - *Western Isles*    - **22** - *Jersey*    - **23** - *Guernsey*    - **24** - *Isle of Man*
+    - **1** - *Borders*
+    - **2** - *East Anglia*
+    - **3** - *East Pennines*
+    - **4** - *East Scotland*
+    - **5** - *Highland*
+    - **6** - *Midlands*
+    - **7** - *North East England*
+    - **8** - *North East Scotland*
+    - **9** - *North West England / South West Scotland*
+    - **10** - *Northern Ireland*
+    - **11** - *Orkney*
+    - **12** - *Severn Valley*
+    - **13** - *Shetland*
+    - **14** - *South East England*
+    - **15** - *South West England*
+    - **16** - *Southern England*
+    - **17** - *Thames Valley*
+    - **18** - *Wales*
+    - **19** - *West Pennines*
+    - **20** - *West Scotland*
+    - **21** - *Western Isles*
+    - **22** - *Jersey*
+    - **23** - *Guernsey*
+    - **24** - *Isle of Man*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Country-Code"></a>Country-Code
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Country-Code`
@@ -653,7 +730,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **EAW** - *England and Wales, for backwards compatibility only.*    - **ENG** - *England*    - **WLS** - *Wales*    - **SCT** - *Scotland*    - **NIR** - *Northern Ireland*
+    - **EAW** - *England and Wales, for backwards compatibility only.*
+    - **ENG** - *England*
+    - **WLS** - *Wales*
+    - **SCT** - *Scotland*
+    - **NIR** - *Northern Ireland*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure"></a>Related-Party-Disclosure
 
 `SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure`
@@ -689,7 +771,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *No related party*    - **2** - *Relative of homeowner or of occupier of the property*    - **3** - *Residing at the property*    - **4** - *Financial interest in the property*    - **5** - *Owner or Director of the organisation dealing with the property transaction*    - **6** - *Employed by the professional dealing with the property transaction*    - **7** - *Relative of the professional dealing with the property transaction*
+    - **1** - *No related party*
+    - **2** - *Relative of homeowner or of occupier of the property*
+    - **3** - *Residing at the property*
+    - **4** - *Financial interest in the property*
+    - **5** - *Owner or Director of the organisation dealing with the property transaction*
+    - **6** - *Employed by the professional dealing with the property transaction*
+    - **7** - *Relative of the professional dealing with the property transaction*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment"></a>Energy-Assessment
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment`
@@ -761,7 +850,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Environmental-Efficiency-Rating`
@@ -773,7 +868,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof"></a>Roof
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof`
@@ -809,7 +910,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Environmental-Efficiency-Rating`
@@ -821,7 +928,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor"></a>Floor
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor`
@@ -857,7 +970,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Environmental-Efficiency-Rating`
@@ -869,7 +988,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows"></a>Windows
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows`
@@ -905,7 +1030,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Environmental-Efficiency-Rating`
@@ -917,7 +1048,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating"></a>Main-Heating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating`
@@ -953,7 +1090,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Environmental-Efficiency-Rating`
@@ -965,7 +1108,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls"></a>Main-Heating-Controls
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls`
@@ -1001,7 +1150,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Environmental-Efficiency-Rating`
@@ -1013,7 +1168,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating"></a>Secondary-Heating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating`
@@ -1049,7 +1210,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Environmental-Efficiency-Rating`
@@ -1061,7 +1228,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water"></a>Hot-Water
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water`
@@ -1097,7 +1270,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Environmental-Efficiency-Rating`
@@ -1109,7 +1288,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting"></a>Lighting
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting`
@@ -1145,7 +1330,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Environmental-Efficiency-Rating`
@@ -1157,7 +1348,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness"></a>Air-Tightness
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness`
@@ -1193,7 +1390,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Environmental-Efficiency-Rating`
@@ -1205,7 +1408,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *N/A*    - **1** - *Very Poor*    - **2** - *Poor*    - **3** - *Average*    - **4** - *Good*    - **5** - *Very Good*
+    - **0** - *N/A*
+    - **1** - *Very Poor*
+    - **2** - *Poor*
+    - **3** - *Average*
+    - **4** - *Good*
+    - **5** - *Very Good*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Fixed-Air-Conditioning"></a>Has-Fixed-Air-Conditioning
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Fixed-Air-Conditioning`
@@ -1217,7 +1426,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Hot-Water-Cylinder"></a>Has-Hot-Water-Cylinder
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Hot-Water-Cylinder`
@@ -1229,7 +1442,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Heated-Separate-Conservatory"></a>Has-Heated-Separate-Conservatory
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Heated-Separate-Conservatory`
@@ -1241,7 +1458,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Dwelling-Type"></a>Dwelling-Type
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Dwelling-Type`
@@ -1301,7 +1522,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use"></a>Energy-Use
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`
@@ -1625,7 +1850,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Lower cost - this is for backwards compatibility only and should not be used*    - **2** - *Higher cost - this is for backwards compatibility only and should not be used*    - **3** - *Further measure - this is for backwards compatibility only and should not be used*    - **4** - *Deselected. This is for backwards compatibility only and should not be used.*    - **5** - *Normal measure*    - **6** - *Alternative measure*
+    - **1** - *Lower cost - this is for backwards compatibility only and should not be used*
+    - **2** - *Higher cost - this is for backwards compatibility only and should not be used*
+    - **3** - *Further measure - this is for backwards compatibility only and should not be used*
+    - **4** - *Deselected. This is for backwards compatibility only and should not be used.*
+    - **5** - *Normal measure*
+    - **6** - *Alternative measure*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Type"></a>Improvement-Type
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Type`
@@ -1637,7 +1868,44 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **A** - *Loft insulation*    - **A2** - *Flat roof insulation*    - **A3** - *Room-in-roof insulation*    - **B** - *Cavity wall insulation*    - **C** - *Hot water cylinder insulation*    - **D** - *Draughtproofing*    - **E** - *Low energy lights*    - **F** - *Cylinder thermostat*    - **G** - *Heating controls for wet central heating system*    - **H** - *Heating controls for warm air system*    - **I** - *Upgrade boiler, same fuel*    - **J** - *Biomass boiler*    - **J2** - *Biomass boiler as alternative improvement*    - **K** - *Biomass room heater with boiler*    - **L** - *New or replacement fan-assisted storage heaters*    - **L2** - *New or replacement high heat retention storage heaters*    - **M** - *Replacement warm-air unit*    - **N** - *Solar water heating*    - **O** - *Replacement double glazed windows*    - **O3** - *Replacement double glazing units*    - **P** - *Secondary glazing*    - **Q** - *Solid wall insulation*    - **Q2** - *External insulation with cavity wall insulation*    - **R** - *Condensing oil boiler*    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*    - **T2** - *Flue gas heat recovery*    - **U** - *Photovoltaics*    - **V** - *Wind turbine (roof mounted)*    - **V2** - *Wind turbine (on mast)*    - **W** - *Floor insulation*    - **X** - *Insulated doors*    - **Y** - *Instantaneous waste water heat recovery*    - **Y2** - *Storage waste water heat recovery*    - **Z1** - *Air or ground source heat pump*    - **Z2** - *Air or ground source heat pump with underfloor heating*    - **Z3** - *Micro-CHP*
+    - **A** - *Loft insulation*
+    - **A2** - *Flat roof insulation*
+    - **A3** - *Room-in-roof insulation*
+    - **B** - *Cavity wall insulation*
+    - **C** - *Hot water cylinder insulation*
+    - **D** - *Draughtproofing*
+    - **E** - *Low energy lights*
+    - **F** - *Cylinder thermostat*
+    - **G** - *Heating controls for wet central heating system*
+    - **H** - *Heating controls for warm air system*
+    - **I** - *Upgrade boiler, same fuel*
+    - **J** - *Biomass boiler*
+    - **J2** - *Biomass boiler as alternative improvement*
+    - **K** - *Biomass room heater with boiler*
+    - **L** - *New or replacement fan-assisted storage heaters*
+    - **L2** - *New or replacement high heat retention storage heaters*
+    - **M** - *Replacement warm-air unit*
+    - **N** - *Solar water heating*
+    - **O** - *Replacement double glazed windows*
+    - **O3** - *Replacement double glazing units*
+    - **P** - *Secondary glazing*
+    - **Q** - *Solid wall insulation*
+    - **Q2** - *External insulation with cavity wall insulation*
+    - **R** - *Condensing oil boiler*
+    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*
+    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*
+    - **T2** - *Flue gas heat recovery*
+    - **U** - *Photovoltaics*
+    - **V** - *Wind turbine (roof mounted)*
+    - **V2** - *Wind turbine (on mast)*
+    - **W** - *Floor insulation*
+    - **X** - *Insulated doors*
+    - **Y** - *Instantaneous waste water heat recovery*
+    - **Y2** - *Storage waste water heat recovery*
+    - **Z1** - *Air or ground source heat pump*
+    - **Z2** - *Air or ground source heat pump with underfloor heating*
+    - **Z3** - *Micro-CHP*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Typical-Saving"></a>Typical-Saving
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Typical-Saving`
@@ -1745,7 +2013,61 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Insulate hot water cylinder with 80 mm jacket*    - **2** - *Increase hot water cylinder insulation*    - **3** - *Add additional 80 mm jacket to hot water cylinder*    - **4** - *Hot water cylinder thermostat*    - **5** - *Increase loft insulation to 270 mm*    - **6** - *Cavity wall insulation*    - **7** - *Internal or external wall insulation*    - **8** - *Replace single glazed windows with low-E double glazing*    - **9** - *Secondary glazing to single glazed windows*    - **10** - *Draught proofing*    - **11** - *Heating controls (programmer, room thermostat and TRVs)*    - **12** - *Heating controls (room thermostat and TRVs)*    - **13** - *Heating controls (thermostatic radiator valves)*    - **14** - *Heating controls (room thermostat)*    - **15** - *Heating controls (programmer and TRVs)*    - **16** - *Heating controls (time and temperature zone control)*    - **17** - *Heating controls (programmer and room thermostat)*    - **18** - *Heating controls (room thermostat)*    - **19** - *Solar water heating*    - **20** - *Replace boiler with new condensing boiler*    - **21** - *Replace boiler with new condensing boiler*    - **22** - *Replace boiler with biomass boiler*    - **23** - *Wood pellet stove with boiler and radiators*    - **24** - *Fan assisted storage heaters and dual immersion cylinder*    - **25** - *Fan assisted storage heaters*    - **26** - *Replacement warm air unit*    - **27** - *Change heating to gas condensing boiler*    - **28** - *Condensing oil boiler with radiators*    - **29** - *Change heating to gas condensing boiler*    - **30** - *Fan assisted storage heaters and dual immersion cylinder*    - **31** - *Fan-assisted storage heaters*    - **32** - *Change heating to gas condensing boiler*    - **34** - *Solar photovoltaic panels, 2.5 kWp*    - **35** - *Low energy lighting for all fixed outlets*    - **36** - *Replace heating unit with condensing unit*    - **37** - *Condensing boiler (separate from the range cooker)*    - **38** - *Condensing boiler (separate from the range cooker)*    - **39** - *Wood pellet stove with boiler and radiators*    - **40** - *Change room heaters to condensing boiler*    - **41** - *Change room heaters to condensing boiler*    - **42** - *Replace heating unit with mains gas condensing unit*    - **43** - *Condensing oil boiler with radiators*    - **44** - *Wind turbine*    - **45** - *Flat roof insulation*    - **46** - *Room-in-roof insulation*    - **47** - *Floor insulation*    - **48** - *High performance external doors*    - **49** - *Heat recovery system for mixer showers*    - **50** - *Flue gas heat recovery device in conjunction with boiler*    - **51** - *Air or ground source heat pump*    - **52** - *Air or ground source heat pump with underfloor heating*    - **53** - *Micro CHP*    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*    - **55** - *External insulation with cavity wall insulation*
+    - **1** - *Insulate hot water cylinder with 80 mm jacket*
+    - **2** - *Increase hot water cylinder insulation*
+    - **3** - *Add additional 80 mm jacket to hot water cylinder*
+    - **4** - *Hot water cylinder thermostat*
+    - **5** - *Increase loft insulation to 270 mm*
+    - **6** - *Cavity wall insulation*
+    - **7** - *Internal or external wall insulation*
+    - **8** - *Replace single glazed windows with low-E double glazing*
+    - **9** - *Secondary glazing to single glazed windows*
+    - **10** - *Draught proofing*
+    - **11** - *Heating controls (programmer, room thermostat and TRVs)*
+    - **12** - *Heating controls (room thermostat and TRVs)*
+    - **13** - *Heating controls (thermostatic radiator valves)*
+    - **14** - *Heating controls (room thermostat)*
+    - **15** - *Heating controls (programmer and TRVs)*
+    - **16** - *Heating controls (time and temperature zone control)*
+    - **17** - *Heating controls (programmer and room thermostat)*
+    - **18** - *Heating controls (room thermostat)*
+    - **19** - *Solar water heating*
+    - **20** - *Replace boiler with new condensing boiler*
+    - **21** - *Replace boiler with new condensing boiler*
+    - **22** - *Replace boiler with biomass boiler*
+    - **23** - *Wood pellet stove with boiler and radiators*
+    - **24** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **25** - *Fan assisted storage heaters*
+    - **26** - *Replacement warm air unit*
+    - **27** - *Change heating to gas condensing boiler*
+    - **28** - *Condensing oil boiler with radiators*
+    - **29** - *Change heating to gas condensing boiler*
+    - **30** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **31** - *Fan-assisted storage heaters*
+    - **32** - *Change heating to gas condensing boiler*
+    - **34** - *Solar photovoltaic panels, 2.5 kWp*
+    - **35** - *Low energy lighting for all fixed outlets*
+    - **36** - *Replace heating unit with condensing unit*
+    - **37** - *Condensing boiler (separate from the range cooker)*
+    - **38** - *Condensing boiler (separate from the range cooker)*
+    - **39** - *Wood pellet stove with boiler and radiators*
+    - **40** - *Change room heaters to condensing boiler*
+    - **41** - *Change room heaters to condensing boiler*
+    - **42** - *Replace heating unit with mains gas condensing unit*
+    - **43** - *Condensing oil boiler with radiators*
+    - **44** - *Wind turbine*
+    - **45** - *Flat roof insulation*
+    - **46** - *Room-in-roof insulation*
+    - **47** - *Floor insulation*
+    - **48** - *High performance external doors*
+    - **49** - *Heat recovery system for mixer showers*
+    - **50** - *Flue gas heat recovery device in conjunction with boiler*
+    - **51** - *Air or ground source heat pump*
+    - **52** - *Air or ground source heat pump with underfloor heating*
+    - **53** - *Micro CHP*
+    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
+    - **55** - *External insulation with cavity wall insulation*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Indicative-Cost"></a>Indicative-Cost
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Indicative-Cost`
@@ -1769,7 +2091,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *1. Not eligible for Green Deal*    - **2** - *2. Eligible with additional finance*    - **3** - *3. Eligible without additional finance*    - **NI** - *Not assessed. Use for alternative measures and for new dwelling EPCs*
+    - **1** - *1. Not eligible for Green Deal*
+    - **2** - *2. Eligible with additional finance*
+    - **3** - *3. Eligible without additional finance*
+    - **NI** - *Not assessed. Use for alternative measures and for new dwelling EPCs*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources"></a>LZC-Energy-Sources
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources`
@@ -1793,7 +2119,24 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Biofuel main heating*    - **2** - *Biofuel community heating*    - **3** - *Biofuel community heating for some of heat generation*    - **4** - *Biofuel secondary heating*    - **5** - *Geothermal heat source*    - **6** - *Community combined heat and power*    - **7** - *Ground source heat pump*    - **8** - *Water source heat pump*    - **9** - *Air source heat pump*    - **10** - *Solar water heating*    - **11** - *Solar photovoltaics*    - **12** - *Wind turbine*    - **13** - *Community heat pump*    - **14** - *Hydro-electric generation*    - **15** - *Micro-CHP*    - **16** - *Exhaust air heat pump*    - **17** - *Solar-assisted heat pump*
+    - **1** - *Biofuel main heating*
+    - **2** - *Biofuel community heating*
+    - **3** - *Biofuel community heating for some of heat generation*
+    - **4** - *Biofuel secondary heating*
+    - **5** - *Geothermal heat source*
+    - **6** - *Community combined heat and power*
+    - **7** - *Ground source heat pump*
+    - **8** - *Water source heat pump*
+    - **9** - *Air source heat pump*
+    - **10** - *Solar water heating*
+    - **11** - *Solar photovoltaics*
+    - **12** - *Wind turbine*
+    - **13** - *Community heat pump*
+    - **14** - *Hydro-electric generation*
+    - **15** - *Micro-CHP*
+    - **16** - *Exhaust air heat pump*
+    - **17** - *Solar-assisted heat pump*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive"></a>Renewable-Heat-Incentive
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive`
@@ -1985,7 +2328,44 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **A** - *Loft insulation*    - **A2** - *Flat roof insulation*    - **A3** - *Room-in-roof insulation*    - **B** - *Cavity wall insulation*    - **C** - *Hot water cylinder insulation*    - **D** - *Draughtproofing*    - **E** - *Low energy lights*    - **F** - *Cylinder thermostat*    - **G** - *Heating controls for wet central heating system*    - **H** - *Heating controls for warm air system*    - **I** - *Upgrade boiler, same fuel*    - **J** - *Biomass boiler*    - **J2** - *Biomass boiler as alternative improvement*    - **K** - *Biomass room heater with boiler*    - **L** - *New or replacement fan-assisted storage heaters*    - **L2** - *New or replacement high heat retention storage heaters*    - **M** - *Replacement warm-air unit*    - **N** - *Solar water heating*    - **O** - *Replacement double glazed windows*    - **O3** - *Replacement double glazing units*    - **P** - *Secondary glazing*    - **Q** - *Solid wall insulation*    - **Q2** - *External insulation with cavity wall insulation*    - **R** - *Condensing oil boiler*    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*    - **T2** - *Flue gas heat recovery*    - **U** - *Photovoltaics*    - **V** - *Wind turbine (roof mounted)*    - **V2** - *Wind turbine (on mast)*    - **W** - *Floor insulation*    - **X** - *Insulated doors*    - **Y** - *Instantaneous waste water heat recovery*    - **Y2** - *Storage waste water heat recovery*    - **Z1** - *Air or ground source heat pump*    - **Z2** - *Air or ground source heat pump with underfloor heating*    - **Z3** - *Micro-CHP*
+    - **A** - *Loft insulation*
+    - **A2** - *Flat roof insulation*
+    - **A3** - *Room-in-roof insulation*
+    - **B** - *Cavity wall insulation*
+    - **C** - *Hot water cylinder insulation*
+    - **D** - *Draughtproofing*
+    - **E** - *Low energy lights*
+    - **F** - *Cylinder thermostat*
+    - **G** - *Heating controls for wet central heating system*
+    - **H** - *Heating controls for warm air system*
+    - **I** - *Upgrade boiler, same fuel*
+    - **J** - *Biomass boiler*
+    - **J2** - *Biomass boiler as alternative improvement*
+    - **K** - *Biomass room heater with boiler*
+    - **L** - *New or replacement fan-assisted storage heaters*
+    - **L2** - *New or replacement high heat retention storage heaters*
+    - **M** - *Replacement warm-air unit*
+    - **N** - *Solar water heating*
+    - **O** - *Replacement double glazed windows*
+    - **O3** - *Replacement double glazing units*
+    - **P** - *Secondary glazing*
+    - **Q** - *Solid wall insulation*
+    - **Q2** - *External insulation with cavity wall insulation*
+    - **R** - *Condensing oil boiler*
+    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*
+    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*
+    - **T2** - *Flue gas heat recovery*
+    - **U** - *Photovoltaics*
+    - **V** - *Wind turbine (roof mounted)*
+    - **V2** - *Wind turbine (on mast)*
+    - **W** - *Floor insulation*
+    - **X** - *Insulated doors*
+    - **Y** - *Instantaneous waste water heat recovery*
+    - **Y2** - *Storage waste water heat recovery*
+    - **Z1** - *Air or ground source heat pump*
+    - **Z2** - *Air or ground source heat pump with underfloor heating*
+    - **Z3** - *Micro-CHP*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Number"></a>Improvement-Number
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Number`
@@ -1997,7 +2377,61 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Insulate hot water cylinder with 80 mm jacket*    - **2** - *Increase hot water cylinder insulation*    - **3** - *Add additional 80 mm jacket to hot water cylinder*    - **4** - *Hot water cylinder thermostat*    - **5** - *Increase loft insulation to 270 mm*    - **6** - *Cavity wall insulation*    - **7** - *Internal or external wall insulation*    - **8** - *Replace single glazed windows with low-E double glazing*    - **9** - *Secondary glazing to single glazed windows*    - **10** - *Draught proofing*    - **11** - *Heating controls (programmer, room thermostat and TRVs)*    - **12** - *Heating controls (room thermostat and TRVs)*    - **13** - *Heating controls (thermostatic radiator valves)*    - **14** - *Heating controls (room thermostat)*    - **15** - *Heating controls (programmer and TRVs)*    - **16** - *Heating controls (time and temperature zone control)*    - **17** - *Heating controls (programmer and room thermostat)*    - **18** - *Heating controls (room thermostat)*    - **19** - *Solar water heating*    - **20** - *Replace boiler with new condensing boiler*    - **21** - *Replace boiler with new condensing boiler*    - **22** - *Replace boiler with biomass boiler*    - **23** - *Wood pellet stove with boiler and radiators*    - **24** - *Fan assisted storage heaters and dual immersion cylinder*    - **25** - *Fan assisted storage heaters*    - **26** - *Replacement warm air unit*    - **27** - *Change heating to gas condensing boiler*    - **28** - *Condensing oil boiler with radiators*    - **29** - *Change heating to gas condensing boiler*    - **30** - *Fan assisted storage heaters and dual immersion cylinder*    - **31** - *Fan-assisted storage heaters*    - **32** - *Change heating to gas condensing boiler*    - **34** - *Solar photovoltaic panels, 2.5 kWp*    - **35** - *Low energy lighting for all fixed outlets*    - **36** - *Replace heating unit with condensing unit*    - **37** - *Condensing boiler (separate from the range cooker)*    - **38** - *Condensing boiler (separate from the range cooker)*    - **39** - *Wood pellet stove with boiler and radiators*    - **40** - *Change room heaters to condensing boiler*    - **41** - *Change room heaters to condensing boiler*    - **42** - *Replace heating unit with mains gas condensing unit*    - **43** - *Condensing oil boiler with radiators*    - **44** - *Wind turbine*    - **45** - *Flat roof insulation*    - **46** - *Room-in-roof insulation*    - **47** - *Floor insulation*    - **48** - *High performance external doors*    - **49** - *Heat recovery system for mixer showers*    - **50** - *Flue gas heat recovery device in conjunction with boiler*    - **51** - *Air or ground source heat pump*    - **52** - *Air or ground source heat pump with underfloor heating*    - **53** - *Micro CHP*    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*    - **55** - *External insulation with cavity wall insulation*
+    - **1** - *Insulate hot water cylinder with 80 mm jacket*
+    - **2** - *Increase hot water cylinder insulation*
+    - **3** - *Add additional 80 mm jacket to hot water cylinder*
+    - **4** - *Hot water cylinder thermostat*
+    - **5** - *Increase loft insulation to 270 mm*
+    - **6** - *Cavity wall insulation*
+    - **7** - *Internal or external wall insulation*
+    - **8** - *Replace single glazed windows with low-E double glazing*
+    - **9** - *Secondary glazing to single glazed windows*
+    - **10** - *Draught proofing*
+    - **11** - *Heating controls (programmer, room thermostat and TRVs)*
+    - **12** - *Heating controls (room thermostat and TRVs)*
+    - **13** - *Heating controls (thermostatic radiator valves)*
+    - **14** - *Heating controls (room thermostat)*
+    - **15** - *Heating controls (programmer and TRVs)*
+    - **16** - *Heating controls (time and temperature zone control)*
+    - **17** - *Heating controls (programmer and room thermostat)*
+    - **18** - *Heating controls (room thermostat)*
+    - **19** - *Solar water heating*
+    - **20** - *Replace boiler with new condensing boiler*
+    - **21** - *Replace boiler with new condensing boiler*
+    - **22** - *Replace boiler with biomass boiler*
+    - **23** - *Wood pellet stove with boiler and radiators*
+    - **24** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **25** - *Fan assisted storage heaters*
+    - **26** - *Replacement warm air unit*
+    - **27** - *Change heating to gas condensing boiler*
+    - **28** - *Condensing oil boiler with radiators*
+    - **29** - *Change heating to gas condensing boiler*
+    - **30** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **31** - *Fan-assisted storage heaters*
+    - **32** - *Change heating to gas condensing boiler*
+    - **34** - *Solar photovoltaic panels, 2.5 kWp*
+    - **35** - *Low energy lighting for all fixed outlets*
+    - **36** - *Replace heating unit with condensing unit*
+    - **37** - *Condensing boiler (separate from the range cooker)*
+    - **38** - *Condensing boiler (separate from the range cooker)*
+    - **39** - *Wood pellet stove with boiler and radiators*
+    - **40** - *Change room heaters to condensing boiler*
+    - **41** - *Change room heaters to condensing boiler*
+    - **42** - *Replace heating unit with mains gas condensing unit*
+    - **43** - *Condensing oil boiler with radiators*
+    - **44** - *Wind turbine*
+    - **45** - *Flat roof insulation*
+    - **46** - *Room-in-roof insulation*
+    - **47** - *Floor insulation*
+    - **48** - *High performance external doors*
+    - **49** - *Heat recovery system for mixer showers*
+    - **50** - *Flue gas heat recovery device in conjunction with boiler*
+    - **51** - *Air or ground source heat pump*
+    - **52** - *Air or ground source heat pump with underfloor heating*
+    - **53** - *Micro CHP*
+    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
+    - **55** - *External insulation with cavity wall insulation*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Electricity-Saving"></a>Electricity-Saving
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Electricity-Saving`
@@ -2081,7 +2515,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Lower cost - this is for backwards compatibility only and should not be used*    - **2** - *Higher cost - this is for backwards compatibility only and should not be used*    - **3** - *Further measure - this is for backwards compatibility only and should not be used*    - **4** - *Deselected. This is for backwards compatibility only and should not be used.*    - **5** - *Normal measure*    - **6** - *Alternative measure*
+    - **1** - *Lower cost - this is for backwards compatibility only and should not be used*
+    - **2** - *Higher cost - this is for backwards compatibility only and should not be used*
+    - **3** - *Further measure - this is for backwards compatibility only and should not be used*
+    - **4** - *Deselected. This is for backwards compatibility only and should not be used.*
+    - **5** - *Normal measure*
+    - **6** - *Alternative measure*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Type"></a>Improvement-Type
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Type`
@@ -2093,7 +2533,44 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **A** - *Loft insulation*    - **A2** - *Flat roof insulation*    - **A3** - *Room-in-roof insulation*    - **B** - *Cavity wall insulation*    - **C** - *Hot water cylinder insulation*    - **D** - *Draughtproofing*    - **E** - *Low energy lights*    - **F** - *Cylinder thermostat*    - **G** - *Heating controls for wet central heating system*    - **H** - *Heating controls for warm air system*    - **I** - *Upgrade boiler, same fuel*    - **J** - *Biomass boiler*    - **J2** - *Biomass boiler as alternative improvement*    - **K** - *Biomass room heater with boiler*    - **L** - *New or replacement fan-assisted storage heaters*    - **L2** - *New or replacement high heat retention storage heaters*    - **M** - *Replacement warm-air unit*    - **N** - *Solar water heating*    - **O** - *Replacement double glazed windows*    - **O3** - *Replacement double glazing units*    - **P** - *Secondary glazing*    - **Q** - *Solid wall insulation*    - **Q2** - *External insulation with cavity wall insulation*    - **R** - *Condensing oil boiler*    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*    - **T2** - *Flue gas heat recovery*    - **U** - *Photovoltaics*    - **V** - *Wind turbine (roof mounted)*    - **V2** - *Wind turbine (on mast)*    - **W** - *Floor insulation*    - **X** - *Insulated doors*    - **Y** - *Instantaneous waste water heat recovery*    - **Y2** - *Storage waste water heat recovery*    - **Z1** - *Air or ground source heat pump*    - **Z2** - *Air or ground source heat pump with underfloor heating*    - **Z3** - *Micro-CHP*
+    - **A** - *Loft insulation*
+    - **A2** - *Flat roof insulation*
+    - **A3** - *Room-in-roof insulation*
+    - **B** - *Cavity wall insulation*
+    - **C** - *Hot water cylinder insulation*
+    - **D** - *Draughtproofing*
+    - **E** - *Low energy lights*
+    - **F** - *Cylinder thermostat*
+    - **G** - *Heating controls for wet central heating system*
+    - **H** - *Heating controls for warm air system*
+    - **I** - *Upgrade boiler, same fuel*
+    - **J** - *Biomass boiler*
+    - **J2** - *Biomass boiler as alternative improvement*
+    - **K** - *Biomass room heater with boiler*
+    - **L** - *New or replacement fan-assisted storage heaters*
+    - **L2** - *New or replacement high heat retention storage heaters*
+    - **M** - *Replacement warm-air unit*
+    - **N** - *Solar water heating*
+    - **O** - *Replacement double glazed windows*
+    - **O3** - *Replacement double glazing units*
+    - **P** - *Secondary glazing*
+    - **Q** - *Solid wall insulation*
+    - **Q2** - *External insulation with cavity wall insulation*
+    - **R** - *Condensing oil boiler*
+    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*
+    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*
+    - **T2** - *Flue gas heat recovery*
+    - **U** - *Photovoltaics*
+    - **V** - *Wind turbine (roof mounted)*
+    - **V2** - *Wind turbine (on mast)*
+    - **W** - *Floor insulation*
+    - **X** - *Insulated doors*
+    - **Y** - *Instantaneous waste water heat recovery*
+    - **Y2** - *Storage waste water heat recovery*
+    - **Z1** - *Air or ground source heat pump*
+    - **Z2** - *Air or ground source heat pump with underfloor heating*
+    - **Z3** - *Micro-CHP*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Typical-Saving"></a>Typical-Saving
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Typical-Saving`
@@ -2201,7 +2678,61 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Insulate hot water cylinder with 80 mm jacket*    - **2** - *Increase hot water cylinder insulation*    - **3** - *Add additional 80 mm jacket to hot water cylinder*    - **4** - *Hot water cylinder thermostat*    - **5** - *Increase loft insulation to 270 mm*    - **6** - *Cavity wall insulation*    - **7** - *Internal or external wall insulation*    - **8** - *Replace single glazed windows with low-E double glazing*    - **9** - *Secondary glazing to single glazed windows*    - **10** - *Draught proofing*    - **11** - *Heating controls (programmer, room thermostat and TRVs)*    - **12** - *Heating controls (room thermostat and TRVs)*    - **13** - *Heating controls (thermostatic radiator valves)*    - **14** - *Heating controls (room thermostat)*    - **15** - *Heating controls (programmer and TRVs)*    - **16** - *Heating controls (time and temperature zone control)*    - **17** - *Heating controls (programmer and room thermostat)*    - **18** - *Heating controls (room thermostat)*    - **19** - *Solar water heating*    - **20** - *Replace boiler with new condensing boiler*    - **21** - *Replace boiler with new condensing boiler*    - **22** - *Replace boiler with biomass boiler*    - **23** - *Wood pellet stove with boiler and radiators*    - **24** - *Fan assisted storage heaters and dual immersion cylinder*    - **25** - *Fan assisted storage heaters*    - **26** - *Replacement warm air unit*    - **27** - *Change heating to gas condensing boiler*    - **28** - *Condensing oil boiler with radiators*    - **29** - *Change heating to gas condensing boiler*    - **30** - *Fan assisted storage heaters and dual immersion cylinder*    - **31** - *Fan-assisted storage heaters*    - **32** - *Change heating to gas condensing boiler*    - **34** - *Solar photovoltaic panels, 2.5 kWp*    - **35** - *Low energy lighting for all fixed outlets*    - **36** - *Replace heating unit with condensing unit*    - **37** - *Condensing boiler (separate from the range cooker)*    - **38** - *Condensing boiler (separate from the range cooker)*    - **39** - *Wood pellet stove with boiler and radiators*    - **40** - *Change room heaters to condensing boiler*    - **41** - *Change room heaters to condensing boiler*    - **42** - *Replace heating unit with mains gas condensing unit*    - **43** - *Condensing oil boiler with radiators*    - **44** - *Wind turbine*    - **45** - *Flat roof insulation*    - **46** - *Room-in-roof insulation*    - **47** - *Floor insulation*    - **48** - *High performance external doors*    - **49** - *Heat recovery system for mixer showers*    - **50** - *Flue gas heat recovery device in conjunction with boiler*    - **51** - *Air or ground source heat pump*    - **52** - *Air or ground source heat pump with underfloor heating*    - **53** - *Micro CHP*    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*    - **55** - *External insulation with cavity wall insulation*
+    - **1** - *Insulate hot water cylinder with 80 mm jacket*
+    - **2** - *Increase hot water cylinder insulation*
+    - **3** - *Add additional 80 mm jacket to hot water cylinder*
+    - **4** - *Hot water cylinder thermostat*
+    - **5** - *Increase loft insulation to 270 mm*
+    - **6** - *Cavity wall insulation*
+    - **7** - *Internal or external wall insulation*
+    - **8** - *Replace single glazed windows with low-E double glazing*
+    - **9** - *Secondary glazing to single glazed windows*
+    - **10** - *Draught proofing*
+    - **11** - *Heating controls (programmer, room thermostat and TRVs)*
+    - **12** - *Heating controls (room thermostat and TRVs)*
+    - **13** - *Heating controls (thermostatic radiator valves)*
+    - **14** - *Heating controls (room thermostat)*
+    - **15** - *Heating controls (programmer and TRVs)*
+    - **16** - *Heating controls (time and temperature zone control)*
+    - **17** - *Heating controls (programmer and room thermostat)*
+    - **18** - *Heating controls (room thermostat)*
+    - **19** - *Solar water heating*
+    - **20** - *Replace boiler with new condensing boiler*
+    - **21** - *Replace boiler with new condensing boiler*
+    - **22** - *Replace boiler with biomass boiler*
+    - **23** - *Wood pellet stove with boiler and radiators*
+    - **24** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **25** - *Fan assisted storage heaters*
+    - **26** - *Replacement warm air unit*
+    - **27** - *Change heating to gas condensing boiler*
+    - **28** - *Condensing oil boiler with radiators*
+    - **29** - *Change heating to gas condensing boiler*
+    - **30** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **31** - *Fan-assisted storage heaters*
+    - **32** - *Change heating to gas condensing boiler*
+    - **34** - *Solar photovoltaic panels, 2.5 kWp*
+    - **35** - *Low energy lighting for all fixed outlets*
+    - **36** - *Replace heating unit with condensing unit*
+    - **37** - *Condensing boiler (separate from the range cooker)*
+    - **38** - *Condensing boiler (separate from the range cooker)*
+    - **39** - *Wood pellet stove with boiler and radiators*
+    - **40** - *Change room heaters to condensing boiler*
+    - **41** - *Change room heaters to condensing boiler*
+    - **42** - *Replace heating unit with mains gas condensing unit*
+    - **43** - *Condensing oil boiler with radiators*
+    - **44** - *Wind turbine*
+    - **45** - *Flat roof insulation*
+    - **46** - *Room-in-roof insulation*
+    - **47** - *Floor insulation*
+    - **48** - *High performance external doors*
+    - **49** - *Heat recovery system for mixer showers*
+    - **50** - *Flue gas heat recovery device in conjunction with boiler*
+    - **51** - *Air or ground source heat pump*
+    - **52** - *Air or ground source heat pump with underfloor heating*
+    - **53** - *Micro CHP*
+    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
+    - **55** - *External insulation with cavity wall insulation*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Indicative-Cost"></a>Indicative-Cost
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Indicative-Cost`
@@ -2225,7 +2756,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *1. Not eligible for Green Deal*    - **2** - *2. Eligible with additional finance*    - **3** - *3. Eligible without additional finance*    - **NI** - *Not assessed. Use for alternative measures and for new dwelling EPCs*
+    - **1** - *1. Not eligible for Green Deal*
+    - **2** - *2. Eligible with additional finance*
+    - **3** - *3. Eligible without additional finance*
+    - **NI** - *Not assessed. Use for alternative measures and for new dwelling EPCs*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum"></a>Addendum
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum`
@@ -2249,7 +2784,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Stone-Walls"></a>Stone-Walls
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Stone-Walls`
@@ -2261,7 +2800,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/System-Build"></a>System-Build
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/System-Build`
@@ -2273,7 +2816,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Access-Issues"></a>Access-Issues
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Access-Issues`
@@ -2285,7 +2832,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/High-Exposure"></a>High-Exposure
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/High-Exposure`
@@ -2297,7 +2848,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Narrow-Cavities"></a>Narrow-Cavities
 
 `SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Narrow-Cavities`
@@ -2309,7 +2864,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data"></a>SAP10-Data
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data`
@@ -2333,7 +2892,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *new dwelling as designed*    - **2** - *new dwelling as built*    - **3** - *new extension to existing dwelling*    - **4** - *new dwelling created by change of use*    - **5** - *existing dwelling*    - **6** - *other*
+    - **1** - *new dwelling as designed*
+    - **2** - *new dwelling as built*
+    - **3** - *new extension to existing dwelling*
+    - **4** - *new dwelling created by change of use*
+    - **5** - *existing dwelling*
+    - **6** - *other*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details"></a>SAP-Property-Details
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`
@@ -2357,7 +2922,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *House*    - **1** - *Bungalow*    - **2** - *Flat*    - **3** - *Maisonette*    - **4** - *Park home*
+    - **0** - *House*
+    - **1** - *Bungalow*
+    - **2** - *Flat*
+    - **3** - *Maisonette*
+    - **4** - *Park home*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Built-Form"></a>Built-Form
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Built-Form`
@@ -2369,7 +2939,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Detached*    - **2** - *Semi-Detached*    - **3** - *End-Terrace*    - **4** - *Mid-Terrace*    - **5** - *Enclosed End-Terrace*    - **6** - *Enclosed Mid-Terrace*
+    - **1** - *Detached*
+    - **2** - *Semi-Detached*
+    - **3** - *End-Terrace*
+    - **4** - *Mid-Terrace*
+    - **5** - *Enclosed End-Terrace*
+    - **6** - *Enclosed Mid-Terrace*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Living-Area"></a>Living-Area
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Living-Area`
@@ -2405,7 +2981,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *unknown or unspecified*    - **1** - *North*    - **2** - *North East*    - **3** - *East*    - **4** - *South East*    - **5** - *South*    - **6** - *South West*    - **7** - *West*    - **8** - *North West*    - **9** - *Horizontal (windows and roof windows only)*
+    - **0** - *unknown or unspecified*
+    - **1** - *North*
+    - **2** - *North East*
+    - **3** - *East*
+    - **4** - *South East*
+    - **5** - *South*
+    - **6** - *South West*
+    - **7** - *West*
+    - **8** - *North West*
+    - **9** - *Horizontal (windows and roof windows only)*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Conservatory-Type"></a>Conservatory-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Conservatory-Type`
@@ -2417,7 +3003,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *no conservatory*    - **2** - *separated unheated conservatory*    - **3** - *separated heated conservatory*    - **4** - *not separated*
+    - **1** - *no conservatory*
+    - **2** - *separated unheated conservatory*
+    - **3** - *separated heated conservatory*
+    - **4** - *not separated*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Terrain-Type"></a>Terrain-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Terrain-Type`
@@ -2429,7 +3019,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *urban*    - **2** - *suburban*    - **3** - *rural*
+    - **1** - *urban*
+    - **2** - *suburban*
+    - **3** - *rural*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Has-Special-Feature"></a>Has-Special-Feature
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Has-Special-Feature`
@@ -2441,7 +3034,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Special-Feature-Description"></a>Special-Feature-Description
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Special-Feature-Description`
@@ -2477,7 +3074,50 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*    - **2** - *Gas: bulk LPG*    - **3** - *Gas: bottled LPG*    - **4** - *Oil: heating oil*    - **7** - *Gas: biogas*    - **8** - *LNG*    - **9** - *LPG subject to Special Condition 18*    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*    - **11** - *Solid fuel: house coal*    - **12** - *Solid fuel: manufactured smokeless fuel*    - **15** - *Solid fuel: anthracite*    - **20** - *Solid fuel: wood logs*    - **21** - *Solid fuel: wood chips*    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*    - **36** - *Electricity: electricity sold to grid*    - **37** - *Electricity: electricity displaced from grid*    - **39** - *Electricity: electricity, unspecified tariff*    - **41** - *Community heating schemes: heat from electric heat pump*    - **42** - *Community heating schemes: heat from boilers - waste combustion*    - **43** - *Community heating schemes: heat from boilers - biomass*    - **44** - *Community heating schemes: heat from boilers - biogas*    - **45** - *Community heating schemes: waste heat from power stations*    - **46** - *Community heating schemes: geothermal heat source*    - **47** - *Community heating schemes: high grade heat recovered from process*    - **48** - *Community heating schemes: heat from CHP*    - **49** - *Community heating schemes: low grade heat recovered from process*    - **50** - *Community heating schemes: electricity for pumping in distribution network*    - **51** - *Community heating schemes: heat from mains gas*    - **52** - *Community heating schemes: heat from LPG*    - **53** - *Community heating schemes: heat from oil*    - **54** - *Community heating schemes: heat from coal*    - **55** - *Community heating schemes: heat from B30D*    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*    - **58** - *Community heating schemes: biodiesel from vegetable oil only*    - **71** - *biodiesel from any biomass source*    - **72** - *biodiesel from used cooking oil only*    - **73** - *biodiesel from vegetable oil only*    - **74** - *appliances able to use mineral oil or liquid biofuel*    - **75** - *B30K*    - **76** - *bioethanol from any biomass source*    - **99** - *Fuel data from pcdb*
+    - **1** - *Gas: mains gas*
+    - **2** - *Gas: bulk LPG*
+    - **3** - *Gas: bottled LPG*
+    - **4** - *Oil: heating oil*
+    - **7** - *Gas: biogas*
+    - **8** - *LNG*
+    - **9** - *LPG subject to Special Condition 18*
+    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **11** - *Solid fuel: house coal*
+    - **12** - *Solid fuel: manufactured smokeless fuel*
+    - **15** - *Solid fuel: anthracite*
+    - **20** - *Solid fuel: wood logs*
+    - **21** - *Solid fuel: wood chips*
+    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **36** - *Electricity: electricity sold to grid*
+    - **37** - *Electricity: electricity displaced from grid*
+    - **39** - *Electricity: electricity, unspecified tariff*
+    - **41** - *Community heating schemes: heat from electric heat pump*
+    - **42** - *Community heating schemes: heat from boilers - waste combustion*
+    - **43** - *Community heating schemes: heat from boilers - biomass*
+    - **44** - *Community heating schemes: heat from boilers - biogas*
+    - **45** - *Community heating schemes: waste heat from power stations*
+    - **46** - *Community heating schemes: geothermal heat source*
+    - **47** - *Community heating schemes: high grade heat recovered from process*
+    - **48** - *Community heating schemes: heat from CHP*
+    - **49** - *Community heating schemes: low grade heat recovered from process*
+    - **50** - *Community heating schemes: electricity for pumping in distribution network*
+    - **51** - *Community heating schemes: heat from mains gas*
+    - **52** - *Community heating schemes: heat from LPG*
+    - **53** - *Community heating schemes: heat from oil*
+    - **54** - *Community heating schemes: heat from coal*
+    - **55** - *Community heating schemes: heat from B30D*
+    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **71** - *biodiesel from any biomass source*
+    - **72** - *biodiesel from used cooking oil only*
+    - **73** - *biodiesel from vegetable oil only*
+    - **74** - *appliances able to use mineral oil or liquid biofuel*
+    - **75** - *B30K*
+    - **76** - *bioethanol from any biomass source*
+    - **99** - *Fuel data from pcdb*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used"></a>Energy-Used
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used`
@@ -2501,7 +3141,50 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*    - **2** - *Gas: bulk LPG*    - **3** - *Gas: bottled LPG*    - **4** - *Oil: heating oil*    - **7** - *Gas: biogas*    - **8** - *LNG*    - **9** - *LPG subject to Special Condition 18*    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*    - **11** - *Solid fuel: house coal*    - **12** - *Solid fuel: manufactured smokeless fuel*    - **15** - *Solid fuel: anthracite*    - **20** - *Solid fuel: wood logs*    - **21** - *Solid fuel: wood chips*    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*    - **36** - *Electricity: electricity sold to grid*    - **37** - *Electricity: electricity displaced from grid*    - **39** - *Electricity: electricity, unspecified tariff*    - **41** - *Community heating schemes: heat from electric heat pump*    - **42** - *Community heating schemes: heat from boilers - waste combustion*    - **43** - *Community heating schemes: heat from boilers - biomass*    - **44** - *Community heating schemes: heat from boilers - biogas*    - **45** - *Community heating schemes: waste heat from power stations*    - **46** - *Community heating schemes: geothermal heat source*    - **47** - *Community heating schemes: high grade heat recovered from process*    - **48** - *Community heating schemes: heat from CHP*    - **49** - *Community heating schemes: low grade heat recovered from process*    - **50** - *Community heating schemes: electricity for pumping in distribution network*    - **51** - *Community heating schemes: heat from mains gas*    - **52** - *Community heating schemes: heat from LPG*    - **53** - *Community heating schemes: heat from oil*    - **54** - *Community heating schemes: heat from coal*    - **55** - *Community heating schemes: heat from B30D*    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*    - **58** - *Community heating schemes: biodiesel from vegetable oil only*    - **71** - *biodiesel from any biomass source*    - **72** - *biodiesel from used cooking oil only*    - **73** - *biodiesel from vegetable oil only*    - **74** - *appliances able to use mineral oil or liquid biofuel*    - **75** - *B30K*    - **76** - *bioethanol from any biomass source*    - **99** - *Fuel data from pcdb*
+    - **1** - *Gas: mains gas*
+    - **2** - *Gas: bulk LPG*
+    - **3** - *Gas: bottled LPG*
+    - **4** - *Oil: heating oil*
+    - **7** - *Gas: biogas*
+    - **8** - *LNG*
+    - **9** - *LPG subject to Special Condition 18*
+    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **11** - *Solid fuel: house coal*
+    - **12** - *Solid fuel: manufactured smokeless fuel*
+    - **15** - *Solid fuel: anthracite*
+    - **20** - *Solid fuel: wood logs*
+    - **21** - *Solid fuel: wood chips*
+    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **36** - *Electricity: electricity sold to grid*
+    - **37** - *Electricity: electricity displaced from grid*
+    - **39** - *Electricity: electricity, unspecified tariff*
+    - **41** - *Community heating schemes: heat from electric heat pump*
+    - **42** - *Community heating schemes: heat from boilers - waste combustion*
+    - **43** - *Community heating schemes: heat from boilers - biomass*
+    - **44** - *Community heating schemes: heat from boilers - biogas*
+    - **45** - *Community heating schemes: waste heat from power stations*
+    - **46** - *Community heating schemes: geothermal heat source*
+    - **47** - *Community heating schemes: high grade heat recovered from process*
+    - **48** - *Community heating schemes: heat from CHP*
+    - **49** - *Community heating schemes: low grade heat recovered from process*
+    - **50** - *Community heating schemes: electricity for pumping in distribution network*
+    - **51** - *Community heating schemes: heat from mains gas*
+    - **52** - *Community heating schemes: heat from LPG*
+    - **53** - *Community heating schemes: heat from oil*
+    - **54** - *Community heating schemes: heat from coal*
+    - **55** - *Community heating schemes: heat from B30D*
+    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **71** - *biodiesel from any biomass source*
+    - **72** - *biodiesel from used cooking oil only*
+    - **73** - *biodiesel from vegetable oil only*
+    - **74** - *appliances able to use mineral oil or liquid biofuel*
+    - **75** - *B30K*
+    - **76** - *bioethanol from any biomass source*
+    - **99** - *Fuel data from pcdb*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-In-Smoke-Control-Area"></a>Is-In-Smoke-Control-Area
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-In-Smoke-Control-Area`
@@ -2513,7 +3196,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **false** - **    - **true** - **    - **unknown** - **
+    - **false** - **
+    - **true** - **
+    - **unknown** - **
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source"></a>Cold-Water-Source
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source`
@@ -2525,7 +3211,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *mains*    - **2** - *header tank*
+    - **1** - *mains*
+    - **2** - *header tank*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Windows-Overshading"></a>Windows-Overshading
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Windows-Overshading`
@@ -2537,7 +3225,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *very little*    - **2** - *average or unknown*    - **3** - *more than average*    - **4** - *heavy*
+    - **1** - *very little*
+    - **2** - *average or unknown*
+    - **3** - *more than average*
+    - **4** - *heavy*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Thermal-Mass-Parameter"></a>Thermal-Mass-Parameter
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Thermal-Mass-Parameter`
@@ -2573,7 +3265,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Electricity-Smart-Meter-Present"></a>Electricity-Smart-Meter-Present
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Electricity-Smart-Meter-Present`
@@ -2585,7 +3281,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Dwelling-Export-Capable"></a>Is-Dwelling-Export-Capable
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Dwelling-Export-Capable`
@@ -2597,7 +3297,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Connection"></a>PV-Connection
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Connection`
@@ -2609,7 +3313,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *not applicable (FGHRS)*    - **1** - *not connected to dwelling's electricity meter*    - **2** - *connected to dwelling's electricity meter*
+    - **0** - *not applicable (FGHRS)*
+    - **1** - *not connected to dwelling's electricity meter*
+    - **2** - *connected to dwelling's electricity meter*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Diverter"></a>PV-Diverter
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Diverter`
@@ -2621,7 +3328,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Battery-Capacity"></a>Battery-Capacity
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Battery-Capacity`
@@ -2645,7 +3356,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating"></a>SAP-Heating
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`
@@ -2681,7 +3396,50 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*    - **2** - *Gas: bulk LPG*    - **3** - *Gas: bottled LPG*    - **4** - *Oil: heating oil*    - **7** - *Gas: biogas*    - **8** - *LNG*    - **9** - *LPG subject to Special Condition 18*    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*    - **11** - *Solid fuel: house coal*    - **12** - *Solid fuel: manufactured smokeless fuel*    - **15** - *Solid fuel: anthracite*    - **20** - *Solid fuel: wood logs*    - **21** - *Solid fuel: wood chips*    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*    - **36** - *Electricity: electricity sold to grid*    - **37** - *Electricity: electricity displaced from grid*    - **39** - *Electricity: electricity, unspecified tariff*    - **41** - *Community heating schemes: heat from electric heat pump*    - **42** - *Community heating schemes: heat from boilers - waste combustion*    - **43** - *Community heating schemes: heat from boilers - biomass*    - **44** - *Community heating schemes: heat from boilers - biogas*    - **45** - *Community heating schemes: waste heat from power stations*    - **46** - *Community heating schemes: geothermal heat source*    - **47** - *Community heating schemes: high grade heat recovered from process*    - **48** - *Community heating schemes: heat from CHP*    - **49** - *Community heating schemes: low grade heat recovered from process*    - **50** - *Community heating schemes: electricity for pumping in distribution network*    - **51** - *Community heating schemes: heat from mains gas*    - **52** - *Community heating schemes: heat from LPG*    - **53** - *Community heating schemes: heat from oil*    - **54** - *Community heating schemes: heat from coal*    - **55** - *Community heating schemes: heat from B30D*    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*    - **58** - *Community heating schemes: biodiesel from vegetable oil only*    - **71** - *biodiesel from any biomass source*    - **72** - *biodiesel from used cooking oil only*    - **73** - *biodiesel from vegetable oil only*    - **74** - *appliances able to use mineral oil or liquid biofuel*    - **75** - *B30K*    - **76** - *bioethanol from any biomass source*    - **99** - *Fuel data from pcdb*
+    - **1** - *Gas: mains gas*
+    - **2** - *Gas: bulk LPG*
+    - **3** - *Gas: bottled LPG*
+    - **4** - *Oil: heating oil*
+    - **7** - *Gas: biogas*
+    - **8** - *LNG*
+    - **9** - *LPG subject to Special Condition 18*
+    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **11** - *Solid fuel: house coal*
+    - **12** - *Solid fuel: manufactured smokeless fuel*
+    - **15** - *Solid fuel: anthracite*
+    - **20** - *Solid fuel: wood logs*
+    - **21** - *Solid fuel: wood chips*
+    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **36** - *Electricity: electricity sold to grid*
+    - **37** - *Electricity: electricity displaced from grid*
+    - **39** - *Electricity: electricity, unspecified tariff*
+    - **41** - *Community heating schemes: heat from electric heat pump*
+    - **42** - *Community heating schemes: heat from boilers - waste combustion*
+    - **43** - *Community heating schemes: heat from boilers - biomass*
+    - **44** - *Community heating schemes: heat from boilers - biogas*
+    - **45** - *Community heating schemes: waste heat from power stations*
+    - **46** - *Community heating schemes: geothermal heat source*
+    - **47** - *Community heating schemes: high grade heat recovered from process*
+    - **48** - *Community heating schemes: heat from CHP*
+    - **49** - *Community heating schemes: low grade heat recovered from process*
+    - **50** - *Community heating schemes: electricity for pumping in distribution network*
+    - **51** - *Community heating schemes: heat from mains gas*
+    - **52** - *Community heating schemes: heat from LPG*
+    - **53** - *Community heating schemes: heat from oil*
+    - **54** - *Community heating schemes: heat from coal*
+    - **55** - *Community heating schemes: heat from B30D*
+    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **71** - *biodiesel from any biomass source*
+    - **72** - *biodiesel from used cooking oil only*
+    - **73** - *biodiesel from vegetable oil only*
+    - **74** - *appliances able to use mineral oil or liquid biofuel*
+    - **75** - *B30K*
+    - **76** - *bioethanol from any biomass source*
+    - **99** - *Fuel data from pcdb*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Hot-Water-Cylinder"></a>Has-Hot-Water-Cylinder
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Hot-Water-Cylinder`
@@ -2693,7 +3451,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Category"></a>Secondary-Heating-Category
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Category`
@@ -2705,7 +3467,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *none*    - **10** - *room heaters*
+    - **1** - *none*
+    - **10** - *room heaters*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Data-Source"></a>Secondary-Heating-Data-Source
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Data-Source`
@@ -2717,7 +3481,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **2** - *from manufacturer declaration*    - **3** - *from SAP table*
+    - **2** - *from manufacturer declaration*
+    - **3** - *from SAP table*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Efficiency"></a>Secondary-Heating-Efficiency
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Efficiency`
@@ -2777,7 +3543,50 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*    - **2** - *Gas: bulk LPG*    - **3** - *Gas: bottled LPG*    - **4** - *Oil: heating oil*    - **7** - *Gas: biogas*    - **8** - *LNG*    - **9** - *LPG subject to Special Condition 18*    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*    - **11** - *Solid fuel: house coal*    - **12** - *Solid fuel: manufactured smokeless fuel*    - **15** - *Solid fuel: anthracite*    - **20** - *Solid fuel: wood logs*    - **21** - *Solid fuel: wood chips*    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*    - **36** - *Electricity: electricity sold to grid*    - **37** - *Electricity: electricity displaced from grid*    - **39** - *Electricity: electricity, unspecified tariff*    - **41** - *Community heating schemes: heat from electric heat pump*    - **42** - *Community heating schemes: heat from boilers - waste combustion*    - **43** - *Community heating schemes: heat from boilers - biomass*    - **44** - *Community heating schemes: heat from boilers - biogas*    - **45** - *Community heating schemes: waste heat from power stations*    - **46** - *Community heating schemes: geothermal heat source*    - **47** - *Community heating schemes: high grade heat recovered from process*    - **48** - *Community heating schemes: heat from CHP*    - **49** - *Community heating schemes: low grade heat recovered from process*    - **50** - *Community heating schemes: electricity for pumping in distribution network*    - **51** - *Community heating schemes: heat from mains gas*    - **52** - *Community heating schemes: heat from LPG*    - **53** - *Community heating schemes: heat from oil*    - **54** - *Community heating schemes: heat from coal*    - **55** - *Community heating schemes: heat from B30D*    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*    - **58** - *Community heating schemes: biodiesel from vegetable oil only*    - **71** - *biodiesel from any biomass source*    - **72** - *biodiesel from used cooking oil only*    - **73** - *biodiesel from vegetable oil only*    - **74** - *appliances able to use mineral oil or liquid biofuel*    - **75** - *B30K*    - **76** - *bioethanol from any biomass source*    - **99** - *Fuel data from pcdb*
+    - **1** - *Gas: mains gas*
+    - **2** - *Gas: bulk LPG*
+    - **3** - *Gas: bottled LPG*
+    - **4** - *Oil: heating oil*
+    - **7** - *Gas: biogas*
+    - **8** - *LNG*
+    - **9** - *LPG subject to Special Condition 18*
+    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **11** - *Solid fuel: house coal*
+    - **12** - *Solid fuel: manufactured smokeless fuel*
+    - **15** - *Solid fuel: anthracite*
+    - **20** - *Solid fuel: wood logs*
+    - **21** - *Solid fuel: wood chips*
+    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **36** - *Electricity: electricity sold to grid*
+    - **37** - *Electricity: electricity displaced from grid*
+    - **39** - *Electricity: electricity, unspecified tariff*
+    - **41** - *Community heating schemes: heat from electric heat pump*
+    - **42** - *Community heating schemes: heat from boilers - waste combustion*
+    - **43** - *Community heating schemes: heat from boilers - biomass*
+    - **44** - *Community heating schemes: heat from boilers - biogas*
+    - **45** - *Community heating schemes: waste heat from power stations*
+    - **46** - *Community heating schemes: geothermal heat source*
+    - **47** - *Community heating schemes: high grade heat recovered from process*
+    - **48** - *Community heating schemes: heat from CHP*
+    - **49** - *Community heating schemes: low grade heat recovered from process*
+    - **50** - *Community heating schemes: electricity for pumping in distribution network*
+    - **51** - *Community heating schemes: heat from mains gas*
+    - **52** - *Community heating schemes: heat from LPG*
+    - **53** - *Community heating schemes: heat from oil*
+    - **54** - *Community heating schemes: heat from coal*
+    - **55** - *Community heating schemes: heat from B30D*
+    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **71** - *biodiesel from any biomass source*
+    - **72** - *biodiesel from used cooking oil only*
+    - **73** - *biodiesel from vegetable oil only*
+    - **74** - *appliances able to use mineral oil or liquid biofuel*
+    - **75** - *B30K*
+    - **76** - *bioethanol from any biomass source*
+    - **99** - *Fuel data from pcdb*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-PCDF-Fuel-Index"></a>Secondary-Heating-PCDF-Fuel-Index
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-PCDF-Fuel-Index`
@@ -2801,7 +3610,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *open flue*    - **2** - *balanced flue*    - **3** - *chimney*    - **4** - *omitted (boiler is in an outhouse, so its flue arrangements are not relevant)*    - **5** - *unknown (there is a flue, but its type could not be determined)*
+    - **1** - *open flue*
+    - **2** - *balanced flue*
+    - **3** - *chimney*
+    - **4** - *omitted (boiler is in an outhouse, so its flue arrangements are not relevant)*
+    - **5** - *unknown (there is a flue, but its type could not be determined)*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Thermal-Store"></a>Thermal-Store
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Thermal-Store`
@@ -2813,7 +3627,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *none*    - **2** - *hot water only*    - **3** - *integrated*
+    - **1** - *none*
+    - **2** - *hot water only*
+    - **3** - *integrated*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Fixed-Air-Conditioning"></a>Has-Fixed-Air-Conditioning
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Fixed-Air-Conditioning`
@@ -2825,7 +3642,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Immersion-Heating-Type"></a>Immersion-Heating-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Immersion-Heating-Type`
@@ -2837,7 +3658,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Dual*    - **2** - *Single*
+    - **1** - *Dual*
+    - **2** - *Single*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Assisted-By-Immersion"></a>Is-Heat-Pump-Assisted-By-Immersion
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Assisted-By-Immersion`
@@ -2849,7 +3672,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Installed-To-MIS"></a>Is-Heat-Pump-Installed-To-MIS
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Installed-To-MIS`
@@ -2861,7 +3688,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Immersion-For-Summer-Use"></a>Is-Immersion-For-Summer-Use
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Immersion-For-Summer-Use`
@@ -2873,7 +3704,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Secondary-Heating-HETAS-Approved"></a>Is-Secondary-Heating-HETAS-Approved
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Secondary-Heating-HETAS-Approved`
@@ -2885,7 +3720,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Manufacturer"></a>Hot-Water-Store-Manufacturer
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Manufacturer`
@@ -2969,7 +3808,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **2** - *from manufacturer declaration*    - **3** - *from SAP table*
+    - **2** - *from manufacturer declaration*
+    - **3** - *from SAP table*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss"></a>Hot-Water-Store-Heat-Loss
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss`
@@ -2993,7 +3834,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *factory-applied*    - **2** - *loose jacket*
+    - **1** - *factory-applied*
+    - **2** - *loose jacket*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Thickness"></a>Hot-Water-Store-Insulation-Thickness
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Thickness`
@@ -3017,7 +3860,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard"></a>Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard`
@@ -3029,7 +3876,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Cylinder-Thermostat"></a>Has-Cylinder-Thermostat
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Cylinder-Thermostat`
@@ -3041,7 +3892,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Cylinder-In-Heated-Space"></a>Is-Cylinder-In-Heated-Space
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Cylinder-In-Heated-Space`
@@ -3053,7 +3908,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Hot-Water-Separately-Timed"></a>Is-Hot-Water-Separately-Timed
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Hot-Water-Separately-Timed`
@@ -3065,7 +3924,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Manufacturer"></a>Hot-Water-Controls-Manufacturer
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Manufacturer`
@@ -3161,7 +4024,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *space heating only*    - **2** - *water heating only*    - **3** - *space and water heating*
+    - **1** - *space heating only*
+    - **2** - *water heating only*
+    - **3** - *space and water heating*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-Community-Heating-Cylinder-In-Dwelling"></a>Is-Community-Heating-Cylinder-In-Dwelling
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-Community-Heating-Cylinder-In-Dwelling`
@@ -3173,7 +4039,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-HIU-In-Dwelling"></a>Is-HIU-In-Dwelling
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-HIU-In-Dwelling`
@@ -3185,7 +4055,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/HIU-Index-Number"></a>HIU-Index-Number
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/HIU-Index-Number`
@@ -3209,7 +4083,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **5** - *calculated*    - **6** - *unknown*    - **7** - *Network not compliant with Code of Practice*    - **8** - *Network compliant with Code of Practice*    - **9** - *Two adjoining dwellings*
+    - **5** - *calculated*
+    - **6** - *unknown*
+    - **7** - *Network not compliant with Code of Practice*
+    - **8** - *Network compliant with Code of Practice*
+    - **9** - *Two adjoining dwellings*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources"></a>Community-Heat-Sources
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources`
@@ -3245,7 +4124,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *CHP*    - **2** - *boilers*    - **3** - *heat pump*    - **4** - *waste heat*    - **5** - *geothermal*
+    - **1** - *CHP*
+    - **2** - *boilers*
+    - **3** - *heat pump*
+    - **4** - *waste heat*
+    - **5** - *geothermal*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Fraction"></a>Heat-Fraction
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Fraction`
@@ -3269,7 +4153,50 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*    - **2** - *Gas: bulk LPG*    - **3** - *Gas: bottled LPG*    - **4** - *Oil: heating oil*    - **7** - *Gas: biogas*    - **8** - *LNG*    - **9** - *LPG subject to Special Condition 18*    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*    - **11** - *Solid fuel: house coal*    - **12** - *Solid fuel: manufactured smokeless fuel*    - **15** - *Solid fuel: anthracite*    - **20** - *Solid fuel: wood logs*    - **21** - *Solid fuel: wood chips*    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*    - **36** - *Electricity: electricity sold to grid*    - **37** - *Electricity: electricity displaced from grid*    - **39** - *Electricity: electricity, unspecified tariff*    - **41** - *Community heating schemes: heat from electric heat pump*    - **42** - *Community heating schemes: heat from boilers - waste combustion*    - **43** - *Community heating schemes: heat from boilers - biomass*    - **44** - *Community heating schemes: heat from boilers - biogas*    - **45** - *Community heating schemes: waste heat from power stations*    - **46** - *Community heating schemes: geothermal heat source*    - **47** - *Community heating schemes: high grade heat recovered from process*    - **48** - *Community heating schemes: heat from CHP*    - **49** - *Community heating schemes: low grade heat recovered from process*    - **50** - *Community heating schemes: electricity for pumping in distribution network*    - **51** - *Community heating schemes: heat from mains gas*    - **52** - *Community heating schemes: heat from LPG*    - **53** - *Community heating schemes: heat from oil*    - **54** - *Community heating schemes: heat from coal*    - **55** - *Community heating schemes: heat from B30D*    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*    - **58** - *Community heating schemes: biodiesel from vegetable oil only*    - **71** - *biodiesel from any biomass source*    - **72** - *biodiesel from used cooking oil only*    - **73** - *biodiesel from vegetable oil only*    - **74** - *appliances able to use mineral oil or liquid biofuel*    - **75** - *B30K*    - **76** - *bioethanol from any biomass source*    - **99** - *Fuel data from pcdb*
+    - **1** - *Gas: mains gas*
+    - **2** - *Gas: bulk LPG*
+    - **3** - *Gas: bottled LPG*
+    - **4** - *Oil: heating oil*
+    - **7** - *Gas: biogas*
+    - **8** - *LNG*
+    - **9** - *LPG subject to Special Condition 18*
+    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **11** - *Solid fuel: house coal*
+    - **12** - *Solid fuel: manufactured smokeless fuel*
+    - **15** - *Solid fuel: anthracite*
+    - **20** - *Solid fuel: wood logs*
+    - **21** - *Solid fuel: wood chips*
+    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **36** - *Electricity: electricity sold to grid*
+    - **37** - *Electricity: electricity displaced from grid*
+    - **39** - *Electricity: electricity, unspecified tariff*
+    - **41** - *Community heating schemes: heat from electric heat pump*
+    - **42** - *Community heating schemes: heat from boilers - waste combustion*
+    - **43** - *Community heating schemes: heat from boilers - biomass*
+    - **44** - *Community heating schemes: heat from boilers - biogas*
+    - **45** - *Community heating schemes: waste heat from power stations*
+    - **46** - *Community heating schemes: geothermal heat source*
+    - **47** - *Community heating schemes: high grade heat recovered from process*
+    - **48** - *Community heating schemes: heat from CHP*
+    - **49** - *Community heating schemes: low grade heat recovered from process*
+    - **50** - *Community heating schemes: electricity for pumping in distribution network*
+    - **51** - *Community heating schemes: heat from mains gas*
+    - **52** - *Community heating schemes: heat from LPG*
+    - **53** - *Community heating schemes: heat from oil*
+    - **54** - *Community heating schemes: heat from coal*
+    - **55** - *Community heating schemes: heat from B30D*
+    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **71** - *biodiesel from any biomass source*
+    - **72** - *biodiesel from used cooking oil only*
+    - **73** - *biodiesel from vegetable oil only*
+    - **74** - *appliances able to use mineral oil or liquid biofuel*
+    - **75** - *B30K*
+    - **76** - *bioethanol from any biomass source*
+    - **99** - *Fuel data from pcdb*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/PCDF-Fuel-Index"></a>PCDF-Fuel-Index
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/PCDF-Fuel-Index`
@@ -3329,7 +4256,16 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **81** - *New CHP, export only.*    - **82** - *New CHP, flexible operation.*    - **83** - *New CHP, standard.*    - **84** - *Existing CHP (2015+), export only.*    - **85** - *Existing CHP (2015+), flexible operation.*    - **86** - *Existing CHP (2015+),standard.*    - **87** - *Existing CHP (pre-2015), export only.*    - **88** - *Existing CHP (pre-2015), flexible operation.*    - **89** - *Existing CHP (pre-2015), standard.*
+    - **81** - *New CHP, export only.*
+    - **82** - *New CHP, flexible operation.*
+    - **83** - *New CHP, standard.*
+    - **84** - *Existing CHP (2015+), export only.*
+    - **85** - *Existing CHP (2015+), flexible operation.*
+    - **86** - *Existing CHP (2015+),standard.*
+    - **87** - *Existing CHP (pre-2015), export only.*
+    - **88** - *Existing CHP (pre-2015), flexible operation.*
+    - **89** - *Existing CHP (pre-2015), standard.*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Loss-Factor"></a>Community-Heating-Distribution-Loss-Factor
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Loss-Factor`
@@ -3353,7 +4289,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Index-Number"></a>Heat-Network-Index-Number
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Index-Number`
@@ -3389,7 +4329,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Assessed-As-New"></a>Heat-Network-Assessed-As-New
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Assessed-As-New`
@@ -3401,7 +4345,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details"></a>Main-Heating-Details
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details`
@@ -3449,7 +4397,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *none*    - **2** - *boiler with radiators or underfloor heating*    - **3** - *micro-cogeneration*    - **4** - *heat pump with radiators or underfloor heating*    - **5** - *heat pump with warm air distribution*    - **6** - *community heating system*    - **7** - *electric storage heaters*    - **8** - *electric underfloor heating*    - **9** - *warm air system (not heat pump)*    - **10** - *room heaters*    - **11** - *other system*
+    - **1** - *none*
+    - **2** - *boiler with radiators or underfloor heating*
+    - **3** - *micro-cogeneration*
+    - **4** - *heat pump with radiators or underfloor heating*
+    - **5** - *heat pump with warm air distribution*
+    - **6** - *community heating system*
+    - **7** - *electric storage heaters*
+    - **8** - *electric underfloor heating*
+    - **9** - *warm air system (not heat pump)*
+    - **10** - *room heaters*
+    - **11** - *other system*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Data-Source"></a>Main-Heating-Data-Source
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Data-Source`
@@ -3461,7 +4420,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *from database*    - **2** - *from manufacturer declaration*    - **3** - *from SAP table*
+    - **1** - *from database*
+    - **2** - *from manufacturer declaration*
+    - **3** - *from SAP table*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Index-Number"></a>Main-Heating-Index-Number
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Index-Number`
@@ -3533,7 +4495,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Condensing-Boiler-Heat-Distribution"></a>Condensing-Boiler-Heat-Distribution
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Condensing-Boiler-Heat-Distribution`
@@ -3569,7 +4535,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *regular*    - **2** - *combi*    - **3** - *CPSU*    - **4** - *range cooker*
+    - **1** - *regular*
+    - **2** - *combi*
+    - **3** - *CPSU*
+    - **4** - *range cooker*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Combi-Boiler-Type"></a>Combi-Boiler-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Combi-Boiler-Type`
@@ -3581,7 +4551,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *instantaneous, no store or keep hot*    - **2** - *primary storage*    - **3** - *secondary storage*    - **4** - *CPSU*    - **5** - *untimed keep-hot by fuel*    - **6** - *timed keep hot by fuel*    - **7** - *untimed keep-hot by electricity*    - **8** - *timed keep hot by electricity*    - **9** - *untimed keep-hot by fuel and electricity*    - **10** - *timed keep hot by fuel and electricity*
+    - **1** - *instantaneous, no store or keep hot*
+    - **2** - *primary storage*
+    - **3** - *secondary storage*
+    - **4** - *CPSU*
+    - **5** - *untimed keep-hot by fuel*
+    - **6** - *timed keep hot by fuel*
+    - **7** - *untimed keep-hot by electricity*
+    - **8** - *timed keep hot by electricity*
+    - **9** - *untimed keep-hot by fuel and electricity*
+    - **10** - *timed keep hot by fuel and electricity*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Case-Heat-Emission"></a>Case-Heat-Emission
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Case-Heat-Emission`
@@ -3617,7 +4597,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *independent*    - **2** - *open fire*    - **3** - *closed room heater*    - **4** - *range cooker*
+    - **1** - *independent*
+    - **2** - *open fire*
+    - **3** - *closed room heater*
+    - **4** - *range cooker*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Code"></a>Main-Heating-Code
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Code`
@@ -3641,7 +4625,50 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*    - **2** - *Gas: bulk LPG*    - **3** - *Gas: bottled LPG*    - **4** - *Oil: heating oil*    - **7** - *Gas: biogas*    - **8** - *LNG*    - **9** - *LPG subject to Special Condition 18*    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*    - **11** - *Solid fuel: house coal*    - **12** - *Solid fuel: manufactured smokeless fuel*    - **15** - *Solid fuel: anthracite*    - **20** - *Solid fuel: wood logs*    - **21** - *Solid fuel: wood chips*    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*    - **36** - *Electricity: electricity sold to grid*    - **37** - *Electricity: electricity displaced from grid*    - **39** - *Electricity: electricity, unspecified tariff*    - **41** - *Community heating schemes: heat from electric heat pump*    - **42** - *Community heating schemes: heat from boilers - waste combustion*    - **43** - *Community heating schemes: heat from boilers - biomass*    - **44** - *Community heating schemes: heat from boilers - biogas*    - **45** - *Community heating schemes: waste heat from power stations*    - **46** - *Community heating schemes: geothermal heat source*    - **47** - *Community heating schemes: high grade heat recovered from process*    - **48** - *Community heating schemes: heat from CHP*    - **49** - *Community heating schemes: low grade heat recovered from process*    - **50** - *Community heating schemes: electricity for pumping in distribution network*    - **51** - *Community heating schemes: heat from mains gas*    - **52** - *Community heating schemes: heat from LPG*    - **53** - *Community heating schemes: heat from oil*    - **54** - *Community heating schemes: heat from coal*    - **55** - *Community heating schemes: heat from B30D*    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*    - **58** - *Community heating schemes: biodiesel from vegetable oil only*    - **71** - *biodiesel from any biomass source*    - **72** - *biodiesel from used cooking oil only*    - **73** - *biodiesel from vegetable oil only*    - **74** - *appliances able to use mineral oil or liquid biofuel*    - **75** - *B30K*    - **76** - *bioethanol from any biomass source*    - **99** - *Fuel data from pcdb*
+    - **1** - *Gas: mains gas*
+    - **2** - *Gas: bulk LPG*
+    - **3** - *Gas: bottled LPG*
+    - **4** - *Oil: heating oil*
+    - **7** - *Gas: biogas*
+    - **8** - *LNG*
+    - **9** - *LPG subject to Special Condition 18*
+    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **11** - *Solid fuel: house coal*
+    - **12** - *Solid fuel: manufactured smokeless fuel*
+    - **15** - *Solid fuel: anthracite*
+    - **20** - *Solid fuel: wood logs*
+    - **21** - *Solid fuel: wood chips*
+    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **36** - *Electricity: electricity sold to grid*
+    - **37** - *Electricity: electricity displaced from grid*
+    - **39** - *Electricity: electricity, unspecified tariff*
+    - **41** - *Community heating schemes: heat from electric heat pump*
+    - **42** - *Community heating schemes: heat from boilers - waste combustion*
+    - **43** - *Community heating schemes: heat from boilers - biomass*
+    - **44** - *Community heating schemes: heat from boilers - biogas*
+    - **45** - *Community heating schemes: waste heat from power stations*
+    - **46** - *Community heating schemes: geothermal heat source*
+    - **47** - *Community heating schemes: high grade heat recovered from process*
+    - **48** - *Community heating schemes: heat from CHP*
+    - **49** - *Community heating schemes: low grade heat recovered from process*
+    - **50** - *Community heating schemes: electricity for pumping in distribution network*
+    - **51** - *Community heating schemes: heat from mains gas*
+    - **52** - *Community heating schemes: heat from LPG*
+    - **53** - *Community heating schemes: heat from oil*
+    - **54** - *Community heating schemes: heat from coal*
+    - **55** - *Community heating schemes: heat from B30D*
+    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **71** - *biodiesel from any biomass source*
+    - **72** - *biodiesel from used cooking oil only*
+    - **73** - *biodiesel from vegetable oil only*
+    - **74** - *appliances able to use mineral oil or liquid biofuel*
+    - **75** - *B30K*
+    - **76** - *bioethanol from any biomass source*
+    - **99** - *Fuel data from pcdb*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/PCDF-Fuel-Index"></a>PCDF-Fuel-Index
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/PCDF-Fuel-Index`
@@ -3677,7 +4704,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *radiators*    - **2** - *underfloor*    - **3** - *both radiators and underfloor*    - **4** - *fan coil units*
+    - **1** - *radiators*
+    - **2** - *underfloor*
+    - **3** - *both radiators and underfloor*
+    - **4** - *fan coil units*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Underfloor-Heat-Emitter-Type"></a>Underfloor-Heat-Emitter-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Underfloor-Heat-Emitter-Type`
@@ -3689,7 +4720,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *in concrete slab*    - **2** - *in screed above insulation*    - **3** - *in timber floor*
+    - **1** - *in concrete slab*
+    - **2** - *in screed above insulation*
+    - **3** - *in timber floor*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Flue-Type"></a>Main-Heating-Flue-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Flue-Type`
@@ -3701,7 +4735,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *open flue*    - **2** - *balanced flue*    - **3** - *chimney*    - **4** - *omitted (boiler is in an outhouse, so its flue arrangements are not relevant)*    - **5** - *unknown (there is a flue, but its type could not be determined)*
+    - **1** - *open flue*
+    - **2** - *balanced flue*
+    - **3** - *chimney*
+    - **4** - *omitted (boiler is in an outhouse, so its flue arrangements are not relevant)*
+    - **5** - *unknown (there is a flue, but its type could not be determined)*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Flue-Fan-Present"></a>Is-Flue-Fan-Present
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Flue-Fan-Present`
@@ -3713,7 +4752,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Central-Heating-Pump-In-Heated-Space"></a>Is-Central-Heating-Pump-In-Heated-Space
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Central-Heating-Pump-In-Heated-Space`
@@ -3725,7 +4768,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Oil-Pump-In-Heated-Space"></a>Is-Oil-Pump-In-Heated-Space
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Oil-Pump-In-Heated-Space`
@@ -3737,7 +4784,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Interlocked-System"></a>Is-Interlocked-System
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Interlocked-System`
@@ -3749,7 +4800,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-Separate-Delayed-Start"></a>Has-Separate-Delayed-Start
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-Separate-Delayed-Start`
@@ -3761,7 +4816,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Boiler-Fuel-Feed"></a>Boiler-Fuel-Feed
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Boiler-Fuel-Feed`
@@ -3773,7 +4832,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *gravity*    - **2** - *manual*    - **3** - *screw*    - **4** - *other*
+    - **1** - *gravity*
+    - **2** - *manual*
+    - **3** - *screw*
+    - **4** - *other*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Main-Heating-HETAS-Approved"></a>Is-Main-Heating-HETAS-Approved
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Main-Heating-HETAS-Approved`
@@ -3785,7 +4848,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Electric-CPSU-Operating-Temperature"></a>Electric-CPSU-Operating-Temperature
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Electric-CPSU-Operating-Temperature`
@@ -3821,7 +4888,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *unknown*    - **2** - *on/off (gas and oil burners)*    - **3** - *modulating (gas and oil boilers)*    - **4** - *manual (solid fuel boilers)*    - **5** - *electrical (solid fuel boilers)*
+    - **1** - *unknown*
+    - **2** - *on/off (gas and oil burners)*
+    - **3** - *modulating (gas and oil boilers)*
+    - **4** - *manual (solid fuel boilers)*
+    - **5** - *electrical (solid fuel boilers)*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Efficiency-Type"></a>Efficiency-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Efficiency-Type`
@@ -3833,7 +4905,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *not gas or oil boiler*    - **2** - *SEDBUK(2005)*    - **3** - *SEDBUK(2009)*    - **4** - *winter and summer*
+    - **1** - *not gas or oil boiler*
+    - **2** - *SEDBUK(2005)*
+    - **3** - *SEDBUK(2009)*
+    - **4** - *winter and summer*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Winter"></a>Main-Heating-Efficiency-Winter
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Winter`
@@ -3893,7 +4969,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Index-Number"></a>FGHRS-Index-Number
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Index-Number`
@@ -3965,7 +5045,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *North*    - **2** - *North East*    - **3** - *East*    - **4** - *South East*    - **5** - *South*    - **6** - *South West*    - **7** - *West*    - **8** - *North West*    - **ND** - *To be used when the pitch is horizontal*    - **NR** - *not recorded - for backwards compatibility only; do not use*
+    - **1** - *North*
+    - **2** - *North East*
+    - **3** - *East*
+    - **4** - *South East*
+    - **5** - *South*
+    - **6** - *South West*
+    - **7** - *West*
+    - **8** - *North West*
+    - **ND** - *To be used when the pitch is horizontal*
+    - **NR** - *not recorded - for backwards compatibility only; do not use*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Pitch"></a>Pitch
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Pitch`
@@ -3977,7 +5067,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *horizontal*    - **2** - *30 degrees*    - **3** - *45 degrees*    - **4** - *60 degrees*    - **5** - *vertical*
+    - **1** - *horizontal*
+    - **2** - *30 degrees*
+    - **3** - *45 degrees*
+    - **4** - *60 degrees*
+    - **5** - *vertical*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading"></a>Overshading
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading`
@@ -3989,7 +5084,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *none or very little*    - **2** - *modest*    - **3** - *significant*    - **4** - *heavy*    - **5** - *severe*    - **ND** - *for backwards compatability only; do not use*
+    - **1** - *none or very little*
+    - **2** - *modest*
+    - **3** - *significant*
+    - **4** - *heavy*
+    - **5** - *severe*
+    - **ND** - *for backwards compatability only; do not use*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate"></a>MCS-Certificate
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate`
@@ -4001,7 +5102,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference"></a>MCS-Certificate-Reference
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference`
@@ -4121,7 +5226,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *standard tariff*    - **2** - *off-peak 7 hour*    - **3** - *off-peak 10 hour*    - **4** - *24 hour*    - **5** - *off-peak 18 hour*    - **ND** - *not applicable*
+    - **1** - *standard tariff*
+    - **2** - *off-peak 7 hour*
+    - **3** - *off-peak 10 hour*
+    - **4** - *24 hour*
+    - **5** - *off-peak 18 hour*
+    - **ND** - *not applicable*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation"></a>Hydro-Electric-Generation
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation`
@@ -4181,7 +5292,19 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **Jan** - **    - **Feb** - **    - **Mar** - **    - **Apr** - **    - **May** - **    - **Jun** - **    - **Jul** - **    - **Aug** - **    - **Sep** - **    - **Oct** - **    - **Nov** - **    - **Dec** - **
+    - **Jan** - **
+    - **Feb** - **
+    - **Mar** - **
+    - **Apr** - **
+    - **May** - **
+    - **Jun** - **
+    - **Jul** - **
+    - **Aug** - **
+    - **Sep** - **
+    - **Oct** - **
+    - **Nov** - **
+    - **Dec** - **
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value"></a>Hydro-Value
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value`
@@ -4205,7 +5328,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values"></a>Main-Heating-Declared-Values
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values`
@@ -4313,7 +5440,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Emitter-Temperature"></a>Emitter-Temperature
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Emitter-Temperature`
@@ -4325,7 +5456,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *unknown*    - **1** - *over 45degC*    - **2** - *over 35degC*    - **3** - *over 35degC and less than or equal to 45degC*    - **4** - *less than or equal to 35degC*    - **NA** - *not applicable for the heating system*
+    - **0** - *unknown*
+    - **1** - *over 45degC*
+    - **2** - *over 35degC*
+    - **3** - *over 35degC and less than or equal to 45degC*
+    - **4** - *less than or equal to 35degC*
+    - **NA** - *not applicable for the heating system*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/MCS-Installed-Heat-Pump"></a>MCS-Installed-Heat-Pump
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/MCS-Installed-Heat-Pump`
@@ -4337,7 +5474,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Central-Heating-Pump-Age"></a>Central-Heating-Pump-Age
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Central-Heating-Pump-Age`
@@ -4349,7 +5490,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *unknown*    - **1** - *2012 or earlier*    - **2** - *2013 or later*
+    - **0** - *unknown*
+    - **1** - *2012 or earlier*
+    - **2** - *2013 or later*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Control-Index-Number"></a>Control-Index-Number
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Control-Index-Number`
@@ -4422,6 +5566,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Data type of text value: *<class 'str'>*
 - codes:
     - **1** - *<= 125 litres per person per day*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Systems-Interaction"></a>Main-Heating-Systems-Interaction
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Systems-Interaction`
@@ -4433,7 +5578,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *both main heating systems provide heat to the whole property*    - **2** - *the main heating systems are separate and heat different parts of the property*
+    - **1** - *both main heating systems provide heat to the whole property*
+    - **2** - *the main heating systems are separate and heat different parts of the property*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values"></a>Secondary-Heating-Declared-Values
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values`
@@ -4493,7 +5640,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *not insulated*    - **2** - *first 1 metre from cylinder insulated*    - **3** - *all accessible pipework insulated*    - **4** - *fully insulated*
+    - **1** - *not insulated*
+    - **2** - *first 1 metre from cylinder insulated*
+    - **3** - *all accessible pipework insulated*
+    - **4** - *fully insulated*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details"></a>Solar-Heating-Details
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`
@@ -4553,7 +5704,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *unglazed*    - **2** - *flat panel*    - **3** - *evacuated tube*    - **ND** - *for backwards compatability only; do not use*
+    - **1** - *unglazed*
+    - **2** - *flat panel*
+    - **3** - *evacuated tube*
+    - **ND** - *for backwards compatability only; do not use*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Data-Source"></a>Solar-Panel-Collector-Data-Source
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Data-Source`
@@ -4565,7 +5720,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *default*    - **2** - *declared values*    - **ND** - *for backwards compatability only; do not use*
+    - **1** - *default*
+    - **2** - *declared values*
+    - **ND** - *for backwards compatability only; do not use*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Zero-Loss-Efficiency"></a>Solar-Panel-Collector-Zero-Loss-Efficiency
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Zero-Loss-Efficiency`
@@ -4625,7 +5783,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *North*    - **2** - *North East*    - **3** - *East*    - **4** - *South East*    - **5** - *South*    - **6** - *South West*    - **7** - *West*    - **8** - *North West*    - **ND** - *To be used when the pitch is horizontal*    - **NR** - *not recorded - for backwards compatibility only; do not use*
+    - **1** - *North*
+    - **2** - *North East*
+    - **3** - *East*
+    - **4** - *South East*
+    - **5** - *South*
+    - **6** - *South West*
+    - **7** - *West*
+    - **8** - *North West*
+    - **ND** - *To be used when the pitch is horizontal*
+    - **NR** - *not recorded - for backwards compatibility only; do not use*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Pitch"></a>Solar-Panel-Collector-Pitch
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Pitch`
@@ -4649,7 +5817,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *none or very little*    - **2** - *modest*    - **3** - *significant*    - **4** - *heavy*    - **5** - *severe*    - **ND** - *for backwards compatability only; do not use*
+    - **1** - *none or very little*
+    - **2** - *modest*
+    - **3** - *significant*
+    - **4** - *heavy*
+    - **5** - *severe*
+    - **ND** - *for backwards compatability only; do not use*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Has-Solar-Powered-Pump"></a>Has-Solar-Powered-Pump
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Has-Solar-Powered-Pump`
@@ -4661,7 +5835,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Solar-Store-Combined-Cylinder"></a>Is-Solar-Store-Combined-Cylinder
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Solar-Store-Combined-Cylinder`
@@ -4673,7 +5851,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Store-Volume"></a>Solar-Store-Volume
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Store-Volume`
@@ -4721,7 +5903,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Service-Provision"></a>Service-Provision
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Service-Provision`
@@ -4733,7 +5919,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *space and water heating*    - **2** - *space heating only*    - **3** - *water heating only*
+    - **1** - *space and water heating*
+    - **2** - *space heating only*
+    - **3** - *water heating only*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Overall-Heat-Loss"></a>Overall-Heat-Loss
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Overall-Heat-Loss`
@@ -4961,7 +6150,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Vented hot water system*    - **2** - *Vented hot water system + pump*    - **3** - *Unvented hot water system*    - **4** - *Instantaneous electric shower*    - **5** - *Part G 2015 compliant*
+    - **1** - *Vented hot water system*
+    - **2** - *Vented hot water system + pump*
+    - **3** - *Unvented hot water system*
+    - **4** - *Instantaneous electric shower*
+    - **5** - *Part G 2015 compliant*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Flow-Rate"></a>Shower-Flow-Rate
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Flow-Rate`
@@ -4997,7 +6191,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *none*    - **2** - *Instantaneous WWHRS 1*    - **3** - *Instantaneous WWHRS 2*    - **4** - *Storage WWHRS*
+    - **1** - *none*
+    - **2** - *Instantaneous WWHRS 1*
+    - **3** - *Instantaneous WWHRS 2*
+    - **4** - *Storage WWHRS*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths"></a>Number-Baths
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths`
@@ -5081,7 +6279,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *North*    - **2** - *North East*    - **3** - *East*    - **4** - *South East*    - **5** - *South*    - **6** - *South West*    - **7** - *West*    - **8** - *North West*    - **ND** - *To be used when the pitch is horizontal*    - **NR** - *not recorded - for backwards compatibility only; do not use*
+    - **1** - *North*
+    - **2** - *North East*
+    - **3** - *East*
+    - **4** - *South East*
+    - **5** - *South*
+    - **6** - *South West*
+    - **7** - *West*
+    - **8** - *North West*
+    - **ND** - *To be used when the pitch is horizontal*
+    - **NR** - *not recorded - for backwards compatibility only; do not use*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Pitch"></a>Pitch
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Pitch`
@@ -5093,7 +6301,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *horizontal*    - **2** - *30 degrees*    - **3** - *45 degrees*    - **4** - *60 degrees*    - **5** - *vertical*
+    - **1** - *horizontal*
+    - **2** - *30 degrees*
+    - **3** - *45 degrees*
+    - **4** - *60 degrees*
+    - **5** - *vertical*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading"></a>Overshading
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading`
@@ -5105,7 +6318,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *none or very little*    - **2** - *modest*    - **3** - *significant*    - **4** - *heavy*    - **5** - *severe*    - **ND** - *for backwards compatability only; do not use*
+    - **1** - *none or very little*
+    - **2** - *modest*
+    - **3** - *significant*
+    - **4** - *heavy*
+    - **5** - *severe*
+    - **ND** - *for backwards compatability only; do not use*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate"></a>MCS-Certificate
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate`
@@ -5117,7 +6336,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference"></a>MCS-Certificate-Reference
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference`
@@ -5237,7 +6460,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *standard tariff*    - **2** - *off-peak 7 hour*    - **3** - *off-peak 10 hour*    - **4** - *24 hour*    - **5** - *off-peak 18 hour*    - **ND** - *not applicable*
+    - **1** - *standard tariff*
+    - **2** - *off-peak 7 hour*
+    - **3** - *off-peak 10 hour*
+    - **4** - *24 hour*
+    - **5** - *off-peak 18 hour*
+    - **ND** - *not applicable*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation"></a>Hydro-Electric-Generation
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation`
@@ -5297,7 +6526,19 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **Jan** - **    - **Feb** - **    - **Mar** - **    - **Apr** - **    - **May** - **    - **Jun** - **    - **Jul** - **    - **Aug** - **    - **Sep** - **    - **Oct** - **    - **Nov** - **    - **Dec** - **
+    - **Jan** - **
+    - **Feb** - **
+    - **Mar** - **
+    - **Apr** - **
+    - **May** - **
+    - **Jun** - **
+    - **Jul** - **
+    - **Aug** - **
+    - **Sep** - **
+    - **Oct** - **
+    - **Nov** - **
+    - **Dec** - **
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value"></a>Hydro-Value
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value`
@@ -5321,7 +6562,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts"></a>SAP-Building-Parts
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts`
@@ -5393,7 +6638,19 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **A** - *England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919*    - **B** - *England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929*    - **C** - *England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949*    - **D** - *England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973*    - **E** - *England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977*    - **F** - *England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985*    - **G** - *England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991*    - **H** - *England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999*    - **I** - *England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006*    - **J** - *England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable*    - **K** - *England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013*    - **L** - *England and Wales: 2012 onwards; Scotland: 2012 onwards; Northern Ireland: 2014 onwards*
+    - **A** - *England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919*
+    - **B** - *England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929*
+    - **C** - *England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949*
+    - **D** - *England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973*
+    - **E** - *England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977*
+    - **F** - *England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985*
+    - **G** - *England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991*
+    - **H** - *England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999*
+    - **I** - *England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006*
+    - **J** - *England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable*
+    - **K** - *England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013*
+    - **L** - *England and Wales: 2012 onwards; Scotland: 2012 onwards; Northern Ireland: 2014 onwards*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings"></a>SAP-Openings
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings`
@@ -5465,7 +6722,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *unknown or unspecified*    - **1** - *North*    - **2** - *North East*    - **3** - *East*    - **4** - *South East*    - **5** - *South*    - **6** - *South West*    - **7** - *West*    - **8** - *North West*    - **9** - *Horizontal (windows and roof windows only)*
+    - **0** - *unknown or unspecified*
+    - **1** - *North*
+    - **2** - *North East*
+    - **3** - *East*
+    - **4** - *South East*
+    - **5** - *South*
+    - **6** - *South West*
+    - **7** - *West*
+    - **8** - *North West*
+    - **9** - *Horizontal (windows and roof windows only)*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Width"></a>Width
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Width`
@@ -5561,7 +6828,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **2** - *exposed roof*    - **4** - *party ceiling*
+    - **2** - *exposed roof*
+    - **4** - *party ceiling*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Total-Roof-Area"></a>Total-Roof-Area
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Total-Roof-Area`
@@ -5645,7 +6914,16 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **-1** - *Lower ground*    - **0** - *Ground*    - **1** - *1st*    - **2** - *2nd*    - **3** - *3rd*    - **4** - *4th*    - **5** - *5th*    - **6** - *6th*    - **99** - *Roof rooms*
+    - **-1** - *Lower ground*
+    - **0** - *Ground*
+    - **1** - *1st*
+    - **2** - *2nd*
+    - **3** - *3rd*
+    - **4** - *4th*
+    - **5** - *5th*
+    - **6** - *6th*
+    - **99** - *Roof rooms*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Description"></a>Description
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Description`
@@ -5669,7 +6947,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *basement floor*    - **2** - *ground floor*    - **3** - *upper floor (if heat loss area > 0, this area is an exposed floor)*    - **4** - *party floor*
+    - **1** - *basement floor*
+    - **2** - *ground floor*
+    - **3** - *upper floor (if heat loss area > 0, this area is an exposed floor)*
+    - **4** - *party floor*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Total-Floor-Area"></a>Total-Floor-Area
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Total-Floor-Area`
@@ -5765,7 +7047,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *default*    - **2** - *2002 regulations. For backwards compatibility only, do not use.*    - **3** - *accredited. For backwards compatibility only, do not use.*    - **4** - *user defined (global y-value)*    - **5** - *user defined (individual values)*
+    - **1** - *default*
+    - **2** - *2002 regulations. For backwards compatibility only, do not use.*
+    - **3** - *accredited. For backwards compatibility only, do not use.*
+    - **4** - *user defined (global y-value)*
+    - **5** - *user defined (individual values)*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/User-Defined-Y-Value"></a>User-Defined-Y-Value
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/User-Defined-Y-Value`
@@ -5813,7 +7100,54 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **ND** - *not defined (for backward compatibility only, do not use)*    - **E1** - *Steel lintel with perforated steel base plate*    - **E2** - *Other lintels (including other steel lintels)*    - **E3** - *Sill*    - **E4** - *Jamb*    - **E5** - *Ground floor (normal)*    - **E6** - *Intermediate floor within a dwelling*    - **E7** - *Party floor between dwellings (in blocks of flats)*    - **E8** - *Balcony within a dwelling, wall insulation continuous*    - **E9** - *Balcony between dwellings, wall insulation continuous*    - **E10** - *Eaves (insulation at ceiling level)*    - **E11** - *Eaves (insulation at rafter level)*    - **E12** - *Gable (insulation at ceiling level)*    - **E13** - *Gable (insulation at rafter level)*    - **E14** - *Flat roof*    - **E15** - *Flat roof with parapet*    - **E16** - *Corner (normal)*    - **E17** - *Corner (inverted - internal area greater than external area)*    - **E18** - *Party wall between dwellings*    - **E19** - *Ground floor (inverted)*    - **E20** - *Exposed floor (normal)*    - **E21** - *Exposed floor (inverted)*    - **E22** - *Basement floor*    - **E23** - *Balcony within or between dwellings, balcony support penetrates wall insulation*    - **E24** - *Eaves (insulation at ceiling level - inverted)*    - **E25** - *Staggered party wall between dwellings*    - **P1** - *Ground floor*    - **P2** - *Intermediate floor within a dwelling*    - **P3** - *Intermediate floor between dwellings (in blocks of flats)*    - **P4** - *Roof (insulation at ceiling level)*    - **P5** - *Roof (insulation at rafter level)*    - **P6** - *Ground floor (inverted)*    - **P7** - *Exposed floor (normal)*    - **P8** - *Exposed floor (inverted)*    - **R1** - *Head of roof window*    - **R2** - *Sill of roof window*    - **R3** - *Jamb of roof window*    - **R4** - *Ridge (vaulted ceiling)*    - **R5** - *Ridge (inverted)*    - **R6** - *Flat ceiling*    - **R7** - *Flat ceiling (inverted)*    - **R8** - *Roof to wall (rafter)*    - **R9** - *Roof to wall (flat ceiling)*    - **R10** - *All other roof or room-in-roof junctions*    - **R11** - *Upstands or kerbs of rooflights*    - **O1** - *other type 1*    - **O2** - *other type 2*
+    - **ND** - *not defined (for backward compatibility only, do not use)*
+    - **E1** - *Steel lintel with perforated steel base plate*
+    - **E2** - *Other lintels (including other steel lintels)*
+    - **E3** - *Sill*
+    - **E4** - *Jamb*
+    - **E5** - *Ground floor (normal)*
+    - **E6** - *Intermediate floor within a dwelling*
+    - **E7** - *Party floor between dwellings (in blocks of flats)*
+    - **E8** - *Balcony within a dwelling, wall insulation continuous*
+    - **E9** - *Balcony between dwellings, wall insulation continuous*
+    - **E10** - *Eaves (insulation at ceiling level)*
+    - **E11** - *Eaves (insulation at rafter level)*
+    - **E12** - *Gable (insulation at ceiling level)*
+    - **E13** - *Gable (insulation at rafter level)*
+    - **E14** - *Flat roof*
+    - **E15** - *Flat roof with parapet*
+    - **E16** - *Corner (normal)*
+    - **E17** - *Corner (inverted - internal area greater than external area)*
+    - **E18** - *Party wall between dwellings*
+    - **E19** - *Ground floor (inverted)*
+    - **E20** - *Exposed floor (normal)*
+    - **E21** - *Exposed floor (inverted)*
+    - **E22** - *Basement floor*
+    - **E23** - *Balcony within or between dwellings, balcony support penetrates wall insulation*
+    - **E24** - *Eaves (insulation at ceiling level - inverted)*
+    - **E25** - *Staggered party wall between dwellings*
+    - **P1** - *Ground floor*
+    - **P2** - *Intermediate floor within a dwelling*
+    - **P3** - *Intermediate floor between dwellings (in blocks of flats)*
+    - **P4** - *Roof (insulation at ceiling level)*
+    - **P5** - *Roof (insulation at rafter level)*
+    - **P6** - *Ground floor (inverted)*
+    - **P7** - *Exposed floor (normal)*
+    - **P8** - *Exposed floor (inverted)*
+    - **R1** - *Head of roof window*
+    - **R2** - *Sill of roof window*
+    - **R3** - *Jamb of roof window*
+    - **R4** - *Ridge (vaulted ceiling)*
+    - **R5** - *Ridge (inverted)*
+    - **R6** - *Flat ceiling*
+    - **R7** - *Flat ceiling (inverted)*
+    - **R8** - *Roof to wall (rafter)*
+    - **R9** - *Roof to wall (flat ceiling)*
+    - **R10** - *All other roof or room-in-roof junctions*
+    - **R11** - *Upstands or kerbs of rooflights*
+    - **O1** - *other type 1*
+    - **O2** - *other type 2*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Length"></a>Length
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Length`
@@ -5849,7 +7183,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *calculated by person with suitable expertise*    - **2** - *government-approved scheme*    - **3** - *not government-approved scheme*    - **4** - *SAP table default*
+    - **1** - *calculated by person with suitable expertise*
+    - **2** - *government-approved scheme*
+    - **3** - *not government-approved scheme*
+    - **4** - *SAP table default*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Calculation-Reference"></a>Psi-Value-Calculation-Reference
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Calculation-Reference`
@@ -5921,7 +7259,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *basement wall*    - **2** - *exposed wall*    - **3** - *sheltered wall*    - **4** - *party wall*    - **5** - *internal wall*
+    - **1** - *basement wall*
+    - **2** - *exposed wall*
+    - **3** - *sheltered wall*
+    - **4** - *party wall*
+    - **5** - *internal wall*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Total-Wall-Area"></a>Total-Wall-Area
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Total-Wall-Area`
@@ -5957,7 +7300,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Kappa-Value"></a>Kappa-Value
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Kappa-Value`
@@ -6029,7 +7376,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **2** - *manufacturer declaration*    - **3** - *SAP table*    - **4** - *BFRC data*
+    - **2** - *manufacturer declaration*
+    - **3** - *SAP table*
+    - **4** - *BFRC data*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Type"></a>Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Type`
@@ -6041,7 +7391,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *solid door*    - **2** - *semi-glazed door*    - **3** - *door to corridor*    - **4** - *window*    - **5** - *roof window*    - **6** - *rooflight*
+    - **1** - *solid door*
+    - **2** - *semi-glazed door*
+    - **3** - *door to corridor*
+    - **4** - *window*
+    - **5** - *roof window*
+    - **6** - *rooflight*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Type"></a>Glazing-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Type`
@@ -6053,7 +7409,20 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *not applicable (non-glazed door)*    - **2** - *single*    - **3** - *double*    - **4** - *double low-E hard 0.2*    - **5** - *double low-E hard 0.15*    - **6** - *double low-E soft 0.1*    - **7** - *double low-E soft 0.05*    - **8** - *triple*    - **9** - *triple low-E hard 0.2*    - **10** - *triple low-E hard 0.15*    - **11** - *triple low-E soft 0.1*    - **12** - *triple low-E soft 0.05*    - **13** - *secondary glazing*
+    - **1** - *not applicable (non-glazed door)*
+    - **2** - *single*
+    - **3** - *double*
+    - **4** - *double low-E hard 0.2*
+    - **5** - *double low-E hard 0.15*
+    - **6** - *double low-E soft 0.1*
+    - **7** - *double low-E soft 0.05*
+    - **8** - *triple*
+    - **9** - *triple low-E hard 0.2*
+    - **10** - *triple low-E hard 0.15*
+    - **11** - *triple low-E soft 0.1*
+    - **12** - *triple low-E soft 0.05*
+    - **13** - *secondary glazing*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Gap"></a>Glazing-Gap
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Gap`
@@ -6065,7 +7434,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *6 mm*    - **2** - *12 mm*    - **3** - *16 mm or more*
+    - **1** - *6 mm*
+    - **2** - *12 mm*
+    - **3** - *16 mm or more*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsArgonFilled"></a>IsArgonFilled
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsArgonFilled`
@@ -6077,7 +7449,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsKryptonFilled"></a>IsKryptonFilled
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsKryptonFilled`
@@ -6089,7 +7465,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Type"></a>Frame-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Type`
@@ -6101,7 +7481,16 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *wood*    - **2** - *PVC*    - **3** - *metal no break*    - **4** - *metal 4 mm break*    - **5** - *metal 8 mm break*    - **6** - *metal 12 mm break*    - **7** - *metal 20 mm break*    - **8** - *metal 32 mm break*    - **9** - *unknown*
+    - **1** - *wood*
+    - **2** - *PVC*
+    - **3** - *metal no break*
+    - **4** - *metal 4 mm break*
+    - **5** - *metal 8 mm break*
+    - **6** - *metal 12 mm break*
+    - **7** - *metal 20 mm break*
+    - **8** - *metal 32 mm break*
+    - **9** - *unknown*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Solar-Transmittance"></a>Solar-Transmittance
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Solar-Transmittance`
@@ -6257,7 +7646,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *yes (new dwelling, value measured in this dwelling)*    - **2** - *yes (new dwelling, design value)*    - **3** - *no test, value assumed for calculation (new dwelling)*    - **4** - *no test, SAP algorithm used (existing dwelling)*    - **5** - *average for other dwellings of the same type (new dwelling)*    - **6** - *yes (existing dwelling)*    - **7** - *yes (measured value) - low-pressure pulse*
+    - **1** - *yes (new dwelling, value measured in this dwelling)*
+    - **2** - *yes (new dwelling, design value)*
+    - **3** - *no test, value assumed for calculation (new dwelling)*
+    - **4** - *no test, SAP algorithm used (existing dwelling)*
+    - **5** - *average for other dwellings of the same type (new dwelling)*
+    - **6** - *yes (existing dwelling)*
+    - **7** - *yes (measured value) - low-pressure pulse*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test-Certificate-Number"></a>Pressure-Test-Certificate-Number
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test-Certificate-Number`
@@ -6293,7 +7689,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *not suspended timber*    - **2** - *suspended timber, sealed*    - **3** - *suspended timber, unsealed*
+    - **1** - *not suspended timber*
+    - **2** - *suspended timber, sealed*
+    - **3** - *suspended timber, unsealed*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wall-Type"></a>Wall-Type
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wall-Type`
@@ -6305,7 +7704,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *steel or timber frame*    - **2** - *other*
+    - **1** - *steel or timber frame*
+    - **2** - *other*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Has-Draught-Lobby"></a>Has-Draught-Lobby
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Has-Draught-Lobby`
@@ -6317,7 +7718,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/DraughtStripping"></a>DraughtStripping
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/DraughtStripping`
@@ -6353,7 +7758,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *natural with intermittent extract fans*    - **2** - *natural with passive vents*    - **3** - *positive input from loft*    - **4** - *positive input from outside*    - **5** - *mechanical extract, centralised (MEV c)*    - **6** - *mechanical extract, decentralised (MEV dc)*    - **7** - *balanced without heat recovery (MV)*    - **8** - *balanced with heat recovery (MVHR)*    - **9** - *natural with intermittent extract fans and/or passive vents. For backwards compatibility only, do not use.*    - **10** - *natural with intermittent extract fans and passive vents*
+    - **1** - *natural with intermittent extract fans*
+    - **2** - *natural with passive vents*
+    - **3** - *positive input from loft*
+    - **4** - *positive input from outside*
+    - **5** - *mechanical extract, centralised (MEV c)*
+    - **6** - *mechanical extract, decentralised (MEV dc)*
+    - **7** - *balanced without heat recovery (MV)*
+    - **8** - *balanced with heat recovery (MVHR)*
+    - **9** - *natural with intermittent extract fans and/or passive vents. For backwards compatibility only, do not use.*
+    - **10** - *natural with intermittent extract fans and passive vents*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Ventilation-Data-Source"></a>Mechanical-Ventilation-Data-Source
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Ventilation-Data-Source`
@@ -6365,7 +7780,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *from database*    - **2** - *from manufacturer declaration*    - **3** - *from SAP table*
+    - **1** - *from database*
+    - **2** - *from manufacturer declaration*
+    - **3** - *from SAP table*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Index-Number"></a>Mechanical-Vent-System-Index-Number
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Index-Number`
@@ -6461,7 +7879,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *flexible*    - **2** - *rigid*    - **3** - *semi-rigid*
+    - **1** - *flexible*
+    - **2** - *rigid*
+    - **3** - *semi-rigid*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation"></a>Mechanical-Vent-Duct-Insulation
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation`
@@ -6473,7 +7894,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *not insulated*    - **2** - *insulated*
+    - **1** - *not insulated*
+    - **2** - *insulated*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation-Level"></a>Mechanical-Vent-Duct-Insulation-Level
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation-Level`
@@ -6485,7 +7908,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *level 1*    - **2** - *level 2*
+    - **1** - *level 1*
+    - **2** - *level 2*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Placement"></a>Mechanical-Vent-Duct-Placement
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Placement`
@@ -6497,7 +7922,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *inside heated envelope*    - **2** - *outside heated envelope*
+    - **1** - *inside heated envelope*
+    - **2** - *outside heated envelope*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Measured-Installation"></a>Mechanical-Vent-Measured-Installation
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Measured-Installation`
@@ -6509,7 +7936,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Count"></a>Kitchen-Room-Fans-Count
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Count`
@@ -6689,7 +8120,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Ducts-Index-Number"></a>Mechanical-Vent-Ducts-Index-Number
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Ducts-Index-Number`
@@ -6797,7 +8232,44 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **A** - *Loft insulation*    - **A2** - *Flat roof insulation*    - **A3** - *Room-in-roof insulation*    - **B** - *Cavity wall insulation*    - **C** - *Hot water cylinder insulation*    - **D** - *Draughtproofing*    - **E** - *Low energy lights*    - **F** - *Cylinder thermostat*    - **G** - *Heating controls for wet central heating system*    - **H** - *Heating controls for warm air system*    - **I** - *Upgrade boiler, same fuel*    - **J** - *Biomass boiler*    - **J2** - *Biomass boiler as alternative improvement*    - **K** - *Biomass room heater with boiler*    - **L** - *New or replacement fan-assisted storage heaters*    - **L2** - *New or replacement high heat retention storage heaters*    - **M** - *Replacement warm-air unit*    - **N** - *Solar water heating*    - **O** - *Replacement double glazed windows*    - **O3** - *Replacement double glazing units*    - **P** - *Secondary glazing*    - **Q** - *Solid wall insulation*    - **Q2** - *External insulation with cavity wall insulation*    - **R** - *Condensing oil boiler*    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*    - **T2** - *Flue gas heat recovery*    - **U** - *Photovoltaics*    - **V** - *Wind turbine (roof mounted)*    - **V2** - *Wind turbine (on mast)*    - **W** - *Floor insulation*    - **X** - *Insulated doors*    - **Y** - *Instantaneous waste water heat recovery*    - **Y2** - *Storage waste water heat recovery*    - **Z1** - *Air or ground source heat pump*    - **Z2** - *Air or ground source heat pump with underfloor heating*    - **Z3** - *Micro-CHP*
+    - **A** - *Loft insulation*
+    - **A2** - *Flat roof insulation*
+    - **A3** - *Room-in-roof insulation*
+    - **B** - *Cavity wall insulation*
+    - **C** - *Hot water cylinder insulation*
+    - **D** - *Draughtproofing*
+    - **E** - *Low energy lights*
+    - **F** - *Cylinder thermostat*
+    - **G** - *Heating controls for wet central heating system*
+    - **H** - *Heating controls for warm air system*
+    - **I** - *Upgrade boiler, same fuel*
+    - **J** - *Biomass boiler*
+    - **J2** - *Biomass boiler as alternative improvement*
+    - **K** - *Biomass room heater with boiler*
+    - **L** - *New or replacement fan-assisted storage heaters*
+    - **L2** - *New or replacement high heat retention storage heaters*
+    - **M** - *Replacement warm-air unit*
+    - **N** - *Solar water heating*
+    - **O** - *Replacement double glazed windows*
+    - **O3** - *Replacement double glazing units*
+    - **P** - *Secondary glazing*
+    - **Q** - *Solid wall insulation*
+    - **Q2** - *External insulation with cavity wall insulation*
+    - **R** - *Condensing oil boiler*
+    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*
+    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*
+    - **T2** - *Flue gas heat recovery*
+    - **U** - *Photovoltaics*
+    - **V** - *Wind turbine (roof mounted)*
+    - **V2** - *Wind turbine (on mast)*
+    - **W** - *Floor insulation*
+    - **X** - *Insulated doors*
+    - **Y** - *Instantaneous waste water heat recovery*
+    - **Y2** - *Storage waste water heat recovery*
+    - **Z1** - *Air or ground source heat pump*
+    - **Z2** - *Air or ground source heat pump with underfloor heating*
+    - **Z3** - *Micro-CHP*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details"></a>SAP-Flat-Details
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details`
@@ -6821,7 +8293,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **0** - *basement*    - **1** - *ground floor*    - **2** - *mid floor*    - **3** - *top floor*
+    - **0** - *basement*
+    - **1** - *ground floor*
+    - **2** - *mid floor*
+    - **3** - *top floor*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Storeys"></a>Storeys
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Storeys`
@@ -6905,7 +8381,50 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*    - **2** - *Gas: bulk LPG*    - **3** - *Gas: bottled LPG*    - **4** - *Oil: heating oil*    - **7** - *Gas: biogas*    - **8** - *LNG*    - **9** - *LPG subject to Special Condition 18*    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*    - **11** - *Solid fuel: house coal*    - **12** - *Solid fuel: manufactured smokeless fuel*    - **15** - *Solid fuel: anthracite*    - **20** - *Solid fuel: wood logs*    - **21** - *Solid fuel: wood chips*    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*    - **36** - *Electricity: electricity sold to grid*    - **37** - *Electricity: electricity displaced from grid*    - **39** - *Electricity: electricity, unspecified tariff*    - **41** - *Community heating schemes: heat from electric heat pump*    - **42** - *Community heating schemes: heat from boilers - waste combustion*    - **43** - *Community heating schemes: heat from boilers - biomass*    - **44** - *Community heating schemes: heat from boilers - biogas*    - **45** - *Community heating schemes: waste heat from power stations*    - **46** - *Community heating schemes: geothermal heat source*    - **47** - *Community heating schemes: high grade heat recovered from process*    - **48** - *Community heating schemes: heat from CHP*    - **49** - *Community heating schemes: low grade heat recovered from process*    - **50** - *Community heating schemes: electricity for pumping in distribution network*    - **51** - *Community heating schemes: heat from mains gas*    - **52** - *Community heating schemes: heat from LPG*    - **53** - *Community heating schemes: heat from oil*    - **54** - *Community heating schemes: heat from coal*    - **55** - *Community heating schemes: heat from B30D*    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*    - **58** - *Community heating schemes: biodiesel from vegetable oil only*    - **71** - *biodiesel from any biomass source*    - **72** - *biodiesel from used cooking oil only*    - **73** - *biodiesel from vegetable oil only*    - **74** - *appliances able to use mineral oil or liquid biofuel*    - **75** - *B30K*    - **76** - *bioethanol from any biomass source*    - **99** - *Fuel data from pcdb*
+    - **1** - *Gas: mains gas*
+    - **2** - *Gas: bulk LPG*
+    - **3** - *Gas: bottled LPG*
+    - **4** - *Oil: heating oil*
+    - **7** - *Gas: biogas*
+    - **8** - *LNG*
+    - **9** - *LPG subject to Special Condition 18*
+    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **11** - *Solid fuel: house coal*
+    - **12** - *Solid fuel: manufactured smokeless fuel*
+    - **15** - *Solid fuel: anthracite*
+    - **20** - *Solid fuel: wood logs*
+    - **21** - *Solid fuel: wood chips*
+    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **36** - *Electricity: electricity sold to grid*
+    - **37** - *Electricity: electricity displaced from grid*
+    - **39** - *Electricity: electricity, unspecified tariff*
+    - **41** - *Community heating schemes: heat from electric heat pump*
+    - **42** - *Community heating schemes: heat from boilers - waste combustion*
+    - **43** - *Community heating schemes: heat from boilers - biomass*
+    - **44** - *Community heating schemes: heat from boilers - biogas*
+    - **45** - *Community heating schemes: waste heat from power stations*
+    - **46** - *Community heating schemes: geothermal heat source*
+    - **47** - *Community heating schemes: high grade heat recovered from process*
+    - **48** - *Community heating schemes: heat from CHP*
+    - **49** - *Community heating schemes: low grade heat recovered from process*
+    - **50** - *Community heating schemes: electricity for pumping in distribution network*
+    - **51** - *Community heating schemes: heat from mains gas*
+    - **52** - *Community heating schemes: heat from LPG*
+    - **53** - *Community heating schemes: heat from oil*
+    - **54** - *Community heating schemes: heat from coal*
+    - **55** - *Community heating schemes: heat from B30D*
+    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **71** - *biodiesel from any biomass source*
+    - **72** - *biodiesel from used cooking oil only*
+    - **73** - *biodiesel from vegetable oil only*
+    - **74** - *appliances able to use mineral oil or liquid biofuel*
+    - **75** - *B30K*
+    - **76** - *bioethanol from any biomass source*
+    - **99** - *Fuel data from pcdb*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used"></a>Energy-Used
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used`
@@ -6929,7 +8448,50 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*    - **2** - *Gas: bulk LPG*    - **3** - *Gas: bottled LPG*    - **4** - *Oil: heating oil*    - **7** - *Gas: biogas*    - **8** - *LNG*    - **9** - *LPG subject to Special Condition 18*    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*    - **11** - *Solid fuel: house coal*    - **12** - *Solid fuel: manufactured smokeless fuel*    - **15** - *Solid fuel: anthracite*    - **20** - *Solid fuel: wood logs*    - **21** - *Solid fuel: wood chips*    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*    - **36** - *Electricity: electricity sold to grid*    - **37** - *Electricity: electricity displaced from grid*    - **39** - *Electricity: electricity, unspecified tariff*    - **41** - *Community heating schemes: heat from electric heat pump*    - **42** - *Community heating schemes: heat from boilers - waste combustion*    - **43** - *Community heating schemes: heat from boilers - biomass*    - **44** - *Community heating schemes: heat from boilers - biogas*    - **45** - *Community heating schemes: waste heat from power stations*    - **46** - *Community heating schemes: geothermal heat source*    - **47** - *Community heating schemes: high grade heat recovered from process*    - **48** - *Community heating schemes: heat from CHP*    - **49** - *Community heating schemes: low grade heat recovered from process*    - **50** - *Community heating schemes: electricity for pumping in distribution network*    - **51** - *Community heating schemes: heat from mains gas*    - **52** - *Community heating schemes: heat from LPG*    - **53** - *Community heating schemes: heat from oil*    - **54** - *Community heating schemes: heat from coal*    - **55** - *Community heating schemes: heat from B30D*    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*    - **58** - *Community heating schemes: biodiesel from vegetable oil only*    - **71** - *biodiesel from any biomass source*    - **72** - *biodiesel from used cooking oil only*    - **73** - *biodiesel from vegetable oil only*    - **74** - *appliances able to use mineral oil or liquid biofuel*    - **75** - *B30K*    - **76** - *bioethanol from any biomass source*    - **99** - *Fuel data from pcdb*
+    - **1** - *Gas: mains gas*
+    - **2** - *Gas: bulk LPG*
+    - **3** - *Gas: bottled LPG*
+    - **4** - *Oil: heating oil*
+    - **7** - *Gas: biogas*
+    - **8** - *LNG*
+    - **9** - *LPG subject to Special Condition 18*
+    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **11** - *Solid fuel: house coal*
+    - **12** - *Solid fuel: manufactured smokeless fuel*
+    - **15** - *Solid fuel: anthracite*
+    - **20** - *Solid fuel: wood logs*
+    - **21** - *Solid fuel: wood chips*
+    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **36** - *Electricity: electricity sold to grid*
+    - **37** - *Electricity: electricity displaced from grid*
+    - **39** - *Electricity: electricity, unspecified tariff*
+    - **41** - *Community heating schemes: heat from electric heat pump*
+    - **42** - *Community heating schemes: heat from boilers - waste combustion*
+    - **43** - *Community heating schemes: heat from boilers - biomass*
+    - **44** - *Community heating schemes: heat from boilers - biogas*
+    - **45** - *Community heating schemes: waste heat from power stations*
+    - **46** - *Community heating schemes: geothermal heat source*
+    - **47** - *Community heating schemes: high grade heat recovered from process*
+    - **48** - *Community heating schemes: heat from CHP*
+    - **49** - *Community heating schemes: low grade heat recovered from process*
+    - **50** - *Community heating schemes: electricity for pumping in distribution network*
+    - **51** - *Community heating schemes: heat from mains gas*
+    - **52** - *Community heating schemes: heat from LPG*
+    - **53** - *Community heating schemes: heat from oil*
+    - **54** - *Community heating schemes: heat from coal*
+    - **55** - *Community heating schemes: heat from B30D*
+    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **71** - *biodiesel from any biomass source*
+    - **72** - *biodiesel from used cooking oil only*
+    - **73** - *biodiesel from vegetable oil only*
+    - **74** - *appliances able to use mineral oil or liquid biofuel*
+    - **75** - *B30K*
+    - **76** - *bioethanol from any biomass source*
+    - **99** - *Fuel data from pcdb*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates"></a>Air-Change-Rates
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates`
@@ -6965,7 +8527,19 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **Jan** - **    - **Feb** - **    - **Mar** - **    - **Apr** - **    - **May** - **    - **Jun** - **    - **Jul** - **    - **Aug** - **    - **Sep** - **    - **Oct** - **    - **Nov** - **    - **Dec** - **
+    - **Jan** - **
+    - **Feb** - **
+    - **Mar** - **
+    - **Apr** - **
+    - **May** - **
+    - **Jun** - **
+    - **Jul** - **
+    - **Aug** - **
+    - **Sep** - **
+    - **Oct** - **
+    - **Nov** - **
+    - **Dec** - **
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Value"></a>Air-Change-Rate-Value
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Value`
@@ -7026,6 +8600,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Data type of text value: *<class 'str'>*
 - codes:
     - **1** - *<= 125 litres per person per day*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling"></a>SAP-Cooling
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling`
@@ -7061,7 +8636,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **1** - *from database*    - **2** - *from manufacturer declaration*    - **3** - *from SAP table*
+    - **1** - *from database*
+    - **2** - *from manufacturer declaration*
+    - **3** - *from SAP table*
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Class"></a>Cooling-System-Class
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Class`
@@ -7073,7 +8651,19 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'str'>*
 - codes:
-    - **A+++** - **    - **A++** - **    - **A+** - **    - **A** - **    - **B** - **    - **C** - **    - **D** - **    - **E** - **    - **F** - **    - **G** - **    - **ND** - **    - **Unknown** - **
+    - **A+++** - **
+    - **A++** - **
+    - **A+** - **
+    - **A** - **
+    - **B** - **
+    - **C** - **
+    - **D** - **
+    - **E** - **
+    - **F** - **
+    - **G** - **
+    - **ND** - **
+    - **Unknown** - **
+
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/System-Energy-Efficiency-Ratio"></a>System-Energy-Efficiency-Ratio
 
 `SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/System-Energy-Efficiency-Ratio`
@@ -7095,7 +8685,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<function b64encode at 0x0000022A7E78D5E0>*
+- Data type of text value: *<function b64encode at 0x000001E3C4F7C5E0>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details"></a>Insurance-Details
@@ -7289,4 +8879,8 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Has text value: *True*
 - Data type of text value: *<class 'bool'>*
 - codes:
-    - **true** - *True*    - **1** - *True*    - **false** - *False*    - **0** - *False*
+    - **true** - *True*
+    - **1** - *True*
+    - **false** - *False*
+    - **0** - *False*
+

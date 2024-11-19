@@ -45,7 +45,7 @@ def write_class(f, kls):
     else:
         f.write(f'- codes:\n')
         for k,v in kls.map_codes.items():
-            f.write(f'    - **{k}** - *{v}*')
+            f.write(f'    - **{k}** - *{v}*\n')
 
     
 
