@@ -14,7 +14,9 @@ This Python package implements SAP 10.2, the current version of SAP in use for U
 
 ## Documentation
 
-All documentation for this Python package is contained in the readme file on the [sap10calcs GitHub page](https://github.com/stevenkfirth/sap10calcs/tree/main).
+The main documentation for this Python package is contained in the readme file on the [sap10calcs GitHub page](https://github.com/stevenkfirth/sap10calcs/tree/main).
+
+There is also a website with supporting material here: https://stevenkfirth.github.io/sap10calcs/.
 
 ## Contents of this directory
 
