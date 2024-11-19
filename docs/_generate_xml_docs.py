@@ -24,7 +24,6 @@ def write_class(f, kls):
         y = y + ('/' if not y == '' else '') + x
         f.write(f'[`{x}`](#{y})/')
         
-        
     f.write('\n\n')
 
     #f.write(f'`{kls._expanded_name}`\n\n')
@@ -54,6 +53,8 @@ def write_class(f, kls):
         for k,v in kls.map_codes.items():
             f.write(f'    - **"{k}"** - *{v}*\n')
 
+    f.write(f'- Minimum occurrence: **{kls.min_occurs}**\n')
+    f.write(f'- Maximum occurrence: **{kls.max_occurs}**\n')
     
 
 
