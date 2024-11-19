@@ -19,30 +19,28 @@ def write_class(f, kls):
     ""
     f.write(f'## <a name="{kls._expanded_name}"></a>{kls.element_name}\n\n')
     f.write(f'`{kls._expanded_name}`\n\n')
-    f.write(f'- Documentation: *{kls.documentation}*\n')
-    f.write(f'- Documentation2: *{kls.type_documentation}*\n')
 
-    if kls._parent_class is None:
-        x = '*None*'
-    else:
-        #x = f'[`{kls._parent_class._expanded_name}`](#{kls._parent_class._expanded_name})'
-        x = f'[`{kls._parent_class.element_name}`](#{kls._parent_class._expanded_name})'
-    f.write(f'- Parent element: {x}\n')
+    if not kls.documentation is None:
+        f.write(f'- Documentation: *{kls.documentation}*\n')
+
+    if not kls.type_documentation is None:
+        f.write(f'- Documentation2: *{kls.type_documentation}*\n')
+
+    if not kls._parent_class is None:
+        f.write(f'- Parent element: [`{kls._parent_class.element_name}`](#{kls._parent_class._expanded_name})\n')
 
     subklses = [getattr(kls,subclass_class_name) for subclass_class_name in kls.subclass_class_names]
     
-    if len(subklses) == 0:
-        x = '*None*'
-    else:
+    if len(subklses) > 0:
         x = ' '.join([f'[`{subkls.element_name}`](#{kls._expanded_name}/{subkls.element_name})' for subkls in subklses] )
-    f.write(f'- Child elements: {x}\n')
+        f.write(f'- Child elements: {x}\n')
 
     f.write(f'- Has text value: *{kls.has_text_node}*\n')
-    f.write(f'- Data type: *{kls.python_type_convertor}*\n')
 
-    if kls.map_codes is None:
-        f.write(f'- codes: *None*\n')
-    else:
+    if not kls.python_type_convertor is None:
+        f.write(f'- Data type: *{kls.python_type_convertor}*\n')
+
+    if not kls.map_codes is None:
         f.write(f'- codes:\n')
         for k,v in kls.map_codes.items():
             f.write(f'    - **"{k}"** - *{v}*\n')
