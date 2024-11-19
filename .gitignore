@@ -2,6 +2,7 @@ _schemas/
 _generate_auto_classes.py
 example_input_files/_*.ipynb
 _hints.txt
+_auth.txt
 
 
 

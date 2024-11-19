@@ -30,6 +30,8 @@ Available on PyPi here: https://pypi.org/project/sap10calcs/
 
 Download using the command `pip install sap10calcs`. This command should be run in the Command Prompt or, if using the Anaconda distribution, the Anaconda Prompt.
 
+To upgrade to the latest version, use `pip install sap10calcs --upgrade`.
+
 ## Issues & requests?
 
 All comments welcome. Please send any issues and requests to Steven Firth at S.K.Firth@lboro.ac.uk.
@@ -71,21 +73,23 @@ sap10calcs.calculate(
         calculation_method = 'Energy rating',
         year = None,
         month = None,
-        day = None,    
+        day = None,  
+        extra = None,  
         verbose = False, 
         auth_token = None
         )
 ```
 
 Arguments: 
-- **input_file** *(str)*: The filepath of the SAP XML input file. This is an XML file based on the XML schema [SAP-Schema-19.1.0](https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.1.0/SAP).
-- **input_lxml** *(sap10calcs.sap_xml.SAP_Compliance_Report, sap10calcs.sap_xml.SAP_Report or lxml.etree.ElementBase*): An alternative to the `input_file` argument. This is a Python instance (i.e. an object) which holds the XML data instead. This is useful if an XML input file is being edited and means a calculation can be run without saving the XML to a local file first.
+- **input_file** *(str)*: The filepath of the SAP XML input file. This is an XML file based on the XML schema [SAP-Schema-19.1.0](https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.1.0/SAP). Default is `None`.
+- **input_lxml** *(sap10calcs.sap_xml.SAP_Compliance_Report, sap10calcs.sap_xml.SAP_Report or lxml.etree.ElementBase*): An alternative to the `input_file` argument. This is a Python instance (i.e. an object) which holds the XML data instead. This is useful if an XML input file is being edited and means a calculation can be run without saving the XML to a local file first. Default is `None`.
 - **calculation_method** *(str)*: The type of SAP calculation to be run. The options are: *'New dwelling as designed - dwelling emissions'*; *'Energy rating'*; *'EPC costs, emissions and primary energy'*. Default is `Energy rating`.
-- **year** *(int)*: If using *'EPC costs, emissions and primary energy'*, this is the year for the calculation.
-- **month** *(int)*: If using *'EPC costs, emissions and primary energy'*, this is the month for the calculation.
-- **day** *(int)*: If using *'EPC costs, emissions and primary energy'*, this is the day for the calculation.
+- **year** *(int)*: If using *'EPC costs, emissions and primary energy'*, this is the year for the calculation. Default is `None`.
+- **month** *(int)*: If using *'EPC costs, emissions and primary energy'*, this is the month for the calculation. Default is `None`.
+- **day** *(int)*: If using *'EPC costs, emissions and primary energy'*, this is the day for the calculation. Default is `None`.
+- **extra** *(dict)*: An optional dictionary that can be used to provide extra instructions. Default is `None`.
 - **verbose** *(bool)*: Prints additional runtime information to stdout, including the API call. Default is `False`.
-- **auth_token** *(str)*: The authorization token for the API call. See [here](https://netzeroapis.com/redoc#section/Authorization) for more details. If the authorization token is not valid, then an error message will be returned.
+- **auth_token** *(str)*: The authorization token for the API call. See [here](https://netzeroapis.com/redoc#section/Authorization) for more details. If the authorization token is not valid, then an error message will be returned. Default is `None`.
 
 Returns:
 - *(dict)*: A dictionary of the results of the API call. This dictionary includes the following key/value pairs:
@@ -94,6 +98,9 @@ Returns:
     - **api_call_filename** *(str)*: The name of the SAP XML file used for the API call.
     - **api_call_server_time_seconds** *(float)*: The time taken to run the SAP 10 calculation.
     - **licenses** *(list)*: A list of the licenses which apply to the returned calculation results.
+    - **api_call_overwrite**: *(dict)*: The overwrite dictionary used in the SAP 10 calculation.
+    - **api_call_addition**: *(dict)*: The addition dictionary used in the SAP 10 calculation.
+    - **api_call_break_point**: *(dict)*: The break point used in the SAP 10 calculation.
     - **sap_calculation_output_dict** *(dict)*: The outputs of the SAP 10.2 calculation. The keys of this dictionary match with the names of the output variables in the SAP 10.2 calculation worksheet of SAP 10.2 document.
     - **sap_calculation_success** *(bool)*: `True` if the SAP calculation process completes fully, otherwise `False`.
     - **sap_calculation_error_type** *(str or None)*: The error type if an error occurs during the SAP calculation process, otherwise `None`.
@@ -159,7 +166,7 @@ Note: This is designed to work with SAP XML files based on the XML schema [SAP-S
 Signature:
 
 ```python
-sap10calcs.create_sap_report_xml(
+sap10calcs.parse_xml(
     input_file
 )
 ```
