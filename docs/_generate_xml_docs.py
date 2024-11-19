@@ -45,16 +45,19 @@ def write_class(f, kls):
 
     f.write(f'- Has text value: *{kls.has_text_node}*\n')
 
-    if not kls.python_type_convertor is None:
-        f.write(f'- Data type: *{kls.python_type_convertor}*\n')
+    if kls.map_codes is None:
 
-    if not kls.map_codes is None:
-        f.write(f'- codes:\n')
+        if not kls.python_type_convertor is None:
+            f.write(f'- Data type: *{kls.python_type_convertor}*\n')
+
+    else:
+
+        f.write(f'- Codes:\n')
         for k,v in kls.map_codes.items():
             f.write(f'    - **"{k}"** - *{v}*\n')
 
-    f.write(f'- Minimum occurrence: **{kls.min_occurs}**\n')
-    f.write(f'- Maximum occurrence: **{kls.max_occurs}**\n')
+    f.write(f'- Minimum occurrence: *{kls.min_occurs}*\n')
+    f.write(f'- Maximum occurrence: *{kls.max_occurs}*\n')
     
 
 
