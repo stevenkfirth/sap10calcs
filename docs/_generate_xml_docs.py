@@ -7,7 +7,7 @@ def write_subclass(f, kls):
 
         subkls = getattr(kls,subclass_class_name)
         subkls._parent_class = kls
-        subkls._expanded_name = f'{kls._expanded_name}__{subkls.class_name}'
+        subkls._expanded_name = f'{kls._expanded_name}/{subkls.element_name}'
 
         write_class(f, subkls)
         write_subclass(f, subkls)
@@ -39,7 +39,7 @@ with open('sap_schema_19_1_0.md', 'w') as f:
     
     SAP_Compliance_Report = classes_SAP_Schema_19_1_0.SAP_Compliance_Report
     SAP_Compliance_Report._parent_class = None
-    SAP_Compliance_Report._expanded_name = SAP_Compliance_Report.class_name
+    SAP_Compliance_Report._expanded_name = SAP_Compliance_Report.element_name
 
     write_class(f, SAP_Compliance_Report)
     write_subclass(f, SAP_Compliance_Report)
