@@ -1,4 +1,4 @@
-from sap10calcs import classes_SAP_Schema_19_1_0
+from sap10calcs import classes_SAP_Schema_19_1_0, classes_RdSAP_Schema_21_0_0
 
 def write_subclass(f, kls):
     ""
@@ -59,11 +59,7 @@ def write_class(f, kls):
     f.write(f'- Minimum occurrence: *{kls.min_occurs}*\n')
     f.write(f'- Maximum occurrence: *{kls.max_occurs}*\n')
     
-
-
     f.write('\n')
-
-
 
 
 with open('sap_schema_19_1_0.md', 'w') as f:
@@ -71,7 +67,7 @@ with open('sap_schema_19_1_0.md', 'w') as f:
     f.write('# SAP Schema 19.1.0. docs\n\n')
     f.write('This page contains the documentation for the XML schema [SAP-Schema-19.1.0](https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.1.0/SAP).\n\n')
     f.write('This XML schema describes the format of the XML input files for SAP 10.2 calculations.\n\n')
-    f.write('The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Report) or a [SAP-Report](#SAP_Compliance_Report__SAP_Report) element.\n\n')
+    f.write('The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Report) or a [SAP-Report](#SAP-Compliance-Report/SAP-Report) element.\n\n')
     
     SAP_Compliance_Report = classes_SAP_Schema_19_1_0.SAP_Compliance_Report
     SAP_Compliance_Report._parent_class = None
@@ -79,6 +75,21 @@ with open('sap_schema_19_1_0.md', 'w') as f:
 
     write_class(f, SAP_Compliance_Report)
     write_subclass(f, SAP_Compliance_Report)
+
+
+with open('rdsap_schema_21_0_0.md', 'w') as f:
+
+    f.write('# RdSAP Schema 21.0.0. docs\n\n')
+    f.write('This page contains the documentation for the XML schema [RdSAP-Schema-21.0.0](https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/RdSAP-Schema-21.0.0/RdSAP).\n\n')
+    f.write('This XML schema describes the format of the XML input files for RdSAP 10 calculations.\n\n')
+    f.write('The root XML element is a [RdSAP-Report](#RdSAP-Report) element.\n\n')
+    
+    RdSAP_Report = classes_RdSAP_Schema_21_0_0.RdSAP_Report
+    RdSAP_Report._parent_class = None
+    RdSAP_Report._expanded_name = RdSAP_Report.element_name
+
+    write_class(f, RdSAP_Report)
+    write_subclass(f, RdSAP_Report)
 
 
 

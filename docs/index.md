@@ -6,3 +6,7 @@ Author: [Steven Firth](https://www.stevenfirth.com)
 
 View the SAP_Schema_19_1_0 documentation [here](sap_schema_19_1_0.md).
 
+## RdSAP_Schema_21_0_0
+
+View the RdSAP_Schema_21_0_0 documentation [here](rdsap_schema_21_0_0.md).
+

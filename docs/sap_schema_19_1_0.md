@@ -4,7 +4,7 @@ This page contains the documentation for the XML schema [SAP-Schema-19.1.0](http
 
 This XML schema describes the format of the XML input files for SAP 10.2 calculations.
 
-The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Report) or a [SAP-Report](#SAP_Compliance_Report__SAP_Report) element.
+The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Report) or a [SAP-Report](#SAP-Compliance-Report/SAP-Report) element.
 
 ## <a name="SAP-Compliance-Report"></a>SAP-Compliance-Report
 
@@ -8000,7 +8000,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Documentation: *DEPRECATED - DO NOT USE This element is allowed for backwards-compatibility but any data sent here will not be read, processed or stored by the register.*
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Has text value: *True*
-- Data type: *<function b64encode at 0x000001876CF4E5E0>*
+- Data type: *<function b64encode at 0x000002459A85FB80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
