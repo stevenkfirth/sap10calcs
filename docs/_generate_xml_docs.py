@@ -18,7 +18,16 @@ def write_subclass(f, kls):
 def write_class(f, kls):
     ""
     f.write(f'## <a name="{kls._expanded_name}"></a>{kls.element_name}\n\n')
-    f.write(f'`{kls._expanded_name}`\n\n')
+
+    y = ''
+    for x in kls._expanded_name.split('/'):
+        y = y + ('/' if not y == '' else '') + x
+        f.write(f'[`{x}`](#{y})/')
+        
+        
+    f.write('\n\n')
+
+    #f.write(f'`{kls._expanded_name}`\n\n')
 
     if not kls.documentation is None:
         f.write(f'- Documentation: *{kls.documentation}*\n')
