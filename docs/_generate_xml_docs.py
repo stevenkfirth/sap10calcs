@@ -37,9 +37,17 @@ def write_class(f, kls):
         x = ' '.join([f'[`{subkls.element_name}`](#{kls._expanded_name}/{subkls.element_name})' for subkls in subklses] )
     f.write(f'- Child elements: {x}\n')
 
-    f.write(f'- has text value: {kls.has_text_node}\n')
-    f.write(f'- text type: {kls.python_type_convertor}\n')
-    f.write(f'- codes: {kls.map_codes}\n')
+    f.write(f'- Has text value: *{kls.has_text_node}*\n')
+    f.write(f'- Data type of text value: *{kls.python_type_convertor}*\n')
+
+    if kls.map_codes is None:
+        f.write(f'- codes: *None*\n')
+    else:
+        f.write(f'- codes:\n')
+        for k,v in kls.map_codes.items():
+            f.write(f'    - **{k}** - *{v}*')
+
+    
 
 
     f.write('\n')
