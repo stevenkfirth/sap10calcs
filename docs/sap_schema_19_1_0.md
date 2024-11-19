@@ -15,7 +15,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: *None*
 - Child elements: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report) [`Client-Name`](#SAP-Compliance-Report/Client-Name) [`Client-Company`](#SAP-Compliance-Report/Client-Company) [`Client-Address`](#SAP-Compliance-Report/Client-Address) [`Is-Multiple-Compliance`](#SAP-Compliance-Report/Is-Multiple-Compliance)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report"></a>SAP-Report
@@ -27,7 +27,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
 - Child elements: [`Schema-Version-Original`](#SAP-Compliance-Report/SAP-Report/Schema-Version-Original) [`Schema-Version-Current`](#SAP-Compliance-Report/SAP-Report/Schema-Version-Current) [`SAP-Version`](#SAP-Compliance-Report/SAP-Report/SAP-Version) [`SAP-Data-Version`](#SAP-Compliance-Report/SAP-Report/SAP-Data-Version) [`PCDF-Revision-Number`](#SAP-Compliance-Report/SAP-Report/PCDF-Revision-Number) [`Calculation-Software-Name`](#SAP-Compliance-Report/SAP-Report/Calculation-Software-Name) [`Calculation-Software-Version`](#SAP-Compliance-Report/SAP-Report/Calculation-Software-Version) [`User-Interface-Name`](#SAP-Compliance-Report/SAP-Report/User-Interface-Name) [`User-Interface-Version`](#SAP-Compliance-Report/SAP-Report/User-Interface-Version) [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header) [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment) [`SAP10-Data`](#SAP-Compliance-Report/SAP-Report/SAP10-Data) [`PDF`](#SAP-Compliance-Report/SAP-Report/PDF) [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details) [`ExternalDefinitions-Revision-Number`](#SAP-Compliance-Report/SAP-Report/ExternalDefinitions-Revision-Number)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Schema-Version-Original"></a>Schema-Version-Original
@@ -39,7 +39,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Schema-Version-Current"></a>Schema-Version-Current
@@ -51,7 +51,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP-Version"></a>SAP-Version
@@ -63,16 +63,16 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **9.80** - *SAP 2005 version 9.80, dated October 2005*
-    - **9.81** - *SAP version 9.81, dated January 2008*
-    - **9.82** - *SAP version 9.82, dated Jun 2008*
-    - **9.83** - *SAP version 9.83, dated Jun 2009*
-    - **9.90** - *SAP version 9.90, dated Mar 2010*
-    - **9.91** - *SAP version 9.91, dated Jan 2012*
-    - **9.92** - *SAP version 9.92, dated Oct 2013*
-    - **10.2** - *SAP version 10.2, dated Oct 2020*
+    - **"9.80"** - *SAP 2005 version 9.80, dated October 2005*
+    - **"9.81"** - *SAP version 9.81, dated January 2008*
+    - **"9.82"** - *SAP version 9.82, dated Jun 2008*
+    - **"9.83"** - *SAP version 9.83, dated Jun 2009*
+    - **"9.90"** - *SAP version 9.90, dated Mar 2010*
+    - **"9.91"** - *SAP version 9.91, dated Jan 2012*
+    - **"9.92"** - *SAP version 9.92, dated Oct 2013*
+    - **"10.2"** - *SAP version 10.2, dated Oct 2020*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP-Data-Version"></a>SAP-Data-Version
 
@@ -83,16 +83,16 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **9.80** - *SAP 2005 version 9.80, dated October 2005*
-    - **9.81** - *SAP version 9.81, dated January 2008*
-    - **9.82** - *SAP version 9.82, dated Jun 2008*
-    - **9.83** - *SAP version 9.83, dated Jun 2009*
-    - **9.90** - *SAP version 9.90, dated Mar 2010*
-    - **9.91** - *SAP version 9.91, dated Jan 2012*
-    - **9.92** - *SAP version 9.92, dated Oct 2013*
-    - **10.2** - *SAP version 10.2, dated Oct 2020*
+    - **"9.80"** - *SAP 2005 version 9.80, dated October 2005*
+    - **"9.81"** - *SAP version 9.81, dated January 2008*
+    - **"9.82"** - *SAP version 9.82, dated Jun 2008*
+    - **"9.83"** - *SAP version 9.83, dated Jun 2009*
+    - **"9.90"** - *SAP version 9.90, dated Mar 2010*
+    - **"9.91"** - *SAP version 9.91, dated Jan 2012*
+    - **"9.92"** - *SAP version 9.92, dated Oct 2013*
+    - **"10.2"** - *SAP version 10.2, dated Oct 2020*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/PCDF-Revision-Number"></a>PCDF-Revision-Number
 
@@ -103,7 +103,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Calculation-Software-Name"></a>Calculation-Software-Name
@@ -115,7 +115,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Calculation-Software-Version"></a>Calculation-Software-Version
@@ -127,7 +127,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/User-Interface-Name"></a>User-Interface-Name
@@ -139,7 +139,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/User-Interface-Version"></a>User-Interface-Version
@@ -151,7 +151,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header"></a>Report-Header
@@ -163,7 +163,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: [`RRN`](#SAP-Compliance-Report/SAP-Report/Report-Header/RRN) [`Inspection-Date`](#SAP-Compliance-Report/SAP-Report/Report-Header/Inspection-Date) [`Report-Type`](#SAP-Compliance-Report/SAP-Report/Report-Header/Report-Type) [`Completion-Date`](#SAP-Compliance-Report/SAP-Report/Report-Header/Completion-Date) [`Registration-Date`](#SAP-Compliance-Report/SAP-Report/Report-Header/Registration-Date) [`Status`](#SAP-Compliance-Report/SAP-Report/Report-Header/Status) [`Language-Code`](#SAP-Compliance-Report/SAP-Report/Report-Header/Language-Code) [`Tenure`](#SAP-Compliance-Report/SAP-Report/Report-Header/Tenure) [`Transaction-Type`](#SAP-Compliance-Report/SAP-Report/Report-Header/Transaction-Type) [`Seller-Commission-Report`](#SAP-Compliance-Report/SAP-Report/Report-Header/Seller-Commission-Report) [`Property-Type`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property-Type) [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector) [`Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property) [`Region-Code`](#SAP-Compliance-Report/SAP-Report/Report-Header/Region-Code) [`Country-Code`](#SAP-Compliance-Report/SAP-Report/Report-Header/Country-Code) [`Related-Party-Disclosure`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/RRN"></a>RRN
@@ -175,7 +175,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Inspection-Date"></a>Inspection-Date
@@ -187,7 +187,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Report-Type"></a>Report-Type
@@ -199,12 +199,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Home Condition Report*
-    - **2** - *RdSAP Energy Performance Certificate*
-    - **3** - *SAP Energy Performance Certificate*
-    - **4** - *Interim RdSAP Energy Performance Certificate (to be superseded by SAP EPC)*
+    - **"1"** - *Home Condition Report*
+    - **"2"** - *RdSAP Energy Performance Certificate*
+    - **"3"** - *SAP Energy Performance Certificate*
+    - **"4"** - *Interim RdSAP Energy Performance Certificate (to be superseded by SAP EPC)*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Completion-Date"></a>Completion-Date
 
@@ -215,7 +215,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Registration-Date"></a>Registration-Date
@@ -227,7 +227,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Status"></a>Status
@@ -239,15 +239,15 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **cancelled** - *Cancelled*
-    - **entered** - *entered on the register*
-    - **appeal** - *under appeal*
-    - **removed** - *removed*
-    - **rejected** - *rejected*
-    - **under investigation** - *under investigation*
-    - **not for issue** - *not for issue*
+    - **"cancelled"** - *Cancelled*
+    - **"entered"** - *entered on the register*
+    - **"appeal"** - *under appeal*
+    - **"removed"** - *removed*
+    - **"rejected"** - *rejected*
+    - **"under investigation"** - *under investigation*
+    - **"not for issue"** - *not for issue*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Language-Code"></a>Language-Code
 
@@ -258,10 +258,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *English*
-    - **2** - *Welsh*
+    - **"1"** - *English*
+    - **"2"** - *Welsh*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Tenure"></a>Tenure
 
@@ -272,12 +272,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *owner-occupied*
-    - **2** - *rented (social)*
-    - **3** - *rented (private)*
-    - **ND** - *unknown*
+    - **"1"** - *owner-occupied*
+    - **"2"** - *rented (social)*
+    - **"3"** - *rented (private)*
+    - **"ND"** - *unknown*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Transaction-Type"></a>Transaction-Type
 
@@ -288,19 +288,19 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *marketed sale*
-    - **2** - *non marketed sale*
-    - **3** - *rental (social) - this is for backwards compatibility only and should not be used*
-    - **4** - *rental (private) - this is for backwards compatibility only and should not be used*
-    - **5** - *none of the above*
-    - **6** - *new dwelling*
-    - **7** - *not recorded - this is for backwards compatibility only and should not be used*
-    - **8** - *rental*
-    - **9** - *assessment for green deal*
-    - **10** - *following green deal*
-    - **11** - *FiT application*
+    - **"1"** - *marketed sale*
+    - **"2"** - *non marketed sale*
+    - **"3"** - *rental (social) - this is for backwards compatibility only and should not be used*
+    - **"4"** - *rental (private) - this is for backwards compatibility only and should not be used*
+    - **"5"** - *none of the above*
+    - **"6"** - *new dwelling*
+    - **"7"** - *not recorded - this is for backwards compatibility only and should not be used*
+    - **"8"** - *rental*
+    - **"9"** - *assessment for green deal*
+    - **"10"** - *following green deal*
+    - **"11"** - *FiT application*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Seller-Commission-Report"></a>Seller-Commission-Report
 
@@ -311,10 +311,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **Y** - *Yes*
-    - **N** - *No*
+    - **"Y"** - *Yes*
+    - **"N"** - *No*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property-Type"></a>Property-Type
 
@@ -325,13 +325,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *House*
-    - **1** - *Bungalow*
-    - **2** - *Flat*
-    - **3** - *Maisonette*
-    - **4** - *Park home*
+    - **"0"** - *House*
+    - **"1"** - *Bungalow*
+    - **"2"** - *Flat*
+    - **"3"** - *Maisonette*
+    - **"4"** - *Park home*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector"></a>Home-Inspector
 
@@ -342,7 +342,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Name) [`Notify-Lodgement`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Notify-Lodgement) [`Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address) [`Web-Site`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Web-Site) [`E-Mail`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/E-Mail) [`Fax`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Fax) [`Telephone`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Telephone) [`Company-Name`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Company-Name) [`Scheme-Name`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Scheme-Name) [`Scheme-Web-Site`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Scheme-Web-Site) [`Identification-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Name"></a>Name
@@ -354,7 +354,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Notify-Lodgement"></a>Notify-Lodgement
@@ -366,10 +366,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **Y** - *Yes*
-    - **N** - *No*
+    - **"Y"** - *Yes*
+    - **"N"** - *No*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address"></a>Contact-Address
 
@@ -380,7 +380,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: [`Address-Line-1`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-1) [`Address-Line-2`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-2) [`Address-Line-3`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-3) [`Post-Town`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Post-Town) [`Postcode`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Postcode)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-1"></a>Address-Line-1
@@ -392,7 +392,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-2"></a>Address-Line-2
@@ -404,7 +404,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-3"></a>Address-Line-3
@@ -416,7 +416,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Post-Town"></a>Post-Town
@@ -428,7 +428,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Postcode"></a>Postcode
@@ -440,7 +440,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Web-Site"></a>Web-Site
@@ -452,7 +452,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/E-Mail"></a>E-Mail
@@ -464,7 +464,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Fax"></a>Fax
@@ -476,7 +476,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Telephone"></a>Telephone
@@ -488,7 +488,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Company-Name"></a>Company-Name
@@ -500,7 +500,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Scheme-Name"></a>Scheme-Name
@@ -512,7 +512,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Scheme-Web-Site"></a>Scheme-Web-Site
@@ -524,7 +524,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number"></a>Identification-Number
@@ -536,7 +536,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
 - Child elements: [`Certificate-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number/Certificate-Number) [`Membership-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number/Membership-Number)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number/Certificate-Number"></a>Certificate-Number
@@ -548,7 +548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Identification-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number/Membership-Number"></a>Membership-Number
@@ -560,7 +560,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Identification-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property"></a>Property
@@ -572,7 +572,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: [`Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address) [`UPRN`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/UPRN) [`Site-Reference`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Site-Reference) [`Plot-Reference`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Plot-Reference)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address"></a>Address
@@ -584,7 +584,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property)
 - Child elements: [`Address-Line-1`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-1) [`Address-Line-2`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-2) [`Address-Line-3`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-3) [`Post-Town`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Post-Town) [`Postcode`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Postcode)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-1"></a>Address-Line-1
@@ -596,7 +596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-2"></a>Address-Line-2
@@ -608,7 +608,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-3"></a>Address-Line-3
@@ -620,7 +620,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Post-Town"></a>Post-Town
@@ -632,7 +632,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Postcode"></a>Postcode
@@ -644,7 +644,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/UPRN"></a>UPRN
@@ -656,7 +656,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Site-Reference"></a>Site-Reference
@@ -668,7 +668,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Plot-Reference"></a>Plot-Reference
@@ -680,7 +680,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Region-Code"></a>Region-Code
@@ -692,32 +692,32 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Borders*
-    - **2** - *East Anglia*
-    - **3** - *East Pennines*
-    - **4** - *East Scotland*
-    - **5** - *Highland*
-    - **6** - *Midlands*
-    - **7** - *North East England*
-    - **8** - *North East Scotland*
-    - **9** - *North West England / South West Scotland*
-    - **10** - *Northern Ireland*
-    - **11** - *Orkney*
-    - **12** - *Severn Valley*
-    - **13** - *Shetland*
-    - **14** - *South East England*
-    - **15** - *South West England*
-    - **16** - *Southern England*
-    - **17** - *Thames Valley*
-    - **18** - *Wales*
-    - **19** - *West Pennines*
-    - **20** - *West Scotland*
-    - **21** - *Western Isles*
-    - **22** - *Jersey*
-    - **23** - *Guernsey*
-    - **24** - *Isle of Man*
+    - **"1"** - *Borders*
+    - **"2"** - *East Anglia*
+    - **"3"** - *East Pennines*
+    - **"4"** - *East Scotland*
+    - **"5"** - *Highland*
+    - **"6"** - *Midlands*
+    - **"7"** - *North East England*
+    - **"8"** - *North East Scotland*
+    - **"9"** - *North West England / South West Scotland*
+    - **"10"** - *Northern Ireland*
+    - **"11"** - *Orkney*
+    - **"12"** - *Severn Valley*
+    - **"13"** - *Shetland*
+    - **"14"** - *South East England*
+    - **"15"** - *South West England*
+    - **"16"** - *Southern England*
+    - **"17"** - *Thames Valley*
+    - **"18"** - *Wales*
+    - **"19"** - *West Pennines*
+    - **"20"** - *West Scotland*
+    - **"21"** - *Western Isles*
+    - **"22"** - *Jersey*
+    - **"23"** - *Guernsey*
+    - **"24"** - *Isle of Man*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Country-Code"></a>Country-Code
 
@@ -728,13 +728,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **EAW** - *England and Wales, for backwards compatibility only.*
-    - **ENG** - *England*
-    - **WLS** - *Wales*
-    - **SCT** - *Scotland*
-    - **NIR** - *Northern Ireland*
+    - **"EAW"** - *England and Wales, for backwards compatibility only.*
+    - **"ENG"** - *England*
+    - **"WLS"** - *Wales*
+    - **"SCT"** - *Scotland*
+    - **"NIR"** - *Northern Ireland*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure"></a>Related-Party-Disclosure
 
@@ -745,7 +745,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Child elements: [`Related-Party-Disclosure-Text`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure/Related-Party-Disclosure-Text) [`Related-Party-Disclosure-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure/Related-Party-Disclosure-Number)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure/Related-Party-Disclosure-Text"></a>Related-Party-Disclosure-Text
@@ -757,7 +757,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Related-Party-Disclosure`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure/Related-Party-Disclosure-Number"></a>Related-Party-Disclosure-Number
@@ -769,15 +769,15 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Related-Party-Disclosure`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *No related party*
-    - **2** - *Relative of homeowner or of occupier of the property*
-    - **3** - *Residing at the property*
-    - **4** - *Financial interest in the property*
-    - **5** - *Owner or Director of the organisation dealing with the property transaction*
-    - **6** - *Employed by the professional dealing with the property transaction*
-    - **7** - *Relative of the professional dealing with the property transaction*
+    - **"1"** - *No related party*
+    - **"2"** - *Relative of homeowner or of occupier of the property*
+    - **"3"** - *Residing at the property*
+    - **"4"** - *Financial interest in the property*
+    - **"5"** - *Owner or Director of the organisation dealing with the property transaction*
+    - **"6"** - *Employed by the professional dealing with the property transaction*
+    - **"7"** - *Relative of the professional dealing with the property transaction*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment"></a>Energy-Assessment
 
@@ -788,7 +788,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: [`Assessment-Date`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Assessment-Date) [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary) [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use) [`Suggested-Improvements`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements) [`LZC-Energy-Sources`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources) [`Renewable-Heat-Incentive`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive) [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package) [`Alternative-Improvements`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements) [`Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Assessment-Date"></a>Assessment-Date
@@ -800,7 +800,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary"></a>Property-Summary
@@ -812,7 +812,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: [`Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls) [`Roof`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof) [`Floor`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor) [`Windows`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows) [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating) [`Main-Heating-Controls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls) [`Secondary-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating) [`Hot-Water`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water) [`Lighting`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting) [`Air-Tightness`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness) [`Has-Fixed-Air-Conditioning`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Fixed-Air-Conditioning) [`Has-Hot-Water-Cylinder`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Hot-Water-Cylinder) [`Has-Heated-Separate-Conservatory`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Heated-Separate-Conservatory) [`Dwelling-Type`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Dwelling-Type) [`Total-Floor-Area`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Total-Floor-Area) [`Multiple-Glazed-Percentage`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Multiple-Glazed-Percentage) [`Multiple-Glazed-Percentage-NR`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Multiple-Glazed-Percentage-NR) [`Is-Zero-Carbon-Home`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Is-Zero-Carbon-Home)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls"></a>Walls
@@ -824,7 +824,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Description"></a>Description
@@ -836,7 +836,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -848,14 +848,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -866,14 +866,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof"></a>Roof
 
@@ -884,7 +884,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Description"></a>Description
@@ -896,7 +896,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Roof`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -908,14 +908,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Roof`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -926,14 +926,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Roof`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor"></a>Floor
 
@@ -944,7 +944,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Description"></a>Description
@@ -956,7 +956,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Floor`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -968,14 +968,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Floor`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -986,14 +986,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Floor`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows"></a>Windows
 
@@ -1004,7 +1004,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Description"></a>Description
@@ -1016,7 +1016,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Windows`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -1028,14 +1028,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Windows`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -1046,14 +1046,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Windows`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating"></a>Main-Heating
 
@@ -1064,7 +1064,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Description"></a>Description
@@ -1076,7 +1076,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -1088,14 +1088,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -1106,14 +1106,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls"></a>Main-Heating-Controls
 
@@ -1124,7 +1124,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Description"></a>Description
@@ -1136,7 +1136,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating-Controls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -1148,14 +1148,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating-Controls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -1166,14 +1166,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating-Controls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating"></a>Secondary-Heating
 
@@ -1184,7 +1184,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Description"></a>Description
@@ -1196,7 +1196,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Secondary-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -1208,14 +1208,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Secondary-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -1226,14 +1226,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Secondary-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water"></a>Hot-Water
 
@@ -1244,7 +1244,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Description"></a>Description
@@ -1256,7 +1256,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hot-Water`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -1268,14 +1268,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hot-Water`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -1286,14 +1286,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hot-Water`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting"></a>Lighting
 
@@ -1304,7 +1304,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Description"></a>Description
@@ -1316,7 +1316,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Lighting`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -1328,14 +1328,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Lighting`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -1346,14 +1346,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Lighting`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness"></a>Air-Tightness
 
@@ -1364,7 +1364,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Environmental-Efficiency-Rating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Description"></a>Description
@@ -1376,7 +1376,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Air-Tightness`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
@@ -1388,14 +1388,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Air-Tightness`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -1406,14 +1406,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Air-Tightness`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *N/A*
-    - **1** - *Very Poor*
-    - **2** - *Poor*
-    - **3** - *Average*
-    - **4** - *Good*
-    - **5** - *Very Good*
+    - **"0"** - *N/A*
+    - **"1"** - *Very Poor*
+    - **"2"** - *Poor*
+    - **"3"** - *Average*
+    - **"4"** - *Good*
+    - **"5"** - *Very Good*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Fixed-Air-Conditioning"></a>Has-Fixed-Air-Conditioning
 
@@ -1424,12 +1424,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Hot-Water-Cylinder"></a>Has-Hot-Water-Cylinder
 
@@ -1440,12 +1440,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Heated-Separate-Conservatory"></a>Has-Heated-Separate-Conservatory
 
@@ -1456,12 +1456,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Dwelling-Type"></a>Dwelling-Type
 
@@ -1472,7 +1472,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Total-Floor-Area"></a>Total-Floor-Area
@@ -1484,7 +1484,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Multiple-Glazed-Percentage"></a>Multiple-Glazed-Percentage
@@ -1496,7 +1496,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Multiple-Glazed-Percentage-NR"></a>Multiple-Glazed-Percentage-NR
@@ -1508,7 +1508,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Is-Zero-Carbon-Home"></a>Is-Zero-Carbon-Home
@@ -1520,12 +1520,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use"></a>Energy-Use
 
@@ -1536,7 +1536,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: [`DER`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DER) [`TER`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TER) [`DPER`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DPER) [`TPER`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TPER) [`DFEE`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DFEE) [`TFEE`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TFEE) [`Energy-Rating-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Current) [`Energy-Rating-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Potential) [`Energy-Rating-Average`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Average) [`Environmental-Impact-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Environmental-Impact-Current) [`Environmental-Impact-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Environmental-Impact-Potential) [`Energy-Consumption-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Consumption-Current) [`Energy-Consumption-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Consumption-Potential) [`CO2-Emissions-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Current) [`CO2-Emissions-Current-Per-Floor-Area`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Current-Per-Floor-Area) [`CO2-Emissions-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Potential) [`Lighting-Cost-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Lighting-Cost-Current) [`Lighting-Cost-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Lighting-Cost-Potential) [`Heating-Cost-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Heating-Cost-Current) [`Heating-Cost-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Heating-Cost-Potential) [`Hot-Water-Cost-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Hot-Water-Cost-Current) [`Hot-Water-Cost-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Hot-Water-Cost-Potential)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DER"></a>DER
@@ -1548,7 +1548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TER"></a>TER
@@ -1560,7 +1560,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DPER"></a>DPER
@@ -1572,7 +1572,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TPER"></a>TPER
@@ -1584,7 +1584,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DFEE"></a>DFEE
@@ -1596,7 +1596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TFEE"></a>TFEE
@@ -1608,7 +1608,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Current"></a>Energy-Rating-Current
@@ -1620,7 +1620,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Potential"></a>Energy-Rating-Potential
@@ -1632,7 +1632,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Average"></a>Energy-Rating-Average
@@ -1644,7 +1644,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Environmental-Impact-Current"></a>Environmental-Impact-Current
@@ -1656,7 +1656,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Environmental-Impact-Potential"></a>Environmental-Impact-Potential
@@ -1668,7 +1668,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Consumption-Current"></a>Energy-Consumption-Current
@@ -1680,7 +1680,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Consumption-Potential"></a>Energy-Consumption-Potential
@@ -1692,7 +1692,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Current"></a>CO2-Emissions-Current
@@ -1704,7 +1704,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Current-Per-Floor-Area"></a>CO2-Emissions-Current-Per-Floor-Area
@@ -1716,7 +1716,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Potential"></a>CO2-Emissions-Potential
@@ -1728,7 +1728,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Lighting-Cost-Current"></a>Lighting-Cost-Current
@@ -1740,7 +1740,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Lighting-Cost-Potential"></a>Lighting-Cost-Potential
@@ -1752,7 +1752,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Heating-Cost-Current"></a>Heating-Cost-Current
@@ -1764,7 +1764,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Heating-Cost-Potential"></a>Heating-Cost-Potential
@@ -1776,7 +1776,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Hot-Water-Cost-Current"></a>Hot-Water-Cost-Current
@@ -1788,7 +1788,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Hot-Water-Cost-Potential"></a>Hot-Water-Cost-Potential
@@ -1800,7 +1800,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements"></a>Suggested-Improvements
@@ -1812,7 +1812,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement"></a>Improvement
@@ -1824,7 +1824,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Suggested-Improvements`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements)
 - Child elements: [`Sequence`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Sequence) [`Improvement-Category`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Category) [`Improvement-Type`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Type) [`Typical-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Typical-Saving) [`Energy-Performance-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Energy-Performance-Rating) [`Environmental-Impact-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Environmental-Impact-Rating) [`Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details) [`Indicative-Cost`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Indicative-Cost) [`Green-Deal-Category`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Green-Deal-Category)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Sequence"></a>Sequence
@@ -1836,7 +1836,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Category"></a>Improvement-Category
@@ -1848,14 +1848,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Lower cost - this is for backwards compatibility only and should not be used*
-    - **2** - *Higher cost - this is for backwards compatibility only and should not be used*
-    - **3** - *Further measure - this is for backwards compatibility only and should not be used*
-    - **4** - *Deselected. This is for backwards compatibility only and should not be used.*
-    - **5** - *Normal measure*
-    - **6** - *Alternative measure*
+    - **"1"** - *Lower cost - this is for backwards compatibility only and should not be used*
+    - **"2"** - *Higher cost - this is for backwards compatibility only and should not be used*
+    - **"3"** - *Further measure - this is for backwards compatibility only and should not be used*
+    - **"4"** - *Deselected. This is for backwards compatibility only and should not be used.*
+    - **"5"** - *Normal measure*
+    - **"6"** - *Alternative measure*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Type"></a>Improvement-Type
 
@@ -1866,45 +1866,45 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **A** - *Loft insulation*
-    - **A2** - *Flat roof insulation*
-    - **A3** - *Room-in-roof insulation*
-    - **B** - *Cavity wall insulation*
-    - **C** - *Hot water cylinder insulation*
-    - **D** - *Draughtproofing*
-    - **E** - *Low energy lights*
-    - **F** - *Cylinder thermostat*
-    - **G** - *Heating controls for wet central heating system*
-    - **H** - *Heating controls for warm air system*
-    - **I** - *Upgrade boiler, same fuel*
-    - **J** - *Biomass boiler*
-    - **J2** - *Biomass boiler as alternative improvement*
-    - **K** - *Biomass room heater with boiler*
-    - **L** - *New or replacement fan-assisted storage heaters*
-    - **L2** - *New or replacement high heat retention storage heaters*
-    - **M** - *Replacement warm-air unit*
-    - **N** - *Solar water heating*
-    - **O** - *Replacement double glazed windows*
-    - **O3** - *Replacement double glazing units*
-    - **P** - *Secondary glazing*
-    - **Q** - *Solid wall insulation*
-    - **Q2** - *External insulation with cavity wall insulation*
-    - **R** - *Condensing oil boiler*
-    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*
-    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*
-    - **T2** - *Flue gas heat recovery*
-    - **U** - *Photovoltaics*
-    - **V** - *Wind turbine (roof mounted)*
-    - **V2** - *Wind turbine (on mast)*
-    - **W** - *Floor insulation*
-    - **X** - *Insulated doors*
-    - **Y** - *Instantaneous waste water heat recovery*
-    - **Y2** - *Storage waste water heat recovery*
-    - **Z1** - *Air or ground source heat pump*
-    - **Z2** - *Air or ground source heat pump with underfloor heating*
-    - **Z3** - *Micro-CHP*
+    - **"A"** - *Loft insulation*
+    - **"A2"** - *Flat roof insulation*
+    - **"A3"** - *Room-in-roof insulation*
+    - **"B"** - *Cavity wall insulation*
+    - **"C"** - *Hot water cylinder insulation*
+    - **"D"** - *Draughtproofing*
+    - **"E"** - *Low energy lights*
+    - **"F"** - *Cylinder thermostat*
+    - **"G"** - *Heating controls for wet central heating system*
+    - **"H"** - *Heating controls for warm air system*
+    - **"I"** - *Upgrade boiler, same fuel*
+    - **"J"** - *Biomass boiler*
+    - **"J2"** - *Biomass boiler as alternative improvement*
+    - **"K"** - *Biomass room heater with boiler*
+    - **"L"** - *New or replacement fan-assisted storage heaters*
+    - **"L2"** - *New or replacement high heat retention storage heaters*
+    - **"M"** - *Replacement warm-air unit*
+    - **"N"** - *Solar water heating*
+    - **"O"** - *Replacement double glazed windows*
+    - **"O3"** - *Replacement double glazing units*
+    - **"P"** - *Secondary glazing*
+    - **"Q"** - *Solid wall insulation*
+    - **"Q2"** - *External insulation with cavity wall insulation*
+    - **"R"** - *Condensing oil boiler*
+    - **"S"** - *Change heating to Band A gas condensing boiler (no fuel switch)*
+    - **"T"** - *Change heating to Band A gas condensing boiler (fuel switch)*
+    - **"T2"** - *Flue gas heat recovery*
+    - **"U"** - *Photovoltaics*
+    - **"V"** - *Wind turbine (roof mounted)*
+    - **"V2"** - *Wind turbine (on mast)*
+    - **"W"** - *Floor insulation*
+    - **"X"** - *Insulated doors*
+    - **"Y"** - *Instantaneous waste water heat recovery*
+    - **"Y2"** - *Storage waste water heat recovery*
+    - **"Z1"** - *Air or ground source heat pump*
+    - **"Z2"** - *Air or ground source heat pump with underfloor heating*
+    - **"Z3"** - *Micro-CHP*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Typical-Saving"></a>Typical-Saving
 
@@ -1915,7 +1915,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Energy-Performance-Rating"></a>Energy-Performance-Rating
@@ -1927,7 +1927,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Environmental-Impact-Rating"></a>Environmental-Impact-Rating
@@ -1939,7 +1939,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details"></a>Improvement-Details
@@ -1951,7 +1951,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts) [`Improvement-Number`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Number)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts"></a>Improvement-Texts
@@ -1963,7 +1963,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details)
 - Child elements: [`Improvement-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Summary) [`Improvement-Heading`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Heading) [`Improvement-Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Description)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Summary"></a>Improvement-Summary
@@ -1975,7 +1975,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Heading"></a>Improvement-Heading
@@ -1987,7 +1987,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Description"></a>Improvement-Description
@@ -1999,7 +1999,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Number"></a>Improvement-Number
@@ -2011,62 +2011,62 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Insulate hot water cylinder with 80 mm jacket*
-    - **2** - *Increase hot water cylinder insulation*
-    - **3** - *Add additional 80 mm jacket to hot water cylinder*
-    - **4** - *Hot water cylinder thermostat*
-    - **5** - *Increase loft insulation to 270 mm*
-    - **6** - *Cavity wall insulation*
-    - **7** - *Internal or external wall insulation*
-    - **8** - *Replace single glazed windows with low-E double glazing*
-    - **9** - *Secondary glazing to single glazed windows*
-    - **10** - *Draught proofing*
-    - **11** - *Heating controls (programmer, room thermostat and TRVs)*
-    - **12** - *Heating controls (room thermostat and TRVs)*
-    - **13** - *Heating controls (thermostatic radiator valves)*
-    - **14** - *Heating controls (room thermostat)*
-    - **15** - *Heating controls (programmer and TRVs)*
-    - **16** - *Heating controls (time and temperature zone control)*
-    - **17** - *Heating controls (programmer and room thermostat)*
-    - **18** - *Heating controls (room thermostat)*
-    - **19** - *Solar water heating*
-    - **20** - *Replace boiler with new condensing boiler*
-    - **21** - *Replace boiler with new condensing boiler*
-    - **22** - *Replace boiler with biomass boiler*
-    - **23** - *Wood pellet stove with boiler and radiators*
-    - **24** - *Fan assisted storage heaters and dual immersion cylinder*
-    - **25** - *Fan assisted storage heaters*
-    - **26** - *Replacement warm air unit*
-    - **27** - *Change heating to gas condensing boiler*
-    - **28** - *Condensing oil boiler with radiators*
-    - **29** - *Change heating to gas condensing boiler*
-    - **30** - *Fan assisted storage heaters and dual immersion cylinder*
-    - **31** - *Fan-assisted storage heaters*
-    - **32** - *Change heating to gas condensing boiler*
-    - **34** - *Solar photovoltaic panels, 2.5 kWp*
-    - **35** - *Low energy lighting for all fixed outlets*
-    - **36** - *Replace heating unit with condensing unit*
-    - **37** - *Condensing boiler (separate from the range cooker)*
-    - **38** - *Condensing boiler (separate from the range cooker)*
-    - **39** - *Wood pellet stove with boiler and radiators*
-    - **40** - *Change room heaters to condensing boiler*
-    - **41** - *Change room heaters to condensing boiler*
-    - **42** - *Replace heating unit with mains gas condensing unit*
-    - **43** - *Condensing oil boiler with radiators*
-    - **44** - *Wind turbine*
-    - **45** - *Flat roof insulation*
-    - **46** - *Room-in-roof insulation*
-    - **47** - *Floor insulation*
-    - **48** - *High performance external doors*
-    - **49** - *Heat recovery system for mixer showers*
-    - **50** - *Flue gas heat recovery device in conjunction with boiler*
-    - **51** - *Air or ground source heat pump*
-    - **52** - *Air or ground source heat pump with underfloor heating*
-    - **53** - *Micro CHP*
-    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
-    - **55** - *External insulation with cavity wall insulation*
+    - **"1"** - *Insulate hot water cylinder with 80 mm jacket*
+    - **"2"** - *Increase hot water cylinder insulation*
+    - **"3"** - *Add additional 80 mm jacket to hot water cylinder*
+    - **"4"** - *Hot water cylinder thermostat*
+    - **"5"** - *Increase loft insulation to 270 mm*
+    - **"6"** - *Cavity wall insulation*
+    - **"7"** - *Internal or external wall insulation*
+    - **"8"** - *Replace single glazed windows with low-E double glazing*
+    - **"9"** - *Secondary glazing to single glazed windows*
+    - **"10"** - *Draught proofing*
+    - **"11"** - *Heating controls (programmer, room thermostat and TRVs)*
+    - **"12"** - *Heating controls (room thermostat and TRVs)*
+    - **"13"** - *Heating controls (thermostatic radiator valves)*
+    - **"14"** - *Heating controls (room thermostat)*
+    - **"15"** - *Heating controls (programmer and TRVs)*
+    - **"16"** - *Heating controls (time and temperature zone control)*
+    - **"17"** - *Heating controls (programmer and room thermostat)*
+    - **"18"** - *Heating controls (room thermostat)*
+    - **"19"** - *Solar water heating*
+    - **"20"** - *Replace boiler with new condensing boiler*
+    - **"21"** - *Replace boiler with new condensing boiler*
+    - **"22"** - *Replace boiler with biomass boiler*
+    - **"23"** - *Wood pellet stove with boiler and radiators*
+    - **"24"** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **"25"** - *Fan assisted storage heaters*
+    - **"26"** - *Replacement warm air unit*
+    - **"27"** - *Change heating to gas condensing boiler*
+    - **"28"** - *Condensing oil boiler with radiators*
+    - **"29"** - *Change heating to gas condensing boiler*
+    - **"30"** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **"31"** - *Fan-assisted storage heaters*
+    - **"32"** - *Change heating to gas condensing boiler*
+    - **"34"** - *Solar photovoltaic panels, 2.5 kWp*
+    - **"35"** - *Low energy lighting for all fixed outlets*
+    - **"36"** - *Replace heating unit with condensing unit*
+    - **"37"** - *Condensing boiler (separate from the range cooker)*
+    - **"38"** - *Condensing boiler (separate from the range cooker)*
+    - **"39"** - *Wood pellet stove with boiler and radiators*
+    - **"40"** - *Change room heaters to condensing boiler*
+    - **"41"** - *Change room heaters to condensing boiler*
+    - **"42"** - *Replace heating unit with mains gas condensing unit*
+    - **"43"** - *Condensing oil boiler with radiators*
+    - **"44"** - *Wind turbine*
+    - **"45"** - *Flat roof insulation*
+    - **"46"** - *Room-in-roof insulation*
+    - **"47"** - *Floor insulation*
+    - **"48"** - *High performance external doors*
+    - **"49"** - *Heat recovery system for mixer showers*
+    - **"50"** - *Flue gas heat recovery device in conjunction with boiler*
+    - **"51"** - *Air or ground source heat pump*
+    - **"52"** - *Air or ground source heat pump with underfloor heating*
+    - **"53"** - *Micro CHP*
+    - **"54"** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
+    - **"55"** - *External insulation with cavity wall insulation*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Indicative-Cost"></a>Indicative-Cost
 
@@ -2077,7 +2077,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Green-Deal-Category"></a>Green-Deal-Category
@@ -2089,12 +2089,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *1. Not eligible for Green Deal*
-    - **2** - *2. Eligible with additional finance*
-    - **3** - *3. Eligible without additional finance*
-    - **NI** - *Not assessed. Use for alternative measures and for new dwelling EPCs*
+    - **"1"** - *1. Not eligible for Green Deal*
+    - **"2"** - *2. Eligible with additional finance*
+    - **"3"** - *3. Eligible without additional finance*
+    - **"NI"** - *Not assessed. Use for alternative measures and for new dwelling EPCs*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources"></a>LZC-Energy-Sources
 
@@ -2105,7 +2105,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: [`LZC-Energy-Source`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources/LZC-Energy-Source)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources/LZC-Energy-Source"></a>LZC-Energy-Source
@@ -2117,25 +2117,25 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`LZC-Energy-Sources`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Biofuel main heating*
-    - **2** - *Biofuel community heating*
-    - **3** - *Biofuel community heating for some of heat generation*
-    - **4** - *Biofuel secondary heating*
-    - **5** - *Geothermal heat source*
-    - **6** - *Community combined heat and power*
-    - **7** - *Ground source heat pump*
-    - **8** - *Water source heat pump*
-    - **9** - *Air source heat pump*
-    - **10** - *Solar water heating*
-    - **11** - *Solar photovoltaics*
-    - **12** - *Wind turbine*
-    - **13** - *Community heat pump*
-    - **14** - *Hydro-electric generation*
-    - **15** - *Micro-CHP*
-    - **16** - *Exhaust air heat pump*
-    - **17** - *Solar-assisted heat pump*
+    - **"1"** - *Biofuel main heating*
+    - **"2"** - *Biofuel community heating*
+    - **"3"** - *Biofuel community heating for some of heat generation*
+    - **"4"** - *Biofuel secondary heating*
+    - **"5"** - *Geothermal heat source*
+    - **"6"** - *Community combined heat and power*
+    - **"7"** - *Ground source heat pump*
+    - **"8"** - *Water source heat pump*
+    - **"9"** - *Air source heat pump*
+    - **"10"** - *Solar water heating*
+    - **"11"** - *Solar photovoltaics*
+    - **"12"** - *Wind turbine*
+    - **"13"** - *Community heat pump*
+    - **"14"** - *Hydro-electric generation*
+    - **"15"** - *Micro-CHP*
+    - **"16"** - *Exhaust air heat pump*
+    - **"17"** - *Solar-assisted heat pump*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive"></a>Renewable-Heat-Incentive
 
@@ -2146,7 +2146,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: [`RHI-New-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling) [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling"></a>RHI-New-Dwelling
@@ -2158,7 +2158,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Renewable-Heat-Incentive`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Child elements: [`Space-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling/Space-Heating) [`Water-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling/Water-Heating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling/Space-Heating"></a>Space-Heating
@@ -2170,7 +2170,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-New-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling/Water-Heating"></a>Water-Heating
@@ -2182,7 +2182,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-New-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling"></a>RHI-Existing-Dwelling
@@ -2194,7 +2194,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Renewable-Heat-Incentive`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Child elements: [`Space-Heating-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-Existing-Dwelling) [`Space-Heating-With-Loft-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Loft-Insulation) [`Space-Heating-With-Cavity-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Cavity-Insulation) [`Space-Heating-With-Loft-And-Cavity-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Loft-And-Cavity-Insulation) [`Water-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Water-Heating) [`Impact-Of-Loft-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Loft-Insulation) [`Impact-Of-Cavity-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Cavity-Insulation) [`Impact-Of-Solid-Wall-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Solid-Wall-Insulation)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-Existing-Dwelling"></a>Space-Heating-Existing-Dwelling
@@ -2206,7 +2206,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Loft-Insulation"></a>Space-Heating-With-Loft-Insulation
@@ -2218,7 +2218,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Cavity-Insulation"></a>Space-Heating-With-Cavity-Insulation
@@ -2230,7 +2230,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Loft-And-Cavity-Insulation"></a>Space-Heating-With-Loft-And-Cavity-Insulation
@@ -2242,7 +2242,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Water-Heating"></a>Water-Heating
@@ -2254,7 +2254,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Loft-Insulation"></a>Impact-Of-Loft-Insulation
@@ -2266,7 +2266,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Cavity-Insulation"></a>Impact-Of-Cavity-Insulation
@@ -2278,7 +2278,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Solid-Wall-Insulation"></a>Impact-Of-Solid-Wall-Insulation
@@ -2290,7 +2290,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package"></a>Green-Deal-Package
@@ -2302,7 +2302,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: [`Green-Deal-Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement) [`Electricity-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Electricity-Saving) [`Gas-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Gas-Saving) [`Other-Fuel-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Other-Fuel-Saving)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement"></a>Green-Deal-Improvement
@@ -2314,7 +2314,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
 - Child elements: [`Improvement-Type`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Type) [`Improvement-Number`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Number)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Type"></a>Improvement-Type
@@ -2326,45 +2326,45 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Green-Deal-Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **A** - *Loft insulation*
-    - **A2** - *Flat roof insulation*
-    - **A3** - *Room-in-roof insulation*
-    - **B** - *Cavity wall insulation*
-    - **C** - *Hot water cylinder insulation*
-    - **D** - *Draughtproofing*
-    - **E** - *Low energy lights*
-    - **F** - *Cylinder thermostat*
-    - **G** - *Heating controls for wet central heating system*
-    - **H** - *Heating controls for warm air system*
-    - **I** - *Upgrade boiler, same fuel*
-    - **J** - *Biomass boiler*
-    - **J2** - *Biomass boiler as alternative improvement*
-    - **K** - *Biomass room heater with boiler*
-    - **L** - *New or replacement fan-assisted storage heaters*
-    - **L2** - *New or replacement high heat retention storage heaters*
-    - **M** - *Replacement warm-air unit*
-    - **N** - *Solar water heating*
-    - **O** - *Replacement double glazed windows*
-    - **O3** - *Replacement double glazing units*
-    - **P** - *Secondary glazing*
-    - **Q** - *Solid wall insulation*
-    - **Q2** - *External insulation with cavity wall insulation*
-    - **R** - *Condensing oil boiler*
-    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*
-    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*
-    - **T2** - *Flue gas heat recovery*
-    - **U** - *Photovoltaics*
-    - **V** - *Wind turbine (roof mounted)*
-    - **V2** - *Wind turbine (on mast)*
-    - **W** - *Floor insulation*
-    - **X** - *Insulated doors*
-    - **Y** - *Instantaneous waste water heat recovery*
-    - **Y2** - *Storage waste water heat recovery*
-    - **Z1** - *Air or ground source heat pump*
-    - **Z2** - *Air or ground source heat pump with underfloor heating*
-    - **Z3** - *Micro-CHP*
+    - **"A"** - *Loft insulation*
+    - **"A2"** - *Flat roof insulation*
+    - **"A3"** - *Room-in-roof insulation*
+    - **"B"** - *Cavity wall insulation*
+    - **"C"** - *Hot water cylinder insulation*
+    - **"D"** - *Draughtproofing*
+    - **"E"** - *Low energy lights*
+    - **"F"** - *Cylinder thermostat*
+    - **"G"** - *Heating controls for wet central heating system*
+    - **"H"** - *Heating controls for warm air system*
+    - **"I"** - *Upgrade boiler, same fuel*
+    - **"J"** - *Biomass boiler*
+    - **"J2"** - *Biomass boiler as alternative improvement*
+    - **"K"** - *Biomass room heater with boiler*
+    - **"L"** - *New or replacement fan-assisted storage heaters*
+    - **"L2"** - *New or replacement high heat retention storage heaters*
+    - **"M"** - *Replacement warm-air unit*
+    - **"N"** - *Solar water heating*
+    - **"O"** - *Replacement double glazed windows*
+    - **"O3"** - *Replacement double glazing units*
+    - **"P"** - *Secondary glazing*
+    - **"Q"** - *Solid wall insulation*
+    - **"Q2"** - *External insulation with cavity wall insulation*
+    - **"R"** - *Condensing oil boiler*
+    - **"S"** - *Change heating to Band A gas condensing boiler (no fuel switch)*
+    - **"T"** - *Change heating to Band A gas condensing boiler (fuel switch)*
+    - **"T2"** - *Flue gas heat recovery*
+    - **"U"** - *Photovoltaics*
+    - **"V"** - *Wind turbine (roof mounted)*
+    - **"V2"** - *Wind turbine (on mast)*
+    - **"W"** - *Floor insulation*
+    - **"X"** - *Insulated doors*
+    - **"Y"** - *Instantaneous waste water heat recovery*
+    - **"Y2"** - *Storage waste water heat recovery*
+    - **"Z1"** - *Air or ground source heat pump*
+    - **"Z2"** - *Air or ground source heat pump with underfloor heating*
+    - **"Z3"** - *Micro-CHP*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Number"></a>Improvement-Number
 
@@ -2375,62 +2375,62 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Green-Deal-Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Insulate hot water cylinder with 80 mm jacket*
-    - **2** - *Increase hot water cylinder insulation*
-    - **3** - *Add additional 80 mm jacket to hot water cylinder*
-    - **4** - *Hot water cylinder thermostat*
-    - **5** - *Increase loft insulation to 270 mm*
-    - **6** - *Cavity wall insulation*
-    - **7** - *Internal or external wall insulation*
-    - **8** - *Replace single glazed windows with low-E double glazing*
-    - **9** - *Secondary glazing to single glazed windows*
-    - **10** - *Draught proofing*
-    - **11** - *Heating controls (programmer, room thermostat and TRVs)*
-    - **12** - *Heating controls (room thermostat and TRVs)*
-    - **13** - *Heating controls (thermostatic radiator valves)*
-    - **14** - *Heating controls (room thermostat)*
-    - **15** - *Heating controls (programmer and TRVs)*
-    - **16** - *Heating controls (time and temperature zone control)*
-    - **17** - *Heating controls (programmer and room thermostat)*
-    - **18** - *Heating controls (room thermostat)*
-    - **19** - *Solar water heating*
-    - **20** - *Replace boiler with new condensing boiler*
-    - **21** - *Replace boiler with new condensing boiler*
-    - **22** - *Replace boiler with biomass boiler*
-    - **23** - *Wood pellet stove with boiler and radiators*
-    - **24** - *Fan assisted storage heaters and dual immersion cylinder*
-    - **25** - *Fan assisted storage heaters*
-    - **26** - *Replacement warm air unit*
-    - **27** - *Change heating to gas condensing boiler*
-    - **28** - *Condensing oil boiler with radiators*
-    - **29** - *Change heating to gas condensing boiler*
-    - **30** - *Fan assisted storage heaters and dual immersion cylinder*
-    - **31** - *Fan-assisted storage heaters*
-    - **32** - *Change heating to gas condensing boiler*
-    - **34** - *Solar photovoltaic panels, 2.5 kWp*
-    - **35** - *Low energy lighting for all fixed outlets*
-    - **36** - *Replace heating unit with condensing unit*
-    - **37** - *Condensing boiler (separate from the range cooker)*
-    - **38** - *Condensing boiler (separate from the range cooker)*
-    - **39** - *Wood pellet stove with boiler and radiators*
-    - **40** - *Change room heaters to condensing boiler*
-    - **41** - *Change room heaters to condensing boiler*
-    - **42** - *Replace heating unit with mains gas condensing unit*
-    - **43** - *Condensing oil boiler with radiators*
-    - **44** - *Wind turbine*
-    - **45** - *Flat roof insulation*
-    - **46** - *Room-in-roof insulation*
-    - **47** - *Floor insulation*
-    - **48** - *High performance external doors*
-    - **49** - *Heat recovery system for mixer showers*
-    - **50** - *Flue gas heat recovery device in conjunction with boiler*
-    - **51** - *Air or ground source heat pump*
-    - **52** - *Air or ground source heat pump with underfloor heating*
-    - **53** - *Micro CHP*
-    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
-    - **55** - *External insulation with cavity wall insulation*
+    - **"1"** - *Insulate hot water cylinder with 80 mm jacket*
+    - **"2"** - *Increase hot water cylinder insulation*
+    - **"3"** - *Add additional 80 mm jacket to hot water cylinder*
+    - **"4"** - *Hot water cylinder thermostat*
+    - **"5"** - *Increase loft insulation to 270 mm*
+    - **"6"** - *Cavity wall insulation*
+    - **"7"** - *Internal or external wall insulation*
+    - **"8"** - *Replace single glazed windows with low-E double glazing*
+    - **"9"** - *Secondary glazing to single glazed windows*
+    - **"10"** - *Draught proofing*
+    - **"11"** - *Heating controls (programmer, room thermostat and TRVs)*
+    - **"12"** - *Heating controls (room thermostat and TRVs)*
+    - **"13"** - *Heating controls (thermostatic radiator valves)*
+    - **"14"** - *Heating controls (room thermostat)*
+    - **"15"** - *Heating controls (programmer and TRVs)*
+    - **"16"** - *Heating controls (time and temperature zone control)*
+    - **"17"** - *Heating controls (programmer and room thermostat)*
+    - **"18"** - *Heating controls (room thermostat)*
+    - **"19"** - *Solar water heating*
+    - **"20"** - *Replace boiler with new condensing boiler*
+    - **"21"** - *Replace boiler with new condensing boiler*
+    - **"22"** - *Replace boiler with biomass boiler*
+    - **"23"** - *Wood pellet stove with boiler and radiators*
+    - **"24"** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **"25"** - *Fan assisted storage heaters*
+    - **"26"** - *Replacement warm air unit*
+    - **"27"** - *Change heating to gas condensing boiler*
+    - **"28"** - *Condensing oil boiler with radiators*
+    - **"29"** - *Change heating to gas condensing boiler*
+    - **"30"** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **"31"** - *Fan-assisted storage heaters*
+    - **"32"** - *Change heating to gas condensing boiler*
+    - **"34"** - *Solar photovoltaic panels, 2.5 kWp*
+    - **"35"** - *Low energy lighting for all fixed outlets*
+    - **"36"** - *Replace heating unit with condensing unit*
+    - **"37"** - *Condensing boiler (separate from the range cooker)*
+    - **"38"** - *Condensing boiler (separate from the range cooker)*
+    - **"39"** - *Wood pellet stove with boiler and radiators*
+    - **"40"** - *Change room heaters to condensing boiler*
+    - **"41"** - *Change room heaters to condensing boiler*
+    - **"42"** - *Replace heating unit with mains gas condensing unit*
+    - **"43"** - *Condensing oil boiler with radiators*
+    - **"44"** - *Wind turbine*
+    - **"45"** - *Flat roof insulation*
+    - **"46"** - *Room-in-roof insulation*
+    - **"47"** - *Floor insulation*
+    - **"48"** - *High performance external doors*
+    - **"49"** - *Heat recovery system for mixer showers*
+    - **"50"** - *Flue gas heat recovery device in conjunction with boiler*
+    - **"51"** - *Air or ground source heat pump*
+    - **"52"** - *Air or ground source heat pump with underfloor heating*
+    - **"53"** - *Micro CHP*
+    - **"54"** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
+    - **"55"** - *External insulation with cavity wall insulation*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Electricity-Saving"></a>Electricity-Saving
 
@@ -2441,7 +2441,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Gas-Saving"></a>Gas-Saving
@@ -2453,7 +2453,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Other-Fuel-Saving"></a>Other-Fuel-Saving
@@ -2465,7 +2465,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements"></a>Alternative-Improvements
@@ -2477,7 +2477,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement"></a>Improvement
@@ -2489,7 +2489,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Alternative-Improvements`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements)
 - Child elements: [`Sequence`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Sequence) [`Improvement-Category`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Category) [`Improvement-Type`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Type) [`Typical-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Typical-Saving) [`Energy-Performance-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Energy-Performance-Rating) [`Environmental-Impact-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Environmental-Impact-Rating) [`Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details) [`Indicative-Cost`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Indicative-Cost) [`Green-Deal-Category`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Green-Deal-Category)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Sequence"></a>Sequence
@@ -2501,7 +2501,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Category"></a>Improvement-Category
@@ -2513,14 +2513,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Lower cost - this is for backwards compatibility only and should not be used*
-    - **2** - *Higher cost - this is for backwards compatibility only and should not be used*
-    - **3** - *Further measure - this is for backwards compatibility only and should not be used*
-    - **4** - *Deselected. This is for backwards compatibility only and should not be used.*
-    - **5** - *Normal measure*
-    - **6** - *Alternative measure*
+    - **"1"** - *Lower cost - this is for backwards compatibility only and should not be used*
+    - **"2"** - *Higher cost - this is for backwards compatibility only and should not be used*
+    - **"3"** - *Further measure - this is for backwards compatibility only and should not be used*
+    - **"4"** - *Deselected. This is for backwards compatibility only and should not be used.*
+    - **"5"** - *Normal measure*
+    - **"6"** - *Alternative measure*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Type"></a>Improvement-Type
 
@@ -2531,45 +2531,45 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **A** - *Loft insulation*
-    - **A2** - *Flat roof insulation*
-    - **A3** - *Room-in-roof insulation*
-    - **B** - *Cavity wall insulation*
-    - **C** - *Hot water cylinder insulation*
-    - **D** - *Draughtproofing*
-    - **E** - *Low energy lights*
-    - **F** - *Cylinder thermostat*
-    - **G** - *Heating controls for wet central heating system*
-    - **H** - *Heating controls for warm air system*
-    - **I** - *Upgrade boiler, same fuel*
-    - **J** - *Biomass boiler*
-    - **J2** - *Biomass boiler as alternative improvement*
-    - **K** - *Biomass room heater with boiler*
-    - **L** - *New or replacement fan-assisted storage heaters*
-    - **L2** - *New or replacement high heat retention storage heaters*
-    - **M** - *Replacement warm-air unit*
-    - **N** - *Solar water heating*
-    - **O** - *Replacement double glazed windows*
-    - **O3** - *Replacement double glazing units*
-    - **P** - *Secondary glazing*
-    - **Q** - *Solid wall insulation*
-    - **Q2** - *External insulation with cavity wall insulation*
-    - **R** - *Condensing oil boiler*
-    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*
-    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*
-    - **T2** - *Flue gas heat recovery*
-    - **U** - *Photovoltaics*
-    - **V** - *Wind turbine (roof mounted)*
-    - **V2** - *Wind turbine (on mast)*
-    - **W** - *Floor insulation*
-    - **X** - *Insulated doors*
-    - **Y** - *Instantaneous waste water heat recovery*
-    - **Y2** - *Storage waste water heat recovery*
-    - **Z1** - *Air or ground source heat pump*
-    - **Z2** - *Air or ground source heat pump with underfloor heating*
-    - **Z3** - *Micro-CHP*
+    - **"A"** - *Loft insulation*
+    - **"A2"** - *Flat roof insulation*
+    - **"A3"** - *Room-in-roof insulation*
+    - **"B"** - *Cavity wall insulation*
+    - **"C"** - *Hot water cylinder insulation*
+    - **"D"** - *Draughtproofing*
+    - **"E"** - *Low energy lights*
+    - **"F"** - *Cylinder thermostat*
+    - **"G"** - *Heating controls for wet central heating system*
+    - **"H"** - *Heating controls for warm air system*
+    - **"I"** - *Upgrade boiler, same fuel*
+    - **"J"** - *Biomass boiler*
+    - **"J2"** - *Biomass boiler as alternative improvement*
+    - **"K"** - *Biomass room heater with boiler*
+    - **"L"** - *New or replacement fan-assisted storage heaters*
+    - **"L2"** - *New or replacement high heat retention storage heaters*
+    - **"M"** - *Replacement warm-air unit*
+    - **"N"** - *Solar water heating*
+    - **"O"** - *Replacement double glazed windows*
+    - **"O3"** - *Replacement double glazing units*
+    - **"P"** - *Secondary glazing*
+    - **"Q"** - *Solid wall insulation*
+    - **"Q2"** - *External insulation with cavity wall insulation*
+    - **"R"** - *Condensing oil boiler*
+    - **"S"** - *Change heating to Band A gas condensing boiler (no fuel switch)*
+    - **"T"** - *Change heating to Band A gas condensing boiler (fuel switch)*
+    - **"T2"** - *Flue gas heat recovery*
+    - **"U"** - *Photovoltaics*
+    - **"V"** - *Wind turbine (roof mounted)*
+    - **"V2"** - *Wind turbine (on mast)*
+    - **"W"** - *Floor insulation*
+    - **"X"** - *Insulated doors*
+    - **"Y"** - *Instantaneous waste water heat recovery*
+    - **"Y2"** - *Storage waste water heat recovery*
+    - **"Z1"** - *Air or ground source heat pump*
+    - **"Z2"** - *Air or ground source heat pump with underfloor heating*
+    - **"Z3"** - *Micro-CHP*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Typical-Saving"></a>Typical-Saving
 
@@ -2580,7 +2580,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Energy-Performance-Rating"></a>Energy-Performance-Rating
@@ -2592,7 +2592,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Environmental-Impact-Rating"></a>Environmental-Impact-Rating
@@ -2604,7 +2604,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details"></a>Improvement-Details
@@ -2616,7 +2616,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts) [`Improvement-Number`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Number)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts"></a>Improvement-Texts
@@ -2628,7 +2628,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details)
 - Child elements: [`Improvement-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Summary) [`Improvement-Heading`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Heading) [`Improvement-Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Description)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Summary"></a>Improvement-Summary
@@ -2640,7 +2640,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Heading"></a>Improvement-Heading
@@ -2652,7 +2652,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Description"></a>Improvement-Description
@@ -2664,7 +2664,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Number"></a>Improvement-Number
@@ -2676,62 +2676,62 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Insulate hot water cylinder with 80 mm jacket*
-    - **2** - *Increase hot water cylinder insulation*
-    - **3** - *Add additional 80 mm jacket to hot water cylinder*
-    - **4** - *Hot water cylinder thermostat*
-    - **5** - *Increase loft insulation to 270 mm*
-    - **6** - *Cavity wall insulation*
-    - **7** - *Internal or external wall insulation*
-    - **8** - *Replace single glazed windows with low-E double glazing*
-    - **9** - *Secondary glazing to single glazed windows*
-    - **10** - *Draught proofing*
-    - **11** - *Heating controls (programmer, room thermostat and TRVs)*
-    - **12** - *Heating controls (room thermostat and TRVs)*
-    - **13** - *Heating controls (thermostatic radiator valves)*
-    - **14** - *Heating controls (room thermostat)*
-    - **15** - *Heating controls (programmer and TRVs)*
-    - **16** - *Heating controls (time and temperature zone control)*
-    - **17** - *Heating controls (programmer and room thermostat)*
-    - **18** - *Heating controls (room thermostat)*
-    - **19** - *Solar water heating*
-    - **20** - *Replace boiler with new condensing boiler*
-    - **21** - *Replace boiler with new condensing boiler*
-    - **22** - *Replace boiler with biomass boiler*
-    - **23** - *Wood pellet stove with boiler and radiators*
-    - **24** - *Fan assisted storage heaters and dual immersion cylinder*
-    - **25** - *Fan assisted storage heaters*
-    - **26** - *Replacement warm air unit*
-    - **27** - *Change heating to gas condensing boiler*
-    - **28** - *Condensing oil boiler with radiators*
-    - **29** - *Change heating to gas condensing boiler*
-    - **30** - *Fan assisted storage heaters and dual immersion cylinder*
-    - **31** - *Fan-assisted storage heaters*
-    - **32** - *Change heating to gas condensing boiler*
-    - **34** - *Solar photovoltaic panels, 2.5 kWp*
-    - **35** - *Low energy lighting for all fixed outlets*
-    - **36** - *Replace heating unit with condensing unit*
-    - **37** - *Condensing boiler (separate from the range cooker)*
-    - **38** - *Condensing boiler (separate from the range cooker)*
-    - **39** - *Wood pellet stove with boiler and radiators*
-    - **40** - *Change room heaters to condensing boiler*
-    - **41** - *Change room heaters to condensing boiler*
-    - **42** - *Replace heating unit with mains gas condensing unit*
-    - **43** - *Condensing oil boiler with radiators*
-    - **44** - *Wind turbine*
-    - **45** - *Flat roof insulation*
-    - **46** - *Room-in-roof insulation*
-    - **47** - *Floor insulation*
-    - **48** - *High performance external doors*
-    - **49** - *Heat recovery system for mixer showers*
-    - **50** - *Flue gas heat recovery device in conjunction with boiler*
-    - **51** - *Air or ground source heat pump*
-    - **52** - *Air or ground source heat pump with underfloor heating*
-    - **53** - *Micro CHP*
-    - **54** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
-    - **55** - *External insulation with cavity wall insulation*
+    - **"1"** - *Insulate hot water cylinder with 80 mm jacket*
+    - **"2"** - *Increase hot water cylinder insulation*
+    - **"3"** - *Add additional 80 mm jacket to hot water cylinder*
+    - **"4"** - *Hot water cylinder thermostat*
+    - **"5"** - *Increase loft insulation to 270 mm*
+    - **"6"** - *Cavity wall insulation*
+    - **"7"** - *Internal or external wall insulation*
+    - **"8"** - *Replace single glazed windows with low-E double glazing*
+    - **"9"** - *Secondary glazing to single glazed windows*
+    - **"10"** - *Draught proofing*
+    - **"11"** - *Heating controls (programmer, room thermostat and TRVs)*
+    - **"12"** - *Heating controls (room thermostat and TRVs)*
+    - **"13"** - *Heating controls (thermostatic radiator valves)*
+    - **"14"** - *Heating controls (room thermostat)*
+    - **"15"** - *Heating controls (programmer and TRVs)*
+    - **"16"** - *Heating controls (time and temperature zone control)*
+    - **"17"** - *Heating controls (programmer and room thermostat)*
+    - **"18"** - *Heating controls (room thermostat)*
+    - **"19"** - *Solar water heating*
+    - **"20"** - *Replace boiler with new condensing boiler*
+    - **"21"** - *Replace boiler with new condensing boiler*
+    - **"22"** - *Replace boiler with biomass boiler*
+    - **"23"** - *Wood pellet stove with boiler and radiators*
+    - **"24"** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **"25"** - *Fan assisted storage heaters*
+    - **"26"** - *Replacement warm air unit*
+    - **"27"** - *Change heating to gas condensing boiler*
+    - **"28"** - *Condensing oil boiler with radiators*
+    - **"29"** - *Change heating to gas condensing boiler*
+    - **"30"** - *Fan assisted storage heaters and dual immersion cylinder*
+    - **"31"** - *Fan-assisted storage heaters*
+    - **"32"** - *Change heating to gas condensing boiler*
+    - **"34"** - *Solar photovoltaic panels, 2.5 kWp*
+    - **"35"** - *Low energy lighting for all fixed outlets*
+    - **"36"** - *Replace heating unit with condensing unit*
+    - **"37"** - *Condensing boiler (separate from the range cooker)*
+    - **"38"** - *Condensing boiler (separate from the range cooker)*
+    - **"39"** - *Wood pellet stove with boiler and radiators*
+    - **"40"** - *Change room heaters to condensing boiler*
+    - **"41"** - *Change room heaters to condensing boiler*
+    - **"42"** - *Replace heating unit with mains gas condensing unit*
+    - **"43"** - *Condensing oil boiler with radiators*
+    - **"44"** - *Wind turbine*
+    - **"45"** - *Flat roof insulation*
+    - **"46"** - *Room-in-roof insulation*
+    - **"47"** - *Floor insulation*
+    - **"48"** - *High performance external doors*
+    - **"49"** - *Heat recovery system for mixer showers*
+    - **"50"** - *Flue gas heat recovery device in conjunction with boiler*
+    - **"51"** - *Air or ground source heat pump*
+    - **"52"** - *Air or ground source heat pump with underfloor heating*
+    - **"53"** - *Micro CHP*
+    - **"54"** - *Biomass boiler (Exempted Appliance if in Smoke Control Area)*
+    - **"55"** - *External insulation with cavity wall insulation*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Indicative-Cost"></a>Indicative-Cost
 
@@ -2742,7 +2742,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Green-Deal-Category"></a>Green-Deal-Category
@@ -2754,12 +2754,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *1. Not eligible for Green Deal*
-    - **2** - *2. Eligible with additional finance*
-    - **3** - *3. Eligible without additional finance*
-    - **NI** - *Not assessed. Use for alternative measures and for new dwelling EPCs*
+    - **"1"** - *1. Not eligible for Green Deal*
+    - **"2"** - *2. Eligible with additional finance*
+    - **"3"** - *3. Eligible without additional finance*
+    - **"NI"** - *Not assessed. Use for alternative measures and for new dwelling EPCs*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum"></a>Addendum
 
@@ -2770,7 +2770,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Child elements: [`Cavity-Fill-Recommended`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Cavity-Fill-Recommended) [`Stone-Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Stone-Walls) [`System-Build`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/System-Build) [`Access-Issues`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Access-Issues) [`High-Exposure`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/High-Exposure) [`Narrow-Cavities`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Narrow-Cavities)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Cavity-Fill-Recommended"></a>Cavity-Fill-Recommended
@@ -2782,12 +2782,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Stone-Walls"></a>Stone-Walls
 
@@ -2798,12 +2798,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/System-Build"></a>System-Build
 
@@ -2814,12 +2814,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Access-Issues"></a>Access-Issues
 
@@ -2830,12 +2830,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/High-Exposure"></a>High-Exposure
 
@@ -2846,12 +2846,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Narrow-Cavities"></a>Narrow-Cavities
 
@@ -2862,12 +2862,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data"></a>SAP10-Data
 
@@ -2878,7 +2878,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: [`Data-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/Data-Type) [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/Data-Type"></a>Data-Type
@@ -2890,14 +2890,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP10-Data`](#SAP-Compliance-Report/SAP-Report/SAP10-Data)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *new dwelling as designed*
-    - **2** - *new dwelling as built*
-    - **3** - *new extension to existing dwelling*
-    - **4** - *new dwelling created by change of use*
-    - **5** - *existing dwelling*
-    - **6** - *other*
+    - **"1"** - *new dwelling as designed*
+    - **"2"** - *new dwelling as built*
+    - **"3"** - *new extension to existing dwelling*
+    - **"4"** - *new dwelling created by change of use*
+    - **"5"** - *existing dwelling*
+    - **"6"** - *other*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details"></a>SAP-Property-Details
 
@@ -2908,7 +2908,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP10-Data`](#SAP-Compliance-Report/SAP-Report/SAP10-Data)
 - Child elements: [`Property-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Property-Type) [`Built-Form`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Built-Form) [`Living-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Living-Area) [`Lowest-Storey-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Lowest-Storey-Area) [`Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Orientation) [`Conservatory-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Conservatory-Type) [`Terrain-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Terrain-Type) [`Has-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Has-Special-Feature) [`Special-Feature-Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Special-Feature-Description) [`Energy-Saved-Or-Generated`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Saved-Or-Generated) [`Saved-Or-Generated-Fuel`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Saved-Or-Generated-Fuel) [`Energy-Used`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used) [`Energy-Used-Fuel`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used-Fuel) [`Is-In-Smoke-Control-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-In-Smoke-Control-Area) [`Cold-Water-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source) [`Windows-Overshading`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Windows-Overshading) [`Thermal-Mass-Parameter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Thermal-Mass-Parameter) [`Additional-Allowable-Electricity-Generation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Additional-Allowable-Electricity-Generation) [`Gas-Smart-Meter-Present`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Gas-Smart-Meter-Present) [`Electricity-Smart-Meter-Present`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Electricity-Smart-Meter-Present) [`Is-Dwelling-Export-Capable`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Dwelling-Export-Capable) [`PV-Connection`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Connection) [`PV-Diverter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Diverter) [`Battery-Capacity`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Battery-Capacity) [`Is-Wind-Turbine-Connected-To-Dwelling-Meter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Wind-Turbine-Connected-To-Dwelling-Meter) [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating) [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source) [`SAP-Building-Parts`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts) [`SAP-Opening-Types`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types) [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation) [`SAP-Lighting`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting) [`SAP-Deselected-Improvements`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements) [`SAP-Flat-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details) [`SAP-Special-Features`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features) [`Design-Water-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Design-Water-Use) [`SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Property-Type"></a>Property-Type
@@ -2920,13 +2920,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *House*
-    - **1** - *Bungalow*
-    - **2** - *Flat*
-    - **3** - *Maisonette*
-    - **4** - *Park home*
+    - **"0"** - *House*
+    - **"1"** - *Bungalow*
+    - **"2"** - *Flat*
+    - **"3"** - *Maisonette*
+    - **"4"** - *Park home*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Built-Form"></a>Built-Form
 
@@ -2937,14 +2937,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Detached*
-    - **2** - *Semi-Detached*
-    - **3** - *End-Terrace*
-    - **4** - *Mid-Terrace*
-    - **5** - *Enclosed End-Terrace*
-    - **6** - *Enclosed Mid-Terrace*
+    - **"1"** - *Detached*
+    - **"2"** - *Semi-Detached*
+    - **"3"** - *End-Terrace*
+    - **"4"** - *Mid-Terrace*
+    - **"5"** - *Enclosed End-Terrace*
+    - **"6"** - *Enclosed Mid-Terrace*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Living-Area"></a>Living-Area
 
@@ -2955,7 +2955,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Lowest-Storey-Area"></a>Lowest-Storey-Area
@@ -2967,7 +2967,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Orientation"></a>Orientation
@@ -2979,18 +2979,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *unknown or unspecified*
-    - **1** - *North*
-    - **2** - *North East*
-    - **3** - *East*
-    - **4** - *South East*
-    - **5** - *South*
-    - **6** - *South West*
-    - **7** - *West*
-    - **8** - *North West*
-    - **9** - *Horizontal (windows and roof windows only)*
+    - **"0"** - *unknown or unspecified*
+    - **"1"** - *North*
+    - **"2"** - *North East*
+    - **"3"** - *East*
+    - **"4"** - *South East*
+    - **"5"** - *South*
+    - **"6"** - *South West*
+    - **"7"** - *West*
+    - **"8"** - *North West*
+    - **"9"** - *Horizontal (windows and roof windows only)*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Conservatory-Type"></a>Conservatory-Type
 
@@ -3001,12 +3001,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *no conservatory*
-    - **2** - *separated unheated conservatory*
-    - **3** - *separated heated conservatory*
-    - **4** - *not separated*
+    - **"1"** - *no conservatory*
+    - **"2"** - *separated unheated conservatory*
+    - **"3"** - *separated heated conservatory*
+    - **"4"** - *not separated*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Terrain-Type"></a>Terrain-Type
 
@@ -3017,11 +3017,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *urban*
-    - **2** - *suburban*
-    - **3** - *rural*
+    - **"1"** - *urban*
+    - **"2"** - *suburban*
+    - **"3"** - *rural*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Has-Special-Feature"></a>Has-Special-Feature
 
@@ -3032,12 +3032,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Special-Feature-Description"></a>Special-Feature-Description
 
@@ -3048,7 +3048,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Saved-Or-Generated"></a>Energy-Saved-Or-Generated
@@ -3060,7 +3060,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Saved-Or-Generated-Fuel"></a>Saved-Or-Generated-Fuel
@@ -3072,51 +3072,51 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*
-    - **2** - *Gas: bulk LPG*
-    - **3** - *Gas: bottled LPG*
-    - **4** - *Oil: heating oil*
-    - **7** - *Gas: biogas*
-    - **8** - *LNG*
-    - **9** - *LPG subject to Special Condition 18*
-    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
-    - **11** - *Solid fuel: house coal*
-    - **12** - *Solid fuel: manufactured smokeless fuel*
-    - **15** - *Solid fuel: anthracite*
-    - **20** - *Solid fuel: wood logs*
-    - **21** - *Solid fuel: wood chips*
-    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
-    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
-    - **36** - *Electricity: electricity sold to grid*
-    - **37** - *Electricity: electricity displaced from grid*
-    - **39** - *Electricity: electricity, unspecified tariff*
-    - **41** - *Community heating schemes: heat from electric heat pump*
-    - **42** - *Community heating schemes: heat from boilers - waste combustion*
-    - **43** - *Community heating schemes: heat from boilers - biomass*
-    - **44** - *Community heating schemes: heat from boilers - biogas*
-    - **45** - *Community heating schemes: waste heat from power stations*
-    - **46** - *Community heating schemes: geothermal heat source*
-    - **47** - *Community heating schemes: high grade heat recovered from process*
-    - **48** - *Community heating schemes: heat from CHP*
-    - **49** - *Community heating schemes: low grade heat recovered from process*
-    - **50** - *Community heating schemes: electricity for pumping in distribution network*
-    - **51** - *Community heating schemes: heat from mains gas*
-    - **52** - *Community heating schemes: heat from LPG*
-    - **53** - *Community heating schemes: heat from oil*
-    - **54** - *Community heating schemes: heat from coal*
-    - **55** - *Community heating schemes: heat from B30D*
-    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
-    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
-    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
-    - **71** - *biodiesel from any biomass source*
-    - **72** - *biodiesel from used cooking oil only*
-    - **73** - *biodiesel from vegetable oil only*
-    - **74** - *appliances able to use mineral oil or liquid biofuel*
-    - **75** - *B30K*
-    - **76** - *bioethanol from any biomass source*
-    - **99** - *Fuel data from pcdb*
+    - **"1"** - *Gas: mains gas*
+    - **"2"** - *Gas: bulk LPG*
+    - **"3"** - *Gas: bottled LPG*
+    - **"4"** - *Oil: heating oil*
+    - **"7"** - *Gas: biogas*
+    - **"8"** - *LNG*
+    - **"9"** - *LPG subject to Special Condition 18*
+    - **"10"** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **"11"** - *Solid fuel: house coal*
+    - **"12"** - *Solid fuel: manufactured smokeless fuel*
+    - **"15"** - *Solid fuel: anthracite*
+    - **"20"** - *Solid fuel: wood logs*
+    - **"21"** - *Solid fuel: wood chips*
+    - **"22"** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **"23"** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **"36"** - *Electricity: electricity sold to grid*
+    - **"37"** - *Electricity: electricity displaced from grid*
+    - **"39"** - *Electricity: electricity, unspecified tariff*
+    - **"41"** - *Community heating schemes: heat from electric heat pump*
+    - **"42"** - *Community heating schemes: heat from boilers - waste combustion*
+    - **"43"** - *Community heating schemes: heat from boilers - biomass*
+    - **"44"** - *Community heating schemes: heat from boilers - biogas*
+    - **"45"** - *Community heating schemes: waste heat from power stations*
+    - **"46"** - *Community heating schemes: geothermal heat source*
+    - **"47"** - *Community heating schemes: high grade heat recovered from process*
+    - **"48"** - *Community heating schemes: heat from CHP*
+    - **"49"** - *Community heating schemes: low grade heat recovered from process*
+    - **"50"** - *Community heating schemes: electricity for pumping in distribution network*
+    - **"51"** - *Community heating schemes: heat from mains gas*
+    - **"52"** - *Community heating schemes: heat from LPG*
+    - **"53"** - *Community heating schemes: heat from oil*
+    - **"54"** - *Community heating schemes: heat from coal*
+    - **"55"** - *Community heating schemes: heat from B30D*
+    - **"56"** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **"57"** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **"58"** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **"71"** - *biodiesel from any biomass source*
+    - **"72"** - *biodiesel from used cooking oil only*
+    - **"73"** - *biodiesel from vegetable oil only*
+    - **"74"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"75"** - *B30K*
+    - **"76"** - *bioethanol from any biomass source*
+    - **"99"** - *Fuel data from pcdb*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used"></a>Energy-Used
 
@@ -3127,7 +3127,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used-Fuel"></a>Energy-Used-Fuel
@@ -3139,51 +3139,51 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*
-    - **2** - *Gas: bulk LPG*
-    - **3** - *Gas: bottled LPG*
-    - **4** - *Oil: heating oil*
-    - **7** - *Gas: biogas*
-    - **8** - *LNG*
-    - **9** - *LPG subject to Special Condition 18*
-    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
-    - **11** - *Solid fuel: house coal*
-    - **12** - *Solid fuel: manufactured smokeless fuel*
-    - **15** - *Solid fuel: anthracite*
-    - **20** - *Solid fuel: wood logs*
-    - **21** - *Solid fuel: wood chips*
-    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
-    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
-    - **36** - *Electricity: electricity sold to grid*
-    - **37** - *Electricity: electricity displaced from grid*
-    - **39** - *Electricity: electricity, unspecified tariff*
-    - **41** - *Community heating schemes: heat from electric heat pump*
-    - **42** - *Community heating schemes: heat from boilers - waste combustion*
-    - **43** - *Community heating schemes: heat from boilers - biomass*
-    - **44** - *Community heating schemes: heat from boilers - biogas*
-    - **45** - *Community heating schemes: waste heat from power stations*
-    - **46** - *Community heating schemes: geothermal heat source*
-    - **47** - *Community heating schemes: high grade heat recovered from process*
-    - **48** - *Community heating schemes: heat from CHP*
-    - **49** - *Community heating schemes: low grade heat recovered from process*
-    - **50** - *Community heating schemes: electricity for pumping in distribution network*
-    - **51** - *Community heating schemes: heat from mains gas*
-    - **52** - *Community heating schemes: heat from LPG*
-    - **53** - *Community heating schemes: heat from oil*
-    - **54** - *Community heating schemes: heat from coal*
-    - **55** - *Community heating schemes: heat from B30D*
-    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
-    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
-    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
-    - **71** - *biodiesel from any biomass source*
-    - **72** - *biodiesel from used cooking oil only*
-    - **73** - *biodiesel from vegetable oil only*
-    - **74** - *appliances able to use mineral oil or liquid biofuel*
-    - **75** - *B30K*
-    - **76** - *bioethanol from any biomass source*
-    - **99** - *Fuel data from pcdb*
+    - **"1"** - *Gas: mains gas*
+    - **"2"** - *Gas: bulk LPG*
+    - **"3"** - *Gas: bottled LPG*
+    - **"4"** - *Oil: heating oil*
+    - **"7"** - *Gas: biogas*
+    - **"8"** - *LNG*
+    - **"9"** - *LPG subject to Special Condition 18*
+    - **"10"** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **"11"** - *Solid fuel: house coal*
+    - **"12"** - *Solid fuel: manufactured smokeless fuel*
+    - **"15"** - *Solid fuel: anthracite*
+    - **"20"** - *Solid fuel: wood logs*
+    - **"21"** - *Solid fuel: wood chips*
+    - **"22"** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **"23"** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **"36"** - *Electricity: electricity sold to grid*
+    - **"37"** - *Electricity: electricity displaced from grid*
+    - **"39"** - *Electricity: electricity, unspecified tariff*
+    - **"41"** - *Community heating schemes: heat from electric heat pump*
+    - **"42"** - *Community heating schemes: heat from boilers - waste combustion*
+    - **"43"** - *Community heating schemes: heat from boilers - biomass*
+    - **"44"** - *Community heating schemes: heat from boilers - biogas*
+    - **"45"** - *Community heating schemes: waste heat from power stations*
+    - **"46"** - *Community heating schemes: geothermal heat source*
+    - **"47"** - *Community heating schemes: high grade heat recovered from process*
+    - **"48"** - *Community heating schemes: heat from CHP*
+    - **"49"** - *Community heating schemes: low grade heat recovered from process*
+    - **"50"** - *Community heating schemes: electricity for pumping in distribution network*
+    - **"51"** - *Community heating schemes: heat from mains gas*
+    - **"52"** - *Community heating schemes: heat from LPG*
+    - **"53"** - *Community heating schemes: heat from oil*
+    - **"54"** - *Community heating schemes: heat from coal*
+    - **"55"** - *Community heating schemes: heat from B30D*
+    - **"56"** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **"57"** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **"58"** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **"71"** - *biodiesel from any biomass source*
+    - **"72"** - *biodiesel from used cooking oil only*
+    - **"73"** - *biodiesel from vegetable oil only*
+    - **"74"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"75"** - *B30K*
+    - **"76"** - *bioethanol from any biomass source*
+    - **"99"** - *Fuel data from pcdb*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-In-Smoke-Control-Area"></a>Is-In-Smoke-Control-Area
 
@@ -3194,11 +3194,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **false** - **
-    - **true** - **
-    - **unknown** - **
+    - **"false"** - **
+    - **"true"** - **
+    - **"unknown"** - **
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source"></a>Cold-Water-Source
 
@@ -3209,10 +3209,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *mains*
-    - **2** - *header tank*
+    - **"1"** - *mains*
+    - **"2"** - *header tank*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Windows-Overshading"></a>Windows-Overshading
 
@@ -3223,12 +3223,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *very little*
-    - **2** - *average or unknown*
-    - **3** - *more than average*
-    - **4** - *heavy*
+    - **"1"** - *very little*
+    - **"2"** - *average or unknown*
+    - **"3"** - *more than average*
+    - **"4"** - *heavy*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Thermal-Mass-Parameter"></a>Thermal-Mass-Parameter
 
@@ -3239,7 +3239,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Additional-Allowable-Electricity-Generation"></a>Additional-Allowable-Electricity-Generation
@@ -3251,7 +3251,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Gas-Smart-Meter-Present"></a>Gas-Smart-Meter-Present
@@ -3263,12 +3263,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Electricity-Smart-Meter-Present"></a>Electricity-Smart-Meter-Present
 
@@ -3279,12 +3279,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Dwelling-Export-Capable"></a>Is-Dwelling-Export-Capable
 
@@ -3295,12 +3295,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Connection"></a>PV-Connection
 
@@ -3311,11 +3311,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *not applicable (FGHRS)*
-    - **1** - *not connected to dwelling's electricity meter*
-    - **2** - *connected to dwelling's electricity meter*
+    - **"0"** - *not applicable (FGHRS)*
+    - **"1"** - *not connected to dwelling's electricity meter*
+    - **"2"** - *connected to dwelling's electricity meter*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Diverter"></a>PV-Diverter
 
@@ -3326,12 +3326,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Battery-Capacity"></a>Battery-Capacity
 
@@ -3342,7 +3342,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Wind-Turbine-Connected-To-Dwelling-Meter"></a>Is-Wind-Turbine-Connected-To-Dwelling-Meter
@@ -3354,12 +3354,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating"></a>SAP-Heating
 
@@ -3370,7 +3370,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`Water-Heating-Code`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Water-Heating-Code) [`Water-Fuel-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Water-Fuel-Type) [`Has-Hot-Water-Cylinder`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Hot-Water-Cylinder) [`Secondary-Heating-Category`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Category) [`Secondary-Heating-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Data-Source) [`Secondary-Heating-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Efficiency) [`Secondary-Heating-Commisioning-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Commisioning-Certificate) [`Secondary-Heating-Installation-Engineer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Installation-Engineer) [`Secondary-Heating-Code`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Code) [`Secondary-Fuel-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Fuel-Type) [`Secondary-Heating-PCDF-Fuel-Index`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-PCDF-Fuel-Index) [`Secondary-Heating-Flue-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Flue-Type) [`Thermal-Store`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Thermal-Store) [`Has-Fixed-Air-Conditioning`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Fixed-Air-Conditioning) [`Immersion-Heating-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Immersion-Heating-Type) [`Is-Heat-Pump-Assisted-By-Immersion`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Assisted-By-Immersion) [`Is-Heat-Pump-Installed-To-MIS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Installed-To-MIS) [`Is-Immersion-For-Summer-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Immersion-For-Summer-Use) [`Is-Secondary-Heating-HETAS-Approved`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Secondary-Heating-HETAS-Approved) [`Hot-Water-Store-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Manufacturer) [`Hot-Water-Store-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Model) [`Hot-Water-Store-Commissioning-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Commissioning-Certificate) [`Hot-Water-Store-Installer-Engineer-Registration`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Installer-Engineer-Registration) [`Hot-Water-Store-Size`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Size) [`Hot-Water-Store-Heat-Transfer-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Transfer-Area) [`Hot-Water-Store-Heat-Loss-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss-Source) [`Hot-Water-Store-Heat-Loss`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss) [`Hot-Water-Store-Insulation-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Type) [`Hot-Water-Store-Insulation-Thickness`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Thickness) [`Is-Thermal-Store-Near-Boiler`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Near-Boiler) [`Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard) [`Has-Cylinder-Thermostat`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Cylinder-Thermostat) [`Is-Cylinder-In-Heated-Space`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Cylinder-In-Heated-Space) [`Is-Hot-Water-Separately-Timed`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Hot-Water-Separately-Timed) [`Hot-Water-Controls-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Manufacturer) [`Hot-Water-Controls-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Model) [`SAP-Community-Heating-Systems`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems) [`Main-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details) [`SAP-Heating-Design-Water-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Heating-Design-Water-Use) [`Main-Heating-Systems-Interaction`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Systems-Interaction) [`Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values) [`Primary-Pipework-Insulation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Primary-Pipework-Insulation) [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details) [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS) [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS) [`Shower-Outlets`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets) [`Number-Baths`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths) [`Number-Baths-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths-WWHRS)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Water-Heating-Code"></a>Water-Heating-Code
@@ -3382,7 +3382,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Water-Fuel-Type"></a>Water-Fuel-Type
@@ -3394,51 +3394,51 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*
-    - **2** - *Gas: bulk LPG*
-    - **3** - *Gas: bottled LPG*
-    - **4** - *Oil: heating oil*
-    - **7** - *Gas: biogas*
-    - **8** - *LNG*
-    - **9** - *LPG subject to Special Condition 18*
-    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
-    - **11** - *Solid fuel: house coal*
-    - **12** - *Solid fuel: manufactured smokeless fuel*
-    - **15** - *Solid fuel: anthracite*
-    - **20** - *Solid fuel: wood logs*
-    - **21** - *Solid fuel: wood chips*
-    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
-    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
-    - **36** - *Electricity: electricity sold to grid*
-    - **37** - *Electricity: electricity displaced from grid*
-    - **39** - *Electricity: electricity, unspecified tariff*
-    - **41** - *Community heating schemes: heat from electric heat pump*
-    - **42** - *Community heating schemes: heat from boilers - waste combustion*
-    - **43** - *Community heating schemes: heat from boilers - biomass*
-    - **44** - *Community heating schemes: heat from boilers - biogas*
-    - **45** - *Community heating schemes: waste heat from power stations*
-    - **46** - *Community heating schemes: geothermal heat source*
-    - **47** - *Community heating schemes: high grade heat recovered from process*
-    - **48** - *Community heating schemes: heat from CHP*
-    - **49** - *Community heating schemes: low grade heat recovered from process*
-    - **50** - *Community heating schemes: electricity for pumping in distribution network*
-    - **51** - *Community heating schemes: heat from mains gas*
-    - **52** - *Community heating schemes: heat from LPG*
-    - **53** - *Community heating schemes: heat from oil*
-    - **54** - *Community heating schemes: heat from coal*
-    - **55** - *Community heating schemes: heat from B30D*
-    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
-    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
-    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
-    - **71** - *biodiesel from any biomass source*
-    - **72** - *biodiesel from used cooking oil only*
-    - **73** - *biodiesel from vegetable oil only*
-    - **74** - *appliances able to use mineral oil or liquid biofuel*
-    - **75** - *B30K*
-    - **76** - *bioethanol from any biomass source*
-    - **99** - *Fuel data from pcdb*
+    - **"1"** - *Gas: mains gas*
+    - **"2"** - *Gas: bulk LPG*
+    - **"3"** - *Gas: bottled LPG*
+    - **"4"** - *Oil: heating oil*
+    - **"7"** - *Gas: biogas*
+    - **"8"** - *LNG*
+    - **"9"** - *LPG subject to Special Condition 18*
+    - **"10"** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **"11"** - *Solid fuel: house coal*
+    - **"12"** - *Solid fuel: manufactured smokeless fuel*
+    - **"15"** - *Solid fuel: anthracite*
+    - **"20"** - *Solid fuel: wood logs*
+    - **"21"** - *Solid fuel: wood chips*
+    - **"22"** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **"23"** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **"36"** - *Electricity: electricity sold to grid*
+    - **"37"** - *Electricity: electricity displaced from grid*
+    - **"39"** - *Electricity: electricity, unspecified tariff*
+    - **"41"** - *Community heating schemes: heat from electric heat pump*
+    - **"42"** - *Community heating schemes: heat from boilers - waste combustion*
+    - **"43"** - *Community heating schemes: heat from boilers - biomass*
+    - **"44"** - *Community heating schemes: heat from boilers - biogas*
+    - **"45"** - *Community heating schemes: waste heat from power stations*
+    - **"46"** - *Community heating schemes: geothermal heat source*
+    - **"47"** - *Community heating schemes: high grade heat recovered from process*
+    - **"48"** - *Community heating schemes: heat from CHP*
+    - **"49"** - *Community heating schemes: low grade heat recovered from process*
+    - **"50"** - *Community heating schemes: electricity for pumping in distribution network*
+    - **"51"** - *Community heating schemes: heat from mains gas*
+    - **"52"** - *Community heating schemes: heat from LPG*
+    - **"53"** - *Community heating schemes: heat from oil*
+    - **"54"** - *Community heating schemes: heat from coal*
+    - **"55"** - *Community heating schemes: heat from B30D*
+    - **"56"** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **"57"** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **"58"** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **"71"** - *biodiesel from any biomass source*
+    - **"72"** - *biodiesel from used cooking oil only*
+    - **"73"** - *biodiesel from vegetable oil only*
+    - **"74"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"75"** - *B30K*
+    - **"76"** - *bioethanol from any biomass source*
+    - **"99"** - *Fuel data from pcdb*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Hot-Water-Cylinder"></a>Has-Hot-Water-Cylinder
 
@@ -3449,12 +3449,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Category"></a>Secondary-Heating-Category
 
@@ -3465,10 +3465,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *none*
-    - **10** - *room heaters*
+    - **"1"** - *none*
+    - **"10"** - *room heaters*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Data-Source"></a>Secondary-Heating-Data-Source
 
@@ -3479,10 +3479,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **2** - *from manufacturer declaration*
-    - **3** - *from SAP table*
+    - **"2"** - *from manufacturer declaration*
+    - **"3"** - *from SAP table*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Efficiency"></a>Secondary-Heating-Efficiency
 
@@ -3493,7 +3493,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Commisioning-Certificate"></a>Secondary-Heating-Commisioning-Certificate
@@ -3505,7 +3505,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Installation-Engineer"></a>Secondary-Heating-Installation-Engineer
@@ -3517,7 +3517,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Code"></a>Secondary-Heating-Code
@@ -3529,7 +3529,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Fuel-Type"></a>Secondary-Fuel-Type
@@ -3541,51 +3541,51 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*
-    - **2** - *Gas: bulk LPG*
-    - **3** - *Gas: bottled LPG*
-    - **4** - *Oil: heating oil*
-    - **7** - *Gas: biogas*
-    - **8** - *LNG*
-    - **9** - *LPG subject to Special Condition 18*
-    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
-    - **11** - *Solid fuel: house coal*
-    - **12** - *Solid fuel: manufactured smokeless fuel*
-    - **15** - *Solid fuel: anthracite*
-    - **20** - *Solid fuel: wood logs*
-    - **21** - *Solid fuel: wood chips*
-    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
-    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
-    - **36** - *Electricity: electricity sold to grid*
-    - **37** - *Electricity: electricity displaced from grid*
-    - **39** - *Electricity: electricity, unspecified tariff*
-    - **41** - *Community heating schemes: heat from electric heat pump*
-    - **42** - *Community heating schemes: heat from boilers - waste combustion*
-    - **43** - *Community heating schemes: heat from boilers - biomass*
-    - **44** - *Community heating schemes: heat from boilers - biogas*
-    - **45** - *Community heating schemes: waste heat from power stations*
-    - **46** - *Community heating schemes: geothermal heat source*
-    - **47** - *Community heating schemes: high grade heat recovered from process*
-    - **48** - *Community heating schemes: heat from CHP*
-    - **49** - *Community heating schemes: low grade heat recovered from process*
-    - **50** - *Community heating schemes: electricity for pumping in distribution network*
-    - **51** - *Community heating schemes: heat from mains gas*
-    - **52** - *Community heating schemes: heat from LPG*
-    - **53** - *Community heating schemes: heat from oil*
-    - **54** - *Community heating schemes: heat from coal*
-    - **55** - *Community heating schemes: heat from B30D*
-    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
-    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
-    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
-    - **71** - *biodiesel from any biomass source*
-    - **72** - *biodiesel from used cooking oil only*
-    - **73** - *biodiesel from vegetable oil only*
-    - **74** - *appliances able to use mineral oil or liquid biofuel*
-    - **75** - *B30K*
-    - **76** - *bioethanol from any biomass source*
-    - **99** - *Fuel data from pcdb*
+    - **"1"** - *Gas: mains gas*
+    - **"2"** - *Gas: bulk LPG*
+    - **"3"** - *Gas: bottled LPG*
+    - **"4"** - *Oil: heating oil*
+    - **"7"** - *Gas: biogas*
+    - **"8"** - *LNG*
+    - **"9"** - *LPG subject to Special Condition 18*
+    - **"10"** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **"11"** - *Solid fuel: house coal*
+    - **"12"** - *Solid fuel: manufactured smokeless fuel*
+    - **"15"** - *Solid fuel: anthracite*
+    - **"20"** - *Solid fuel: wood logs*
+    - **"21"** - *Solid fuel: wood chips*
+    - **"22"** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **"23"** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **"36"** - *Electricity: electricity sold to grid*
+    - **"37"** - *Electricity: electricity displaced from grid*
+    - **"39"** - *Electricity: electricity, unspecified tariff*
+    - **"41"** - *Community heating schemes: heat from electric heat pump*
+    - **"42"** - *Community heating schemes: heat from boilers - waste combustion*
+    - **"43"** - *Community heating schemes: heat from boilers - biomass*
+    - **"44"** - *Community heating schemes: heat from boilers - biogas*
+    - **"45"** - *Community heating schemes: waste heat from power stations*
+    - **"46"** - *Community heating schemes: geothermal heat source*
+    - **"47"** - *Community heating schemes: high grade heat recovered from process*
+    - **"48"** - *Community heating schemes: heat from CHP*
+    - **"49"** - *Community heating schemes: low grade heat recovered from process*
+    - **"50"** - *Community heating schemes: electricity for pumping in distribution network*
+    - **"51"** - *Community heating schemes: heat from mains gas*
+    - **"52"** - *Community heating schemes: heat from LPG*
+    - **"53"** - *Community heating schemes: heat from oil*
+    - **"54"** - *Community heating schemes: heat from coal*
+    - **"55"** - *Community heating schemes: heat from B30D*
+    - **"56"** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **"57"** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **"58"** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **"71"** - *biodiesel from any biomass source*
+    - **"72"** - *biodiesel from used cooking oil only*
+    - **"73"** - *biodiesel from vegetable oil only*
+    - **"74"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"75"** - *B30K*
+    - **"76"** - *bioethanol from any biomass source*
+    - **"99"** - *Fuel data from pcdb*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-PCDF-Fuel-Index"></a>Secondary-Heating-PCDF-Fuel-Index
 
@@ -3596,7 +3596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Flue-Type"></a>Secondary-Heating-Flue-Type
@@ -3608,13 +3608,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *open flue*
-    - **2** - *balanced flue*
-    - **3** - *chimney*
-    - **4** - *omitted (boiler is in an outhouse, so its flue arrangements are not relevant)*
-    - **5** - *unknown (there is a flue, but its type could not be determined)*
+    - **"1"** - *open flue*
+    - **"2"** - *balanced flue*
+    - **"3"** - *chimney*
+    - **"4"** - *omitted (boiler is in an outhouse, so its flue arrangements are not relevant)*
+    - **"5"** - *unknown (there is a flue, but its type could not be determined)*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Thermal-Store"></a>Thermal-Store
 
@@ -3625,11 +3625,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *none*
-    - **2** - *hot water only*
-    - **3** - *integrated*
+    - **"1"** - *none*
+    - **"2"** - *hot water only*
+    - **"3"** - *integrated*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Fixed-Air-Conditioning"></a>Has-Fixed-Air-Conditioning
 
@@ -3640,12 +3640,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Immersion-Heating-Type"></a>Immersion-Heating-Type
 
@@ -3656,10 +3656,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Dual*
-    - **2** - *Single*
+    - **"1"** - *Dual*
+    - **"2"** - *Single*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Assisted-By-Immersion"></a>Is-Heat-Pump-Assisted-By-Immersion
 
@@ -3670,12 +3670,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Installed-To-MIS"></a>Is-Heat-Pump-Installed-To-MIS
 
@@ -3686,12 +3686,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Immersion-For-Summer-Use"></a>Is-Immersion-For-Summer-Use
 
@@ -3702,12 +3702,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Secondary-Heating-HETAS-Approved"></a>Is-Secondary-Heating-HETAS-Approved
 
@@ -3718,12 +3718,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Manufacturer"></a>Hot-Water-Store-Manufacturer
 
@@ -3734,7 +3734,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Model"></a>Hot-Water-Store-Model
@@ -3746,7 +3746,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Commissioning-Certificate"></a>Hot-Water-Store-Commissioning-Certificate
@@ -3758,7 +3758,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Installer-Engineer-Registration"></a>Hot-Water-Store-Installer-Engineer-Registration
@@ -3770,7 +3770,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Size"></a>Hot-Water-Store-Size
@@ -3782,7 +3782,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Transfer-Area"></a>Hot-Water-Store-Heat-Transfer-Area
@@ -3794,7 +3794,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss-Source"></a>Hot-Water-Store-Heat-Loss-Source
@@ -3806,10 +3806,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **2** - *from manufacturer declaration*
-    - **3** - *from SAP table*
+    - **"2"** - *from manufacturer declaration*
+    - **"3"** - *from SAP table*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss"></a>Hot-Water-Store-Heat-Loss
 
@@ -3820,7 +3820,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Type"></a>Hot-Water-Store-Insulation-Type
@@ -3832,10 +3832,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *factory-applied*
-    - **2** - *loose jacket*
+    - **"1"** - *factory-applied*
+    - **"2"** - *loose jacket*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Thickness"></a>Hot-Water-Store-Insulation-Thickness
 
@@ -3846,7 +3846,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Near-Boiler"></a>Is-Thermal-Store-Near-Boiler
@@ -3858,12 +3858,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard"></a>Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard
 
@@ -3874,12 +3874,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Cylinder-Thermostat"></a>Has-Cylinder-Thermostat
 
@@ -3890,12 +3890,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Cylinder-In-Heated-Space"></a>Is-Cylinder-In-Heated-Space
 
@@ -3906,12 +3906,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Hot-Water-Separately-Timed"></a>Is-Hot-Water-Separately-Timed
 
@@ -3922,12 +3922,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Manufacturer"></a>Hot-Water-Controls-Manufacturer
 
@@ -3938,7 +3938,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Model"></a>Hot-Water-Controls-Model
@@ -3950,7 +3950,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems"></a>SAP-Community-Heating-Systems
@@ -3962,7 +3962,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System"></a>SAP-Community-Heating-System
@@ -3974,7 +3974,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-Systems`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems)
 - Child elements: [`Community-Heating-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Name) [`Community-Heating-CO2-Emission-Factor`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-CO2-Emission-Factor) [`Community-Heating-Primary-Energy-Factor`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Primary-Energy-Factor) [`Community-Heating-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Use) [`Is-Community-Heating-Cylinder-In-Dwelling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-Community-Heating-Cylinder-In-Dwelling) [`Is-HIU-In-Dwelling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-HIU-In-Dwelling) [`HIU-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/HIU-Index-Number) [`Community-Heating-Distribution-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Type) [`Community-Heat-Sources`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources) [`Community-Heating-Distribution-Loss-Factor`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Loss-Factor) [`Charging-Linked-To-Heat-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Charging-Linked-To-Heat-Use) [`Heat-Network-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Index-Number) [`Sub-Network-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Sub-Network-Name) [`Heat-Network-Existing`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Existing) [`Heat-Network-Assessed-As-New`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Assessed-As-New)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Name"></a>Community-Heating-Name
@@ -3986,7 +3986,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-CO2-Emission-Factor"></a>Community-Heating-CO2-Emission-Factor
@@ -3998,7 +3998,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Primary-Energy-Factor"></a>Community-Heating-Primary-Energy-Factor
@@ -4010,7 +4010,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Use"></a>Community-Heating-Use
@@ -4022,11 +4022,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *space heating only*
-    - **2** - *water heating only*
-    - **3** - *space and water heating*
+    - **"1"** - *space heating only*
+    - **"2"** - *water heating only*
+    - **"3"** - *space and water heating*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-Community-Heating-Cylinder-In-Dwelling"></a>Is-Community-Heating-Cylinder-In-Dwelling
 
@@ -4037,12 +4037,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-HIU-In-Dwelling"></a>Is-HIU-In-Dwelling
 
@@ -4053,12 +4053,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/HIU-Index-Number"></a>HIU-Index-Number
 
@@ -4069,7 +4069,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Type"></a>Community-Heating-Distribution-Type
@@ -4081,13 +4081,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **5** - *calculated*
-    - **6** - *unknown*
-    - **7** - *Network not compliant with Code of Practice*
-    - **8** - *Network compliant with Code of Practice*
-    - **9** - *Two adjoining dwellings*
+    - **"5"** - *calculated*
+    - **"6"** - *unknown*
+    - **"7"** - *Network not compliant with Code of Practice*
+    - **"8"** - *Network compliant with Code of Practice*
+    - **"9"** - *Two adjoining dwellings*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources"></a>Community-Heat-Sources
 
@@ -4098,7 +4098,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source"></a>Community-Heat-Source
@@ -4110,7 +4110,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Sources`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources)
 - Child elements: [`Heat-Source-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Source-Type) [`Heat-Fraction`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Fraction) [`Fuel-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Fuel-Type) [`PCDF-Fuel-Index`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/PCDF-Fuel-Index) [`Heat-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Efficiency) [`Power-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Power-Efficiency) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Description) [`CHP-Electricity-Generation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/CHP-Electricity-Generation)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Source-Type"></a>Heat-Source-Type
@@ -4122,13 +4122,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *CHP*
-    - **2** - *boilers*
-    - **3** - *heat pump*
-    - **4** - *waste heat*
-    - **5** - *geothermal*
+    - **"1"** - *CHP*
+    - **"2"** - *boilers*
+    - **"3"** - *heat pump*
+    - **"4"** - *waste heat*
+    - **"5"** - *geothermal*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Fraction"></a>Heat-Fraction
 
@@ -4139,7 +4139,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Fuel-Type"></a>Fuel-Type
@@ -4151,51 +4151,51 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*
-    - **2** - *Gas: bulk LPG*
-    - **3** - *Gas: bottled LPG*
-    - **4** - *Oil: heating oil*
-    - **7** - *Gas: biogas*
-    - **8** - *LNG*
-    - **9** - *LPG subject to Special Condition 18*
-    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
-    - **11** - *Solid fuel: house coal*
-    - **12** - *Solid fuel: manufactured smokeless fuel*
-    - **15** - *Solid fuel: anthracite*
-    - **20** - *Solid fuel: wood logs*
-    - **21** - *Solid fuel: wood chips*
-    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
-    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
-    - **36** - *Electricity: electricity sold to grid*
-    - **37** - *Electricity: electricity displaced from grid*
-    - **39** - *Electricity: electricity, unspecified tariff*
-    - **41** - *Community heating schemes: heat from electric heat pump*
-    - **42** - *Community heating schemes: heat from boilers - waste combustion*
-    - **43** - *Community heating schemes: heat from boilers - biomass*
-    - **44** - *Community heating schemes: heat from boilers - biogas*
-    - **45** - *Community heating schemes: waste heat from power stations*
-    - **46** - *Community heating schemes: geothermal heat source*
-    - **47** - *Community heating schemes: high grade heat recovered from process*
-    - **48** - *Community heating schemes: heat from CHP*
-    - **49** - *Community heating schemes: low grade heat recovered from process*
-    - **50** - *Community heating schemes: electricity for pumping in distribution network*
-    - **51** - *Community heating schemes: heat from mains gas*
-    - **52** - *Community heating schemes: heat from LPG*
-    - **53** - *Community heating schemes: heat from oil*
-    - **54** - *Community heating schemes: heat from coal*
-    - **55** - *Community heating schemes: heat from B30D*
-    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
-    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
-    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
-    - **71** - *biodiesel from any biomass source*
-    - **72** - *biodiesel from used cooking oil only*
-    - **73** - *biodiesel from vegetable oil only*
-    - **74** - *appliances able to use mineral oil or liquid biofuel*
-    - **75** - *B30K*
-    - **76** - *bioethanol from any biomass source*
-    - **99** - *Fuel data from pcdb*
+    - **"1"** - *Gas: mains gas*
+    - **"2"** - *Gas: bulk LPG*
+    - **"3"** - *Gas: bottled LPG*
+    - **"4"** - *Oil: heating oil*
+    - **"7"** - *Gas: biogas*
+    - **"8"** - *LNG*
+    - **"9"** - *LPG subject to Special Condition 18*
+    - **"10"** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **"11"** - *Solid fuel: house coal*
+    - **"12"** - *Solid fuel: manufactured smokeless fuel*
+    - **"15"** - *Solid fuel: anthracite*
+    - **"20"** - *Solid fuel: wood logs*
+    - **"21"** - *Solid fuel: wood chips*
+    - **"22"** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **"23"** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **"36"** - *Electricity: electricity sold to grid*
+    - **"37"** - *Electricity: electricity displaced from grid*
+    - **"39"** - *Electricity: electricity, unspecified tariff*
+    - **"41"** - *Community heating schemes: heat from electric heat pump*
+    - **"42"** - *Community heating schemes: heat from boilers - waste combustion*
+    - **"43"** - *Community heating schemes: heat from boilers - biomass*
+    - **"44"** - *Community heating schemes: heat from boilers - biogas*
+    - **"45"** - *Community heating schemes: waste heat from power stations*
+    - **"46"** - *Community heating schemes: geothermal heat source*
+    - **"47"** - *Community heating schemes: high grade heat recovered from process*
+    - **"48"** - *Community heating schemes: heat from CHP*
+    - **"49"** - *Community heating schemes: low grade heat recovered from process*
+    - **"50"** - *Community heating schemes: electricity for pumping in distribution network*
+    - **"51"** - *Community heating schemes: heat from mains gas*
+    - **"52"** - *Community heating schemes: heat from LPG*
+    - **"53"** - *Community heating schemes: heat from oil*
+    - **"54"** - *Community heating schemes: heat from coal*
+    - **"55"** - *Community heating schemes: heat from B30D*
+    - **"56"** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **"57"** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **"58"** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **"71"** - *biodiesel from any biomass source*
+    - **"72"** - *biodiesel from used cooking oil only*
+    - **"73"** - *biodiesel from vegetable oil only*
+    - **"74"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"75"** - *B30K*
+    - **"76"** - *bioethanol from any biomass source*
+    - **"99"** - *Fuel data from pcdb*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/PCDF-Fuel-Index"></a>PCDF-Fuel-Index
 
@@ -4206,7 +4206,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Efficiency"></a>Heat-Efficiency
@@ -4218,7 +4218,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Power-Efficiency"></a>Power-Efficiency
@@ -4230,7 +4230,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Description"></a>Description
@@ -4242,7 +4242,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/CHP-Electricity-Generation"></a>CHP-Electricity-Generation
@@ -4254,17 +4254,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **81** - *New CHP, export only.*
-    - **82** - *New CHP, flexible operation.*
-    - **83** - *New CHP, standard.*
-    - **84** - *Existing CHP (2015+), export only.*
-    - **85** - *Existing CHP (2015+), flexible operation.*
-    - **86** - *Existing CHP (2015+),standard.*
-    - **87** - *Existing CHP (pre-2015), export only.*
-    - **88** - *Existing CHP (pre-2015), flexible operation.*
-    - **89** - *Existing CHP (pre-2015), standard.*
+    - **"81"** - *New CHP, export only.*
+    - **"82"** - *New CHP, flexible operation.*
+    - **"83"** - *New CHP, standard.*
+    - **"84"** - *Existing CHP (2015+), export only.*
+    - **"85"** - *Existing CHP (2015+), flexible operation.*
+    - **"86"** - *Existing CHP (2015+),standard.*
+    - **"87"** - *Existing CHP (pre-2015), export only.*
+    - **"88"** - *Existing CHP (pre-2015), flexible operation.*
+    - **"89"** - *Existing CHP (pre-2015), standard.*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Loss-Factor"></a>Community-Heating-Distribution-Loss-Factor
 
@@ -4275,7 +4275,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Charging-Linked-To-Heat-Use"></a>Charging-Linked-To-Heat-Use
@@ -4287,12 +4287,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Index-Number"></a>Heat-Network-Index-Number
 
@@ -4303,7 +4303,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Sub-Network-Name"></a>Sub-Network-Name
@@ -4315,7 +4315,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Existing"></a>Heat-Network-Existing
@@ -4327,12 +4327,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Assessed-As-New"></a>Heat-Network-Assessed-As-New
 
@@ -4343,12 +4343,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details"></a>Main-Heating-Details
 
@@ -4359,7 +4359,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating"></a>Main-Heating
@@ -4371,7 +4371,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details)
 - Child elements: [`Main-Heating-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Number) [`Main-Heating-Category`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Category) [`Main-Heating-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Data-Source) [`Main-Heating-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Index-Number) [`Main-Heating-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Manufacturer) [`Main-Heating-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Model) [`Main-Heating-Commissioning-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Commissioning-Certificate) [`Main-Heating-Installation-Engineer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Installation-Engineer) [`Is-Condensing-Boiler`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Condensing-Boiler) [`Condensing-Boiler-Heat-Distribution`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Condensing-Boiler-Heat-Distribution) [`Heat-Pump-Heat-Distribution`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Pump-Heat-Distribution) [`Gas-Or-Oil-Boiler-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Gas-Or-Oil-Boiler-Type) [`Combi-Boiler-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Combi-Boiler-Type) [`Case-Heat-Emission`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Case-Heat-Emission) [`Heat-Transfer-To-Water`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Transfer-To-Water) [`Solid-Fuel-Boiler-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Solid-Fuel-Boiler-Type) [`Main-Heating-Code`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Code) [`Main-Fuel-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Fuel-Type) [`PCDF-Fuel-Index`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/PCDF-Fuel-Index) [`Main-Heating-Control`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Control) [`Heat-Emitter-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Emitter-Type) [`Underfloor-Heat-Emitter-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Underfloor-Heat-Emitter-Type) [`Main-Heating-Flue-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Flue-Type) [`Is-Flue-Fan-Present`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Flue-Fan-Present) [`Is-Central-Heating-Pump-In-Heated-Space`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Central-Heating-Pump-In-Heated-Space) [`Is-Oil-Pump-In-Heated-Space`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Oil-Pump-In-Heated-Space) [`Is-Interlocked-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Interlocked-System) [`Has-Separate-Delayed-Start`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-Separate-Delayed-Start) [`Boiler-Fuel-Feed`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Boiler-Fuel-Feed) [`Is-Main-Heating-HETAS-Approved`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Main-Heating-HETAS-Approved) [`Electric-CPSU-Operating-Temperature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Electric-CPSU-Operating-Temperature) [`Main-Heating-Fraction`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Fraction) [`Burner-Control`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Burner-Control) [`Efficiency-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Efficiency-Type) [`Main-Heating-Efficiency-Winter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Winter) [`Main-Heating-Efficiency-Summer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Summer) [`Main-Heating-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency) [`Main-Heating-System-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-System-Type) [`Has-FGHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-FGHRS) [`FGHRS-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Index-Number) [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source) [`Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values) [`Storage-Heaters`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters) [`Emitter-Temperature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Emitter-Temperature) [`MCS-Installed-Heat-Pump`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/MCS-Installed-Heat-Pump) [`Central-Heating-Pump-Age`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Central-Heating-Pump-Age) [`Control-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Control-Index-Number) [`Heating-Controller-Function`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Function) [`Heating-Controller-Ecodesign-Class`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Ecodesign-Class) [`Heating-Controller-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Manufacturer) [`Heating-Controller-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Model)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Number"></a>Main-Heating-Number
@@ -4383,7 +4383,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Category"></a>Main-Heating-Category
@@ -4395,19 +4395,19 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *none*
-    - **2** - *boiler with radiators or underfloor heating*
-    - **3** - *micro-cogeneration*
-    - **4** - *heat pump with radiators or underfloor heating*
-    - **5** - *heat pump with warm air distribution*
-    - **6** - *community heating system*
-    - **7** - *electric storage heaters*
-    - **8** - *electric underfloor heating*
-    - **9** - *warm air system (not heat pump)*
-    - **10** - *room heaters*
-    - **11** - *other system*
+    - **"1"** - *none*
+    - **"2"** - *boiler with radiators or underfloor heating*
+    - **"3"** - *micro-cogeneration*
+    - **"4"** - *heat pump with radiators or underfloor heating*
+    - **"5"** - *heat pump with warm air distribution*
+    - **"6"** - *community heating system*
+    - **"7"** - *electric storage heaters*
+    - **"8"** - *electric underfloor heating*
+    - **"9"** - *warm air system (not heat pump)*
+    - **"10"** - *room heaters*
+    - **"11"** - *other system*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Data-Source"></a>Main-Heating-Data-Source
 
@@ -4418,11 +4418,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *from database*
-    - **2** - *from manufacturer declaration*
-    - **3** - *from SAP table*
+    - **"1"** - *from database*
+    - **"2"** - *from manufacturer declaration*
+    - **"3"** - *from SAP table*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Index-Number"></a>Main-Heating-Index-Number
 
@@ -4433,7 +4433,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Manufacturer"></a>Main-Heating-Manufacturer
@@ -4445,7 +4445,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Model"></a>Main-Heating-Model
@@ -4457,7 +4457,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Commissioning-Certificate"></a>Main-Heating-Commissioning-Certificate
@@ -4469,7 +4469,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Installation-Engineer"></a>Main-Heating-Installation-Engineer
@@ -4481,7 +4481,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Condensing-Boiler"></a>Is-Condensing-Boiler
@@ -4493,12 +4493,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Condensing-Boiler-Heat-Distribution"></a>Condensing-Boiler-Heat-Distribution
 
@@ -4509,7 +4509,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Pump-Heat-Distribution"></a>Heat-Pump-Heat-Distribution
@@ -4521,7 +4521,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Gas-Or-Oil-Boiler-Type"></a>Gas-Or-Oil-Boiler-Type
@@ -4533,12 +4533,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *regular*
-    - **2** - *combi*
-    - **3** - *CPSU*
-    - **4** - *range cooker*
+    - **"1"** - *regular*
+    - **"2"** - *combi*
+    - **"3"** - *CPSU*
+    - **"4"** - *range cooker*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Combi-Boiler-Type"></a>Combi-Boiler-Type
 
@@ -4549,18 +4549,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *instantaneous, no store or keep hot*
-    - **2** - *primary storage*
-    - **3** - *secondary storage*
-    - **4** - *CPSU*
-    - **5** - *untimed keep-hot by fuel*
-    - **6** - *timed keep hot by fuel*
-    - **7** - *untimed keep-hot by electricity*
-    - **8** - *timed keep hot by electricity*
-    - **9** - *untimed keep-hot by fuel and electricity*
-    - **10** - *timed keep hot by fuel and electricity*
+    - **"1"** - *instantaneous, no store or keep hot*
+    - **"2"** - *primary storage*
+    - **"3"** - *secondary storage*
+    - **"4"** - *CPSU*
+    - **"5"** - *untimed keep-hot by fuel*
+    - **"6"** - *timed keep hot by fuel*
+    - **"7"** - *untimed keep-hot by electricity*
+    - **"8"** - *timed keep hot by electricity*
+    - **"9"** - *untimed keep-hot by fuel and electricity*
+    - **"10"** - *timed keep hot by fuel and electricity*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Case-Heat-Emission"></a>Case-Heat-Emission
 
@@ -4571,7 +4571,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Transfer-To-Water"></a>Heat-Transfer-To-Water
@@ -4583,7 +4583,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Solid-Fuel-Boiler-Type"></a>Solid-Fuel-Boiler-Type
@@ -4595,12 +4595,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *independent*
-    - **2** - *open fire*
-    - **3** - *closed room heater*
-    - **4** - *range cooker*
+    - **"1"** - *independent*
+    - **"2"** - *open fire*
+    - **"3"** - *closed room heater*
+    - **"4"** - *range cooker*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Code"></a>Main-Heating-Code
 
@@ -4611,7 +4611,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Fuel-Type"></a>Main-Fuel-Type
@@ -4623,51 +4623,51 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*
-    - **2** - *Gas: bulk LPG*
-    - **3** - *Gas: bottled LPG*
-    - **4** - *Oil: heating oil*
-    - **7** - *Gas: biogas*
-    - **8** - *LNG*
-    - **9** - *LPG subject to Special Condition 18*
-    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
-    - **11** - *Solid fuel: house coal*
-    - **12** - *Solid fuel: manufactured smokeless fuel*
-    - **15** - *Solid fuel: anthracite*
-    - **20** - *Solid fuel: wood logs*
-    - **21** - *Solid fuel: wood chips*
-    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
-    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
-    - **36** - *Electricity: electricity sold to grid*
-    - **37** - *Electricity: electricity displaced from grid*
-    - **39** - *Electricity: electricity, unspecified tariff*
-    - **41** - *Community heating schemes: heat from electric heat pump*
-    - **42** - *Community heating schemes: heat from boilers - waste combustion*
-    - **43** - *Community heating schemes: heat from boilers - biomass*
-    - **44** - *Community heating schemes: heat from boilers - biogas*
-    - **45** - *Community heating schemes: waste heat from power stations*
-    - **46** - *Community heating schemes: geothermal heat source*
-    - **47** - *Community heating schemes: high grade heat recovered from process*
-    - **48** - *Community heating schemes: heat from CHP*
-    - **49** - *Community heating schemes: low grade heat recovered from process*
-    - **50** - *Community heating schemes: electricity for pumping in distribution network*
-    - **51** - *Community heating schemes: heat from mains gas*
-    - **52** - *Community heating schemes: heat from LPG*
-    - **53** - *Community heating schemes: heat from oil*
-    - **54** - *Community heating schemes: heat from coal*
-    - **55** - *Community heating schemes: heat from B30D*
-    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
-    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
-    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
-    - **71** - *biodiesel from any biomass source*
-    - **72** - *biodiesel from used cooking oil only*
-    - **73** - *biodiesel from vegetable oil only*
-    - **74** - *appliances able to use mineral oil or liquid biofuel*
-    - **75** - *B30K*
-    - **76** - *bioethanol from any biomass source*
-    - **99** - *Fuel data from pcdb*
+    - **"1"** - *Gas: mains gas*
+    - **"2"** - *Gas: bulk LPG*
+    - **"3"** - *Gas: bottled LPG*
+    - **"4"** - *Oil: heating oil*
+    - **"7"** - *Gas: biogas*
+    - **"8"** - *LNG*
+    - **"9"** - *LPG subject to Special Condition 18*
+    - **"10"** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **"11"** - *Solid fuel: house coal*
+    - **"12"** - *Solid fuel: manufactured smokeless fuel*
+    - **"15"** - *Solid fuel: anthracite*
+    - **"20"** - *Solid fuel: wood logs*
+    - **"21"** - *Solid fuel: wood chips*
+    - **"22"** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **"23"** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **"36"** - *Electricity: electricity sold to grid*
+    - **"37"** - *Electricity: electricity displaced from grid*
+    - **"39"** - *Electricity: electricity, unspecified tariff*
+    - **"41"** - *Community heating schemes: heat from electric heat pump*
+    - **"42"** - *Community heating schemes: heat from boilers - waste combustion*
+    - **"43"** - *Community heating schemes: heat from boilers - biomass*
+    - **"44"** - *Community heating schemes: heat from boilers - biogas*
+    - **"45"** - *Community heating schemes: waste heat from power stations*
+    - **"46"** - *Community heating schemes: geothermal heat source*
+    - **"47"** - *Community heating schemes: high grade heat recovered from process*
+    - **"48"** - *Community heating schemes: heat from CHP*
+    - **"49"** - *Community heating schemes: low grade heat recovered from process*
+    - **"50"** - *Community heating schemes: electricity for pumping in distribution network*
+    - **"51"** - *Community heating schemes: heat from mains gas*
+    - **"52"** - *Community heating schemes: heat from LPG*
+    - **"53"** - *Community heating schemes: heat from oil*
+    - **"54"** - *Community heating schemes: heat from coal*
+    - **"55"** - *Community heating schemes: heat from B30D*
+    - **"56"** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **"57"** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **"58"** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **"71"** - *biodiesel from any biomass source*
+    - **"72"** - *biodiesel from used cooking oil only*
+    - **"73"** - *biodiesel from vegetable oil only*
+    - **"74"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"75"** - *B30K*
+    - **"76"** - *bioethanol from any biomass source*
+    - **"99"** - *Fuel data from pcdb*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/PCDF-Fuel-Index"></a>PCDF-Fuel-Index
 
@@ -4678,7 +4678,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Control"></a>Main-Heating-Control
@@ -4690,7 +4690,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Emitter-Type"></a>Heat-Emitter-Type
@@ -4702,12 +4702,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *radiators*
-    - **2** - *underfloor*
-    - **3** - *both radiators and underfloor*
-    - **4** - *fan coil units*
+    - **"1"** - *radiators*
+    - **"2"** - *underfloor*
+    - **"3"** - *both radiators and underfloor*
+    - **"4"** - *fan coil units*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Underfloor-Heat-Emitter-Type"></a>Underfloor-Heat-Emitter-Type
 
@@ -4718,11 +4718,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *in concrete slab*
-    - **2** - *in screed above insulation*
-    - **3** - *in timber floor*
+    - **"1"** - *in concrete slab*
+    - **"2"** - *in screed above insulation*
+    - **"3"** - *in timber floor*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Flue-Type"></a>Main-Heating-Flue-Type
 
@@ -4733,13 +4733,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *open flue*
-    - **2** - *balanced flue*
-    - **3** - *chimney*
-    - **4** - *omitted (boiler is in an outhouse, so its flue arrangements are not relevant)*
-    - **5** - *unknown (there is a flue, but its type could not be determined)*
+    - **"1"** - *open flue*
+    - **"2"** - *balanced flue*
+    - **"3"** - *chimney*
+    - **"4"** - *omitted (boiler is in an outhouse, so its flue arrangements are not relevant)*
+    - **"5"** - *unknown (there is a flue, but its type could not be determined)*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Flue-Fan-Present"></a>Is-Flue-Fan-Present
 
@@ -4750,12 +4750,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Central-Heating-Pump-In-Heated-Space"></a>Is-Central-Heating-Pump-In-Heated-Space
 
@@ -4766,12 +4766,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Oil-Pump-In-Heated-Space"></a>Is-Oil-Pump-In-Heated-Space
 
@@ -4782,12 +4782,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Interlocked-System"></a>Is-Interlocked-System
 
@@ -4798,12 +4798,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-Separate-Delayed-Start"></a>Has-Separate-Delayed-Start
 
@@ -4814,12 +4814,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Boiler-Fuel-Feed"></a>Boiler-Fuel-Feed
 
@@ -4830,12 +4830,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *gravity*
-    - **2** - *manual*
-    - **3** - *screw*
-    - **4** - *other*
+    - **"1"** - *gravity*
+    - **"2"** - *manual*
+    - **"3"** - *screw*
+    - **"4"** - *other*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Main-Heating-HETAS-Approved"></a>Is-Main-Heating-HETAS-Approved
 
@@ -4846,12 +4846,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Electric-CPSU-Operating-Temperature"></a>Electric-CPSU-Operating-Temperature
 
@@ -4862,7 +4862,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Fraction"></a>Main-Heating-Fraction
@@ -4874,7 +4874,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Burner-Control"></a>Burner-Control
@@ -4886,13 +4886,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *unknown*
-    - **2** - *on/off (gas and oil burners)*
-    - **3** - *modulating (gas and oil boilers)*
-    - **4** - *manual (solid fuel boilers)*
-    - **5** - *electrical (solid fuel boilers)*
+    - **"1"** - *unknown*
+    - **"2"** - *on/off (gas and oil burners)*
+    - **"3"** - *modulating (gas and oil boilers)*
+    - **"4"** - *manual (solid fuel boilers)*
+    - **"5"** - *electrical (solid fuel boilers)*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Efficiency-Type"></a>Efficiency-Type
 
@@ -4903,12 +4903,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *not gas or oil boiler*
-    - **2** - *SEDBUK(2005)*
-    - **3** - *SEDBUK(2009)*
-    - **4** - *winter and summer*
+    - **"1"** - *not gas or oil boiler*
+    - **"2"** - *SEDBUK(2005)*
+    - **"3"** - *SEDBUK(2009)*
+    - **"4"** - *winter and summer*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Winter"></a>Main-Heating-Efficiency-Winter
 
@@ -4919,7 +4919,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Summer"></a>Main-Heating-Efficiency-Summer
@@ -4931,7 +4931,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency"></a>Main-Heating-Efficiency
@@ -4943,7 +4943,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-System-Type"></a>Main-Heating-System-Type
@@ -4955,7 +4955,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-FGHRS"></a>Has-FGHRS
@@ -4967,12 +4967,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Index-Number"></a>FGHRS-Index-Number
 
@@ -4983,7 +4983,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source"></a>FGHRS-Energy-Source
@@ -4995,7 +4995,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: [`PV-Arrays`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays) [`Wind-Turbines`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines) [`Electricity-Tariff`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Electricity-Tariff) [`Hydro-Electric-Generation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation) [`Hydro-Electric-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Certificate) [`Hydro-Electric-Generation-Months`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months) [`Is-Hydro-Output-Connected-To-Dwelling-Meter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Is-Hydro-Output-Connected-To-Dwelling-Meter)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays"></a>PV-Arrays
@@ -5007,7 +5007,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
 - Child elements: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array"></a>PV-Array
@@ -5019,7 +5019,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Arrays`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays)
 - Child elements: [`Peak-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Peak-Power) [`Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Orientation) [`Pitch`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Pitch) [`Overshading`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading) [`MCS-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate) [`MCS-Certificate-Reference`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference) [`PV-Panel-Manufacturer-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/PV-Panel-Manufacturer-Name) [`Overshading-MCS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading-MCS)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Peak-Power"></a>Peak-Power
@@ -5031,7 +5031,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Orientation"></a>Orientation
@@ -5043,18 +5043,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *North*
-    - **2** - *North East*
-    - **3** - *East*
-    - **4** - *South East*
-    - **5** - *South*
-    - **6** - *South West*
-    - **7** - *West*
-    - **8** - *North West*
-    - **ND** - *To be used when the pitch is horizontal*
-    - **NR** - *not recorded - for backwards compatibility only; do not use*
+    - **"1"** - *North*
+    - **"2"** - *North East*
+    - **"3"** - *East*
+    - **"4"** - *South East*
+    - **"5"** - *South*
+    - **"6"** - *South West*
+    - **"7"** - *West*
+    - **"8"** - *North West*
+    - **"ND"** - *To be used when the pitch is horizontal*
+    - **"NR"** - *not recorded - for backwards compatibility only; do not use*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Pitch"></a>Pitch
 
@@ -5065,13 +5065,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *horizontal*
-    - **2** - *30 degrees*
-    - **3** - *45 degrees*
-    - **4** - *60 degrees*
-    - **5** - *vertical*
+    - **"1"** - *horizontal*
+    - **"2"** - *30 degrees*
+    - **"3"** - *45 degrees*
+    - **"4"** - *60 degrees*
+    - **"5"** - *vertical*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading"></a>Overshading
 
@@ -5082,14 +5082,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *none or very little*
-    - **2** - *modest*
-    - **3** - *significant*
-    - **4** - *heavy*
-    - **5** - *severe*
-    - **ND** - *for backwards compatability only; do not use*
+    - **"1"** - *none or very little*
+    - **"2"** - *modest*
+    - **"3"** - *significant*
+    - **"4"** - *heavy*
+    - **"5"** - *severe*
+    - **"ND"** - *for backwards compatability only; do not use*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate"></a>MCS-Certificate
 
@@ -5100,12 +5100,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference"></a>MCS-Certificate-Reference
 
@@ -5116,7 +5116,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/PV-Panel-Manufacturer-Name"></a>PV-Panel-Manufacturer-Name
@@ -5128,7 +5128,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading-MCS"></a>Overshading-MCS
@@ -5140,7 +5140,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines"></a>Wind-Turbines
@@ -5152,7 +5152,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
 - Child elements: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine"></a>Wind-Turbine
@@ -5164,7 +5164,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbines`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines)
 - Child elements: [`Wind-Turbine-Manufacturer-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Manufacturer-Name) [`Wind-Turbine-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Certificate) [`Wind-Turbine-Rotor-Diameter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Rotor-Diameter) [`Wind-Turbine-Hub-Height`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Hub-Height)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Manufacturer-Name"></a>Wind-Turbine-Manufacturer-Name
@@ -5176,7 +5176,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Certificate"></a>Wind-Turbine-Certificate
@@ -5188,7 +5188,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Rotor-Diameter"></a>Wind-Turbine-Rotor-Diameter
@@ -5200,7 +5200,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Hub-Height"></a>Wind-Turbine-Hub-Height
@@ -5212,7 +5212,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Electricity-Tariff"></a>Electricity-Tariff
@@ -5224,14 +5224,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *standard tariff*
-    - **2** - *off-peak 7 hour*
-    - **3** - *off-peak 10 hour*
-    - **4** - *24 hour*
-    - **5** - *off-peak 18 hour*
-    - **ND** - *not applicable*
+    - **"1"** - *standard tariff*
+    - **"2"** - *off-peak 7 hour*
+    - **"3"** - *off-peak 10 hour*
+    - **"4"** - *24 hour*
+    - **"5"** - *off-peak 18 hour*
+    - **"ND"** - *not applicable*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation"></a>Hydro-Electric-Generation
 
@@ -5242,7 +5242,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Certificate"></a>Hydro-Electric-Certificate
@@ -5254,7 +5254,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months"></a>Hydro-Electric-Generation-Months
@@ -5266,7 +5266,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
 - Child elements: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month"></a>Hydro-Electric-Generation-Month
@@ -5278,7 +5278,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hydro-Electric-Generation-Months`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months)
 - Child elements: [`Hydro-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Month) [`Hydro-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Month"></a>Hydro-Month
@@ -5290,20 +5290,20 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **Jan** - **
-    - **Feb** - **
-    - **Mar** - **
-    - **Apr** - **
-    - **May** - **
-    - **Jun** - **
-    - **Jul** - **
-    - **Aug** - **
-    - **Sep** - **
-    - **Oct** - **
-    - **Nov** - **
-    - **Dec** - **
+    - **"Jan"** - **
+    - **"Feb"** - **
+    - **"Mar"** - **
+    - **"Apr"** - **
+    - **"May"** - **
+    - **"Jun"** - **
+    - **"Jul"** - **
+    - **"Aug"** - **
+    - **"Sep"** - **
+    - **"Oct"** - **
+    - **"Nov"** - **
+    - **"Dec"** - **
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value"></a>Hydro-Value
 
@@ -5314,7 +5314,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Is-Hydro-Output-Connected-To-Dwelling-Meter"></a>Is-Hydro-Output-Connected-To-Dwelling-Meter
@@ -5326,12 +5326,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values"></a>Main-Heating-Declared-Values
 
@@ -5342,7 +5342,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: [`Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Efficiency) [`Make-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Make-Model) [`Test-Method`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Test-Method)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Efficiency"></a>Efficiency
@@ -5354,7 +5354,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Make-Model"></a>Make-Model
@@ -5366,7 +5366,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Test-Method"></a>Test-Method
@@ -5378,7 +5378,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters"></a>Storage-Heaters
@@ -5390,7 +5390,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: [`Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater"></a>Storage-Heater
@@ -5402,7 +5402,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-Heaters`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters)
 - Child elements: [`Number-Of-Heaters`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/Number-Of-Heaters) [`Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/Index-Number) [`High-Heat-Retention`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/High-Heat-Retention)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/Number-Of-Heaters"></a>Number-Of-Heaters
@@ -5414,7 +5414,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/Index-Number"></a>Index-Number
@@ -5426,7 +5426,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/High-Heat-Retention"></a>High-Heat-Retention
@@ -5438,12 +5438,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Emitter-Temperature"></a>Emitter-Temperature
 
@@ -5454,14 +5454,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *unknown*
-    - **1** - *over 45degC*
-    - **2** - *over 35degC*
-    - **3** - *over 35degC and less than or equal to 45degC*
-    - **4** - *less than or equal to 35degC*
-    - **NA** - *not applicable for the heating system*
+    - **"0"** - *unknown*
+    - **"1"** - *over 45degC*
+    - **"2"** - *over 35degC*
+    - **"3"** - *over 35degC and less than or equal to 45degC*
+    - **"4"** - *less than or equal to 35degC*
+    - **"NA"** - *not applicable for the heating system*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/MCS-Installed-Heat-Pump"></a>MCS-Installed-Heat-Pump
 
@@ -5472,12 +5472,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Central-Heating-Pump-Age"></a>Central-Heating-Pump-Age
 
@@ -5488,11 +5488,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *unknown*
-    - **1** - *2012 or earlier*
-    - **2** - *2013 or later*
+    - **"0"** - *unknown*
+    - **"1"** - *2012 or earlier*
+    - **"2"** - *2013 or later*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Control-Index-Number"></a>Control-Index-Number
 
@@ -5503,7 +5503,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Function"></a>Heating-Controller-Function
@@ -5515,7 +5515,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Ecodesign-Class"></a>Heating-Controller-Ecodesign-Class
@@ -5527,7 +5527,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Manufacturer"></a>Heating-Controller-Manufacturer
@@ -5539,7 +5539,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Model"></a>Heating-Controller-Model
@@ -5551,7 +5551,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Heating-Design-Water-Use"></a>SAP-Heating-Design-Water-Use
@@ -5563,9 +5563,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *<= 125 litres per person per day*
+    - **"1"** - *<= 125 litres per person per day*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Systems-Interaction"></a>Main-Heating-Systems-Interaction
 
@@ -5576,10 +5576,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *both main heating systems provide heat to the whole property*
-    - **2** - *the main heating systems are separate and heat different parts of the property*
+    - **"1"** - *both main heating systems provide heat to the whole property*
+    - **"2"** - *the main heating systems are separate and heat different parts of the property*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values"></a>Secondary-Heating-Declared-Values
 
@@ -5590,7 +5590,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: [`Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Efficiency) [`Make-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Make-Model) [`Test-Method`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Test-Method)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Efficiency"></a>Efficiency
@@ -5602,7 +5602,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Make-Model"></a>Make-Model
@@ -5614,7 +5614,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Test-Method"></a>Test-Method
@@ -5626,7 +5626,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Primary-Pipework-Insulation"></a>Primary-Pipework-Insulation
@@ -5638,12 +5638,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *not insulated*
-    - **2** - *first 1 metre from cylinder insulated*
-    - **3** - *all accessible pipework insulated*
-    - **4** - *fully insulated*
+    - **"1"** - *not insulated*
+    - **"2"** - *first 1 metre from cylinder insulated*
+    - **"3"** - *all accessible pipework insulated*
+    - **"4"** - *fully insulated*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details"></a>Solar-Heating-Details
 
@@ -5654,7 +5654,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: [`Solar-Heating-Collector-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Heating-Collector-Manufacturer) [`Solar-Heating-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Heating-Certificate) [`Solar-Panel-Aperture-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Aperture-Area) [`Solar-Panel-Collector-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Type) [`Solar-Panel-Collector-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Data-Source) [`Solar-Panel-Collector-Zero-Loss-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Zero-Loss-Efficiency) [`Solar-Panel-Collector-Heat-Loss-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Heat-Loss-Rate) [`Solar-Panel-Collector-Linear-Heat-Loss-Coefficient`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Linear-Heat-Loss-Coefficient) [`Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient) [`Solar-Panel-Collector-Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Orientation) [`Solar-Panel-Collector-Pitch`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Pitch) [`Solar-Panel-Collector-Overshading`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Overshading) [`Has-Solar-Powered-Pump`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Has-Solar-Powered-Pump) [`Is-Solar-Store-Combined-Cylinder`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Solar-Store-Combined-Cylinder) [`Solar-Store-Volume`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Store-Volume) [`Collector-Loop-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Collector-Loop-Efficiency) [`Incidence-Angle-Modifier`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Incidence-Angle-Modifier) [`Is-Community-Solar`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Community-Solar) [`Service-Provision`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Service-Provision) [`Overall-Heat-Loss`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Overall-Heat-Loss)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Heating-Collector-Manufacturer"></a>Solar-Heating-Collector-Manufacturer
@@ -5666,7 +5666,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Heating-Certificate"></a>Solar-Heating-Certificate
@@ -5678,7 +5678,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Aperture-Area"></a>Solar-Panel-Aperture-Area
@@ -5690,7 +5690,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Type"></a>Solar-Panel-Collector-Type
@@ -5702,12 +5702,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *unglazed*
-    - **2** - *flat panel*
-    - **3** - *evacuated tube*
-    - **ND** - *for backwards compatability only; do not use*
+    - **"1"** - *unglazed*
+    - **"2"** - *flat panel*
+    - **"3"** - *evacuated tube*
+    - **"ND"** - *for backwards compatability only; do not use*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Data-Source"></a>Solar-Panel-Collector-Data-Source
 
@@ -5718,11 +5718,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *default*
-    - **2** - *declared values*
-    - **ND** - *for backwards compatability only; do not use*
+    - **"1"** - *default*
+    - **"2"** - *declared values*
+    - **"ND"** - *for backwards compatability only; do not use*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Zero-Loss-Efficiency"></a>Solar-Panel-Collector-Zero-Loss-Efficiency
 
@@ -5733,7 +5733,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Heat-Loss-Rate"></a>Solar-Panel-Collector-Heat-Loss-Rate
@@ -5745,7 +5745,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Linear-Heat-Loss-Coefficient"></a>Solar-Panel-Collector-Linear-Heat-Loss-Coefficient
@@ -5757,7 +5757,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient"></a>Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient
@@ -5769,7 +5769,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Orientation"></a>Solar-Panel-Collector-Orientation
@@ -5781,18 +5781,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *North*
-    - **2** - *North East*
-    - **3** - *East*
-    - **4** - *South East*
-    - **5** - *South*
-    - **6** - *South West*
-    - **7** - *West*
-    - **8** - *North West*
-    - **ND** - *To be used when the pitch is horizontal*
-    - **NR** - *not recorded - for backwards compatibility only; do not use*
+    - **"1"** - *North*
+    - **"2"** - *North East*
+    - **"3"** - *East*
+    - **"4"** - *South East*
+    - **"5"** - *South*
+    - **"6"** - *South West*
+    - **"7"** - *West*
+    - **"8"** - *North West*
+    - **"ND"** - *To be used when the pitch is horizontal*
+    - **"NR"** - *not recorded - for backwards compatibility only; do not use*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Pitch"></a>Solar-Panel-Collector-Pitch
 
@@ -5803,7 +5803,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Overshading"></a>Solar-Panel-Collector-Overshading
@@ -5815,14 +5815,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *none or very little*
-    - **2** - *modest*
-    - **3** - *significant*
-    - **4** - *heavy*
-    - **5** - *severe*
-    - **ND** - *for backwards compatability only; do not use*
+    - **"1"** - *none or very little*
+    - **"2"** - *modest*
+    - **"3"** - *significant*
+    - **"4"** - *heavy*
+    - **"5"** - *severe*
+    - **"ND"** - *for backwards compatability only; do not use*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Has-Solar-Powered-Pump"></a>Has-Solar-Powered-Pump
 
@@ -5833,12 +5833,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Solar-Store-Combined-Cylinder"></a>Is-Solar-Store-Combined-Cylinder
 
@@ -5849,12 +5849,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Store-Volume"></a>Solar-Store-Volume
 
@@ -5865,7 +5865,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Collector-Loop-Efficiency"></a>Collector-Loop-Efficiency
@@ -5877,7 +5877,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Incidence-Angle-Modifier"></a>Incidence-Angle-Modifier
@@ -5889,7 +5889,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Community-Solar"></a>Is-Community-Solar
@@ -5901,12 +5901,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Service-Provision"></a>Service-Provision
 
@@ -5917,11 +5917,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *space and water heating*
-    - **2** - *space heating only*
-    - **3** - *water heating only*
+    - **"1"** - *space and water heating*
+    - **"2"** - *space heating only*
+    - **"3"** - *water heating only*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Overall-Heat-Loss"></a>Overall-Heat-Loss
 
@@ -5932,7 +5932,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS"></a>Instantaneous-WWHRS
@@ -5944,7 +5944,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: [`WWHRS-Index-Number1`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Index-Number1) [`WWHRS-Index-Number2`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Index-Number2) [`WWHRS-Efficiency1`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Efficiency1) [`WWHRS-Manufacturer1`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Manufacturer1) [`WWHRS-Model1`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Model1) [`WWHRS-Efficiency2`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Efficiency2) [`WWHRS-Manufacturer2`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Manufacturer2) [`WWHRS-Model2`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Model2)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Index-Number1"></a>WWHRS-Index-Number1
@@ -5956,7 +5956,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Index-Number2"></a>WWHRS-Index-Number2
@@ -5968,7 +5968,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Efficiency1"></a>WWHRS-Efficiency1
@@ -5980,7 +5980,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Manufacturer1"></a>WWHRS-Manufacturer1
@@ -5992,7 +5992,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Model1"></a>WWHRS-Model1
@@ -6004,7 +6004,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Efficiency2"></a>WWHRS-Efficiency2
@@ -6016,7 +6016,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Manufacturer2"></a>WWHRS-Manufacturer2
@@ -6028,7 +6028,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Model2"></a>WWHRS-Model2
@@ -6040,7 +6040,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS"></a>Storage-WWHRS
@@ -6052,7 +6052,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: [`WWHRS-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/WWHRS-Index-Number) [`WWHRS-Store-Volume`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/WWHRS-Store-Volume) [`Storage-WWHRS-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Efficiency) [`Storage-WWHRS-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Manufacturer) [`Storage-WWHRS-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Model)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/WWHRS-Index-Number"></a>WWHRS-Index-Number
@@ -6064,7 +6064,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/WWHRS-Store-Volume"></a>WWHRS-Store-Volume
@@ -6076,7 +6076,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Efficiency"></a>Storage-WWHRS-Efficiency
@@ -6088,7 +6088,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Manufacturer"></a>Storage-WWHRS-Manufacturer
@@ -6100,7 +6100,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Model"></a>Storage-WWHRS-Model
@@ -6112,7 +6112,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets"></a>Shower-Outlets
@@ -6124,7 +6124,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: [`Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet"></a>Shower-Outlet
@@ -6136,7 +6136,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Shower-Outlets`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets)
 - Child elements: [`Shower-Outlet-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Outlet-Type) [`Shower-Flow-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Flow-Rate) [`Shower-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Power) [`Shower-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-WWHRS)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Outlet-Type"></a>Shower-Outlet-Type
@@ -6148,13 +6148,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Vented hot water system*
-    - **2** - *Vented hot water system + pump*
-    - **3** - *Unvented hot water system*
-    - **4** - *Instantaneous electric shower*
-    - **5** - *Part G 2015 compliant*
+    - **"1"** - *Vented hot water system*
+    - **"2"** - *Vented hot water system + pump*
+    - **"3"** - *Unvented hot water system*
+    - **"4"** - *Instantaneous electric shower*
+    - **"5"** - *Part G 2015 compliant*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Flow-Rate"></a>Shower-Flow-Rate
 
@@ -6165,7 +6165,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Power"></a>Shower-Power
@@ -6177,7 +6177,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-WWHRS"></a>Shower-WWHRS
@@ -6189,12 +6189,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *none*
-    - **2** - *Instantaneous WWHRS 1*
-    - **3** - *Instantaneous WWHRS 2*
-    - **4** - *Storage WWHRS*
+    - **"1"** - *none*
+    - **"2"** - *Instantaneous WWHRS 1*
+    - **"3"** - *Instantaneous WWHRS 2*
+    - **"4"** - *Storage WWHRS*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths"></a>Number-Baths
 
@@ -6205,7 +6205,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths-WWHRS"></a>Number-Baths-WWHRS
@@ -6217,7 +6217,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source"></a>SAP-Energy-Source
@@ -6229,7 +6229,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`PV-Arrays`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays) [`Wind-Turbines`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines) [`Electricity-Tariff`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Electricity-Tariff) [`Hydro-Electric-Generation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation) [`Hydro-Electric-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Certificate) [`Hydro-Electric-Generation-Months`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months) [`Is-Hydro-Output-Connected-To-Dwelling-Meter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Is-Hydro-Output-Connected-To-Dwelling-Meter)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays"></a>PV-Arrays
@@ -6241,7 +6241,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
 - Child elements: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array"></a>PV-Array
@@ -6253,7 +6253,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Arrays`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays)
 - Child elements: [`Peak-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Peak-Power) [`Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Orientation) [`Pitch`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Pitch) [`Overshading`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading) [`MCS-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate) [`MCS-Certificate-Reference`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference) [`PV-Panel-Manufacturer-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/PV-Panel-Manufacturer-Name) [`Overshading-MCS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading-MCS)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Peak-Power"></a>Peak-Power
@@ -6265,7 +6265,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Orientation"></a>Orientation
@@ -6277,18 +6277,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *North*
-    - **2** - *North East*
-    - **3** - *East*
-    - **4** - *South East*
-    - **5** - *South*
-    - **6** - *South West*
-    - **7** - *West*
-    - **8** - *North West*
-    - **ND** - *To be used when the pitch is horizontal*
-    - **NR** - *not recorded - for backwards compatibility only; do not use*
+    - **"1"** - *North*
+    - **"2"** - *North East*
+    - **"3"** - *East*
+    - **"4"** - *South East*
+    - **"5"** - *South*
+    - **"6"** - *South West*
+    - **"7"** - *West*
+    - **"8"** - *North West*
+    - **"ND"** - *To be used when the pitch is horizontal*
+    - **"NR"** - *not recorded - for backwards compatibility only; do not use*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Pitch"></a>Pitch
 
@@ -6299,13 +6299,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *horizontal*
-    - **2** - *30 degrees*
-    - **3** - *45 degrees*
-    - **4** - *60 degrees*
-    - **5** - *vertical*
+    - **"1"** - *horizontal*
+    - **"2"** - *30 degrees*
+    - **"3"** - *45 degrees*
+    - **"4"** - *60 degrees*
+    - **"5"** - *vertical*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading"></a>Overshading
 
@@ -6316,14 +6316,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *none or very little*
-    - **2** - *modest*
-    - **3** - *significant*
-    - **4** - *heavy*
-    - **5** - *severe*
-    - **ND** - *for backwards compatability only; do not use*
+    - **"1"** - *none or very little*
+    - **"2"** - *modest*
+    - **"3"** - *significant*
+    - **"4"** - *heavy*
+    - **"5"** - *severe*
+    - **"ND"** - *for backwards compatability only; do not use*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate"></a>MCS-Certificate
 
@@ -6334,12 +6334,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference"></a>MCS-Certificate-Reference
 
@@ -6350,7 +6350,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/PV-Panel-Manufacturer-Name"></a>PV-Panel-Manufacturer-Name
@@ -6362,7 +6362,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading-MCS"></a>Overshading-MCS
@@ -6374,7 +6374,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines"></a>Wind-Turbines
@@ -6386,7 +6386,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
 - Child elements: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine"></a>Wind-Turbine
@@ -6398,7 +6398,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbines`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines)
 - Child elements: [`Wind-Turbine-Manufacturer-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Manufacturer-Name) [`Wind-Turbine-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Certificate) [`Wind-Turbine-Rotor-Diameter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Rotor-Diameter) [`Wind-Turbine-Hub-Height`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Hub-Height)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Manufacturer-Name"></a>Wind-Turbine-Manufacturer-Name
@@ -6410,7 +6410,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Certificate"></a>Wind-Turbine-Certificate
@@ -6422,7 +6422,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Rotor-Diameter"></a>Wind-Turbine-Rotor-Diameter
@@ -6434,7 +6434,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Hub-Height"></a>Wind-Turbine-Hub-Height
@@ -6446,7 +6446,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Electricity-Tariff"></a>Electricity-Tariff
@@ -6458,14 +6458,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *standard tariff*
-    - **2** - *off-peak 7 hour*
-    - **3** - *off-peak 10 hour*
-    - **4** - *24 hour*
-    - **5** - *off-peak 18 hour*
-    - **ND** - *not applicable*
+    - **"1"** - *standard tariff*
+    - **"2"** - *off-peak 7 hour*
+    - **"3"** - *off-peak 10 hour*
+    - **"4"** - *24 hour*
+    - **"5"** - *off-peak 18 hour*
+    - **"ND"** - *not applicable*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation"></a>Hydro-Electric-Generation
 
@@ -6476,7 +6476,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Certificate"></a>Hydro-Electric-Certificate
@@ -6488,7 +6488,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months"></a>Hydro-Electric-Generation-Months
@@ -6500,7 +6500,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
 - Child elements: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month"></a>Hydro-Electric-Generation-Month
@@ -6512,7 +6512,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hydro-Electric-Generation-Months`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months)
 - Child elements: [`Hydro-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Month) [`Hydro-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Month"></a>Hydro-Month
@@ -6524,20 +6524,20 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **Jan** - **
-    - **Feb** - **
-    - **Mar** - **
-    - **Apr** - **
-    - **May** - **
-    - **Jun** - **
-    - **Jul** - **
-    - **Aug** - **
-    - **Sep** - **
-    - **Oct** - **
-    - **Nov** - **
-    - **Dec** - **
+    - **"Jan"** - **
+    - **"Feb"** - **
+    - **"Mar"** - **
+    - **"Apr"** - **
+    - **"May"** - **
+    - **"Jun"** - **
+    - **"Jul"** - **
+    - **"Aug"** - **
+    - **"Sep"** - **
+    - **"Oct"** - **
+    - **"Nov"** - **
+    - **"Dec"** - **
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value"></a>Hydro-Value
 
@@ -6548,7 +6548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Is-Hydro-Output-Connected-To-Dwelling-Meter"></a>Is-Hydro-Output-Connected-To-Dwelling-Meter
@@ -6560,12 +6560,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts"></a>SAP-Building-Parts
 
@@ -6576,7 +6576,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part"></a>SAP-Building-Part
@@ -6588,7 +6588,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Parts`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts)
 - Child elements: [`Building-Part-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Building-Part-Number) [`Identifier`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Identifier) [`Construction-Year`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Construction-Year) [`Construction-Age-Band`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Construction-Age-Band) [`SAP-Openings`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings) [`SAP-Roofs`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs) [`SAP-Floor-Dimensions`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions) [`SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges) [`SAP-Walls`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Building-Part-Number"></a>Building-Part-Number
@@ -6600,7 +6600,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Identifier"></a>Identifier
@@ -6612,7 +6612,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Construction-Year"></a>Construction-Year
@@ -6624,7 +6624,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Construction-Age-Band"></a>Construction-Age-Band
@@ -6636,20 +6636,20 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **A** - *England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919*
-    - **B** - *England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929*
-    - **C** - *England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949*
-    - **D** - *England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973*
-    - **E** - *England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977*
-    - **F** - *England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985*
-    - **G** - *England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991*
-    - **H** - *England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999*
-    - **I** - *England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006*
-    - **J** - *England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable*
-    - **K** - *England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013*
-    - **L** - *England and Wales: 2012 onwards; Scotland: 2012 onwards; Northern Ireland: 2014 onwards*
+    - **"A"** - *England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919*
+    - **"B"** - *England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929*
+    - **"C"** - *England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949*
+    - **"D"** - *England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973*
+    - **"E"** - *England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977*
+    - **"F"** - *England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985*
+    - **"G"** - *England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991*
+    - **"H"** - *England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999*
+    - **"I"** - *England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006*
+    - **"J"** - *England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable*
+    - **"K"** - *England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013*
+    - **"L"** - *England and Wales: 2012 onwards; Scotland: 2012 onwards; Northern Ireland: 2014 onwards*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings"></a>SAP-Openings
 
@@ -6660,7 +6660,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening"></a>SAP-Opening
@@ -6672,7 +6672,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Openings`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings)
 - Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Name) [`Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Type) [`Location`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Location) [`Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Orientation) [`Width`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Width) [`Height`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Height) [`Pitch`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Pitch)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Name"></a>Name
@@ -6684,7 +6684,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Type"></a>Type
@@ -6696,7 +6696,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Location"></a>Location
@@ -6708,7 +6708,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Orientation"></a>Orientation
@@ -6720,18 +6720,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *unknown or unspecified*
-    - **1** - *North*
-    - **2** - *North East*
-    - **3** - *East*
-    - **4** - *South East*
-    - **5** - *South*
-    - **6** - *South West*
-    - **7** - *West*
-    - **8** - *North West*
-    - **9** - *Horizontal (windows and roof windows only)*
+    - **"0"** - *unknown or unspecified*
+    - **"1"** - *North*
+    - **"2"** - *North East*
+    - **"3"** - *East*
+    - **"4"** - *South East*
+    - **"5"** - *South*
+    - **"6"** - *South West*
+    - **"7"** - *West*
+    - **"8"** - *North West*
+    - **"9"** - *Horizontal (windows and roof windows only)*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Width"></a>Width
 
@@ -6742,7 +6742,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Height"></a>Height
@@ -6754,7 +6754,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Pitch"></a>Pitch
@@ -6766,7 +6766,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs"></a>SAP-Roofs
@@ -6778,7 +6778,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof"></a>SAP-Roof
@@ -6790,7 +6790,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Roofs`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs)
 - Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Name) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Description) [`Roof-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Roof-Type) [`Total-Roof-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Total-Roof-Area) [`U-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/U-Value) [`Kappa-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Kappa-Value)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Name"></a>Name
@@ -6802,7 +6802,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Description"></a>Description
@@ -6814,7 +6814,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Roof-Type"></a>Roof-Type
@@ -6826,10 +6826,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **2** - *exposed roof*
-    - **4** - *party ceiling*
+    - **"2"** - *exposed roof*
+    - **"4"** - *party ceiling*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Total-Roof-Area"></a>Total-Roof-Area
 
@@ -6840,7 +6840,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/U-Value"></a>U-Value
@@ -6852,7 +6852,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Kappa-Value"></a>Kappa-Value
@@ -6864,7 +6864,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions"></a>SAP-Floor-Dimensions
@@ -6876,7 +6876,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension"></a>SAP-Floor-Dimension
@@ -6888,7 +6888,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimensions`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions)
 - Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Name) [`Storey`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Storey) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Description) [`Floor-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Floor-Type) [`Total-Floor-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Total-Floor-Area) [`Storey-Height`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Storey-Height) [`Heat-Loss-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Heat-Loss-Area) [`U-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/U-Value) [`Kappa-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Kappa-Value) [`Kappa-Value-From-Below`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Kappa-Value-From-Below)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Name"></a>Name
@@ -6900,7 +6900,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Storey"></a>Storey
@@ -6912,17 +6912,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **-1** - *Lower ground*
-    - **0** - *Ground*
-    - **1** - *1st*
-    - **2** - *2nd*
-    - **3** - *3rd*
-    - **4** - *4th*
-    - **5** - *5th*
-    - **6** - *6th*
-    - **99** - *Roof rooms*
+    - **"-1"** - *Lower ground*
+    - **"0"** - *Ground*
+    - **"1"** - *1st*
+    - **"2"** - *2nd*
+    - **"3"** - *3rd*
+    - **"4"** - *4th*
+    - **"5"** - *5th*
+    - **"6"** - *6th*
+    - **"99"** - *Roof rooms*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Description"></a>Description
 
@@ -6933,7 +6933,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Floor-Type"></a>Floor-Type
@@ -6945,12 +6945,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *basement floor*
-    - **2** - *ground floor*
-    - **3** - *upper floor (if heat loss area > 0, this area is an exposed floor)*
-    - **4** - *party floor*
+    - **"1"** - *basement floor*
+    - **"2"** - *ground floor*
+    - **"3"** - *upper floor (if heat loss area > 0, this area is an exposed floor)*
+    - **"4"** - *party floor*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Total-Floor-Area"></a>Total-Floor-Area
 
@@ -6961,7 +6961,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Storey-Height"></a>Storey-Height
@@ -6973,7 +6973,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Heat-Loss-Area"></a>Heat-Loss-Area
@@ -6985,7 +6985,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/U-Value"></a>U-Value
@@ -6997,7 +6997,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Kappa-Value"></a>Kappa-Value
@@ -7009,7 +7009,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Kappa-Value-From-Below"></a>Kappa-Value-From-Below
@@ -7021,7 +7021,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges"></a>SAP-Thermal-Bridges
@@ -7033,7 +7033,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: [`Thermal-Bridge-Code`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/Thermal-Bridge-Code) [`User-Defined-Y-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/User-Defined-Y-Value) [`Calculation-Reference`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/Calculation-Reference) [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/Thermal-Bridge-Code"></a>Thermal-Bridge-Code
@@ -7045,13 +7045,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *default*
-    - **2** - *2002 regulations. For backwards compatibility only, do not use.*
-    - **3** - *accredited. For backwards compatibility only, do not use.*
-    - **4** - *user defined (global y-value)*
-    - **5** - *user defined (individual values)*
+    - **"1"** - *default*
+    - **"2"** - *2002 regulations. For backwards compatibility only, do not use.*
+    - **"3"** - *accredited. For backwards compatibility only, do not use.*
+    - **"4"** - *user defined (global y-value)*
+    - **"5"** - *user defined (individual values)*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/User-Defined-Y-Value"></a>User-Defined-Y-Value
 
@@ -7062,7 +7062,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/Calculation-Reference"></a>Calculation-Reference
@@ -7074,7 +7074,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge"></a>SAP-Thermal-Bridge
@@ -7086,7 +7086,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
 - Child elements: [`Thermal-Bridge-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Thermal-Bridge-Type) [`Length`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Length) [`Psi-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value) [`Psi-Value-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Source) [`Psi-Value-Calculation-Reference`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Calculation-Reference)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Thermal-Bridge-Type"></a>Thermal-Bridge-Type
@@ -7098,55 +7098,55 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **ND** - *not defined (for backward compatibility only, do not use)*
-    - **E1** - *Steel lintel with perforated steel base plate*
-    - **E2** - *Other lintels (including other steel lintels)*
-    - **E3** - *Sill*
-    - **E4** - *Jamb*
-    - **E5** - *Ground floor (normal)*
-    - **E6** - *Intermediate floor within a dwelling*
-    - **E7** - *Party floor between dwellings (in blocks of flats)*
-    - **E8** - *Balcony within a dwelling, wall insulation continuous*
-    - **E9** - *Balcony between dwellings, wall insulation continuous*
-    - **E10** - *Eaves (insulation at ceiling level)*
-    - **E11** - *Eaves (insulation at rafter level)*
-    - **E12** - *Gable (insulation at ceiling level)*
-    - **E13** - *Gable (insulation at rafter level)*
-    - **E14** - *Flat roof*
-    - **E15** - *Flat roof with parapet*
-    - **E16** - *Corner (normal)*
-    - **E17** - *Corner (inverted - internal area greater than external area)*
-    - **E18** - *Party wall between dwellings*
-    - **E19** - *Ground floor (inverted)*
-    - **E20** - *Exposed floor (normal)*
-    - **E21** - *Exposed floor (inverted)*
-    - **E22** - *Basement floor*
-    - **E23** - *Balcony within or between dwellings, balcony support penetrates wall insulation*
-    - **E24** - *Eaves (insulation at ceiling level - inverted)*
-    - **E25** - *Staggered party wall between dwellings*
-    - **P1** - *Ground floor*
-    - **P2** - *Intermediate floor within a dwelling*
-    - **P3** - *Intermediate floor between dwellings (in blocks of flats)*
-    - **P4** - *Roof (insulation at ceiling level)*
-    - **P5** - *Roof (insulation at rafter level)*
-    - **P6** - *Ground floor (inverted)*
-    - **P7** - *Exposed floor (normal)*
-    - **P8** - *Exposed floor (inverted)*
-    - **R1** - *Head of roof window*
-    - **R2** - *Sill of roof window*
-    - **R3** - *Jamb of roof window*
-    - **R4** - *Ridge (vaulted ceiling)*
-    - **R5** - *Ridge (inverted)*
-    - **R6** - *Flat ceiling*
-    - **R7** - *Flat ceiling (inverted)*
-    - **R8** - *Roof to wall (rafter)*
-    - **R9** - *Roof to wall (flat ceiling)*
-    - **R10** - *All other roof or room-in-roof junctions*
-    - **R11** - *Upstands or kerbs of rooflights*
-    - **O1** - *other type 1*
-    - **O2** - *other type 2*
+    - **"ND"** - *not defined (for backward compatibility only, do not use)*
+    - **"E1"** - *Steel lintel with perforated steel base plate*
+    - **"E2"** - *Other lintels (including other steel lintels)*
+    - **"E3"** - *Sill*
+    - **"E4"** - *Jamb*
+    - **"E5"** - *Ground floor (normal)*
+    - **"E6"** - *Intermediate floor within a dwelling*
+    - **"E7"** - *Party floor between dwellings (in blocks of flats)*
+    - **"E8"** - *Balcony within a dwelling, wall insulation continuous*
+    - **"E9"** - *Balcony between dwellings, wall insulation continuous*
+    - **"E10"** - *Eaves (insulation at ceiling level)*
+    - **"E11"** - *Eaves (insulation at rafter level)*
+    - **"E12"** - *Gable (insulation at ceiling level)*
+    - **"E13"** - *Gable (insulation at rafter level)*
+    - **"E14"** - *Flat roof*
+    - **"E15"** - *Flat roof with parapet*
+    - **"E16"** - *Corner (normal)*
+    - **"E17"** - *Corner (inverted - internal area greater than external area)*
+    - **"E18"** - *Party wall between dwellings*
+    - **"E19"** - *Ground floor (inverted)*
+    - **"E20"** - *Exposed floor (normal)*
+    - **"E21"** - *Exposed floor (inverted)*
+    - **"E22"** - *Basement floor*
+    - **"E23"** - *Balcony within or between dwellings, balcony support penetrates wall insulation*
+    - **"E24"** - *Eaves (insulation at ceiling level - inverted)*
+    - **"E25"** - *Staggered party wall between dwellings*
+    - **"P1"** - *Ground floor*
+    - **"P2"** - *Intermediate floor within a dwelling*
+    - **"P3"** - *Intermediate floor between dwellings (in blocks of flats)*
+    - **"P4"** - *Roof (insulation at ceiling level)*
+    - **"P5"** - *Roof (insulation at rafter level)*
+    - **"P6"** - *Ground floor (inverted)*
+    - **"P7"** - *Exposed floor (normal)*
+    - **"P8"** - *Exposed floor (inverted)*
+    - **"R1"** - *Head of roof window*
+    - **"R2"** - *Sill of roof window*
+    - **"R3"** - *Jamb of roof window*
+    - **"R4"** - *Ridge (vaulted ceiling)*
+    - **"R5"** - *Ridge (inverted)*
+    - **"R6"** - *Flat ceiling*
+    - **"R7"** - *Flat ceiling (inverted)*
+    - **"R8"** - *Roof to wall (rafter)*
+    - **"R9"** - *Roof to wall (flat ceiling)*
+    - **"R10"** - *All other roof or room-in-roof junctions*
+    - **"R11"** - *Upstands or kerbs of rooflights*
+    - **"O1"** - *other type 1*
+    - **"O2"** - *other type 2*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Length"></a>Length
 
@@ -7157,7 +7157,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value"></a>Psi-Value
@@ -7169,7 +7169,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Source"></a>Psi-Value-Source
@@ -7181,12 +7181,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *calculated by person with suitable expertise*
-    - **2** - *government-approved scheme*
-    - **3** - *not government-approved scheme*
-    - **4** - *SAP table default*
+    - **"1"** - *calculated by person with suitable expertise*
+    - **"2"** - *government-approved scheme*
+    - **"3"** - *not government-approved scheme*
+    - **"4"** - *SAP table default*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Calculation-Reference"></a>Psi-Value-Calculation-Reference
 
@@ -7197,7 +7197,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls"></a>SAP-Walls
@@ -7209,7 +7209,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Child elements: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall"></a>SAP-Wall
@@ -7221,7 +7221,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Walls`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls)
 - Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Name) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Description) [`Wall-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Wall-Type) [`Total-Wall-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Total-Wall-Area) [`U-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/U-Value) [`Is-Curtain-Walling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Is-Curtain-Walling) [`Kappa-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Kappa-Value)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Name"></a>Name
@@ -7233,7 +7233,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Description"></a>Description
@@ -7245,7 +7245,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Wall-Type"></a>Wall-Type
@@ -7257,13 +7257,13 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *basement wall*
-    - **2** - *exposed wall*
-    - **3** - *sheltered wall*
-    - **4** - *party wall*
-    - **5** - *internal wall*
+    - **"1"** - *basement wall*
+    - **"2"** - *exposed wall*
+    - **"3"** - *sheltered wall*
+    - **"4"** - *party wall*
+    - **"5"** - *internal wall*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Total-Wall-Area"></a>Total-Wall-Area
 
@@ -7274,7 +7274,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/U-Value"></a>U-Value
@@ -7286,7 +7286,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Is-Curtain-Walling"></a>Is-Curtain-Walling
@@ -7298,12 +7298,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Kappa-Value"></a>Kappa-Value
 
@@ -7314,7 +7314,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types"></a>SAP-Opening-Types
@@ -7326,7 +7326,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type"></a>SAP-Opening-Type
@@ -7338,7 +7338,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Types`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types)
 - Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Name) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Description) [`Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Data-Source) [`Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Type) [`Glazing-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Type) [`Glazing-Gap`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Gap) [`IsArgonFilled`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsArgonFilled) [`IsKryptonFilled`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsKryptonFilled) [`Frame-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Type) [`Solar-Transmittance`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Solar-Transmittance) [`Frame-Factor`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Factor) [`U-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/U-Value)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Name"></a>Name
@@ -7350,7 +7350,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Description"></a>Description
@@ -7362,7 +7362,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Data-Source"></a>Data-Source
@@ -7374,11 +7374,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **2** - *manufacturer declaration*
-    - **3** - *SAP table*
-    - **4** - *BFRC data*
+    - **"2"** - *manufacturer declaration*
+    - **"3"** - *SAP table*
+    - **"4"** - *BFRC data*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Type"></a>Type
 
@@ -7389,14 +7389,14 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *solid door*
-    - **2** - *semi-glazed door*
-    - **3** - *door to corridor*
-    - **4** - *window*
-    - **5** - *roof window*
-    - **6** - *rooflight*
+    - **"1"** - *solid door*
+    - **"2"** - *semi-glazed door*
+    - **"3"** - *door to corridor*
+    - **"4"** - *window*
+    - **"5"** - *roof window*
+    - **"6"** - *rooflight*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Type"></a>Glazing-Type
 
@@ -7407,21 +7407,21 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *not applicable (non-glazed door)*
-    - **2** - *single*
-    - **3** - *double*
-    - **4** - *double low-E hard 0.2*
-    - **5** - *double low-E hard 0.15*
-    - **6** - *double low-E soft 0.1*
-    - **7** - *double low-E soft 0.05*
-    - **8** - *triple*
-    - **9** - *triple low-E hard 0.2*
-    - **10** - *triple low-E hard 0.15*
-    - **11** - *triple low-E soft 0.1*
-    - **12** - *triple low-E soft 0.05*
-    - **13** - *secondary glazing*
+    - **"1"** - *not applicable (non-glazed door)*
+    - **"2"** - *single*
+    - **"3"** - *double*
+    - **"4"** - *double low-E hard 0.2*
+    - **"5"** - *double low-E hard 0.15*
+    - **"6"** - *double low-E soft 0.1*
+    - **"7"** - *double low-E soft 0.05*
+    - **"8"** - *triple*
+    - **"9"** - *triple low-E hard 0.2*
+    - **"10"** - *triple low-E hard 0.15*
+    - **"11"** - *triple low-E soft 0.1*
+    - **"12"** - *triple low-E soft 0.05*
+    - **"13"** - *secondary glazing*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Gap"></a>Glazing-Gap
 
@@ -7432,11 +7432,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *6 mm*
-    - **2** - *12 mm*
-    - **3** - *16 mm or more*
+    - **"1"** - *6 mm*
+    - **"2"** - *12 mm*
+    - **"3"** - *16 mm or more*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsArgonFilled"></a>IsArgonFilled
 
@@ -7447,12 +7447,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsKryptonFilled"></a>IsKryptonFilled
 
@@ -7463,12 +7463,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Type"></a>Frame-Type
 
@@ -7479,17 +7479,17 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *wood*
-    - **2** - *PVC*
-    - **3** - *metal no break*
-    - **4** - *metal 4 mm break*
-    - **5** - *metal 8 mm break*
-    - **6** - *metal 12 mm break*
-    - **7** - *metal 20 mm break*
-    - **8** - *metal 32 mm break*
-    - **9** - *unknown*
+    - **"1"** - *wood*
+    - **"2"** - *PVC*
+    - **"3"** - *metal no break*
+    - **"4"** - *metal 4 mm break*
+    - **"5"** - *metal 8 mm break*
+    - **"6"** - *metal 12 mm break*
+    - **"7"** - *metal 20 mm break*
+    - **"8"** - *metal 32 mm break*
+    - **"9"** - *unknown*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Solar-Transmittance"></a>Solar-Transmittance
 
@@ -7500,7 +7500,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Factor"></a>Frame-Factor
@@ -7512,7 +7512,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/U-Value"></a>U-Value
@@ -7524,7 +7524,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation"></a>SAP-Ventilation
@@ -7536,7 +7536,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`Closed-Flues-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Closed-Flues-Count) [`Open-Flues-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Open-Flues-Count) [`Boilers-Flues-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Boilers-Flues-Count) [`Other-Flues-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Other-Flues-Count) [`Open-Chimneys-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Open-Chimneys-Count) [`Blocked-Chimneys-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Blocked-Chimneys-Count) [`Fans-Vents-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Fans-Vents-Count) [`Flueless-Gas-Fires-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Flueless-Gas-Fires-Count) [`Pressure-Test`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test) [`Pressure-Test-Certificate-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test-Certificate-Number) [`Air-Permeability`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Air-Permeability) [`Ground-Floor-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Ground-Floor-Type) [`Wall-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wall-Type) [`Has-Draught-Lobby`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Has-Draught-Lobby) [`DraughtStripping`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/DraughtStripping) [`Sheltered-Sides-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Sheltered-Sides-Count) [`Ventilation-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Ventilation-Type) [`Mechanical-Ventilation-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Ventilation-Data-Source) [`Mechanical-Vent-System-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Index-Number) [`Mechanical-Vent-Commissioning-Certificate-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Commissioning-Certificate-Number) [`Mechanical-Vent-Installation-Engineer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Installation-Engineer) [`Mechanical-Vent-System-Make-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Make-Model) [`Wet-Rooms-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wet-Rooms-Count) [`Mechanical-Vent-Specific-Fan-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Specific-Fan-Power) [`Mechanical-Vent-Heat-Recovery-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Heat-Recovery-Efficiency) [`Mechanical-Vent-Duct-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Type) [`Mechanical-Vent-Duct-Insulation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation) [`Mechanical-Vent-Duct-Insulation-Level`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation-Level) [`Mechanical-Vent-Duct-Placement`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Placement) [`Mechanical-Vent-Measured-Installation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Measured-Installation) [`Kitchen-Room-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Count) [`Kitchen-Room-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Specific-Power) [`Non-Kitchen-Room-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Room-Fans-Count) [`Non-Kitchen-Room-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Room-Fans-Specific-Power) [`Kitchen-Duct-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Duct-Fans-Count) [`Kitchen-Duct-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Duct-Fans-Specific-Power) [`Non-Kitchen-Duct-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Duct-Fans-Count) [`Non-Kitchen-Duct-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Duct-Fans-Specific-Power) [`Kitchen-Wall-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Wall-Fans-Count) [`Kitchen-Wall-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Wall-Fans-Specific-Power) [`Non-Kitchen-Wall-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Wall-Fans-Count) [`Non-Kitchen-Wall-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Wall-Fans-Specific-Power) [`Extract-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Extract-Fans-Count) [`PSV-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/PSV-Count) [`Is-Mechanical-Vent-Approved-Installer-Scheme`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Is-Mechanical-Vent-Approved-Installer-Scheme) [`Mechanical-Vent-Ducts-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Ducts-Index-Number)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Closed-Flues-Count"></a>Closed-Flues-Count
@@ -7548,7 +7548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Open-Flues-Count"></a>Open-Flues-Count
@@ -7560,7 +7560,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Boilers-Flues-Count"></a>Boilers-Flues-Count
@@ -7572,7 +7572,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Other-Flues-Count"></a>Other-Flues-Count
@@ -7584,7 +7584,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Open-Chimneys-Count"></a>Open-Chimneys-Count
@@ -7596,7 +7596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Blocked-Chimneys-Count"></a>Blocked-Chimneys-Count
@@ -7608,7 +7608,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Fans-Vents-Count"></a>Fans-Vents-Count
@@ -7620,7 +7620,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Flueless-Gas-Fires-Count"></a>Flueless-Gas-Fires-Count
@@ -7632,7 +7632,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test"></a>Pressure-Test
@@ -7644,15 +7644,15 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *yes (new dwelling, value measured in this dwelling)*
-    - **2** - *yes (new dwelling, design value)*
-    - **3** - *no test, value assumed for calculation (new dwelling)*
-    - **4** - *no test, SAP algorithm used (existing dwelling)*
-    - **5** - *average for other dwellings of the same type (new dwelling)*
-    - **6** - *yes (existing dwelling)*
-    - **7** - *yes (measured value) - low-pressure pulse*
+    - **"1"** - *yes (new dwelling, value measured in this dwelling)*
+    - **"2"** - *yes (new dwelling, design value)*
+    - **"3"** - *no test, value assumed for calculation (new dwelling)*
+    - **"4"** - *no test, SAP algorithm used (existing dwelling)*
+    - **"5"** - *average for other dwellings of the same type (new dwelling)*
+    - **"6"** - *yes (existing dwelling)*
+    - **"7"** - *yes (measured value) - low-pressure pulse*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test-Certificate-Number"></a>Pressure-Test-Certificate-Number
 
@@ -7663,7 +7663,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Air-Permeability"></a>Air-Permeability
@@ -7675,7 +7675,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Ground-Floor-Type"></a>Ground-Floor-Type
@@ -7687,11 +7687,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *not suspended timber*
-    - **2** - *suspended timber, sealed*
-    - **3** - *suspended timber, unsealed*
+    - **"1"** - *not suspended timber*
+    - **"2"** - *suspended timber, sealed*
+    - **"3"** - *suspended timber, unsealed*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wall-Type"></a>Wall-Type
 
@@ -7702,10 +7702,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *steel or timber frame*
-    - **2** - *other*
+    - **"1"** - *steel or timber frame*
+    - **"2"** - *other*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Has-Draught-Lobby"></a>Has-Draught-Lobby
 
@@ -7716,12 +7716,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/DraughtStripping"></a>DraughtStripping
 
@@ -7732,7 +7732,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Sheltered-Sides-Count"></a>Sheltered-Sides-Count
@@ -7744,7 +7744,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Ventilation-Type"></a>Ventilation-Type
@@ -7756,18 +7756,18 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *natural with intermittent extract fans*
-    - **2** - *natural with passive vents*
-    - **3** - *positive input from loft*
-    - **4** - *positive input from outside*
-    - **5** - *mechanical extract, centralised (MEV c)*
-    - **6** - *mechanical extract, decentralised (MEV dc)*
-    - **7** - *balanced without heat recovery (MV)*
-    - **8** - *balanced with heat recovery (MVHR)*
-    - **9** - *natural with intermittent extract fans and/or passive vents. For backwards compatibility only, do not use.*
-    - **10** - *natural with intermittent extract fans and passive vents*
+    - **"1"** - *natural with intermittent extract fans*
+    - **"2"** - *natural with passive vents*
+    - **"3"** - *positive input from loft*
+    - **"4"** - *positive input from outside*
+    - **"5"** - *mechanical extract, centralised (MEV c)*
+    - **"6"** - *mechanical extract, decentralised (MEV dc)*
+    - **"7"** - *balanced without heat recovery (MV)*
+    - **"8"** - *balanced with heat recovery (MVHR)*
+    - **"9"** - *natural with intermittent extract fans and/or passive vents. For backwards compatibility only, do not use.*
+    - **"10"** - *natural with intermittent extract fans and passive vents*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Ventilation-Data-Source"></a>Mechanical-Ventilation-Data-Source
 
@@ -7778,11 +7778,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *from database*
-    - **2** - *from manufacturer declaration*
-    - **3** - *from SAP table*
+    - **"1"** - *from database*
+    - **"2"** - *from manufacturer declaration*
+    - **"3"** - *from SAP table*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Index-Number"></a>Mechanical-Vent-System-Index-Number
 
@@ -7793,7 +7793,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Commissioning-Certificate-Number"></a>Mechanical-Vent-Commissioning-Certificate-Number
@@ -7805,7 +7805,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Installation-Engineer"></a>Mechanical-Vent-Installation-Engineer
@@ -7817,7 +7817,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Make-Model"></a>Mechanical-Vent-System-Make-Model
@@ -7829,7 +7829,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wet-Rooms-Count"></a>Wet-Rooms-Count
@@ -7841,7 +7841,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Specific-Fan-Power"></a>Mechanical-Vent-Specific-Fan-Power
@@ -7853,7 +7853,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Heat-Recovery-Efficiency"></a>Mechanical-Vent-Heat-Recovery-Efficiency
@@ -7865,7 +7865,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Type"></a>Mechanical-Vent-Duct-Type
@@ -7877,11 +7877,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *flexible*
-    - **2** - *rigid*
-    - **3** - *semi-rigid*
+    - **"1"** - *flexible*
+    - **"2"** - *rigid*
+    - **"3"** - *semi-rigid*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation"></a>Mechanical-Vent-Duct-Insulation
 
@@ -7892,10 +7892,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *not insulated*
-    - **2** - *insulated*
+    - **"1"** - *not insulated*
+    - **"2"** - *insulated*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation-Level"></a>Mechanical-Vent-Duct-Insulation-Level
 
@@ -7906,10 +7906,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *level 1*
-    - **2** - *level 2*
+    - **"1"** - *level 1*
+    - **"2"** - *level 2*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Placement"></a>Mechanical-Vent-Duct-Placement
 
@@ -7920,10 +7920,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *inside heated envelope*
-    - **2** - *outside heated envelope*
+    - **"1"** - *inside heated envelope*
+    - **"2"** - *outside heated envelope*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Measured-Installation"></a>Mechanical-Vent-Measured-Installation
 
@@ -7934,12 +7934,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Count"></a>Kitchen-Room-Fans-Count
 
@@ -7950,7 +7950,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Specific-Power"></a>Kitchen-Room-Fans-Specific-Power
@@ -7962,7 +7962,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Room-Fans-Count"></a>Non-Kitchen-Room-Fans-Count
@@ -7974,7 +7974,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Room-Fans-Specific-Power"></a>Non-Kitchen-Room-Fans-Specific-Power
@@ -7986,7 +7986,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Duct-Fans-Count"></a>Kitchen-Duct-Fans-Count
@@ -7998,7 +7998,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Duct-Fans-Specific-Power"></a>Kitchen-Duct-Fans-Specific-Power
@@ -8010,7 +8010,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Duct-Fans-Count"></a>Non-Kitchen-Duct-Fans-Count
@@ -8022,7 +8022,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Duct-Fans-Specific-Power"></a>Non-Kitchen-Duct-Fans-Specific-Power
@@ -8034,7 +8034,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Wall-Fans-Count"></a>Kitchen-Wall-Fans-Count
@@ -8046,7 +8046,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Wall-Fans-Specific-Power"></a>Kitchen-Wall-Fans-Specific-Power
@@ -8058,7 +8058,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Wall-Fans-Count"></a>Non-Kitchen-Wall-Fans-Count
@@ -8070,7 +8070,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Wall-Fans-Specific-Power"></a>Non-Kitchen-Wall-Fans-Specific-Power
@@ -8082,7 +8082,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Extract-Fans-Count"></a>Extract-Fans-Count
@@ -8094,7 +8094,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/PSV-Count"></a>PSV-Count
@@ -8106,7 +8106,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Is-Mechanical-Vent-Approved-Installer-Scheme"></a>Is-Mechanical-Vent-Approved-Installer-Scheme
@@ -8118,12 +8118,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Ducts-Index-Number"></a>Mechanical-Vent-Ducts-Index-Number
 
@@ -8134,7 +8134,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting"></a>SAP-Lighting
@@ -8146,7 +8146,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`Fixed-Lights`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights"></a>Fixed-Lights
@@ -8158,7 +8158,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Lighting`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting)
 - Child elements: [`Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light"></a>Fixed-Light
@@ -8170,7 +8170,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Fixed-Lights`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights)
 - Child elements: [`Lighting-Efficacy`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Efficacy) [`Lighting-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Power) [`Lighting-Outlets`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Outlets)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Efficacy"></a>Lighting-Efficacy
@@ -8182,7 +8182,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Power"></a>Lighting-Power
@@ -8194,7 +8194,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Outlets"></a>Lighting-Outlets
@@ -8206,7 +8206,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements"></a>SAP-Deselected-Improvements
@@ -8218,7 +8218,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`Deselected-Improvement-Measure`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements/Deselected-Improvement-Measure)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements/Deselected-Improvement-Measure"></a>Deselected-Improvement-Measure
@@ -8230,45 +8230,45 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Deselected-Improvements`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **A** - *Loft insulation*
-    - **A2** - *Flat roof insulation*
-    - **A3** - *Room-in-roof insulation*
-    - **B** - *Cavity wall insulation*
-    - **C** - *Hot water cylinder insulation*
-    - **D** - *Draughtproofing*
-    - **E** - *Low energy lights*
-    - **F** - *Cylinder thermostat*
-    - **G** - *Heating controls for wet central heating system*
-    - **H** - *Heating controls for warm air system*
-    - **I** - *Upgrade boiler, same fuel*
-    - **J** - *Biomass boiler*
-    - **J2** - *Biomass boiler as alternative improvement*
-    - **K** - *Biomass room heater with boiler*
-    - **L** - *New or replacement fan-assisted storage heaters*
-    - **L2** - *New or replacement high heat retention storage heaters*
-    - **M** - *Replacement warm-air unit*
-    - **N** - *Solar water heating*
-    - **O** - *Replacement double glazed windows*
-    - **O3** - *Replacement double glazing units*
-    - **P** - *Secondary glazing*
-    - **Q** - *Solid wall insulation*
-    - **Q2** - *External insulation with cavity wall insulation*
-    - **R** - *Condensing oil boiler*
-    - **S** - *Change heating to Band A gas condensing boiler (no fuel switch)*
-    - **T** - *Change heating to Band A gas condensing boiler (fuel switch)*
-    - **T2** - *Flue gas heat recovery*
-    - **U** - *Photovoltaics*
-    - **V** - *Wind turbine (roof mounted)*
-    - **V2** - *Wind turbine (on mast)*
-    - **W** - *Floor insulation*
-    - **X** - *Insulated doors*
-    - **Y** - *Instantaneous waste water heat recovery*
-    - **Y2** - *Storage waste water heat recovery*
-    - **Z1** - *Air or ground source heat pump*
-    - **Z2** - *Air or ground source heat pump with underfloor heating*
-    - **Z3** - *Micro-CHP*
+    - **"A"** - *Loft insulation*
+    - **"A2"** - *Flat roof insulation*
+    - **"A3"** - *Room-in-roof insulation*
+    - **"B"** - *Cavity wall insulation*
+    - **"C"** - *Hot water cylinder insulation*
+    - **"D"** - *Draughtproofing*
+    - **"E"** - *Low energy lights*
+    - **"F"** - *Cylinder thermostat*
+    - **"G"** - *Heating controls for wet central heating system*
+    - **"H"** - *Heating controls for warm air system*
+    - **"I"** - *Upgrade boiler, same fuel*
+    - **"J"** - *Biomass boiler*
+    - **"J2"** - *Biomass boiler as alternative improvement*
+    - **"K"** - *Biomass room heater with boiler*
+    - **"L"** - *New or replacement fan-assisted storage heaters*
+    - **"L2"** - *New or replacement high heat retention storage heaters*
+    - **"M"** - *Replacement warm-air unit*
+    - **"N"** - *Solar water heating*
+    - **"O"** - *Replacement double glazed windows*
+    - **"O3"** - *Replacement double glazing units*
+    - **"P"** - *Secondary glazing*
+    - **"Q"** - *Solid wall insulation*
+    - **"Q2"** - *External insulation with cavity wall insulation*
+    - **"R"** - *Condensing oil boiler*
+    - **"S"** - *Change heating to Band A gas condensing boiler (no fuel switch)*
+    - **"T"** - *Change heating to Band A gas condensing boiler (fuel switch)*
+    - **"T2"** - *Flue gas heat recovery*
+    - **"U"** - *Photovoltaics*
+    - **"V"** - *Wind turbine (roof mounted)*
+    - **"V2"** - *Wind turbine (on mast)*
+    - **"W"** - *Floor insulation*
+    - **"X"** - *Insulated doors*
+    - **"Y"** - *Instantaneous waste water heat recovery*
+    - **"Y2"** - *Storage waste water heat recovery*
+    - **"Z1"** - *Air or ground source heat pump*
+    - **"Z2"** - *Air or ground source heat pump with underfloor heating*
+    - **"Z3"** - *Micro-CHP*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details"></a>SAP-Flat-Details
 
@@ -8279,7 +8279,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`Level`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Level) [`Storeys`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Storeys)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Level"></a>Level
@@ -8291,12 +8291,12 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Flat-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **0** - *basement*
-    - **1** - *ground floor*
-    - **2** - *mid floor*
-    - **3** - *top floor*
+    - **"0"** - *basement*
+    - **"1"** - *ground floor*
+    - **"2"** - *mid floor*
+    - **"3"** - *top floor*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Storeys"></a>Storeys
 
@@ -8307,7 +8307,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Flat-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'int'>*
+- Data type: *<class 'int'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features"></a>SAP-Special-Features
@@ -8319,7 +8319,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`SAP-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature"></a>SAP-Special-Feature
@@ -8331,7 +8331,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Special-Features`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features)
 - Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Description) [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature) [`Emissions-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Description"></a>Description
@@ -8343,7 +8343,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature"></a>Energy-Feature
@@ -8355,7 +8355,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature)
 - Child elements: [`Energy-Saved-Or-Generated`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Saved-Or-Generated) [`Saved-Or-Generated-Fuel`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Saved-Or-Generated-Fuel) [`Energy-Used`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used) [`Energy-Used-Fuel`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used-Fuel) [`Air-Change-Rates`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Saved-Or-Generated"></a>Energy-Saved-Or-Generated
@@ -8367,7 +8367,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Saved-Or-Generated-Fuel"></a>Saved-Or-Generated-Fuel
@@ -8379,51 +8379,51 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*
-    - **2** - *Gas: bulk LPG*
-    - **3** - *Gas: bottled LPG*
-    - **4** - *Oil: heating oil*
-    - **7** - *Gas: biogas*
-    - **8** - *LNG*
-    - **9** - *LPG subject to Special Condition 18*
-    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
-    - **11** - *Solid fuel: house coal*
-    - **12** - *Solid fuel: manufactured smokeless fuel*
-    - **15** - *Solid fuel: anthracite*
-    - **20** - *Solid fuel: wood logs*
-    - **21** - *Solid fuel: wood chips*
-    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
-    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
-    - **36** - *Electricity: electricity sold to grid*
-    - **37** - *Electricity: electricity displaced from grid*
-    - **39** - *Electricity: electricity, unspecified tariff*
-    - **41** - *Community heating schemes: heat from electric heat pump*
-    - **42** - *Community heating schemes: heat from boilers - waste combustion*
-    - **43** - *Community heating schemes: heat from boilers - biomass*
-    - **44** - *Community heating schemes: heat from boilers - biogas*
-    - **45** - *Community heating schemes: waste heat from power stations*
-    - **46** - *Community heating schemes: geothermal heat source*
-    - **47** - *Community heating schemes: high grade heat recovered from process*
-    - **48** - *Community heating schemes: heat from CHP*
-    - **49** - *Community heating schemes: low grade heat recovered from process*
-    - **50** - *Community heating schemes: electricity for pumping in distribution network*
-    - **51** - *Community heating schemes: heat from mains gas*
-    - **52** - *Community heating schemes: heat from LPG*
-    - **53** - *Community heating schemes: heat from oil*
-    - **54** - *Community heating schemes: heat from coal*
-    - **55** - *Community heating schemes: heat from B30D*
-    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
-    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
-    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
-    - **71** - *biodiesel from any biomass source*
-    - **72** - *biodiesel from used cooking oil only*
-    - **73** - *biodiesel from vegetable oil only*
-    - **74** - *appliances able to use mineral oil or liquid biofuel*
-    - **75** - *B30K*
-    - **76** - *bioethanol from any biomass source*
-    - **99** - *Fuel data from pcdb*
+    - **"1"** - *Gas: mains gas*
+    - **"2"** - *Gas: bulk LPG*
+    - **"3"** - *Gas: bottled LPG*
+    - **"4"** - *Oil: heating oil*
+    - **"7"** - *Gas: biogas*
+    - **"8"** - *LNG*
+    - **"9"** - *LPG subject to Special Condition 18*
+    - **"10"** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **"11"** - *Solid fuel: house coal*
+    - **"12"** - *Solid fuel: manufactured smokeless fuel*
+    - **"15"** - *Solid fuel: anthracite*
+    - **"20"** - *Solid fuel: wood logs*
+    - **"21"** - *Solid fuel: wood chips*
+    - **"22"** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **"23"** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **"36"** - *Electricity: electricity sold to grid*
+    - **"37"** - *Electricity: electricity displaced from grid*
+    - **"39"** - *Electricity: electricity, unspecified tariff*
+    - **"41"** - *Community heating schemes: heat from electric heat pump*
+    - **"42"** - *Community heating schemes: heat from boilers - waste combustion*
+    - **"43"** - *Community heating schemes: heat from boilers - biomass*
+    - **"44"** - *Community heating schemes: heat from boilers - biogas*
+    - **"45"** - *Community heating schemes: waste heat from power stations*
+    - **"46"** - *Community heating schemes: geothermal heat source*
+    - **"47"** - *Community heating schemes: high grade heat recovered from process*
+    - **"48"** - *Community heating schemes: heat from CHP*
+    - **"49"** - *Community heating schemes: low grade heat recovered from process*
+    - **"50"** - *Community heating schemes: electricity for pumping in distribution network*
+    - **"51"** - *Community heating schemes: heat from mains gas*
+    - **"52"** - *Community heating schemes: heat from LPG*
+    - **"53"** - *Community heating schemes: heat from oil*
+    - **"54"** - *Community heating schemes: heat from coal*
+    - **"55"** - *Community heating schemes: heat from B30D*
+    - **"56"** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **"57"** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **"58"** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **"71"** - *biodiesel from any biomass source*
+    - **"72"** - *biodiesel from used cooking oil only*
+    - **"73"** - *biodiesel from vegetable oil only*
+    - **"74"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"75"** - *B30K*
+    - **"76"** - *bioethanol from any biomass source*
+    - **"99"** - *Fuel data from pcdb*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used"></a>Energy-Used
 
@@ -8434,7 +8434,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used-Fuel"></a>Energy-Used-Fuel
@@ -8446,51 +8446,51 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *Gas: mains gas*
-    - **2** - *Gas: bulk LPG*
-    - **3** - *Gas: bottled LPG*
-    - **4** - *Oil: heating oil*
-    - **7** - *Gas: biogas*
-    - **8** - *LNG*
-    - **9** - *LPG subject to Special Condition 18*
-    - **10** - *Solid fuel: dual fuel appliance (mineral and wood)*
-    - **11** - *Solid fuel: house coal*
-    - **12** - *Solid fuel: manufactured smokeless fuel*
-    - **15** - *Solid fuel: anthracite*
-    - **20** - *Solid fuel: wood logs*
-    - **21** - *Solid fuel: wood chips*
-    - **22** - *Solid fuel: wood pellets (in bags, for secondary heating)*
-    - **23** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
-    - **36** - *Electricity: electricity sold to grid*
-    - **37** - *Electricity: electricity displaced from grid*
-    - **39** - *Electricity: electricity, unspecified tariff*
-    - **41** - *Community heating schemes: heat from electric heat pump*
-    - **42** - *Community heating schemes: heat from boilers - waste combustion*
-    - **43** - *Community heating schemes: heat from boilers - biomass*
-    - **44** - *Community heating schemes: heat from boilers - biogas*
-    - **45** - *Community heating schemes: waste heat from power stations*
-    - **46** - *Community heating schemes: geothermal heat source*
-    - **47** - *Community heating schemes: high grade heat recovered from process*
-    - **48** - *Community heating schemes: heat from CHP*
-    - **49** - *Community heating schemes: low grade heat recovered from process*
-    - **50** - *Community heating schemes: electricity for pumping in distribution network*
-    - **51** - *Community heating schemes: heat from mains gas*
-    - **52** - *Community heating schemes: heat from LPG*
-    - **53** - *Community heating schemes: heat from oil*
-    - **54** - *Community heating schemes: heat from coal*
-    - **55** - *Community heating schemes: heat from B30D*
-    - **56** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
-    - **57** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
-    - **58** - *Community heating schemes: biodiesel from vegetable oil only*
-    - **71** - *biodiesel from any biomass source*
-    - **72** - *biodiesel from used cooking oil only*
-    - **73** - *biodiesel from vegetable oil only*
-    - **74** - *appliances able to use mineral oil or liquid biofuel*
-    - **75** - *B30K*
-    - **76** - *bioethanol from any biomass source*
-    - **99** - *Fuel data from pcdb*
+    - **"1"** - *Gas: mains gas*
+    - **"2"** - *Gas: bulk LPG*
+    - **"3"** - *Gas: bottled LPG*
+    - **"4"** - *Oil: heating oil*
+    - **"7"** - *Gas: biogas*
+    - **"8"** - *LNG*
+    - **"9"** - *LPG subject to Special Condition 18*
+    - **"10"** - *Solid fuel: dual fuel appliance (mineral and wood)*
+    - **"11"** - *Solid fuel: house coal*
+    - **"12"** - *Solid fuel: manufactured smokeless fuel*
+    - **"15"** - *Solid fuel: anthracite*
+    - **"20"** - *Solid fuel: wood logs*
+    - **"21"** - *Solid fuel: wood chips*
+    - **"22"** - *Solid fuel: wood pellets (in bags, for secondary heating)*
+    - **"23"** - *Solid fuel: wood pellets (bulk supply in bags, for main heating)*
+    - **"36"** - *Electricity: electricity sold to grid*
+    - **"37"** - *Electricity: electricity displaced from grid*
+    - **"39"** - *Electricity: electricity, unspecified tariff*
+    - **"41"** - *Community heating schemes: heat from electric heat pump*
+    - **"42"** - *Community heating schemes: heat from boilers - waste combustion*
+    - **"43"** - *Community heating schemes: heat from boilers - biomass*
+    - **"44"** - *Community heating schemes: heat from boilers - biogas*
+    - **"45"** - *Community heating schemes: waste heat from power stations*
+    - **"46"** - *Community heating schemes: geothermal heat source*
+    - **"47"** - *Community heating schemes: high grade heat recovered from process*
+    - **"48"** - *Community heating schemes: heat from CHP*
+    - **"49"** - *Community heating schemes: low grade heat recovered from process*
+    - **"50"** - *Community heating schemes: electricity for pumping in distribution network*
+    - **"51"** - *Community heating schemes: heat from mains gas*
+    - **"52"** - *Community heating schemes: heat from LPG*
+    - **"53"** - *Community heating schemes: heat from oil*
+    - **"54"** - *Community heating schemes: heat from coal*
+    - **"55"** - *Community heating schemes: heat from B30D*
+    - **"56"** - *Community heating schemes: heat from boilers that can use mineral oil or biodiesel*
+    - **"57"** - *Community heating schemes: heat from boilers using biodiesel from any biomass source*
+    - **"58"** - *Community heating schemes: biodiesel from vegetable oil only*
+    - **"71"** - *biodiesel from any biomass source*
+    - **"72"** - *biodiesel from used cooking oil only*
+    - **"73"** - *biodiesel from vegetable oil only*
+    - **"74"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"75"** - *B30K*
+    - **"76"** - *bioethanol from any biomass source*
+    - **"99"** - *Fuel data from pcdb*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates"></a>Air-Change-Rates
 
@@ -8501,7 +8501,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Child elements: [`Air-Change-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate"></a>Air-Change-Rate
@@ -8513,7 +8513,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Air-Change-Rates`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates)
 - Child elements: [`Air-Change-Rate-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Month) [`Air-Change-Rate-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Value)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Month"></a>Air-Change-Rate-Month
@@ -8525,20 +8525,20 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Air-Change-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **Jan** - **
-    - **Feb** - **
-    - **Mar** - **
-    - **Apr** - **
-    - **May** - **
-    - **Jun** - **
-    - **Jul** - **
-    - **Aug** - **
-    - **Sep** - **
-    - **Oct** - **
-    - **Nov** - **
-    - **Dec** - **
+    - **"Jan"** - **
+    - **"Feb"** - **
+    - **"Mar"** - **
+    - **"Apr"** - **
+    - **"May"** - **
+    - **"Jun"** - **
+    - **"Jul"** - **
+    - **"Aug"** - **
+    - **"Sep"** - **
+    - **"Oct"** - **
+    - **"Nov"** - **
+    - **"Dec"** - **
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Value"></a>Air-Change-Rate-Value
 
@@ -8549,7 +8549,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Air-Change-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature"></a>Emissions-Feature
@@ -8561,7 +8561,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature)
 - Child elements: [`Emissions-Saved`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature/Emissions-Saved) [`Emissions-Created`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature/Emissions-Created)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature/Emissions-Saved"></a>Emissions-Saved
@@ -8573,7 +8573,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Emissions-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature/Emissions-Created"></a>Emissions-Created
@@ -8585,7 +8585,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Emissions-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Design-Water-Use"></a>Design-Water-Use
@@ -8597,9 +8597,9 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *<= 125 litres per person per day*
+    - **"1"** - *<= 125 litres per person per day*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling"></a>SAP-Cooling
 
@@ -8610,7 +8610,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Child elements: [`Cooled-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooled-Area) [`Cooling-System-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Data-Source) [`Cooling-System-Class`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Class) [`System-Energy-Efficiency-Ratio`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/System-Energy-Efficiency-Ratio)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooled-Area"></a>Cooled-Area
@@ -8622,7 +8622,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Data-Source"></a>Cooling-System-Data-Source
@@ -8634,11 +8634,11 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **1** - *from database*
-    - **2** - *from manufacturer declaration*
-    - **3** - *from SAP table*
+    - **"1"** - *from database*
+    - **"2"** - *from manufacturer declaration*
+    - **"3"** - *from SAP table*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Class"></a>Cooling-System-Class
 
@@ -8649,20 +8649,20 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes:
-    - **A+++** - **
-    - **A++** - **
-    - **A+** - **
-    - **A** - **
-    - **B** - **
-    - **C** - **
-    - **D** - **
-    - **E** - **
-    - **F** - **
-    - **G** - **
-    - **ND** - **
-    - **Unknown** - **
+    - **"A+++"** - **
+    - **"A++"** - **
+    - **"A+"** - **
+    - **"A"** - **
+    - **"B"** - **
+    - **"C"** - **
+    - **"D"** - **
+    - **"E"** - **
+    - **"F"** - **
+    - **"G"** - **
+    - **"ND"** - **
+    - **"Unknown"** - **
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/System-Energy-Efficiency-Ratio"></a>System-Energy-Efficiency-Ratio
 
@@ -8673,7 +8673,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/PDF"></a>PDF
@@ -8685,7 +8685,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<function b64encode at 0x000001E3C4F7C5E0>*
+- Data type: *<function b64encode at 0x000001CFF51FD5E0>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details"></a>Insurance-Details
@@ -8697,7 +8697,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: [`Insurer`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/Insurer) [`Policy-No`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/Policy-No) [`Effective-Date`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/Effective-Date) [`Expiry-Date`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/Expiry-Date) [`PI-Limit`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/PI-Limit)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/Insurer"></a>Insurer
@@ -8709,7 +8709,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/Policy-No"></a>Policy-No
@@ -8721,7 +8721,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/Effective-Date"></a>Effective-Date
@@ -8733,7 +8733,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/Expiry-Date"></a>Expiry-Date
@@ -8745,7 +8745,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/PI-Limit"></a>PI-Limit
@@ -8757,7 +8757,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'float'>*
+- Data type: *<class 'float'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/SAP-Report/ExternalDefinitions-Revision-Number"></a>ExternalDefinitions-Revision-Number
@@ -8769,7 +8769,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Client-Name"></a>Client-Name
@@ -8781,7 +8781,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Client-Company"></a>Client-Company
@@ -8793,7 +8793,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Client-Address"></a>Client-Address
@@ -8805,7 +8805,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
 - Child elements: [`Address-Line-1`](#SAP-Compliance-Report/Client-Address/Address-Line-1) [`Address-Line-2`](#SAP-Compliance-Report/Client-Address/Address-Line-2) [`Address-Line-3`](#SAP-Compliance-Report/Client-Address/Address-Line-3) [`Post-Town`](#SAP-Compliance-Report/Client-Address/Post-Town) [`Postcode`](#SAP-Compliance-Report/Client-Address/Postcode)
 - Has text value: *False*
-- Data type of text value: *None*
+- Data type: *None*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Client-Address/Address-Line-1"></a>Address-Line-1
@@ -8817,7 +8817,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Client-Address`](#SAP-Compliance-Report/Client-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Client-Address/Address-Line-2"></a>Address-Line-2
@@ -8829,7 +8829,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Client-Address`](#SAP-Compliance-Report/Client-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Client-Address/Address-Line-3"></a>Address-Line-3
@@ -8841,7 +8841,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Client-Address`](#SAP-Compliance-Report/Client-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Client-Address/Post-Town"></a>Post-Town
@@ -8853,7 +8853,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Client-Address`](#SAP-Compliance-Report/Client-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Client-Address/Postcode"></a>Postcode
@@ -8865,7 +8865,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`Client-Address`](#SAP-Compliance-Report/Client-Address)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'str'>*
+- Data type: *<class 'str'>*
 - codes: *None*
 
 ## <a name="SAP-Compliance-Report/Is-Multiple-Compliance"></a>Is-Multiple-Compliance
@@ -8877,10 +8877,10 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
 - Child elements: *None*
 - Has text value: *True*
-- Data type of text value: *<class 'bool'>*
+- Data type: *<class 'bool'>*
 - codes:
-    - **true** - *True*
-    - **1** - *True*
-    - **false** - *False*
-    - **0** - *False*
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
 

@@ -38,14 +38,14 @@ def write_class(f, kls):
     f.write(f'- Child elements: {x}\n')
 
     f.write(f'- Has text value: *{kls.has_text_node}*\n')
-    f.write(f'- Data type of text value: *{kls.python_type_convertor}*\n')
+    f.write(f'- Data type: *{kls.python_type_convertor}*\n')
 
     if kls.map_codes is None:
         f.write(f'- codes: *None*\n')
     else:
         f.write(f'- codes:\n')
         for k,v in kls.map_codes.items():
-            f.write(f'    - **{k}** - *{v}*\n')
+            f.write(f'    - **"{k}"** - *{v}*\n')
 
     
 
