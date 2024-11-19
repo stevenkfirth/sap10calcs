@@ -20,20 +20,27 @@ def write_class(f, kls):
     f.write(f'## <a name="{kls._expanded_name}"></a>{kls.element_name}\n\n')
     f.write(f'`{kls._expanded_name}`\n\n')
     f.write(f'- Documentation: *{kls.documentation}*\n')
+    f.write(f'- Documentation2: *{kls.type_documentation}*\n')
 
     if kls._parent_class is None:
-        x = None
+        x = '*None*'
     else:
-        x = f'[`{kls._parent_class._expanded_name}`](#{kls._parent_class._expanded_name})'
+        #x = f'[`{kls._parent_class._expanded_name}`](#{kls._parent_class._expanded_name})'
+        x = f'[`{kls._parent_class.element_name}`](#{kls._parent_class._expanded_name})'
     f.write(f'- Parent element: {x}\n')
 
     subklses = [getattr(kls,subclass_class_name) for subclass_class_name in kls.subclass_class_names]
     
     if len(subklses) == 0:
-        x = None
+        x = '*None*'
     else:
         x = ' '.join([f'[`{subkls.element_name}`](#{kls._expanded_name}/{subkls.element_name})' for subkls in subklses] )
     f.write(f'- Child elements: {x}\n')
+
+    f.write(f'- has text value: {kls.has_text_node}\n')
+    f.write(f'- text type: {kls.python_type_convertor}\n')
+    f.write(f'- codes: {kls.map_codes}\n')
+
 
     f.write('\n')
 
