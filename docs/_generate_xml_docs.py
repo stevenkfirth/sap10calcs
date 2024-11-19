@@ -25,8 +25,18 @@ def write_class(f, kls):
         x = None
     else:
         x = f'[`{kls._parent_class._expanded_name}`](#{kls._parent_class._expanded_name})'
-    f.write(f'- Parent element: {x}\n\n')
+    f.write(f'- Parent element: {x}\n')
+
+    subklses = [getattr(kls,subclass_class_name) for subclass_class_name in kls.subclass_class_names]
     
+    if len(subklses) == 0:
+        x = None
+    else:
+        x = ' '.join([f'[`{subkls.element_name}`](#{kls._expanded_name}/{subkls.element_name})' for subkls in subklses] )
+    f.write(f'- Child elements: {x}\n')
+
+    f.write('\n')
+
 
 
 

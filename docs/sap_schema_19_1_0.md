@@ -12,6 +12,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: None
+- Child elements: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report) [`Client-Name`](#SAP-Compliance-Report/Client-Name) [`Client-Company`](#SAP-Compliance-Report/Client-Company) [`Client-Address`](#SAP-Compliance-Report/Client-Address) [`Is-Multiple-Compliance`](#SAP-Compliance-Report/Is-Multiple-Compliance)
 
 ## <a name="SAP-Compliance-Report/SAP-Report"></a>SAP-Report
 
@@ -19,6 +20,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The SAP report corresponding to the compliance report.*
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
+- Child elements: [`Schema-Version-Original`](#SAP-Compliance-Report/SAP-Report/Schema-Version-Original) [`Schema-Version-Current`](#SAP-Compliance-Report/SAP-Report/Schema-Version-Current) [`SAP-Version`](#SAP-Compliance-Report/SAP-Report/SAP-Version) [`SAP-Data-Version`](#SAP-Compliance-Report/SAP-Report/SAP-Data-Version) [`PCDF-Revision-Number`](#SAP-Compliance-Report/SAP-Report/PCDF-Revision-Number) [`Calculation-Software-Name`](#SAP-Compliance-Report/SAP-Report/Calculation-Software-Name) [`Calculation-Software-Version`](#SAP-Compliance-Report/SAP-Report/Calculation-Software-Version) [`User-Interface-Name`](#SAP-Compliance-Report/SAP-Report/User-Interface-Name) [`User-Interface-Version`](#SAP-Compliance-Report/SAP-Report/User-Interface-Version) [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header) [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment) [`SAP10-Data`](#SAP-Compliance-Report/SAP-Report/SAP10-Data) [`PDF`](#SAP-Compliance-Report/SAP-Report/PDF) [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details) [`ExternalDefinitions-Revision-Number`](#SAP-Compliance-Report/SAP-Report/ExternalDefinitions-Revision-Number)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Schema-Version-Original"></a>Schema-Version-Original
 
@@ -26,6 +28,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The schema version that the data conformed to when it was lodged.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Schema-Version-Current"></a>Schema-Version-Current
 
@@ -33,6 +36,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The schema version to which the data conforms. This node is inserted by the register when a retrieval is requested. It must not be present in a lodgement being sent to the register.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP-Version"></a>SAP-Version
 
@@ -40,6 +44,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *SAP version that was used for the calculation.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP-Data-Version"></a>SAP-Data-Version
 
@@ -47,6 +52,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Version of SAP that was used to define the input data for the calculation.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/PCDF-Revision-Number"></a>PCDF-Revision-Number
 
@@ -54,6 +60,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Revision Number of the PCDF file used for the calculations.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Calculation-Software-Name"></a>Calculation-Software-Name
 
@@ -61,6 +68,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Name of the software used to perform the SAP calculation.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Calculation-Software-Version"></a>Calculation-Software-Version
 
@@ -68,6 +76,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Version of the software used to perform the SAP calculation.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/User-Interface-Name"></a>User-Interface-Name
 
@@ -75,6 +84,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/User-Interface-Version"></a>User-Interface-Version
 
@@ -82,6 +92,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header"></a>Report-Header
 
@@ -89,6 +100,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: [`RRN`](#SAP-Compliance-Report/SAP-Report/Report-Header/RRN) [`Inspection-Date`](#SAP-Compliance-Report/SAP-Report/Report-Header/Inspection-Date) [`Report-Type`](#SAP-Compliance-Report/SAP-Report/Report-Header/Report-Type) [`Completion-Date`](#SAP-Compliance-Report/SAP-Report/Report-Header/Completion-Date) [`Registration-Date`](#SAP-Compliance-Report/SAP-Report/Report-Header/Registration-Date) [`Status`](#SAP-Compliance-Report/SAP-Report/Report-Header/Status) [`Language-Code`](#SAP-Compliance-Report/SAP-Report/Report-Header/Language-Code) [`Tenure`](#SAP-Compliance-Report/SAP-Report/Report-Header/Tenure) [`Transaction-Type`](#SAP-Compliance-Report/SAP-Report/Report-Header/Transaction-Type) [`Seller-Commission-Report`](#SAP-Compliance-Report/SAP-Report/Report-Header/Seller-Commission-Report) [`Property-Type`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property-Type) [`Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector) [`Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property) [`Region-Code`](#SAP-Compliance-Report/SAP-Report/Report-Header/Region-Code) [`Country-Code`](#SAP-Compliance-Report/SAP-Report/Report-Header/Country-Code) [`Related-Party-Disclosure`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/RRN"></a>RRN
 
@@ -96,6 +108,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Report Reference Number is the unique report Identifier that the report will be publicly known by. The RRN is allocated to the Report at the point that it is registered and will be algorithmically derived from the natural key characteristics of the Home Condition Report i.e. The Unique Property Reference Number (UPRN) and Inspection Date.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Inspection-Date"></a>Inspection-Date
 
@@ -103,6 +116,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The date that the inspection was actually carried out by the Home Inspector.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Report-Type"></a>Report-Type
 
@@ -110,6 +124,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of Home Inspection that was carried out. Initially the only allowed type will be a Home Condition Report inspection but this may be extended in the future to cover Energy Assessment Only inspections.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Completion-Date"></a>Completion-Date
 
@@ -117,6 +132,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The date that the Home Inspector completed the report. This will be after the Inspection Date but generally before the Registration Date.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Registration-Date"></a>Registration-Date
 
@@ -124,6 +140,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The date that the report was submitted to the HCR Registration Organisation for lodging in the HCR Register.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Status"></a>Status
 
@@ -131,6 +148,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The Status of the Report. A Home Condition Report can have a number of distinct states depending on whereabouts in its overall lifecycle the HCR is - see Home Condition Report Statechart for more details.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Language-Code"></a>Language-Code
 
@@ -138,6 +156,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The language that the report is written in.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Tenure"></a>Tenure
 
@@ -145,6 +164,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Transaction-Type"></a>Transaction-Type
 
@@ -152,6 +172,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Seller-Commission-Report"></a>Seller-Commission-Report
 
@@ -159,6 +180,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Indicates that the HCR was commissioned by the Seller of the Property or their Agent. This is required in order to differentiate these reports from Buyer commisioned reports which are not eligible for inclusion in a Home Information Pack*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property-Type"></a>Property-Type
 
@@ -166,6 +188,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Describes the type of Property that is being inspected. This should be the same as the Property-Type recorded in the Property-Details section.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector"></a>Home-Inspector
 
@@ -173,6 +196,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Name) [`Notify-Lodgement`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Notify-Lodgement) [`Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address) [`Web-Site`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Web-Site) [`E-Mail`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/E-Mail) [`Fax`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Fax) [`Telephone`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Telephone) [`Company-Name`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Company-Name) [`Scheme-Name`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Scheme-Name) [`Scheme-Web-Site`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Scheme-Web-Site) [`Identification-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Name"></a>Name
 
@@ -180,6 +204,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The name by which the Home Inspector is registered. This is a structured name containing prefix, first name + surname.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Notify-Lodgement"></a>Notify-Lodgement
 
@@ -187,6 +212,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Indicates whether the assessor wants to be notified that a the report has been lodged in the register*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address"></a>Contact-Address
 
@@ -194,6 +220,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The address that any written correspondence can be sent to. This is not the same as the Registered Address because it may, of course, be a Post Office Box.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: [`Address-Line-1`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-1) [`Address-Line-2`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-2) [`Address-Line-3`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-3) [`Post-Town`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Post-Town) [`Postcode`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Postcode)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-1"></a>Address-Line-1
 
@@ -201,6 +228,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-2"></a>Address-Line-2
 
@@ -208,6 +236,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Address-Line-3"></a>Address-Line-3
 
@@ -215,6 +244,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Post-Town"></a>Post-Town
 
@@ -222,6 +252,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address/Postcode"></a>Postcode
 
@@ -229,6 +260,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The Postcode for the Address*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Contact-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Web-Site"></a>Web-Site
 
@@ -236,6 +268,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/E-Mail"></a>E-Mail
 
@@ -243,6 +276,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *the E-Mail address that the Authorised User can be contacted at.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Fax"></a>Fax
 
@@ -250,6 +284,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Telephone"></a>Telephone
 
@@ -257,6 +292,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Company-Name"></a>Company-Name
 
@@ -264,6 +300,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The Name of the Company that the assessor is employed by.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Scheme-Name"></a>Scheme-Name
 
@@ -271,6 +308,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Scheme-Web-Site"></a>Scheme-Web-Site
 
@@ -278,6 +316,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number"></a>Identification-Number
 
@@ -285,6 +324,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector)
+- Child elements: [`Certificate-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number/Certificate-Number) [`Membership-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number/Membership-Number)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number/Certificate-Number"></a>Certificate-Number
 
@@ -292,6 +332,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The unique identifier assigned to the assessor by the scheme by which they can be identified throughout their membership of the scheme.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number/Membership-Number"></a>Membership-Number
 
@@ -299,6 +340,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For Scottish DEAs only*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Home-Inspector/Identification-Number)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property"></a>Property
 
@@ -306,6 +348,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: [`Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address) [`UPRN`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/UPRN) [`Site-Reference`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Site-Reference) [`Plot-Reference`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Plot-Reference)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address"></a>Address
 
@@ -313,6 +356,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Address for the property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property)
+- Child elements: [`Address-Line-1`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-1) [`Address-Line-2`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-2) [`Address-Line-3`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-3) [`Post-Town`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Post-Town) [`Postcode`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Postcode)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-1"></a>Address-Line-1
 
@@ -320,6 +364,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-2"></a>Address-Line-2
 
@@ -327,6 +372,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Address-Line-3"></a>Address-Line-3
 
@@ -334,6 +380,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Post-Town"></a>Post-Town
 
@@ -341,6 +388,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address/Postcode"></a>Postcode
 
@@ -348,6 +396,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The Postcode for the Address*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property/Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/UPRN"></a>UPRN
 
@@ -355,6 +404,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Unique Property Reference Number*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Site-Reference"></a>Site-Reference
 
@@ -362,6 +412,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *A site reference*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Property/Plot-Reference"></a>Plot-Reference
 
@@ -369,6 +420,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *A plot reference*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Property`](#SAP-Compliance-Report/SAP-Report/Report-Header/Property)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Region-Code"></a>Region-Code
 
@@ -376,6 +428,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Region within the UK.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Country-Code"></a>Country-Code
 
@@ -383,6 +436,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Country within the UK.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure"></a>Related-Party-Disclosure
 
@@ -390,6 +444,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
+- Child elements: [`Related-Party-Disclosure-Text`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure/Related-Party-Disclosure-Text) [`Related-Party-Disclosure-Number`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure/Related-Party-Disclosure-Number)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure/Related-Party-Disclosure-Text"></a>Related-Party-Disclosure-Text
 
@@ -397,6 +452,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backward compatibility only.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure/Related-Party-Disclosure-Number"></a>Related-Party-Disclosure-Number
 
@@ -404,6 +460,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Code indicating any potential conflicts of interest or commercial relationships with other parties.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure`](#SAP-Compliance-Report/SAP-Report/Report-Header/Related-Party-Disclosure)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment"></a>Energy-Assessment
 
@@ -411,6 +468,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: [`Assessment-Date`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Assessment-Date) [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary) [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use) [`Suggested-Improvements`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements) [`LZC-Energy-Sources`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources) [`Renewable-Heat-Incentive`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive) [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package) [`Alternative-Improvements`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements) [`Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Assessment-Date"></a>Assessment-Date
 
@@ -418,6 +476,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Date of assessment.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary"></a>Property-Summary
 
@@ -425,6 +484,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: [`Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls) [`Roof`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof) [`Floor`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor) [`Windows`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows) [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating) [`Main-Heating-Controls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls) [`Secondary-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating) [`Hot-Water`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water) [`Lighting`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting) [`Air-Tightness`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness) [`Has-Fixed-Air-Conditioning`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Fixed-Air-Conditioning) [`Has-Hot-Water-Cylinder`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Hot-Water-Cylinder) [`Has-Heated-Separate-Conservatory`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Heated-Separate-Conservatory) [`Dwelling-Type`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Dwelling-Type) [`Total-Floor-Area`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Total-Floor-Area) [`Multiple-Glazed-Percentage`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Multiple-Glazed-Percentage) [`Multiple-Glazed-Percentage-NR`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Multiple-Glazed-Percentage-NR) [`Is-Zero-Carbon-Home`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Is-Zero-Carbon-Home)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls"></a>Walls
 
@@ -432,6 +492,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Description"></a>Description
 
@@ -439,6 +500,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -446,6 +508,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -453,6 +516,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Walls)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof"></a>Roof
 
@@ -460,6 +524,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Description"></a>Description
 
@@ -467,6 +532,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -474,6 +540,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -481,6 +548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor"></a>Floor
 
@@ -488,6 +556,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Description"></a>Description
 
@@ -495,6 +564,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -502,6 +572,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -509,6 +580,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Floor)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows"></a>Windows
 
@@ -516,6 +588,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Description"></a>Description
 
@@ -523,6 +596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -530,6 +604,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -537,6 +612,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Windows)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating"></a>Main-Heating
 
@@ -544,6 +620,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Description"></a>Description
 
@@ -551,6 +628,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -558,6 +636,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -565,6 +644,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls"></a>Main-Heating-Controls
 
@@ -572,6 +652,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Description"></a>Description
 
@@ -579,6 +660,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -586,6 +668,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -593,6 +676,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Main-Heating-Controls)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating"></a>Secondary-Heating
 
@@ -600,6 +684,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Description"></a>Description
 
@@ -607,6 +692,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -614,6 +700,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -621,6 +708,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Secondary-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water"></a>Hot-Water
 
@@ -628,6 +716,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Description"></a>Description
 
@@ -635,6 +724,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -642,6 +732,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -649,6 +740,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Hot-Water)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting"></a>Lighting
 
@@ -656,6 +748,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Description"></a>Description
 
@@ -663,6 +756,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -670,6 +764,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -677,6 +772,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Lighting)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness"></a>Air-Tightness
 
@@ -684,6 +780,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Description) [`Energy-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Energy-Efficiency-Rating) [`Environmental-Efficiency-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Environmental-Efficiency-Rating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Description"></a>Description
 
@@ -691,6 +788,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall description of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Energy-Efficiency-Rating"></a>Energy-Efficiency-Rating
 
@@ -698,6 +796,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall summary of the energy efficiency of the property feature.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness/Environmental-Efficiency-Rating"></a>Environmental-Efficiency-Rating
 
@@ -705,6 +804,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Summary of the environmental efficiency of the property feature*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Air-Tightness)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Fixed-Air-Conditioning"></a>Has-Fixed-Air-Conditioning
 
@@ -712,6 +812,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Fixed air conditioning?*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Hot-Water-Cylinder"></a>Has-Hot-Water-Cylinder
 
@@ -719,6 +820,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water cylinder?*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Has-Heated-Separate-Conservatory"></a>Has-Heated-Separate-Conservatory
 
@@ -726,6 +828,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heated separate conservatory?*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Dwelling-Type"></a>Dwelling-Type
 
@@ -733,6 +836,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is a string such as Detached house or Top-floor flat*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Total-Floor-Area"></a>Total-Floor-Area
 
@@ -740,6 +844,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is a number such as 125*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Multiple-Glazed-Percentage"></a>Multiple-Glazed-Percentage
 
@@ -747,6 +852,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Fraction of windows that are multiply glazed to nearest 1%.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Multiple-Glazed-Percentage-NR"></a>Multiple-Glazed-Percentage-NR
 
@@ -754,6 +860,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backward compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary/Is-Zero-Carbon-Home"></a>Is-Zero-Carbon-Home
 
@@ -761,6 +868,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is dwelling a Zero Carbon Home?*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use"></a>Energy-Use
 
@@ -768,6 +876,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Calculated results from the energy assessment.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: [`DER`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DER) [`TER`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TER) [`DPER`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DPER) [`TPER`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TPER) [`DFEE`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DFEE) [`TFEE`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TFEE) [`Energy-Rating-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Current) [`Energy-Rating-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Potential) [`Energy-Rating-Average`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Average) [`Environmental-Impact-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Environmental-Impact-Current) [`Environmental-Impact-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Environmental-Impact-Potential) [`Energy-Consumption-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Consumption-Current) [`Energy-Consumption-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Consumption-Potential) [`CO2-Emissions-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Current) [`CO2-Emissions-Current-Per-Floor-Area`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Current-Per-Floor-Area) [`CO2-Emissions-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Potential) [`Lighting-Cost-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Lighting-Cost-Current) [`Lighting-Cost-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Lighting-Cost-Potential) [`Heating-Cost-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Heating-Cost-Current) [`Heating-Cost-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Heating-Cost-Potential) [`Hot-Water-Cost-Current`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Hot-Water-Cost-Current) [`Hot-Water-Cost-Potential`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Hot-Water-Cost-Potential)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DER"></a>DER
 
@@ -775,6 +884,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The DER of the Property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TER"></a>TER
 
@@ -782,6 +892,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The TER of the Property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DPER"></a>DPER
 
@@ -789,6 +900,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The DPER of the Property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TPER"></a>TPER
 
@@ -796,6 +908,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The TPER of the Property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/DFEE"></a>DFEE
 
@@ -803,6 +916,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The DFEE of the Property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/TFEE"></a>TFEE
 
@@ -810,6 +924,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The TFEE of the Property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Current"></a>Energy-Rating-Current
 
@@ -817,6 +932,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The Current Energy Rating of the Property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Potential"></a>Energy-Rating-Potential
 
@@ -824,6 +940,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The overall Energy Rating for the Property being assessed.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Rating-Average"></a>Energy-Rating-Average
 
@@ -831,6 +948,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Average SAP rating for the country concerned. 0 if unknown or not applicable*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Environmental-Impact-Current"></a>Environmental-Impact-Current
 
@@ -838,6 +956,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The estimated current Environmental Impact Rating of the property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Environmental-Impact-Potential"></a>Environmental-Impact-Potential
 
@@ -845,6 +964,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The estimated potential Environmental Impact Rating of the property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Consumption-Current"></a>Energy-Consumption-Current
 
@@ -852,6 +972,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Energy-Consumption-Potential"></a>Energy-Consumption-Potential
 
@@ -859,6 +980,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Current"></a>CO2-Emissions-Current
 
@@ -866,6 +988,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *CO2 emissions per year in tonnes/year.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Current-Per-Floor-Area"></a>CO2-Emissions-Current-Per-Floor-Area
 
@@ -873,6 +996,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *CO2 emissions per square metre floor area per year in kg/m2.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/CO2-Emissions-Potential"></a>CO2-Emissions-Potential
 
@@ -880,6 +1004,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Estimated value in Tonnes per Year of the total CO2 emissions produced by the Property in 12 month period.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Lighting-Cost-Current"></a>Lighting-Cost-Current
 
@@ -887,6 +1012,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The current estimated cost of Lighting for the property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Lighting-Cost-Potential"></a>Lighting-Cost-Potential
 
@@ -894,6 +1020,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The current estimated cost of Lighting for the property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Heating-Cost-Current"></a>Heating-Cost-Current
 
@@ -901,6 +1028,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The current estimated cost of Heating for the property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Heating-Cost-Potential"></a>Heating-Cost-Potential
 
@@ -908,6 +1036,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The current estimated cost of Heating for the property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Hot-Water-Cost-Current"></a>Hot-Water-Cost-Current
 
@@ -915,6 +1044,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *|The current estimated cost of Hot Water for the property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use/Hot-Water-Cost-Potential"></a>Hot-Water-Cost-Potential
 
@@ -922,6 +1052,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *|The current estimated cost of Hot Water for the property*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements"></a>Suggested-Improvements
 
@@ -929,6 +1060,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Improvement measures listed on the EPC.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement"></a>Improvement
 
@@ -936,6 +1068,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements)
+- Child elements: [`Sequence`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Sequence) [`Improvement-Category`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Category) [`Improvement-Type`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Type) [`Typical-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Typical-Saving) [`Energy-Performance-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Energy-Performance-Rating) [`Environmental-Impact-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Environmental-Impact-Rating) [`Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details) [`Indicative-Cost`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Indicative-Cost) [`Green-Deal-Category`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Green-Deal-Category)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Sequence"></a>Sequence
 
@@ -943,6 +1076,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Category"></a>Improvement-Category
 
@@ -950,6 +1084,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The category of improvement. This identifies where on the report the recommendation is printed.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Type"></a>Improvement-Type
 
@@ -957,6 +1092,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Suggested work to be carried out on the Property to improve its energy efficiency. This should be a enumerated list of acceptable improvements but it hasn't yet been defined.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Typical-Saving"></a>Typical-Saving
 
@@ -964,6 +1100,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Energy-Performance-Rating"></a>Energy-Performance-Rating
 
@@ -971,6 +1108,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Environmental-Impact-Rating"></a>Environmental-Impact-Rating
 
@@ -978,6 +1116,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details"></a>Improvement-Details
 
@@ -985,6 +1124,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts) [`Improvement-Number`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Number)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts"></a>Improvement-Texts
 
@@ -992,6 +1132,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backward compatability only*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details)
+- Child elements: [`Improvement-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Summary) [`Improvement-Heading`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Heading) [`Improvement-Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Description)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Summary"></a>Improvement-Summary
 
@@ -999,6 +1140,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *A short description of the suggested improvement.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Heading"></a>Improvement-Heading
 
@@ -1006,6 +1148,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Description"></a>Improvement-Description
 
@@ -1013,6 +1156,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Detailed description of the suggested improvement.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Texts)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details/Improvement-Number"></a>Improvement-Number
 
@@ -1020,6 +1164,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Improvement-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Indicative-Cost"></a>Indicative-Cost
 
@@ -1027,6 +1172,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement/Green-Deal-Category"></a>Green-Deal-Category
 
@@ -1034,6 +1180,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources"></a>LZC-Energy-Sources
 
@@ -1041,6 +1188,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: [`LZC-Energy-Source`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources/LZC-Energy-Source)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources/LZC-Energy-Source"></a>LZC-Energy-Source
 
@@ -1048,6 +1196,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Low and zero carbon energy source(s) for the property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/LZC-Energy-Sources)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive"></a>Renewable-Heat-Incentive
 
@@ -1055,6 +1204,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: [`RHI-New-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling) [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling"></a>RHI-New-Dwelling
 
@@ -1062,6 +1212,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
+- Child elements: [`Space-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling/Space-Heating) [`Water-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling/Water-Heating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling/Space-Heating"></a>Space-Heating
 
@@ -1069,6 +1220,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Space heating requirement.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling/Water-Heating"></a>Water-Heating
 
@@ -1076,6 +1228,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Water heating requirement.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling"></a>RHI-Existing-Dwelling
 
@@ -1083,6 +1236,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
+- Child elements: [`Space-Heating-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-Existing-Dwelling) [`Space-Heating-With-Loft-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Loft-Insulation) [`Space-Heating-With-Cavity-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Cavity-Insulation) [`Space-Heating-With-Loft-And-Cavity-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Loft-And-Cavity-Insulation) [`Water-Heating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Water-Heating) [`Impact-Of-Loft-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Loft-Insulation) [`Impact-Of-Cavity-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Cavity-Insulation) [`Impact-Of-Solid-Wall-Insulation`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Solid-Wall-Insulation)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-Existing-Dwelling"></a>Space-Heating-Existing-Dwelling
 
@@ -1090,6 +1244,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Space heating requirement for existing dwelling.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Loft-Insulation"></a>Space-Heating-With-Loft-Insulation
 
@@ -1097,6 +1252,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Space heating requirement after implementation of loft insulation recommendation, omit if loft insulation not recommended. For backwards compatibility only, do not use*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Cavity-Insulation"></a>Space-Heating-With-Cavity-Insulation
 
@@ -1104,6 +1260,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Space heating requirement after implementation of cavity insulation recommendation, omit if cavity insulation not recommended. For backwards compatibility only, do not use*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Space-Heating-With-Loft-And-Cavity-Insulation"></a>Space-Heating-With-Loft-And-Cavity-Insulation
 
@@ -1111,6 +1268,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Space heating requirement after implementation of loft and cavity insulation recommendations, same as existing dwelling if neither is recommended. For backwards compatibility only, do not use*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Water-Heating"></a>Water-Heating
 
@@ -1118,6 +1276,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Water heating requirement.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Loft-Insulation"></a>Impact-Of-Loft-Insulation
 
@@ -1125,6 +1284,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Reduction in space heating requirement with loft insulation (as negative value). Omit if not applicable*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Cavity-Insulation"></a>Impact-Of-Cavity-Insulation
 
@@ -1132,6 +1292,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Reduction in space heating requirement with cavity insulation (as negative value). Omit if not applicable*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling/Impact-Of-Solid-Wall-Insulation"></a>Impact-Of-Solid-Wall-Insulation
 
@@ -1139,6 +1300,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Reduction in space heating requirement with solid wall insulation (as negative value). Omit if not applicable*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package"></a>Green-Deal-Package
 
@@ -1146,6 +1308,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Improvements that can form a Green Deal package*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: [`Green-Deal-Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement) [`Electricity-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Electricity-Saving) [`Gas-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Gas-Saving) [`Other-Fuel-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Other-Fuel-Saving)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement"></a>Green-Deal-Improvement
 
@@ -1153,6 +1316,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Improvements from Suggested-Improvements in the Green Deal package*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
+- Child elements: [`Improvement-Type`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Type) [`Improvement-Number`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Number)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Type"></a>Improvement-Type
 
@@ -1160,6 +1324,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement/Improvement-Number"></a>Improvement-Number
 
@@ -1167,6 +1332,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Green-Deal-Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Electricity-Saving"></a>Electricity-Saving
 
@@ -1174,6 +1340,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Total electricity saving for the package*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Gas-Saving"></a>Gas-Saving
 
@@ -1181,6 +1348,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Total gas saving for the package*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package/Other-Fuel-Saving"></a>Other-Fuel-Saving
 
@@ -1188,6 +1356,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Total other saving for the package*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements"></a>Alternative-Improvements
 
@@ -1195,6 +1364,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Alternative improvements to some of those given in Suggested-Improvements*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement"></a>Improvement
 
@@ -1202,6 +1372,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements)
+- Child elements: [`Sequence`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Sequence) [`Improvement-Category`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Category) [`Improvement-Type`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Type) [`Typical-Saving`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Typical-Saving) [`Energy-Performance-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Energy-Performance-Rating) [`Environmental-Impact-Rating`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Environmental-Impact-Rating) [`Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details) [`Indicative-Cost`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Indicative-Cost) [`Green-Deal-Category`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Green-Deal-Category)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Sequence"></a>Sequence
 
@@ -1209,6 +1380,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Category"></a>Improvement-Category
 
@@ -1216,6 +1388,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The category of improvement. This identifies where on the report the recommendation is printed.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Type"></a>Improvement-Type
 
@@ -1223,6 +1396,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Suggested work to be carried out on the Property to improve its energy efficiency. This should be a enumerated list of acceptable improvements but it hasn't yet been defined.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Typical-Saving"></a>Typical-Saving
 
@@ -1230,6 +1404,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Energy-Performance-Rating"></a>Energy-Performance-Rating
 
@@ -1237,6 +1412,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Environmental-Impact-Rating"></a>Environmental-Impact-Rating
 
@@ -1244,6 +1420,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details"></a>Improvement-Details
 
@@ -1251,6 +1428,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: [`Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts) [`Improvement-Number`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Number)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts"></a>Improvement-Texts
 
@@ -1258,6 +1436,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backward compatability only*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details)
+- Child elements: [`Improvement-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Summary) [`Improvement-Heading`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Heading) [`Improvement-Description`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Description)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Summary"></a>Improvement-Summary
 
@@ -1265,6 +1444,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *A short description of the suggested improvement.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Heading"></a>Improvement-Heading
 
@@ -1272,6 +1452,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts/Improvement-Description"></a>Improvement-Description
 
@@ -1279,6 +1460,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Detailed description of the suggested improvement.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Texts)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details/Improvement-Number"></a>Improvement-Number
 
@@ -1286,6 +1468,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Improvement-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Indicative-Cost"></a>Indicative-Cost
 
@@ -1293,6 +1476,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement/Green-Deal-Category"></a>Green-Deal-Category
 
@@ -1300,6 +1484,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum"></a>Addendum
 
@@ -1307,6 +1492,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
+- Child elements: [`Cavity-Fill-Recommended`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Cavity-Fill-Recommended) [`Stone-Walls`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Stone-Walls) [`System-Build`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/System-Build) [`Access-Issues`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Access-Issues) [`High-Exposure`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/High-Exposure) [`Narrow-Cavities`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Narrow-Cavities)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Cavity-Fill-Recommended"></a>Cavity-Fill-Recommended
 
@@ -1314,6 +1500,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Cavity fill is recommended*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Stone-Walls"></a>Stone-Walls
 
@@ -1321,6 +1508,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Stone walls present, not insulated*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/System-Build"></a>System-Build
 
@@ -1328,6 +1516,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *System build present*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Access-Issues"></a>Access-Issues
 
@@ -1335,6 +1524,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Dwelling has access issues for cavity wall insulation. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/High-Exposure"></a>High-Exposure
 
@@ -1342,6 +1532,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Dwelling may be exposed to wind-driven rain. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum/Narrow-Cavities"></a>Narrow-Cavities
 
@@ -1349,6 +1540,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Dwelling may have narrow cavities. Include only when Cavity-Fill-Recommended is also present*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Addendum)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data"></a>SAP10-Data
 
@@ -1356,6 +1548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: [`Data-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/Data-Type) [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/Data-Type"></a>Data-Type
 
@@ -1363,6 +1556,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of SAP data that has been collected.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data`](#SAP-Compliance-Report/SAP-Report/SAP10-Data)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details"></a>SAP-Property-Details
 
@@ -1370,6 +1564,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data`](#SAP-Compliance-Report/SAP-Report/SAP10-Data)
+- Child elements: [`Property-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Property-Type) [`Built-Form`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Built-Form) [`Living-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Living-Area) [`Lowest-Storey-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Lowest-Storey-Area) [`Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Orientation) [`Conservatory-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Conservatory-Type) [`Terrain-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Terrain-Type) [`Has-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Has-Special-Feature) [`Special-Feature-Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Special-Feature-Description) [`Energy-Saved-Or-Generated`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Saved-Or-Generated) [`Saved-Or-Generated-Fuel`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Saved-Or-Generated-Fuel) [`Energy-Used`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used) [`Energy-Used-Fuel`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used-Fuel) [`Is-In-Smoke-Control-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-In-Smoke-Control-Area) [`Cold-Water-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source) [`Windows-Overshading`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Windows-Overshading) [`Thermal-Mass-Parameter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Thermal-Mass-Parameter) [`Additional-Allowable-Electricity-Generation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Additional-Allowable-Electricity-Generation) [`Gas-Smart-Meter-Present`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Gas-Smart-Meter-Present) [`Electricity-Smart-Meter-Present`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Electricity-Smart-Meter-Present) [`Is-Dwelling-Export-Capable`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Dwelling-Export-Capable) [`PV-Connection`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Connection) [`PV-Diverter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Diverter) [`Battery-Capacity`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Battery-Capacity) [`Is-Wind-Turbine-Connected-To-Dwelling-Meter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Wind-Turbine-Connected-To-Dwelling-Meter) [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating) [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source) [`SAP-Building-Parts`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts) [`SAP-Opening-Types`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types) [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation) [`SAP-Lighting`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting) [`SAP-Deselected-Improvements`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements) [`SAP-Flat-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details) [`SAP-Special-Features`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features) [`Design-Water-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Design-Water-Use) [`SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Property-Type"></a>Property-Type
 
@@ -1377,6 +1572,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of Property, such as House, Flat, Mansion, Maisonette etc.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Built-Form"></a>Built-Form
 
@@ -1384,6 +1580,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The building type of the Property e.g. Detached, Semi-Detached, Terrace etc. Together with the Property Type, the Built Form provides a structured description of the property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Living-Area"></a>Living-Area
 
@@ -1391,6 +1588,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The size of the living area in square metres. The living area is the room marked on a plan as the lounge or living room, or the largest public room (irrespective of usage by particular occupants), together with any rooms not separated from the lounge or living room by doors, and including any cupboards directly accessed from the lounge or living room. Living area does not, however, extend over more than one storey, even when stairs enter the living area directly.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Lowest-Storey-Area"></a>Lowest-Storey-Area
 
@@ -1398,6 +1596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The Area of the lowest storey in square meters including unheated or communal areas such as garages or corridors.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Orientation"></a>Orientation
 
@@ -1405,6 +1604,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The orientation of the front of the property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Conservatory-Type"></a>Conservatory-Type
 
@@ -1412,6 +1612,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of conservatory.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Terrain-Type"></a>Terrain-Type
 
@@ -1419,6 +1620,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Terrain type. Needed for wind-turbines and for applying measures.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Has-Special-Feature"></a>Has-Special-Feature
 
@@ -1426,6 +1628,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backwards compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Special-Feature-Description"></a>Special-Feature-Description
 
@@ -1433,6 +1636,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backwards compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Saved-Or-Generated"></a>Energy-Saved-Or-Generated
 
@@ -1440,6 +1644,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backwards compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Saved-Or-Generated-Fuel"></a>Saved-Or-Generated-Fuel
 
@@ -1447,6 +1652,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backwards compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used"></a>Energy-Used
 
@@ -1454,6 +1660,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backwards compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used-Fuel"></a>Energy-Used-Fuel
 
@@ -1461,6 +1668,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backwards compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-In-Smoke-Control-Area"></a>Is-In-Smoke-Control-Area
 
@@ -1468,6 +1676,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is property in a smoke control area? Only if a solid fuel appliance is used.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source"></a>Cold-Water-Source
 
@@ -1475,6 +1684,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *What is the cold water source? Either mains or header tank.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Windows-Overshading"></a>Windows-Overshading
 
@@ -1482,6 +1692,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Average amount of overshading of windows.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Thermal-Mass-Parameter"></a>Thermal-Mass-Parameter
 
@@ -1489,6 +1700,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Average thermal mass parameter for the dwelling in kJ/m2K. If omitted it is calculated using the kappa values of each element.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Additional-Allowable-Electricity-Generation"></a>Additional-Allowable-Electricity-Generation
 
@@ -1496,6 +1708,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Additional allowable electricity generation applicable to this dwelling in kWh per square metre; only if Zero Carbon Home assessment.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Gas-Smart-Meter-Present"></a>Gas-Smart-Meter-Present
 
@@ -1503,6 +1716,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Electricity-Smart-Meter-Present"></a>Electricity-Smart-Meter-Present
 
@@ -1510,6 +1724,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Dwelling-Export-Capable"></a>Is-Dwelling-Export-Capable
 
@@ -1517,6 +1732,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Connection"></a>PV-Connection
 
@@ -1524,6 +1740,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Diverter"></a>PV-Diverter
 
@@ -1531,6 +1748,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Diverter present.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Battery-Capacity"></a>Battery-Capacity
 
@@ -1538,6 +1756,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Battery capacity if diverter present.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Wind-Turbine-Connected-To-Dwelling-Meter"></a>Is-Wind-Turbine-Connected-To-Dwelling-Meter
 
@@ -1545,6 +1764,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether the wind turbine is connected to the Dwelling's meter.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating"></a>SAP-Heating
 
@@ -1552,6 +1772,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`Water-Heating-Code`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Water-Heating-Code) [`Water-Fuel-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Water-Fuel-Type) [`Has-Hot-Water-Cylinder`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Hot-Water-Cylinder) [`Secondary-Heating-Category`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Category) [`Secondary-Heating-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Data-Source) [`Secondary-Heating-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Efficiency) [`Secondary-Heating-Commisioning-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Commisioning-Certificate) [`Secondary-Heating-Installation-Engineer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Installation-Engineer) [`Secondary-Heating-Code`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Code) [`Secondary-Fuel-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Fuel-Type) [`Secondary-Heating-PCDF-Fuel-Index`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-PCDF-Fuel-Index) [`Secondary-Heating-Flue-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Flue-Type) [`Thermal-Store`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Thermal-Store) [`Has-Fixed-Air-Conditioning`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Fixed-Air-Conditioning) [`Immersion-Heating-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Immersion-Heating-Type) [`Is-Heat-Pump-Assisted-By-Immersion`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Assisted-By-Immersion) [`Is-Heat-Pump-Installed-To-MIS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Installed-To-MIS) [`Is-Immersion-For-Summer-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Immersion-For-Summer-Use) [`Is-Secondary-Heating-HETAS-Approved`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Secondary-Heating-HETAS-Approved) [`Hot-Water-Store-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Manufacturer) [`Hot-Water-Store-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Model) [`Hot-Water-Store-Commissioning-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Commissioning-Certificate) [`Hot-Water-Store-Installer-Engineer-Registration`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Installer-Engineer-Registration) [`Hot-Water-Store-Size`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Size) [`Hot-Water-Store-Heat-Transfer-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Transfer-Area) [`Hot-Water-Store-Heat-Loss-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss-Source) [`Hot-Water-Store-Heat-Loss`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss) [`Hot-Water-Store-Insulation-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Type) [`Hot-Water-Store-Insulation-Thickness`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Thickness) [`Is-Thermal-Store-Near-Boiler`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Near-Boiler) [`Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard) [`Has-Cylinder-Thermostat`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Cylinder-Thermostat) [`Is-Cylinder-In-Heated-Space`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Cylinder-In-Heated-Space) [`Is-Hot-Water-Separately-Timed`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Hot-Water-Separately-Timed) [`Hot-Water-Controls-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Manufacturer) [`Hot-Water-Controls-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Model) [`SAP-Community-Heating-Systems`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems) [`Main-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details) [`SAP-Heating-Design-Water-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Heating-Design-Water-Use) [`Main-Heating-Systems-Interaction`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Systems-Interaction) [`Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values) [`Primary-Pipework-Insulation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Primary-Pipework-Insulation) [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details) [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS) [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS) [`Shower-Outlets`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets) [`Number-Baths`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths) [`Number-Baths-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths-WWHRS)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Water-Heating-Code"></a>Water-Heating-Code
 
@@ -1559,6 +1780,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of Water Heating present in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Water-Fuel-Type"></a>Water-Fuel-Type
 
@@ -1566,6 +1788,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of fuel used to power the central heating e.g. Gas, Electricity. Not used if water system is main or secondary system.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Hot-Water-Cylinder"></a>Has-Hot-Water-Cylinder
 
@@ -1573,6 +1796,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water cylinder?*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Category"></a>Secondary-Heating-Category
 
@@ -1580,6 +1804,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Category of heating system for the secondary heating system.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Data-Source"></a>Secondary-Heating-Data-Source
 
@@ -1587,6 +1812,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Source of secondary heating system data; only if secondary heating system.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Efficiency"></a>Secondary-Heating-Efficiency
 
@@ -1594,6 +1820,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Commisioning-Certificate"></a>Secondary-Heating-Commisioning-Certificate
 
@@ -1601,6 +1828,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Secondary heating system commisioning certificate number.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Installation-Engineer"></a>Secondary-Heating-Installation-Engineer
 
@@ -1608,6 +1836,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Secondary heating installation engineer registration reference.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Code"></a>Secondary-Heating-Code
 
@@ -1615,6 +1844,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of secondary heating present in the property; only if required and if heating data source is SAP table.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Fuel-Type"></a>Secondary-Fuel-Type
 
@@ -1622,6 +1852,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of fuel used to power the secondary heating e.g. Gas, Electricity; only if required.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-PCDF-Fuel-Index"></a>Secondary-Heating-PCDF-Fuel-Index
 
@@ -1629,6 +1860,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *PCDF index number of the fuel type, only if Secondary-Fuel-Type is 99 (fuel from database).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Flue-Type"></a>Secondary-Heating-Flue-Type
 
@@ -1636,6 +1868,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Secondary flue type; only if secondary efficiency is manufacturer declaration and if there is a flue.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Thermal-Store"></a>Thermal-Store
 
@@ -1643,6 +1876,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of thermal store; not used if main heating system is community heating scheme.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Fixed-Air-Conditioning"></a>Has-Fixed-Air-Conditioning
 
@@ -1650,6 +1884,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Fixed air conditioning?*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Immersion-Heating-Type"></a>Immersion-Heating-Type
 
@@ -1657,6 +1892,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of immersion heating; only if immersion.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Assisted-By-Immersion"></a>Is-Heat-Pump-Assisted-By-Immersion
 
@@ -1664,6 +1900,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is heat pump assisted by immersion? Applicable only to hot water only heat pumps*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Heat-Pump-Installed-To-MIS"></a>Is-Heat-Pump-Installed-To-MIS
 
@@ -1671,6 +1908,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is heat pump installed to MIS standard? Only if water heating from hot water only heat pump.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Immersion-For-Summer-Use"></a>Is-Immersion-For-Summer-Use
 
@@ -1678,6 +1916,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Immersion for summer use? Only if main heating is solid fuel fire or room heater with boiler.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Secondary-Heating-HETAS-Approved"></a>Is-Secondary-Heating-HETAS-Approved
 
@@ -1685,6 +1924,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Secondary heating appliance is HETAS approved? Only if solid fuel.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Manufacturer"></a>Hot-Water-Store-Manufacturer
 
@@ -1692,6 +1932,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Store Manufacturer name.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Model"></a>Hot-Water-Store-Model
 
@@ -1699,6 +1940,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Store Model name.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Commissioning-Certificate"></a>Hot-Water-Store-Commissioning-Certificate
 
@@ -1706,6 +1948,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Store comissioning certificate number.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Installer-Engineer-Registration"></a>Hot-Water-Store-Installer-Engineer-Registration
 
@@ -1713,6 +1956,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Store installer engineer registration number.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Size"></a>Hot-Water-Store-Size
 
@@ -1720,6 +1964,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water store size in litres; if there is a hot water store. Store refers to hot water store type which can be cylinder (if thermal store is "none"), hot-water only thermal store or integrated thermal store. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Transfer-Area"></a>Hot-Water-Store-Heat-Transfer-Area
 
@@ -1727,6 +1972,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Used when a heat pump is associated with a separate and specified hot water vessel.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss-Source"></a>Hot-Water-Store-Heat-Loss-Source
 
@@ -1734,6 +1980,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The source of the hot water store heat loss information; if there is a hot water store. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Heat-Loss"></a>Hot-Water-Store-Heat-Loss
 
@@ -1741,6 +1988,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water store declared loss in kWh/day; only if there is a hot water store and if manufacturer declared loss. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Type"></a>Hot-Water-Store-Insulation-Type
 
@@ -1748,6 +1996,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water store insulation; only if there is a hot water store and if loss from SAP table. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Store-Insulation-Thickness"></a>Hot-Water-Store-Insulation-Thickness
 
@@ -1755,6 +2004,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water store insulation thickness in mm; only if there is a hot water store and if loss from SAP table. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Near-Boiler"></a>Is-Thermal-Store-Near-Boiler
 
@@ -1762,6 +2012,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Thermal store connected to boiler by no more than 1.5 m of insulated pipework? Only if thermal store. Not applicable if combi boiler or instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard"></a>Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard
 
@@ -1769,6 +2020,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Thermal store or CPSU in airing cupboard? Only if (a) boiler with integrated or hot-water-only thermal store, or (b) main heating is CPSU.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Has-Cylinder-Thermostat"></a>Has-Cylinder-Thermostat
 
@@ -1776,6 +2028,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water cylinder thermostat? Not applicable if combi boiler or instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Cylinder-In-Heated-Space"></a>Is-Cylinder-In-Heated-Space
 
@@ -1783,6 +2036,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water cylinder in heated space? Not applicable if combi boiler or instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Is-Hot-Water-Separately-Timed"></a>Is-Hot-Water-Separately-Timed
 
@@ -1790,6 +2044,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water separately timed? Not applicable if combi boiler or instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Manufacturer"></a>Hot-Water-Controls-Manufacturer
 
@@ -1797,6 +2052,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Hot-Water-Controls-Model"></a>Hot-Water-Controls-Model
 
@@ -1804,6 +2060,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems"></a>SAP-Community-Heating-Systems
 
@@ -1811,6 +2068,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System"></a>SAP-Community-Heating-System
 
@@ -1818,6 +2076,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems)
+- Child elements: [`Community-Heating-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Name) [`Community-Heating-CO2-Emission-Factor`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-CO2-Emission-Factor) [`Community-Heating-Primary-Energy-Factor`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Primary-Energy-Factor) [`Community-Heating-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Use) [`Is-Community-Heating-Cylinder-In-Dwelling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-Community-Heating-Cylinder-In-Dwelling) [`Is-HIU-In-Dwelling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-HIU-In-Dwelling) [`HIU-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/HIU-Index-Number) [`Community-Heating-Distribution-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Type) [`Community-Heat-Sources`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources) [`Community-Heating-Distribution-Loss-Factor`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Loss-Factor) [`Charging-Linked-To-Heat-Use`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Charging-Linked-To-Heat-Use) [`Heat-Network-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Index-Number) [`Sub-Network-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Sub-Network-Name) [`Heat-Network-Existing`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Existing) [`Heat-Network-Assessed-As-New`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Assessed-As-New)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Name"></a>Community-Heating-Name
 
@@ -1825,6 +2084,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The name of the community heating system*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-CO2-Emission-Factor"></a>Community-Heating-CO2-Emission-Factor
 
@@ -1832,6 +2092,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *the community heating CO2 emission factor*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Primary-Energy-Factor"></a>Community-Heating-Primary-Energy-Factor
 
@@ -1839,6 +2100,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The community heating Primary Energy Factor*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Use"></a>Community-Heating-Use
 
@@ -1846,6 +2108,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Specifies what kind of heating the community system is used for.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-Community-Heating-Cylinder-In-Dwelling"></a>Is-Community-Heating-Cylinder-In-Dwelling
 
@@ -1853,6 +2116,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Community heating, cylinder in dwelling?*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-HIU-In-Dwelling"></a>Is-HIU-In-Dwelling
 
@@ -1860,6 +2124,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Community heating, HIU in dwelling?*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/HIU-Index-Number"></a>HIU-Index-Number
 
@@ -1867,6 +2132,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heat Interface Unit index number, if present.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Type"></a>Community-Heating-Distribution-Type
 
@@ -1874,6 +2140,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Community heating distribution*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources"></a>Community-Heat-Sources
 
@@ -1881,6 +2148,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *To be provided when there is no Heat-Network-Index-Number.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source"></a>Community-Heat-Source
 
@@ -1888,6 +2156,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources)
+- Child elements: [`Heat-Source-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Source-Type) [`Heat-Fraction`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Fraction) [`Fuel-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Fuel-Type) [`PCDF-Fuel-Index`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/PCDF-Fuel-Index) [`Heat-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Efficiency) [`Power-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Power-Efficiency) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Description) [`CHP-Electricity-Generation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/CHP-Electricity-Generation)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Source-Type"></a>Heat-Source-Type
 
@@ -1895,6 +2164,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Fraction"></a>Heat-Fraction
 
@@ -1902,6 +2172,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Fraction of heat for the system provided by this heat source.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Fuel-Type"></a>Fuel-Type
 
@@ -1909,6 +2180,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/PCDF-Fuel-Index"></a>PCDF-Fuel-Index
 
@@ -1916,6 +2188,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Heat-Efficiency"></a>Heat-Efficiency
 
@@ -1923,6 +2196,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heat efficiency in %.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Power-Efficiency"></a>Power-Efficiency
 
@@ -1930,6 +2204,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Power efficiency in %. Include when heat source is CHP.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/Description"></a>Description
 
@@ -1937,6 +2212,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source/CHP-Electricity-Generation"></a>CHP-Electricity-Generation
 
@@ -1944,6 +2220,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *CHP Electricity generation options from table 12f.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Loss-Factor"></a>Community-Heating-Distribution-Loss-Factor
 
@@ -1951,6 +2228,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Used when Community-Heating-Distribution-Type is calculated.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Charging-Linked-To-Heat-Use"></a>Charging-Linked-To-Heat-Use
 
@@ -1958,6 +2236,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Used for hot-water-only systems.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Index-Number"></a>Heat-Network-Index-Number
 
@@ -1965,6 +2244,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Index number of heat network, if applicable.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Sub-Network-Name"></a>Sub-Network-Name
 
@@ -1972,6 +2252,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The name by which the sub community heat network is known.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Existing"></a>Heat-Network-Existing
 
@@ -1979,6 +2260,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether the heat network is existing or new.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Assessed-As-New"></a>Heat-Network-Assessed-As-New
 
@@ -1986,6 +2268,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether the heat network is assessed as a new heat network (post June 2022) for Eng with a standalone gas boiler notional building.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details"></a>Main-Heating-Details
 
@@ -1993,6 +2276,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating"></a>Main-Heating
 
@@ -2000,6 +2284,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details)
+- Child elements: [`Main-Heating-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Number) [`Main-Heating-Category`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Category) [`Main-Heating-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Data-Source) [`Main-Heating-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Index-Number) [`Main-Heating-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Manufacturer) [`Main-Heating-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Model) [`Main-Heating-Commissioning-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Commissioning-Certificate) [`Main-Heating-Installation-Engineer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Installation-Engineer) [`Is-Condensing-Boiler`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Condensing-Boiler) [`Condensing-Boiler-Heat-Distribution`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Condensing-Boiler-Heat-Distribution) [`Heat-Pump-Heat-Distribution`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Pump-Heat-Distribution) [`Gas-Or-Oil-Boiler-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Gas-Or-Oil-Boiler-Type) [`Combi-Boiler-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Combi-Boiler-Type) [`Case-Heat-Emission`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Case-Heat-Emission) [`Heat-Transfer-To-Water`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Transfer-To-Water) [`Solid-Fuel-Boiler-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Solid-Fuel-Boiler-Type) [`Main-Heating-Code`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Code) [`Main-Fuel-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Fuel-Type) [`PCDF-Fuel-Index`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/PCDF-Fuel-Index) [`Main-Heating-Control`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Control) [`Heat-Emitter-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Emitter-Type) [`Underfloor-Heat-Emitter-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Underfloor-Heat-Emitter-Type) [`Main-Heating-Flue-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Flue-Type) [`Is-Flue-Fan-Present`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Flue-Fan-Present) [`Is-Central-Heating-Pump-In-Heated-Space`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Central-Heating-Pump-In-Heated-Space) [`Is-Oil-Pump-In-Heated-Space`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Oil-Pump-In-Heated-Space) [`Is-Interlocked-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Interlocked-System) [`Has-Separate-Delayed-Start`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-Separate-Delayed-Start) [`Boiler-Fuel-Feed`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Boiler-Fuel-Feed) [`Is-Main-Heating-HETAS-Approved`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Main-Heating-HETAS-Approved) [`Electric-CPSU-Operating-Temperature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Electric-CPSU-Operating-Temperature) [`Main-Heating-Fraction`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Fraction) [`Burner-Control`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Burner-Control) [`Efficiency-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Efficiency-Type) [`Main-Heating-Efficiency-Winter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Winter) [`Main-Heating-Efficiency-Summer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Summer) [`Main-Heating-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency) [`Main-Heating-System-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-System-Type) [`Has-FGHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-FGHRS) [`FGHRS-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Index-Number) [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source) [`Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values) [`Storage-Heaters`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters) [`Emitter-Temperature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Emitter-Temperature) [`MCS-Installed-Heat-Pump`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/MCS-Installed-Heat-Pump) [`Central-Heating-Pump-Age`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Central-Heating-Pump-Age) [`Control-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Control-Index-Number) [`Heating-Controller-Function`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Function) [`Heating-Controller-Ecodesign-Class`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Ecodesign-Class) [`Heating-Controller-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Manufacturer) [`Heating-Controller-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Model)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Number"></a>Main-Heating-Number
 
@@ -2007,6 +2292,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Identifies the main heating as system 1 or system 2. System 1 must always be present, system 2 is included only when there are two systems.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Category"></a>Main-Heating-Category
 
@@ -2014,6 +2300,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Category of heating system for the main heating system.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Data-Source"></a>Main-Heating-Data-Source
 
@@ -2021,6 +2308,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Source of main heating system data.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Index-Number"></a>Main-Heating-Index-Number
 
@@ -2028,6 +2316,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The ID of the heating system from the product database, if system from database.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Manufacturer"></a>Main-Heating-Manufacturer
 
@@ -2035,6 +2324,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Model"></a>Main-Heating-Model
 
@@ -2042,6 +2332,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Commissioning-Certificate"></a>Main-Heating-Commissioning-Certificate
 
@@ -2049,6 +2340,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Installation-Engineer"></a>Main-Heating-Installation-Engineer
 
@@ -2056,6 +2348,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Main heating installation engineer registration reference.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Condensing-Boiler"></a>Is-Condensing-Boiler
 
@@ -2063,6 +2356,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is the boiler a condensing boiler? If boiler efficiency is manufacturer declaration.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Condensing-Boiler-Heat-Distribution"></a>Condensing-Boiler-Heat-Distribution
 
@@ -2070,6 +2364,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The temperature distribution of the condensing boiler.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Pump-Heat-Distribution"></a>Heat-Pump-Heat-Distribution
 
@@ -2077,6 +2372,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The temperature distribution of the heat pump, for wet systems only.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Gas-Or-Oil-Boiler-Type"></a>Gas-Or-Oil-Boiler-Type
 
@@ -2084,6 +2380,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Boiler type; if boiler efficiency is manufacturer declaration and fuel is gas or oil.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Combi-Boiler-Type"></a>Combi-Boiler-Type
 
@@ -2091,6 +2388,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Combi boiler type; if it is a combi boiler and boiler efficiency is manufacturer declaration.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Case-Heat-Emission"></a>Case-Heat-Emission
 
@@ -2098,6 +2396,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Case heat emission at full load in kW; if it is a range cooker boiler and boiler efficiency is manufacturer declaration.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Transfer-To-Water"></a>Heat-Transfer-To-Water
 
@@ -2105,6 +2404,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heat transfer to water at full load in kW; if it is a range cooker boiler and boiler efficiency is manufacturer declaration.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Solid-Fuel-Boiler-Type"></a>Solid-Fuel-Boiler-Type
 
@@ -2112,6 +2412,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Boiler type; if boiler efficiency is manufacturer declaration and fuel is solid.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Code"></a>Main-Heating-Code
 
@@ -2119,6 +2420,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Main heating code; when heating data source is SAP table.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Fuel-Type"></a>Main-Fuel-Type
 
@@ -2126,6 +2428,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of fuel used to power the central heating e.g. Gas, Electricity; not used if main heating system is community heating scheme.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/PCDF-Fuel-Index"></a>PCDF-Fuel-Index
 
@@ -2133,6 +2436,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *PCDF index number of the fuel type, only if Main-Fuel-Type is 99 (fuel from database).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Control"></a>Main-Heating-Control
 
@@ -2140,6 +2444,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of Main Control for the Heating System.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heat-Emitter-Type"></a>Heat-Emitter-Type
 
@@ -2147,6 +2452,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Identifies the means by which the central heating system (if present) emits heat; only when wet system (radiators or underfloor).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Underfloor-Heat-Emitter-Type"></a>Underfloor-Heat-Emitter-Type
 
@@ -2154,6 +2460,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Means by which an underfloor heating system (if present) emits heat; only when wet system (underfloor).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Flue-Type"></a>Main-Heating-Flue-Type
 
@@ -2161,6 +2468,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of main heating flue; only if flued appliance.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Flue-Fan-Present"></a>Is-Flue-Fan-Present
 
@@ -2168,6 +2476,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Indicates whether the heating system contains a fan flue; only if boiler.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Central-Heating-Pump-In-Heated-Space"></a>Is-Central-Heating-Pump-In-Heated-Space
 
@@ -2175,6 +2484,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Central heating pump in heated space? Only when wet system (radiators or underfloor).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Oil-Pump-In-Heated-Space"></a>Is-Oil-Pump-In-Heated-Space
 
@@ -2182,6 +2492,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Oil pump in heated space? Only if oil boiler.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Interlocked-System"></a>Is-Interlocked-System
 
@@ -2189,6 +2500,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Interlocked system? Only when wet system (radiators or underfloor).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-Separate-Delayed-Start"></a>Has-Separate-Delayed-Start
 
@@ -2196,6 +2508,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *True if there is a delayed start control separate from a controller in the database.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Boiler-Fuel-Feed"></a>Boiler-Fuel-Feed
 
@@ -2203,6 +2516,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of boiler fuel feed; only if solid fuel boiler with manufacturer declaration.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Is-Main-Heating-HETAS-Approved"></a>Is-Main-Heating-HETAS-Approved
 
@@ -2210,6 +2524,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Main heating appliance is HETAS approved? Only if solid fuel.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Electric-CPSU-Operating-Temperature"></a>Electric-CPSU-Operating-Temperature
 
@@ -2217,6 +2532,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Electric CPSU operating temperature in Celcius; only if main heating is electric CPSU.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Fraction"></a>Main-Heating-Fraction
 
@@ -2224,6 +2540,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Fraction of main heating provided by this system, is 1 if only one main system.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Burner-Control"></a>Burner-Control
 
@@ -2231,6 +2548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Efficiency-Type"></a>Efficiency-Type
 
@@ -2238,6 +2556,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Winter"></a>Main-Heating-Efficiency-Winter
 
@@ -2245,6 +2564,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *To be used if main heating data is manufacturer declaration and Efficiency-Type is winter and summer.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency-Summer"></a>Main-Heating-Efficiency-Summer
 
@@ -2252,6 +2572,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *To be used if main heating data is manufacturer declaration and Efficiency-Type is winter and summer.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Efficiency"></a>Main-Heating-Efficiency
 
@@ -2259,6 +2580,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *If main heating is any system other than heat network.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-System-Type"></a>Main-Heating-System-Type
 
@@ -2266,6 +2588,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Main heating system type or technology, for e.g., combi boiler, air source heat pump, etc.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Has-FGHRS"></a>Has-FGHRS
 
@@ -2273,6 +2596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Flue Gas Heat Recovery System.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Index-Number"></a>FGHRS-Index-Number
 
@@ -2280,6 +2604,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *FGHRS index number; only if FGHRS.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source"></a>FGHRS-Energy-Source
 
@@ -2287,6 +2612,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: [`PV-Arrays`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays) [`Wind-Turbines`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines) [`Electricity-Tariff`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Electricity-Tariff) [`Hydro-Electric-Generation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation) [`Hydro-Electric-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Certificate) [`Hydro-Electric-Generation-Months`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months) [`Is-Hydro-Output-Connected-To-Dwelling-Meter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Is-Hydro-Output-Connected-To-Dwelling-Meter)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays"></a>PV-Arrays
 
@@ -2294,6 +2620,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
+- Child elements: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array"></a>PV-Array
 
@@ -2301,6 +2628,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays)
+- Child elements: [`Peak-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Peak-Power) [`Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Orientation) [`Pitch`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Pitch) [`Overshading`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading) [`MCS-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate) [`MCS-Certificate-Reference`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference) [`PV-Panel-Manufacturer-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/PV-Panel-Manufacturer-Name) [`Overshading-MCS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading-MCS)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Peak-Power"></a>Peak-Power
 
@@ -2308,6 +2636,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Peak kW of photovoltaics (PVs) (kWp); 0.0 if none.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Orientation"></a>Orientation
 
@@ -2315,6 +2644,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *PV orientation; only if peak kWp > 0.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Pitch"></a>Pitch
 
@@ -2322,6 +2652,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *PV pitch; only if peak kWp > 0.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading"></a>Overshading
 
@@ -2329,6 +2660,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *PV overshading; only if peak kWp > 0 and no MCS certificate.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate"></a>MCS-Certificate
 
@@ -2336,6 +2668,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Does the installation have a MCS certificate.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference"></a>MCS-Certificate-Reference
 
@@ -2343,6 +2676,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MCS certificate reference number*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/PV-Panel-Manufacturer-Name"></a>PV-Panel-Manufacturer-Name
 
@@ -2350,6 +2684,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Manufacturer of PV panels*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array/Overshading-MCS"></a>Overshading-MCS
 
@@ -2357,6 +2692,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overshading factor calculated according to MCS.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines"></a>Wind-Turbines
 
@@ -2364,6 +2700,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
+- Child elements: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine"></a>Wind-Turbine
 
@@ -2371,6 +2708,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines)
+- Child elements: [`Wind-Turbine-Manufacturer-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Manufacturer-Name) [`Wind-Turbine-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Certificate) [`Wind-Turbine-Rotor-Diameter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Rotor-Diameter) [`Wind-Turbine-Hub-Height`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Hub-Height)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Manufacturer-Name"></a>Wind-Turbine-Manufacturer-Name
 
@@ -2378,6 +2716,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Wind turbine manufacturer name.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Certificate"></a>Wind-Turbine-Certificate
 
@@ -2385,6 +2724,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Wind turbine certificate.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Rotor-Diameter"></a>Wind-Turbine-Rotor-Diameter
 
@@ -2392,6 +2732,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Wind turbine rotor diameter in metres; only if wind turbine.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Hub-Height"></a>Wind-Turbine-Hub-Height
 
@@ -2399,6 +2740,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Wind turbine hub height above building in metres; only if wind turbine.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Electricity-Tariff"></a>Electricity-Tariff
 
@@ -2406,6 +2748,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of electricity tariff.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation"></a>Hydro-Electric-Generation
 
@@ -2413,6 +2756,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Certificate"></a>Hydro-Electric-Certificate
 
@@ -2420,6 +2764,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Reference to certification of hydro electric output.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months"></a>Hydro-Electric-Generation-Months
 
@@ -2427,6 +2772,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Electricity generated by hydro-electric generator, in kWh/month. To be provided if Hydro-Electric-Generation is not provided.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
+- Child elements: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month"></a>Hydro-Electric-Generation-Month
 
@@ -2434,6 +2780,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months)
+- Child elements: [`Hydro-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Month) [`Hydro-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Month"></a>Hydro-Month
 
@@ -2441,6 +2788,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value"></a>Hydro-Value
 
@@ -2448,6 +2796,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hydro electricity in kWh in month.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Is-Hydro-Output-Connected-To-Dwelling-Meter"></a>Is-Hydro-Output-Connected-To-Dwelling-Meter
 
@@ -2455,6 +2804,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether the hydro-electric station is connected to dwelling's electricity meter*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values"></a>Main-Heating-Declared-Values
 
@@ -2462,6 +2812,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: [`Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Efficiency) [`Make-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Make-Model) [`Test-Method`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Test-Method)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Efficiency"></a>Efficiency
 
@@ -2469,6 +2820,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Make-Model"></a>Make-Model
 
@@ -2476,6 +2828,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values/Test-Method"></a>Test-Method
 
@@ -2483,6 +2836,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters"></a>Storage-Heaters
 
@@ -2490,6 +2844,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: [`Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater"></a>Storage-Heater
 
@@ -2497,6 +2852,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters)
+- Child elements: [`Number-Of-Heaters`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/Number-Of-Heaters) [`Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/Index-Number) [`High-Heat-Retention`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/High-Heat-Retention)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/Number-Of-Heaters"></a>Number-Of-Heaters
 
@@ -2504,6 +2860,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of storage heaters with this index number.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/Index-Number"></a>Index-Number
 
@@ -2511,6 +2868,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The index number of the heater from the product database.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater/High-Heat-Retention"></a>High-Heat-Retention
 
@@ -2518,6 +2876,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether heater is high heat retention type.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Emitter-Temperature"></a>Emitter-Temperature
 
@@ -2525,6 +2884,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Gas and oil boilers and heat pump from database: 0, 1, 3 or 4 Other heat pump 0, 2 or 4. Other systems NA.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/MCS-Installed-Heat-Pump"></a>MCS-Installed-Heat-Pump
 
@@ -2532,6 +2892,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether heat pump was installed under the Microgeneration Certification Scheme.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Central-Heating-Pump-Age"></a>Central-Heating-Pump-Age
 
@@ -2539,6 +2900,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Included for systems with a central heating pump, i.e. wet system.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Control-Index-Number"></a>Control-Index-Number
 
@@ -2546,6 +2908,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The ID of the controller from the product database.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Function"></a>Heating-Controller-Function
 
@@ -2553,6 +2916,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Ecodesign-Class"></a>Heating-Controller-Ecodesign-Class
 
@@ -2560,6 +2924,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Manufacturer"></a>Heating-Controller-Manufacturer
 
@@ -2567,6 +2932,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Heating-Controller-Model"></a>Heating-Controller-Model
 
@@ -2574,6 +2940,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Heating-Design-Water-Use"></a>SAP-Heating-Design-Water-Use
 
@@ -2581,6 +2948,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Systems-Interaction"></a>Main-Heating-Systems-Interaction
 
@@ -2588,6 +2956,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values"></a>Secondary-Heating-Declared-Values
 
@@ -2595,6 +2964,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Use when manufacturer's declared values.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: [`Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Efficiency) [`Make-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Make-Model) [`Test-Method`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Test-Method)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Efficiency"></a>Efficiency
 
@@ -2602,6 +2972,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Make-Model"></a>Make-Model
 
@@ -2609,6 +2980,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values/Test-Method"></a>Test-Method
 
@@ -2616,6 +2988,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Primary-Pipework-Insulation"></a>Primary-Pipework-Insulation
 
@@ -2623,6 +2996,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Not applicable to combi boiler or instantaneous water heater.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details"></a>Solar-Heating-Details
 
@@ -2630,6 +3004,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: [`Solar-Heating-Collector-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Heating-Collector-Manufacturer) [`Solar-Heating-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Heating-Certificate) [`Solar-Panel-Aperture-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Aperture-Area) [`Solar-Panel-Collector-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Type) [`Solar-Panel-Collector-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Data-Source) [`Solar-Panel-Collector-Zero-Loss-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Zero-Loss-Efficiency) [`Solar-Panel-Collector-Heat-Loss-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Heat-Loss-Rate) [`Solar-Panel-Collector-Linear-Heat-Loss-Coefficient`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Linear-Heat-Loss-Coefficient) [`Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient) [`Solar-Panel-Collector-Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Orientation) [`Solar-Panel-Collector-Pitch`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Pitch) [`Solar-Panel-Collector-Overshading`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Overshading) [`Has-Solar-Powered-Pump`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Has-Solar-Powered-Pump) [`Is-Solar-Store-Combined-Cylinder`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Solar-Store-Combined-Cylinder) [`Solar-Store-Volume`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Store-Volume) [`Collector-Loop-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Collector-Loop-Efficiency) [`Incidence-Angle-Modifier`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Incidence-Angle-Modifier) [`Is-Community-Solar`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Community-Solar) [`Service-Provision`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Service-Provision) [`Overall-Heat-Loss`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Overall-Heat-Loss)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Heating-Collector-Manufacturer"></a>Solar-Heating-Collector-Manufacturer
 
@@ -2637,6 +3012,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Panel manufacturer*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Heating-Certificate"></a>Solar-Heating-Certificate
 
@@ -2644,6 +3020,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Solar heating certificate*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Aperture-Area"></a>Solar-Panel-Aperture-Area
 
@@ -2651,6 +3028,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Panel aperture area in square metres.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Type"></a>Solar-Panel-Collector-Type
 
@@ -2658,6 +3036,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of solar panel collector.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Data-Source"></a>Solar-Panel-Collector-Data-Source
 
@@ -2665,6 +3044,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Source of solar panel collector data.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Zero-Loss-Efficiency"></a>Solar-Panel-Collector-Zero-Loss-Efficiency
 
@@ -2672,6 +3052,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Collector zero-loss efficiency; only if declared values.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Heat-Loss-Rate"></a>Solar-Panel-Collector-Heat-Loss-Rate
 
@@ -2679,6 +3060,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Collector heat loss rate; for backward compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Linear-Heat-Loss-Coefficient"></a>Solar-Panel-Collector-Linear-Heat-Loss-Coefficient
 
@@ -2686,6 +3068,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Collector linear heat loss coefficient; only if declared values.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient"></a>Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient
 
@@ -2693,6 +3076,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Collector 2nd order heat loss coefficient; only if declared values.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Orientation"></a>Solar-Panel-Collector-Orientation
 
@@ -2700,6 +3084,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Collector orientation.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Pitch"></a>Solar-Panel-Collector-Pitch
 
@@ -2707,6 +3092,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Panel-Collector-Overshading"></a>Solar-Panel-Collector-Overshading
 
@@ -2714,6 +3100,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Has-Solar-Powered-Pump"></a>Has-Solar-Powered-Pump
 
@@ -2721,6 +3108,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Solar-Store-Combined-Cylinder"></a>Is-Solar-Store-Combined-Cylinder
 
@@ -2728,6 +3116,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Solar-Store-Volume"></a>Solar-Store-Volume
 
@@ -2735,6 +3124,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Dedicated solar store volume in litres.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Collector-Loop-Efficiency"></a>Collector-Loop-Efficiency
 
@@ -2742,6 +3132,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Collector loop efficiency; only if declared values.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Incidence-Angle-Modifier"></a>Incidence-Angle-Modifier
 
@@ -2749,6 +3140,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Incidence angle modifier; only if declared values.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Is-Community-Solar"></a>Is-Community-Solar
 
@@ -2756,6 +3148,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Service-Provision"></a>Service-Provision
 
@@ -2763,6 +3156,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details/Overall-Heat-Loss"></a>Overall-Heat-Loss
 
@@ -2770,6 +3164,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overall heat loss coefficient of system; only if declared values.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS"></a>Instantaneous-WWHRS
 
@@ -2777,6 +3172,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Waste Water Heat Recovery System.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: [`WWHRS-Index-Number1`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Index-Number1) [`WWHRS-Index-Number2`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Index-Number2) [`WWHRS-Efficiency1`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Efficiency1) [`WWHRS-Manufacturer1`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Manufacturer1) [`WWHRS-Model1`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Model1) [`WWHRS-Efficiency2`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Efficiency2) [`WWHRS-Manufacturer2`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Manufacturer2) [`WWHRS-Model2`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Model2)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Index-Number1"></a>WWHRS-Index-Number1
 
@@ -2784,6 +3180,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Index-Number2"></a>WWHRS-Index-Number2
 
@@ -2791,6 +3188,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Omit if no second system.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Efficiency1"></a>WWHRS-Efficiency1
 
@@ -2798,6 +3196,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Manufacturer1"></a>WWHRS-Manufacturer1
 
@@ -2805,6 +3204,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Model1"></a>WWHRS-Model1
 
@@ -2812,6 +3212,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Efficiency2"></a>WWHRS-Efficiency2
 
@@ -2819,6 +3220,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Manufacturer2"></a>WWHRS-Manufacturer2
 
@@ -2826,6 +3228,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS/WWHRS-Model2"></a>WWHRS-Model2
 
@@ -2833,6 +3236,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS"></a>Storage-WWHRS
 
@@ -2840,6 +3244,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: [`WWHRS-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/WWHRS-Index-Number) [`WWHRS-Store-Volume`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/WWHRS-Store-Volume) [`Storage-WWHRS-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Efficiency) [`Storage-WWHRS-Manufacturer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Manufacturer) [`Storage-WWHRS-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Model)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/WWHRS-Index-Number"></a>WWHRS-Index-Number
 
@@ -2847,6 +3252,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/WWHRS-Store-Volume"></a>WWHRS-Store-Volume
 
@@ -2854,6 +3260,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Dedicated store volume in litres.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Efficiency"></a>Storage-WWHRS-Efficiency
 
@@ -2861,6 +3268,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Manufacturer"></a>Storage-WWHRS-Manufacturer
 
@@ -2868,6 +3276,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS/Storage-WWHRS-Model"></a>Storage-WWHRS-Model
 
@@ -2875,6 +3284,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets"></a>Shower-Outlets
 
@@ -2882,6 +3292,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: [`Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet"></a>Shower-Outlet
 
@@ -2889,6 +3300,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets)
+- Child elements: [`Shower-Outlet-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Outlet-Type) [`Shower-Flow-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Flow-Rate) [`Shower-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Power) [`Shower-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-WWHRS)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Outlet-Type"></a>Shower-Outlet-Type
 
@@ -2896,6 +3308,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hot water type for this shower outlet.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Flow-Rate"></a>Shower-Flow-Rate
 
@@ -2903,6 +3316,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The flow rate. Only when a shower is not instantaneous electric. Leave blank if NO flow limiter fitted.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-Power"></a>Shower-Power
 
@@ -2910,6 +3324,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The shower power, only if shower outlet type is instantaneous electric.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet/Shower-WWHRS"></a>Shower-WWHRS
 
@@ -2917,6 +3332,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The WWHRS with which the shower is connected. If shower outlet type is instantaneous electric shower then only a storage WWHRS can be selected or none.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths"></a>Number-Baths
 
@@ -2924,6 +3340,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Number-Baths-WWHRS"></a>Number-Baths-WWHRS
 
@@ -2931,6 +3348,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source"></a>SAP-Energy-Source
 
@@ -2938,6 +3356,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`PV-Arrays`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays) [`Wind-Turbines`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines) [`Electricity-Tariff`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Electricity-Tariff) [`Hydro-Electric-Generation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation) [`Hydro-Electric-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Certificate) [`Hydro-Electric-Generation-Months`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months) [`Is-Hydro-Output-Connected-To-Dwelling-Meter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Is-Hydro-Output-Connected-To-Dwelling-Meter)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays"></a>PV-Arrays
 
@@ -2945,6 +3364,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
+- Child elements: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array"></a>PV-Array
 
@@ -2952,6 +3372,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays)
+- Child elements: [`Peak-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Peak-Power) [`Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Orientation) [`Pitch`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Pitch) [`Overshading`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading) [`MCS-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate) [`MCS-Certificate-Reference`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference) [`PV-Panel-Manufacturer-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/PV-Panel-Manufacturer-Name) [`Overshading-MCS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading-MCS)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Peak-Power"></a>Peak-Power
 
@@ -2959,6 +3380,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Peak kW of photovoltaics (PVs) (kWp); 0.0 if none.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Orientation"></a>Orientation
 
@@ -2966,6 +3388,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *PV orientation; only if peak kWp > 0.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Pitch"></a>Pitch
 
@@ -2973,6 +3396,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *PV pitch; only if peak kWp > 0.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading"></a>Overshading
 
@@ -2980,6 +3404,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *PV overshading; only if peak kWp > 0 and no MCS certificate.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate"></a>MCS-Certificate
 
@@ -2987,6 +3412,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Does the installation have a MCS certificate.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/MCS-Certificate-Reference"></a>MCS-Certificate-Reference
 
@@ -2994,6 +3420,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MCS certificate reference number*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/PV-Panel-Manufacturer-Name"></a>PV-Panel-Manufacturer-Name
 
@@ -3001,6 +3428,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Manufacturer of PV panels*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array/Overshading-MCS"></a>Overshading-MCS
 
@@ -3008,6 +3436,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Overshading factor calculated according to MCS.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines"></a>Wind-Turbines
 
@@ -3015,6 +3444,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
+- Child elements: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine"></a>Wind-Turbine
 
@@ -3022,6 +3452,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines)
+- Child elements: [`Wind-Turbine-Manufacturer-Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Manufacturer-Name) [`Wind-Turbine-Certificate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Certificate) [`Wind-Turbine-Rotor-Diameter`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Rotor-Diameter) [`Wind-Turbine-Hub-Height`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Hub-Height)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Manufacturer-Name"></a>Wind-Turbine-Manufacturer-Name
 
@@ -3029,6 +3460,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Wind turbine manufacturer name.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Certificate"></a>Wind-Turbine-Certificate
 
@@ -3036,6 +3468,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Wind turbine certificate.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Rotor-Diameter"></a>Wind-Turbine-Rotor-Diameter
 
@@ -3043,6 +3476,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Wind turbine rotor diameter in metres; only if wind turbine.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine/Wind-Turbine-Hub-Height"></a>Wind-Turbine-Hub-Height
 
@@ -3050,6 +3484,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Wind turbine hub height above building in metres; only if wind turbine.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Electricity-Tariff"></a>Electricity-Tariff
 
@@ -3057,6 +3492,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of electricity tariff.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation"></a>Hydro-Electric-Generation
 
@@ -3064,6 +3500,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Certificate"></a>Hydro-Electric-Certificate
 
@@ -3071,6 +3508,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Reference to certification of hydro electric output.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months"></a>Hydro-Electric-Generation-Months
 
@@ -3078,6 +3516,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Electricity generated by hydro-electric generator, in kWh/month. To be provided if Hydro-Electric-Generation is not provided.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
+- Child elements: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month"></a>Hydro-Electric-Generation-Month
 
@@ -3085,6 +3524,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months)
+- Child elements: [`Hydro-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Month) [`Hydro-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Month"></a>Hydro-Month
 
@@ -3092,6 +3532,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month/Hydro-Value"></a>Hydro-Value
 
@@ -3099,6 +3540,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Hydro electricity in kWh in month.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Is-Hydro-Output-Connected-To-Dwelling-Meter"></a>Is-Hydro-Output-Connected-To-Dwelling-Meter
 
@@ -3106,6 +3548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether the hydro-electric station is connected to dwelling's electricity meter*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts"></a>SAP-Building-Parts
 
@@ -3113,6 +3556,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part"></a>SAP-Building-Part
 
@@ -3120,6 +3564,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts)
+- Child elements: [`Building-Part-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Building-Part-Number) [`Identifier`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Identifier) [`Construction-Year`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Construction-Year) [`Construction-Age-Band`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Construction-Age-Band) [`SAP-Openings`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings) [`SAP-Roofs`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs) [`SAP-Floor-Dimensions`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions) [`SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges) [`SAP-Walls`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Building-Part-Number"></a>Building-Part-Number
 
@@ -3127,6 +3572,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *An integer value which uniquely identifies the building part in the property. The value "1" must be assigned to the main dwelling.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Identifier"></a>Identifier
 
@@ -3134,6 +3580,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Identifier for the Building part - generally only required if there are more that one Building Parts of the same type e.g. "West Wing" and "East Wing" Extensions*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Construction-Year"></a>Construction-Year
 
@@ -3141,6 +3588,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The year when this building part was constructed. Not used if 'Construction-Age-Band' is used.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/Construction-Age-Band"></a>Construction-Age-Band
 
@@ -3148,6 +3596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The age band when this building part was constructed. Not used if 'Construction-Year' is used.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings"></a>SAP-Openings
 
@@ -3155,6 +3604,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening"></a>SAP-Opening
 
@@ -3162,6 +3612,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings)
+- Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Name) [`Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Type) [`Location`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Location) [`Orientation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Orientation) [`Width`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Width) [`Height`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Height) [`Pitch`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Pitch)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Name"></a>Name
 
@@ -3169,6 +3620,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Unique name which identifies this opening. Can be just a number, e.g. "1". However, an opening cannot have the same name as a wall.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Type"></a>Type
 
@@ -3176,6 +3628,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The name of the SAP-Opening-Type for this opening.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Location"></a>Location
 
@@ -3183,6 +3636,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Name of the wall or roof which contains the opening.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Orientation"></a>Orientation
 
@@ -3190,6 +3644,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Compass direction in which the opening faces.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Width"></a>Width
 
@@ -3197,6 +3652,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The width of the opening in metres. If the Width field is used to record the opening area, set the Height to 1.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Height"></a>Height
 
@@ -3204,6 +3660,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The height of the opening in metres. If the Height field is used to record the opening area, set the Width to 1.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening/Pitch"></a>Pitch
 
@@ -3211,6 +3668,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Pitch of roof containing roof window.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs"></a>SAP-Roofs
 
@@ -3218,6 +3676,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof"></a>SAP-Roof
 
@@ -3225,6 +3684,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs)
+- Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Name) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Description) [`Roof-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Roof-Type) [`Total-Roof-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Total-Roof-Area) [`U-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/U-Value) [`Kappa-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Kappa-Value)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Name"></a>Name
 
@@ -3232,6 +3692,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Unique name which identifies this roof. Can be just a number, e.g. "1". However, a roof cannot have the same name as a wall.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Description"></a>Description
 
@@ -3239,6 +3700,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Descriptive notes about the roof.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Roof-Type"></a>Roof-Type
 
@@ -3246,6 +3708,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Total-Roof-Area"></a>Total-Roof-Area
 
@@ -3253,6 +3716,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Total roof area in square metres, inclusive of any openings.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/U-Value"></a>U-Value
 
@@ -3260,6 +3724,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Exposed roof U-value.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof/Kappa-Value"></a>Kappa-Value
 
@@ -3267,6 +3732,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heat capacity per unit area in kJ/m2K.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions"></a>SAP-Floor-Dimensions
 
@@ -3274,6 +3740,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension"></a>SAP-Floor-Dimension
 
@@ -3281,6 +3748,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions)
+- Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Name) [`Storey`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Storey) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Description) [`Floor-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Floor-Type) [`Total-Floor-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Total-Floor-Area) [`Storey-Height`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Storey-Height) [`Heat-Loss-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Heat-Loss-Area) [`U-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/U-Value) [`Kappa-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Kappa-Value) [`Kappa-Value-From-Below`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Kappa-Value-From-Below)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Name"></a>Name
 
@@ -3288,6 +3756,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *A name describing the floor dimensioned.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Storey"></a>Storey
 
@@ -3295,6 +3764,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Building storey on which the floor is located.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Description"></a>Description
 
@@ -3302,6 +3772,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Descriptive notes about the floor.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Floor-Type"></a>Floor-Type
 
@@ -3309,6 +3780,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of floor (exposure).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Total-Floor-Area"></a>Total-Floor-Area
 
@@ -3316,6 +3788,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The total floor area of the storey in square metres.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Storey-Height"></a>Storey-Height
 
@@ -3323,6 +3796,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Average height of the storey in metres.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Heat-Loss-Area"></a>Heat-Loss-Area
 
@@ -3330,6 +3804,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The estimated total heat loss area for the floor in square metres.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/U-Value"></a>U-Value
 
@@ -3337,6 +3812,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heat loss floor U-value.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Kappa-Value"></a>Kappa-Value
 
@@ -3344,6 +3820,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heat capacity of floor per unit area in kJ/m2K.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Kappa-Value-From-Below"></a>Kappa-Value-From-Below
 
@@ -3351,6 +3828,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heat capacity of ceiling below. Applies to the non-heat-loss area of an upper floor.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges"></a>SAP-Thermal-Bridges
 
@@ -3358,6 +3836,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: [`Thermal-Bridge-Code`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/Thermal-Bridge-Code) [`User-Defined-Y-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/User-Defined-Y-Value) [`Calculation-Reference`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/Calculation-Reference) [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/Thermal-Bridge-Code"></a>Thermal-Bridge-Code
 
@@ -3365,6 +3844,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Code which indicates how the thermal bridge data has been recorded.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/User-Defined-Y-Value"></a>User-Defined-Y-Value
 
@@ -3372,6 +3852,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Global y-value for all thermal bridges in watts per square metre per kelvin; only if thermal bridge code is: user defined (global y-value)*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/Calculation-Reference"></a>Calculation-Reference
 
@@ -3379,6 +3860,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Reference to the details of the calculation of the global y-value; only if thermal bridging is user defined global y-value.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge"></a>SAP-Thermal-Bridge
 
@@ -3386,6 +3868,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
+- Child elements: [`Thermal-Bridge-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Thermal-Bridge-Type) [`Length`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Length) [`Psi-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value) [`Psi-Value-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Source) [`Psi-Value-Calculation-Reference`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Calculation-Reference)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Thermal-Bridge-Type"></a>Thermal-Bridge-Type
 
@@ -3393,6 +3876,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Code to indicate a particular type of thermal bridge; only if thermal bridge code is: user defined (individual values).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Length"></a>Length
 
@@ -3400,6 +3884,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Length of the thermal bridge in metres; only if thermal bridge code is: user defined (individual values).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value"></a>Psi-Value
 
@@ -3407,6 +3892,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Linear thermal transmittance (psi-value); only if thermal bridging is user defined individual values.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Source"></a>Psi-Value-Source
 
@@ -3414,6 +3900,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge/Psi-Value-Calculation-Reference"></a>Psi-Value-Calculation-Reference
 
@@ -3421,6 +3908,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Reference to the details of the calculation of the psi-value.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls"></a>SAP-Walls
 
@@ -3428,6 +3916,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
+- Child elements: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall"></a>SAP-Wall
 
@@ -3435,6 +3924,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls)
+- Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Name) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Description) [`Wall-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Wall-Type) [`Total-Wall-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Total-Wall-Area) [`U-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/U-Value) [`Is-Curtain-Walling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Is-Curtain-Walling) [`Kappa-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Kappa-Value)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Name"></a>Name
 
@@ -3442,6 +3932,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Unique name which identifies this wall within its storey. Can be just a number, e.g. "1". However, a wall cannot have the same name as an opening or a roof.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Description"></a>Description
 
@@ -3449,6 +3940,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Descriptive notes about the wall.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Wall-Type"></a>Wall-Type
 
@@ -3456,6 +3948,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Type of wall (exposure).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Total-Wall-Area"></a>Total-Wall-Area
 
@@ -3463,6 +3956,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Total wall area in square metres, inclusive of any openings.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/U-Value"></a>U-Value
 
@@ -3470,6 +3964,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Exposed wall U-value.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Is-Curtain-Walling"></a>Is-Curtain-Walling
 
@@ -3477,6 +3972,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether the wall is curtain walling, i.e. a facade construction consisting of a frame of aluminium vertical and horizontal members, infilled with glazing units and opaque panels.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall/Kappa-Value"></a>Kappa-Value
 
@@ -3484,6 +3980,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Heat capacity per unit area in kJ/m2K.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types"></a>SAP-Opening-Types
 
@@ -3491,6 +3988,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type"></a>SAP-Opening-Type
 
@@ -3498,6 +3996,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types)
+- Child elements: [`Name`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Name) [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Description) [`Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Data-Source) [`Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Type) [`Glazing-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Type) [`Glazing-Gap`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Gap) [`IsArgonFilled`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsArgonFilled) [`IsKryptonFilled`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsKryptonFilled) [`Frame-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Type) [`Solar-Transmittance`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Solar-Transmittance) [`Frame-Factor`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Factor) [`U-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/U-Value)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Name"></a>Name
 
@@ -3505,6 +4004,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Unique name which identifies this opening type. Can be just a number, e.g. "1".*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Description"></a>Description
 
@@ -3512,6 +4012,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Descriptive notes about the opening type.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Data-Source"></a>Data-Source
 
@@ -3519,6 +4020,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The source of the data for this type of opening.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Type"></a>Type
 
@@ -3526,6 +4028,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The (physical) type of opening that this opening type represents.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Type"></a>Glazing-Type
 
@@ -3533,6 +4036,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of glazing; if U-value is from BFRC or manufacturer declaration, give as one of - single - double - triple.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Glazing-Gap"></a>Glazing-Gap
 
@@ -3540,6 +4044,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Gap between glass panes; only if SAP table and double, triple glazed or secondary glazing.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsArgonFilled"></a>IsArgonFilled
 
@@ -3547,6 +4052,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is the opening argon-filled? Only if SAP table.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/IsKryptonFilled"></a>IsKryptonFilled
 
@@ -3554,6 +4060,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is the opening krypton-filled? Only if SAP table.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Type"></a>Frame-Type
 
@@ -3561,6 +4068,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of frame, only if data source is SAP table and it is a window, roof window or half-glazed door.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Solar-Transmittance"></a>Solar-Transmittance
 
@@ -3568,6 +4076,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The solar transmittance; not if a door.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/Frame-Factor"></a>Frame-Factor
 
@@ -3575,6 +4084,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The frame factor; not if a door.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type/U-Value"></a>U-Value
 
@@ -3582,6 +4092,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The U-value. For rooflights, the U-value should be in the horizontal plane.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation"></a>SAP-Ventilation
 
@@ -3589,6 +4100,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`Closed-Flues-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Closed-Flues-Count) [`Open-Flues-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Open-Flues-Count) [`Boilers-Flues-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Boilers-Flues-Count) [`Other-Flues-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Other-Flues-Count) [`Open-Chimneys-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Open-Chimneys-Count) [`Blocked-Chimneys-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Blocked-Chimneys-Count) [`Fans-Vents-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Fans-Vents-Count) [`Flueless-Gas-Fires-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Flueless-Gas-Fires-Count) [`Pressure-Test`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test) [`Pressure-Test-Certificate-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test-Certificate-Number) [`Air-Permeability`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Air-Permeability) [`Ground-Floor-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Ground-Floor-Type) [`Wall-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wall-Type) [`Has-Draught-Lobby`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Has-Draught-Lobby) [`DraughtStripping`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/DraughtStripping) [`Sheltered-Sides-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Sheltered-Sides-Count) [`Ventilation-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Ventilation-Type) [`Mechanical-Ventilation-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Ventilation-Data-Source) [`Mechanical-Vent-System-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Index-Number) [`Mechanical-Vent-Commissioning-Certificate-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Commissioning-Certificate-Number) [`Mechanical-Vent-Installation-Engineer`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Installation-Engineer) [`Mechanical-Vent-System-Make-Model`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Make-Model) [`Wet-Rooms-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wet-Rooms-Count) [`Mechanical-Vent-Specific-Fan-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Specific-Fan-Power) [`Mechanical-Vent-Heat-Recovery-Efficiency`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Heat-Recovery-Efficiency) [`Mechanical-Vent-Duct-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Type) [`Mechanical-Vent-Duct-Insulation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation) [`Mechanical-Vent-Duct-Insulation-Level`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation-Level) [`Mechanical-Vent-Duct-Placement`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Placement) [`Mechanical-Vent-Measured-Installation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Measured-Installation) [`Kitchen-Room-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Count) [`Kitchen-Room-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Specific-Power) [`Non-Kitchen-Room-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Room-Fans-Count) [`Non-Kitchen-Room-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Room-Fans-Specific-Power) [`Kitchen-Duct-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Duct-Fans-Count) [`Kitchen-Duct-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Duct-Fans-Specific-Power) [`Non-Kitchen-Duct-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Duct-Fans-Count) [`Non-Kitchen-Duct-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Duct-Fans-Specific-Power) [`Kitchen-Wall-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Wall-Fans-Count) [`Kitchen-Wall-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Wall-Fans-Specific-Power) [`Non-Kitchen-Wall-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Wall-Fans-Count) [`Non-Kitchen-Wall-Fans-Specific-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Wall-Fans-Specific-Power) [`Extract-Fans-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Extract-Fans-Count) [`PSV-Count`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/PSV-Count) [`Is-Mechanical-Vent-Approved-Installer-Scheme`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Is-Mechanical-Vent-Approved-Installer-Scheme) [`Mechanical-Vent-Ducts-Index-Number`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Ducts-Index-Number)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Closed-Flues-Count"></a>Closed-Flues-Count
 
@@ -3596,6 +4108,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of Closed Flues or chimneys in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Open-Flues-Count"></a>Open-Flues-Count
 
@@ -3603,6 +4116,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of Open Flues in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Boilers-Flues-Count"></a>Boilers-Flues-Count
 
@@ -3610,6 +4124,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of Boiler Flues or chimneys in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Other-Flues-Count"></a>Other-Flues-Count
 
@@ -3617,6 +4132,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of Other Flues or chimneys in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Open-Chimneys-Count"></a>Open-Chimneys-Count
 
@@ -3624,6 +4140,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of Open Chimneys in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Blocked-Chimneys-Count"></a>Blocked-Chimneys-Count
 
@@ -3631,6 +4148,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of Blocked Chimneys in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Fans-Vents-Count"></a>Fans-Vents-Count
 
@@ -3638,6 +4156,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For backward compatibility only, do not use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Flueless-Gas-Fires-Count"></a>Flueless-Gas-Fires-Count
 
@@ -3645,6 +4164,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of flueless gas fires in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test"></a>Pressure-Test
 
@@ -3652,6 +4172,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Whether there has been a pressure test, or whether an assumed value is used for the air permeability.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Pressure-Test-Certificate-Number"></a>Pressure-Test-Certificate-Number
 
@@ -3659,6 +4180,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The pressure test certificate number or test engineer reference.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Air-Permeability"></a>Air-Permeability
 
@@ -3666,6 +4188,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Air permeability; only if pressure test (yes or assumed).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Ground-Floor-Type"></a>Ground-Floor-Type
 
@@ -3673,6 +4196,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of ground floor; nly if no pressure test.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wall-Type"></a>Wall-Type
 
@@ -3680,6 +4204,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The construction of the walls; only if no pressure test.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Has-Draught-Lobby"></a>Has-Draught-Lobby
 
@@ -3687,6 +4212,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is there a draft lobby? Only if no pressure test.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/DraughtStripping"></a>DraughtStripping
 
@@ -3694,6 +4220,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Draughtstripping percentage; only if no pressure test.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Sheltered-Sides-Count"></a>Sheltered-Sides-Count
 
@@ -3701,6 +4228,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of sheltered sides in the Property.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Ventilation-Type"></a>Ventilation-Type
 
@@ -3708,6 +4236,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The type of ventilation.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Ventilation-Data-Source"></a>Mechanical-Ventilation-Data-Source
 
@@ -3715,6 +4244,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Source of mechanical ventilation data; only if mechanical ventilation.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Index-Number"></a>Mechanical-Vent-System-Index-Number
 
@@ -3722,6 +4252,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical vent system index number; if mechanical vent data from database (MEV c, MEV dc, MV, MVHR).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Commissioning-Certificate-Number"></a>Mechanical-Vent-Commissioning-Certificate-Number
 
@@ -3729,6 +4260,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical ventilation Commissioning certificate number .*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Installation-Engineer"></a>Mechanical-Vent-Installation-Engineer
 
@@ -3736,6 +4268,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical ventilation installation engineer registration reference.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-System-Make-Model"></a>Mechanical-Vent-System-Make-Model
 
@@ -3743,6 +4276,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical ventilation system make and model.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Wet-Rooms-Count"></a>Wet-Rooms-Count
 
@@ -3750,6 +4284,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Number of wet rooms, including the kitchen; if mech vent data from manufacturer declaration or database (MEV c, MV, MVHR).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Specific-Fan-Power"></a>Mechanical-Vent-Specific-Fan-Power
 
@@ -3757,6 +4292,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical vent specific fan power in watts per (litres per second); if mechanical vent data (PIV from outside, MEV c or dc, MV, MVHR).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Heat-Recovery-Efficiency"></a>Mechanical-Vent-Heat-Recovery-Efficiency
 
@@ -3764,6 +4300,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical vent heat recovery efficiency percentage; if mechanical vent (MVHR).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Type"></a>Mechanical-Vent-Duct-Type
 
@@ -3771,6 +4308,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical vent duct type; if MEV c, MV or MVHR.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation"></a>Mechanical-Vent-Duct-Insulation
 
@@ -3778,6 +4316,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical vent duct insulation; if MVHR.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Insulation-Level"></a>Mechanical-Vent-Duct-Insulation-Level
 
@@ -3785,6 +4324,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical vent duct insulation; if MVHR.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Duct-Placement"></a>Mechanical-Vent-Duct-Placement
 
@@ -3792,6 +4332,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical ventilation duct insulation; if MVHR.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Measured-Installation"></a>Mechanical-Vent-Measured-Installation
 
@@ -3799,6 +4340,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical ventilation SPF measured in situ; if MVHR or balanced.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Count"></a>Kitchen-Room-Fans-Count
 
@@ -3806,6 +4348,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, number of fans in room, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Room-Fans-Specific-Power"></a>Kitchen-Room-Fans-Specific-Power
 
@@ -3813,6 +4356,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, specific fan power of fans in room, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Room-Fans-Count"></a>Non-Kitchen-Room-Fans-Count
 
@@ -3820,6 +4364,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, number of fans in room, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Room-Fans-Specific-Power"></a>Non-Kitchen-Room-Fans-Specific-Power
 
@@ -3827,6 +4372,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, specific fan power of fans in room, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Duct-Fans-Count"></a>Kitchen-Duct-Fans-Count
 
@@ -3834,6 +4380,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, number of fans via duct, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Duct-Fans-Specific-Power"></a>Kitchen-Duct-Fans-Specific-Power
 
@@ -3841,6 +4388,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, specific fan power of fans via duct, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Duct-Fans-Count"></a>Non-Kitchen-Duct-Fans-Count
 
@@ -3848,6 +4396,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, number of fans via duct, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Duct-Fans-Specific-Power"></a>Non-Kitchen-Duct-Fans-Specific-Power
 
@@ -3855,6 +4404,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, specific fan power of fans via duct, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Wall-Fans-Count"></a>Kitchen-Wall-Fans-Count
 
@@ -3862,6 +4412,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, number of fans through wall, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Kitchen-Wall-Fans-Specific-Power"></a>Kitchen-Wall-Fans-Specific-Power
 
@@ -3869,6 +4420,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, specific fan power of fans through wall, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Wall-Fans-Count"></a>Non-Kitchen-Wall-Fans-Count
 
@@ -3876,6 +4428,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, number of fans through wall, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Non-Kitchen-Wall-Fans-Specific-Power"></a>Non-Kitchen-Wall-Fans-Specific-Power
 
@@ -3883,6 +4436,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *MEV dc, specific fan power of fans through wall, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Extract-Fans-Count"></a>Extract-Fans-Count
 
@@ -3890,6 +4444,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/PSV-Count"></a>PSV-Count
 
@@ -3897,6 +4452,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Is-Mechanical-Vent-Approved-Installer-Scheme"></a>Is-Mechanical-Vent-Approved-Installer-Scheme
 
@@ -3904,6 +4460,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation/Mechanical-Vent-Ducts-Index-Number"></a>Mechanical-Vent-Ducts-Index-Number
 
@@ -3911,6 +4468,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Mechanical vent ducts index number; if applicable.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting"></a>SAP-Lighting
 
@@ -3918,6 +4476,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`Fixed-Lights`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights"></a>Fixed-Lights
 
@@ -3925,6 +4484,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The record of a lighting type within the building.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting)
+- Child elements: [`Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light"></a>Fixed-Light
 
@@ -3932,6 +4492,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights)
+- Child elements: [`Lighting-Efficacy`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Efficacy) [`Lighting-Power`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Power) [`Lighting-Outlets`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Outlets)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Efficacy"></a>Lighting-Efficacy
 
@@ -3939,6 +4500,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The efficacy of the lighting type in lumens/Watt.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Power"></a>Lighting-Power
 
@@ -3946,6 +4508,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The power of the selected lighting type in Watts.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light/Lighting-Outlets"></a>Lighting-Outlets
 
@@ -3953,6 +4516,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The number of light fitting outlets of that type.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements"></a>SAP-Deselected-Improvements
 
@@ -3960,6 +4524,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`Deselected-Improvement-Measure`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements/Deselected-Improvement-Measure)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements/Deselected-Improvement-Measure"></a>Deselected-Improvement-Measure
 
@@ -3967,6 +4532,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details"></a>SAP-Flat-Details
 
@@ -3974,6 +4540,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`Level`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Level) [`Storeys`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Storeys)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Level"></a>Level
 
@@ -3981,6 +4548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Indication of where a flat is located in a building.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details/Storeys"></a>Storeys
 
@@ -3988,6 +4556,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Count of number of storeys present in the block of flats.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features"></a>SAP-Special-Features
 
@@ -3995,6 +4564,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`SAP-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature"></a>SAP-Special-Feature
 
@@ -4002,6 +4572,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features)
+- Child elements: [`Description`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Description) [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature) [`Emissions-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Description"></a>Description
 
@@ -4009,6 +4580,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature"></a>Energy-Feature
 
@@ -4016,6 +4588,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature)
+- Child elements: [`Energy-Saved-Or-Generated`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Saved-Or-Generated) [`Saved-Or-Generated-Fuel`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Saved-Or-Generated-Fuel) [`Energy-Used`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used) [`Energy-Used-Fuel`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used-Fuel) [`Air-Change-Rates`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Saved-Or-Generated"></a>Energy-Saved-Or-Generated
 
@@ -4023,6 +4596,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Energy saved or generated in kWh/year.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Saved-Or-Generated-Fuel"></a>Saved-Or-Generated-Fuel
 
@@ -4030,6 +4604,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used"></a>Energy-Used
 
@@ -4037,6 +4612,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Energy used in kWh/year.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Energy-Used-Fuel"></a>Energy-Used-Fuel
 
@@ -4044,6 +4620,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates"></a>Air-Change-Rates
 
@@ -4051,6 +4628,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *For Appendix Q procedure that provides air change rates. Only one Special Feature can have data on air change rates.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
+- Child elements: [`Air-Change-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate"></a>Air-Change-Rate
 
@@ -4058,6 +4636,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates)
+- Child elements: [`Air-Change-Rate-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Month) [`Air-Change-Rate-Value`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Value)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Month"></a>Air-Change-Rate-Month
 
@@ -4065,6 +4644,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate/Air-Change-Rate-Value"></a>Air-Change-Rate-Value
 
@@ -4072,6 +4652,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Air change rate in month.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature"></a>Emissions-Feature
 
@@ -4079,6 +4660,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature)
+- Child elements: [`Emissions-Saved`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature/Emissions-Saved) [`Emissions-Created`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature/Emissions-Created)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature/Emissions-Saved"></a>Emissions-Saved
 
@@ -4086,6 +4668,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Emissions saved in kg/year.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature/Emissions-Created"></a>Emissions-Created
 
@@ -4093,6 +4676,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Additional emissions in kg/year.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Design-Water-Use"></a>Design-Water-Use
 
@@ -4100,6 +4684,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Design limit for total water use.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling"></a>SAP-Cooling
 
@@ -4107,6 +4692,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
+- Child elements: [`Cooled-Area`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooled-Area) [`Cooling-System-Data-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Data-Source) [`Cooling-System-Class`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Class) [`System-Energy-Efficiency-Ratio`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/System-Energy-Efficiency-Ratio)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooled-Area"></a>Cooled-Area
 
@@ -4114,6 +4700,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Data-Source"></a>Cooling-System-Data-Source
 
@@ -4121,6 +4708,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/Cooling-System-Class"></a>Cooling-System-Class
 
@@ -4128,6 +4716,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Data set includes either class or SEER, not both.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling/System-Energy-Efficiency-Ratio"></a>System-Energy-Efficiency-Ratio
 
@@ -4135,6 +4724,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *SEER.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/PDF"></a>PDF
 
@@ -4142,6 +4732,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *DEPRECATED - DO NOT USE This element is allowed for backwards-compatibility but any data sent here will not be read, processed or stored by the register.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details"></a>Insurance-Details
 
@@ -4149,6 +4740,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: [`Insurer`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/Insurer) [`Policy-No`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/Policy-No) [`Effective-Date`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/Effective-Date) [`Expiry-Date`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/Expiry-Date) [`PI-Limit`](#SAP-Compliance-Report/SAP-Report/Insurance-Details/PI-Limit)
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/Insurer"></a>Insurer
 
@@ -4156,6 +4748,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The name of the insurance company that underwrites / issued the insurance policy*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/Policy-No"></a>Policy-No
 
@@ -4163,6 +4756,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The policy number of the insurance policy*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/Effective-Date"></a>Effective-Date
 
@@ -4170,6 +4764,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The date that the insurance policy becomes effective (commences cover)*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/Expiry-Date"></a>Expiry-Date
 
@@ -4177,6 +4772,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The date that the insurance policy is supposed to expire.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/Insurance-Details/PI-Limit"></a>PI-Limit
 
@@ -4184,6 +4780,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The upper limit of the Professional Indemnity cover provided by the insurance policy.*
 - Parent element: [`SAP-Compliance-Report/SAP-Report/Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/SAP-Report/ExternalDefinitions-Revision-Number"></a>ExternalDefinitions-Revision-Number
 
@@ -4191,6 +4788,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *A number indicating the version of related ExternalDefinitions.xsd*
 - Parent element: [`SAP-Compliance-Report/SAP-Report`](#SAP-Compliance-Report/SAP-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/Client-Name"></a>Client-Name
 
@@ -4198,6 +4796,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Name of the client. External to the EPC schema for GDPR purposes.*
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/Client-Company"></a>Client-Company
 
@@ -4205,6 +4804,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Company name of the client. External to the EPC schema for GDPR purposes.*
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/Client-Address"></a>Client-Address
 
@@ -4212,6 +4812,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Address of the client. External to the EPC schema for GDPR purposes.*
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
+- Child elements: [`Address-Line-1`](#SAP-Compliance-Report/Client-Address/Address-Line-1) [`Address-Line-2`](#SAP-Compliance-Report/Client-Address/Address-Line-2) [`Address-Line-3`](#SAP-Compliance-Report/Client-Address/Address-Line-3) [`Post-Town`](#SAP-Compliance-Report/Client-Address/Post-Town) [`Postcode`](#SAP-Compliance-Report/Client-Address/Postcode)
 
 ## <a name="SAP-Compliance-Report/Client-Address/Address-Line-1"></a>Address-Line-1
 
@@ -4219,6 +4820,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/Client-Address`](#SAP-Compliance-Report/Client-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/Client-Address/Address-Line-2"></a>Address-Line-2
 
@@ -4226,6 +4828,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/Client-Address`](#SAP-Compliance-Report/Client-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/Client-Address/Address-Line-3"></a>Address-Line-3
 
@@ -4233,6 +4836,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/Client-Address`](#SAP-Compliance-Report/Client-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/Client-Address/Post-Town"></a>Post-Town
 
@@ -4240,6 +4844,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: [`SAP-Compliance-Report/Client-Address`](#SAP-Compliance-Report/Client-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/Client-Address/Postcode"></a>Postcode
 
@@ -4247,6 +4852,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *The Postcode for the Address*
 - Parent element: [`SAP-Compliance-Report/Client-Address`](#SAP-Compliance-Report/Client-Address)
+- Child elements: None
 
 ## <a name="SAP-Compliance-Report/Is-Multiple-Compliance"></a>Is-Multiple-Compliance
 
@@ -4254,4 +4860,5 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *Is the compliance report part of a multiple compliance calculation.*
 - Parent element: [`SAP-Compliance-Report`](#SAP-Compliance-Report)
+- Child elements: None
 
