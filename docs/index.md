@@ -2,4 +2,4 @@
 
 
 
-[SAP-Compliance-Report](.sap_compliance_report.md)
+[SAP-Compliance-Report](sap_compliance_report.md)
