@@ -25,8 +25,8 @@ def write_class(f, kls):
     if kls._parent_class is None:
         x = None
     else:
-        x = f'`[{kls._parent_class.element_name}](#{kls._parent_class._expanded_name})`'
-    f.write(f'- Parent element: {x}\n')
+        x = f'[`{kls._parent_class.element_name}`](#{kls._parent_class._expanded_name})'
+    f.write(f'- Parent element: {x}\n\n')
     
 
 

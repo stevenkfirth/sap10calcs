@@ -12,33 +12,39 @@ The root XMl element can be either a [SAP-Compliance-Report](#SAP_Compliance_Rep
 
 - Documentation: *None*
 - Parent element: None
+
 ## <a name="SAP_Compliance_Report__SAP_Report"></a>SAP-Report
 
 `SAP_Compliance_Report__SAP_Report`
 
 - Documentation: *The SAP report corresponding to the compliance report.*
-- Parent element: `[SAP-Compliance-Report](#SAP_Compliance_Report)`
+- Parent element: [`SAP-Compliance-Report`](#SAP_Compliance_Report)
+
 ## <a name="SAP_Compliance_Report__Client_Name"></a>Client-Name
 
 `SAP_Compliance_Report__Client_Name`
 
 - Documentation: *Name of the client. External to the EPC schema for GDPR purposes.*
-- Parent element: `[SAP-Compliance-Report](#SAP_Compliance_Report)`
+- Parent element: [`SAP-Compliance-Report`](#SAP_Compliance_Report)
+
 ## <a name="SAP_Compliance_Report__Client_Company"></a>Client-Company
 
 `SAP_Compliance_Report__Client_Company`
 
 - Documentation: *Company name of the client. External to the EPC schema for GDPR purposes.*
-- Parent element: `[SAP-Compliance-Report](#SAP_Compliance_Report)`
+- Parent element: [`SAP-Compliance-Report`](#SAP_Compliance_Report)
+
 ## <a name="SAP_Compliance_Report__Client_Address"></a>Client-Address
 
 `SAP_Compliance_Report__Client_Address`
 
 - Documentation: *Address of the client. External to the EPC schema for GDPR purposes.*
-- Parent element: `[SAP-Compliance-Report](#SAP_Compliance_Report)`
+- Parent element: [`SAP-Compliance-Report`](#SAP_Compliance_Report)
+
 ## <a name="SAP_Compliance_Report__Is_Multiple_Compliance"></a>Is-Multiple-Compliance
 
 `SAP_Compliance_Report__Is_Multiple_Compliance`
 
 - Documentation: *Is the compliance report part of a multiple compliance calculation.*
-- Parent element: `[SAP-Compliance-Report](#SAP_Compliance_Report)`
+- Parent element: [`SAP-Compliance-Report`](#SAP_Compliance_Report)
+
