@@ -25,7 +25,10 @@ def MyLookup_factory():
             
             # setup
             tag = element.tag
-            name = tag.split('}')[1]
+            if '}' in tag:
+                name = tag.split('}')[1]
+            else:
+                return etree.ElementBase
             class_name = name.replace('-','_')
             #print('name', name)
             
@@ -37,7 +40,10 @@ def MyLookup_factory():
                 parent = x.getparent()
                 if parent is None:
                     break
-                parent_class_name = parent.tag.split('}')[1].replace('-','_')
+                if '}' in parent.tag:
+                    parent_class_name = parent.tag.split('}')[1].replace('-','_')
+                else:
+                    return etree.ElementBase
                 path.insert(0,parent_class_name)
                 x = parent
                 
@@ -47,7 +53,12 @@ def MyLookup_factory():
             # get class_SAP_Schema_19_1_0
             x = classes_SAP_Schema_19_1_0
             for y in path:
-                x = getattr(x,y)
+                
+                try:
+                    x = getattr(x,y)
+                except AttributeError:
+                    return etree.ElementBase
+                
             class_SAP_Schema_19_1_0 = x
             
             if x is None:
@@ -80,7 +91,10 @@ def MyLookup_factory():
             
             # setup
             tag = element.tag
-            name = tag.split('}')[1]
+            if '}' in tag:
+                name = tag.split('}')[1]
+            else:
+                return etree.ElementBase
             class_name = name.replace('-','_')
             #print('name', name)
             
@@ -92,7 +106,10 @@ def MyLookup_factory():
                 parent = x.getparent()
                 if parent is None:
                     break
-                parent_class_name = parent.tag.split('}')[1].replace('-','_')
+                if '}' in parent.tag:
+                    parent_class_name = parent.tag.split('}')[1].replace('-','_')
+                else:
+                    return etree.ElementBase
                 path.insert(0,parent_class_name)
                 x = parent
                 
@@ -102,7 +119,12 @@ def MyLookup_factory():
             # get class_SAP_Schema_19_1_0
             x = classes_RdSAP_Schema_21_0_0
             for y in path:
-                x = getattr(x,y)
+                
+                try:
+                    x = getattr(x,y)
+                except AttributeError:
+                    return etree.ElementBase
+                
             class_RdSAP_Schema_21_0_0 = x
             
             if x is None:

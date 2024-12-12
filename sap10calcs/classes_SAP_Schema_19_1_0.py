@@ -48,9 +48,17 @@ class _Base():
 
             for element in copy_self.iter():
 
-                if not element.map_codes is None:
+                try:
+                    
+                    map_codes = element.map_codes
+                    
+                except AttributeError:
+                    
+                    map_codes = None
 
-                    value = element.map_codes.get(element.text)
+                if not map_codes is None:
+
+                    value = map_codes.get(element.text)
 
                     if not value is None:
 
@@ -332,7 +340,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             def sap_report(self): return self.getparent()
         
             @property
-            def value(self): return self.__class__.map_codes[self.text]
+            def value(self):
+                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                else:
+                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
         
             @value.setter
             def value(self, value):
@@ -374,7 +385,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             def sap_report(self): return self.getparent()
         
             @property
-            def value(self): return self.__class__.map_codes[self.text]
+            def value(self):
+                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                else:
+                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
         
             @value.setter
             def value(self, value):
@@ -416,7 +430,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             def sap_report(self): return self.getparent()
         
             @property
-            def value(self): return self.__class__.python_type_convertor(self.text)
+            def value(self):
+                try:
+                    return self.__class__.python_type_convertor(self.text)
+                except ValueError:
+                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -738,7 +756,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.python_type_convertor(self.text)
+                def value(self):
+                    try:
+                        return self.__class__.python_type_convertor(self.text)
+                    except ValueError:
+                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -772,7 +794,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -814,7 +839,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.python_type_convertor(self.text)
+                def value(self):
+                    try:
+                        return self.__class__.python_type_convertor(self.text)
+                    except ValueError:
+                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -848,7 +877,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.python_type_convertor(self.text)
+                def value(self):
+                    try:
+                        return self.__class__.python_type_convertor(self.text)
+                    except ValueError:
+                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -882,7 +915,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -924,7 +960,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -966,7 +1005,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -1008,7 +1050,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -1050,7 +1095,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -1092,7 +1140,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -1256,7 +1307,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def home_inspector(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -2230,7 +2284,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -2272,7 +2329,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -2382,7 +2442,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def related_party_disclosure(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -2500,7 +2563,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def energy_assessment(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.python_type_convertor(self.text)
+                def value(self):
+                    try:
+                        return self.__class__.python_type_convertor(self.text)
+                    except ValueError:
+                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -2738,7 +2805,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def walls(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -2780,7 +2850,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def walls(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -2896,7 +2969,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def roof(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -2938,7 +3014,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def roof(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3054,7 +3133,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def floor(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3096,7 +3178,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def floor(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3212,7 +3297,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def windows(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3254,7 +3342,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def windows(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3370,7 +3461,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def main_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3412,7 +3506,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def main_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3528,7 +3625,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def main_heating_controls(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3570,7 +3670,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def main_heating_controls(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3686,7 +3789,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def secondary_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3728,7 +3834,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def secondary_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3844,7 +3953,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def hot_water(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -3886,7 +3998,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def hot_water(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -4002,7 +4117,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def lighting(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -4044,7 +4162,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def lighting(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -4160,7 +4281,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def air_tightness(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -4202,7 +4326,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def air_tightness(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -4244,7 +4371,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -4286,7 +4416,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -4328,7 +4461,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -4404,7 +4540,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4438,7 +4578,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4506,7 +4650,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -4702,7 +4849,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4736,7 +4887,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4770,7 +4925,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4804,7 +4963,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4838,7 +5001,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4872,7 +5039,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4906,7 +5077,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4940,7 +5115,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4974,7 +5153,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5008,7 +5191,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5042,7 +5229,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5076,7 +5267,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5110,7 +5305,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5144,7 +5343,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5178,7 +5381,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5212,7 +5419,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5246,7 +5457,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5280,7 +5495,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5314,7 +5533,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5348,7 +5571,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5382,7 +5609,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5416,7 +5647,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def energy_use(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5554,7 +5789,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -5588,7 +5827,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -5630,7 +5872,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -5672,7 +5917,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -5706,7 +5955,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -5740,7 +5993,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -5950,7 +6207,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def improvement_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -6026,7 +6286,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -6096,7 +6359,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def lzc_energy_sources(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -6206,7 +6472,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_new_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6240,7 +6510,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_new_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6344,7 +6618,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_existing_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6378,7 +6656,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_existing_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6412,7 +6694,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_existing_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6446,7 +6732,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_existing_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6480,7 +6770,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_existing_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6514,7 +6808,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_existing_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6548,7 +6846,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_existing_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6582,7 +6884,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def rhi_existing_dwelling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6696,7 +7002,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def green_deal_improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -6738,7 +7047,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def green_deal_improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -6780,7 +7092,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def green_deal_package(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -6814,7 +7130,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def green_deal_package(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -6848,7 +7168,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def green_deal_package(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -6986,7 +7310,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -7020,7 +7348,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -7062,7 +7393,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -7104,7 +7438,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -7138,7 +7476,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -7172,7 +7514,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -7382,7 +7728,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def improvement_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -7458,7 +7807,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -7558,7 +7910,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -7600,7 +7955,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -7642,7 +8000,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -7684,7 +8045,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -7726,7 +8090,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -7768,7 +8135,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -7844,7 +8214,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def sap10_data(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.map_codes[self.text]
+                def value(self):
+                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                    else:
+                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
             
                 @value.setter
                 def value(self, value):
@@ -8124,7 +8497,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8166,7 +8542,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8208,7 +8587,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8242,7 +8625,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8276,7 +8663,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8318,7 +8708,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8360,7 +8753,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8402,7 +8798,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8478,7 +8877,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8512,7 +8915,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8554,7 +8960,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8588,7 +8998,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8630,7 +9043,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8672,7 +9088,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8714,7 +9133,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8756,7 +9178,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8790,7 +9216,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8824,7 +9254,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8866,7 +9299,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8908,7 +9344,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8950,7 +9389,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -8992,7 +9434,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -9034,7 +9479,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.python_type_convertor(self.text)
+                    def value(self):
+                        try:
+                            return self.__class__.python_type_convertor(self.text)
+                        except ValueError:
+                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -9068,7 +9517,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -9420,7 +9872,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -9454,7 +9910,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -9496,7 +9955,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -9538,7 +10000,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -9580,7 +10045,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -9622,7 +10090,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -9724,7 +10196,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -9758,7 +10234,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -9800,7 +10279,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -9834,7 +10317,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -9876,7 +10362,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -9918,7 +10407,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -9960,7 +10452,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10002,7 +10497,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10044,7 +10542,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10086,7 +10587,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10128,7 +10632,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10306,7 +10813,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10340,7 +10851,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10374,7 +10889,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10416,7 +10934,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10450,7 +10972,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10492,7 +11017,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10526,7 +11055,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10568,7 +11100,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10610,7 +11145,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10652,7 +11190,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10694,7 +11235,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -10978,7 +11522,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -11012,7 +11560,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -11046,7 +11598,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -11088,7 +11643,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -11130,7 +11688,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -11172,7 +11733,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -11206,7 +11771,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -11346,7 +11914,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.map_codes[self.text]
+                                        def value(self):
+                                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                            else:
+                                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                     
                                         @value.setter
                                         def value(self, value):
@@ -11388,7 +11959,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.python_type_convertor(self.text)
+                                        def value(self):
+                                            try:
+                                                return self.__class__.python_type_convertor(self.text)
+                                            except ValueError:
+                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -11422,7 +11997,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.map_codes[self.text]
+                                        def value(self):
+                                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                            else:
+                                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                     
                                         @value.setter
                                         def value(self, value):
@@ -11464,7 +12042,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.python_type_convertor(self.text)
+                                        def value(self):
+                                            try:
+                                                return self.__class__.python_type_convertor(self.text)
+                                            except ValueError:
+                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -11498,7 +12080,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.python_type_convertor(self.text)
+                                        def value(self):
+                                            try:
+                                                return self.__class__.python_type_convertor(self.text)
+                                            except ValueError:
+                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -11532,7 +12118,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.python_type_convertor(self.text)
+                                        def value(self):
+                                            try:
+                                                return self.__class__.python_type_convertor(self.text)
+                                            except ValueError:
+                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -11600,7 +12190,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.map_codes[self.text]
+                                        def value(self):
+                                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                            else:
+                                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                     
                                         @value.setter
                                         def value(self, value):
@@ -11642,7 +12235,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -11676,7 +12273,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -11718,7 +12318,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -11786,7 +12390,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -11828,7 +12435,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -12226,7 +12836,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12260,7 +12874,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -12302,7 +12919,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -12344,7 +12964,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12514,7 +13138,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -12556,7 +13183,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12590,7 +13221,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12624,7 +13259,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -12666,7 +13304,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -12708,7 +13349,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12742,7 +13387,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12776,7 +13425,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -12818,7 +13470,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12852,7 +13508,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -12894,7 +13553,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12928,7 +13591,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12962,7 +13629,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13004,7 +13674,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13046,7 +13719,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13088,7 +13764,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13130,7 +13809,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13172,7 +13854,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13214,7 +13899,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13256,7 +13944,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13298,7 +13989,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13340,7 +14034,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13382,7 +14079,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13416,7 +14117,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13450,7 +14155,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13492,7 +14200,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13534,7 +14245,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13568,7 +14283,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13602,7 +14321,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13670,7 +14393,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -13712,7 +14438,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13908,7 +14638,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.python_type_convertor(self.text)
+                                            def value(self):
+                                                try:
+                                                    return self.__class__.python_type_convertor(self.text)
+                                                except ValueError:
+                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -13942,7 +14676,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.map_codes[self.text]
+                                            def value(self):
+                                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                                else:
+                                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                         
                                             @value.setter
                                             def value(self, value):
@@ -13984,7 +14721,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.map_codes[self.text]
+                                            def value(self):
+                                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                                else:
+                                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                         
                                             @value.setter
                                             def value(self, value):
@@ -14026,7 +14766,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.map_codes[self.text]
+                                            def value(self):
+                                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                                else:
+                                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                         
                                             @value.setter
                                             def value(self, value):
@@ -14068,7 +14811,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.map_codes[self.text]
+                                            def value(self):
+                                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                                else:
+                                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                         
                                             @value.setter
                                             def value(self, value):
@@ -14178,7 +14924,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.python_type_convertor(self.text)
+                                            def value(self):
+                                                try:
+                                                    return self.__class__.python_type_convertor(self.text)
+                                                except ValueError:
+                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -14354,7 +15104,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def wind_turbine(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.python_type_convertor(self.text)
+                                            def value(self):
+                                                try:
+                                                    return self.__class__.python_type_convertor(self.text)
+                                                except ValueError:
+                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -14388,7 +15142,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def wind_turbine(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.python_type_convertor(self.text)
+                                            def value(self):
+                                                try:
+                                                    return self.__class__.python_type_convertor(self.text)
+                                                except ValueError:
+                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -14422,7 +15180,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def fghrs_energy_source(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -14464,7 +15225,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def fghrs_energy_source(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -14594,7 +15359,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def hydro_electric_generation_month(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.map_codes[self.text]
+                                            def value(self):
+                                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                                else:
+                                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                         
                                             @value.setter
                                             def value(self, value):
@@ -14636,7 +15404,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def hydro_electric_generation_month(self): return self.getparent()
                                         
                                             @property
-                                            def value(self): return self.__class__.python_type_convertor(self.text)
+                                            def value(self):
+                                                try:
+                                                    return self.__class__.python_type_convertor(self.text)
+                                                except ValueError:
+                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -14670,7 +15442,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def fghrs_energy_source(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -14752,7 +15527,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def main_heating_declared_values(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -14922,7 +15701,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def storage_heater(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.python_type_convertor(self.text)
+                                        def value(self):
+                                            try:
+                                                return self.__class__.python_type_convertor(self.text)
+                                            except ValueError:
+                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -14956,7 +15739,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def storage_heater(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.python_type_convertor(self.text)
+                                        def value(self):
+                                            try:
+                                                return self.__class__.python_type_convertor(self.text)
+                                            except ValueError:
+                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -14990,7 +15777,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def storage_heater(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.map_codes[self.text]
+                                        def value(self):
+                                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                            else:
+                                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                     
                                         @value.setter
                                         def value(self, value):
@@ -15032,7 +15822,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -15074,7 +15867,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -15116,7 +15912,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -15158,7 +15957,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15328,7 +16131,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -15370,7 +16176,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -15452,7 +16261,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def secondary_heating_declared_values(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -15554,7 +16367,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -15806,7 +16622,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -15840,7 +16660,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -15882,7 +16705,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -15924,7 +16750,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -15958,7 +16788,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -15992,7 +16826,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16026,7 +16864,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16060,7 +16902,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -16102,7 +16947,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16136,7 +16985,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -16178,7 +17030,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -16220,7 +17075,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -16262,7 +17120,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16296,7 +17158,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16330,7 +17196,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16364,7 +17234,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -16406,7 +17279,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -16448,7 +17324,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16552,7 +17432,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def instantaneous_wwhrs(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16586,7 +17470,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def instantaneous_wwhrs(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16620,7 +17508,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def instantaneous_wwhrs(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16722,7 +17614,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def instantaneous_wwhrs(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16876,7 +17772,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def storage_wwhrs(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16910,7 +17810,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def storage_wwhrs(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16944,7 +17848,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def storage_wwhrs(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17120,7 +18028,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def shower_outlet(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -17162,7 +18073,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def shower_outlet(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17196,7 +18111,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def shower_outlet(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17230,7 +18149,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def shower_outlet(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -17272,7 +18194,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -17306,7 +18232,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -17502,7 +18432,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17536,7 +18470,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -17578,7 +18515,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -17620,7 +18560,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -17662,7 +18605,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -17772,7 +18718,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17948,7 +18898,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def wind_turbine(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17982,7 +18936,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def wind_turbine(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -18016,7 +18974,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_energy_source(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -18058,7 +19019,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_energy_source(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -18188,7 +19153,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def hydro_electric_generation_month(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -18230,7 +19198,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def hydro_electric_generation_month(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -18264,7 +19236,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_energy_source(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -18410,7 +19385,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_building_part(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -18478,7 +19457,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_building_part(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -18512,7 +19495,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_building_part(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -18748,7 +19734,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_opening(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -18790,7 +19779,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_opening(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -18824,7 +19817,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_opening(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -18858,7 +19855,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_opening(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19046,7 +20047,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_roof(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -19088,7 +20092,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_roof(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19122,7 +20130,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_roof(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19156,7 +20168,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_roof(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19334,7 +20350,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -19410,7 +20429,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -19452,7 +20474,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19486,7 +20512,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19520,7 +20550,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19554,7 +20588,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19588,7 +20626,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19622,7 +20664,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19702,7 +20748,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_thermal_bridges(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -19744,7 +20793,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_thermal_bridges(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -19864,7 +20917,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_thermal_bridge(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -19906,7 +20962,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_thermal_bridge(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19940,7 +21000,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_thermal_bridge(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19974,7 +21038,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_thermal_bridge(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -20210,7 +21277,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_wall(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -20252,7 +21322,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_wall(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20286,7 +21360,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_wall(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20320,7 +21398,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_wall(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.map_codes[self.text]
+                                    def value(self):
+                                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                        else:
+                                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                 
                                     @value.setter
                                     def value(self, value):
@@ -20362,7 +21443,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_wall(self): return self.getparent()
                                 
                                     @property
-                                    def value(self): return self.__class__.python_type_convertor(self.text)
+                                    def value(self):
+                                        try:
+                                            return self.__class__.python_type_convertor(self.text)
+                                        except ValueError:
+                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20586,7 +21671,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -20628,7 +21716,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -20670,7 +21761,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -20712,7 +21806,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -20754,7 +21851,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -20796,7 +21896,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -20838,7 +21941,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.map_codes[self.text]
+                            def value(self):
+                                if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                else:
+                                    raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                         
                             @value.setter
                             def value(self, value):
@@ -20880,7 +21986,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -20914,7 +22024,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -20948,7 +22062,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self): return self.__class__.python_type_convertor(self.text)
+                            def value(self):
+                                try:
+                                    return self.__class__.python_type_convertor(self.text)
+                                except ValueError:
+                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -21280,7 +22398,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21314,7 +22436,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21348,7 +22474,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21382,7 +22512,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21416,7 +22550,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21450,7 +22588,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21484,7 +22626,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21518,7 +22664,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21552,7 +22702,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -21628,7 +22781,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21662,7 +22819,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -21704,7 +22864,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -21746,7 +22909,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -21788,7 +22954,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21822,7 +22992,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -21856,7 +23030,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -21898,7 +23075,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -21940,7 +23120,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22076,7 +23260,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22110,7 +23298,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22144,7 +23336,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22178,7 +23374,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -22220,7 +23419,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -22262,7 +23464,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -22304,7 +23509,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -22346,7 +23554,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -22388,7 +23599,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22422,7 +23637,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22456,7 +23675,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22490,7 +23713,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22524,7 +23751,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22558,7 +23789,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22592,7 +23827,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22626,7 +23865,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22660,7 +23903,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22694,7 +23941,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22728,7 +23979,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22762,7 +24017,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22796,7 +24055,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22830,7 +24093,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22864,7 +24131,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -22906,7 +24176,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23036,7 +24310,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def fixed_light(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -23070,7 +24348,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def fixed_light(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -23104,7 +24386,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def fixed_light(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -23166,7 +24452,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_deselected_improvements(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -23242,7 +24531,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_flat_details(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -23284,7 +24576,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_flat_details(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23472,7 +24768,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def energy_feature(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -23506,7 +24806,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def energy_feature(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -23548,7 +24851,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def energy_feature(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -23582,7 +24889,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def energy_feature(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.map_codes[self.text]
+                                def value(self):
+                                    if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                    else:
+                                        raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                             
                                 @value.setter
                                 def value(self, value):
@@ -23686,7 +24996,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def air_change_rate(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.map_codes[self.text]
+                                        def value(self):
+                                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                                            else:
+                                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                                     
                                         @value.setter
                                         def value(self, value):
@@ -23728,7 +25041,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def air_change_rate(self): return self.getparent()
                                     
                                         @property
-                                        def value(self): return self.__class__.python_type_convertor(self.text)
+                                        def value(self):
+                                            try:
+                                                return self.__class__.python_type_convertor(self.text)
+                                            except ValueError:
+                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -23796,7 +25113,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def emissions_feature(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -23830,7 +25151,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def emissions_feature(self): return self.getparent()
                             
                                 @property
-                                def value(self): return self.__class__.python_type_convertor(self.text)
+                                def value(self):
+                                    try:
+                                        return self.__class__.python_type_convertor(self.text)
+                                    except ValueError:
+                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -23864,7 +25189,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self): return self.__class__.map_codes[self.text]
+                    def value(self):
+                        if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                        else:
+                            raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                 
                     @value.setter
                     def value(self, value):
@@ -23952,7 +25280,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_cooling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23986,7 +25318,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_cooling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -24028,7 +25363,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_cooling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.map_codes[self.text]
+                        def value(self):
+                            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+                            else:
+                                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
                     
                         @value.setter
                         def value(self, value):
@@ -24070,7 +25408,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_cooling(self): return self.getparent()
                     
                         @property
-                        def value(self): return self.__class__.python_type_convertor(self.text)
+                        def value(self):
+                            try:
+                                return self.__class__.python_type_convertor(self.text)
+                            except ValueError:
+                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -24104,7 +25446,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             def sap_report(self): return self.getparent()
         
             @property
-            def value(self): return self.__class__.python_type_convertor(self.text)
+            def value(self):
+                try:
+                    return self.__class__.python_type_convertor(self.text)
+                except ValueError:
+                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -24258,7 +25604,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def insurance_details(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.python_type_convertor(self.text)
+                def value(self):
+                    try:
+                        return self.__class__.python_type_convertor(self.text)
+                    except ValueError:
+                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -24292,7 +25642,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def insurance_details(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.python_type_convertor(self.text)
+                def value(self):
+                    try:
+                        return self.__class__.python_type_convertor(self.text)
+                    except ValueError:
+                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -24326,7 +25680,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def insurance_details(self): return self.getparent()
             
                 @property
-                def value(self): return self.__class__.python_type_convertor(self.text)
+                def value(self):
+                    try:
+                        return self.__class__.python_type_convertor(self.text)
+                    except ValueError:
+                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -24684,7 +26042,10 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
         def sap_compliance_report(self): return self.getparent()
     
         @property
-        def value(self): return self.__class__.map_codes[self.text]
+        def value(self):
+            if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
+            else:
+                raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
     
         @value.setter
         def value(self, value):

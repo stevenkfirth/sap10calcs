@@ -96,6 +96,9 @@
         <Sheltered-Sides-Count>2</Sheltered-Sides-Count>
         <Ventilation-Type>1</Ventilation-Type>
       </SAP-Ventilation>
+      <SAP-Energy-Source>
+        <Electricity-Tariff>1</Electricity-Tariff>
+      </SAP-Energy-Source>
     </SAP-Property-Details>
   </SAP10-Data>
 </SAP-Report>
