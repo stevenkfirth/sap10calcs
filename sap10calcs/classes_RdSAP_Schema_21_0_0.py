@@ -8,8 +8,7 @@ class _Base():
     def __repr__(self):
         ""
         return f'<{self.__class__.__name__} {self.tag}>'
-
-
+    
     def copy(self):
         ""
         # get root and path to element
@@ -47,7 +46,7 @@ class _Base():
         if show_values:
 
             for element in copy_self.iter():
-
+                
                 try:
                     
                     map_codes = element.map_codes
@@ -99,6 +98,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
     has_text_node = False
     min_occurs = 1
     max_occurs = 1
+    python_type = None
     python_type_convertor = None
     map_codes = None
     map_values = None
@@ -197,11 +197,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
         element_type = "xs:string"
         class_name = "Calculation_Software_Name"
-        documentation = """Name of the software used to perform the SAP calculation."""
+        documentation = r"""Name of the software used to perform the SAP calculation."""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -231,11 +232,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
         element_type = "xs:string"
         class_name = "Calculation_Software_Version"
-        documentation = """Version of the software used to perform the SAP calculation."""
+        documentation = r"""Version of the software used to perform the SAP calculation."""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -265,11 +267,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
         element_type = "xs:string"
         class_name = "User_Interface_Name"
-        documentation = """The name of the user interface used for data entry. This can be the same as Calculation-Software-Name, or different."""
+        documentation = r"""The name of the user interface used for data entry. This can be the same as Calculation-Software-Name, or different."""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -299,11 +302,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
         element_type = "xs:string"
         class_name = "User_Interface_Version"
-        documentation = """The version of the user interface used for data entry. This can be the same as Calculation-Software-Version, or different."""
+        documentation = r"""The version of the user interface used for data entry. This can be the same as Calculation-Software-Version, or different."""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -333,11 +337,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
         element_type = "xs:string"
         class_name = "Schema_Version_Original"
-        documentation = """The schema version that the data conformed to when it was lodged."""
+        documentation = r"""The schema version that the data conformed to when it was lodged."""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -367,11 +372,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
         element_type = "xs:string"
         class_name = "Schema_Version_Current"
-        documentation = """The schema version to which the data conforms. This node is inserted by the register when a retrieval is requested. It must not be present in a lodgement being sent to the register."""
+        documentation = r"""The schema version to which the data conforms. This node is inserted by the register when a retrieval is requested. It must not be present in a lodgement being sent to the register."""
         type_documentation = None
         has_text_node = True
         min_occurs = 0
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -401,11 +407,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
         element_type = "SAP-VersionCode"
         class_name = "SAP_Version"
-        documentation = """Version of RdSAP that was used for the assessment."""
+        documentation = r"""Version of RdSAP that was used for the assessment."""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = {'9.80': 'SAP 2005 version 9.80, dated October 2005', '9.81': 'SAP version 9.81, dated January 2008', '9.82': 'SAP version 9.82, dated Jun 2008', '9.83': 'SAP version 9.83, dated Jun 2009', '9.90': 'SAP version 9.90, dated March 2010', '9.91': 'SAP version 9.91, dated January 2012', '9.92': 'SAP version 9.92, dated Oct 2013', '9.93': 'SAP version 9.93, dated Jun 2017', '9.94': 'SAP version 9.94, dated Feb 2019', '10.2': 'SAP version 10.2, dated April 2023'}
         map_values = {'SAP 2005 version 9.80, dated October 2005': '9.80', 'SAP version 9.81, dated January 2008': '9.81', 'SAP version 9.82, dated Jun 2008': '9.82', 'SAP version 9.83, dated Jun 2009': '9.83', 'SAP version 9.90, dated March 2010': '9.90', 'SAP version 9.91, dated January 2012': '9.91', 'SAP version 9.92, dated Oct 2013': '9.92', 'SAP version 9.93, dated Jun 2017': '9.93', 'SAP version 9.94, dated Feb 2019': '9.94', 'SAP version 10.2, dated April 2023': '10.2'}
@@ -418,7 +425,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
         def rdsap_report(self): return self.getparent()
     
         @property
-        def value(self):
+        def value(self): 
             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
             else:
                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -451,6 +458,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -485,6 +493,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
         has_text_node = False
         min_occurs = 1
         max_occurs = 1
+        python_type = None
         python_type_convertor = None
         map_codes = None
         map_values = None
@@ -520,11 +529,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "PreviousEpcCheckedCode"
             class_name = "Previous_EPC_Checked"
-            documentation = """Confirm a check for the existence of an EPC before carrying out another energy assessment."""
+            documentation = r"""Confirm a check for the existence of an EPC before carrying out another energy assessment."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'Y': 'Confirm a check for the existence of an EPC before carrying out another energy assessment', 'NR': 'not recorded; for backwards compatibility only, do not use'}
             map_values = {'Confirm a check for the existence of an EPC before carrying out another energy assessment': 'Y', 'not recorded; for backwards compatibility only, do not use': 'NR'}
@@ -537,7 +547,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def previous_epc_check(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -565,11 +575,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "PreviousEpcExistsCode"
             class_name = "Previous_EPC_Exists"
-            documentation = """Does an EPC exist at the point of carrying out this energy assessment."""
+            documentation = r"""Does an EPC exist at the point of carrying out this energy assessment."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'Y': 'A previous EPC exists', 'N': 'A previous EPC does not exist', 'NR': 'not recorded; for backwards compatibility only, do not use'}
             map_values = {'A previous EPC exists': 'Y', 'A previous EPC does not exist': 'N', 'not recorded; for backwards compatibility only, do not use': 'NR'}
@@ -582,7 +593,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def previous_epc_check(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -610,11 +621,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "PreviousEpcReasonCode"
             class_name = "Previous_EPC_Reason_Code"
-            documentation = """Reason for not using a previous RdSAP EPC."""
+            documentation = r"""Reason for not using a previous RdSAP EPC."""
             type_documentation = None
             has_text_node = True
             min_occurs = 0
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'1': 'EPC has expired', '2': 'Building fabric and/or services has changed since the last EPC assessment and a new EPC has been commissioned for that building', '3': 'Assessor instructed to produce a new EPC upon request from building owner/tenant/landlord after confirming to the requestor that a valid EPC already exists', '4': 'Duplicate EPC produced by systematic or human error', '5': "Replacement of an erroneous EPC where the original EPC has been marked 'not for issue'", '6': "Replacement of an erroneous EPC where the original EPC has not been marked 'not for issue'", '7': 'Green Deal Advice Report: existing EPC pre-dates 1 April 2012', '8': 'Green Deal Advice Report: previous EPC is inaccurate', '9': 'Renewable Heat Incentive (RHI): existing EPC is more than 24 months old on the date of RHI application', '10': 'Feed-In-Tariff: householder has chosen to undertake energy efficiency measures to improve the previous EPC rating before installing solar panels and applying for FITs', '11': 'Rental purposes: existing EPC is more than 10 years old or is below an E rating', '12': 'A valid EPC is required to demonstrate that the building has an EPC rating of E, F or G to determine if the householder is eligible for Energy Company Obligation scheme measures', '13': 'A valid EPC is required to demonstrate that the building has an EPC rating of D to determine if the householder is eligible for Energy Company Obligation scheme innovation measures', '14': 'A valid EPC is required to demonstrate that the building has an EPC rating of E, F or G to determine if the social housing tenant is eligible for the Energy Company Obligation scheme First Time Central Heating measures', '15': 'A valid EPC less than 12 weeks old is needed to support production of a Home Report for the marketed sale of the dwelling'}
             map_values = {'EPC has expired': '1', 'Building fabric and/or services has changed since the last EPC assessment and a new EPC has been commissioned for that building': '2', 'Assessor instructed to produce a new EPC upon request from building owner/tenant/landlord after confirming to the requestor that a valid EPC already exists': '3', 'Duplicate EPC produced by systematic or human error': '4', "Replacement of an erroneous EPC where the original EPC has been marked 'not for issue'": '5', "Replacement of an erroneous EPC where the original EPC has not been marked 'not for issue'": '6', 'Green Deal Advice Report: existing EPC pre-dates 1 April 2012': '7', 'Green Deal Advice Report: previous EPC is inaccurate': '8', 'Renewable Heat Incentive (RHI): existing EPC is more than 24 months old on the date of RHI application': '9', 'Feed-In-Tariff: householder has chosen to undertake energy efficiency measures to improve the previous EPC rating before installing solar panels and applying for FITs': '10', 'Rental purposes: existing EPC is more than 10 years old or is below an E rating': '11', 'A valid EPC is required to demonstrate that the building has an EPC rating of E, F or G to determine if the householder is eligible for Energy Company Obligation scheme measures': '12', 'A valid EPC is required to demonstrate that the building has an EPC rating of D to determine if the householder is eligible for Energy Company Obligation scheme innovation measures': '13', 'A valid EPC is required to demonstrate that the building has an EPC rating of E, F or G to determine if the social housing tenant is eligible for the Energy Company Obligation scheme First Time Central Heating measures': '14', 'A valid EPC less than 12 weeks old is needed to support production of a Home Report for the marketed sale of the dwelling': '15'}
@@ -627,7 +639,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def previous_epc_check(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -656,10 +668,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
         element_type = "Energy-Assessment"
         class_name = "Energy_Assessment"
         documentation = None
-        type_documentation = """Energy Efficiency Assessment Report is an inspection report whose purpose is to assess the energy efficiency of the inspected property and provide energy ratings for the significant heat-loss features of the property. The report also identifies a number of potential improvements that may be made to the property in order to increase the energy efficiency."""
+        type_documentation = r"""Energy Efficiency Assessment Report is an inspection report whose purpose is to assess the energy efficiency of the inspected property and provide energy ratings for the significant heat-loss features of the property. The report also identifies a number of potential improvements that may be made to the property in order to increase the energy efficiency."""
         has_text_node = False
         min_occurs = 1
         max_occurs = 1
+        python_type = None
         python_type_convertor = None
         map_codes = None
         map_values = None
@@ -730,6 +743,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -854,6 +868,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = "unbounded"
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -889,11 +904,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -923,11 +939,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -940,7 +957,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def wall(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -968,11 +985,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -985,7 +1003,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def wall(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1018,6 +1036,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = "unbounded"
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -1053,11 +1072,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1087,11 +1107,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1104,7 +1125,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def roof(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1132,11 +1153,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1149,7 +1171,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def roof(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1182,6 +1204,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = "unbounded"
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -1217,11 +1240,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1251,11 +1275,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1268,7 +1293,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def floor(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1296,11 +1321,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1313,7 +1339,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def floor(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1346,6 +1372,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -1381,11 +1408,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1415,11 +1443,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1432,7 +1461,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def window(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1460,11 +1489,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1477,7 +1507,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def window(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1510,6 +1540,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -1545,11 +1576,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1579,11 +1611,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1596,7 +1629,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def air_tightness(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1624,11 +1657,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1641,7 +1675,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def air_tightness(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1674,6 +1708,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 2
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -1709,11 +1744,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1743,11 +1779,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1760,7 +1797,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def main_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1788,11 +1825,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1805,7 +1843,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def main_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1838,6 +1876,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 2
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -1873,11 +1912,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1907,11 +1947,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1924,7 +1965,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def main_heating_controls(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1952,11 +1993,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -1969,7 +2011,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def main_heating_controls(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2002,6 +2044,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -2037,11 +2080,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -2071,11 +2115,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2088,7 +2133,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def hot_water(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2116,11 +2161,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2133,7 +2179,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def hot_water(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2166,6 +2212,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -2201,11 +2248,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -2235,11 +2283,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2252,7 +2301,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def lighting(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2280,11 +2329,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2297,7 +2347,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def lighting(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2330,6 +2380,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -2365,11 +2416,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Sentence"
                     class_name = "Description"
-                    documentation = """Overall description of the property feature"""
+                    documentation = r"""Overall description of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -2399,11 +2451,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Energy_Efficiency_Rating"
-                    documentation = """Overall summary of the energy efficiency of the property feature."""
+                    documentation = r"""Overall summary of the energy efficiency of the property feature."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2416,7 +2469,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def secondary_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2444,11 +2497,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyEfficiencySummaryCode"
                     class_name = "Environmental_Efficiency_Rating"
-                    documentation = """Summary of the environmental efficiency of the property feature"""
+                    documentation = r"""Summary of the environmental efficiency of the property feature"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                     map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2461,7 +2515,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def secondary_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2494,6 +2548,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -2506,7 +2561,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def property_summary(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2539,6 +2594,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -2551,7 +2607,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def property_summary(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2579,11 +2635,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Sentence"
                 class_name = "Dwelling_Type"
-                documentation = """A string such as Detached house or Top-floor flat"""
+                documentation = r"""A string such as Detached house or Top-floor flat"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -2613,12 +2670,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:integer"
                 class_name = "Total_Floor_Area"
-                documentation = """A number such as 125"""
+                documentation = r"""A number such as 125"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Property_Summary"
@@ -2634,7 +2692,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -2656,6 +2714,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -2668,7 +2727,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def property_summary(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2696,12 +2755,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Percentage"
                 class_name = "Multiple_Glazed_Proportion"
-                documentation = """If all windows measured, fraction of windows that are multiply glazed to nearest 1%. If windows not measured, same as SAP-Data\Energy-Assessment\Property-Summary\Multiple-Glazed-Proportion."""
+                documentation = r"""If all windows measured, fraction of windows that are multiply glazed to nearest 1%. If windows not measured, same as SAP-Data\Energy-Assessment\Property-Summary\Multiple-Glazed-Proportion."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Property_Summary"
@@ -2717,7 +2777,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -2734,11 +2794,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:string"
                 class_name = "Multiple_Glazed_Proportion_NR"
-                documentation = """For backward compatibility only, do not use."""
+                documentation = r"""For backward compatibility only, do not use."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -2769,10 +2830,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
             element_type = "Energy-Use"
             class_name = "Energy_Use"
             documentation = None
-            type_documentation = """Part of an Energy Report summarising the results of the various energy calculations made by the Home Inspector."""
+            type_documentation = r"""Part of an Energy Report summarising the results of the various energy calculations made by the Home Inspector."""
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -2886,12 +2948,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "EnergyRatingType"
                 class_name = "Energy_Rating_Current"
-                documentation = """The Current Energy Rating of the Property"""
+                documentation = r"""The Current Energy Rating of the Property"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -2907,7 +2970,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -2924,12 +2987,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "EnergyRatingType"
                 class_name = "Energy_Rating_Potential"
-                documentation = """The overall Energy Rating for the Property being assessed."""
+                documentation = r"""The overall Energy Rating for the Property being assessed."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -2945,7 +3009,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -2962,12 +3026,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "EnergyRatingType"
                 class_name = "Energy_Rating_Average"
-                documentation = """Average SAP rating for the country concerned. 0 if unknown or not applicable"""
+                documentation = r"""Average SAP rating for the country concerned. 0 if unknown or not applicable"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -2983,7 +3048,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3000,12 +3065,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "EnergyRatingType"
                 class_name = "Environmental_Impact_Current"
-                documentation = """The estimated current Environmental Impact Rating of the property"""
+                documentation = r"""The estimated current Environmental Impact Rating of the property"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3021,7 +3087,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3038,12 +3104,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "EnergyRatingType"
                 class_name = "Environmental_Impact_Potential"
-                documentation = """The estimated potential Environmental Impact Rating of the property"""
+                documentation = r"""The estimated potential Environmental Impact Rating of the property"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3059,7 +3126,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3076,12 +3143,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "Energy_Consumption_Current"
-                documentation = """Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)"""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)"""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3097,7 +3165,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3114,12 +3182,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "Energy_Consumption_Potential"
-                documentation = """Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)"""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)"""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3135,7 +3204,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3152,12 +3221,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "CO2_Emissions_Current"
-                documentation = """CO2 emissions per year in tonnes/year."""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""CO2 emissions per year in tonnes/year."""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3173,7 +3243,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3190,12 +3260,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "CO2_Emissions_Current_Per_Floor_Area"
-                documentation = """CO2 emissions per square metre floor area per year in kg/m2."""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""CO2 emissions per square metre floor area per year in kg/m2."""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3211,7 +3282,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3228,12 +3299,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "CO2_Emissions_Potential"
-                documentation = """Estimated value in Tonnes per Year of the total CO2 emissions produced by the Property in 12 month period."""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""Estimated value in Tonnes per Year of the total CO2 emissions produced by the Property in 12 month period."""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3249,7 +3321,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3266,12 +3338,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Lighting_Cost_Current"
-                documentation = """The current estimated cost of Lighting for the property"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""The current estimated cost of Lighting for the property"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3287,7 +3360,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3304,12 +3377,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Lighting_Cost_Potential"
-                documentation = """The current estimated cost of Lighting for the property"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""The current estimated cost of Lighting for the property"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3325,7 +3399,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3342,12 +3416,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Heating_Cost_Current"
-                documentation = """The current estimated cost of Heating for the property"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""The current estimated cost of Heating for the property"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3363,7 +3438,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3380,12 +3455,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Heating_Cost_Potential"
-                documentation = """The current estimated cost of Heating for the property"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""The current estimated cost of Heating for the property"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3401,7 +3477,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3418,12 +3494,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Hot_Water_Cost_Current"
-                documentation = """|The current estimated cost of Hot Water for the property"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""|The current estimated cost of Hot Water for the property"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3439,7 +3516,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3456,12 +3533,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Hot_Water_Cost_Potential"
-                documentation = """|The current estimated cost of Hot Water for the property"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""|The current estimated cost of Hot Water for the property"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Energy_Use"
@@ -3477,7 +3555,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -3495,10 +3573,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
             element_type = "Suggested-Improvements"
             class_name = "Suggested_Improvements"
             documentation = None
-            type_documentation = """Part of an Energy Report that describes the a set of improvements that the Home Inspector considers would contribute to the overall energy rating of the property."""
+            type_documentation = r"""Part of an Energy Report that describes the a set of improvements that the Home Inspector considers would contribute to the overall energy rating of the property."""
             has_text_node = False
             min_occurs = 0
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -3527,6 +3606,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = "unbounded"
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -3592,12 +3672,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:integer"
                     class_name = "Sequence"
-                    documentation = """Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced."""
+                    documentation = r"""Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Improvement"
@@ -3613,7 +3694,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -3630,11 +3711,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "RecommendationCategoryCode"
                     class_name = "Improvement_Category"
-                    documentation = """The category of improvement. This identifies where on the report the recommendation is printed."""
+                    documentation = r"""The category of improvement. This identifies where on the report the recommendation is printed."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'Lower cost - this is for backwards compatibility only and should not be used', '2': 'Higher cost - this is for backwards compatibility only and should not be used', '3': 'Further measure - this is for backwards compatibility only and should not be used', '4': 'Deselected. This is for backwards compatibility only and should not be used.', '5': 'Normal measure', '6': 'Alternative measure'}
                     map_values = {'Lower cost - this is for backwards compatibility only and should not be used': '1', 'Higher cost - this is for backwards compatibility only and should not be used': '2', 'Further measure - this is for backwards compatibility only and should not be used': '3', 'Deselected. This is for backwards compatibility only and should not be used.': '4', 'Normal measure': '5', 'Alternative measure': '6'}
@@ -3647,7 +3729,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def improvement(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3675,11 +3757,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "SAP-ImprovementMeasureCode"
                     class_name = "Improvement_Type"
-                    documentation = """Suggested work to be carried out on the Property to improve its energy efficiency."""
+                    documentation = r"""Suggested work to be carried out on the Property to improve its energy efficiency."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'A': 'Loft Insulation', 'A2': 'Flat roof insulation', 'A3': 'Room-in-roof insulation', 'B': 'Cavity wall insulation', 'B4': 'Party wall insulation', 'C': 'Hot water cylinder insulation', 'D': 'Draughtproofing', 'E': 'Low energy lights', 'F': 'Cylinder thermostat', 'G': 'Heating controls for wet central heating system', 'G2': 'Water heating controls', 'H': 'Heating controls for warm air system', 'I': 'Upgrade boiler, same fuel', 'J': 'Biomass boiler', 'J2': 'Biomass boiler as alternative improvement', 'K': 'Biomass room heater with boiler', 'L': 'New or replacement fan-assisted storage heaters', 'L2': 'New or replacement high heat retention storage heaters', 'M': 'Replacement warm-air unit', 'N': 'Solar water heating', 'O': 'Replacement double glazed windows', 'O3': 'Replacement double glazing units', 'P': 'Secondary glazing', 'Q': 'Solid wall insulation', 'Q2': 'External insulation with cavity wall insulation', 'R': 'Condensing oil boiler', 'S': 'Change heating to Band A gas condensing boiler (no fuel switch)', 'T': 'Change heating to Band A gas condensing boiler (fuel switch)', 'T2': 'Flue gas heat recovery', 'U': 'Photovoltaics', 'U1': 'PV Battery', 'U2': 'PV Diverter', 'V': 'Wind turbine (roof mounted)', 'V2': 'Wind turbine (on mast)', 'W': 'Floor insulation; for backwards compatibility only, do not use', 'W1': 'Insulation of suspended floor', 'W2': 'Insulation of solid ground floor', 'X': 'Insulated doors', 'Y': 'Instantaneous waste water heat recovery', 'Y2': 'Storage waste water heat recovery', 'Z1': 'Air or ground source heat pump', 'Z2': 'Air or ground source heat pump with underfloor heating', 'Z3': 'Micro-CHP', 'NR': 'Not recorded'}
                     map_values = {'Loft Insulation': 'A', 'Flat roof insulation': 'A2', 'Room-in-roof insulation': 'A3', 'Cavity wall insulation': 'B', 'Party wall insulation': 'B4', 'Hot water cylinder insulation': 'C', 'Draughtproofing': 'D', 'Low energy lights': 'E', 'Cylinder thermostat': 'F', 'Heating controls for wet central heating system': 'G', 'Water heating controls': 'G2', 'Heating controls for warm air system': 'H', 'Upgrade boiler, same fuel': 'I', 'Biomass boiler': 'J', 'Biomass boiler as alternative improvement': 'J2', 'Biomass room heater with boiler': 'K', 'New or replacement fan-assisted storage heaters': 'L', 'New or replacement high heat retention storage heaters': 'L2', 'Replacement warm-air unit': 'M', 'Solar water heating': 'N', 'Replacement double glazed windows': 'O', 'Replacement double glazing units': 'O3', 'Secondary glazing': 'P', 'Solid wall insulation': 'Q', 'External insulation with cavity wall insulation': 'Q2', 'Condensing oil boiler': 'R', 'Change heating to Band A gas condensing boiler (no fuel switch)': 'S', 'Change heating to Band A gas condensing boiler (fuel switch)': 'T', 'Flue gas heat recovery': 'T2', 'Photovoltaics': 'U', 'PV Battery': 'U1', 'PV Diverter': 'U2', 'Wind turbine (roof mounted)': 'V', 'Wind turbine (on mast)': 'V2', 'Floor insulation; for backwards compatibility only, do not use': 'W', 'Insulation of suspended floor': 'W1', 'Insulation of solid ground floor': 'W2', 'Insulated doors': 'X', 'Instantaneous waste water heat recovery': 'Y', 'Storage waste water heat recovery': 'Y2', 'Air or ground source heat pump': 'Z1', 'Air or ground source heat pump with underfloor heating': 'Z2', 'Micro-CHP': 'Z3', 'Not recorded': 'NR'}
@@ -3692,7 +3775,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def improvement(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3720,12 +3803,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Money"
                     class_name = "Typical_Saving"
-                    documentation = """Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Improvement"
@@ -3741,7 +3825,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -3758,12 +3842,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyRatingType"
                     class_name = "Energy_Performance_Rating"
-                    documentation = """The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
+                    documentation = r"""The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Improvement"
@@ -3779,7 +3864,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -3796,12 +3881,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyRatingType"
                     class_name = "Environmental_Impact_Rating"
-                    documentation = """The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
+                    documentation = r"""The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Improvement"
@@ -3817,7 +3903,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -3839,6 +3925,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -3868,11 +3955,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "ImprovementTexts"
                         class_name = "Improvement_Texts"
-                        documentation = """For backward compatibility only"""
+                        documentation = r"""For backward compatibility only"""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -3908,11 +3996,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Sentence"
                             class_name = "Improvement_Summary"
-                            documentation = """A short description of the suggested improvement."""
+                            documentation = r"""A short description of the suggested improvement."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -3942,11 +4031,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Sentence"
                             class_name = "Improvement_Heading"
-                            documentation = """Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead."""
+                            documentation = r"""Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -3976,11 +4066,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Sentence"
                             class_name = "Improvement_Description"
-                            documentation = """Detailed description of the suggested improvement."""
+                            documentation = r"""Detailed description of the suggested improvement."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -4015,6 +4106,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Insulate hot water cylinder with 80 mm jacket', '2': 'Increase hot water cylinder insulation', '3': 'Add additional 80 mm jacket to hot water cylinder', '4': 'Hot water cylinder thermostat', '5': 'Increase loft insulation to 270 mm', '6': 'Cavity wall insulation', '7': 'Internal or external wall insulation', '8': 'Replace single glazed windows with low-E double glazing', '9': 'Secondary glazing to single glazed windows', '10': 'Draught proofing', '11': 'Heating controls (programmer, room thermostat and TRVs)', '12': 'Heating controls (room thermostat and TRVs)', '13': 'Heating controls (thermostatic radiator valves)', '14': 'Heating controls (room thermostat)', '15': 'Heating controls (programmer and TRVs)', '16': 'Heating controls (time and temperature zone control)', '17': 'Heating controls (programmer and room thermostat)', '18': 'Heating controls (room thermostat)', '19': 'Solar water heating', '20': 'Replace boiler with new condensing boiler', '21': 'Replace boiler with new condensing boiler', '22': 'Replace boiler with biomass boiler', '23': 'Wood pellet stove with boiler and radiators', '24': 'Fan assisted storage heaters and dual immersion cylinder', '25': 'Fan assisted storage heaters', '26': 'Replacement warm air unit', '27': 'Change heating to gas condensing boiler', '28': 'Condensing oil boiler with radiators', '29': 'Change heating to gas condensing boiler', '30': 'Fan assisted storage heaters and dual immersion cylinder', '31': 'Fan-assisted storage heaters', '32': 'Change heating to gas condensing boiler', '34': 'Solar photovoltaic panels, 2.5 kWp', '35': 'Low energy lighting for all fixed outlets', '36': 'Replace heating unit with condensing unit', '37': 'Condensing boiler (separate from the range cooker)', '38': 'Condensing boiler (separate from the range cooker)', '39': 'Wood pellet stove with boiler and radiators', '40': 'Change room heaters to condensing boiler', '41': 'Change room heaters to condensing boiler', '42': 'Replace heating unit with mains gas condensing unit', '43': 'Condensing oil boiler with radiators', '44': 'Wind turbine', '45': 'Flat roof or sloping ceiling insulation', '46': 'Room-in-roof insulation', '47': 'Floor insulation', '48': 'High performance external doors', '49': 'Heat recovery system for mixer showers', '50': 'Flue gas heat recovery device in conjunction with boiler', '51': 'Air or ground source heat pump', '52': 'Air or ground source heat pump with underfloor heating', '53': 'Micro CHP', '54': 'Biomass boiler (Exempted Appliance if in Smoke Control Area)', '55': 'External insulation with cavity wall insulation', '56': 'Replacement glazing units', '57': 'Suspended floor insulation', '58': 'Solid floor insulation', '59': 'High heat retention storage heaters and dual immersion cylinder', '60': 'High heat retention storage heaters', '61': 'High heat retention storage heaters and dual immersion cylinder', '62': 'High heat retention storage heaters', '63': 'Party wall insulation', '65': 'Internal insulation with cavity wall insulation', '66': 'Heating controls for wet central heating system', '70': 'Water Heating Controls', '72': 'PV Battery', '73': 'PV Diverter', '75': 'Ground source heat pump with radiators', '76': 'Ground source heat pump with underfloor heating'}
                         map_values = {'Insulate hot water cylinder with 80 mm jacket': '1', 'Increase hot water cylinder insulation': '2', 'Add additional 80 mm jacket to hot water cylinder': '3', 'Hot water cylinder thermostat': '4', 'Increase loft insulation to 270 mm': '5', 'Cavity wall insulation': '6', 'Internal or external wall insulation': '7', 'Replace single glazed windows with low-E double glazing': '8', 'Secondary glazing to single glazed windows': '9', 'Draught proofing': '10', 'Heating controls (programmer, room thermostat and TRVs)': '11', 'Heating controls (room thermostat and TRVs)': '12', 'Heating controls (thermostatic radiator valves)': '13', 'Heating controls (room thermostat)': '18', 'Heating controls (programmer and TRVs)': '15', 'Heating controls (time and temperature zone control)': '16', 'Heating controls (programmer and room thermostat)': '17', 'Solar water heating': '19', 'Replace boiler with new condensing boiler': '21', 'Replace boiler with biomass boiler': '22', 'Wood pellet stove with boiler and radiators': '39', 'Fan assisted storage heaters and dual immersion cylinder': '30', 'Fan assisted storage heaters': '25', 'Replacement warm air unit': '26', 'Change heating to gas condensing boiler': '32', 'Condensing oil boiler with radiators': '43', 'Fan-assisted storage heaters': '31', 'Solar photovoltaic panels, 2.5 kWp': '34', 'Low energy lighting for all fixed outlets': '35', 'Replace heating unit with condensing unit': '36', 'Condensing boiler (separate from the range cooker)': '38', 'Change room heaters to condensing boiler': '41', 'Replace heating unit with mains gas condensing unit': '42', 'Wind turbine': '44', 'Flat roof or sloping ceiling insulation': '45', 'Room-in-roof insulation': '46', 'Floor insulation': '47', 'High performance external doors': '48', 'Heat recovery system for mixer showers': '49', 'Flue gas heat recovery device in conjunction with boiler': '50', 'Air or ground source heat pump': '51', 'Air or ground source heat pump with underfloor heating': '52', 'Micro CHP': '53', 'Biomass boiler (Exempted Appliance if in Smoke Control Area)': '54', 'External insulation with cavity wall insulation': '55', 'Replacement glazing units': '56', 'Suspended floor insulation': '57', 'Solid floor insulation': '58', 'High heat retention storage heaters and dual immersion cylinder': '61', 'High heat retention storage heaters': '62', 'Party wall insulation': '63', 'Internal insulation with cavity wall insulation': '65', 'Heating controls for wet central heating system': '66', 'Water Heating Controls': '70', 'PV Battery': '72', 'PV Diverter': '73', 'Ground source heat pump with radiators': '75', 'Ground source heat pump with underfloor heating': '76'}
@@ -4027,7 +4119,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def improvement_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4060,6 +4152,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -4094,6 +4187,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = False
             min_occurs = 0
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -4117,11 +4211,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-LZCEnergySourceCode"
                 class_name = "LZC_Energy_Source"
-                documentation = """Low and zero carbon energy source(s) for the property."""
+                documentation = r"""Low and zero carbon energy source(s) for the property."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = "unbounded"
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'Biomass main heating', '2': 'Biomass community heating', '3': 'Biomass community heating for some of heat generation', '4': 'Biomass secondary heating', '5': 'Geothermal heat source', '6': 'Community combined heat and power', '7': 'Ground source heat pump', '8': 'Water source heat pump', '9': 'Air source heat pump', '10': 'Solar water heating', '11': 'Solar photovoltaics', '12': 'Wind turbine', '13': 'Community heat pump', '14': 'Hydro-electric generation', '15': 'Micro-CHP', '16': 'Exhaust air heat pump', '17': 'Solar-assisted heat pump'}
                 map_values = {'Biomass main heating': '1', 'Biomass community heating': '2', 'Biomass community heating for some of heat generation': '3', 'Biomass secondary heating': '4', 'Geothermal heat source': '5', 'Community combined heat and power': '6', 'Ground source heat pump': '7', 'Water source heat pump': '8', 'Air source heat pump': '9', 'Solar water heating': '10', 'Solar photovoltaics': '11', 'Wind turbine': '12', 'Community heat pump': '13', 'Hydro-electric generation': '14', 'Micro-CHP': '15', 'Exhaust air heat pump': '16', 'Solar-assisted heat pump': '17'}
@@ -4134,7 +4229,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def lzc_energy_sources(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4167,6 +4262,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = False
             min_occurs = 0
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -4231,6 +4327,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = "unbounded"
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': '1. Wall type does not correspond to options available in RdSAP', '2': '2. Room heater specified for water heating instead of a range cooker', '3': '3. Space heating from individual system and water heating from community system', '4': '4. Dwelling has a swimming pool', '5': '5. Dwelling has micro-CHP not found in database', '6': '6. Storage heater or dual immersion, and single electric meter', '7': '7. Heating controlled by TRVs only', '8': '8. PVs or wind turbine present on the property (England, Wales or Scotland)', '9': '9. Two main heating systems and heating system upgrade is recommended', '10': '10. Dual electricity meter selected but there is also an electricity meter for standard tariff', '11': '11. Single electricity meter selected but there is also an electricity meter for an off-peak tariff', '12': '12. Dwelling is using a biomass fuel that is not in the RdSAP fuel options', '13': '13. Park Home', '14': '14. Dwelling has a special energy saving feature'}
                 map_values = {'1. Wall type does not correspond to options available in RdSAP': '1', '2. Room heater specified for water heating instead of a range cooker': '2', '3. Space heating from individual system and water heating from community system': '3', '4. Dwelling has a swimming pool': '4', '5. Dwelling has micro-CHP not found in database': '5', '6. Storage heater or dual immersion, and single electric meter': '6', '7. Heating controlled by TRVs only': '7', '8. PVs or wind turbine present on the property (England, Wales or Scotland)': '8', '9. Two main heating systems and heating system upgrade is recommended': '9', '10. Dual electricity meter selected but there is also an electricity meter for standard tariff': '10', '11. Single electricity meter selected but there is also an electricity meter for an off-peak tariff': '11', '12. Dwelling is using a biomass fuel that is not in the RdSAP fuel options': '12', '13. Park Home': '13', '14. Dwelling has a special energy saving feature': '14'}
@@ -4243,7 +4340,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def addendum(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4271,11 +4368,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "Cavity_Fill_Recommended"
-                documentation = """Cavity fill is recommended"""
+                documentation = r"""Cavity fill is recommended"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -4288,7 +4386,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def addendum(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4316,11 +4414,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "Stone_Walls"
-                documentation = """Stone walls present, not insulated"""
+                documentation = r"""Stone walls present, not insulated"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -4333,7 +4432,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def addendum(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4361,11 +4460,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "System_Build"
-                documentation = """System build present"""
+                documentation = r"""System build present"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -4378,7 +4478,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def addendum(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4406,11 +4506,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "Access_Issues"
-                documentation = """Dwelling has access issues for cavity wall insulation. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present"""
+                documentation = r"""Dwelling has access issues for cavity wall insulation. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -4423,7 +4524,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def addendum(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4451,11 +4552,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "High_Exposure"
-                documentation = """Dwelling may be exposed to wind-driven rain. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present"""
+                documentation = r"""Dwelling may be exposed to wind-driven rain. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -4468,7 +4570,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def addendum(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4496,11 +4598,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "Narrow_Cavities"
-                documentation = """Dwelling may have narrow cavities. Include only when Cavity-Fill-Recommended is also present"""
+                documentation = r"""Dwelling may have narrow cavities. Include only when Cavity-Fill-Recommended is also present"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -4513,7 +4616,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def addendum(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4546,6 +4649,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -4611,12 +4715,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "Space_Heating_Existing_Dwelling"
-                documentation = """Space heating requirement for existing dwelling."""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""Space heating requirement for existing dwelling."""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Renewable_Heat_Incentive"
@@ -4632,7 +4737,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -4649,12 +4754,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "Space_Heating_With_Loft_Insulation"
-                documentation = """Space heating requirement after implementation of loft insulation recommendation, omit if loft insulation not recommended. For backwards compatibility only, do not use"""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""Space heating requirement after implementation of loft insulation recommendation, omit if loft insulation not recommended. For backwards compatibility only, do not use"""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Renewable_Heat_Incentive"
@@ -4670,7 +4776,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -4687,12 +4793,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "Space_Heating_With_Cavity_Insulation"
-                documentation = """Space heating requirement after implementation of cavity insulation recommendation, omit if cavity insulation not recommended. For backwards compatibility only, do not use"""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""Space heating requirement after implementation of cavity insulation recommendation, omit if cavity insulation not recommended. For backwards compatibility only, do not use"""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Renewable_Heat_Incentive"
@@ -4708,7 +4815,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -4725,12 +4832,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "Space_Heating_With_Loft_And_Cavity_Insulation"
-                documentation = """Space heating requirement after implementation of loft and cavity insulation recommendations, same as existing dwelling if neither is recommended. For backwards compatibility only, do not use"""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""Space heating requirement after implementation of loft and cavity insulation recommendations, same as existing dwelling if neither is recommended. For backwards compatibility only, do not use"""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Renewable_Heat_Incentive"
@@ -4746,7 +4854,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -4763,12 +4871,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Measurement"
                 class_name = "Water_Heating"
-                documentation = """Water heating requirement."""
-                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                documentation = r"""Water heating requirement."""
+                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Renewable_Heat_Incentive"
@@ -4784,7 +4893,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -4801,12 +4910,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:nonPositiveInteger"
                 class_name = "Impact_Of_Loft_Insulation"
-                documentation = """Reduction in space heating requirement with loft insulation (as negative value). Omit if not applicable"""
+                documentation = r"""Reduction in space heating requirement with loft insulation (as negative value). Omit if not applicable"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Renewable_Heat_Incentive"
@@ -4822,7 +4932,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -4839,12 +4949,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:nonPositiveInteger"
                 class_name = "Impact_Of_Cavity_Insulation"
-                documentation = """Reduction in space heating requirement with cavity insulation (as negative value). Omit if not applicable"""
+                documentation = r"""Reduction in space heating requirement with cavity insulation (as negative value). Omit if not applicable"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Renewable_Heat_Incentive"
@@ -4860,7 +4971,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -4877,12 +4988,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:nonPositiveInteger"
                 class_name = "Impact_Of_Solid_Wall_Insulation"
-                documentation = """Reduction in space heating requirement with solid wall insulation (as negative value). Omit if not applicable"""
+                documentation = r"""Reduction in space heating requirement with solid wall insulation (as negative value). Omit if not applicable"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Renewable_Heat_Incentive"
@@ -4898,7 +5010,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -4915,11 +5027,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "Green-Deal-Package"
             class_name = "Green_Deal_Package"
-            documentation = """Improvements that can form a Green Deal package"""
+            documentation = r"""Improvements that can form a Green Deal package"""
             type_documentation = None
             has_text_node = False
             min_occurs = 0
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -4961,11 +5074,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Green-Deal-Improvement"
                 class_name = "Green_Deal_Improvement"
-                documentation = """Improvements from Suggested-Improvements in the Green Deal package"""
+                documentation = r"""Improvements from Suggested-Improvements in the Green Deal package"""
                 type_documentation = None
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = "unbounded"
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -5000,6 +5114,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'A': 'Loft Insulation', 'A2': 'Flat roof insulation', 'A3': 'Room-in-roof insulation', 'B': 'Cavity wall insulation', 'B4': 'Party wall insulation', 'C': 'Hot water cylinder insulation', 'D': 'Draughtproofing', 'E': 'Low energy lights', 'F': 'Cylinder thermostat', 'G': 'Heating controls for wet central heating system', 'G2': 'Water heating controls', 'H': 'Heating controls for warm air system', 'I': 'Upgrade boiler, same fuel', 'J': 'Biomass boiler', 'J2': 'Biomass boiler as alternative improvement', 'K': 'Biomass room heater with boiler', 'L': 'New or replacement fan-assisted storage heaters', 'L2': 'New or replacement high heat retention storage heaters', 'M': 'Replacement warm-air unit', 'N': 'Solar water heating', 'O': 'Replacement double glazed windows', 'O3': 'Replacement double glazing units', 'P': 'Secondary glazing', 'Q': 'Solid wall insulation', 'Q2': 'External insulation with cavity wall insulation', 'R': 'Condensing oil boiler', 'S': 'Change heating to Band A gas condensing boiler (no fuel switch)', 'T': 'Change heating to Band A gas condensing boiler (fuel switch)', 'T2': 'Flue gas heat recovery', 'U': 'Photovoltaics', 'U1': 'PV Battery', 'U2': 'PV Diverter', 'V': 'Wind turbine (roof mounted)', 'V2': 'Wind turbine (on mast)', 'W': 'Floor insulation; for backwards compatibility only, do not use', 'W1': 'Insulation of suspended floor', 'W2': 'Insulation of solid ground floor', 'X': 'Insulated doors', 'Y': 'Instantaneous waste water heat recovery', 'Y2': 'Storage waste water heat recovery', 'Z1': 'Air or ground source heat pump', 'Z2': 'Air or ground source heat pump with underfloor heating', 'Z3': 'Micro-CHP', 'NR': 'Not recorded'}
                     map_values = {'Loft Insulation': 'A', 'Flat roof insulation': 'A2', 'Room-in-roof insulation': 'A3', 'Cavity wall insulation': 'B', 'Party wall insulation': 'B4', 'Hot water cylinder insulation': 'C', 'Draughtproofing': 'D', 'Low energy lights': 'E', 'Cylinder thermostat': 'F', 'Heating controls for wet central heating system': 'G', 'Water heating controls': 'G2', 'Heating controls for warm air system': 'H', 'Upgrade boiler, same fuel': 'I', 'Biomass boiler': 'J', 'Biomass boiler as alternative improvement': 'J2', 'Biomass room heater with boiler': 'K', 'New or replacement fan-assisted storage heaters': 'L', 'New or replacement high heat retention storage heaters': 'L2', 'Replacement warm-air unit': 'M', 'Solar water heating': 'N', 'Replacement double glazed windows': 'O', 'Replacement double glazing units': 'O3', 'Secondary glazing': 'P', 'Solid wall insulation': 'Q', 'External insulation with cavity wall insulation': 'Q2', 'Condensing oil boiler': 'R', 'Change heating to Band A gas condensing boiler (no fuel switch)': 'S', 'Change heating to Band A gas condensing boiler (fuel switch)': 'T', 'Flue gas heat recovery': 'T2', 'Photovoltaics': 'U', 'PV Battery': 'U1', 'PV Diverter': 'U2', 'Wind turbine (roof mounted)': 'V', 'Wind turbine (on mast)': 'V2', 'Floor insulation; for backwards compatibility only, do not use': 'W', 'Insulation of suspended floor': 'W1', 'Insulation of solid ground floor': 'W2', 'Insulated doors': 'X', 'Instantaneous waste water heat recovery': 'Y', 'Storage waste water heat recovery': 'Y2', 'Air or ground source heat pump': 'Z1', 'Air or ground source heat pump with underfloor heating': 'Z2', 'Micro-CHP': 'Z3', 'Not recorded': 'NR'}
@@ -5012,7 +5127,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def green_deal_improvement(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -5045,6 +5160,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'Insulate hot water cylinder with 80 mm jacket', '2': 'Increase hot water cylinder insulation', '3': 'Add additional 80 mm jacket to hot water cylinder', '4': 'Hot water cylinder thermostat', '5': 'Increase loft insulation to 270 mm', '6': 'Cavity wall insulation', '7': 'Internal or external wall insulation', '8': 'Replace single glazed windows with low-E double glazing', '9': 'Secondary glazing to single glazed windows', '10': 'Draught proofing', '11': 'Heating controls (programmer, room thermostat and TRVs)', '12': 'Heating controls (room thermostat and TRVs)', '13': 'Heating controls (thermostatic radiator valves)', '14': 'Heating controls (room thermostat)', '15': 'Heating controls (programmer and TRVs)', '16': 'Heating controls (time and temperature zone control)', '17': 'Heating controls (programmer and room thermostat)', '18': 'Heating controls (room thermostat)', '19': 'Solar water heating', '20': 'Replace boiler with new condensing boiler', '21': 'Replace boiler with new condensing boiler', '22': 'Replace boiler with biomass boiler', '23': 'Wood pellet stove with boiler and radiators', '24': 'Fan assisted storage heaters and dual immersion cylinder', '25': 'Fan assisted storage heaters', '26': 'Replacement warm air unit', '27': 'Change heating to gas condensing boiler', '28': 'Condensing oil boiler with radiators', '29': 'Change heating to gas condensing boiler', '30': 'Fan assisted storage heaters and dual immersion cylinder', '31': 'Fan-assisted storage heaters', '32': 'Change heating to gas condensing boiler', '34': 'Solar photovoltaic panels, 2.5 kWp', '35': 'Low energy lighting for all fixed outlets', '36': 'Replace heating unit with condensing unit', '37': 'Condensing boiler (separate from the range cooker)', '38': 'Condensing boiler (separate from the range cooker)', '39': 'Wood pellet stove with boiler and radiators', '40': 'Change room heaters to condensing boiler', '41': 'Change room heaters to condensing boiler', '42': 'Replace heating unit with mains gas condensing unit', '43': 'Condensing oil boiler with radiators', '44': 'Wind turbine', '45': 'Flat roof or sloping ceiling insulation', '46': 'Room-in-roof insulation', '47': 'Floor insulation', '48': 'High performance external doors', '49': 'Heat recovery system for mixer showers', '50': 'Flue gas heat recovery device in conjunction with boiler', '51': 'Air or ground source heat pump', '52': 'Air or ground source heat pump with underfloor heating', '53': 'Micro CHP', '54': 'Biomass boiler (Exempted Appliance if in Smoke Control Area)', '55': 'External insulation with cavity wall insulation', '56': 'Replacement glazing units', '57': 'Suspended floor insulation', '58': 'Solid floor insulation', '59': 'High heat retention storage heaters and dual immersion cylinder', '60': 'High heat retention storage heaters', '61': 'High heat retention storage heaters and dual immersion cylinder', '62': 'High heat retention storage heaters', '63': 'Party wall insulation', '65': 'Internal insulation with cavity wall insulation', '66': 'Heating controls for wet central heating system', '70': 'Water Heating Controls', '72': 'PV Battery', '73': 'PV Diverter', '75': 'Ground source heat pump with radiators', '76': 'Ground source heat pump with underfloor heating'}
                     map_values = {'Insulate hot water cylinder with 80 mm jacket': '1', 'Increase hot water cylinder insulation': '2', 'Add additional 80 mm jacket to hot water cylinder': '3', 'Hot water cylinder thermostat': '4', 'Increase loft insulation to 270 mm': '5', 'Cavity wall insulation': '6', 'Internal or external wall insulation': '7', 'Replace single glazed windows with low-E double glazing': '8', 'Secondary glazing to single glazed windows': '9', 'Draught proofing': '10', 'Heating controls (programmer, room thermostat and TRVs)': '11', 'Heating controls (room thermostat and TRVs)': '12', 'Heating controls (thermostatic radiator valves)': '13', 'Heating controls (room thermostat)': '18', 'Heating controls (programmer and TRVs)': '15', 'Heating controls (time and temperature zone control)': '16', 'Heating controls (programmer and room thermostat)': '17', 'Solar water heating': '19', 'Replace boiler with new condensing boiler': '21', 'Replace boiler with biomass boiler': '22', 'Wood pellet stove with boiler and radiators': '39', 'Fan assisted storage heaters and dual immersion cylinder': '30', 'Fan assisted storage heaters': '25', 'Replacement warm air unit': '26', 'Change heating to gas condensing boiler': '32', 'Condensing oil boiler with radiators': '43', 'Fan-assisted storage heaters': '31', 'Solar photovoltaic panels, 2.5 kWp': '34', 'Low energy lighting for all fixed outlets': '35', 'Replace heating unit with condensing unit': '36', 'Condensing boiler (separate from the range cooker)': '38', 'Change room heaters to condensing boiler': '41', 'Replace heating unit with mains gas condensing unit': '42', 'Wind turbine': '44', 'Flat roof or sloping ceiling insulation': '45', 'Room-in-roof insulation': '46', 'Floor insulation': '47', 'High performance external doors': '48', 'Heat recovery system for mixer showers': '49', 'Flue gas heat recovery device in conjunction with boiler': '50', 'Air or ground source heat pump': '51', 'Air or ground source heat pump with underfloor heating': '52', 'Micro CHP': '53', 'Biomass boiler (Exempted Appliance if in Smoke Control Area)': '54', 'External insulation with cavity wall insulation': '55', 'Replacement glazing units': '56', 'Suspended floor insulation': '57', 'Solid floor insulation': '58', 'High heat retention storage heaters and dual immersion cylinder': '61', 'High heat retention storage heaters': '62', 'Party wall insulation': '63', 'Internal insulation with cavity wall insulation': '65', 'Heating controls for wet central heating system': '66', 'Water Heating Controls': '70', 'PV Battery': '72', 'PV Diverter': '73', 'Ground source heat pump with radiators': '75', 'Ground source heat pump with underfloor heating': '76'}
@@ -5057,7 +5173,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def green_deal_improvement(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -5085,12 +5201,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Electricity_Saving"
-                documentation = """Total electricity saving for the package"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""Total electricity saving for the package"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Green_Deal_Package"
@@ -5106,7 +5223,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -5123,12 +5240,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Gas_Saving"
-                documentation = """Total gas saving for the package"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""Total gas saving for the package"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Green_Deal_Package"
@@ -5144,7 +5262,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -5161,12 +5279,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Money"
                 class_name = "Other_Fuel_Saving"
-                documentation = """Total other saving for the package"""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""Total other saving for the package"""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Green_Deal_Package"
@@ -5182,7 +5301,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -5199,11 +5318,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "Suggested-Improvements"
             class_name = "Alternative_Improvements"
-            documentation = """Alternative improvements to some of those given in Suggested-Improvements"""
-            type_documentation = """Part of an Energy Report that describes the a set of improvements that the Home Inspector considers would contribute to the overall energy rating of the property."""
+            documentation = r"""Alternative improvements to some of those given in Suggested-Improvements"""
+            type_documentation = r"""Part of an Energy Report that describes the a set of improvements that the Home Inspector considers would contribute to the overall energy rating of the property."""
             has_text_node = False
             min_occurs = 0
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -5232,6 +5352,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = "unbounded"
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -5297,12 +5418,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:integer"
                     class_name = "Sequence"
-                    documentation = """Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced."""
+                    documentation = r"""Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Improvement"
@@ -5318,7 +5440,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5335,11 +5457,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "RecommendationCategoryCode"
                     class_name = "Improvement_Category"
-                    documentation = """The category of improvement. This identifies where on the report the recommendation is printed."""
+                    documentation = r"""The category of improvement. This identifies where on the report the recommendation is printed."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'Lower cost - this is for backwards compatibility only and should not be used', '2': 'Higher cost - this is for backwards compatibility only and should not be used', '3': 'Further measure - this is for backwards compatibility only and should not be used', '4': 'Deselected. This is for backwards compatibility only and should not be used.', '5': 'Normal measure', '6': 'Alternative measure'}
                     map_values = {'Lower cost - this is for backwards compatibility only and should not be used': '1', 'Higher cost - this is for backwards compatibility only and should not be used': '2', 'Further measure - this is for backwards compatibility only and should not be used': '3', 'Deselected. This is for backwards compatibility only and should not be used.': '4', 'Normal measure': '5', 'Alternative measure': '6'}
@@ -5352,7 +5475,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def improvement(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -5380,11 +5503,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "SAP-ImprovementMeasureCode"
                     class_name = "Improvement_Type"
-                    documentation = """Suggested work to be carried out on the Property to improve its energy efficiency."""
+                    documentation = r"""Suggested work to be carried out on the Property to improve its energy efficiency."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'A': 'Loft Insulation', 'A2': 'Flat roof insulation', 'A3': 'Room-in-roof insulation', 'B': 'Cavity wall insulation', 'B4': 'Party wall insulation', 'C': 'Hot water cylinder insulation', 'D': 'Draughtproofing', 'E': 'Low energy lights', 'F': 'Cylinder thermostat', 'G': 'Heating controls for wet central heating system', 'G2': 'Water heating controls', 'H': 'Heating controls for warm air system', 'I': 'Upgrade boiler, same fuel', 'J': 'Biomass boiler', 'J2': 'Biomass boiler as alternative improvement', 'K': 'Biomass room heater with boiler', 'L': 'New or replacement fan-assisted storage heaters', 'L2': 'New or replacement high heat retention storage heaters', 'M': 'Replacement warm-air unit', 'N': 'Solar water heating', 'O': 'Replacement double glazed windows', 'O3': 'Replacement double glazing units', 'P': 'Secondary glazing', 'Q': 'Solid wall insulation', 'Q2': 'External insulation with cavity wall insulation', 'R': 'Condensing oil boiler', 'S': 'Change heating to Band A gas condensing boiler (no fuel switch)', 'T': 'Change heating to Band A gas condensing boiler (fuel switch)', 'T2': 'Flue gas heat recovery', 'U': 'Photovoltaics', 'U1': 'PV Battery', 'U2': 'PV Diverter', 'V': 'Wind turbine (roof mounted)', 'V2': 'Wind turbine (on mast)', 'W': 'Floor insulation; for backwards compatibility only, do not use', 'W1': 'Insulation of suspended floor', 'W2': 'Insulation of solid ground floor', 'X': 'Insulated doors', 'Y': 'Instantaneous waste water heat recovery', 'Y2': 'Storage waste water heat recovery', 'Z1': 'Air or ground source heat pump', 'Z2': 'Air or ground source heat pump with underfloor heating', 'Z3': 'Micro-CHP', 'NR': 'Not recorded'}
                     map_values = {'Loft Insulation': 'A', 'Flat roof insulation': 'A2', 'Room-in-roof insulation': 'A3', 'Cavity wall insulation': 'B', 'Party wall insulation': 'B4', 'Hot water cylinder insulation': 'C', 'Draughtproofing': 'D', 'Low energy lights': 'E', 'Cylinder thermostat': 'F', 'Heating controls for wet central heating system': 'G', 'Water heating controls': 'G2', 'Heating controls for warm air system': 'H', 'Upgrade boiler, same fuel': 'I', 'Biomass boiler': 'J', 'Biomass boiler as alternative improvement': 'J2', 'Biomass room heater with boiler': 'K', 'New or replacement fan-assisted storage heaters': 'L', 'New or replacement high heat retention storage heaters': 'L2', 'Replacement warm-air unit': 'M', 'Solar water heating': 'N', 'Replacement double glazed windows': 'O', 'Replacement double glazing units': 'O3', 'Secondary glazing': 'P', 'Solid wall insulation': 'Q', 'External insulation with cavity wall insulation': 'Q2', 'Condensing oil boiler': 'R', 'Change heating to Band A gas condensing boiler (no fuel switch)': 'S', 'Change heating to Band A gas condensing boiler (fuel switch)': 'T', 'Flue gas heat recovery': 'T2', 'Photovoltaics': 'U', 'PV Battery': 'U1', 'PV Diverter': 'U2', 'Wind turbine (roof mounted)': 'V', 'Wind turbine (on mast)': 'V2', 'Floor insulation; for backwards compatibility only, do not use': 'W', 'Insulation of suspended floor': 'W1', 'Insulation of solid ground floor': 'W2', 'Insulated doors': 'X', 'Instantaneous waste water heat recovery': 'Y', 'Storage waste water heat recovery': 'Y2', 'Air or ground source heat pump': 'Z1', 'Air or ground source heat pump with underfloor heating': 'Z2', 'Micro-CHP': 'Z3', 'Not recorded': 'NR'}
@@ -5397,7 +5521,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def improvement(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -5425,12 +5549,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Money"
                     class_name = "Typical_Saving"
-                    documentation = """Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Improvement"
@@ -5446,7 +5571,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5463,12 +5588,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyRatingType"
                     class_name = "Energy_Performance_Rating"
-                    documentation = """The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
+                    documentation = r"""The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Improvement"
@@ -5484,7 +5610,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5501,12 +5627,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "EnergyRatingType"
                     class_name = "Environmental_Impact_Rating"
-                    documentation = """The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
+                    documentation = r"""The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Improvement"
@@ -5522,7 +5649,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5544,6 +5671,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -5573,11 +5701,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "ImprovementTexts"
                         class_name = "Improvement_Texts"
-                        documentation = """For backward compatibility only"""
+                        documentation = r"""For backward compatibility only"""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -5613,11 +5742,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Sentence"
                             class_name = "Improvement_Summary"
-                            documentation = """A short description of the suggested improvement."""
+                            documentation = r"""A short description of the suggested improvement."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -5647,11 +5777,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Sentence"
                             class_name = "Improvement_Heading"
-                            documentation = """Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead."""
+                            documentation = r"""Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -5681,11 +5812,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Sentence"
                             class_name = "Improvement_Description"
-                            documentation = """Detailed description of the suggested improvement."""
+                            documentation = r"""Detailed description of the suggested improvement."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -5720,6 +5852,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Insulate hot water cylinder with 80 mm jacket', '2': 'Increase hot water cylinder insulation', '3': 'Add additional 80 mm jacket to hot water cylinder', '4': 'Hot water cylinder thermostat', '5': 'Increase loft insulation to 270 mm', '6': 'Cavity wall insulation', '7': 'Internal or external wall insulation', '8': 'Replace single glazed windows with low-E double glazing', '9': 'Secondary glazing to single glazed windows', '10': 'Draught proofing', '11': 'Heating controls (programmer, room thermostat and TRVs)', '12': 'Heating controls (room thermostat and TRVs)', '13': 'Heating controls (thermostatic radiator valves)', '14': 'Heating controls (room thermostat)', '15': 'Heating controls (programmer and TRVs)', '16': 'Heating controls (time and temperature zone control)', '17': 'Heating controls (programmer and room thermostat)', '18': 'Heating controls (room thermostat)', '19': 'Solar water heating', '20': 'Replace boiler with new condensing boiler', '21': 'Replace boiler with new condensing boiler', '22': 'Replace boiler with biomass boiler', '23': 'Wood pellet stove with boiler and radiators', '24': 'Fan assisted storage heaters and dual immersion cylinder', '25': 'Fan assisted storage heaters', '26': 'Replacement warm air unit', '27': 'Change heating to gas condensing boiler', '28': 'Condensing oil boiler with radiators', '29': 'Change heating to gas condensing boiler', '30': 'Fan assisted storage heaters and dual immersion cylinder', '31': 'Fan-assisted storage heaters', '32': 'Change heating to gas condensing boiler', '34': 'Solar photovoltaic panels, 2.5 kWp', '35': 'Low energy lighting for all fixed outlets', '36': 'Replace heating unit with condensing unit', '37': 'Condensing boiler (separate from the range cooker)', '38': 'Condensing boiler (separate from the range cooker)', '39': 'Wood pellet stove with boiler and radiators', '40': 'Change room heaters to condensing boiler', '41': 'Change room heaters to condensing boiler', '42': 'Replace heating unit with mains gas condensing unit', '43': 'Condensing oil boiler with radiators', '44': 'Wind turbine', '45': 'Flat roof or sloping ceiling insulation', '46': 'Room-in-roof insulation', '47': 'Floor insulation', '48': 'High performance external doors', '49': 'Heat recovery system for mixer showers', '50': 'Flue gas heat recovery device in conjunction with boiler', '51': 'Air or ground source heat pump', '52': 'Air or ground source heat pump with underfloor heating', '53': 'Micro CHP', '54': 'Biomass boiler (Exempted Appliance if in Smoke Control Area)', '55': 'External insulation with cavity wall insulation', '56': 'Replacement glazing units', '57': 'Suspended floor insulation', '58': 'Solid floor insulation', '59': 'High heat retention storage heaters and dual immersion cylinder', '60': 'High heat retention storage heaters', '61': 'High heat retention storage heaters and dual immersion cylinder', '62': 'High heat retention storage heaters', '63': 'Party wall insulation', '65': 'Internal insulation with cavity wall insulation', '66': 'Heating controls for wet central heating system', '70': 'Water Heating Controls', '72': 'PV Battery', '73': 'PV Diverter', '75': 'Ground source heat pump with radiators', '76': 'Ground source heat pump with underfloor heating'}
                         map_values = {'Insulate hot water cylinder with 80 mm jacket': '1', 'Increase hot water cylinder insulation': '2', 'Add additional 80 mm jacket to hot water cylinder': '3', 'Hot water cylinder thermostat': '4', 'Increase loft insulation to 270 mm': '5', 'Cavity wall insulation': '6', 'Internal or external wall insulation': '7', 'Replace single glazed windows with low-E double glazing': '8', 'Secondary glazing to single glazed windows': '9', 'Draught proofing': '10', 'Heating controls (programmer, room thermostat and TRVs)': '11', 'Heating controls (room thermostat and TRVs)': '12', 'Heating controls (thermostatic radiator valves)': '13', 'Heating controls (room thermostat)': '18', 'Heating controls (programmer and TRVs)': '15', 'Heating controls (time and temperature zone control)': '16', 'Heating controls (programmer and room thermostat)': '17', 'Solar water heating': '19', 'Replace boiler with new condensing boiler': '21', 'Replace boiler with biomass boiler': '22', 'Wood pellet stove with boiler and radiators': '39', 'Fan assisted storage heaters and dual immersion cylinder': '30', 'Fan assisted storage heaters': '25', 'Replacement warm air unit': '26', 'Change heating to gas condensing boiler': '32', 'Condensing oil boiler with radiators': '43', 'Fan-assisted storage heaters': '31', 'Solar photovoltaic panels, 2.5 kWp': '34', 'Low energy lighting for all fixed outlets': '35', 'Replace heating unit with condensing unit': '36', 'Condensing boiler (separate from the range cooker)': '38', 'Change room heaters to condensing boiler': '41', 'Replace heating unit with mains gas condensing unit': '42', 'Wind turbine': '44', 'Flat roof or sloping ceiling insulation': '45', 'Room-in-roof insulation': '46', 'Floor insulation': '47', 'High performance external doors': '48', 'Heat recovery system for mixer showers': '49', 'Flue gas heat recovery device in conjunction with boiler': '50', 'Air or ground source heat pump': '51', 'Air or ground source heat pump with underfloor heating': '52', 'Micro CHP': '53', 'Biomass boiler (Exempted Appliance if in Smoke Control Area)': '54', 'External insulation with cavity wall insulation': '55', 'Replacement glazing units': '56', 'Suspended floor insulation': '57', 'Solid floor insulation': '58', 'High heat retention storage heaters and dual immersion cylinder': '61', 'High heat retention storage heaters': '62', 'Party wall insulation': '63', 'Internal insulation with cavity wall insulation': '65', 'Heating controls for wet central heating system': '66', 'Water Heating Controls': '70', 'PV Battery': '72', 'PV Diverter': '73', 'Ground source heat pump with radiators': '75', 'Ground source heat pump with underfloor heating': '76'}
@@ -5732,7 +5865,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def improvement_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -5765,6 +5898,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -5795,10 +5929,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
         element_type = "SAP-Data"
         class_name = "SAP_Data"
         documentation = None
-        type_documentation = """These are the specific data-items collected by the HI / EA needed to perform the SAP calculation."""
+        type_documentation = r"""These are the specific data-items collected by the HI / EA needed to perform the SAP calculation."""
         has_text_node = False
         min_occurs = 0
         max_occurs = 1
+        python_type = None
         python_type_convertor = None
         map_codes = None
         map_values = None
@@ -5827,6 +5962,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -6162,11 +6298,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-BuiltFormCode"
                 class_name = "Built_Form"
-                documentation = """The building type of the Property e.g. Detached, Semi-Detached, Terrace etc. Together with the Property Type, the Build Form produces a structured description of the property."""
+                documentation = r"""The building type of the Property e.g. Detached, Semi-Detached, Terrace etc. Together with the Property Type, the Build Form produces a structured description of the property."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'Detached', '2': 'Semi-Detached', '3': 'End-Terrace', '4': 'Mid-Terrace', '5': 'Enclosed End-Terrace', '6': 'Enclosed Mid-Terrace', 'NR': 'Not Recorded'}
                 map_values = {'Detached': '1', 'Semi-Detached': '2', 'End-Terrace': '3', 'Mid-Terrace': '4', 'Enclosed End-Terrace': '5', 'Enclosed Mid-Terrace': '6', 'Not Recorded': 'NR'}
@@ -6179,7 +6316,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6207,12 +6344,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "ExtensionsCount"
                 class_name = "Extensions_Count"
-                documentation = """The number of extensions added to the house."""
+                documentation = r"""The number of extensions added to the house."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6228,7 +6366,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6245,12 +6383,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Habitable_Room_Count"
-                documentation = """Count of the number of habitable rooms within the property. This is the number of Reception Rooms (including Living Rooms, Sitting Rooms, Dining Rooms), Bedrooms, Study and similar rooms but excludes hall, stairs, kitchen, utility rooms, bathrooms, cloakrooms, en-suites and similar rooms."""
+                documentation = r"""Count of the number of habitable rooms within the property. This is the number of Reception Rooms (including Living Rooms, Sitting Rooms, Dining Rooms), Bedrooms, Study and similar rooms but excludes hall, stairs, kitchen, utility rooms, bathrooms, cloakrooms, en-suites and similar rooms."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6266,7 +6405,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6283,12 +6422,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Heated_Room_Count"
-                documentation = """The numbewr of heated rooms in the property if more than half of the abitable rooms are not heated."""
+                documentation = r"""The numbewr of heated rooms in the property if more than half of the abitable rooms are not heated."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6304,7 +6444,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6321,12 +6461,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Low_Energy_Fixed_Lighting_Bulbs_Count"
-                documentation = """If exact number of CFL and LED not known, provide number of low energy fixed lighting outlets."""
+                documentation = r"""If exact number of CFL and LED not known, provide number of low energy fixed lighting outlets."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6342,7 +6483,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6359,12 +6500,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Incandescent_Fixed_Lighting_Bulbs_Count"
-                documentation = """Number of incandescent fixed bulbs."""
+                documentation = r"""Number of incandescent fixed bulbs."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6380,7 +6522,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6397,12 +6539,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "LED_Fixed_Lighting_Bulbs_Count"
-                documentation = """Number of LED fixed bulbs."""
+                documentation = r"""Number of LED fixed bulbs."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6418,7 +6561,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6435,12 +6578,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "CFL_Fixed_Lighting_Bulbs_Count"
-                documentation = """Number of CFL fixed bulbs."""
+                documentation = r"""Number of CFL fixed bulbs."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6456,7 +6600,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6473,11 +6617,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "MeasurementTypeCode"
                 class_name = "Measurement_Type"
-                documentation = """Indicates the type of measurements taken to calculate floor areas e.g. "Internal" or "External"."""
+                documentation = r"""Indicates the type of measurements taken to calculate floor areas e.g. "Internal" or "External"."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'Internal', '2': 'External'}
                 map_values = {'Internal': '1', 'External': '2'}
@@ -6490,7 +6635,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6518,11 +6663,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "PropertyTypeCode"
                 class_name = "Property_Type"
-                documentation = """Describes the type of property such as House, Flat, Mansion, Maisonette etc. This is actually the type differentiator for Property but only a limited number of property types, notably Apartment and Apartment Block, have any specific characteristics and warrant their own definition."""
+                documentation = r"""Describes the type of property such as House, Flat, Mansion, Maisonette etc. This is actually the type differentiator for Property but only a limited number of property types, notably Apartment and Apartment Block, have any specific characteristics and warrant their own definition."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'0': 'House', '1': 'Bungalow', '2': 'Flat', '3': 'Maisonette', '4': 'Park home'}
                 map_values = {'House': '0', 'Bungalow': '1', 'Flat': '2', 'Maisonette': '3', 'Park home': '4'}
@@ -6535,7 +6681,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6563,11 +6709,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Flag"
                 class_name = "Solar_Water_Heating"
-                documentation = """Indicates whether the heating in the Property is solar powered."""
+                documentation = r"""Indicates whether the heating in the Property is solar powered."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'Y': 'Yes', 'N': 'No'}
                 map_values = {'Yes': 'Y', 'No': 'N'}
@@ -6580,7 +6727,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6608,12 +6755,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Wet_Rooms_Count"
-                documentation = """Relevant when mechanical ventilation system is from PCDB."""
+                documentation = r"""Relevant when mechanical ventilation system is from PCDB."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6629,7 +6777,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6646,11 +6794,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-PressureTestCode"
                 class_name = "Pressure_Test"
-                documentation = """Whether there has been a pressure test, or whether an assumed value is used for the air permeability."""
+                documentation = r"""Whether there has been a pressure test, or whether an assumed value is used for the air permeability."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'4': 'no test, SAP algorithm used', '6': 'yes - measured at 50 Pa', '7': 'yes - measured at 4 Pa'}
                 map_values = {'no test, SAP algorithm used': '4', 'yes - measured at 50 Pa': '6', 'yes - measured at 4 Pa': '7'}
@@ -6663,7 +6812,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6691,11 +6840,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:string"
                 class_name = "Pressure_Test_Certificate_Number"
-                documentation = """The pressure test certificate number or test engineer reference."""
+                documentation = r"""The pressure test certificate number or test engineer reference."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -6725,12 +6875,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:decimal"
                 class_name = "Air_Permeability"
-                documentation = """Air permeability; only if pressure test (yes or assumed)."""
+                documentation = r"""Air permeability; only if pressure test (yes or assumed)."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6746,7 +6897,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6763,11 +6914,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "Has_Draught_Lobby"
-                documentation = """Is there a draft lobby? Only if no pressure test."""
+                documentation = r"""Is there a draft lobby? Only if no pressure test."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -6780,7 +6932,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6808,12 +6960,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Open_Chimneys_Count"
-                documentation = """The number of Open Chimneys in the Property."""
+                documentation = r"""The number of Open Chimneys in the Property."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6829,7 +6982,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6846,12 +6999,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Blocked_Chimneys_Count"
-                documentation = """The number of Blocked Chimneys in the Property."""
+                documentation = r"""The number of Blocked Chimneys in the Property."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6867,7 +7021,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6884,12 +7038,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Open_Flues_Count"
-                documentation = """The number of Open Flues in the Property."""
+                documentation = r"""The number of Open Flues in the Property."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6905,7 +7060,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6922,12 +7077,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Closed_Flues_Count"
-                documentation = """Chimney/Flues attached to closed fires."""
+                documentation = r"""Chimney/Flues attached to closed fires."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6943,7 +7099,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6960,12 +7116,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Boilers_Flues_Count"
-                documentation = """The number of Boiler Flues or chimneys in the Property."""
+                documentation = r"""The number of Boiler Flues or chimneys in the Property."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -6981,7 +7138,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -6998,12 +7155,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Other_Flues_Count"
-                documentation = """The number of Other Flues or chimneys in the Property."""
+                documentation = r"""The number of Other Flues or chimneys in the Property."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7019,7 +7177,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7041,7 +7199,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7057,7 +7216,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7074,12 +7233,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "PSV_Count"
-                documentation = """Number of passive vents."""
+                documentation = r"""Number of passive vents."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7095,7 +7255,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7112,12 +7272,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Flueless_Gas_Fires_Count"
-                documentation = """The number of flueless gas fires in the Property."""
+                documentation = r"""The number of flueless gas fires in the Property."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7133,7 +7294,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7150,12 +7311,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:positiveInteger"
                 class_name = "Mechanical_Ventilation_Index_Number"
-                documentation = """Relevant when mechanical ventilation system is from PCDB."""
+                documentation = r"""Relevant when mechanical ventilation system is from PCDB."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7171,7 +7333,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7188,11 +7350,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "VentilationTypeCode"
                 class_name = "Mechanical_Ventilation"
-                documentation = """Identifies the type of mechanical ventilation the property has. This is required for the RdSAP calculation."""
+                documentation = r"""Identifies the type of mechanical ventilation the property has. This is required for the RdSAP calculation."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'0': 'natural', '1': 'mechanical ventilation without heat recovery (MV)', '2': 'mechanical extract, decentralised (MEV dc)', '3': 'mechanical extract, centralised (MEV c)', '4': 'mechanical ventilation with heat recovery (MVHR)', '5': 'positive input from loft', '6': 'positive input from outside'}
                 map_values = {'natural': '0', 'mechanical ventilation without heat recovery (MV)': '1', 'mechanical extract, decentralised (MEV dc)': '2', 'mechanical extract, centralised (MEV c)': '3', 'mechanical ventilation with heat recovery (MVHR)': '4', 'positive input from loft': '5', 'positive input from outside': '6'}
@@ -7205,7 +7368,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7233,11 +7396,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-DuctTypeCode"
                 class_name = "Mechanical_Vent_Duct_Type"
-                documentation = """Mechanical vent duct type; if MEV c, MV or MVHR from PCDB."""
+                documentation = r"""Mechanical vent duct type; if MEV c, MV or MVHR from PCDB."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'flexible', '2': 'rigid', '3': 'semi-rigid'}
                 map_values = {'flexible': '1', 'rigid': '2', 'semi-rigid': '3'}
@@ -7250,7 +7414,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7278,11 +7442,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-DuctPlacement"
                 class_name = "Mechanical_Vent_Duct_Placement"
-                documentation = """Mechanical ventilation duct insulation; if MVHR from PCDB."""
+                documentation = r"""Mechanical ventilation duct insulation; if MVHR from PCDB."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'inside heated envelope', '2': 'outside heated envelope'}
                 map_values = {'inside heated envelope': '1', 'outside heated envelope': '2'}
@@ -7295,7 +7460,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7323,11 +7488,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-DuctInsulationCode"
                 class_name = "Mechanical_Vent_Duct_Insulation"
-                documentation = """Relevant when mechanical ventilation system is from PCDB."""
+                documentation = r"""Relevant when mechanical ventilation system is from PCDB."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'not insulated', '2': 'insulated'}
                 map_values = {'not insulated': '1', 'insulated': '2'}
@@ -7340,7 +7506,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7368,11 +7534,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-DuctInsulationLevel"
                 class_name = "Mechanical_Vent_Duct_Insulation_Level"
-                documentation = """Mechanical vent duct insulation; if MVHR from PCDB."""
+                documentation = r"""Mechanical vent duct insulation; if MVHR from PCDB."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'level 1', '2': 'level 2'}
                 map_values = {'level 1': '1', 'level 2': '2'}
@@ -7385,7 +7552,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7413,11 +7580,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "Mechanical_Vent_Measured_Installation"
-                documentation = """Mechanical ventilation SPF measured in situ; if MVHR or balanced from pcdb."""
+                documentation = r"""Mechanical ventilation SPF measured in situ; if MVHR or balanced from pcdb."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -7430,7 +7598,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7458,11 +7626,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:boolean"
                 class_name = "Is_Mechanical_Vent_Approved_Installer_Scheme"
-                documentation = """If MVHR from pcdb."""
+                documentation = r"""If MVHR from pcdb."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = bool
                 python_type_convertor = bool
                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                 map_values = {True: '1', False: '0'}
@@ -7475,7 +7644,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7503,12 +7672,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Kitchen_Room_Fans_Count"
-                documentation = """MEV dc, number of fans in room, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                documentation = r"""MEV dc, number of fans in room, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7524,7 +7694,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7541,12 +7711,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Non_Kitchen_Room_Fans_Count"
-                documentation = """MEV dc, number of fans in room, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                documentation = r"""MEV dc, number of fans in room, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7562,7 +7733,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7579,12 +7750,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Kitchen_Duct_Fans_Count"
-                documentation = """MEV dc, number of fans via duct, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                documentation = r"""MEV dc, number of fans via duct, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7600,7 +7772,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7617,12 +7789,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Non_Kitchen_Duct_Fans_Count"
-                documentation = """MEV dc, number of fans via duct, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                documentation = r"""MEV dc, number of fans via duct, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7638,7 +7811,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7655,12 +7828,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Kitchen_Wall_Fans_Count"
-                documentation = """MEV dc, number of fans through wall, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                documentation = r"""MEV dc, number of fans through wall, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7676,7 +7850,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7693,12 +7867,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Non_Kitchen_Wall_Fans_Count"
-                documentation = """MEV dc, number of fans through wall, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                documentation = r"""MEV dc, number of fans through wall, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -7714,7 +7889,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -7731,11 +7906,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-ConservatoryTypeCode"
                 class_name = "Conservatory_Type"
-                documentation = """Type of Conservatory"""
+                documentation = r"""Type of Conservatory"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'no conservatory', '2': 'separated unheated conservatory', '3': 'separated heated conservatory', '4': 'not separated', '5': 'not recorded - this is for backwards compatibility only and should not be used'}
                 map_values = {'no conservatory': '1', 'separated unheated conservatory': '2', 'separated heated conservatory': '3', 'not separated': '4', 'not recorded - this is for backwards compatibility only and should not be used': '5'}
@@ -7748,7 +7924,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def sap_property_details(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7777,10 +7953,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 element_type = "SAP-Heating"
                 class_name = "SAP_Heating"
                 documentation = None
-                type_documentation = """Details of the means by which the Main Building is heated."""
+                type_documentation = r"""Details of the means by which the Main Building is heated."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -7936,11 +8113,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "HeatingFuelTypeCode"
                     class_name = "Secondary_Fuel_Type"
-                    documentation = """The secondary type of fuel used to power the central heating e.g. Gas, Electricity"""
+                    documentation = r"""The secondary type of fuel used to power the central heating e.g. Gas, Electricity"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'To be used only when there is no heating/hot-water system or data is from a community network', '1': 'mains gas - this is for backwards compatibility only and should not be used', '2': 'LPG - this is for backwards compatibility only and should not be used', '3': 'bottled LPG', '4': 'oil - this is for backwards compatibility only and should not be used', '5': 'anthracite', '6': 'wood logs', '7': 'bulk wood pellets', '8': 'wood chips', '9': 'dual fuel - mineral + wood', '10': 'electricity - this is for backwards compatibility only and should not be used', '11': 'waste combustion - this is for backwards compatibility only and should not be used', '12': 'biomass - this is for backwards compatibility only and should not be used', '13': 'biogas - landfill - this is for backwards compatibility only and should not be used', '14': 'house coal - this is for backwards compatibility only and should not be used', '15': 'smokeless coal', '16': 'wood pellets in bags for secondary heating', '17': 'LPG special condition', '18': 'B30K (not community)', '19': 'bioethanol', '20': 'mains gas (community)', '21': 'LPG (community)', '22': 'oil (community)', '23': 'B30D (community)', '24': 'coal (community)', '25': 'electricity (community)', '26': 'mains gas (not community)', '27': 'LPG (not community)', '28': 'oil (not community)', '29': 'electricity (not community)', '30': 'waste combustion (community)', '31': 'biomass (community)', '32': 'biogas (community)', '33': 'house coal (not community)', '34': 'biodiesel from any biomass source', '35': 'biodiesel from used cooking oil only', '36': 'biodiesel from vegetable oil only (not community)', '37': 'appliances able to use mineral oil or liquid biofuel', '51': 'biogas (not community)', '56': 'heat from boilers that can use mineral oil or biodiesel (community)', '57': 'heat from boilers using biodiesel from any biomass source (community)', '58': 'biodiesel from vegetable oil only (community)', '99': 'from heat network data (community)'}
                     map_values = {'To be used only when there is no heating/hot-water system or data is from a community network': '0', 'mains gas - this is for backwards compatibility only and should not be used': '1', 'LPG - this is for backwards compatibility only and should not be used': '2', 'bottled LPG': '3', 'oil - this is for backwards compatibility only and should not be used': '4', 'anthracite': '5', 'wood logs': '6', 'bulk wood pellets': '7', 'wood chips': '8', 'dual fuel - mineral + wood': '9', 'electricity - this is for backwards compatibility only and should not be used': '10', 'waste combustion - this is for backwards compatibility only and should not be used': '11', 'biomass - this is for backwards compatibility only and should not be used': '12', 'biogas - landfill - this is for backwards compatibility only and should not be used': '13', 'house coal - this is for backwards compatibility only and should not be used': '14', 'smokeless coal': '15', 'wood pellets in bags for secondary heating': '16', 'LPG special condition': '17', 'B30K (not community)': '18', 'bioethanol': '19', 'mains gas (community)': '20', 'LPG (community)': '21', 'oil (community)': '22', 'B30D (community)': '23', 'coal (community)': '24', 'electricity (community)': '25', 'mains gas (not community)': '26', 'LPG (not community)': '27', 'oil (not community)': '28', 'electricity (not community)': '29', 'waste combustion (community)': '30', 'biomass (community)': '31', 'biogas (community)': '32', 'house coal (not community)': '33', 'biodiesel from any biomass source': '34', 'biodiesel from used cooking oil only': '35', 'biodiesel from vegetable oil only (not community)': '36', 'appliances able to use mineral oil or liquid biofuel': '37', 'biogas (not community)': '51', 'heat from boilers that can use mineral oil or biodiesel (community)': '56', 'heat from boilers using biodiesel from any biomass source (community)': '57', 'biodiesel from vegetable oil only (community)': '58', 'from heat network data (community)': '99'}
@@ -7953,7 +8131,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7981,11 +8159,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "HeatingFuelTypeCode"
                     class_name = "Water_Heating_Fuel"
-                    documentation = """The type of fuel used to heat the water e.g. Gas, Electricity"""
+                    documentation = r"""The type of fuel used to heat the water e.g. Gas, Electricity"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'To be used only when there is no heating/hot-water system or data is from a community network', '1': 'mains gas - this is for backwards compatibility only and should not be used', '2': 'LPG - this is for backwards compatibility only and should not be used', '3': 'bottled LPG', '4': 'oil - this is for backwards compatibility only and should not be used', '5': 'anthracite', '6': 'wood logs', '7': 'bulk wood pellets', '8': 'wood chips', '9': 'dual fuel - mineral + wood', '10': 'electricity - this is for backwards compatibility only and should not be used', '11': 'waste combustion - this is for backwards compatibility only and should not be used', '12': 'biomass - this is for backwards compatibility only and should not be used', '13': 'biogas - landfill - this is for backwards compatibility only and should not be used', '14': 'house coal - this is for backwards compatibility only and should not be used', '15': 'smokeless coal', '16': 'wood pellets in bags for secondary heating', '17': 'LPG special condition', '18': 'B30K (not community)', '19': 'bioethanol', '20': 'mains gas (community)', '21': 'LPG (community)', '22': 'oil (community)', '23': 'B30D (community)', '24': 'coal (community)', '25': 'electricity (community)', '26': 'mains gas (not community)', '27': 'LPG (not community)', '28': 'oil (not community)', '29': 'electricity (not community)', '30': 'waste combustion (community)', '31': 'biomass (community)', '32': 'biogas (community)', '33': 'house coal (not community)', '34': 'biodiesel from any biomass source', '35': 'biodiesel from used cooking oil only', '36': 'biodiesel from vegetable oil only (not community)', '37': 'appliances able to use mineral oil or liquid biofuel', '51': 'biogas (not community)', '56': 'heat from boilers that can use mineral oil or biodiesel (community)', '57': 'heat from boilers using biodiesel from any biomass source (community)', '58': 'biodiesel from vegetable oil only (community)', '99': 'from heat network data (community)'}
                     map_values = {'To be used only when there is no heating/hot-water system or data is from a community network': '0', 'mains gas - this is for backwards compatibility only and should not be used': '1', 'LPG - this is for backwards compatibility only and should not be used': '2', 'bottled LPG': '3', 'oil - this is for backwards compatibility only and should not be used': '4', 'anthracite': '5', 'wood logs': '6', 'bulk wood pellets': '7', 'wood chips': '8', 'dual fuel - mineral + wood': '9', 'electricity - this is for backwards compatibility only and should not be used': '10', 'waste combustion - this is for backwards compatibility only and should not be used': '11', 'biomass - this is for backwards compatibility only and should not be used': '12', 'biogas - landfill - this is for backwards compatibility only and should not be used': '13', 'house coal - this is for backwards compatibility only and should not be used': '14', 'smokeless coal': '15', 'wood pellets in bags for secondary heating': '16', 'LPG special condition': '17', 'B30K (not community)': '18', 'bioethanol': '19', 'mains gas (community)': '20', 'LPG (community)': '21', 'oil (community)': '22', 'B30D (community)': '23', 'coal (community)': '24', 'electricity (community)': '25', 'mains gas (not community)': '26', 'LPG (not community)': '27', 'oil (not community)': '28', 'electricity (not community)': '29', 'waste combustion (community)': '30', 'biomass (community)': '31', 'biogas (community)': '32', 'house coal (not community)': '33', 'biodiesel from any biomass source': '34', 'biodiesel from used cooking oil only': '35', 'biodiesel from vegetable oil only (not community)': '36', 'appliances able to use mineral oil or liquid biofuel': '37', 'biogas (not community)': '51', 'heat from boilers that can use mineral oil or biodiesel (community)': '56', 'heat from boilers using biodiesel from any biomass source (community)': '57', 'biodiesel from vegetable oil only (community)': '58', 'from heat network data (community)': '99'}
@@ -7998,7 +8177,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8026,11 +8205,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "SAP-HeatingCode"
                     class_name = "Secondary_Heating_Type"
-                    documentation = """Type of secondary heating (if any) present in the property."""
+                    documentation = r"""Type of secondary heating (if any) present in the property."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -8060,11 +8240,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "SAP-HeatingCode"
                     class_name = "Water_Heating_Code"
-                    documentation = """Describes the type of Water Heating present in the Property."""
+                    documentation = r"""Describes the type of Water Heating present in the Property."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -8099,6 +8280,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'Dual', '2': 'Single', 'NA': 'not applicable'}
                     map_values = {'Dual': '1', 'Single': '2', 'not applicable': 'NA'}
@@ -8111,7 +8293,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8139,11 +8321,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "CylinderSizeCode"
                     class_name = "Cylinder_Size"
-                    documentation = """The size of the Hot Water Cylinder - taken from a range of standard sizes."""
+                    documentation = r"""The size of the Hot Water Cylinder - taken from a range of standard sizes."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'No Access', '1': 'No Cylinder', '2': 'Normal - up to 130 litres', '3': 'Medium - between 131 and 170 litres', '4': 'Large - greater than 170 litres.', '5': 'actual size included in Solar-Water-Heating-Details', '6': 'Exact cylinder volume if known'}
                     map_values = {'No Access': '0', 'No Cylinder': '1', 'Normal - up to 130 litres': '2', 'Medium - between 131 and 170 litres': '3', 'Large - greater than 170 litres.': '4', 'actual size included in Solar-Water-Heating-Details': '5', 'Exact cylinder volume if known': '6'}
@@ -8156,7 +8339,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8184,12 +8367,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Measurement"
                     class_name = "Cylinder_Size_Measured"
-                    documentation = """Exact cylinder size if known. When Cylinder-Size code is 6."""
-                    type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                    documentation = r"""Exact cylinder size if known. When Cylinder-Size code is 6."""
+                    type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Heating"
@@ -8205,7 +8389,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8222,11 +8406,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "CylinderInsulationTypeCode"
                     class_name = "Cylinder_Insulation_Type"
-                    documentation = """the type of insulation surrounding the Hot Water Cylinder"""
+                    documentation = r"""the type of insulation surrounding the Hot Water Cylinder"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'None', '1': 'factory-applied', '2': 'loose jacket'}
                     map_values = {'None': '0', 'factory-applied': '1', 'loose jacket': '2'}
@@ -8239,7 +8424,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8267,12 +8452,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Measurement"
                     class_name = "Cylinder_Heat_Loss"
-                    documentation = """Cylinder declared loss in kWh/day; only if there is a hot water store and if manufacturer declared loss."""
-                    type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                    documentation = r"""Cylinder declared loss in kWh/day; only if there is a hot water store and if manufacturer declared loss."""
+                    type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Heating"
@@ -8288,7 +8474,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8305,11 +8491,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "CylinderThicknessCode"
                     class_name = "Cylinder_Insulation_Thickness"
-                    documentation = """Average thickness of the insulation surrounding the Hot Water Cylinder."""
+                    documentation = r"""Average thickness of the insulation surrounding the Hot Water Cylinder."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': '0mm', '12': '12mm', '25': '25 mm', '38': '38 mm', '50': '50 mm', '80': '80 mm', '120': '120mm', '160': '160mm'}
                     map_values = {'0mm': '0', '12mm': '12', '25 mm': '25', '38 mm': '38', '50 mm': '50', '80 mm': '80', '120mm': '120', '160mm': '160'}
@@ -8322,7 +8509,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8350,11 +8537,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Flag"
                     class_name = "Cylinder_Thermostat"
-                    documentation = """Whether the cylinder has a thermostat. Omit if no cylinder."""
+                    documentation = r"""Whether the cylinder has a thermostat. Omit if no cylinder."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'Y': 'Yes', 'N': 'No'}
                     map_values = {'Yes': 'Y', 'No': 'N'}
@@ -8367,7 +8555,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8400,6 +8588,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -8412,7 +8601,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8445,6 +8634,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -8473,6 +8663,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 2
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -8658,12 +8849,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "None"
                             class_name = "Main_Heating_Number"
-                            documentation = """Identifies the main heating as system 1 or system 2. System 1 must always be present, system 2 is included only when there are two systems."""
+                            documentation = r"""Identifies the main heating as system 1 or system 2. System 1 must always be present, system 2 is included only when there are two systems."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Main_Heating"
@@ -8679,7 +8871,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -8696,11 +8888,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-MainHeatingCategoryCode"
                             class_name = "Main_Heating_Category"
-                            documentation = """Category of heating system for the main heating system."""
+                            documentation = r"""Category of heating system for the main heating system."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'none', '2': 'boiler with radiators or underfloor heating', '3': 'micro-cogeneration', '4': 'heat pump with radiators or underfloor heating', '5': 'heat pump with warm air distribution', '6': 'community heating system', '7': 'electric storage heaters', '8': 'electric underfloor heating', '9': 'warm air system (not heat pump)', '10': 'room heaters', '11': 'other system', '12': 'not recorded'}
                             map_values = {'none': '1', 'boiler with radiators or underfloor heating': '2', 'micro-cogeneration': '3', 'heat pump with radiators or underfloor heating': '4', 'heat pump with warm air distribution': '5', 'community heating system': '6', 'electric storage heaters': '7', 'electric underfloor heating': '8', 'warm air system (not heat pump)': '9', 'room heaters': '10', 'other system': '11', 'not recorded': '12'}
@@ -8713,7 +8906,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8746,6 +8939,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'0': 'To be used only when there is no heating/hot-water system or data is from a community network', '1': 'mains gas - this is for backwards compatibility only and should not be used', '2': 'LPG - this is for backwards compatibility only and should not be used', '3': 'bottled LPG', '4': 'oil - this is for backwards compatibility only and should not be used', '5': 'anthracite', '6': 'wood logs', '7': 'bulk wood pellets', '8': 'wood chips', '9': 'dual fuel - mineral + wood', '10': 'electricity - this is for backwards compatibility only and should not be used', '11': 'waste combustion - this is for backwards compatibility only and should not be used', '12': 'biomass - this is for backwards compatibility only and should not be used', '13': 'biogas - landfill - this is for backwards compatibility only and should not be used', '14': 'house coal - this is for backwards compatibility only and should not be used', '15': 'smokeless coal', '16': 'wood pellets in bags for secondary heating', '17': 'LPG special condition', '18': 'B30K (not community)', '19': 'bioethanol', '20': 'mains gas (community)', '21': 'LPG (community)', '22': 'oil (community)', '23': 'B30D (community)', '24': 'coal (community)', '25': 'electricity (community)', '26': 'mains gas (not community)', '27': 'LPG (not community)', '28': 'oil (not community)', '29': 'electricity (not community)', '30': 'waste combustion (community)', '31': 'biomass (community)', '32': 'biogas (community)', '33': 'house coal (not community)', '34': 'biodiesel from any biomass source', '35': 'biodiesel from used cooking oil only', '36': 'biodiesel from vegetable oil only (not community)', '37': 'appliances able to use mineral oil or liquid biofuel', '51': 'biogas (not community)', '56': 'heat from boilers that can use mineral oil or biodiesel (community)', '57': 'heat from boilers using biodiesel from any biomass source (community)', '58': 'biodiesel from vegetable oil only (community)', '99': 'from heat network data (community)'}
                             map_values = {'To be used only when there is no heating/hot-water system or data is from a community network': '0', 'mains gas - this is for backwards compatibility only and should not be used': '1', 'LPG - this is for backwards compatibility only and should not be used': '2', 'bottled LPG': '3', 'oil - this is for backwards compatibility only and should not be used': '4', 'anthracite': '5', 'wood logs': '6', 'bulk wood pellets': '7', 'wood chips': '8', 'dual fuel - mineral + wood': '9', 'electricity - this is for backwards compatibility only and should not be used': '10', 'waste combustion - this is for backwards compatibility only and should not be used': '11', 'biomass - this is for backwards compatibility only and should not be used': '12', 'biogas - landfill - this is for backwards compatibility only and should not be used': '13', 'house coal - this is for backwards compatibility only and should not be used': '14', 'smokeless coal': '15', 'wood pellets in bags for secondary heating': '16', 'LPG special condition': '17', 'B30K (not community)': '18', 'bioethanol': '19', 'mains gas (community)': '20', 'LPG (community)': '21', 'oil (community)': '22', 'B30D (community)': '23', 'coal (community)': '24', 'electricity (community)': '25', 'mains gas (not community)': '26', 'LPG (not community)': '27', 'oil (not community)': '28', 'electricity (not community)': '29', 'waste combustion (community)': '30', 'biomass (community)': '31', 'biogas (community)': '32', 'house coal (not community)': '33', 'biodiesel from any biomass source': '34', 'biodiesel from used cooking oil only': '35', 'biodiesel from vegetable oil only (not community)': '36', 'appliances able to use mineral oil or liquid biofuel': '37', 'biogas (not community)': '51', 'heat from boilers that can use mineral oil or biodiesel (community)': '56', 'heat from boilers using biodiesel from any biomass source (community)': '57', 'biodiesel from vegetable oil only (community)': '58', 'from heat network data (community)': '99'}
@@ -8758,7 +8952,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8786,11 +8980,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-HeatingCode"
                             class_name = "Main_Heating_Control"
-                            documentation = """Type of Main Control for the Heating System."""
+                            documentation = r"""Type of Main Control for the Heating System."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -8820,11 +9015,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:string"
                             class_name = "Main_Heating_Index_Number"
-                            documentation = """The ID of the heating system from the product database, if system from database."""
+                            documentation = r"""The ID of the heating system from the product database, if system from database."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -8859,6 +9055,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'database', '2': 'SAP Table'}
                             map_values = {'database': '1', 'SAP Table': '2'}
@@ -8871,7 +9068,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8904,6 +9101,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -8933,11 +9131,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "BoilerIgnitionCode"
                             class_name = "Boiler_Ignition_Type"
-                            documentation = """Only relevant for boilers 1998 or later."""
+                            documentation = r"""Only relevant for boilers 1998 or later."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'auto-ignition', '2': 'permanent pilot light'}
                             map_values = {'auto-ignition': '1', 'permanent pilot light': '2'}
@@ -8950,7 +9149,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8978,11 +9177,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "BoilerFlueTypeCode"
                             class_name = "Boiler_Flue_Type"
-                            documentation = """Indicates the flue type of the heating system."""
+                            documentation = r"""Indicates the flue type of the heating system."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'open', '2': 'room-sealed'}
                             map_values = {'open': '1', 'room-sealed': '2'}
@@ -8995,7 +9195,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9023,11 +9223,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Flag"
                             class_name = "Fan_Flue_Present"
-                            documentation = """Indicates whether the heating system contains a fan flue. This is required by RdSAP and should be part of the 3-letter codes but isn't."""
+                            documentation = r"""Indicates whether the heating system contains a fan flue. This is required by RdSAP and should be part of the 3-letter codes but isn't."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -9040,7 +9241,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9068,11 +9269,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "HeatEmitterCode"
                             class_name = "Heat_Emitter_Type"
-                            documentation = """Identifies the means by which the central heating system (if present) emits heat."""
+                            documentation = r"""Identifies the means by which the central heating system (if present) emits heat."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'0': 'not radiators or underfloor', '1': 'radiators', '2': 'underfloor', '3': 'fan coil units', '4': 'both radiators and underfloor'}
                             map_values = {'not radiators or underfloor': '0', 'radiators': '1', 'underfloor': '2', 'fan coil units': '3', 'both radiators and underfloor': '4'}
@@ -9085,7 +9287,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9113,12 +9315,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Main_Heating_Fraction"
-                            documentation = """Fraction of total floor area served by this system."""
+                            documentation = r"""Fraction of total floor area served by this system."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Main_Heating"
@@ -9134,7 +9337,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -9151,11 +9354,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Flag"
                             class_name = "Has_FGHRS"
-                            documentation = """Flue Gas Heat Recovery System"""
+                            documentation = r"""Flue Gas Heat Recovery System"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -9168,7 +9372,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9196,12 +9400,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:nonNegativeInteger"
                             class_name = "FGHRS_Index_Number"
-                            documentation = """FGHRS index number; only if FGHRS"""
+                            documentation = r"""FGHRS index number; only if FGHRS"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Main_Heating"
@@ -9217,7 +9422,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -9234,12 +9439,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Measurement"
                             class_name = "FGHRS_PV_Peak_Power"
-                            documentation = """Applies only for FGHRS with its own PV supply"""
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            documentation = r"""Applies only for FGHRS with its own PV supply"""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Main_Heating"
@@ -9255,7 +9461,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -9272,11 +9478,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-CompassDirectionCode"
                             class_name = "FGHRS_PV_Orientation"
-                            documentation = """Applies only for FGHRS with its own PV supply"""
+                            documentation = r"""Applies only for FGHRS with its own PV supply"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', 'ND': 'To be used when the pitch is horizontal'}
                             map_values = {'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'To be used when the pitch is horizontal': 'ND'}
@@ -9289,7 +9496,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9317,11 +9524,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-VerticalPitchCode"
                             class_name = "FGHRS_PV_Pitch"
-                            documentation = """Applies only for FGHRS with its own PV supply"""
+                            documentation = r"""Applies only for FGHRS with its own PV supply"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'horizontal', '2': '30 degrees', '3': '45 degrees', '4': '60 degrees', '5': 'vertical'}
                             map_values = {'horizontal': '1', '30 degrees': '2', '45 degrees': '3', '60 degrees': '4', 'vertical': '5'}
@@ -9334,7 +9542,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9362,11 +9570,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-SolarCollectorOvershadingCode"
                             class_name = "FGHRS_PV_Overshading"
-                            documentation = """Applies only for FGHRS with its own PV supply"""
+                            documentation = r"""Applies only for FGHRS with its own PV supply"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'none or very little', '2': 'modest', '3': 'significant', '4': 'heavy', '5': 'severe'}
                             map_values = {'none or very little': '1', 'modest': '2', 'significant': '3', 'heavy': '4', 'severe': '5'}
@@ -9379,7 +9588,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9407,12 +9616,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:positiveInteger"
                             class_name = "Compensating_Controller_Index_Number"
-                            documentation = """The ID of the controller from the product database."""
+                            documentation = r"""The ID of the controller from the product database."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Main_Heating"
@@ -9428,7 +9638,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -9445,12 +9655,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:positiveInteger"
                             class_name = "TTZC_Index_Number"
-                            documentation = """The ID of the time and temperature zone control from the product database."""
+                            documentation = r"""The ID of the time and temperature zone control from the product database."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Main_Heating"
@@ -9466,7 +9677,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -9483,12 +9694,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:positiveInteger"
                             class_name = "Community_Heat_Network_Index_Number"
-                            documentation = """index number of heat network, if applicable, community space heating or community space and water heating."""
+                            documentation = r"""index number of heat network, if applicable, community space heating or community space and water heating."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Main_Heating"
@@ -9504,7 +9716,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -9521,11 +9733,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:string"
                             class_name = "Community_Heat_Sub_Network_Name"
-                            documentation = """only if heat network from pcdb. The name by which the sub community heat network is known."""
+                            documentation = r"""only if heat network from pcdb. The name by which the sub community heat network is known."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -9560,6 +9773,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'5': 'calculated', '6': 'unknown', '9': 'Two adjoining dwellings'}
                             map_values = {'calculated': '5', 'unknown': '6', 'Two adjoining dwellings': '9'}
@@ -9572,7 +9786,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9600,11 +9814,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-CHPElectricityGenerationCode"
                             class_name = "Community_Heat_CHP_Electricity_Generation"
-                            documentation = """Only if community heating not from pcdb and a heat source with CHP. CHP Electricity generation options from table 12f."""
+                            documentation = r"""Only if community heating not from pcdb and a heat source with CHP. CHP Electricity generation options from table 12f."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'81': 'New CHP, export only.', '82': 'New CHP, flexible operation.', '83': 'New CHP, standard.', '84': 'Existing CHP (2015+), export only.', '85': 'Existing CHP (2015+), flexible operation.', '86': 'Existing CHP (2015+),standard.', '87': 'Existing CHP (pre-2015), export only.', '88': 'Existing CHP (pre-2015), flexible operation.', '89': 'Existing CHP (pre-2015), standard.'}
                             map_values = {'New CHP, export only.': '81', 'New CHP, flexible operation.': '82', 'New CHP, standard.': '83', 'Existing CHP (2015+), export only.': '84', 'Existing CHP (2015+), flexible operation.': '85', 'Existing CHP (2015+),standard.': '86', 'Existing CHP (pre-2015), export only.': '87', 'Existing CHP (pre-2015), flexible operation.': '88', 'Existing CHP (pre-2015), standard.': '89'}
@@ -9617,7 +9832,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9650,6 +9865,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -9678,6 +9894,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = False
                                 min_occurs = 1
                                 max_occurs = 4
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -9713,12 +9930,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                     element_type = "xs:positiveInteger"
                                     class_name = "Number_Of_Heaters"
-                                    documentation = """The number of storage heaters with this index number."""
+                                    documentation = r"""The number of storage heaters with this index number."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = int
+                                    python_type = int
+                                    python_type_convertor = lambda x: x if x is None else int(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "Storage_Heater"
@@ -9734,7 +9952,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -9751,12 +9969,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                     element_type = "xs:positiveInteger"
                                     class_name = "Index_Number"
-                                    documentation = """The index number of the heater from the product database."""
+                                    documentation = r"""The index number of the heater from the product database."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = int
+                                    python_type = int
+                                    python_type_convertor = lambda x: x if x is None else int(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "Storage_Heater"
@@ -9772,7 +9991,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -9789,11 +10008,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                     element_type = "xs:boolean"
                                     class_name = "High_Heat_Retention"
-                                    documentation = """Whether heater is high heat retention type."""
+                                    documentation = r"""Whether heater is high heat retention type."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = bool
                                     python_type_convertor = bool
                                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                     map_values = {True: '1', False: '0'}
@@ -9806,7 +10026,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     def storage_heater(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9834,11 +10054,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "EmitterTemperatureCode"
                             class_name = "Emitter_Temperature"
-                            documentation = """0, 1, 3 or 4 applicable to condensing boilers and heat pumps. Other systems NA."""
+                            documentation = r"""0, 1, 3 or 4 applicable to condensing boilers and heat pumps. Other systems NA."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'0': 'unknown', '1': 'over 45degC', '3': 'over 35degC and less than or equal to 45degC', '4': 'less than or equal to 35degC', 'NA': 'not applicable for the heating system'}
                             map_values = {'unknown': '0', 'over 45degC': '1', 'over 35degC and less than or equal to 45degC': '3', 'less than or equal to 35degC': '4', 'not applicable for the heating system': 'NA'}
@@ -9851,7 +10072,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9879,11 +10100,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:boolean"
                             class_name = "MCS_Installed_Heat_Pump"
-                            documentation = """Whether heat pump was installed under the Microgeneration Certification Scheme."""
+                            documentation = r"""Whether heat pump was installed under the Microgeneration Certification Scheme."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = bool
                             python_type_convertor = bool
                             map_codes = {'true': True, '1': True, 'false': False, '0': False}
                             map_values = {True: '1', False: '0'}
@@ -9896,7 +10118,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9924,11 +10146,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "PumpAge"
                             class_name = "Central_Heating_Pump_Age"
-                            documentation = """Included for systems with a central heating pump, i.e. wet system."""
+                            documentation = r"""Included for systems with a central heating pump, i.e. wet system."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'0': 'unknown', '1': '2012 or earlier', '2': '2013 or later'}
                             map_values = {'unknown': '0', '2012 or earlier': '1', '2013 or later': '2'}
@@ -9941,7 +10164,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def main_heating(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9969,11 +10192,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Solar-Water-Heating-Details"
                     class_name = "Solar_Water_Heating_Details"
-                    documentation = """Included only when details are known"""
+                    documentation = r"""Included only when details are known"""
                     type_documentation = None
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -10075,11 +10299,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "SAP-SolarCollectorDataSourceCode"
                         class_name = "Solar_Panel_Collector_Data_Source"
-                        documentation = """Source of solar panel collector data."""
+                        documentation = r"""Source of solar panel collector data."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'default', '2': 'declared values'}
                         map_values = {'default': '1', 'declared values': '2'}
@@ -10092,7 +10317,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10120,11 +10345,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "SAP-CompassDirectionCode"
                         class_name = "Solar_Panel_Collector_Orientation"
-                        documentation = """Collector orientation."""
+                        documentation = r"""Collector orientation."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', 'ND': 'To be used when the pitch is horizontal'}
                         map_values = {'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'To be used when the pitch is horizontal': 'ND'}
@@ -10137,7 +10363,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10170,6 +10396,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'horizontal', '2': '30 degrees', '3': '45 degrees', '4': '60 degrees', '5': 'vertical'}
                         map_values = {'horizontal': '1', '30 degrees': '2', '45 degrees': '3', '60 degrees': '4', 'vertical': '5'}
@@ -10182,7 +10409,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10215,6 +10442,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'none or very little', '2': 'modest', '3': 'significant', '4': 'heavy', '5': 'severe'}
                         map_values = {'none or very little': '1', 'modest': '2', 'significant': '3', 'heavy': '4', 'severe': '5'}
@@ -10227,7 +10455,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10255,11 +10483,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "SolarPumpType"
                         class_name = "Solar_Water_Pump"
-                        documentation = """Energy source for pumping water through the solar system"""
+                        documentation = r"""Energy source for pumping water through the solar system"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'unknown', '1': 'electrically powered', '2': 'PV powered'}
                         map_values = {'unknown': '0', 'electrically powered': '1', 'PV powered': '2'}
@@ -10272,7 +10501,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10300,11 +10529,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Flag"
                         class_name = "Store_Volume_Details_Known"
-                        documentation = """When Y the total store volume, dedicated solar volume and combined cylinder are to be provided"""
+                        documentation = r"""When Y the total store volume, dedicated solar volume and combined cylinder are to be provided"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'Y': 'Yes', 'N': 'No'}
                         map_values = {'Yes': 'Y', 'No': 'N'}
@@ -10317,7 +10547,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10345,11 +10575,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Solar-Collector-Details"
                         class_name = "Solar_Collector_Details"
-                        documentation = """Include when collector details known."""
+                        documentation = r"""Include when collector details known."""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -10403,12 +10634,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Measurement"
                             class_name = "Aperture_Area"
-                            documentation = """Panel aperture area in square metres."""
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            documentation = r"""Panel aperture area in square metres."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Collector_Details"
@@ -10424,7 +10656,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -10441,11 +10673,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-SolarCollectorTypeCode"
                             class_name = "Collector_Type"
-                            documentation = """Type of solar panel collector."""
+                            documentation = r"""Type of solar panel collector."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'unglazed', '2': 'flat panel', '3': 'evacuated tube'}
                             map_values = {'unglazed': '1', 'flat panel': '2', 'evacuated tube': '3'}
@@ -10458,7 +10691,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def solar_collector_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10486,12 +10719,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Percentage"
                             class_name = "Zero_Loss_Efficiency"
-                            documentation = """Collector zero-loss efficiency."""
+                            documentation = r"""Collector zero-loss efficiency."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Collector_Details"
@@ -10507,7 +10741,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -10524,12 +10758,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Heat_Loss_Rate"
-                            documentation = """Collector heat loss rate; for backward compatibility only, do not use."""
+                            documentation = r"""Collector heat loss rate; for backward compatibility only, do not use."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Collector_Details"
@@ -10545,7 +10780,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -10562,12 +10797,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Linear_Heat_Loss_Coefficient"
-                            documentation = """Collector linear heat loss coefficient."""
+                            documentation = r"""Collector linear heat loss coefficient."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Collector_Details"
@@ -10583,7 +10819,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -10600,12 +10836,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Second_Order_Heat_Loss_Coefficient"
-                            documentation = """Collector 2nd order heat loss coefficient."""
+                            documentation = r"""Collector 2nd order heat loss coefficient."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Collector_Details"
@@ -10621,7 +10858,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -10638,11 +10875,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Solar-Volume-Details"
                         class_name = "Solar_Volume_Details"
-                        documentation = """Include when volume details known."""
+                        documentation = r"""Include when volume details known."""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -10678,12 +10916,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Measurement"
                             class_name = "Total_Store_Volume"
-                            documentation = """Total volume of hot water store in litres."""
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            documentation = r"""Total volume of hot water store in litres."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Volume_Details"
@@ -10699,7 +10938,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -10716,12 +10955,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Measurement"
                             class_name = "Dedicated_Solar_Volume"
-                            documentation = """Volume of hot water store dedicated to solar heated water, in litres."""
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            documentation = r"""Volume of hot water store dedicated to solar heated water, in litres."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Volume_Details"
@@ -10737,7 +10977,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -10754,11 +10994,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Flag"
                             class_name = "Combined_Cylinder"
-                            documentation = """If combined cylinder the total hot water store volume is inclusive of the dedicated solar volume."""
+                            documentation = r"""If combined cylinder the total hot water store volume is inclusive of the dedicated solar volume."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -10771,7 +11012,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def solar_volume_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10799,11 +11040,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "ShowerTypeCode"
                         class_name = "Shower_Types"
-                        documentation = """Type of showers in the property."""
+                        documentation = r"""Type of showers in the property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'unknown - for backward compatibility only, do not use', '1': 'non-electric shower(s) only', '2': 'electric shower(s) only', '3': 'both electric and non-electric showers', '4': 'no shower'}
                         map_values = {'unknown - for backward compatibility only, do not use': '0', 'non-electric shower(s) only': '1', 'electric shower(s) only': '2', 'both electric and non-electric showers': '3', 'no shower': '4'}
@@ -10816,7 +11058,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10844,12 +11086,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:decimal"
                         class_name = "Collector_Loop_Efficiency"
-                        documentation = """Collector loop efficiency; only if declared values."""
+                        documentation = r"""Collector loop efficiency; only if declared values."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Solar_Water_Heating_Details"
@@ -10865,7 +11108,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10882,12 +11125,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:decimal"
                         class_name = "Incidence_Angle_Modifier"
-                        documentation = """Incidence angle modifier; only if declared values."""
+                        documentation = r"""Incidence angle modifier; only if declared values."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Solar_Water_Heating_Details"
@@ -10903,7 +11147,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10925,6 +11169,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -10937,7 +11182,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10970,6 +11215,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'space and water heating', '2': 'space heating only', '3': 'water heating only'}
                         map_values = {'space and water heating': '1', 'space heating only': '2', 'water heating only': '3'}
@@ -10982,7 +11228,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def solar_water_heating_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11010,12 +11256,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:decimal"
                         class_name = "Overall_Heat_Loss"
-                        documentation = """Overall heat loss coefficient of system; only if declared values."""
+                        documentation = r"""Overall heat loss coefficient of system; only if declared values."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Solar_Water_Heating_Details"
@@ -11031,7 +11278,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -11048,11 +11295,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Instantaneous-WWHRS"
                     class_name = "Instantaneous_WWHRS"
-                    documentation = """Waste Water Heat Recovery Systems"""
+                    documentation = r"""Waste Water Heat Recovery Systems"""
                     type_documentation = None
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -11087,7 +11335,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Instantaneous_WWHRS"
@@ -11103,7 +11352,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -11120,12 +11369,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:positiveInteger"
                         class_name = "WWHRS_Index_Number2"
-                        documentation = """Omit if no second system."""
+                        documentation = r"""Omit if no second system."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Instantaneous_WWHRS"
@@ -11141,7 +11391,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -11163,6 +11413,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -11197,7 +11448,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Storage_WWHRS"
@@ -11213,7 +11465,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -11230,12 +11482,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Measurement"
                         class_name = "WWHRS_Store_Volume"
-                        documentation = """Dedicated store volume in litres."""
-                        type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                        documentation = r"""Dedicated store volume in litres."""
+                        type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Storage_WWHRS"
@@ -11251,7 +11504,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -11269,10 +11522,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     element_type = "Shower-Outlets"
                     class_name = "Shower_Outlets"
                     documentation = None
-                    type_documentation = """Shower outlets present in the dwelling. If there are more than 5 then only include the 5 with the highest flow rates used."""
+                    type_documentation = r"""Shower outlets present in the dwelling. If there are more than 5 then only include the 5 with the highest flow rates used."""
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -11297,10 +11551,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         element_type = "Shower-Outlet"
                         class_name = "Shower_Outlet"
                         documentation = None
-                        type_documentation = """Various details for each shower outlet."""
+                        type_documentation = r"""Various details for each shower outlet."""
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 5
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -11330,11 +11585,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "ShowerTypeCode"
                             class_name = "Shower_Outlet_Type"
-                            documentation = """Hot water type for this shower outlet."""
+                            documentation = r"""Hot water type for this shower outlet."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'0': 'unknown - for backward compatibility only, do not use', '1': 'non-electric shower(s) only', '2': 'electric shower(s) only', '3': 'both electric and non-electric showers', '4': 'no shower'}
                             map_values = {'unknown - for backward compatibility only, do not use': '0', 'non-electric shower(s) only': '1', 'electric shower(s) only': '2', 'both electric and non-electric showers': '3', 'no shower': '4'}
@@ -11347,7 +11603,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def shower_outlet(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11375,11 +11631,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "ShowerWWHRSCode"
                             class_name = "Shower_WWHRS"
-                            documentation = """The WWHRS with which the shower is connected. If shower outlet type is instantaneous electric shower then only a storage WWHRS can be selected or none."""
+                            documentation = r"""The WWHRS with which the shower is connected. If shower outlet type is instantaneous electric shower then only a storage WWHRS can be selected or none."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'none', '2': 'Instantaneous WWHRS 1', '3': 'Instantaneous WWHRS 2', '4': 'Storage WWHRS'}
                             map_values = {'none': '1', 'Instantaneous WWHRS 1': '2', 'Instantaneous WWHRS 2': '3', 'Storage WWHRS': '4'}
@@ -11392,7 +11649,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def shower_outlet(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11425,7 +11682,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Heating"
@@ -11441,7 +11699,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -11463,7 +11721,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Heating"
@@ -11479,7 +11738,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -11496,12 +11755,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:positiveInteger"
                     class_name = "Community_DHW_Network_Index_Number"
-                    documentation = """index number of heat network, if applicable, community water heating only."""
+                    documentation = r"""index number of heat network, if applicable, community water heating only."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Heating"
@@ -11517,7 +11777,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -11534,11 +11794,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:string"
                     class_name = "Community_DHW_Sub_Network_Name"
-                    documentation = """only if hot water only heat network from pcdb. The name by which the sub community heat network is known."""
+                    documentation = r"""only if hot water only heat network from pcdb. The name by which the sub community heat network is known."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -11568,11 +11829,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "SAP-HeatingDistributionCode"
                     class_name = "Community_DHW_Distribution_Type"
-                    documentation = """only if hot water only heat network."""
+                    documentation = r"""only if hot water only heat network."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'5': 'calculated', '6': 'unknown', '9': 'Two adjoining dwellings'}
                     map_values = {'calculated': '5', 'unknown': '6', 'Two adjoining dwellings': '9'}
@@ -11585,7 +11847,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11613,11 +11875,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "SAP-CHPElectricityGenerationCode"
                     class_name = "Community_DHW_CHP_Electricity_Generation"
-                    documentation = """Only if community heating not from pcdb and a heat source with CHP. CHP Electricity generation options from table 12f."""
+                    documentation = r"""Only if community heating not from pcdb and a heat source with CHP. CHP Electricity generation options from table 12f."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'81': 'New CHP, export only.', '82': 'New CHP, flexible operation.', '83': 'New CHP, standard.', '84': 'Existing CHP (2015+), export only.', '85': 'Existing CHP (2015+), flexible operation.', '86': 'Existing CHP (2015+),standard.', '87': 'Existing CHP (pre-2015), export only.', '88': 'Existing CHP (pre-2015), flexible operation.', '89': 'Existing CHP (pre-2015), standard.'}
                     map_values = {'New CHP, export only.': '81', 'New CHP, flexible operation.': '82', 'New CHP, standard.': '83', 'Existing CHP (2015+), export only.': '84', 'Existing CHP (2015+), flexible operation.': '85', 'Existing CHP (2015+),standard.': '86', 'Existing CHP (pre-2015), export only.': '87', 'Existing CHP (pre-2015), flexible operation.': '88', 'Existing CHP (pre-2015), standard.': '89'}
@@ -11630,7 +11893,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_heating(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11658,11 +11921,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-Energy-Source"
                 class_name = "SAP_Energy_Source"
-                documentation = """Details of energy sources available to the property."""
-                type_documentation = """Details of the main Electricity supply to the Property."""
+                documentation = r"""Details of energy sources available to the property."""
+                type_documentation = r"""Details of the main Electricity supply to the Property."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -11770,11 +12034,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "ElectricMeterTypeCode"
                     class_name = "Meter_Type"
-                    documentation = """The type of Electricity Meter - taken from a pre-defined list of values."""
+                    documentation = r"""The type of Electricity Meter - taken from a pre-defined list of values."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'dual', '2': 'Single', '3': 'Unknown', '4': 'dual (24 hour)', '5': 'off-peak 18 hour', '6': 'off-peak 10 hour'}
                     map_values = {'dual': '1', 'Single': '2', 'Unknown': '3', 'dual (24 hour)': '4', 'off-peak 18 hour': '5', 'off-peak 10 hour': '6'}
@@ -11787,7 +12052,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11815,11 +12080,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "MainsGasCode"
                     class_name = "Mains_Gas"
-                    documentation = """Whether mains gas is available in the property."""
+                    documentation = r"""Whether mains gas is available in the property."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'Y': 'mains gas available in the property', 'N': 'mains gas not available in the property', 'NR': 'not recorded; for backwards compatibility only, do not use'}
                     map_values = {'mains gas available in the property': 'Y', 'mains gas not available in the property': 'N', 'not recorded; for backwards compatibility only, do not use': 'NR'}
@@ -11832,7 +12098,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11860,11 +12126,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:boolean"
                     class_name = "Electricity_Smart_Meter_Present"
-                    documentation = """Is an electricity Smart Meter present?"""
+                    documentation = r"""Is an electricity Smart Meter present?"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -11877,7 +12144,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11905,11 +12172,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:boolean"
                     class_name = "Gas_Smart_Meter_Present"
-                    documentation = """Is a gas Smart Meter present?"""
+                    documentation = r"""Is a gas Smart Meter present?"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -11922,7 +12190,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11955,6 +12223,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -11967,7 +12236,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11995,12 +12264,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "SAP-WindTurbinesCount"
                     class_name = "Wind_Turbines_Count"
-                    documentation = """Number of wind turbines; 0 if none."""
+                    documentation = r"""Number of wind turbines; 0 if none."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Energy_Source"
@@ -12016,7 +12286,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -12033,11 +12303,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "SAP-TerrainTypeCode"
                     class_name = "Wind_Turbines_Terrain_Type"
-                    documentation = """Terrain type"""
+                    documentation = r"""Terrain type"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'urban', '2': 'suburban', '3': 'rural', '4': 'not recorded'}
                     map_values = {'urban': '1', 'suburban': '2', 'rural': '3', 'not recorded': '4'}
@@ -12050,7 +12321,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12078,11 +12349,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Wind-Turbine-Details"
                     class_name = "Wind_Turbine_Details"
-                    documentation = """Included when details are known"""
+                    documentation = r"""Included when details are known"""
                     type_documentation = None
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -12112,12 +12384,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Measurement"
                         class_name = "Rotor_Diameter"
-                        documentation = """Diameter of rotor of wind turbine"""
-                        type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                        documentation = r"""Diameter of rotor of wind turbine"""
+                        type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Wind_Turbine_Details"
@@ -12133,7 +12406,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -12150,12 +12423,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Measurement"
                         class_name = "Hub_Height"
-                        documentation = """Height of rotor hub above ridge of roof"""
-                        type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                        documentation = r"""Height of rotor hub above ridge of roof"""
+                        type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Wind_Turbine_Details"
@@ -12171,7 +12445,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -12193,6 +12467,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -12227,6 +12502,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 3
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -12255,6 +12531,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -12296,12 +12573,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "Measurement"
                                 class_name = "Peak_Power"
-                                documentation = """Peak kW of photovoltaics (PVs) (kWp). If the total peak power has been apportioned between different dwellings within the same building, this is the kWp ascribed to the dwelling being assessed."""
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                documentation = r"""Peak kW of photovoltaics (PVs) (kWp). If the total peak power has been apportioned between different dwellings within the same building, this is the kWp ascribed to the dwelling being assessed."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "PV_Array"
@@ -12317,7 +12595,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12334,11 +12612,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "SAP-CompassDirectionCode"
                                 class_name = "Orientation"
-                                documentation = """PV orientation; only if peak kWp > 0."""
+                                documentation = r"""PV orientation; only if peak kWp > 0."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', 'ND': 'To be used when the pitch is horizontal'}
                                 map_values = {'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'To be used when the pitch is horizontal': 'ND'}
@@ -12351,7 +12630,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12379,11 +12658,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "SAP-VerticalPitchCode"
                                 class_name = "Pitch"
-                                documentation = """PV pitch; only if peak kWp > 0."""
+                                documentation = r"""PV pitch; only if peak kWp > 0."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'horizontal', '2': '30 degrees', '3': '45 degrees', '4': '60 degrees', '5': 'vertical'}
                                 map_values = {'horizontal': '1', '30 degrees': '2', '45 degrees': '3', '60 degrees': '4', 'vertical': '5'}
@@ -12396,7 +12676,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12424,11 +12704,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "SAP-SolarCollectorOvershadingCode"
                                 class_name = "Overshading"
-                                documentation = """PV overshading; only if peak kWp > 0."""
+                                documentation = r"""PV overshading; only if peak kWp > 0."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'none or very little', '2': 'modest', '3': 'significant', '4': 'heavy', '5': 'severe'}
                                 map_values = {'none or very little': '1', 'modest': '2', 'significant': '3', 'heavy': '4', 'severe': '5'}
@@ -12441,7 +12722,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12474,6 +12755,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -12497,12 +12779,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Percentage"
                             class_name = "Percent_Roof_Area"
-                            documentation = """Photovoltaic area as percentage of total roof area. 0% indicates that a photovoltaic supply is not present in the property."""
+                            documentation = r"""Photovoltaic area as percentage of total roof area. 0% indicates that a photovoltaic supply is not present in the property."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "None_Or_No_Details"
@@ -12518,7 +12801,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -12540,6 +12823,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'not applicable (FGHRS or no PV)', '1': "not connected to dwelling's electricity meter", '2': "connected to dwelling's electricity meter", 'NR': 'not recorded; for backwards compatibility only, do not use'}
                     map_values = {'not applicable (FGHRS or no PV)': '0', "not connected to dwelling's electricity meter": '1', "connected to dwelling's electricity meter": '2', 'not recorded; for backwards compatibility only, do not use': 'NR'}
@@ -12552,7 +12836,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12580,11 +12864,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:boolean"
                     class_name = "PV_Diverter"
-                    documentation = """Diverter present."""
+                    documentation = r"""Diverter present."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -12597,7 +12882,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12630,7 +12915,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Energy_Source"
@@ -12646,7 +12932,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -12668,6 +12954,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -12696,6 +12983,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 20
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -12719,12 +13007,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Battery_Capacity"
-                            documentation = """Battery capacity in kWh. defaults to 5kW in unknown."""
+                            documentation = r"""Battery capacity in kWh. defaults to 5kW in unknown."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "PV_Battery"
@@ -12740,7 +13029,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -12757,12 +13046,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:decimal"
                     class_name = "Hydro_Electric_Generation"
-                    documentation = """Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided."""
+                    documentation = r"""Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Energy_Source"
@@ -12778,7 +13068,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -12795,11 +13085,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:boolean"
                     class_name = "Is_Hydro_Output_Connected_To_Dwelling_Meter"
-                    documentation = """Whether the hydro-electric station is connected to dwelling's electricity meter"""
+                    documentation = r"""Whether the hydro-electric station is connected to dwelling's electricity meter"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -12812,7 +13103,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_energy_source(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12841,10 +13132,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 element_type = "SAP-Building-Parts"
                 class_name = "SAP_Building_Parts"
                 documentation = None
-                type_documentation = """Details of the significant building parts that comprise the main habitable building in the property. The main habitable area generally consists of a single main building but can over time be extended to include extensions such as new wings and additional storeys. For the purpose of calculating the overall Energy Assessment for the property details of each distinct Building Part, such as its construction, have to be gathered because different materials have different insulation ratings (obviously) which affects the overall rating."""
+                type_documentation = r"""Details of the significant building parts that comprise the main habitable building in the property. The main habitable area generally consists of a single main building but can over time be extended to include extensions such as new wings and additional storeys. For the purpose of calculating the overall Energy Assessment for the property details of each distinct Building Part, such as its construction, have to be gathered because different materials have different insulation ratings (obviously) which affects the overall rating."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -12875,10 +13167,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Integral-Conservatory"
                     class_name = "SAP_Integral_Conservatory"
                     documentation = None
-                    type_documentation = """A conservatory intergrated into the property that is within the heat-loss perimeter and forms part of the habitable area."""
+                    type_documentation = r"""A conservatory intergrated into the property that is within the heat-loss perimeter and forms part of the habitable area."""
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -12920,11 +13213,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Flag"
                         class_name = "Double_Glazed"
-                        documentation = """Indicates whether the conservatory is double glazed"""
+                        documentation = r"""Indicates whether the conservatory is double glazed"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'Y': 'Yes', 'N': 'No'}
                         map_values = {'Yes': 'Y', 'No': 'N'}
@@ -12937,7 +13231,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_integral_conservatory(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12965,12 +13259,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Measurement"
                         class_name = "Floor_Area"
-                        documentation = """The gross floor area of the conservatory"""
-                        type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                        documentation = r"""The gross floor area of the conservatory"""
+                        type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Integral_Conservatory"
@@ -12986,7 +13281,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -13003,12 +13298,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Measurement"
                         class_name = "Glazed_Perimeter"
-                        documentation = """The length of the glazed area"""
-                        type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                        documentation = r"""The length of the glazed area"""
+                        type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Integral_Conservatory"
@@ -13024,7 +13320,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -13041,11 +13337,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "ConservatoryHeightCode"
                         class_name = "Room_Height"
-                        documentation = """The average height of the conservatory"""
+                        documentation = r"""The average height of the conservatory"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': '1 storey', '1.5': '1.5 storey', '2': '2 storey', '2.5': '2.5 storey', '3': '3 storey'}
                         map_values = {'1 storey': '1', '1.5 storey': '1.5', '2 storey': '2', '2.5 storey': '2.5', '3 storey': '3'}
@@ -13058,7 +13355,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_integral_conservatory(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13087,10 +13384,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Building-Part"
                     class_name = "SAP_Building_Part"
                     documentation = None
-                    type_documentation = """A permanent structure that forms part of the Property and is built primarily for human habitation. A Building is usually made up of one or more Storey's and may contain a number of Internal Structural Features. An extension would be a Building Part."""
+                    type_documentation = r"""A permanent structure that forms part of the Property and is built primarily for human habitation. A Building is usually made up of one or more Storey's and may contain a number of Internal Structural Features. An extension would be a Building Part."""
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -13270,12 +13568,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:positiveInteger"
                         class_name = "Building_Part_Number"
-                        documentation = """An integer value which uniquely identifies the building part in the property. The value "1" must be assigned to the main dwelling."""
+                        documentation = r"""An integer value which uniquely identifies the building part in the property. The value "1" must be assigned to the main dwelling."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Building_Part"
@@ -13291,7 +13590,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -13308,11 +13607,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "IDString"
                         class_name = "Identifier"
-                        documentation = """Identifier for the Building part - generally only required if there are more that one Building Parts of the same type e.g. "West Wing" and "East Wing" Extensions"""
-                        type_documentation = """A string containing a unique identifier for something. The underlying assumption is that each instance of a class or entity will have a unique identifier assigned to it which can then be assigned to any referencing entity as a reference to the entity instance. This is a very similar concept to XML ID datatype but is locally defined because of the need to extend the datatype with domain specific attributes."""
+                        documentation = r"""Identifier for the Building part - generally only required if there are more that one Building Parts of the same type e.g. "West Wing" and "East Wing" Extensions"""
+                        type_documentation = r"""A string containing a unique identifier for something. The underlying assumption is that each instance of a class or entity will have a unique identifier assigned to it which can then be assigned to any referencing entity as a reference to the entity instance. This is a very similar concept to XML ID datatype but is locally defined because of the need to extend the datatype with domain specific attributes."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -13342,11 +13642,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "ConstructionDateCode"
                         class_name = "Construction_Age_Band"
-                        documentation = """The age band when this building part was constructed."""
+                        documentation = r"""The age band when this building part was constructed."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'A': 'England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919', 'B': 'England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929', 'C': 'England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949', 'D': 'England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973', 'E': 'England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977', 'F': 'England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985', 'G': 'England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991', 'H': 'England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999', 'I': 'England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006', 'J': 'England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable', 'K': 'England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013', 'L': 'England and Wales: 2012-2021; Scotland: 2012-2022; Northern Ireland: 2014 onwards', 'M': 'England and Wales: 2022 onwards; Scotland: 2023 onwards (TBA); Northern Ireland: 2014 onwards (TBA)', '0': 'Not applicable', 'NR': 'Not recorded'}
                         map_values = {'England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919': 'A', 'England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929': 'B', 'England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949': 'C', 'England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973': 'D', 'England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977': 'E', 'England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985': 'F', 'England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991': 'G', 'England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999': 'H', 'England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006': 'I', 'England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable': 'J', 'England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013': 'K', 'England and Wales: 2012-2021; Scotland: 2012-2022; Northern Ireland: 2014 onwards': 'L', 'England and Wales: 2022 onwards; Scotland: 2023 onwards (TBA); Northern Ireland: 2014 onwards (TBA)': 'M', 'Not applicable': '0', 'Not recorded': 'NR'}
@@ -13359,7 +13660,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13392,6 +13693,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -13416,10 +13718,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             element_type = "SAP-Floor-Dimension"
                             class_name = "SAP_Floor_Dimension"
                             documentation = None
-                            type_documentation = """Various measurements for each floor that makes up a particular Build-Part."""
+                            type_documentation = r"""Various measurements for each floor that makes up a particular Build-Part."""
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = "unbounded"
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -13479,12 +13782,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "Measurement"
                                 class_name = "Heat_Loss_Perimeter"
-                                documentation = """The estimate total heat loss perimeter for the Storey. The heat loss perimeter is any part of the storey that is exposed to the outside world through which heat may escape."""
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                documentation = r"""The estimate total heat loss perimeter for the Storey. The heat loss perimeter is any part of the storey that is exposed to the outside world through which heat may escape."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Floor_Dimension"
@@ -13500,7 +13804,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13517,12 +13821,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "Measurement"
                                 class_name = "Room_Height"
-                                documentation = """Average height of the Storey"""
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                documentation = r"""Average height of the Storey"""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Floor_Dimension"
@@ -13538,7 +13843,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13555,12 +13860,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "Measurement"
                                 class_name = "Total_Floor_Area"
-                                documentation = """The total floor area of the storey"""
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                documentation = r"""The total floor area of the storey"""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Floor_Dimension"
@@ -13576,7 +13882,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13598,6 +13904,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'lowest occupied', '1': 'lowest+1', '2': 'lowest+2', '3': 'lowest+3', '4': 'lowest+4', '5': 'lowest+5', '6': 'lowest+6', '99': 'roof rooms', 'NR': 'not recorded'}
                                 map_values = {'lowest occupied': '0', 'lowest+1': '1', 'lowest+2': '2', 'lowest+3': '3', 'lowest+4': '4', 'lowest+5': '5', 'lowest+6': '6', 'roof rooms': '99', 'not recorded': 'NR'}
@@ -13610,7 +13917,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def sap_floor_dimension(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13643,6 +13950,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'unknown', '1': 'solid', '2': 'suspended timber', '3': 'suspended (not timber)', '4': 'basement floor'}
                                 map_values = {'unknown': '0', 'solid': '1', 'suspended timber': '2', 'suspended (not timber)': '3', 'basement floor': '4'}
@@ -13655,7 +13963,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def sap_floor_dimension(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13688,6 +13996,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'unknown', '1': 'as built', '2': 'retro-fitted'}
                                 map_values = {'unknown': '0', 'as built': '1', 'retro-fitted': '2'}
@@ -13700,7 +14009,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def sap_floor_dimension(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13728,12 +14037,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "Measurement"
                                 class_name = "Party_Wall_Length"
-                                documentation = """set to zero if no party wall"""
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                documentation = r"""set to zero if no party wall"""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Floor_Dimension"
@@ -13749,7 +14059,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13766,12 +14076,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:decimal"
                         class_name = "Floor_U_Value"
-                        documentation = """Only one of Floor-Insulation-Thickness and Floor-U-Value is included"""
+                        documentation = r"""Only one of Floor-Insulation-Thickness and Floor-U-Value is included"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Building_Part"
@@ -13787,7 +14098,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -13804,11 +14115,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "FloorInsulationThicknessCode"
                         class_name = "Floor_Insulation_Thickness"
-                        documentation = """Only one of Floor-Insulation-Thickness and Floor-U-Value is included"""
+                        documentation = r"""Only one of Floor-Insulation-Thickness and Floor-U-Value is included"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'NI': 'unknown', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm'}
                         map_values = {'unknown': 'NI', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm'}
@@ -13821,7 +14133,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13849,11 +14161,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "HeatLossFloorCode"
                         class_name = "Floor_Heat_Loss"
-                        documentation = """Identifies the type of foor through which heat loss occurs."""
+                        documentation = r"""Identifies the type of foor through which heat loss occurs."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'exposed floor', '2': 'semi-exposed upper floor to unheated space', '3': 'semi-exposed upper floor to partially heated space', '6': 'Other flat below', '7': 'Ground floor', '8': 'same dwelling below'}
                         map_values = {'exposed floor': '1', 'semi-exposed upper floor to unheated space': '2', 'semi-exposed upper floor to partially heated space': '3', 'Other flat below': '6', 'Ground floor': '7', 'same dwelling below': '8'}
@@ -13866,7 +14179,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13894,11 +14207,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "RoofTypeCode"
                         class_name = "Roof_Construction"
-                        documentation = """Describes the material that the roof of the Building Part is constructed from e.g. Tile, Slate etc."""
+                        documentation = r"""Describes the material that the roof of the Building Part is constructed from e.g. Tile, Slate etc."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'None', '1': 'Flat', '2': 'Pitched. This is retained for backwards compatibility only and should not be used. A pitched roof should be 4, 5, 6 or 8', '3': 'Another dwelling above', '4': 'Pitched (slates or tiles), access to loft', '5': 'Pitched (slates or tiles), no access to loft', '6': 'Pitched (thatch)', '7': 'Same dwelling above', '8': 'Pitched roof with sloping ceiling', '9': 'Non residential/unheated space', 'NR': 'Not recorded'}
                         map_values = {'None': '0', 'Flat': '1', 'Pitched. This is retained for backwards compatibility only and should not be used. A pitched roof should be 4, 5, 6 or 8': '2', 'Another dwelling above': '3', 'Pitched (slates or tiles), access to loft': '4', 'Pitched (slates or tiles), no access to loft': '5', 'Pitched (thatch)': '6', 'Same dwelling above': '7', 'Pitched roof with sloping ceiling': '8', 'Non residential/unheated space': '9', 'Not recorded': 'NR'}
@@ -13911,7 +14225,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13939,11 +14253,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "RoofInsulationLocationCode"
                         class_name = "Roof_Insulation_Location"
-                        documentation = """The location of the insulation in the roof e.g. between joists, in rafters etc."""
+                        documentation = r"""The location of the insulation in the roof e.g. between joists, in rafters etc."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Rafters', '2': 'Joists', '3': 'No access.. This is retained for backwards compatibility only and should not be used. No access is covered by enum 5 of RoofTypeCode', '4': 'Unknown', '5': 'None; applicable only when Roof-Construction is 4, 5 or 6', '6': 'Flat roof insulation', '7': 'Sloping ceiling insulation', 'ND': 'Not Defined'}
                         map_values = {'Rafters': '1', 'Joists': '2', 'No access.. This is retained for backwards compatibility only and should not be used. No access is covered by enum 5 of RoofTypeCode': '3', 'Unknown': '4', 'None; applicable only when Roof-Construction is 4, 5 or 6': '5', 'Flat roof insulation': '6', 'Sloping ceiling insulation': '7', 'Not Defined': 'ND'}
@@ -13956,7 +14271,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13984,12 +14299,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:decimal"
                         class_name = "Roof_U_Value"
-                        documentation = """Include one of Roof-U-Value, Roof-Insulation-Thickness, Rafter-Insulation-Thickness, Flat-Roof-Insulation-Thickness, Sloping-Ceiling-Insulation-Thickness"""
+                        documentation = r"""Include one of Roof-U-Value, Roof-Insulation-Thickness, Rafter-Insulation-Thickness, Flat-Roof-Insulation-Thickness, Sloping-Ceiling-Insulation-Thickness"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Building_Part"
@@ -14005,7 +14321,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -14022,11 +14338,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "RoofInsulationThicknessCode"
                         class_name = "Roof_Insulation_Thickness"
-                        documentation = """See Roof-U-Value"""
+                        documentation = r"""See Roof-U-Value"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'NI': 'unknown', '0': 'None', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm+': '400mm or more', 'ND': 'Not Defined'}
                         map_values = {'unknown': 'NI', 'None': '0', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm or more': '400mm+', 'Not Defined': 'ND'}
@@ -14039,7 +14356,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14067,11 +14384,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "RafterInsulationThicknessCode"
                         class_name = "Rafter_Insulation_Thickness"
-                        documentation = """See Roof-U-Value"""
+                        documentation = r"""See Roof-U-Value"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'NI': 'insulation thickness unknown', 'AB': 'as built', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400+mm': '400+mm'}
                         map_values = {'insulation thickness unknown': 'NI', 'as built': 'AB', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400+mm': '400+mm'}
@@ -14084,7 +14402,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14112,11 +14430,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "FlatRoofInsulationThicknessCode"
                         class_name = "Flat_Roof_Insulation_Thickness"
-                        documentation = """See Roof-U-Value"""
+                        documentation = r"""See Roof-U-Value"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'NI': 'insulation thickness unknown', 'AB': 'as built', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400+mm': '400+mm'}
                         map_values = {'insulation thickness unknown': 'NI', 'as built': 'AB', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400+mm': '400+mm'}
@@ -14129,7 +14448,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14157,11 +14476,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "SlopedCeilingInsulationThicknessCode"
                         class_name = "Sloping_Ceiling_Insulation_Thickness"
-                        documentation = """See Roof-U-Value"""
+                        documentation = r"""See Roof-U-Value"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'NI': 'insulation thickness unknown', 'AB': 'as built', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400+mm': '400+mm'}
                         map_values = {'insulation thickness unknown': 'NI', 'as built': 'AB', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400+mm': '400+mm'}
@@ -14174,7 +14494,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14207,6 +14527,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'stone (granite or whinstone)', '2': 'stone (sandstone or limestone)', '3': 'solid brick', '4': 'cavity', '5': 'timber frame', '6': 'basement wall', '7': 'curtain wall', '8': 'system built', '9': 'cob wall', '10': 'park home wall'}
                         map_values = {'stone (granite or whinstone)': '1', 'stone (sandstone or limestone)': '2', 'solid brick': '3', 'cavity': '4', 'timber frame': '5', 'basement wall': '6', 'curtain wall': '7', 'system built': '8', 'cob wall': '9', 'park home wall': '10'}
@@ -14219,7 +14540,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14247,11 +14568,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "WallInsulationCode"
                         class_name = "Wall_Insulation_Type"
-                        documentation = """Describes the type of insulation present in the wall if any."""
+                        documentation = r"""Describes the type of insulation present in the wall if any."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'external', '2': 'filled cavity', '3': 'internal', '4': 'as built', '5': 'unknown', '6': 'filled cavity + external', '7': 'filled cavity + internal'}
                         map_values = {'external': '1', 'filled cavity': '2', 'internal': '3', 'as built': '4', 'unknown': '5', 'filled cavity + external': '6', 'filled cavity + internal': '7'}
@@ -14264,7 +14586,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14292,11 +14614,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Flag"
                         class_name = "Wall_Thickness_Measured"
-                        documentation = """Whether wall thickness was measured"""
+                        documentation = r"""Whether wall thickness was measured"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'Y': 'Yes', 'N': 'No'}
                         map_values = {'Yes': 'Y', 'No': 'N'}
@@ -14309,7 +14632,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14337,12 +14660,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:integer"
                         class_name = "Wall_Thickness"
-                        documentation = """Wall thickness in mm. Omitted if Wall-Thickness-Measured is false"""
+                        documentation = r"""Wall thickness in mm. Omitted if Wall-Thickness-Measured is false"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Building_Part"
@@ -14358,7 +14682,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -14380,6 +14704,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'Y': 'Yes', 'N': 'No'}
                         map_values = {'Yes': 'Y', 'No': 'N'}
@@ -14392,7 +14717,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14420,12 +14745,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:decimal"
                         class_name = "Wall_U_Value"
-                        documentation = """Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
+                        documentation = r"""Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Building_Part"
@@ -14441,7 +14767,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -14458,11 +14784,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "WallInsulationThicknessCode"
                         class_name = "Wall_Insulation_Thickness"
-                        documentation = """Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
+                        documentation = r"""Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'NI': 'unknown', '10mm': '10 mm', '25mm': '25 mm', '50mm': '50 mm', '75mm': '75 mm', '100mm': '100 mm', '125mm': '125 mm', '150mm': '150 mm', '175mm': '175 mm', '200mm': '200mm', 'measured': 'if wall insulation thickness is provided with precise measurement'}
                         map_values = {'unknown': 'NI', '10 mm': '10mm', '25 mm': '25mm', '50 mm': '50mm', '75 mm': '75mm', '100 mm': '100mm', '125 mm': '125mm', '150 mm': '150mm', '175 mm': '175mm', '200mm': '200mm', 'if wall insulation thickness is provided with precise measurement': 'measured'}
@@ -14475,7 +14802,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14503,12 +14830,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:decimal"
                         class_name = "Wall_Insulation_Thickness_Measured"
-                        documentation = """Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included"""
+                        documentation = r"""Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Building_Part"
@@ -14524,7 +14852,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -14541,11 +14869,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "SAP-InsulationThermalConductivityCode"
                         class_name = "Wall_Insulation_Thermal_Conductivity"
-                        documentation = """Only if documentary evidence is available"""
+                        documentation = r"""Only if documentary evidence is available"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': '0.04', '2': '0.03', '3': '0.025'}
                         map_values = {'0.04': '1', '0.03': '2', '0.025': '3'}
@@ -14558,7 +14887,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14591,6 +14920,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -14639,11 +14969,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             element_type = "Measurement"
                             class_name = "Floor_Area"
                             documentation = None
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Room_In_Roof"
@@ -14659,7 +14990,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -14681,6 +15012,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'A': 'England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919', 'B': 'England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929', 'C': 'England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949', 'D': 'England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973', 'E': 'England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977', 'F': 'England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985', 'G': 'England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991', 'H': 'England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999', 'I': 'England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006', 'J': 'England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable', 'K': 'England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013', 'L': 'England and Wales: 2012-2021; Scotland: 2012-2022; Northern Ireland: 2014 onwards', 'M': 'England and Wales: 2022 onwards; Scotland: 2023 onwards (TBA); Northern Ireland: 2014 onwards (TBA)', '0': 'Not applicable', 'NR': 'Not recorded'}
                             map_values = {'England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919': 'A', 'England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929': 'B', 'England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949': 'C', 'England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973': 'D', 'England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977': 'E', 'England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985': 'F', 'England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991': 'G', 'England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999': 'H', 'England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006': 'I', 'England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable': 'J', 'England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013': 'K', 'England and Wales: 2012-2021; Scotland: 2012-2022; Northern Ireland: 2014 onwards': 'L', 'England and Wales: 2022 onwards; Scotland: 2023 onwards (TBA); Northern Ireland: 2014 onwards (TBA)': 'M', 'Not applicable': '0', 'Not recorded': 'NR'}
@@ -14693,7 +15025,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_room_in_roof(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14721,11 +15053,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Room-In-Roof-Details"
                             class_name = "Room_In_Roof_Details"
-                            documentation = """Omit when Room-In-Roof details not included"""
+                            documentation = r"""Omit when Room-In-Roof details not included"""
                             type_documentation = None
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -15020,11 +15353,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Flat_Ceiling_Length_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15040,7 +15374,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15058,11 +15392,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Flat_Ceiling_Height_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15078,7 +15413,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15100,7 +15435,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15116,7 +15452,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15133,11 +15469,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RoofInsulationThicknessCode"
                                 class_name = "Flat_Ceiling_Insulation_Thickness_1"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'NI': 'unknown', '0': 'None', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm+': '400mm or more', 'ND': 'Not Defined'}
                                 map_values = {'unknown': 'NI', 'None': '0', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm or more': '400mm+', 'Not Defined': 'ND'}
@@ -15150,7 +15487,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15178,11 +15515,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RinRInsulationTypeCode"
                                 class_name = "Flat_Ceiling_Insulation_Type_1"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'mineral wool or EPS slab', '1': 'PUR or PIR'}
                                 map_values = {'mineral wool or EPS slab': '0', 'PUR or PIR': '1'}
@@ -15195,7 +15533,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15223,11 +15561,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RoofInsulationLocationCode"
                                 class_name = "Flat_Ceiling_Insulation_Location_1"
-                                documentation = """Mutually exclusive with U-value and insulation type. Either U-value provided, or insulation type or location. To enable using table 16."""
+                                documentation = r"""Mutually exclusive with U-value and insulation type. Either U-value provided, or insulation type or location. To enable using table 16."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'Rafters', '2': 'Joists', '3': 'No access.. This is retained for backwards compatibility only and should not be used. No access is covered by enum 5 of RoofTypeCode', '4': 'Unknown', '5': 'None; applicable only when Roof-Construction is 4, 5 or 6', '6': 'Flat roof insulation', '7': 'Sloping ceiling insulation', 'ND': 'Not Defined'}
                                 map_values = {'Rafters': '1', 'Joists': '2', 'No access.. This is retained for backwards compatibility only and should not be used. No access is covered by enum 5 of RoofTypeCode': '3', 'Unknown': '4', 'None; applicable only when Roof-Construction is 4, 5 or 6': '5', 'Flat roof insulation': '6', 'Sloping ceiling insulation': '7', 'Not Defined': 'ND'}
@@ -15240,7 +15579,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15269,11 +15608,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Flat_Ceiling_Length_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15289,7 +15629,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15307,11 +15647,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Flat_Ceiling_Height_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15327,7 +15668,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15349,7 +15690,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15365,7 +15707,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15382,11 +15724,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RoofInsulationThicknessCode"
                                 class_name = "Flat_Ceiling_Insulation_Thickness_2"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'NI': 'unknown', '0': 'None', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm+': '400mm or more', 'ND': 'Not Defined'}
                                 map_values = {'unknown': 'NI', 'None': '0', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm or more': '400mm+', 'Not Defined': 'ND'}
@@ -15399,7 +15742,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15427,11 +15770,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RinRInsulationTypeCode"
                                 class_name = "Flat_Ceiling_Insulation_Type_2"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'mineral wool or EPS slab', '1': 'PUR or PIR'}
                                 map_values = {'mineral wool or EPS slab': '0', 'PUR or PIR': '1'}
@@ -15444,7 +15788,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15472,11 +15816,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RoofInsulationLocationCode"
                                 class_name = "Flat_Ceiling_Insulation_Location_2"
-                                documentation = """Mutually exclusive with U-value and insulation type. Either U-value provided, or insulation type or location. To enable using table 16."""
+                                documentation = r"""Mutually exclusive with U-value and insulation type. Either U-value provided, or insulation type or location. To enable using table 16."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'Rafters', '2': 'Joists', '3': 'No access.. This is retained for backwards compatibility only and should not be used. No access is covered by enum 5 of RoofTypeCode', '4': 'Unknown', '5': 'None; applicable only when Roof-Construction is 4, 5 or 6', '6': 'Flat roof insulation', '7': 'Sloping ceiling insulation', 'ND': 'Not Defined'}
                                 map_values = {'Rafters': '1', 'Joists': '2', 'No access.. This is retained for backwards compatibility only and should not be used. No access is covered by enum 5 of RoofTypeCode': '3', 'Unknown': '4', 'None; applicable only when Roof-Construction is 4, 5 or 6': '5', 'Flat roof insulation': '6', 'Sloping ceiling insulation': '7', 'Not Defined': 'ND'}
@@ -15489,7 +15834,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15518,11 +15863,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Stud_Wall_Length_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15538,7 +15884,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15556,11 +15902,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Stud_Wall_Height_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15576,7 +15923,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15598,7 +15945,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15614,7 +15962,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15631,11 +15979,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RoofInsulationThicknessCode"
                                 class_name = "Stud_Wall_Insulation_Thickness_1"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'NI': 'unknown', '0': 'None', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm+': '400mm or more', 'ND': 'Not Defined'}
                                 map_values = {'unknown': 'NI', 'None': '0', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm or more': '400mm+', 'Not Defined': 'ND'}
@@ -15648,7 +15997,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15676,11 +16025,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RinRInsulationTypeCode"
                                 class_name = "Stud_Wall_Insulation_Type_1"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'mineral wool or EPS slab', '1': 'PUR or PIR'}
                                 map_values = {'mineral wool or EPS slab': '0', 'PUR or PIR': '1'}
@@ -15693,7 +16043,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15722,11 +16072,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Stud_Wall_Length_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15742,7 +16093,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15760,11 +16111,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Stud_Wall_Height_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15780,7 +16132,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15802,7 +16154,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15818,7 +16171,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15835,11 +16188,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RoofInsulationThicknessCode"
                                 class_name = "Stud_Wall_Insulation_Thickness_2"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'NI': 'unknown', '0': 'None', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm+': '400mm or more', 'ND': 'Not Defined'}
                                 map_values = {'unknown': 'NI', 'None': '0', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm or more': '400mm+', 'Not Defined': 'ND'}
@@ -15852,7 +16206,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15880,11 +16234,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RinRInsulationTypeCode"
                                 class_name = "Stud_Wall_Insulation_Type_2"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'mineral wool or EPS slab', '1': 'PUR or PIR'}
                                 map_values = {'mineral wool or EPS slab': '0', 'PUR or PIR': '1'}
@@ -15897,7 +16252,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15926,11 +16281,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Slope_Length_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15946,7 +16302,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15964,11 +16320,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Slope_Height_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -15984,7 +16341,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16006,7 +16363,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16022,7 +16380,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16039,11 +16397,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RoofInsulationThicknessCode"
                                 class_name = "Slope_Insulation_Thickness_1"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'NI': 'unknown', '0': 'None', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm+': '400mm or more', 'ND': 'Not Defined'}
                                 map_values = {'unknown': 'NI', 'None': '0', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm or more': '400mm+', 'Not Defined': 'ND'}
@@ -16056,7 +16415,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16084,11 +16443,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RinRInsulationTypeCode"
                                 class_name = "Slope_Insulation_Type_1"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'mineral wool or EPS slab', '1': 'PUR or PIR'}
                                 map_values = {'mineral wool or EPS slab': '0', 'PUR or PIR': '1'}
@@ -16101,7 +16461,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16130,11 +16490,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Slope_Length_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16150,7 +16511,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16168,11 +16529,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Slope_Height_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16188,7 +16550,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16210,7 +16572,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16226,7 +16589,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16243,11 +16606,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RoofInsulationThicknessCode"
                                 class_name = "Slope_Insulation_Thickness_2"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'NI': 'unknown', '0': 'None', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm+': '400mm or more', 'ND': 'Not Defined'}
                                 map_values = {'unknown': 'NI', 'None': '0', '12mm': '12mm', '25mm': '25mm', '50mm': '50mm', '75mm': '75mm', '100mm': '100mm', '125mm': '125mm', '150mm': '150mm', '175mm': '175mm', '200mm': '200mm', '225mm': '225mm', '250mm': '250mm', '270mm': '270mm', '300mm': '300mm', '350mm': '350mm', '400mm or more': '400mm+', 'Not Defined': 'ND'}
@@ -16260,7 +16624,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16288,11 +16652,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "RinRInsulationTypeCode"
                                 class_name = "Slope_Insulation_Type_2"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or thickness."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or thickness."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'mineral wool or EPS slab', '1': 'PUR or PIR'}
                                 map_values = {'mineral wool or EPS slab': '0', 'PUR or PIR': '1'}
@@ -16305,7 +16670,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16334,11 +16699,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Length_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16354,7 +16720,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16372,11 +16738,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Height_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16392,7 +16759,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16414,7 +16781,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16430,7 +16798,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16447,11 +16815,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "GableType"
                                 class_name = "Gable_Wall_Type_1"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or gable type to use table 4."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or gable type to use table 4."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'exposed', '1': 'party', '2': 'Sheltered', '3': 'connected or adjacent to heated space'}
                                 map_values = {'exposed': '0', 'party': '1', 'Sheltered': '2', 'connected or adjacent to heated space': '3'}
@@ -16464,7 +16833,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16493,11 +16862,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Length_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16513,7 +16883,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16531,11 +16901,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Height_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16551,7 +16922,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16573,7 +16944,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16589,7 +16961,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16606,11 +16978,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                 element_type = "GableType"
                                 class_name = "Gable_Wall_Type_2"
-                                documentation = """Mutually exclusive with U-value. Either U-value provided, or gable type to use table 4."""
+                                documentation = r"""Mutually exclusive with U-value. Either U-value provided, or gable type to use table 4."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'exposed', '1': 'party', '2': 'Sheltered', '3': 'connected or adjacent to heated space'}
                                 map_values = {'exposed': '0', 'party': '1', 'Sheltered': '2', 'connected or adjacent to heated space': '3'}
@@ -16623,7 +16996,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_details(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16652,11 +17025,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Common_Wall_Length_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16672,7 +17046,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16690,11 +17064,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Common_Wall_Height_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16710,7 +17085,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16732,7 +17107,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16748,7 +17124,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16766,11 +17142,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Common_Wall_Length_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16786,7 +17163,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16804,11 +17181,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Common_Wall_Height_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16824,7 +17202,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16846,7 +17224,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Details"
@@ -16862,7 +17241,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16879,11 +17258,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Room-In-Roof-Type-1"
                             class_name = "Room_In_Roof_Type_1"
-                            documentation = """Required if detailed input not provided, and RR type 1"""
+                            documentation = r"""Required if detailed input not provided, and RR type 1"""
                             type_documentation = None
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -16926,11 +17306,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Length_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_1"
@@ -16946,7 +17327,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -16968,6 +17349,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'exposed', '1': 'party', '2': 'Sheltered', '3': 'connected or adjacent to heated space'}
                                 map_values = {'exposed': '0', 'party': '1', 'Sheltered': '2', 'connected or adjacent to heated space': '3'}
@@ -16980,7 +17362,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_type_1(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17009,11 +17391,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Length_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_1"
@@ -17029,7 +17412,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17051,6 +17434,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'exposed', '1': 'party', '2': 'Sheltered', '3': 'connected or adjacent to heated space'}
                                 map_values = {'exposed': '0', 'party': '1', 'Sheltered': '2', 'connected or adjacent to heated space': '3'}
@@ -17063,7 +17447,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_type_1(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17091,11 +17475,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Room-In-Roof-Type-2"
                             class_name = "Room_In_Roof_Type_2"
-                            documentation = """Required if detailed input not provided, and RR type 2"""
+                            documentation = r"""Required if detailed input not provided, and RR type 2"""
                             type_documentation = None
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -17174,11 +17559,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Length_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_2"
@@ -17194,7 +17580,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17212,11 +17598,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Height_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_2"
@@ -17232,7 +17619,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17254,6 +17641,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'exposed', '1': 'party', '2': 'Sheltered', '3': 'connected or adjacent to heated space'}
                                 map_values = {'exposed': '0', 'party': '1', 'Sheltered': '2', 'connected or adjacent to heated space': '3'}
@@ -17266,7 +17654,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_type_2(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17295,11 +17683,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Length_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_2"
@@ -17315,7 +17704,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17333,11 +17722,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Gable_Wall_Height_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_2"
@@ -17353,7 +17743,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17375,6 +17765,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'exposed', '1': 'party', '2': 'Sheltered', '3': 'connected or adjacent to heated space'}
                                 map_values = {'exposed': '0', 'party': '1', 'Sheltered': '2', 'connected or adjacent to heated space': '3'}
@@ -17387,7 +17778,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 def room_in_roof_type_2(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17416,11 +17807,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Common_Wall_Length_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_2"
@@ -17436,7 +17828,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17454,11 +17846,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Common_Wall_Height_1"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_2"
@@ -17474,7 +17867,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17492,11 +17885,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Common_Wall_Length_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_2"
@@ -17512,7 +17906,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17530,11 +17924,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 element_type = "Measurement"
                                 class_name = "Common_Wall_Height_2"
                                 documentation = None
-                                type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                                type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Room_In_Roof_Type_2"
@@ -17550,7 +17945,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -17567,11 +17962,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "SAP-Alternative-Wall"
                         class_name = "SAP_Alternative_Wall_1"
-                        documentation = """Included only for building parts that have an alternative wall"""
+                        documentation = r"""Included only for building parts that have an alternative wall"""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -17660,6 +18056,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'stone (granite or whinstone)', '2': 'stone (sandstone or limestone)', '3': 'solid brick', '4': 'cavity', '5': 'timber frame', '6': 'basement wall', '7': 'curtain wall', '8': 'system built', '9': 'cob wall', '10': 'park home wall'}
                             map_values = {'stone (granite or whinstone)': '1', 'stone (sandstone or limestone)': '2', 'solid brick': '3', 'cavity': '4', 'timber frame': '5', 'basement wall': '6', 'curtain wall': '7', 'system built': '8', 'cob wall': '9', 'park home wall': '10'}
@@ -17672,7 +18069,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_1(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17705,6 +18102,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'external', '2': 'filled cavity', '3': 'internal', '4': 'as built', '5': 'unknown', '6': 'filled cavity + external', '7': 'filled cavity + internal'}
                             map_values = {'external': '1', 'filled cavity': '2', 'internal': '3', 'as built': '4', 'unknown': '5', 'filled cavity + external': '6', 'filled cavity + internal': '7'}
@@ -17717,7 +18115,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_1(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17746,11 +18144,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             element_type = "Measurement"
                             class_name = "Wall_Area"
                             documentation = None
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Alternative_Wall_1"
@@ -17766,7 +18165,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17788,6 +18187,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -17800,7 +18200,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_1(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17828,12 +18228,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:integer"
                             class_name = "Wall_Thickness"
-                            documentation = """Wall thickness in mm"""
+                            documentation = r"""Wall thickness in mm"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Alternative_Wall_1"
@@ -17849,7 +18250,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17866,12 +18267,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Wall_U_Value"
-                            documentation = """Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
+                            documentation = r"""Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Alternative_Wall_1"
@@ -17887,7 +18289,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17904,11 +18306,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "WallInsulationThicknessCode"
                             class_name = "Wall_Insulation_Thickness"
-                            documentation = """Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
+                            documentation = r"""Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'NI': 'unknown', '10mm': '10 mm', '25mm': '25 mm', '50mm': '50 mm', '75mm': '75 mm', '100mm': '100 mm', '125mm': '125 mm', '150mm': '150 mm', '175mm': '175 mm', '200mm': '200mm', 'measured': 'if wall insulation thickness is provided with precise measurement'}
                             map_values = {'unknown': 'NI', '10 mm': '10mm', '25 mm': '25mm', '50 mm': '50mm', '75 mm': '75mm', '100 mm': '100mm', '125 mm': '125mm', '150 mm': '150mm', '175 mm': '175mm', '200mm': '200mm', 'if wall insulation thickness is provided with precise measurement': 'measured'}
@@ -17921,7 +18324,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_1(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17949,12 +18352,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Wall_Insulation_Thickness_Measured"
-                            documentation = """Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included"""
+                            documentation = r"""Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Alternative_Wall_1"
@@ -17970,7 +18374,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17987,11 +18391,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-InsulationThermalConductivityCode"
                             class_name = "Wall_Insulation_Thermal_Conductivity"
-                            documentation = """Only if documentary evidence is available"""
+                            documentation = r"""Only if documentary evidence is available"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': '0.04', '2': '0.03', '3': '0.025'}
                             map_values = {'0.04': '1', '0.03': '2', '0.025': '3'}
@@ -18004,7 +18409,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_1(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18032,11 +18437,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Flag"
                             class_name = "Wall_Dry_Lined"
-                            documentation = """Value to be "N" for wall types where dry-lining is not applicable."""
+                            documentation = r"""Value to be "N" for wall types where dry-lining is not applicable."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -18049,7 +18455,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_1(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18077,11 +18483,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Flag"
                             class_name = "Sheltered_Wall"
-                            documentation = """Wall between dwelling and unheated corridor or stairwell"""
+                            documentation = r"""Wall between dwelling and unheated corridor or stairwell"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -18094,7 +18501,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_1(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18122,11 +18529,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "SAP-Alternative-Wall"
                         class_name = "SAP_Alternative_Wall_2"
-                        documentation = """Included only for building parts that have an alternative wall"""
+                        documentation = r"""Included only for building parts that have an alternative wall"""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -18215,6 +18623,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'stone (granite or whinstone)', '2': 'stone (sandstone or limestone)', '3': 'solid brick', '4': 'cavity', '5': 'timber frame', '6': 'basement wall', '7': 'curtain wall', '8': 'system built', '9': 'cob wall', '10': 'park home wall'}
                             map_values = {'stone (granite or whinstone)': '1', 'stone (sandstone or limestone)': '2', 'solid brick': '3', 'cavity': '4', 'timber frame': '5', 'basement wall': '6', 'curtain wall': '7', 'system built': '8', 'cob wall': '9', 'park home wall': '10'}
@@ -18227,7 +18636,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_2(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18260,6 +18669,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'external', '2': 'filled cavity', '3': 'internal', '4': 'as built', '5': 'unknown', '6': 'filled cavity + external', '7': 'filled cavity + internal'}
                             map_values = {'external': '1', 'filled cavity': '2', 'internal': '3', 'as built': '4', 'unknown': '5', 'filled cavity + external': '6', 'filled cavity + internal': '7'}
@@ -18272,7 +18682,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_2(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18301,11 +18711,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             element_type = "Measurement"
                             class_name = "Wall_Area"
                             documentation = None
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Alternative_Wall_2"
@@ -18321,7 +18732,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -18343,6 +18754,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -18355,7 +18767,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_2(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18383,12 +18795,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:integer"
                             class_name = "Wall_Thickness"
-                            documentation = """Wall thickness in mm"""
+                            documentation = r"""Wall thickness in mm"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Alternative_Wall_2"
@@ -18404,7 +18817,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -18421,12 +18834,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Wall_U_Value"
-                            documentation = """Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
+                            documentation = r"""Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Alternative_Wall_2"
@@ -18442,7 +18856,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -18459,11 +18873,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "WallInsulationThicknessCode"
                             class_name = "Wall_Insulation_Thickness"
-                            documentation = """Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
+                            documentation = r"""Only one of Wall-Insulation-Thickness and Wall-U-Value is included"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'NI': 'unknown', '10mm': '10 mm', '25mm': '25 mm', '50mm': '50 mm', '75mm': '75 mm', '100mm': '100 mm', '125mm': '125 mm', '150mm': '150 mm', '175mm': '175 mm', '200mm': '200mm', 'measured': 'if wall insulation thickness is provided with precise measurement'}
                             map_values = {'unknown': 'NI', '10 mm': '10mm', '25 mm': '25mm', '50 mm': '50mm', '75 mm': '75mm', '100 mm': '100mm', '125 mm': '125mm', '150 mm': '150mm', '175 mm': '175mm', '200mm': '200mm', 'if wall insulation thickness is provided with precise measurement': 'measured'}
@@ -18476,7 +18891,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_2(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18504,12 +18919,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "xs:decimal"
                             class_name = "Wall_Insulation_Thickness_Measured"
-                            documentation = """Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included"""
+                            documentation = r"""Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Alternative_Wall_2"
@@ -18525,7 +18941,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -18542,11 +18958,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "SAP-InsulationThermalConductivityCode"
                             class_name = "Wall_Insulation_Thermal_Conductivity"
-                            documentation = """Only if documentary evidence is available"""
+                            documentation = r"""Only if documentary evidence is available"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': '0.04', '2': '0.03', '3': '0.025'}
                             map_values = {'0.04': '1', '0.03': '2', '0.025': '3'}
@@ -18559,7 +18976,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_2(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18587,11 +19004,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Flag"
                             class_name = "Wall_Dry_Lined"
-                            documentation = """Value to be "N" for wall types where dry-lining is not applicable."""
+                            documentation = r"""Value to be "N" for wall types where dry-lining is not applicable."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -18604,7 +19022,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_2(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18632,11 +19050,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Flag"
                             class_name = "Sheltered_Wall"
-                            documentation = """Wall between dwelling and unheated corridor or stairwell"""
+                            documentation = r"""Wall between dwelling and unheated corridor or stairwell"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'Y': 'Yes', 'N': 'No'}
                             map_values = {'Yes': 'Y', 'No': 'N'}
@@ -18649,7 +19068,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def sap_alternative_wall_2(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18682,6 +19101,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'unable to determine', '1': 'solid masonry, timber frame or system built', '2': 'cavity masonry, unfilled', '3': 'cavity masonry, filled', '4': 'cavity masonry, filled and sealed', 'NA': 'not applicable (detached property or no party wall in this building part)', 'NI': 'no information - pre-9.92 survey'}
                         map_values = {'unable to determine': '0', 'solid masonry, timber frame or system built': '1', 'cavity masonry, unfilled': '2', 'cavity masonry, filled': '3', 'cavity masonry, filled and sealed': '4', 'not applicable (detached property or no party wall in this building part)': 'NA', 'no information - pre-9.92 survey': 'NI'}
@@ -18694,7 +19114,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_building_part(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18727,6 +19147,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -18780,11 +19201,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "BlockStoreyCode"
                     class_name = "Flat_Location"
-                    documentation = """Identifies the storey within the block that the entrance to the flat is located on"""
+                    documentation = r"""Identifies the storey within the block that the entrance to the flat is located on"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'-1': 'Basement', '00': 'Ground', '01': '1st', '02': '2nd', '03': '3rd', '04': '4th', '05': '5th', '06': '6th', '07': '7th', '08': '8th', '09': '9th', '10': '10th', '11': '11th', '12': '12th', '13': '13th', '14': '14th', '15': '15th', '16': '16th', '17': '17th', '18': '18th', '19': '19th', '20': '20th', '20+': '21st or above'}
                     map_values = {'Basement': '-1', 'Ground': '00', '1st': '01', '2nd': '02', '3rd': '03', '4th': '04', '5th': '05', '6th': '06', '7th': '07', '8th': '08', '9th': '09', '10th': '10', '11th': '11', '12th': '12', '13th': '13', '14th': '14', '15th': '15', '16th': '16', '17th': '17', '18th': '18', '19th': '19', '20th': '20', '21st or above': '20+'}
@@ -18797,7 +19219,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_flat_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18825,12 +19247,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Count"
                     class_name = "Storey_Count"
-                    documentation = """The number of Storeys in the Apartment Block."""
+                    documentation = r"""The number of Storeys in the Apartment Block."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Flat_Details"
@@ -18846,7 +19269,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -18868,6 +19291,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'basement', '1': 'ground floor', '2': 'mid floor', '3': 'top floor', '99': 'for backward compatibility only, do not use.'}
                     map_values = {'basement': '0', 'ground floor': '1', 'mid floor': '2', 'top floor': '3', 'for backward compatibility only, do not use.': '99'}
@@ -18880,7 +19304,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_flat_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18908,11 +19332,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Flag"
                     class_name = "Top_Storey"
-                    documentation = """Indicates that the Apartment is located on the Top Storey of the Apartment Block."""
+                    documentation = r"""Indicates that the Apartment is located on the Top Storey of the Apartment Block."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'Y': 'Yes', 'N': 'No'}
                     map_values = {'Yes': 'Y', 'No': 'N'}
@@ -18925,7 +19350,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_flat_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18953,11 +19378,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "HeatLossCorridorCode"
                     class_name = "Heat_Loss_Corridor"
-                    documentation = """Indiocates that the flat contained a cossidor through which heat is lost."""
+                    documentation = r"""Indiocates that the flat contained a cossidor through which heat is lost."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'no corridor', '1': 'heated corridor', '2': 'unheated corridor', '3': 'stairwell'}
                     map_values = {'no corridor': '0', 'heated corridor': '1', 'unheated corridor': '2', 'stairwell': '3'}
@@ -18970,7 +19396,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_flat_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18998,12 +19424,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "Measurement"
                     class_name = "Unheated_Corridor_Length"
-                    documentation = """The tortal length of unheated corridor in the flat. Only popualted if Heat-Loss-Corridor = {Unheated Corridor}"""
-                    type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                    documentation = r"""The tortal length of unheated corridor in the flat. Only popualted if Heat-Loss-Corridor = {Unheated Corridor}"""
+                    type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Flat_Details"
@@ -19019,7 +19446,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -19036,11 +19463,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-Windows"
                 class_name = "SAP_Windows"
-                documentation = """To be used when all windows are measured."""
-                type_documentation = """Details of the windows in the building"""
+                documentation = r"""To be used when all windows are measured."""
+                type_documentation = r"""Details of the windows in the building"""
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -19069,6 +19497,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -19175,6 +19604,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'Main Property', '1': '1st Extension', '2': '2nd Extension', '3': '3rd Extension', '4': '4th Extension'}
                         map_values = {'Main Property': '0', '1st Extension': '1', '2nd Extension': '2', '3rd Extension': '3', '4th Extension': '4'}
@@ -19187,7 +19617,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19216,11 +19646,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         element_type = "Measurement"
                         class_name = "Window_Height"
                         documentation = None
-                        type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                        type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Window"
@@ -19236,7 +19667,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -19254,11 +19685,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         element_type = "Measurement"
                         class_name = "Window_Width"
                         documentation = None
-                        type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                        type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Window"
@@ -19274,7 +19706,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -19296,6 +19728,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -19308,7 +19741,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19341,6 +19774,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'double glazing installed before 2002 in EAW, 2003 in SCT, 2006 NI', '2': 'double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI', '3': 'double glazing, unknown install date', '4': 'secondary glazing, unknown data', '5': 'single glazing', '6': 'triple glazing, unknown install date', '7': 'double, known data', '8': 'triple, known data', 'ND': 'not defined', '9': 'triple glazing, installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI', '10': 'triple glazing, installed before 2002 in EAW, 2003 in SCT, 2006 NI', '11': 'secondary glazing, normal emissivity', '12': 'secondary glazing, low emissivity', '13': 'double glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI', '14': 'triple glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI'}
                         map_values = {'double glazing installed before 2002 in EAW, 2003 in SCT, 2006 NI': '1', 'double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI': '2', 'double glazing, unknown install date': '3', 'secondary glazing, unknown data': '4', 'single glazing': '5', 'triple glazing, unknown install date': '6', 'double, known data': '7', 'triple, known data': '8', 'not defined': 'ND', 'triple glazing, installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI': '9', 'triple glazing, installed before 2002 in EAW, 2003 in SCT, 2006 NI': '10', 'secondary glazing, normal emissivity': '11', 'secondary glazing, low emissivity': '12', 'double glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI': '13', 'triple glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI': '14'}
@@ -19353,7 +19787,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19386,6 +19820,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'window', '2': 'roof-window'}
                         map_values = {'window': '1', 'roof-window': '2'}
@@ -19398,7 +19833,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19431,6 +19866,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'unknown or unspecified', '1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', '9': 'Horizontal (windows and roof windows only)'}
                         map_values = {'unknown or unspecified': '0', 'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'Horizontal (windows and roof windows only)': '9'}
@@ -19443,7 +19879,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19476,6 +19912,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -19516,7 +19953,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = {'2': 'manufacturer data', '4': 'BFRC data'}
                             map_values = {'manufacturer data': '2', 'BFRC data': '4'}
                             parent_class_name = "Window_Transmission_Details"
@@ -19528,7 +19966,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def window_transmission_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19561,7 +19999,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Window_Transmission_Details"
@@ -19577,7 +20016,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -19599,7 +20038,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Window_Transmission_Details"
@@ -19615,7 +20055,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -19632,11 +20072,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:boolean"
                         class_name = "PVC_Frame"
-                        documentation = """include when Glazing-Type is 1 or 3. If true: wood or PVC, if false: metal."""
+                        documentation = r"""include when Glazing-Type is 1 or 3. If true: wood or PVC, if false: metal."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -19649,7 +20090,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19677,11 +20118,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "SAP-GlazingGapTypeCode"
                         class_name = "Glazing_Gap"
-                        documentation = """include when Glazing-Type is 1 or 3 and PVC-Frame is true."""
+                        documentation = r"""include when Glazing-Type is 1 or 3 and PVC-Frame is true."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'6': '6mm', '12': '12mm', '16+': '16mm or more'}
                         map_values = {'6mm': '6', '12mm': '12', '16mm or more': '16+'}
@@ -19694,7 +20136,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19722,12 +20164,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "xs:decimal"
                         class_name = "Frame_Factor"
-                        documentation = """include when frame factor is known."""
+                        documentation = r"""include when frame factor is known."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Window"
@@ -19743,7 +20186,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -19760,11 +20203,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "WindowWallTypeCode"
                         class_name = "Window_Wall_Type"
-                        documentation = """Identifies the type of wall the window is located"""
+                        documentation = r"""Identifies the type of wall the window is located"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'External wall type 1', '2': 'Alternative wall 1', '3': 'Alternative wall 2', '4': 'Roof of Room in Roof', '5': 'gable wall 1.', '6': 'gable wall 2.', '7': 'common wall 1 Only include for RR Type 2.', '8': 'common wall 2 Only include for RR Type 2.'}
                         map_values = {'External wall type 1': '1', 'Alternative wall 1': '2', 'Alternative wall 2': '3', 'Roof of Room in Roof': '4', 'gable wall 1.': '5', 'gable wall 2.': '6', 'common wall 1 Only include for RR Type 2.': '7', 'common wall 2 Only include for RR Type 2.': '8'}
@@ -19777,7 +20221,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19805,11 +20249,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Flag"
                         class_name = "Permanent_Shutters_Present"
-                        documentation = """Identifies if permanent shutters are present"""
+                        documentation = r"""Identifies if permanent shutters are present"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'Y': 'Yes', 'N': 'No'}
                         map_values = {'Yes': 'Y', 'No': 'N'}
@@ -19822,7 +20267,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19850,11 +20295,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                         element_type = "Flag"
                         class_name = "Permanent_Shutters_Insulated"
-                        documentation = """Identifies if permanent shutters are insulated. Include when permanent shutters are present"""
+                        documentation = r"""Identifies if permanent shutters are insulated. Include when permanent shutters are present"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'Y': 'Yes', 'N': 'No'}
                         map_values = {'Yes': 'Y', 'No': 'N'}
@@ -19867,7 +20313,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         def sap_window(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19895,11 +20341,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Window-Transmission-Details"
                 class_name = "Windows_Transmission_Details"
-                documentation = """To be used when windows are not measured."""
+                documentation = r"""To be used when windows are not measured."""
                 type_documentation = None
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -19940,7 +20387,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = {'2': 'manufacturer data', '4': 'BFRC data'}
                     map_values = {'manufacturer data': '2', 'BFRC data': '4'}
                     parent_class_name = "Windows_Transmission_Details"
@@ -19952,7 +20400,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def windows_transmission_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19985,7 +20433,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Windows_Transmission_Details"
@@ -20001,7 +20450,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -20023,7 +20472,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Windows_Transmission_Details"
@@ -20039,7 +20489,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -20056,11 +20506,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "SAP-Deselected-Improvements"
                 class_name = "SAP_Deselected_Improvements"
-                documentation = """This must record any measures deselected by the DEA"""
-                type_documentation = """There are 22 possible improvement measures, designated from A to V. This must record measures deselected by DEA (A to V is the full set, only E, N, U and V are considered at the moment for new build)."""
+                documentation = r"""This must record any measures deselected by the DEA"""
+                type_documentation = r"""There are 22 possible improvement measures, designated from A to V. This must record measures deselected by DEA (A to V is the full set, only E, N, U and V are considered at the moment for new build)."""
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -20089,6 +20540,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'A': 'Loft Insulation', 'A2': 'Flat roof insulation', 'A3': 'Room-in-roof insulation', 'B': 'Cavity wall insulation', 'B4': 'Party wall insulation', 'C': 'Hot water cylinder insulation', 'D': 'Draughtproofing', 'E': 'Low energy lights', 'F': 'Cylinder thermostat', 'G': 'Heating controls for wet central heating system', 'G2': 'Water heating controls', 'H': 'Heating controls for warm air system', 'I': 'Upgrade boiler, same fuel', 'J': 'Biomass boiler', 'J2': 'Biomass boiler as alternative improvement', 'K': 'Biomass room heater with boiler', 'L': 'New or replacement fan-assisted storage heaters', 'L2': 'New or replacement high heat retention storage heaters', 'M': 'Replacement warm-air unit', 'N': 'Solar water heating', 'O': 'Replacement double glazed windows', 'O3': 'Replacement double glazing units', 'P': 'Secondary glazing', 'Q': 'Solid wall insulation', 'Q2': 'External insulation with cavity wall insulation', 'R': 'Condensing oil boiler', 'S': 'Change heating to Band A gas condensing boiler (no fuel switch)', 'T': 'Change heating to Band A gas condensing boiler (fuel switch)', 'T2': 'Flue gas heat recovery', 'U': 'Photovoltaics', 'U1': 'PV Battery', 'U2': 'PV Diverter', 'V': 'Wind turbine (roof mounted)', 'V2': 'Wind turbine (on mast)', 'W': 'Floor insulation; for backwards compatibility only, do not use', 'W1': 'Insulation of suspended floor', 'W2': 'Insulation of solid ground floor', 'X': 'Insulated doors', 'Y': 'Instantaneous waste water heat recovery', 'Y2': 'Storage waste water heat recovery', 'Z1': 'Air or ground source heat pump', 'Z2': 'Air or ground source heat pump with underfloor heating', 'Z3': 'Micro-CHP', 'NR': 'Not recorded'}
                     map_values = {'Loft Insulation': 'A', 'Flat roof insulation': 'A2', 'Room-in-roof insulation': 'A3', 'Cavity wall insulation': 'B', 'Party wall insulation': 'B4', 'Hot water cylinder insulation': 'C', 'Draughtproofing': 'D', 'Low energy lights': 'E', 'Cylinder thermostat': 'F', 'Heating controls for wet central heating system': 'G', 'Water heating controls': 'G2', 'Heating controls for warm air system': 'H', 'Upgrade boiler, same fuel': 'I', 'Biomass boiler': 'J', 'Biomass boiler as alternative improvement': 'J2', 'Biomass room heater with boiler': 'K', 'New or replacement fan-assisted storage heaters': 'L', 'New or replacement high heat retention storage heaters': 'L2', 'Replacement warm-air unit': 'M', 'Solar water heating': 'N', 'Replacement double glazed windows': 'O', 'Replacement double glazing units': 'O3', 'Secondary glazing': 'P', 'Solid wall insulation': 'Q', 'External insulation with cavity wall insulation': 'Q2', 'Condensing oil boiler': 'R', 'Change heating to Band A gas condensing boiler (no fuel switch)': 'S', 'Change heating to Band A gas condensing boiler (fuel switch)': 'T', 'Flue gas heat recovery': 'T2', 'Photovoltaics': 'U', 'PV Battery': 'U1', 'PV Diverter': 'U2', 'Wind turbine (roof mounted)': 'V', 'Wind turbine (on mast)': 'V2', 'Floor insulation; for backwards compatibility only, do not use': 'W', 'Insulation of suspended floor': 'W1', 'Insulation of solid ground floor': 'W2', 'Insulated doors': 'X', 'Instantaneous waste water heat recovery': 'Y', 'Storage waste water heat recovery': 'Y2', 'Air or ground source heat pump': 'Z1', 'Air or ground source heat pump with underfloor heating': 'Z2', 'Micro-CHP': 'Z3', 'Not recorded': 'NR'}
@@ -20101,7 +20553,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     def sap_deselected_improvements(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20129,12 +20581,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Door_Count"
-                documentation = """Number of external doors"""
+                documentation = r"""Number of external doors"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -20150,7 +20603,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -20167,12 +20620,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Insulated_Door_Count"
-                documentation = """Number of insulated external doors"""
+                documentation = r"""Number of insulated external doors"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -20188,7 +20642,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -20205,12 +20659,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Count"
                 class_name = "Draughtproofed_Door_Count"
-                documentation = """Number of draught proofed external doors"""
+                documentation = r"""Number of draught proofed external doors"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -20226,7 +20681,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -20248,7 +20703,8 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -20264,7 +20720,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -20281,12 +20737,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "None"
                 class_name = "Percent_Draughtproofed"
-                documentation = """Percentage of windows and doors with adequate draught proofing"""
+                documentation = r"""Percentage of windows and doors with adequate draught proofing"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = int
+                python_type = int
+                python_type_convertor = lambda x: x if x is None else int(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "SAP_Property_Details"
@@ -20302,7 +20759,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -20324,6 +20781,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -20352,6 +20810,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -20392,6 +20851,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -20426,6 +20886,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -20473,12 +20934,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Measurement"
                             class_name = "Energy_Saved_Or_Generated"
-                            documentation = """Energy saved or generated in kWh/year."""
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            documentation = r"""Energy saved or generated in kWh/year."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Energy_Feature"
@@ -20494,7 +20956,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -20516,6 +20978,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'0': 'To be used only when there is no heating/hot-water system or data is from a community network', '1': 'mains gas - this is for backwards compatibility only and should not be used', '2': 'LPG - this is for backwards compatibility only and should not be used', '3': 'bottled LPG', '4': 'oil - this is for backwards compatibility only and should not be used', '5': 'anthracite', '6': 'wood logs', '7': 'bulk wood pellets', '8': 'wood chips', '9': 'dual fuel - mineral + wood', '10': 'electricity - this is for backwards compatibility only and should not be used', '11': 'waste combustion - this is for backwards compatibility only and should not be used', '12': 'biomass - this is for backwards compatibility only and should not be used', '13': 'biogas - landfill - this is for backwards compatibility only and should not be used', '14': 'house coal - this is for backwards compatibility only and should not be used', '15': 'smokeless coal', '16': 'wood pellets in bags for secondary heating', '17': 'LPG special condition', '18': 'B30K (not community)', '19': 'bioethanol', '20': 'mains gas (community)', '21': 'LPG (community)', '22': 'oil (community)', '23': 'B30D (community)', '24': 'coal (community)', '25': 'electricity (community)', '26': 'mains gas (not community)', '27': 'LPG (not community)', '28': 'oil (not community)', '29': 'electricity (not community)', '30': 'waste combustion (community)', '31': 'biomass (community)', '32': 'biogas (community)', '33': 'house coal (not community)', '34': 'biodiesel from any biomass source', '35': 'biodiesel from used cooking oil only', '36': 'biodiesel from vegetable oil only (not community)', '37': 'appliances able to use mineral oil or liquid biofuel', '51': 'biogas (not community)', '56': 'heat from boilers that can use mineral oil or biodiesel (community)', '57': 'heat from boilers using biodiesel from any biomass source (community)', '58': 'biodiesel from vegetable oil only (community)', '99': 'from heat network data (community)'}
                             map_values = {'To be used only when there is no heating/hot-water system or data is from a community network': '0', 'mains gas - this is for backwards compatibility only and should not be used': '1', 'LPG - this is for backwards compatibility only and should not be used': '2', 'bottled LPG': '3', 'oil - this is for backwards compatibility only and should not be used': '4', 'anthracite': '5', 'wood logs': '6', 'bulk wood pellets': '7', 'wood chips': '8', 'dual fuel - mineral + wood': '9', 'electricity - this is for backwards compatibility only and should not be used': '10', 'waste combustion - this is for backwards compatibility only and should not be used': '11', 'biomass - this is for backwards compatibility only and should not be used': '12', 'biogas - landfill - this is for backwards compatibility only and should not be used': '13', 'house coal - this is for backwards compatibility only and should not be used': '14', 'smokeless coal': '15', 'wood pellets in bags for secondary heating': '16', 'LPG special condition': '17', 'B30K (not community)': '18', 'bioethanol': '19', 'mains gas (community)': '20', 'LPG (community)': '21', 'oil (community)': '22', 'B30D (community)': '23', 'coal (community)': '24', 'electricity (community)': '25', 'mains gas (not community)': '26', 'LPG (not community)': '27', 'oil (not community)': '28', 'electricity (not community)': '29', 'waste combustion (community)': '30', 'biomass (community)': '31', 'biogas (community)': '32', 'house coal (not community)': '33', 'biodiesel from any biomass source': '34', 'biodiesel from used cooking oil only': '35', 'biodiesel from vegetable oil only (not community)': '36', 'appliances able to use mineral oil or liquid biofuel': '37', 'biogas (not community)': '51', 'heat from boilers that can use mineral oil or biodiesel (community)': '56', 'heat from boilers using biodiesel from any biomass source (community)': '57', 'biodiesel from vegetable oil only (community)': '58', 'from heat network data (community)': '99'}
@@ -20528,7 +20991,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def energy_feature(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20556,12 +21019,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Measurement"
                             class_name = "Energy_Used"
-                            documentation = """Energy used in kWh/year."""
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            documentation = r"""Energy used in kWh/year."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Energy_Feature"
@@ -20577,7 +21041,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -20599,6 +21063,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'0': 'To be used only when there is no heating/hot-water system or data is from a community network', '1': 'mains gas - this is for backwards compatibility only and should not be used', '2': 'LPG - this is for backwards compatibility only and should not be used', '3': 'bottled LPG', '4': 'oil - this is for backwards compatibility only and should not be used', '5': 'anthracite', '6': 'wood logs', '7': 'bulk wood pellets', '8': 'wood chips', '9': 'dual fuel - mineral + wood', '10': 'electricity - this is for backwards compatibility only and should not be used', '11': 'waste combustion - this is for backwards compatibility only and should not be used', '12': 'biomass - this is for backwards compatibility only and should not be used', '13': 'biogas - landfill - this is for backwards compatibility only and should not be used', '14': 'house coal - this is for backwards compatibility only and should not be used', '15': 'smokeless coal', '16': 'wood pellets in bags for secondary heating', '17': 'LPG special condition', '18': 'B30K (not community)', '19': 'bioethanol', '20': 'mains gas (community)', '21': 'LPG (community)', '22': 'oil (community)', '23': 'B30D (community)', '24': 'coal (community)', '25': 'electricity (community)', '26': 'mains gas (not community)', '27': 'LPG (not community)', '28': 'oil (not community)', '29': 'electricity (not community)', '30': 'waste combustion (community)', '31': 'biomass (community)', '32': 'biogas (community)', '33': 'house coal (not community)', '34': 'biodiesel from any biomass source', '35': 'biodiesel from used cooking oil only', '36': 'biodiesel from vegetable oil only (not community)', '37': 'appliances able to use mineral oil or liquid biofuel', '51': 'biogas (not community)', '56': 'heat from boilers that can use mineral oil or biodiesel (community)', '57': 'heat from boilers using biodiesel from any biomass source (community)', '58': 'biodiesel from vegetable oil only (community)', '99': 'from heat network data (community)'}
                             map_values = {'To be used only when there is no heating/hot-water system or data is from a community network': '0', 'mains gas - this is for backwards compatibility only and should not be used': '1', 'LPG - this is for backwards compatibility only and should not be used': '2', 'bottled LPG': '3', 'oil - this is for backwards compatibility only and should not be used': '4', 'anthracite': '5', 'wood logs': '6', 'bulk wood pellets': '7', 'wood chips': '8', 'dual fuel - mineral + wood': '9', 'electricity - this is for backwards compatibility only and should not be used': '10', 'waste combustion - this is for backwards compatibility only and should not be used': '11', 'biomass - this is for backwards compatibility only and should not be used': '12', 'biogas - landfill - this is for backwards compatibility only and should not be used': '13', 'house coal - this is for backwards compatibility only and should not be used': '14', 'smokeless coal': '15', 'wood pellets in bags for secondary heating': '16', 'LPG special condition': '17', 'B30K (not community)': '18', 'bioethanol': '19', 'mains gas (community)': '20', 'LPG (community)': '21', 'oil (community)': '22', 'B30D (community)': '23', 'coal (community)': '24', 'electricity (community)': '25', 'mains gas (not community)': '26', 'LPG (not community)': '27', 'oil (not community)': '28', 'electricity (not community)': '29', 'waste combustion (community)': '30', 'biomass (community)': '31', 'biogas (community)': '32', 'house coal (not community)': '33', 'biodiesel from any biomass source': '34', 'biodiesel from used cooking oil only': '35', 'biodiesel from vegetable oil only (not community)': '36', 'appliances able to use mineral oil or liquid biofuel': '37', 'biogas (not community)': '51', 'heat from boilers that can use mineral oil or biodiesel (community)': '56', 'heat from boilers using biodiesel from any biomass source (community)': '57', 'biodiesel from vegetable oil only (community)': '58', 'from heat network data (community)': '99'}
@@ -20611,7 +21076,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             def energy_feature(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20639,11 +21104,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Air-Change-Rates"
                             class_name = "Air_Change_Rates"
-                            documentation = """For Appendix Q procedure that provides air change rates. Only one Special Feature can have data on air change rates."""
+                            documentation = r"""For Appendix Q procedure that provides air change rates. Only one Special Feature can have data on air change rates."""
                             type_documentation = None
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -20672,6 +21138,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 has_text_node = False
                                 min_occurs = 12
                                 max_occurs = 12
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -20706,6 +21173,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'Jan': '', 'Feb': '', 'Mar': '', 'Apr': '', 'May': '', 'Jun': '', 'Jul': '', 'Aug': '', 'Sep': '', 'Oct': '', 'Nov': '', 'Dec': ''}
                                     map_values = {'': 'Dec'}
@@ -20718,7 +21186,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     def air_change_rate(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20746,12 +21214,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                                     element_type = "xs:decimal"
                                     class_name = "Air_Change_Rate_Value"
-                                    documentation = """Air change rate in month."""
+                                    documentation = r"""Air change rate in month."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "Air_Change_Rate"
@@ -20767,7 +21236,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20789,6 +21258,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -20818,12 +21288,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Measurement"
                             class_name = "Emissions_Saved"
-                            documentation = """Emissions saved in kg/year."""
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            documentation = r"""Emissions saved in kg/year."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Emissions_Feature"
@@ -20839,7 +21310,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -20856,12 +21327,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                             element_type = "Measurement"
                             class_name = "Emissions_Created"
-                            documentation = """Additional emissions in kg/year."""
-                            type_documentation = """A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
+                            documentation = r"""Additional emissions in kg/year."""
+                            type_documentation = r"""A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive."""
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Emissions_Feature"
@@ -20877,7 +21349,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -20895,10 +21367,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
         element_type = "Report-Header"
         class_name = "Report_Header"
         documentation = None
-        type_documentation = """Report Header contains all the identification and searchable details for the Report."""
+        type_documentation = r"""Report Header contains all the identification and searchable details for the Report."""
         has_text_node = False
         min_occurs = 1
         max_occurs = 1
+        python_type = None
         python_type_convertor = None
         map_codes = None
         map_values = None
@@ -21006,11 +21479,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "RRNType"
             class_name = "RRN"
-            documentation = """Report Reference Number is the unique report Identifier shown on the EPC."""
+            documentation = r"""Report Reference Number is the unique report Identifier shown on the EPC."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -21040,11 +21514,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "xs:date"
             class_name = "Inspection_Date"
-            documentation = """Date of site visit."""
+            documentation = r"""Date of site visit."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = datetime.date.fromisoformat
             python_type_convertor = datetime.date.fromisoformat
             map_codes = None
             map_values = None
@@ -21061,7 +21536,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 try:
                     return self.__class__.python_type_convertor(self.text)
                 except ValueError:
-                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -21078,11 +21553,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "ReportTypeCode"
             class_name = "Report_Type"
-            documentation = """The type of assessment that was carried out."""
+            documentation = r"""The type of assessment that was carried out."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'2': 'RdSAP Energy Performance Certificate', '3': 'Full SAP Energy Performance Certificate', '4': 'Interim RdSAP Energy Performance Certificate (to be superseded by SAP EPC)'}
             map_values = {'RdSAP Energy Performance Certificate': '2', 'Full SAP Energy Performance Certificate': '3', 'Interim RdSAP Energy Performance Certificate (to be superseded by SAP EPC)': '4'}
@@ -21095,7 +21571,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def report_header(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21123,11 +21599,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "xs:date"
             class_name = "Completion_Date"
-            documentation = """Date of completion of report. Equal to or later than Inspection-Date and before or equal to Registration-Date."""
+            documentation = r"""Date of completion of report. Equal to or later than Inspection-Date and before or equal to Registration-Date."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = datetime.date.fromisoformat
             python_type_convertor = datetime.date.fromisoformat
             map_codes = None
             map_values = None
@@ -21144,7 +21621,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 try:
                     return self.__class__.python_type_convertor(self.text)
                 except ValueError:
-                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -21161,11 +21638,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "xs:date"
             class_name = "Registration_Date"
-            documentation = """Date when report submitted to register."""
+            documentation = r"""Date when report submitted to register."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = datetime.date.fromisoformat
             python_type_convertor = datetime.date.fromisoformat
             map_codes = None
             map_values = None
@@ -21182,7 +21660,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 try:
                     return self.__class__.python_type_convertor(self.text)
                 except ValueError:
-                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -21204,6 +21682,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'cancelled': 'Cancelled', 'entered': 'entered on the register', 'appeal': 'under appeal', 'removed': 'removed', 'rejected': 'rejected', 'under investigation': 'under investigation', 'not for issue': 'not for issue'}
             map_values = {'Cancelled': 'cancelled', 'entered on the register': 'entered', 'under appeal': 'appeal', 'removed': 'removed', 'rejected': 'rejected', 'under investigation': 'under investigation', 'not for issue': 'not for issue'}
@@ -21216,7 +21695,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def report_header(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21244,11 +21723,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "LanguageCode"
             class_name = "Language_Code"
-            documentation = """The language that the report is written in."""
+            documentation = r"""The language that the report is written in."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'1': 'English', '2': 'Welsh'}
             map_values = {'English': '1', 'Welsh': '2'}
@@ -21261,7 +21741,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def report_header(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21289,11 +21769,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "PropertyTypeCode"
             class_name = "Property_Type"
-            documentation = """The type of property that is being assessed. This should be the same as the Property-Type recorded in the Property-Details section."""
+            documentation = r"""The type of property that is being assessed. This should be the same as the Property-Type recorded in the Property-Details section."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'0': 'House', '1': 'Bungalow', '2': 'Flat', '3': 'Maisonette', '4': 'Park home'}
             map_values = {'House': '0', 'Bungalow': '1', 'Flat': '2', 'Maisonette': '3', 'Park home': '4'}
@@ -21306,7 +21787,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def report_header(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21334,11 +21815,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "UKRegionCode"
             class_name = "Region_Code"
-            documentation = """Region within the UK."""
+            documentation = r"""Region within the UK."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'1': 'Borders', '2': 'East Anglia', '3': 'East Pennines', '4': 'East Scotland', '5': 'Highland', '6': 'Midlands', '7': 'North East England', '8': 'North East Scotland', '9': 'North West England / South West Scotland', '10': 'Northern Ireland', '11': 'Orkney', '12': 'Severn Valley', '13': 'Shetland', '14': 'South East England', '15': 'South West England', '16': 'Southern England', '17': 'Thames Valley', '18': 'Wales', '19': 'West Pennines', '20': 'West Scotland', '21': 'Western Isles', '22': 'Jersey', '23': 'Guernsey', '24': 'Isle of Man', 'NR': 'for backwards compatibility only - do not use'}
             map_values = {'Borders': '1', 'East Anglia': '2', 'East Pennines': '3', 'East Scotland': '4', 'Highland': '5', 'Midlands': '6', 'North East England': '7', 'North East Scotland': '8', 'North West England / South West Scotland': '9', 'Northern Ireland': '10', 'Orkney': '11', 'Severn Valley': '12', 'Shetland': '13', 'South East England': '14', 'South West England': '15', 'Southern England': '16', 'Thames Valley': '17', 'Wales': '18', 'West Pennines': '19', 'West Scotland': '20', 'Western Isles': '21', 'Jersey': '22', 'Guernsey': '23', 'Isle of Man': '24', 'for backwards compatibility only - do not use': 'NR'}
@@ -21351,7 +21833,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def report_header(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21379,11 +21861,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "UKCountryCode"
             class_name = "Country_Code"
-            documentation = """Country within the UK."""
+            documentation = r"""Country within the UK."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'ENG': 'England', 'WLS': 'Wales', 'SCT': 'Scotland', 'NIR': 'Northern Ireland', 'IOM': 'Isle of Man', 'NR': 'for backwards compatibility only - do not use'}
             map_values = {'England': 'ENG', 'Wales': 'WLS', 'Scotland': 'SCT', 'Northern Ireland': 'NIR', 'Isle of Man': 'IOM', 'for backwards compatibility only - do not use': 'NR'}
@@ -21396,7 +21879,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def report_header(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21429,6 +21912,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'1': 'marketed sale', '2': 'non marketed sale', '3': 'rental (social) - this is for backwards compatibility only and should not be used', '4': 'rental (private) - this is for backwards compatibility only and should not be used', '5': 'none of the above', '6': 'new dwelling', '7': 'not recorded - this is for backwards compatibility only and should not be used', '8': 'rental', '9': 'assessment for green deal - this is for backwards compatibility only and should not be used', '10': 'following green deal - this is for backwards compatibility only and should not be used', '11': 'FiT application - this is for backwards compatibility only and should not be used', '12': 'RHI application - this is for backwards compatibility only and should not be used', '13': 'ECO assessment - this is for backwards compatibility only and should not be used', '14': 'Stock condition survey', '15': 'Grant scheme (ECO, RHI, etc.)', '16': 'Non-grant scheme (e.g. MEES)', '17': 're-mortgaging'}
             map_values = {'marketed sale': '1', 'non marketed sale': '2', 'rental (social) - this is for backwards compatibility only and should not be used': '3', 'rental (private) - this is for backwards compatibility only and should not be used': '4', 'none of the above': '5', 'new dwelling': '6', 'not recorded - this is for backwards compatibility only and should not be used': '7', 'rental': '8', 'assessment for green deal - this is for backwards compatibility only and should not be used': '9', 'following green deal - this is for backwards compatibility only and should not be used': '10', 'FiT application - this is for backwards compatibility only and should not be used': '11', 'RHI application - this is for backwards compatibility only and should not be used': '12', 'ECO assessment - this is for backwards compatibility only and should not be used': '13', 'Stock condition survey': '14', 'Grant scheme (ECO, RHI, etc.)': '15', 'Non-grant scheme (e.g. MEES)': '16', 're-mortgaging': '17'}
@@ -21441,7 +21925,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def report_header(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21474,6 +21958,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'1': 'owner-occupied', '2': 'rented (social)', '3': 'rented (private)', 'ND': 'unknown'}
             map_values = {'owner-occupied': '1', 'rented (social)': '2', 'rented (private)': '3', 'unknown': 'ND'}
@@ -21486,7 +21971,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             def report_header(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21515,10 +22000,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
             element_type = "Energy-Assessor"
             class_name = "Energy_Assessor"
             documentation = None
-            type_documentation = """An Energy Assessor is certified by a Certification Scheme as being qualified to carry out a SAP assessment and/or an RdSAP assessment."""
+            type_documentation = r"""An Energy Assessor is certified by a Certification Scheme as being qualified to carry out a SAP assessment and/or an RdSAP assessment."""
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -21602,11 +22088,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:string"
                 class_name = "Name"
-                documentation = """The name by which the Home Inspector is registered. This is a structured name containing prefix, first name + surname."""
+                documentation = r"""The name by which the Home Inspector is registered. This is a structured name containing prefix, first name + surname."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -21636,11 +22123,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Flag"
                 class_name = "Notify_Lodgement"
-                documentation = """Indicates whether the assessor wants to be notified that a the report has been lodged in the register"""
+                documentation = r"""Indicates whether the assessor wants to be notified that a the report has been lodged in the register"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'Y': 'Yes', 'N': 'No'}
                 map_values = {'Yes': 'Y', 'No': 'N'}
@@ -21653,7 +22141,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def energy_assessor(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21681,11 +22169,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "AddressType"
                 class_name = "Contact_Address"
-                documentation = """The address that any written correspondence can be sent to. This is not the same as the Registered Address because it may, of course, be a Post Office Box."""
-                type_documentation = """An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
+                documentation = r"""The address that any written correspondence can be sent to. This is not the same as the Registered Address because it may, of course, be a Post Office Box."""
+                type_documentation = r"""An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -21738,6 +22227,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -21767,11 +22257,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:string"
                     class_name = "Address_Line_2"
-                    documentation = """The District part of the Address. A District is an optional sub-part of the Post Town e.g. "Kings Heath" in "Birmingham" or "Ellington" in London."""
+                    documentation = r"""The District part of the Address. A District is an optional sub-part of the Post Town e.g. "Kings Heath" in "Birmingham" or "Ellington" in London."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -21806,6 +22297,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -21840,6 +22332,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -21869,11 +22362,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "PostcodeType"
                     class_name = "Postcode"
-                    documentation = """The Postcode for the Address"""
+                    documentation = r"""The Postcode for the Address"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -21908,6 +22402,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -21937,11 +22432,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:string"
                 class_name = "E_Mail"
-                documentation = """the E-Mail address that the Authorised User can be contacted at."""
+                documentation = r"""the E-Mail address that the Authorised User can be contacted at."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -21976,6 +22472,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -22010,6 +22507,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -22039,11 +22537,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "xs:string"
                 class_name = "Company_Name"
-                documentation = """The Name of the Company that the assessor is employed by."""
+                documentation = r"""The Name of the Company that the assessor is employed by."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -22078,6 +22577,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -22112,6 +22612,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -22146,6 +22647,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -22175,11 +22677,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "CertificateNumberType"
                     class_name = "Certificate_Number"
-                    documentation = """The unique identifier assigned to the assessor by the scheme by which they can be identified throughout their membership of the scheme."""
+                    documentation = r"""The unique identifier assigned to the assessor by the scheme by which they can be identified throughout their membership of the scheme."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -22209,11 +22712,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:string"
                     class_name = "Membership_Number"
-                    documentation = """For Scottish DEAs only"""
+                    documentation = r"""For Scottish DEAs only"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -22244,10 +22748,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
             element_type = "Property"
             class_name = "Property"
             documentation = None
-            type_documentation = """A discrete identifiable possession, such as a piece of real-estate, to which its owner has legal title. For the Home Information Pack legislation the types of property are restricted to residential properties. It should be observed that "a property is a property is a property" and all real-estate properties, whether residential or commercial or whether being sold for the first or the nth time will have a very similar conceptual structure and similar rules and constraints. As such the broad description of a Property can be regarded as a framework, containing a set of extension points, that can be expanded as necessary to cover additional detail."""
+            type_documentation = r"""A discrete identifiable possession, such as a piece of real-estate, to which its owner has legal title. For the Home Information Pack legislation the types of property are restricted to residential properties. It should be observed that "a property is a property is a property" and all real-estate properties, whether residential or commercial or whether being sold for the first or the nth time will have a very similar conceptual structure and similar rules and constraints. As such the broad description of a Property can be regarded as a framework, containing a set of extension points, that can be expanded as necessary to cover additional detail."""
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -22278,10 +22783,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 element_type = "AddressType"
                 class_name = "Address"
                 documentation = None
-                type_documentation = """An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
+                type_documentation = r"""An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -22334,6 +22840,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -22363,11 +22870,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "xs:string"
                     class_name = "Address_Line_2"
-                    documentation = """The District part of the Address. A District is an optional sub-part of the Post Town e.g. "Kings Heath" in "Birmingham" or "Ellington" in London."""
+                    documentation = r"""The District part of the Address. A District is an optional sub-part of the Post Town e.g. "Kings Heath" in "Birmingham" or "Ellington" in London."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -22402,6 +22910,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -22436,6 +22945,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -22465,11 +22975,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                     element_type = "PostcodeType"
                     class_name = "Postcode"
-                    documentation = """The Postcode for the Address"""
+                    documentation = r"""The Postcode for the Address"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -22499,11 +23010,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "UPRNType"
                 class_name = "UPRN"
-                documentation = """Unique Property Reference Number"""
+                documentation = r"""Unique Property Reference Number"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -22538,6 +23050,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -22567,11 +23080,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "DisclosureCode"
                 class_name = "Related_Party_Disclosure_Number"
-                documentation = """Code indicating any potential conflicts of interest or commercial relationships with other parties."""
+                documentation = r"""Code indicating any potential conflicts of interest or commercial relationships with other parties."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'No related party', '2': 'Relative of homeowner or of occupier of the property', '3': 'Residing at the property', '4': 'Financial interest in the property', '5': 'Owner or Director of the organisation dealing with the property transaction', '6': 'Employed by the professional dealing with the property transaction', '7': 'Relative of the professional dealing with the property transaction'}
                 map_values = {'No related party': '1', 'Relative of homeowner or of occupier of the property': '2', 'Residing at the property': '3', 'Financial interest in the property': '4', 'Owner or Director of the organisation dealing with the property transaction': '5', 'Employed by the professional dealing with the property transaction': '6', 'Relative of the professional dealing with the property transaction': '7'}
@@ -22584,7 +23098,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 def related_party_disclosure(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -22612,11 +23126,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
                 element_type = "Sentence"
                 class_name = "Related_Party_Disclosure_Text"
-                documentation = """For backward compatibility only"""
+                documentation = r"""For backward compatibility only"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -22647,10 +23162,11 @@ class RdSAP_Report(_Base, etree.ElementBase):
         element_type = "Insurance-Details"
         class_name = "Insurance_Details"
         documentation = None
-        type_documentation = """Details of the Professional Indemnity Insurance policy used to provide cover against a compensation claim against any particular Home Condition Report. A particular Home Condition Report may be covered by an Professional Indemnity Insurance policy in one of three different ways: * The Home Inspector has personal Professional Indemnity Insurance and the Home Condition Report is covered by this. * The Home Condition Report is covered by an umbrella Professional Indemnity Insurance policy held by the Home Condition Report Supplier that assigned the inspection to the Home Inspector. * An individual insurance policy is taken out to cover the individual report such as the case where the property is unusual and falls outside the Home Inspectors normal Professional Indemnity Insurance policy. A Home Inspector may use any or all of these methods to providing Professional Indemnity Insurance for a Report on a case-by-case basis."""
+        type_documentation = r"""Details of the Professional Indemnity Insurance policy used to provide cover against a compensation claim against any particular Home Condition Report. A particular Home Condition Report may be covered by an Professional Indemnity Insurance policy in one of three different ways: * The Home Inspector has personal Professional Indemnity Insurance and the Home Condition Report is covered by this. * The Home Condition Report is covered by an umbrella Professional Indemnity Insurance policy held by the Home Condition Report Supplier that assigned the inspection to the Home Inspector. * An individual insurance policy is taken out to cover the individual report such as the case where the property is unusual and falls outside the Home Inspectors normal Professional Indemnity Insurance policy. A Home Inspector may use any or all of these methods to providing Professional Indemnity Insurance for a Report on a case-by-case basis."""
         has_text_node = False
         min_occurs = 1
         max_occurs = 1
+        python_type = None
         python_type_convertor = None
         map_codes = None
         map_values = None
@@ -22698,11 +23214,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "xs:string"
             class_name = "Insurer"
-            documentation = """The name of the insurance company that underwrites / issued the insurance policy"""
+            documentation = r"""The name of the insurance company that underwrites / issued the insurance policy"""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -22732,11 +23249,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "xs:string"
             class_name = "Policy_No"
-            documentation = """The policy number of the insurance policy"""
+            documentation = r"""The policy number of the insurance policy"""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -22766,11 +23284,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "xs:date"
             class_name = "Effective_Date"
-            documentation = """The date that the insurance policy becomes effective (commences cover)"""
+            documentation = r"""The date that the insurance policy becomes effective (commences cover)"""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = datetime.date.fromisoformat
             python_type_convertor = datetime.date.fromisoformat
             map_codes = None
             map_values = None
@@ -22787,7 +23306,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 try:
                     return self.__class__.python_type_convertor(self.text)
                 except ValueError:
-                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -22804,11 +23323,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "xs:date"
             class_name = "Expiry_Date"
-            documentation = """The date that the insurance policy is supposed to expire."""
+            documentation = r"""The date that the insurance policy is supposed to expire."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = datetime.date.fromisoformat
             python_type_convertor = datetime.date.fromisoformat
             map_codes = None
             map_values = None
@@ -22825,7 +23345,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 try:
                     return self.__class__.python_type_convertor(self.text)
                 except ValueError:
-                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -22842,12 +23362,13 @@ class RdSAP_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
             element_type = "Money"
             class_name = "PI_Limit"
-            documentation = """The upper limit of the Professional Indemnity cover provided by the insurance policy."""
-            type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+            documentation = r"""The upper limit of the Professional Indemnity cover provided by the insurance policy."""
+            type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
-            python_type_convertor = float
+            python_type = float
+            python_type_convertor = lambda x: x if x is None else float(x)
             map_codes = None
             map_values = None
             parent_class_name = "Insurance_Details"
@@ -22863,7 +23384,7 @@ class RdSAP_Report(_Base, etree.ElementBase):
                 try:
                     return self.__class__.python_type_convertor(self.text)
                 except ValueError:
-                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -22880,11 +23401,12 @@ class RdSAP_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/rdsap"
         element_type = "xs:string"
         class_name = "ExternalDefinitions_Revision_Number"
-        documentation = """A number indicating the version of related ExternalDefinitions.xsd"""
+        documentation = r"""A number indicating the version of related ExternalDefinitions.xsd"""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None

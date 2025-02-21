@@ -8,8 +8,7 @@ class _Base():
     def __repr__(self):
         ""
         return f'<{self.__class__.__name__} {self.tag}>'
-
-
+    
     def copy(self):
         ""
         # get root and path to element
@@ -47,7 +46,7 @@ class _Base():
         if show_values:
 
             for element in copy_self.iter():
-
+                
                 try:
                     
                     map_codes = element.map_codes
@@ -99,6 +98,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
     has_text_node = False
     min_occurs = 1
     max_occurs = 1
+    python_type = None
     python_type_convertor = None
     map_codes = None
     map_values = None
@@ -143,11 +143,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
         element_type = "Energy-Performance-Certificate"
         class_name = "SAP_Report"
-        documentation = """The SAP report corresponding to the compliance report."""
+        documentation = r"""The SAP report corresponding to the compliance report."""
         type_documentation = None
         has_text_node = False
         min_occurs = 1
         max_occurs = 1
+        python_type = None
         python_type_convertor = None
         map_codes = None
         map_values = None
@@ -255,11 +256,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "xs:string"
             class_name = "Schema_Version_Original"
-            documentation = """The schema version that the data conformed to when it was lodged."""
+            documentation = r"""The schema version that the data conformed to when it was lodged."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -289,11 +291,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "xs:string"
             class_name = "Schema_Version_Current"
-            documentation = """The schema version to which the data conforms. This node is inserted by the register when a retrieval is requested. It must not be present in a lodgement being sent to the register."""
+            documentation = r"""The schema version to which the data conforms. This node is inserted by the register when a retrieval is requested. It must not be present in a lodgement being sent to the register."""
             type_documentation = None
             has_text_node = True
             min_occurs = 0
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -323,11 +326,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "SAP-VersionCode"
             class_name = "SAP_Version"
-            documentation = """SAP version that was used for the calculation."""
+            documentation = r"""SAP version that was used for the calculation."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'9.80': 'SAP 2005 version 9.80, dated October 2005', '9.81': 'SAP version 9.81, dated January 2008', '9.82': 'SAP version 9.82, dated Jun 2008', '9.83': 'SAP version 9.83, dated Jun 2009', '9.90': 'SAP version 9.90, dated Mar 2010', '9.91': 'SAP version 9.91, dated Jan 2012', '9.92': 'SAP version 9.92, dated Oct 2013', '10.2': 'SAP version 10.2, dated Oct 2020'}
             map_values = {'SAP 2005 version 9.80, dated October 2005': '9.80', 'SAP version 9.81, dated January 2008': '9.81', 'SAP version 9.82, dated Jun 2008': '9.82', 'SAP version 9.83, dated Jun 2009': '9.83', 'SAP version 9.90, dated Mar 2010': '9.90', 'SAP version 9.91, dated Jan 2012': '9.91', 'SAP version 9.92, dated Oct 2013': '9.92', 'SAP version 10.2, dated Oct 2020': '10.2'}
@@ -340,7 +344,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             def sap_report(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -368,11 +372,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "SAP-VersionCode"
             class_name = "SAP_Data_Version"
-            documentation = """Version of SAP that was used to define the input data for the calculation."""
+            documentation = r"""Version of SAP that was used to define the input data for the calculation."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = {'9.80': 'SAP 2005 version 9.80, dated October 2005', '9.81': 'SAP version 9.81, dated January 2008', '9.82': 'SAP version 9.82, dated Jun 2008', '9.83': 'SAP version 9.83, dated Jun 2009', '9.90': 'SAP version 9.90, dated Mar 2010', '9.91': 'SAP version 9.91, dated Jan 2012', '9.92': 'SAP version 9.92, dated Oct 2013', '10.2': 'SAP version 10.2, dated Oct 2020'}
             map_values = {'SAP 2005 version 9.80, dated October 2005': '9.80', 'SAP version 9.81, dated January 2008': '9.81', 'SAP version 9.82, dated Jun 2008': '9.82', 'SAP version 9.83, dated Jun 2009': '9.83', 'SAP version 9.90, dated Mar 2010': '9.90', 'SAP version 9.91, dated Jan 2012': '9.91', 'SAP version 9.92, dated Oct 2013': '9.92', 'SAP version 10.2, dated Oct 2020': '10.2'}
@@ -385,7 +390,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             def sap_report(self): return self.getparent()
         
             @property
-            def value(self):
+            def value(self): 
                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                 else:
                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -413,12 +418,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "xs:nonNegativeInteger"
             class_name = "PCDF_Revision_Number"
-            documentation = """Revision Number of the PCDF file used for the calculations."""
+            documentation = r"""Revision Number of the PCDF file used for the calculations."""
             type_documentation = None
             has_text_node = True
             min_occurs = 0
             max_occurs = 1
-            python_type_convertor = int
+            python_type = int
+            python_type_convertor = lambda x: x if x is None else int(x)
             map_codes = None
             map_values = None
             parent_class_name = "SAP_Report"
@@ -434,7 +440,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 try:
                     return self.__class__.python_type_convertor(self.text)
                 except ValueError:
-                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -451,11 +457,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "xs:string"
             class_name = "Calculation_Software_Name"
-            documentation = """Name of the software used to perform the SAP calculation."""
+            documentation = r"""Name of the software used to perform the SAP calculation."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -485,11 +492,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "xs:string"
             class_name = "Calculation_Software_Version"
-            documentation = """Version of the software used to perform the SAP calculation."""
+            documentation = r"""Version of the software used to perform the SAP calculation."""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -524,6 +532,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 0
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -558,6 +567,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 0
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -588,10 +598,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             element_type = "Report-Header"
             class_name = "Report_Header"
             documentation = None
-            type_documentation = """Report Header contains all the identification and searchable details for the Report."""
+            type_documentation = r"""Report Header contains all the identification and searchable details for the Report."""
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -705,11 +716,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "RRNType"
                 class_name = "RRN"
-                documentation = """Report Reference Number is the unique report Identifier that the report will be publicly known by. The RRN is allocated to the Report at the point that it is registered and will be algorithmically derived from the natural key characteristics of the Home Condition Report i.e. The Unique Property Reference Number (UPRN) and Inspection Date."""
+                documentation = r"""Report Reference Number is the unique report Identifier that the report will be publicly known by. The RRN is allocated to the Report at the point that it is registered and will be algorithmically derived from the natural key characteristics of the Home Condition Report i.e. The Unique Property Reference Number (UPRN) and Inspection Date."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -739,11 +751,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "xs:date"
                 class_name = "Inspection_Date"
-                documentation = """The date that the inspection was actually carried out by the Home Inspector."""
+                documentation = r"""The date that the inspection was actually carried out by the Home Inspector."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = datetime.date.fromisoformat
                 python_type_convertor = datetime.date.fromisoformat
                 map_codes = None
                 map_values = None
@@ -760,7 +773,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -777,11 +790,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "ReportTypeCode"
                 class_name = "Report_Type"
-                documentation = """The type of Home Inspection that was carried out. Initially the only allowed type will be a Home Condition Report inspection but this may be extended in the future to cover Energy Assessment Only inspections."""
+                documentation = r"""The type of Home Inspection that was carried out. Initially the only allowed type will be a Home Condition Report inspection but this may be extended in the future to cover Energy Assessment Only inspections."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'Home Condition Report', '2': 'RdSAP Energy Performance Certificate', '3': 'SAP Energy Performance Certificate', '4': 'Interim RdSAP Energy Performance Certificate (to be superseded by SAP EPC)'}
                 map_values = {'Home Condition Report': '1', 'RdSAP Energy Performance Certificate': '2', 'SAP Energy Performance Certificate': '3', 'Interim RdSAP Energy Performance Certificate (to be superseded by SAP EPC)': '4'}
@@ -794,7 +808,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -822,11 +836,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "xs:date"
                 class_name = "Completion_Date"
-                documentation = """The date that the Home Inspector completed the report. This will be after the Inspection Date but generally before the Registration Date."""
+                documentation = r"""The date that the Home Inspector completed the report. This will be after the Inspection Date but generally before the Registration Date."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = datetime.date.fromisoformat
                 python_type_convertor = datetime.date.fromisoformat
                 map_codes = None
                 map_values = None
@@ -843,7 +858,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -860,11 +875,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "xs:date"
                 class_name = "Registration_Date"
-                documentation = """The date that the report was submitted to the HCR Registration Organisation for lodging in the HCR Register."""
+                documentation = r"""The date that the report was submitted to the HCR Registration Organisation for lodging in the HCR Register."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = datetime.date.fromisoformat
                 python_type_convertor = datetime.date.fromisoformat
                 map_codes = None
                 map_values = None
@@ -881,7 +897,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -898,11 +914,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "ReportStatusCode"
                 class_name = "Status"
-                documentation = """The Status of the Report. A Home Condition Report can have a number of distinct states depending on whereabouts in its overall lifecycle the HCR is - see Home Condition Report Statechart for more details."""
+                documentation = r"""The Status of the Report. A Home Condition Report can have a number of distinct states depending on whereabouts in its overall lifecycle the HCR is - see Home Condition Report Statechart for more details."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'cancelled': 'Cancelled', 'entered': 'entered on the register', 'appeal': 'under appeal', 'removed': 'removed', 'rejected': 'rejected', 'under investigation': 'under investigation', 'not for issue': 'not for issue'}
                 map_values = {'Cancelled': 'cancelled', 'entered on the register': 'entered', 'under appeal': 'appeal', 'removed': 'removed', 'rejected': 'rejected', 'under investigation': 'under investigation', 'not for issue': 'not for issue'}
@@ -915,7 +932,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -943,11 +960,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "LanguageCode"
                 class_name = "Language_Code"
-                documentation = """The language that the report is written in."""
+                documentation = r"""The language that the report is written in."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'English', '2': 'Welsh'}
                 map_values = {'English': '1', 'Welsh': '2'}
@@ -960,7 +978,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -993,6 +1011,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'owner-occupied', '2': 'rented (social)', '3': 'rented (private)', 'ND': 'unknown'}
                 map_values = {'owner-occupied': '1', 'rented (social)': '2', 'rented (private)': '3', 'unknown': 'ND'}
@@ -1005,7 +1024,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1038,6 +1057,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'marketed sale', '2': 'non marketed sale', '3': 'rental (social) - this is for backwards compatibility only and should not be used', '4': 'rental (private) - this is for backwards compatibility only and should not be used', '5': 'none of the above', '6': 'new dwelling', '7': 'not recorded - this is for backwards compatibility only and should not be used', '8': 'rental', '9': 'assessment for green deal', '10': 'following green deal', '11': 'FiT application'}
                 map_values = {'marketed sale': '1', 'non marketed sale': '2', 'rental (social) - this is for backwards compatibility only and should not be used': '3', 'rental (private) - this is for backwards compatibility only and should not be used': '4', 'none of the above': '5', 'new dwelling': '6', 'not recorded - this is for backwards compatibility only and should not be used': '7', 'rental': '8', 'assessment for green deal': '9', 'following green deal': '10', 'FiT application': '11'}
@@ -1050,7 +1070,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1078,11 +1098,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "Flag"
                 class_name = "Seller_Commission_Report"
-                documentation = """Indicates that the HCR was commissioned by the Seller of the Property or their Agent. This is required in order to differentiate these reports from Buyer commisioned reports which are not eligible for inclusion in a Home Information Pack"""
+                documentation = r"""Indicates that the HCR was commissioned by the Seller of the Property or their Agent. This is required in order to differentiate these reports from Buyer commisioned reports which are not eligible for inclusion in a Home Information Pack"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'Y': 'Yes', 'N': 'No'}
                 map_values = {'Yes': 'Y', 'No': 'N'}
@@ -1095,7 +1116,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1123,11 +1144,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "PropertyTypeCode"
                 class_name = "Property_Type"
-                documentation = """Describes the type of Property that is being inspected. This should be the same as the Property-Type recorded in the Property-Details section."""
+                documentation = r"""Describes the type of Property that is being inspected. This should be the same as the Property-Type recorded in the Property-Details section."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'0': 'House', '1': 'Bungalow', '2': 'Flat', '3': 'Maisonette', '4': 'Park home'}
                 map_values = {'House': '0', 'Bungalow': '1', 'Flat': '2', 'Maisonette': '3', 'Park home': '4'}
@@ -1140,7 +1162,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1169,10 +1191,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 element_type = "Home-Inspector"
                 class_name = "Home_Inspector"
                 documentation = None
-                type_documentation = """A Certified Home Inspector is a person certified by a Certification Scheme - that is they exist on the Home Inspector Register - as being qualified to carry out a Home Inspection and produce a Home Condition Report. The exact criteria for fit + proper are laid down in regulations and the Business Standards and it is the responsibility of the Certification Scheme to carry out sufficient checks to ensure those criteria are adhered to. Although covered by a different regulatory regime a Home Inspector and Energy Assessor serve synonymous roles in the product of a Home Condition Report or Energy Performance Certificate respectively."""
+                type_documentation = r"""A Certified Home Inspector is a person certified by a Certification Scheme - that is they exist on the Home Inspector Register - as being qualified to carry out a Home Inspection and produce a Home Condition Report. The exact criteria for fit + proper are laid down in regulations and the Business Standards and it is the responsibility of the Certification Scheme to carry out sufficient checks to ensure those criteria are adhered to. Although covered by a different regulatory regime a Home Inspector and Energy Assessor serve synonymous roles in the product of a Home Condition Report or Energy Performance Certificate respectively."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -1256,11 +1279,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:string"
                     class_name = "Name"
-                    documentation = """The name by which the Home Inspector is registered. This is a structured name containing prefix, first name + surname."""
+                    documentation = r"""The name by which the Home Inspector is registered. This is a structured name containing prefix, first name + surname."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1290,11 +1314,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Flag"
                     class_name = "Notify_Lodgement"
-                    documentation = """Indicates whether the assessor wants to be notified that a the report has been lodged in the register"""
+                    documentation = r"""Indicates whether the assessor wants to be notified that a the report has been lodged in the register"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'Y': 'Yes', 'N': 'No'}
                     map_values = {'Yes': 'Y', 'No': 'N'}
@@ -1307,7 +1332,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def home_inspector(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -1335,11 +1360,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "AddressType"
                     class_name = "Contact_Address"
-                    documentation = """The address that any written correspondence can be sent to. This is not the same as the Registered Address because it may, of course, be a Post Office Box."""
-                    type_documentation = """An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
+                    documentation = r"""The address that any written correspondence can be sent to. This is not the same as the Registered Address because it may, of course, be a Post Office Box."""
+                    type_documentation = r"""An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -1392,6 +1418,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -1426,6 +1453,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -1460,6 +1488,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -1494,6 +1523,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -1523,11 +1553,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "PostcodeType"
                         class_name = "Postcode"
-                        documentation = """The Postcode for the Address"""
+                        documentation = r"""The Postcode for the Address"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -1562,6 +1593,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1591,11 +1623,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:string"
                     class_name = "E_Mail"
-                    documentation = """the E-Mail address that the Authorised User can be contacted at."""
+                    documentation = r"""the E-Mail address that the Authorised User can be contacted at."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1630,6 +1663,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1664,6 +1698,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1693,11 +1728,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:string"
                     class_name = "Company_Name"
-                    documentation = """The Name of the Company that the assessor is employed by."""
+                    documentation = r"""The Name of the Company that the assessor is employed by."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1732,6 +1768,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1766,6 +1803,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -1800,6 +1838,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -1829,11 +1868,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "CertificateNumberType"
                         class_name = "Certificate_Number"
-                        documentation = """The unique identifier assigned to the assessor by the scheme by which they can be identified throughout their membership of the scheme."""
+                        documentation = r"""The unique identifier assigned to the assessor by the scheme by which they can be identified throughout their membership of the scheme."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -1863,11 +1903,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Membership_Number"
-                        documentation = """For Scottish DEAs only"""
+                        documentation = r"""For Scottish DEAs only"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -1898,10 +1939,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 element_type = "Property"
                 class_name = "Property"
                 documentation = None
-                type_documentation = """A discrete identifiable possession, such as a piece of real-estate, to which its owner has legal title. For the Home Information Pack legislation the types of property are restricted to residential properties. It should be observed that "a property is a property is a property" and all real-estate properties, whether residential or commercial or whether being sold for the first or the nth time will have a very similar conceptual structure and similar rules and constraints. As such the broad description of a Property can be regarded as a framework, containing a set of extension points, that can be expanded as necessary to cover additional detail."""
+                type_documentation = r"""A discrete identifiable possession, such as a piece of real-estate, to which its owner has legal title. For the Home Information Pack legislation the types of property are restricted to residential properties. It should be observed that "a property is a property is a property" and all real-estate properties, whether residential or commercial or whether being sold for the first or the nth time will have a very similar conceptual structure and similar rules and constraints. As such the broad description of a Property can be regarded as a framework, containing a set of extension points, that can be expanded as necessary to cover additional detail."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -1943,11 +1985,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "AddressType"
                     class_name = "Address"
-                    documentation = """Address for the property."""
-                    type_documentation = """An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
+                    documentation = r"""Address for the property."""
+                    type_documentation = r"""An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -2000,6 +2043,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -2034,6 +2078,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -2068,6 +2113,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -2102,6 +2148,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -2131,11 +2178,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "PostcodeType"
                         class_name = "Postcode"
-                        documentation = """The Postcode for the Address"""
+                        documentation = r"""The Postcode for the Address"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -2165,11 +2213,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "UPRNType"
                     class_name = "UPRN"
-                    documentation = """Unique Property Reference Number"""
+                    documentation = r"""Unique Property Reference Number"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -2199,11 +2248,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:string"
                     class_name = "Site_Reference"
-                    documentation = """A site reference"""
+                    documentation = r"""A site reference"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -2233,11 +2283,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:string"
                     class_name = "Plot_Reference"
-                    documentation = """A plot reference"""
+                    documentation = r"""A plot reference"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -2267,11 +2318,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "UKRegionCode"
                 class_name = "Region_Code"
-                documentation = """Region within the UK."""
+                documentation = r"""Region within the UK."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'Borders', '2': 'East Anglia', '3': 'East Pennines', '4': 'East Scotland', '5': 'Highland', '6': 'Midlands', '7': 'North East England', '8': 'North East Scotland', '9': 'North West England / South West Scotland', '10': 'Northern Ireland', '11': 'Orkney', '12': 'Severn Valley', '13': 'Shetland', '14': 'South East England', '15': 'South West England', '16': 'Southern England', '17': 'Thames Valley', '18': 'Wales', '19': 'West Pennines', '20': 'West Scotland', '21': 'Western Isles', '22': 'Jersey', '23': 'Guernsey', '24': 'Isle of Man'}
                 map_values = {'Borders': '1', 'East Anglia': '2', 'East Pennines': '3', 'East Scotland': '4', 'Highland': '5', 'Midlands': '6', 'North East England': '7', 'North East Scotland': '8', 'North West England / South West Scotland': '9', 'Northern Ireland': '10', 'Orkney': '11', 'Severn Valley': '12', 'Shetland': '13', 'South East England': '14', 'South West England': '15', 'Southern England': '16', 'Thames Valley': '17', 'Wales': '18', 'West Pennines': '19', 'West Scotland': '20', 'Western Isles': '21', 'Jersey': '22', 'Guernsey': '23', 'Isle of Man': '24'}
@@ -2284,7 +2336,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2312,11 +2364,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "UKCountryCode"
                 class_name = "Country_Code"
-                documentation = """Country within the UK."""
+                documentation = r"""Country within the UK."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 0
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'EAW': 'England and Wales, for backwards compatibility only.', 'ENG': 'England', 'WLS': 'Wales', 'SCT': 'Scotland', 'NIR': 'Northern Ireland'}
                 map_values = {'England and Wales, for backwards compatibility only.': 'EAW', 'England': 'ENG', 'Wales': 'WLS', 'Scotland': 'SCT', 'Northern Ireland': 'NIR'}
@@ -2329,7 +2382,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def report_header(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2362,6 +2415,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -2391,11 +2445,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Sentence"
                     class_name = "Related_Party_Disclosure_Text"
-                    documentation = """For backward compatibility only."""
-                    type_documentation = """String value with a language code for natural-language text."""
+                    documentation = r"""For backward compatibility only."""
+                    type_documentation = r"""String value with a language code for natural-language text."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -2425,11 +2480,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "DisclosureCode"
                     class_name = "Related_Party_Disclosure_Number"
-                    documentation = """Code indicating any potential conflicts of interest or commercial relationships with other parties."""
+                    documentation = r"""Code indicating any potential conflicts of interest or commercial relationships with other parties."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'No related party', '2': 'Relative of homeowner or of occupier of the property', '3': 'Residing at the property', '4': 'Financial interest in the property', '5': 'Owner or Director of the organisation dealing with the property transaction', '6': 'Employed by the professional dealing with the property transaction', '7': 'Relative of the professional dealing with the property transaction'}
                     map_values = {'No related party': '1', 'Relative of homeowner or of occupier of the property': '2', 'Residing at the property': '3', 'Financial interest in the property': '4', 'Owner or Director of the organisation dealing with the property transaction': '5', 'Employed by the professional dealing with the property transaction': '6', 'Relative of the professional dealing with the property transaction': '7'}
@@ -2442,7 +2498,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def related_party_disclosure(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2471,10 +2527,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             element_type = "Energy-Assessment"
             class_name = "Energy_Assessment"
             documentation = None
-            type_documentation = """Energy Efficiency Assessment Report is an inspection report whose purpose is to assess the energy efficiency of the inspected property and provide energy ratings for the significant heat-loss features of the property. The report also identifies a number of potential improvements that may be made to the property in order to increase the energy efficiency."""
+            type_documentation = r"""Energy Efficiency Assessment Report is an inspection report whose purpose is to assess the energy efficiency of the inspected property and provide energy ratings for the significant heat-loss features of the property. The report also identifies a number of potential improvements that may be made to the property in order to increase the energy efficiency."""
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -2546,11 +2603,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "xs:date"
                 class_name = "Assessment_Date"
-                documentation = """Date of assessment."""
+                documentation = r"""Date of assessment."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = datetime.date.fromisoformat
                 python_type_convertor = datetime.date.fromisoformat
                 map_codes = None
                 map_values = None
@@ -2567,7 +2625,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -2589,6 +2647,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -2719,6 +2778,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -2754,11 +2814,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -2788,11 +2849,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2805,7 +2867,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def walls(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2833,11 +2895,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2850,7 +2913,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def walls(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2883,6 +2946,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -2918,11 +2982,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -2952,11 +3017,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -2969,7 +3035,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def roof(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -2997,11 +3063,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3014,7 +3081,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def roof(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3047,6 +3114,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -3082,11 +3150,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -3116,11 +3185,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3133,7 +3203,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def floor(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3161,11 +3231,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3178,7 +3249,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def floor(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3211,6 +3282,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -3246,11 +3318,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -3280,11 +3353,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3297,7 +3371,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def windows(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3325,11 +3399,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3342,7 +3417,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def windows(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3375,6 +3450,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 2
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -3410,11 +3486,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -3444,11 +3521,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3461,7 +3539,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def main_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3489,11 +3567,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3506,7 +3585,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def main_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3539,6 +3618,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 2
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -3574,11 +3654,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -3608,11 +3689,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3625,7 +3707,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def main_heating_controls(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3653,11 +3735,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3670,7 +3753,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def main_heating_controls(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3703,6 +3786,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -3738,11 +3822,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -3772,11 +3857,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3789,7 +3875,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def secondary_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3817,11 +3903,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3834,7 +3921,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def secondary_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3867,6 +3954,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -3902,11 +3990,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -3936,11 +4025,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3953,7 +4043,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def hot_water(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -3981,11 +4071,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -3998,7 +4089,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def hot_water(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4031,6 +4122,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -4066,11 +4158,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -4100,11 +4193,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -4117,7 +4211,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def lighting(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4145,11 +4239,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -4162,7 +4257,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def lighting(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4195,6 +4290,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -4230,11 +4326,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Sentence"
                         class_name = "Description"
-                        documentation = """Overall description of the property feature"""
-                        type_documentation = """String value with a language code for natural-language text."""
+                        documentation = r"""Overall description of the property feature"""
+                        type_documentation = r"""String value with a language code for natural-language text."""
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -4264,11 +4361,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Energy_Efficiency_Rating"
-                        documentation = """Overall summary of the energy efficiency of the property feature."""
+                        documentation = r"""Overall summary of the energy efficiency of the property feature."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -4281,7 +4379,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def air_tightness(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4309,11 +4407,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyEfficiencySummaryCode"
                         class_name = "Environmental_Efficiency_Rating"
-                        documentation = """Summary of the environmental efficiency of the property feature"""
+                        documentation = r"""Summary of the environmental efficiency of the property feature"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'N/A', '1': 'Very Poor', '2': 'Poor', '3': 'Average', '4': 'Good', '5': 'Very Good'}
                         map_values = {'N/A': '0', 'Very Poor': '1', 'Poor': '2', 'Average': '3', 'Good': '4', 'Very Good': '5'}
@@ -4326,7 +4425,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def air_tightness(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4354,11 +4453,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Has_Fixed_Air_Conditioning"
-                    documentation = """Fixed air conditioning?"""
+                    documentation = r"""Fixed air conditioning?"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -4371,7 +4471,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4399,11 +4499,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Has_Hot_Water_Cylinder"
-                    documentation = """Hot water cylinder?"""
+                    documentation = r"""Hot water cylinder?"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -4416,7 +4517,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4444,11 +4545,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Has_Heated_Separate_Conservatory"
-                    documentation = """Heated separate conservatory?"""
+                    documentation = r"""Heated separate conservatory?"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -4461,7 +4563,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4489,11 +4591,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Sentence"
                     class_name = "Dwelling_Type"
-                    documentation = """Is a string such as Detached house or Top-floor flat"""
-                    type_documentation = """String value with a language code for natural-language text."""
+                    documentation = r"""Is a string such as Detached house or Top-floor flat"""
+                    type_documentation = r"""String value with a language code for natural-language text."""
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -4523,12 +4626,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:positiveInteger"
                     class_name = "Total_Floor_Area"
-                    documentation = """Is a number such as 125"""
+                    documentation = r"""Is a number such as 125"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Property_Summary"
@@ -4544,7 +4648,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4561,12 +4665,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Percentage"
                     class_name = "Multiple_Glazed_Percentage"
-                    documentation = """Fraction of windows that are multiply glazed to nearest 1%."""
+                    documentation = r"""Fraction of windows that are multiply glazed to nearest 1%."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Property_Summary"
@@ -4582,7 +4687,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4599,11 +4704,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:string"
                     class_name = "Multiple_Glazed_Percentage_NR"
-                    documentation = """For backward compatibility only, do not use."""
+                    documentation = r"""For backward compatibility only, do not use."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -4633,11 +4739,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Is_Zero_Carbon_Home"
-                    documentation = """Is dwelling a Zero Carbon Home?"""
+                    documentation = r"""Is dwelling a Zero Carbon Home?"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -4650,7 +4757,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def property_summary(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -4678,11 +4785,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "Energy-Use"
                 class_name = "Energy_Use"
-                documentation = """Calculated results from the energy assessment."""
-                type_documentation = """Part of an Energy Report summarising the results of the various energy calculations made by the Home Inspector."""
+                documentation = r"""Calculated results from the energy assessment."""
+                type_documentation = r"""Part of an Energy Report summarising the results of the various energy calculations made by the Home Inspector."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -4832,12 +4940,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "DER"
-                    documentation = """The DER of the Property"""
+                    documentation = r"""The DER of the Property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -4853,7 +4962,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4870,12 +4979,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "TER"
-                    documentation = """The TER of the Property"""
+                    documentation = r"""The TER of the Property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -4891,7 +5001,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4908,12 +5018,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "DPER"
-                    documentation = """The DPER of the Property"""
+                    documentation = r"""The DPER of the Property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -4929,7 +5040,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4946,12 +5057,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "TPER"
-                    documentation = """The TPER of the Property"""
+                    documentation = r"""The TPER of the Property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -4967,7 +5079,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -4984,12 +5096,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "DFEE"
-                    documentation = """The DFEE of the Property"""
+                    documentation = r"""The DFEE of the Property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5005,7 +5118,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5022,12 +5135,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "TFEE"
-                    documentation = """The TFEE of the Property"""
+                    documentation = r"""The TFEE of the Property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5043,7 +5157,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5060,12 +5174,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "EnergyRatingType"
                     class_name = "Energy_Rating_Current"
-                    documentation = """The Current Energy Rating of the Property"""
+                    documentation = r"""The Current Energy Rating of the Property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5081,7 +5196,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5098,12 +5213,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "EnergyRatingType"
                     class_name = "Energy_Rating_Potential"
-                    documentation = """The overall Energy Rating for the Property being assessed."""
+                    documentation = r"""The overall Energy Rating for the Property being assessed."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5119,7 +5235,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5136,12 +5252,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "EnergyRatingType"
                     class_name = "Energy_Rating_Average"
-                    documentation = """Average SAP rating for the country concerned. 0 if unknown or not applicable"""
+                    documentation = r"""Average SAP rating for the country concerned. 0 if unknown or not applicable"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5157,7 +5274,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5174,12 +5291,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "EnergyRatingType"
                     class_name = "Environmental_Impact_Current"
-                    documentation = """The estimated current Environmental Impact Rating of the property"""
+                    documentation = r"""The estimated current Environmental Impact Rating of the property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5195,7 +5313,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5212,12 +5330,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "EnergyRatingType"
                     class_name = "Environmental_Impact_Potential"
-                    documentation = """The estimated potential Environmental Impact Rating of the property"""
+                    documentation = r"""The estimated potential Environmental Impact Rating of the property"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = int
+                    python_type = int
+                    python_type_convertor = lambda x: x if x is None else int(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5233,7 +5352,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5250,12 +5369,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "Energy_Consumption_Current"
-                    documentation = """Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)"""
+                    documentation = r"""Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5271,7 +5391,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5288,12 +5408,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "Energy_Consumption_Potential"
-                    documentation = """Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)"""
+                    documentation = r"""Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5309,7 +5430,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5326,12 +5447,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "CO2_Emissions_Current"
-                    documentation = """CO2 emissions per year in tonnes/year."""
+                    documentation = r"""CO2 emissions per year in tonnes/year."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5347,7 +5469,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5364,12 +5486,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "CO2_Emissions_Current_Per_Floor_Area"
-                    documentation = """CO2 emissions per square metre floor area per year in kg/m2."""
+                    documentation = r"""CO2 emissions per square metre floor area per year in kg/m2."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5385,7 +5508,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5402,12 +5525,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "CO2_Emissions_Potential"
-                    documentation = """Estimated value in Tonnes per Year of the total CO2 emissions produced by the Property in 12 month period."""
+                    documentation = r"""Estimated value in Tonnes per Year of the total CO2 emissions produced by the Property in 12 month period."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5423,7 +5547,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5440,12 +5564,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Lighting_Cost_Current"
-                    documentation = """The current estimated cost of Lighting for the property"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""The current estimated cost of Lighting for the property"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5461,7 +5586,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5478,12 +5603,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Lighting_Cost_Potential"
-                    documentation = """The current estimated cost of Lighting for the property"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""The current estimated cost of Lighting for the property"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5499,7 +5625,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5516,12 +5642,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Heating_Cost_Current"
-                    documentation = """The current estimated cost of Heating for the property"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""The current estimated cost of Heating for the property"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5537,7 +5664,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5554,12 +5681,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Heating_Cost_Potential"
-                    documentation = """The current estimated cost of Heating for the property"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""The current estimated cost of Heating for the property"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5575,7 +5703,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5592,12 +5720,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Hot_Water_Cost_Current"
-                    documentation = """|The current estimated cost of Hot Water for the property"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""|The current estimated cost of Hot Water for the property"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5613,7 +5742,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5630,12 +5759,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Hot_Water_Cost_Potential"
-                    documentation = """|The current estimated cost of Hot Water for the property"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""|The current estimated cost of Hot Water for the property"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Energy_Use"
@@ -5651,7 +5781,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -5668,11 +5798,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "Suggested-Improvements"
                 class_name = "Suggested_Improvements"
-                documentation = """Improvement measures listed on the EPC."""
-                type_documentation = """Part of an Energy Report that describes the a set of improvements that the Home Inspector considers would contribute to the overall energy rating of the property."""
+                documentation = r"""Improvement measures listed on the EPC."""
+                type_documentation = r"""Part of an Energy Report that describes the a set of improvements that the Home Inspector considers would contribute to the overall energy rating of the property."""
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -5701,6 +5832,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -5772,12 +5904,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:integer"
                         class_name = "Sequence"
-                        documentation = """Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced."""
+                        documentation = r"""Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Improvement"
@@ -5793,7 +5926,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -5810,11 +5943,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "RecommendationCategoryCode"
                         class_name = "Improvement_Category"
-                        documentation = """The category of improvement. This identifies where on the report the recommendation is printed."""
+                        documentation = r"""The category of improvement. This identifies where on the report the recommendation is printed."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Lower cost - this is for backwards compatibility only and should not be used', '2': 'Higher cost - this is for backwards compatibility only and should not be used', '3': 'Further measure - this is for backwards compatibility only and should not be used', '4': 'Deselected. This is for backwards compatibility only and should not be used.', '5': 'Normal measure', '6': 'Alternative measure'}
                         map_values = {'Lower cost - this is for backwards compatibility only and should not be used': '1', 'Higher cost - this is for backwards compatibility only and should not be used': '2', 'Further measure - this is for backwards compatibility only and should not be used': '3', 'Deselected. This is for backwards compatibility only and should not be used.': '4', 'Normal measure': '5', 'Alternative measure': '6'}
@@ -5827,7 +5961,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -5855,11 +5989,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-ImprovementMeasureCode"
                         class_name = "Improvement_Type"
-                        documentation = """Suggested work to be carried out on the Property to improve its energy efficiency. This should be a enumerated list of acceptable improvements but it hasn't yet been defined."""
+                        documentation = r"""Suggested work to be carried out on the Property to improve its energy efficiency. This should be a enumerated list of acceptable improvements but it hasn't yet been defined."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'A': 'Loft insulation', 'A2': 'Flat roof insulation', 'A3': 'Room-in-roof insulation', 'B': 'Cavity wall insulation', 'C': 'Hot water cylinder insulation', 'D': 'Draughtproofing', 'E': 'Low energy lights', 'F': 'Cylinder thermostat', 'G': 'Heating controls for wet central heating system', 'H': 'Heating controls for warm air system', 'I': 'Upgrade boiler, same fuel', 'J': 'Biomass boiler', 'J2': 'Biomass boiler as alternative improvement', 'K': 'Biomass room heater with boiler', 'L': 'New or replacement fan-assisted storage heaters', 'L2': 'New or replacement high heat retention storage heaters', 'M': 'Replacement warm-air unit', 'N': 'Solar water heating', 'O': 'Replacement double glazed windows', 'O3': 'Replacement double glazing units', 'P': 'Secondary glazing', 'Q': 'Solid wall insulation', 'Q2': 'External insulation with cavity wall insulation', 'R': 'Condensing oil boiler', 'S': 'Change heating to Band A gas condensing boiler (no fuel switch)', 'T': 'Change heating to Band A gas condensing boiler (fuel switch)', 'T2': 'Flue gas heat recovery', 'U': 'Photovoltaics', 'V': 'Wind turbine (roof mounted)', 'V2': 'Wind turbine (on mast)', 'W': 'Floor insulation', 'X': 'Insulated doors', 'Y': 'Instantaneous waste water heat recovery', 'Y2': 'Storage waste water heat recovery', 'Z1': 'Air or ground source heat pump', 'Z2': 'Air or ground source heat pump with underfloor heating', 'Z3': 'Micro-CHP'}
                         map_values = {'Loft insulation': 'A', 'Flat roof insulation': 'A2', 'Room-in-roof insulation': 'A3', 'Cavity wall insulation': 'B', 'Hot water cylinder insulation': 'C', 'Draughtproofing': 'D', 'Low energy lights': 'E', 'Cylinder thermostat': 'F', 'Heating controls for wet central heating system': 'G', 'Heating controls for warm air system': 'H', 'Upgrade boiler, same fuel': 'I', 'Biomass boiler': 'J', 'Biomass boiler as alternative improvement': 'J2', 'Biomass room heater with boiler': 'K', 'New or replacement fan-assisted storage heaters': 'L', 'New or replacement high heat retention storage heaters': 'L2', 'Replacement warm-air unit': 'M', 'Solar water heating': 'N', 'Replacement double glazed windows': 'O', 'Replacement double glazing units': 'O3', 'Secondary glazing': 'P', 'Solid wall insulation': 'Q', 'External insulation with cavity wall insulation': 'Q2', 'Condensing oil boiler': 'R', 'Change heating to Band A gas condensing boiler (no fuel switch)': 'S', 'Change heating to Band A gas condensing boiler (fuel switch)': 'T', 'Flue gas heat recovery': 'T2', 'Photovoltaics': 'U', 'Wind turbine (roof mounted)': 'V', 'Wind turbine (on mast)': 'V2', 'Floor insulation': 'W', 'Insulated doors': 'X', 'Instantaneous waste water heat recovery': 'Y', 'Storage waste water heat recovery': 'Y2', 'Air or ground source heat pump': 'Z1', 'Air or ground source heat pump with underfloor heating': 'Z2', 'Micro-CHP': 'Z3'}
@@ -5872,7 +6007,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -5900,12 +6035,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Money"
                         class_name = "Typical_Saving"
-                        documentation = """Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed"""
-                        type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                        documentation = r"""Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed"""
+                        type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Improvement"
@@ -5921,7 +6057,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -5938,12 +6074,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyRatingType"
                         class_name = "Energy_Performance_Rating"
-                        documentation = """The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
+                        documentation = r"""The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Improvement"
@@ -5959,7 +6096,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -5976,12 +6113,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyRatingType"
                         class_name = "Environmental_Impact_Rating"
-                        documentation = """The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
+                        documentation = r"""The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Improvement"
@@ -5997,7 +6135,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6019,6 +6157,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -6048,11 +6187,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "ImprovementTexts"
                             class_name = "Improvement_Texts"
-                            documentation = """For backward compatability only"""
+                            documentation = r"""For backward compatability only"""
                             type_documentation = None
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -6088,11 +6228,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Sentence"
                                 class_name = "Improvement_Summary"
-                                documentation = """A short description of the suggested improvement."""
-                                type_documentation = """String value with a language code for natural-language text."""
+                                documentation = r"""A short description of the suggested improvement."""
+                                type_documentation = r"""String value with a language code for natural-language text."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -6122,11 +6263,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Sentence"
                                 class_name = "Improvement_Heading"
-                                documentation = """Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead."""
-                                type_documentation = """String value with a language code for natural-language text."""
+                                documentation = r"""Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead."""
+                                type_documentation = r"""String value with a language code for natural-language text."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -6156,11 +6298,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Sentence"
                                 class_name = "Improvement_Description"
-                                documentation = """Detailed description of the suggested improvement."""
-                                type_documentation = """String value with a language code for natural-language text."""
+                                documentation = r"""Detailed description of the suggested improvement."""
+                                type_documentation = r"""String value with a language code for natural-language text."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -6195,6 +6338,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'Insulate hot water cylinder with 80 mm jacket', '2': 'Increase hot water cylinder insulation', '3': 'Add additional 80 mm jacket to hot water cylinder', '4': 'Hot water cylinder thermostat', '5': 'Increase loft insulation to 270 mm', '6': 'Cavity wall insulation', '7': 'Internal or external wall insulation', '8': 'Replace single glazed windows with low-E double glazing', '9': 'Secondary glazing to single glazed windows', '10': 'Draught proofing', '11': 'Heating controls (programmer, room thermostat and TRVs)', '12': 'Heating controls (room thermostat and TRVs)', '13': 'Heating controls (thermostatic radiator valves)', '14': 'Heating controls (room thermostat)', '15': 'Heating controls (programmer and TRVs)', '16': 'Heating controls (time and temperature zone control)', '17': 'Heating controls (programmer and room thermostat)', '18': 'Heating controls (room thermostat)', '19': 'Solar water heating', '20': 'Replace boiler with new condensing boiler', '21': 'Replace boiler with new condensing boiler', '22': 'Replace boiler with biomass boiler', '23': 'Wood pellet stove with boiler and radiators', '24': 'Fan assisted storage heaters and dual immersion cylinder', '25': 'Fan assisted storage heaters', '26': 'Replacement warm air unit', '27': 'Change heating to gas condensing boiler', '28': 'Condensing oil boiler with radiators', '29': 'Change heating to gas condensing boiler', '30': 'Fan assisted storage heaters and dual immersion cylinder', '31': 'Fan-assisted storage heaters', '32': 'Change heating to gas condensing boiler', '34': 'Solar photovoltaic panels, 2.5 kWp', '35': 'Low energy lighting for all fixed outlets', '36': 'Replace heating unit with condensing unit', '37': 'Condensing boiler (separate from the range cooker)', '38': 'Condensing boiler (separate from the range cooker)', '39': 'Wood pellet stove with boiler and radiators', '40': 'Change room heaters to condensing boiler', '41': 'Change room heaters to condensing boiler', '42': 'Replace heating unit with mains gas condensing unit', '43': 'Condensing oil boiler with radiators', '44': 'Wind turbine', '45': 'Flat roof insulation', '46': 'Room-in-roof insulation', '47': 'Floor insulation', '48': 'High performance external doors', '49': 'Heat recovery system for mixer showers', '50': 'Flue gas heat recovery device in conjunction with boiler', '51': 'Air or ground source heat pump', '52': 'Air or ground source heat pump with underfloor heating', '53': 'Micro CHP', '54': 'Biomass boiler (Exempted Appliance if in Smoke Control Area)', '55': 'External insulation with cavity wall insulation'}
                             map_values = {'Insulate hot water cylinder with 80 mm jacket': '1', 'Increase hot water cylinder insulation': '2', 'Add additional 80 mm jacket to hot water cylinder': '3', 'Hot water cylinder thermostat': '4', 'Increase loft insulation to 270 mm': '5', 'Cavity wall insulation': '6', 'Internal or external wall insulation': '7', 'Replace single glazed windows with low-E double glazing': '8', 'Secondary glazing to single glazed windows': '9', 'Draught proofing': '10', 'Heating controls (programmer, room thermostat and TRVs)': '11', 'Heating controls (room thermostat and TRVs)': '12', 'Heating controls (thermostatic radiator valves)': '13', 'Heating controls (room thermostat)': '18', 'Heating controls (programmer and TRVs)': '15', 'Heating controls (time and temperature zone control)': '16', 'Heating controls (programmer and room thermostat)': '17', 'Solar water heating': '19', 'Replace boiler with new condensing boiler': '21', 'Replace boiler with biomass boiler': '22', 'Wood pellet stove with boiler and radiators': '39', 'Fan assisted storage heaters and dual immersion cylinder': '30', 'Fan assisted storage heaters': '25', 'Replacement warm air unit': '26', 'Change heating to gas condensing boiler': '32', 'Condensing oil boiler with radiators': '43', 'Fan-assisted storage heaters': '31', 'Solar photovoltaic panels, 2.5 kWp': '34', 'Low energy lighting for all fixed outlets': '35', 'Replace heating unit with condensing unit': '36', 'Condensing boiler (separate from the range cooker)': '38', 'Change room heaters to condensing boiler': '41', 'Replace heating unit with mains gas condensing unit': '42', 'Wind turbine': '44', 'Flat roof insulation': '45', 'Room-in-roof insulation': '46', 'Floor insulation': '47', 'High performance external doors': '48', 'Heat recovery system for mixer showers': '49', 'Flue gas heat recovery device in conjunction with boiler': '50', 'Air or ground source heat pump': '51', 'Air or ground source heat pump with underfloor heating': '52', 'Micro CHP': '53', 'Biomass boiler (Exempted Appliance if in Smoke Control Area)': '54', 'External insulation with cavity wall insulation': '55'}
@@ -6207,7 +6351,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def improvement_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6240,6 +6384,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -6274,6 +6419,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': '1. Not eligible for Green Deal', '2': '2. Eligible with additional finance', '3': '3. Eligible without additional finance', 'NI': 'Not assessed. Use for alternative measures and for new dwelling EPCs'}
                         map_values = {'1. Not eligible for Green Deal': '1', '2. Eligible with additional finance': '2', '3. Eligible without additional finance': '3', 'Not assessed. Use for alternative measures and for new dwelling EPCs': 'NI'}
@@ -6286,7 +6432,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6315,10 +6461,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 element_type = "LZC-Energy-Sources"
                 class_name = "LZC_Energy_Sources"
                 documentation = None
-                type_documentation = """Details of low and zero carbon energy source(s) for the property, if any."""
+                type_documentation = r"""Details of low and zero carbon energy source(s) for the property, if any."""
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -6342,11 +6489,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "SAP-LZCEnergySourceCode"
                     class_name = "LZC_Energy_Source"
-                    documentation = """Low and zero carbon energy source(s) for the property."""
+                    documentation = r"""Low and zero carbon energy source(s) for the property."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'Biofuel main heating', '2': 'Biofuel community heating', '3': 'Biofuel community heating for some of heat generation', '4': 'Biofuel secondary heating', '5': 'Geothermal heat source', '6': 'Community combined heat and power', '7': 'Ground source heat pump', '8': 'Water source heat pump', '9': 'Air source heat pump', '10': 'Solar water heating', '11': 'Solar photovoltaics', '12': 'Wind turbine', '13': 'Community heat pump', '14': 'Hydro-electric generation', '15': 'Micro-CHP', '16': 'Exhaust air heat pump', '17': 'Solar-assisted heat pump'}
                     map_values = {'Biofuel main heating': '1', 'Biofuel community heating': '2', 'Biofuel community heating for some of heat generation': '3', 'Biofuel secondary heating': '4', 'Geothermal heat source': '5', 'Community combined heat and power': '6', 'Ground source heat pump': '7', 'Water source heat pump': '8', 'Air source heat pump': '9', 'Solar water heating': '10', 'Solar photovoltaics': '11', 'Wind turbine': '12', 'Community heat pump': '13', 'Hydro-electric generation': '14', 'Micro-CHP': '15', 'Exhaust air heat pump': '16', 'Solar-assisted heat pump': '17'}
@@ -6359,7 +6507,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def lzc_energy_sources(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -6392,6 +6540,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -6426,6 +6575,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -6455,12 +6605,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Space_Heating"
-                        documentation = """Space heating requirement."""
+                        documentation = r"""Space heating requirement."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_New_Dwelling"
@@ -6476,7 +6627,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6493,12 +6644,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Water_Heating"
-                        documentation = """Water heating requirement."""
+                        documentation = r"""Water heating requirement."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_New_Dwelling"
@@ -6514,7 +6666,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6536,6 +6688,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -6601,12 +6754,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Space_Heating_Existing_Dwelling"
-                        documentation = """Space heating requirement for existing dwelling."""
+                        documentation = r"""Space heating requirement for existing dwelling."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_Existing_Dwelling"
@@ -6622,7 +6776,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6639,12 +6793,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Space_Heating_With_Loft_Insulation"
-                        documentation = """Space heating requirement after implementation of loft insulation recommendation, omit if loft insulation not recommended. For backwards compatibility only, do not use"""
+                        documentation = r"""Space heating requirement after implementation of loft insulation recommendation, omit if loft insulation not recommended. For backwards compatibility only, do not use"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_Existing_Dwelling"
@@ -6660,7 +6815,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6677,12 +6832,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Space_Heating_With_Cavity_Insulation"
-                        documentation = """Space heating requirement after implementation of cavity insulation recommendation, omit if cavity insulation not recommended. For backwards compatibility only, do not use"""
+                        documentation = r"""Space heating requirement after implementation of cavity insulation recommendation, omit if cavity insulation not recommended. For backwards compatibility only, do not use"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_Existing_Dwelling"
@@ -6698,7 +6854,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6715,12 +6871,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Space_Heating_With_Loft_And_Cavity_Insulation"
-                        documentation = """Space heating requirement after implementation of loft and cavity insulation recommendations, same as existing dwelling if neither is recommended. For backwards compatibility only, do not use"""
+                        documentation = r"""Space heating requirement after implementation of loft and cavity insulation recommendations, same as existing dwelling if neither is recommended. For backwards compatibility only, do not use"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_Existing_Dwelling"
@@ -6736,7 +6893,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6753,12 +6910,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Water_Heating"
-                        documentation = """Water heating requirement."""
+                        documentation = r"""Water heating requirement."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_Existing_Dwelling"
@@ -6774,7 +6932,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6791,12 +6949,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:nonPositiveInteger"
                         class_name = "Impact_Of_Loft_Insulation"
-                        documentation = """Reduction in space heating requirement with loft insulation (as negative value). Omit if not applicable"""
+                        documentation = r"""Reduction in space heating requirement with loft insulation (as negative value). Omit if not applicable"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_Existing_Dwelling"
@@ -6812,7 +6971,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6829,12 +6988,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:nonPositiveInteger"
                         class_name = "Impact_Of_Cavity_Insulation"
-                        documentation = """Reduction in space heating requirement with cavity insulation (as negative value). Omit if not applicable"""
+                        documentation = r"""Reduction in space heating requirement with cavity insulation (as negative value). Omit if not applicable"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_Existing_Dwelling"
@@ -6850,7 +7010,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6867,12 +7027,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:nonPositiveInteger"
                         class_name = "Impact_Of_Solid_Wall_Insulation"
-                        documentation = """Reduction in space heating requirement with solid wall insulation (as negative value). Omit if not applicable"""
+                        documentation = r"""Reduction in space heating requirement with solid wall insulation (as negative value). Omit if not applicable"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "RHI_Existing_Dwelling"
@@ -6888,7 +7049,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -6905,11 +7066,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "Green-Deal-Package"
                 class_name = "Green_Deal_Package"
-                documentation = """Improvements that can form a Green Deal package"""
+                documentation = r"""Improvements that can form a Green Deal package"""
                 type_documentation = None
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -6951,11 +7113,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Green-Deal-Improvement"
                     class_name = "Green_Deal_Improvement"
-                    documentation = """Improvements from Suggested-Improvements in the Green Deal package"""
+                    documentation = r"""Improvements from Suggested-Improvements in the Green Deal package"""
                     type_documentation = None
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -6990,6 +7153,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'A': 'Loft insulation', 'A2': 'Flat roof insulation', 'A3': 'Room-in-roof insulation', 'B': 'Cavity wall insulation', 'C': 'Hot water cylinder insulation', 'D': 'Draughtproofing', 'E': 'Low energy lights', 'F': 'Cylinder thermostat', 'G': 'Heating controls for wet central heating system', 'H': 'Heating controls for warm air system', 'I': 'Upgrade boiler, same fuel', 'J': 'Biomass boiler', 'J2': 'Biomass boiler as alternative improvement', 'K': 'Biomass room heater with boiler', 'L': 'New or replacement fan-assisted storage heaters', 'L2': 'New or replacement high heat retention storage heaters', 'M': 'Replacement warm-air unit', 'N': 'Solar water heating', 'O': 'Replacement double glazed windows', 'O3': 'Replacement double glazing units', 'P': 'Secondary glazing', 'Q': 'Solid wall insulation', 'Q2': 'External insulation with cavity wall insulation', 'R': 'Condensing oil boiler', 'S': 'Change heating to Band A gas condensing boiler (no fuel switch)', 'T': 'Change heating to Band A gas condensing boiler (fuel switch)', 'T2': 'Flue gas heat recovery', 'U': 'Photovoltaics', 'V': 'Wind turbine (roof mounted)', 'V2': 'Wind turbine (on mast)', 'W': 'Floor insulation', 'X': 'Insulated doors', 'Y': 'Instantaneous waste water heat recovery', 'Y2': 'Storage waste water heat recovery', 'Z1': 'Air or ground source heat pump', 'Z2': 'Air or ground source heat pump with underfloor heating', 'Z3': 'Micro-CHP'}
                         map_values = {'Loft insulation': 'A', 'Flat roof insulation': 'A2', 'Room-in-roof insulation': 'A3', 'Cavity wall insulation': 'B', 'Hot water cylinder insulation': 'C', 'Draughtproofing': 'D', 'Low energy lights': 'E', 'Cylinder thermostat': 'F', 'Heating controls for wet central heating system': 'G', 'Heating controls for warm air system': 'H', 'Upgrade boiler, same fuel': 'I', 'Biomass boiler': 'J', 'Biomass boiler as alternative improvement': 'J2', 'Biomass room heater with boiler': 'K', 'New or replacement fan-assisted storage heaters': 'L', 'New or replacement high heat retention storage heaters': 'L2', 'Replacement warm-air unit': 'M', 'Solar water heating': 'N', 'Replacement double glazed windows': 'O', 'Replacement double glazing units': 'O3', 'Secondary glazing': 'P', 'Solid wall insulation': 'Q', 'External insulation with cavity wall insulation': 'Q2', 'Condensing oil boiler': 'R', 'Change heating to Band A gas condensing boiler (no fuel switch)': 'S', 'Change heating to Band A gas condensing boiler (fuel switch)': 'T', 'Flue gas heat recovery': 'T2', 'Photovoltaics': 'U', 'Wind turbine (roof mounted)': 'V', 'Wind turbine (on mast)': 'V2', 'Floor insulation': 'W', 'Insulated doors': 'X', 'Instantaneous waste water heat recovery': 'Y', 'Storage waste water heat recovery': 'Y2', 'Air or ground source heat pump': 'Z1', 'Air or ground source heat pump with underfloor heating': 'Z2', 'Micro-CHP': 'Z3'}
@@ -7002,7 +7166,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def green_deal_improvement(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7035,6 +7199,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Insulate hot water cylinder with 80 mm jacket', '2': 'Increase hot water cylinder insulation', '3': 'Add additional 80 mm jacket to hot water cylinder', '4': 'Hot water cylinder thermostat', '5': 'Increase loft insulation to 270 mm', '6': 'Cavity wall insulation', '7': 'Internal or external wall insulation', '8': 'Replace single glazed windows with low-E double glazing', '9': 'Secondary glazing to single glazed windows', '10': 'Draught proofing', '11': 'Heating controls (programmer, room thermostat and TRVs)', '12': 'Heating controls (room thermostat and TRVs)', '13': 'Heating controls (thermostatic radiator valves)', '14': 'Heating controls (room thermostat)', '15': 'Heating controls (programmer and TRVs)', '16': 'Heating controls (time and temperature zone control)', '17': 'Heating controls (programmer and room thermostat)', '18': 'Heating controls (room thermostat)', '19': 'Solar water heating', '20': 'Replace boiler with new condensing boiler', '21': 'Replace boiler with new condensing boiler', '22': 'Replace boiler with biomass boiler', '23': 'Wood pellet stove with boiler and radiators', '24': 'Fan assisted storage heaters and dual immersion cylinder', '25': 'Fan assisted storage heaters', '26': 'Replacement warm air unit', '27': 'Change heating to gas condensing boiler', '28': 'Condensing oil boiler with radiators', '29': 'Change heating to gas condensing boiler', '30': 'Fan assisted storage heaters and dual immersion cylinder', '31': 'Fan-assisted storage heaters', '32': 'Change heating to gas condensing boiler', '34': 'Solar photovoltaic panels, 2.5 kWp', '35': 'Low energy lighting for all fixed outlets', '36': 'Replace heating unit with condensing unit', '37': 'Condensing boiler (separate from the range cooker)', '38': 'Condensing boiler (separate from the range cooker)', '39': 'Wood pellet stove with boiler and radiators', '40': 'Change room heaters to condensing boiler', '41': 'Change room heaters to condensing boiler', '42': 'Replace heating unit with mains gas condensing unit', '43': 'Condensing oil boiler with radiators', '44': 'Wind turbine', '45': 'Flat roof insulation', '46': 'Room-in-roof insulation', '47': 'Floor insulation', '48': 'High performance external doors', '49': 'Heat recovery system for mixer showers', '50': 'Flue gas heat recovery device in conjunction with boiler', '51': 'Air or ground source heat pump', '52': 'Air or ground source heat pump with underfloor heating', '53': 'Micro CHP', '54': 'Biomass boiler (Exempted Appliance if in Smoke Control Area)', '55': 'External insulation with cavity wall insulation'}
                         map_values = {'Insulate hot water cylinder with 80 mm jacket': '1', 'Increase hot water cylinder insulation': '2', 'Add additional 80 mm jacket to hot water cylinder': '3', 'Hot water cylinder thermostat': '4', 'Increase loft insulation to 270 mm': '5', 'Cavity wall insulation': '6', 'Internal or external wall insulation': '7', 'Replace single glazed windows with low-E double glazing': '8', 'Secondary glazing to single glazed windows': '9', 'Draught proofing': '10', 'Heating controls (programmer, room thermostat and TRVs)': '11', 'Heating controls (room thermostat and TRVs)': '12', 'Heating controls (thermostatic radiator valves)': '13', 'Heating controls (room thermostat)': '18', 'Heating controls (programmer and TRVs)': '15', 'Heating controls (time and temperature zone control)': '16', 'Heating controls (programmer and room thermostat)': '17', 'Solar water heating': '19', 'Replace boiler with new condensing boiler': '21', 'Replace boiler with biomass boiler': '22', 'Wood pellet stove with boiler and radiators': '39', 'Fan assisted storage heaters and dual immersion cylinder': '30', 'Fan assisted storage heaters': '25', 'Replacement warm air unit': '26', 'Change heating to gas condensing boiler': '32', 'Condensing oil boiler with radiators': '43', 'Fan-assisted storage heaters': '31', 'Solar photovoltaic panels, 2.5 kWp': '34', 'Low energy lighting for all fixed outlets': '35', 'Replace heating unit with condensing unit': '36', 'Condensing boiler (separate from the range cooker)': '38', 'Change room heaters to condensing boiler': '41', 'Replace heating unit with mains gas condensing unit': '42', 'Wind turbine': '44', 'Flat roof insulation': '45', 'Room-in-roof insulation': '46', 'Floor insulation': '47', 'High performance external doors': '48', 'Heat recovery system for mixer showers': '49', 'Flue gas heat recovery device in conjunction with boiler': '50', 'Air or ground source heat pump': '51', 'Air or ground source heat pump with underfloor heating': '52', 'Micro CHP': '53', 'Biomass boiler (Exempted Appliance if in Smoke Control Area)': '54', 'External insulation with cavity wall insulation': '55'}
@@ -7047,7 +7212,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def green_deal_improvement(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7075,12 +7240,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Electricity_Saving"
-                    documentation = """Total electricity saving for the package"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""Total electricity saving for the package"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Green_Deal_Package"
@@ -7096,7 +7262,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -7113,12 +7279,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Gas_Saving"
-                    documentation = """Total gas saving for the package"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""Total gas saving for the package"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Green_Deal_Package"
@@ -7134,7 +7301,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -7151,12 +7318,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Money"
                     class_name = "Other_Fuel_Saving"
-                    documentation = """Total other saving for the package"""
-                    type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                    documentation = r"""Total other saving for the package"""
+                    type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "Green_Deal_Package"
@@ -7172,7 +7340,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -7189,11 +7357,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "Suggested-Improvements"
                 class_name = "Alternative_Improvements"
-                documentation = """Alternative improvements to some of those given in Suggested-Improvements"""
-                type_documentation = """Part of an Energy Report that describes the a set of improvements that the Home Inspector considers would contribute to the overall energy rating of the property."""
+                documentation = r"""Alternative improvements to some of those given in Suggested-Improvements"""
+                type_documentation = r"""Part of an Energy Report that describes the a set of improvements that the Home Inspector considers would contribute to the overall energy rating of the property."""
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -7222,6 +7391,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = "unbounded"
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -7293,12 +7463,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:integer"
                         class_name = "Sequence"
-                        documentation = """Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced."""
+                        documentation = r"""Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Improvement"
@@ -7314,7 +7485,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -7331,11 +7502,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "RecommendationCategoryCode"
                         class_name = "Improvement_Category"
-                        documentation = """The category of improvement. This identifies where on the report the recommendation is printed."""
+                        documentation = r"""The category of improvement. This identifies where on the report the recommendation is printed."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Lower cost - this is for backwards compatibility only and should not be used', '2': 'Higher cost - this is for backwards compatibility only and should not be used', '3': 'Further measure - this is for backwards compatibility only and should not be used', '4': 'Deselected. This is for backwards compatibility only and should not be used.', '5': 'Normal measure', '6': 'Alternative measure'}
                         map_values = {'Lower cost - this is for backwards compatibility only and should not be used': '1', 'Higher cost - this is for backwards compatibility only and should not be used': '2', 'Further measure - this is for backwards compatibility only and should not be used': '3', 'Deselected. This is for backwards compatibility only and should not be used.': '4', 'Normal measure': '5', 'Alternative measure': '6'}
@@ -7348,7 +7520,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7376,11 +7548,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-ImprovementMeasureCode"
                         class_name = "Improvement_Type"
-                        documentation = """Suggested work to be carried out on the Property to improve its energy efficiency. This should be a enumerated list of acceptable improvements but it hasn't yet been defined."""
+                        documentation = r"""Suggested work to be carried out on the Property to improve its energy efficiency. This should be a enumerated list of acceptable improvements but it hasn't yet been defined."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'A': 'Loft insulation', 'A2': 'Flat roof insulation', 'A3': 'Room-in-roof insulation', 'B': 'Cavity wall insulation', 'C': 'Hot water cylinder insulation', 'D': 'Draughtproofing', 'E': 'Low energy lights', 'F': 'Cylinder thermostat', 'G': 'Heating controls for wet central heating system', 'H': 'Heating controls for warm air system', 'I': 'Upgrade boiler, same fuel', 'J': 'Biomass boiler', 'J2': 'Biomass boiler as alternative improvement', 'K': 'Biomass room heater with boiler', 'L': 'New or replacement fan-assisted storage heaters', 'L2': 'New or replacement high heat retention storage heaters', 'M': 'Replacement warm-air unit', 'N': 'Solar water heating', 'O': 'Replacement double glazed windows', 'O3': 'Replacement double glazing units', 'P': 'Secondary glazing', 'Q': 'Solid wall insulation', 'Q2': 'External insulation with cavity wall insulation', 'R': 'Condensing oil boiler', 'S': 'Change heating to Band A gas condensing boiler (no fuel switch)', 'T': 'Change heating to Band A gas condensing boiler (fuel switch)', 'T2': 'Flue gas heat recovery', 'U': 'Photovoltaics', 'V': 'Wind turbine (roof mounted)', 'V2': 'Wind turbine (on mast)', 'W': 'Floor insulation', 'X': 'Insulated doors', 'Y': 'Instantaneous waste water heat recovery', 'Y2': 'Storage waste water heat recovery', 'Z1': 'Air or ground source heat pump', 'Z2': 'Air or ground source heat pump with underfloor heating', 'Z3': 'Micro-CHP'}
                         map_values = {'Loft insulation': 'A', 'Flat roof insulation': 'A2', 'Room-in-roof insulation': 'A3', 'Cavity wall insulation': 'B', 'Hot water cylinder insulation': 'C', 'Draughtproofing': 'D', 'Low energy lights': 'E', 'Cylinder thermostat': 'F', 'Heating controls for wet central heating system': 'G', 'Heating controls for warm air system': 'H', 'Upgrade boiler, same fuel': 'I', 'Biomass boiler': 'J', 'Biomass boiler as alternative improvement': 'J2', 'Biomass room heater with boiler': 'K', 'New or replacement fan-assisted storage heaters': 'L', 'New or replacement high heat retention storage heaters': 'L2', 'Replacement warm-air unit': 'M', 'Solar water heating': 'N', 'Replacement double glazed windows': 'O', 'Replacement double glazing units': 'O3', 'Secondary glazing': 'P', 'Solid wall insulation': 'Q', 'External insulation with cavity wall insulation': 'Q2', 'Condensing oil boiler': 'R', 'Change heating to Band A gas condensing boiler (no fuel switch)': 'S', 'Change heating to Band A gas condensing boiler (fuel switch)': 'T', 'Flue gas heat recovery': 'T2', 'Photovoltaics': 'U', 'Wind turbine (roof mounted)': 'V', 'Wind turbine (on mast)': 'V2', 'Floor insulation': 'W', 'Insulated doors': 'X', 'Instantaneous waste water heat recovery': 'Y', 'Storage waste water heat recovery': 'Y2', 'Air or ground source heat pump': 'Z1', 'Air or ground source heat pump with underfloor heating': 'Z2', 'Micro-CHP': 'Z3'}
@@ -7393,7 +7566,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7421,12 +7594,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Money"
                         class_name = "Typical_Saving"
-                        documentation = """Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed"""
-                        type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                        documentation = r"""Typical savings (in British Pounds) per year if the suggested improvement is carried out. 0 if not assessed"""
+                        type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Improvement"
@@ -7442,7 +7616,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -7459,12 +7633,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyRatingType"
                         class_name = "Energy_Performance_Rating"
-                        documentation = """The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
+                        documentation = r"""The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Improvement"
@@ -7480,7 +7655,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -7497,12 +7672,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "EnergyRatingType"
                         class_name = "Environmental_Impact_Rating"
-                        documentation = """The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
+                        documentation = r"""The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "Improvement"
@@ -7518,7 +7694,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -7540,6 +7716,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -7569,11 +7746,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "ImprovementTexts"
                             class_name = "Improvement_Texts"
-                            documentation = """For backward compatability only"""
+                            documentation = r"""For backward compatability only"""
                             type_documentation = None
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -7609,11 +7787,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Sentence"
                                 class_name = "Improvement_Summary"
-                                documentation = """A short description of the suggested improvement."""
-                                type_documentation = """String value with a language code for natural-language text."""
+                                documentation = r"""A short description of the suggested improvement."""
+                                type_documentation = r"""String value with a language code for natural-language text."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -7643,11 +7822,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Sentence"
                                 class_name = "Improvement_Heading"
-                                documentation = """Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead."""
-                                type_documentation = """String value with a language code for natural-language text."""
+                                documentation = r"""Text to precede the improvement description. If this field is not provided the 'Improvement-Summary' is used instead."""
+                                type_documentation = r"""String value with a language code for natural-language text."""
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -7677,11 +7857,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Sentence"
                                 class_name = "Improvement_Description"
-                                documentation = """Detailed description of the suggested improvement."""
-                                type_documentation = """String value with a language code for natural-language text."""
+                                documentation = r"""Detailed description of the suggested improvement."""
+                                type_documentation = r"""String value with a language code for natural-language text."""
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -7716,6 +7897,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'Insulate hot water cylinder with 80 mm jacket', '2': 'Increase hot water cylinder insulation', '3': 'Add additional 80 mm jacket to hot water cylinder', '4': 'Hot water cylinder thermostat', '5': 'Increase loft insulation to 270 mm', '6': 'Cavity wall insulation', '7': 'Internal or external wall insulation', '8': 'Replace single glazed windows with low-E double glazing', '9': 'Secondary glazing to single glazed windows', '10': 'Draught proofing', '11': 'Heating controls (programmer, room thermostat and TRVs)', '12': 'Heating controls (room thermostat and TRVs)', '13': 'Heating controls (thermostatic radiator valves)', '14': 'Heating controls (room thermostat)', '15': 'Heating controls (programmer and TRVs)', '16': 'Heating controls (time and temperature zone control)', '17': 'Heating controls (programmer and room thermostat)', '18': 'Heating controls (room thermostat)', '19': 'Solar water heating', '20': 'Replace boiler with new condensing boiler', '21': 'Replace boiler with new condensing boiler', '22': 'Replace boiler with biomass boiler', '23': 'Wood pellet stove with boiler and radiators', '24': 'Fan assisted storage heaters and dual immersion cylinder', '25': 'Fan assisted storage heaters', '26': 'Replacement warm air unit', '27': 'Change heating to gas condensing boiler', '28': 'Condensing oil boiler with radiators', '29': 'Change heating to gas condensing boiler', '30': 'Fan assisted storage heaters and dual immersion cylinder', '31': 'Fan-assisted storage heaters', '32': 'Change heating to gas condensing boiler', '34': 'Solar photovoltaic panels, 2.5 kWp', '35': 'Low energy lighting for all fixed outlets', '36': 'Replace heating unit with condensing unit', '37': 'Condensing boiler (separate from the range cooker)', '38': 'Condensing boiler (separate from the range cooker)', '39': 'Wood pellet stove with boiler and radiators', '40': 'Change room heaters to condensing boiler', '41': 'Change room heaters to condensing boiler', '42': 'Replace heating unit with mains gas condensing unit', '43': 'Condensing oil boiler with radiators', '44': 'Wind turbine', '45': 'Flat roof insulation', '46': 'Room-in-roof insulation', '47': 'Floor insulation', '48': 'High performance external doors', '49': 'Heat recovery system for mixer showers', '50': 'Flue gas heat recovery device in conjunction with boiler', '51': 'Air or ground source heat pump', '52': 'Air or ground source heat pump with underfloor heating', '53': 'Micro CHP', '54': 'Biomass boiler (Exempted Appliance if in Smoke Control Area)', '55': 'External insulation with cavity wall insulation'}
                             map_values = {'Insulate hot water cylinder with 80 mm jacket': '1', 'Increase hot water cylinder insulation': '2', 'Add additional 80 mm jacket to hot water cylinder': '3', 'Hot water cylinder thermostat': '4', 'Increase loft insulation to 270 mm': '5', 'Cavity wall insulation': '6', 'Internal or external wall insulation': '7', 'Replace single glazed windows with low-E double glazing': '8', 'Secondary glazing to single glazed windows': '9', 'Draught proofing': '10', 'Heating controls (programmer, room thermostat and TRVs)': '11', 'Heating controls (room thermostat and TRVs)': '12', 'Heating controls (thermostatic radiator valves)': '13', 'Heating controls (room thermostat)': '18', 'Heating controls (programmer and TRVs)': '15', 'Heating controls (time and temperature zone control)': '16', 'Heating controls (programmer and room thermostat)': '17', 'Solar water heating': '19', 'Replace boiler with new condensing boiler': '21', 'Replace boiler with biomass boiler': '22', 'Wood pellet stove with boiler and radiators': '39', 'Fan assisted storage heaters and dual immersion cylinder': '30', 'Fan assisted storage heaters': '25', 'Replacement warm air unit': '26', 'Change heating to gas condensing boiler': '32', 'Condensing oil boiler with radiators': '43', 'Fan-assisted storage heaters': '31', 'Solar photovoltaic panels, 2.5 kWp': '34', 'Low energy lighting for all fixed outlets': '35', 'Replace heating unit with condensing unit': '36', 'Condensing boiler (separate from the range cooker)': '38', 'Change room heaters to condensing boiler': '41', 'Replace heating unit with mains gas condensing unit': '42', 'Wind turbine': '44', 'Flat roof insulation': '45', 'Room-in-roof insulation': '46', 'Floor insulation': '47', 'High performance external doors': '48', 'Heat recovery system for mixer showers': '49', 'Flue gas heat recovery device in conjunction with boiler': '50', 'Air or ground source heat pump': '51', 'Air or ground source heat pump with underfloor heating': '52', 'Micro CHP': '53', 'Biomass boiler (Exempted Appliance if in Smoke Control Area)': '54', 'External insulation with cavity wall insulation': '55'}
@@ -7728,7 +7910,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def improvement_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7761,6 +7943,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -7795,6 +7978,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': '1. Not eligible for Green Deal', '2': '2. Eligible with additional finance', '3': '3. Eligible without additional finance', 'NI': 'Not assessed. Use for alternative measures and for new dwelling EPCs'}
                         map_values = {'1. Not eligible for Green Deal': '1', '2. Eligible with additional finance': '2', '3. Eligible without additional finance': '3', 'Not assessed. Use for alternative measures and for new dwelling EPCs': 'NI'}
@@ -7807,7 +7991,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def improvement(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7840,6 +8024,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 has_text_node = False
                 min_occurs = 0
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -7893,11 +8078,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Cavity_Fill_Recommended"
-                    documentation = """Cavity fill is recommended"""
+                    documentation = r"""Cavity fill is recommended"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -7910,7 +8096,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7938,11 +8124,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Stone_Walls"
-                    documentation = """Stone walls present, not insulated"""
+                    documentation = r"""Stone walls present, not insulated"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -7955,7 +8142,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -7983,11 +8170,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "System_Build"
-                    documentation = """System build present"""
+                    documentation = r"""System build present"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -8000,7 +8188,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8028,11 +8216,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Access_Issues"
-                    documentation = """Dwelling has access issues for cavity wall insulation. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present"""
+                    documentation = r"""Dwelling has access issues for cavity wall insulation. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -8045,7 +8234,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8073,11 +8262,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "High_Exposure"
-                    documentation = """Dwelling may be exposed to wind-driven rain. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present"""
+                    documentation = r"""Dwelling may be exposed to wind-driven rain. Include only when at least one of Cavity-Fill-Recommended, Stone-Walls, System-Build is also present"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -8090,7 +8280,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8118,11 +8308,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Narrow_Cavities"
-                    documentation = """Dwelling may have narrow cavities. Include only when Cavity-Fill-Recommended is also present"""
+                    documentation = r"""Dwelling may have narrow cavities. Include only when Cavity-Fill-Recommended is also present"""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -8135,7 +8326,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def addendum(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8164,10 +8355,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             element_type = "SAP10-Data"
             class_name = "SAP10_Data"
             documentation = None
-            type_documentation = """These are the specific data-items collected by the HI / EA needed to perform the SAP calculation."""
+            type_documentation = r"""These are the specific data-items collected by the HI / EA needed to perform the SAP calculation."""
             has_text_node = False
             min_occurs = 1
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -8197,11 +8389,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "SAP-DataTypeCode"
                 class_name = "Data_Type"
-                documentation = """Type of SAP data that has been collected."""
+                documentation = r"""Type of SAP data that has been collected."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = {'1': 'new dwelling as designed', '2': 'new dwelling as built', '3': 'new extension to existing dwelling', '4': 'new dwelling created by change of use', '5': 'existing dwelling', '6': 'other'}
                 map_values = {'new dwelling as designed': '1', 'new dwelling as built': '2', 'new extension to existing dwelling': '3', 'new dwelling created by change of use': '4', 'existing dwelling': '5', 'other': '6'}
@@ -8214,7 +8407,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 def sap10_data(self): return self.getparent()
             
                 @property
-                def value(self):
+                def value(self): 
                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                     else:
                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8243,10 +8436,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 element_type = "SAP-Property-Details"
                 class_name = "SAP_Property_Details"
                 documentation = None
-                type_documentation = """Various measurements a particular Property."""
+                type_documentation = r"""Various measurements a particular Property."""
                 has_text_node = False
                 min_occurs = 1
                 max_occurs = 1
+                python_type = None
                 python_type_convertor = None
                 map_codes = None
                 map_values = None
@@ -8480,11 +8674,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "PropertyTypeCode"
                     class_name = "Property_Type"
-                    documentation = """The type of Property, such as House, Flat, Mansion, Maisonette etc."""
+                    documentation = r"""The type of Property, such as House, Flat, Mansion, Maisonette etc."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'House', '1': 'Bungalow', '2': 'Flat', '3': 'Maisonette', '4': 'Park home'}
                     map_values = {'House': '0', 'Bungalow': '1', 'Flat': '2', 'Maisonette': '3', 'Park home': '4'}
@@ -8497,7 +8692,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8525,11 +8720,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "SAP-BuiltFormCode"
                     class_name = "Built_Form"
-                    documentation = """The building type of the Property e.g. Detached, Semi-Detached, Terrace etc. Together with the Property Type, the Built Form provides a structured description of the property."""
+                    documentation = r"""The building type of the Property e.g. Detached, Semi-Detached, Terrace etc. Together with the Property Type, the Built Form provides a structured description of the property."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'Detached', '2': 'Semi-Detached', '3': 'End-Terrace', '4': 'Mid-Terrace', '5': 'Enclosed End-Terrace', '6': 'Enclosed Mid-Terrace'}
                     map_values = {'Detached': '1', 'Semi-Detached': '2', 'End-Terrace': '3', 'Mid-Terrace': '4', 'Enclosed End-Terrace': '5', 'Enclosed Mid-Terrace': '6'}
@@ -8542,7 +8738,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8570,12 +8766,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "Living_Area"
-                    documentation = """The size of the living area in square metres. The living area is the room marked on a plan as the lounge or living room, or the largest public room (irrespective of usage by particular occupants), together with any rooms not separated from the lounge or living room by doors, and including any cupboards directly accessed from the lounge or living room. Living area does not, however, extend over more than one storey, even when stairs enter the living area directly."""
+                    documentation = r"""The size of the living area in square metres. The living area is the room marked on a plan as the lounge or living room, or the largest public room (irrespective of usage by particular occupants), together with any rooms not separated from the lounge or living room by doors, and including any cupboards directly accessed from the lounge or living room. Living area does not, however, extend over more than one storey, even when stairs enter the living area directly."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Property_Details"
@@ -8591,7 +8788,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8608,12 +8805,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "Lowest_Storey_Area"
-                    documentation = """The Area of the lowest storey in square meters including unheated or communal areas such as garages or corridors."""
+                    documentation = r"""The Area of the lowest storey in square meters including unheated or communal areas such as garages or corridors."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Property_Details"
@@ -8629,7 +8827,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8646,11 +8844,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "SAP-OrientationCode"
                     class_name = "Orientation"
-                    documentation = """The orientation of the front of the property."""
+                    documentation = r"""The orientation of the front of the property."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'unknown or unspecified', '1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', '9': 'Horizontal (windows and roof windows only)'}
                     map_values = {'unknown or unspecified': '0', 'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'Horizontal (windows and roof windows only)': '9'}
@@ -8663,7 +8862,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8691,11 +8890,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "SAP-ConservatoryTypeCode"
                     class_name = "Conservatory_Type"
-                    documentation = """Type of conservatory."""
+                    documentation = r"""Type of conservatory."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'no conservatory', '2': 'separated unheated conservatory', '3': 'separated heated conservatory', '4': 'not separated'}
                     map_values = {'no conservatory': '1', 'separated unheated conservatory': '2', 'separated heated conservatory': '3', 'not separated': '4'}
@@ -8708,7 +8908,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8736,11 +8936,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "SAP-TerrainTypeCode"
                     class_name = "Terrain_Type"
-                    documentation = """Terrain type. Needed for wind-turbines and for applying measures."""
+                    documentation = r"""Terrain type. Needed for wind-turbines and for applying measures."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'urban', '2': 'suburban', '3': 'rural'}
                     map_values = {'urban': '1', 'suburban': '2', 'rural': '3'}
@@ -8753,7 +8954,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8781,11 +8982,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Has_Special_Feature"
-                    documentation = """For backwards compatibility only, do not use."""
+                    documentation = r"""For backwards compatibility only, do not use."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -8798,7 +9000,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8826,11 +9028,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Sentence"
                     class_name = "Special_Feature_Description"
-                    documentation = """For backwards compatibility only, do not use."""
-                    type_documentation = """String value with a language code for natural-language text."""
+                    documentation = r"""For backwards compatibility only, do not use."""
+                    type_documentation = r"""String value with a language code for natural-language text."""
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = None
                     map_values = None
@@ -8860,12 +9063,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "Energy_Saved_Or_Generated"
-                    documentation = """For backwards compatibility only, do not use."""
+                    documentation = r"""For backwards compatibility only, do not use."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Property_Details"
@@ -8881,7 +9085,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8898,11 +9102,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "HeatingFuelTypeCode"
                     class_name = "Saved_Or_Generated_Fuel"
-                    documentation = """For backwards compatibility only, do not use."""
+                    documentation = r"""For backwards compatibility only, do not use."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'Gas: mains gas', '2': 'Gas: bulk LPG', '3': 'Gas: bottled LPG', '4': 'Oil: heating oil', '7': 'Gas: biogas', '8': 'LNG', '9': 'LPG subject to Special Condition 18', '10': 'Solid fuel: dual fuel appliance (mineral and wood)', '11': 'Solid fuel: house coal', '12': 'Solid fuel: manufactured smokeless fuel', '15': 'Solid fuel: anthracite', '20': 'Solid fuel: wood logs', '21': 'Solid fuel: wood chips', '22': 'Solid fuel: wood pellets (in bags, for secondary heating)', '23': 'Solid fuel: wood pellets (bulk supply in bags, for main heating)', '36': 'Electricity: electricity sold to grid', '37': 'Electricity: electricity displaced from grid', '39': 'Electricity: electricity, unspecified tariff', '41': 'Community heating schemes: heat from electric heat pump', '42': 'Community heating schemes: heat from boilers - waste combustion', '43': 'Community heating schemes: heat from boilers - biomass', '44': 'Community heating schemes: heat from boilers - biogas', '45': 'Community heating schemes: waste heat from power stations', '46': 'Community heating schemes: geothermal heat source', '47': 'Community heating schemes: high grade heat recovered from process', '48': 'Community heating schemes: heat from CHP', '49': 'Community heating schemes: low grade heat recovered from process', '50': 'Community heating schemes: electricity for pumping in distribution network', '51': 'Community heating schemes: heat from mains gas', '52': 'Community heating schemes: heat from LPG', '53': 'Community heating schemes: heat from oil', '54': 'Community heating schemes: heat from coal', '55': 'Community heating schemes: heat from B30D', '56': 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel', '57': 'Community heating schemes: heat from boilers using biodiesel from any biomass source', '58': 'Community heating schemes: biodiesel from vegetable oil only', '71': 'biodiesel from any biomass source', '72': 'biodiesel from used cooking oil only', '73': 'biodiesel from vegetable oil only', '74': 'appliances able to use mineral oil or liquid biofuel', '75': 'B30K', '76': 'bioethanol from any biomass source', '99': 'Fuel data from pcdb'}
                     map_values = {'Gas: mains gas': '1', 'Gas: bulk LPG': '2', 'Gas: bottled LPG': '3', 'Oil: heating oil': '4', 'Gas: biogas': '7', 'LNG': '8', 'LPG subject to Special Condition 18': '9', 'Solid fuel: dual fuel appliance (mineral and wood)': '10', 'Solid fuel: house coal': '11', 'Solid fuel: manufactured smokeless fuel': '12', 'Solid fuel: anthracite': '15', 'Solid fuel: wood logs': '20', 'Solid fuel: wood chips': '21', 'Solid fuel: wood pellets (in bags, for secondary heating)': '22', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)': '23', 'Electricity: electricity sold to grid': '36', 'Electricity: electricity displaced from grid': '37', 'Electricity: electricity, unspecified tariff': '39', 'Community heating schemes: heat from electric heat pump': '41', 'Community heating schemes: heat from boilers - waste combustion': '42', 'Community heating schemes: heat from boilers - biomass': '43', 'Community heating schemes: heat from boilers - biogas': '44', 'Community heating schemes: waste heat from power stations': '45', 'Community heating schemes: geothermal heat source': '46', 'Community heating schemes: high grade heat recovered from process': '47', 'Community heating schemes: heat from CHP': '48', 'Community heating schemes: low grade heat recovered from process': '49', 'Community heating schemes: electricity for pumping in distribution network': '50', 'Community heating schemes: heat from mains gas': '51', 'Community heating schemes: heat from LPG': '52', 'Community heating schemes: heat from oil': '53', 'Community heating schemes: heat from coal': '54', 'Community heating schemes: heat from B30D': '55', 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel': '56', 'Community heating schemes: heat from boilers using biodiesel from any biomass source': '57', 'Community heating schemes: biodiesel from vegetable oil only': '58', 'biodiesel from any biomass source': '71', 'biodiesel from used cooking oil only': '72', 'biodiesel from vegetable oil only': '73', 'appliances able to use mineral oil or liquid biofuel': '74', 'B30K': '75', 'bioethanol from any biomass source': '76', 'Fuel data from pcdb': '99'}
@@ -8915,7 +9120,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -8943,12 +9148,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "Energy_Used"
-                    documentation = """For backwards compatibility only, do not use."""
+                    documentation = r"""For backwards compatibility only, do not use."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Property_Details"
@@ -8964,7 +9170,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -8981,11 +9187,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "HeatingFuelTypeCode"
                     class_name = "Energy_Used_Fuel"
-                    documentation = """For backwards compatibility only, do not use."""
+                    documentation = r"""For backwards compatibility only, do not use."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'Gas: mains gas', '2': 'Gas: bulk LPG', '3': 'Gas: bottled LPG', '4': 'Oil: heating oil', '7': 'Gas: biogas', '8': 'LNG', '9': 'LPG subject to Special Condition 18', '10': 'Solid fuel: dual fuel appliance (mineral and wood)', '11': 'Solid fuel: house coal', '12': 'Solid fuel: manufactured smokeless fuel', '15': 'Solid fuel: anthracite', '20': 'Solid fuel: wood logs', '21': 'Solid fuel: wood chips', '22': 'Solid fuel: wood pellets (in bags, for secondary heating)', '23': 'Solid fuel: wood pellets (bulk supply in bags, for main heating)', '36': 'Electricity: electricity sold to grid', '37': 'Electricity: electricity displaced from grid', '39': 'Electricity: electricity, unspecified tariff', '41': 'Community heating schemes: heat from electric heat pump', '42': 'Community heating schemes: heat from boilers - waste combustion', '43': 'Community heating schemes: heat from boilers - biomass', '44': 'Community heating schemes: heat from boilers - biogas', '45': 'Community heating schemes: waste heat from power stations', '46': 'Community heating schemes: geothermal heat source', '47': 'Community heating schemes: high grade heat recovered from process', '48': 'Community heating schemes: heat from CHP', '49': 'Community heating schemes: low grade heat recovered from process', '50': 'Community heating schemes: electricity for pumping in distribution network', '51': 'Community heating schemes: heat from mains gas', '52': 'Community heating schemes: heat from LPG', '53': 'Community heating schemes: heat from oil', '54': 'Community heating schemes: heat from coal', '55': 'Community heating schemes: heat from B30D', '56': 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel', '57': 'Community heating schemes: heat from boilers using biodiesel from any biomass source', '58': 'Community heating schemes: biodiesel from vegetable oil only', '71': 'biodiesel from any biomass source', '72': 'biodiesel from used cooking oil only', '73': 'biodiesel from vegetable oil only', '74': 'appliances able to use mineral oil or liquid biofuel', '75': 'B30K', '76': 'bioethanol from any biomass source', '99': 'Fuel data from pcdb'}
                     map_values = {'Gas: mains gas': '1', 'Gas: bulk LPG': '2', 'Gas: bottled LPG': '3', 'Oil: heating oil': '4', 'Gas: biogas': '7', 'LNG': '8', 'LPG subject to Special Condition 18': '9', 'Solid fuel: dual fuel appliance (mineral and wood)': '10', 'Solid fuel: house coal': '11', 'Solid fuel: manufactured smokeless fuel': '12', 'Solid fuel: anthracite': '15', 'Solid fuel: wood logs': '20', 'Solid fuel: wood chips': '21', 'Solid fuel: wood pellets (in bags, for secondary heating)': '22', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)': '23', 'Electricity: electricity sold to grid': '36', 'Electricity: electricity displaced from grid': '37', 'Electricity: electricity, unspecified tariff': '39', 'Community heating schemes: heat from electric heat pump': '41', 'Community heating schemes: heat from boilers - waste combustion': '42', 'Community heating schemes: heat from boilers - biomass': '43', 'Community heating schemes: heat from boilers - biogas': '44', 'Community heating schemes: waste heat from power stations': '45', 'Community heating schemes: geothermal heat source': '46', 'Community heating schemes: high grade heat recovered from process': '47', 'Community heating schemes: heat from CHP': '48', 'Community heating schemes: low grade heat recovered from process': '49', 'Community heating schemes: electricity for pumping in distribution network': '50', 'Community heating schemes: heat from mains gas': '51', 'Community heating schemes: heat from LPG': '52', 'Community heating schemes: heat from oil': '53', 'Community heating schemes: heat from coal': '54', 'Community heating schemes: heat from B30D': '55', 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel': '56', 'Community heating schemes: heat from boilers using biodiesel from any biomass source': '57', 'Community heating schemes: biodiesel from vegetable oil only': '58', 'biodiesel from any biomass source': '71', 'biodiesel from used cooking oil only': '72', 'biodiesel from vegetable oil only': '73', 'appliances able to use mineral oil or liquid biofuel': '74', 'B30K': '75', 'bioethanol from any biomass source': '76', 'Fuel data from pcdb': '99'}
@@ -8998,7 +9205,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9026,11 +9233,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "ExtendedBoolean"
                     class_name = "Is_In_Smoke_Control_Area"
-                    documentation = """Is property in a smoke control area? Only if a solid fuel appliance is used."""
+                    documentation = r"""Is property in a smoke control area? Only if a solid fuel appliance is used."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'false': '', 'true': '', 'unknown': ''}
                     map_values = {'': 'unknown'}
@@ -9043,7 +9251,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9071,11 +9279,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "ColdWaterSourceCode"
                     class_name = "Cold_Water_Source"
-                    documentation = """What is the cold water source? Either mains or header tank."""
+                    documentation = r"""What is the cold water source? Either mains or header tank."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'mains', '2': 'header tank'}
                     map_values = {'mains': '1', 'header tank': '2'}
@@ -9088,7 +9297,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9116,11 +9325,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "SAP-WindowOvershadingCode"
                     class_name = "Windows_Overshading"
-                    documentation = """Average amount of overshading of windows."""
+                    documentation = r"""Average amount of overshading of windows."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': 'very little', '2': 'average or unknown', '3': 'more than average', '4': 'heavy'}
                     map_values = {'very little': '1', 'average or unknown': '2', 'more than average': '3', 'heavy': '4'}
@@ -9133,7 +9343,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9161,12 +9371,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "Thermal_Mass_Parameter"
-                    documentation = """Average thermal mass parameter for the dwelling in kJ/m2K. If omitted it is calculated using the kappa values of each element."""
+                    documentation = r"""Average thermal mass parameter for the dwelling in kJ/m2K. If omitted it is calculated using the kappa values of each element."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Property_Details"
@@ -9182,7 +9393,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -9199,12 +9410,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "Measurement"
                     class_name = "Additional_Allowable_Electricity_Generation"
-                    documentation = """Additional allowable electricity generation applicable to this dwelling in kWh per square metre; only if Zero Carbon Home assessment."""
+                    documentation = r"""Additional allowable electricity generation applicable to this dwelling in kWh per square metre; only if Zero Carbon Home assessment."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Property_Details"
@@ -9220,7 +9432,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -9242,6 +9454,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -9254,7 +9467,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9287,6 +9500,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -9299,7 +9513,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9332,6 +9546,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -9344,7 +9559,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9377,6 +9592,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'0': 'not applicable (FGHRS)', '1': "not connected to dwelling's electricity meter", '2': "connected to dwelling's electricity meter"}
                     map_values = {'not applicable (FGHRS)': '0', "not connected to dwelling's electricity meter": '1', "connected to dwelling's electricity meter": '2'}
@@ -9389,7 +9605,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9417,11 +9633,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "PV_Diverter"
-                    documentation = """Diverter present."""
+                    documentation = r"""Diverter present."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -9434,7 +9651,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9462,12 +9679,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:decimal"
                     class_name = "Battery_Capacity"
-                    documentation = """Battery capacity if diverter present."""
+                    documentation = r"""Battery capacity if diverter present."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
-                    python_type_convertor = float
+                    python_type = float
+                    python_type_convertor = lambda x: x if x is None else float(x)
                     map_codes = None
                     map_values = None
                     parent_class_name = "SAP_Property_Details"
@@ -9483,7 +9701,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         try:
                             return self.__class__.python_type_convertor(self.text)
                         except ValueError:
-                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                 
                     @value.setter
                     def value(self, value): self.text = str(value)
@@ -9500,11 +9718,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "xs:boolean"
                     class_name = "Is_Wind_Turbine_Connected_To_Dwelling_Meter"
-                    documentation = """Whether the wind turbine is connected to the Dwelling's meter."""
+                    documentation = r"""Whether the wind turbine is connected to the Dwelling's meter."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = bool
                     python_type_convertor = bool
                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                     map_values = {True: '1', False: '0'}
@@ -9517,7 +9736,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9546,10 +9765,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Heating"
                     class_name = "SAP_Heating"
                     documentation = None
-                    type_documentation = """Details of the means by which the Main Building is heated."""
+                    type_documentation = r"""Details of the means by which the Main Building is heated."""
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -9855,12 +10075,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-WaterHeatingCode"
                         class_name = "Water_Heating_Code"
-                        documentation = """The type of Water Heating present in the Property."""
+                        documentation = r"""The type of Water Heating present in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -9876,7 +10097,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -9893,11 +10114,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "HeatingFuelTypeCode"
                         class_name = "Water_Fuel_Type"
-                        documentation = """The type of fuel used to power the central heating e.g. Gas, Electricity. Not used if water system is main or secondary system."""
+                        documentation = r"""The type of fuel used to power the central heating e.g. Gas, Electricity. Not used if water system is main or secondary system."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Gas: mains gas', '2': 'Gas: bulk LPG', '3': 'Gas: bottled LPG', '4': 'Oil: heating oil', '7': 'Gas: biogas', '8': 'LNG', '9': 'LPG subject to Special Condition 18', '10': 'Solid fuel: dual fuel appliance (mineral and wood)', '11': 'Solid fuel: house coal', '12': 'Solid fuel: manufactured smokeless fuel', '15': 'Solid fuel: anthracite', '20': 'Solid fuel: wood logs', '21': 'Solid fuel: wood chips', '22': 'Solid fuel: wood pellets (in bags, for secondary heating)', '23': 'Solid fuel: wood pellets (bulk supply in bags, for main heating)', '36': 'Electricity: electricity sold to grid', '37': 'Electricity: electricity displaced from grid', '39': 'Electricity: electricity, unspecified tariff', '41': 'Community heating schemes: heat from electric heat pump', '42': 'Community heating schemes: heat from boilers - waste combustion', '43': 'Community heating schemes: heat from boilers - biomass', '44': 'Community heating schemes: heat from boilers - biogas', '45': 'Community heating schemes: waste heat from power stations', '46': 'Community heating schemes: geothermal heat source', '47': 'Community heating schemes: high grade heat recovered from process', '48': 'Community heating schemes: heat from CHP', '49': 'Community heating schemes: low grade heat recovered from process', '50': 'Community heating schemes: electricity for pumping in distribution network', '51': 'Community heating schemes: heat from mains gas', '52': 'Community heating schemes: heat from LPG', '53': 'Community heating schemes: heat from oil', '54': 'Community heating schemes: heat from coal', '55': 'Community heating schemes: heat from B30D', '56': 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel', '57': 'Community heating schemes: heat from boilers using biodiesel from any biomass source', '58': 'Community heating schemes: biodiesel from vegetable oil only', '71': 'biodiesel from any biomass source', '72': 'biodiesel from used cooking oil only', '73': 'biodiesel from vegetable oil only', '74': 'appliances able to use mineral oil or liquid biofuel', '75': 'B30K', '76': 'bioethanol from any biomass source', '99': 'Fuel data from pcdb'}
                         map_values = {'Gas: mains gas': '1', 'Gas: bulk LPG': '2', 'Gas: bottled LPG': '3', 'Oil: heating oil': '4', 'Gas: biogas': '7', 'LNG': '8', 'LPG subject to Special Condition 18': '9', 'Solid fuel: dual fuel appliance (mineral and wood)': '10', 'Solid fuel: house coal': '11', 'Solid fuel: manufactured smokeless fuel': '12', 'Solid fuel: anthracite': '15', 'Solid fuel: wood logs': '20', 'Solid fuel: wood chips': '21', 'Solid fuel: wood pellets (in bags, for secondary heating)': '22', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)': '23', 'Electricity: electricity sold to grid': '36', 'Electricity: electricity displaced from grid': '37', 'Electricity: electricity, unspecified tariff': '39', 'Community heating schemes: heat from electric heat pump': '41', 'Community heating schemes: heat from boilers - waste combustion': '42', 'Community heating schemes: heat from boilers - biomass': '43', 'Community heating schemes: heat from boilers - biogas': '44', 'Community heating schemes: waste heat from power stations': '45', 'Community heating schemes: geothermal heat source': '46', 'Community heating schemes: high grade heat recovered from process': '47', 'Community heating schemes: heat from CHP': '48', 'Community heating schemes: low grade heat recovered from process': '49', 'Community heating schemes: electricity for pumping in distribution network': '50', 'Community heating schemes: heat from mains gas': '51', 'Community heating schemes: heat from LPG': '52', 'Community heating schemes: heat from oil': '53', 'Community heating schemes: heat from coal': '54', 'Community heating schemes: heat from B30D': '55', 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel': '56', 'Community heating schemes: heat from boilers using biodiesel from any biomass source': '57', 'Community heating schemes: biodiesel from vegetable oil only': '58', 'biodiesel from any biomass source': '71', 'biodiesel from used cooking oil only': '72', 'biodiesel from vegetable oil only': '73', 'appliances able to use mineral oil or liquid biofuel': '74', 'B30K': '75', 'bioethanol from any biomass source': '76', 'Fuel data from pcdb': '99'}
@@ -9910,7 +10132,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9938,11 +10160,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Has_Hot_Water_Cylinder"
-                        documentation = """Hot water cylinder?"""
+                        documentation = r"""Hot water cylinder?"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -9955,7 +10178,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -9983,11 +10206,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-SecondaryHeatingCategoryCode"
                         class_name = "Secondary_Heating_Category"
-                        documentation = """Category of heating system for the secondary heating system."""
+                        documentation = r"""Category of heating system for the secondary heating system."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'none', '10': 'room heaters'}
                         map_values = {'none': '1', 'room heaters': '10'}
@@ -10000,7 +10224,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10028,11 +10252,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-NonDatabaseSourceCode"
                         class_name = "Secondary_Heating_Data_Source"
-                        documentation = """Source of secondary heating system data; only if secondary heating system."""
+                        documentation = r"""Source of secondary heating system data; only if secondary heating system."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'2': 'from manufacturer declaration', '3': 'from SAP table'}
                         map_values = {'from manufacturer declaration': '2', 'from SAP table': '3'}
@@ -10045,7 +10270,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10078,7 +10303,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -10094,7 +10320,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10111,11 +10337,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Secondary_Heating_Commisioning_Certificate"
-                        documentation = """Secondary heating system commisioning certificate number."""
+                        documentation = r"""Secondary heating system commisioning certificate number."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -10145,11 +10372,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Secondary_Heating_Installation_Engineer"
-                        documentation = """Secondary heating installation engineer registration reference."""
+                        documentation = r"""Secondary heating installation engineer registration reference."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -10179,12 +10407,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-SpaceHeatingCode"
                         class_name = "Secondary_Heating_Code"
-                        documentation = """Type of secondary heating present in the property; only if required and if heating data source is SAP table."""
+                        documentation = r"""Type of secondary heating present in the property; only if required and if heating data source is SAP table."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -10200,7 +10429,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10217,11 +10446,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "HeatingFuelTypeCode"
                         class_name = "Secondary_Fuel_Type"
-                        documentation = """The type of fuel used to power the secondary heating e.g. Gas, Electricity; only if required."""
+                        documentation = r"""The type of fuel used to power the secondary heating e.g. Gas, Electricity; only if required."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Gas: mains gas', '2': 'Gas: bulk LPG', '3': 'Gas: bottled LPG', '4': 'Oil: heating oil', '7': 'Gas: biogas', '8': 'LNG', '9': 'LPG subject to Special Condition 18', '10': 'Solid fuel: dual fuel appliance (mineral and wood)', '11': 'Solid fuel: house coal', '12': 'Solid fuel: manufactured smokeless fuel', '15': 'Solid fuel: anthracite', '20': 'Solid fuel: wood logs', '21': 'Solid fuel: wood chips', '22': 'Solid fuel: wood pellets (in bags, for secondary heating)', '23': 'Solid fuel: wood pellets (bulk supply in bags, for main heating)', '36': 'Electricity: electricity sold to grid', '37': 'Electricity: electricity displaced from grid', '39': 'Electricity: electricity, unspecified tariff', '41': 'Community heating schemes: heat from electric heat pump', '42': 'Community heating schemes: heat from boilers - waste combustion', '43': 'Community heating schemes: heat from boilers - biomass', '44': 'Community heating schemes: heat from boilers - biogas', '45': 'Community heating schemes: waste heat from power stations', '46': 'Community heating schemes: geothermal heat source', '47': 'Community heating schemes: high grade heat recovered from process', '48': 'Community heating schemes: heat from CHP', '49': 'Community heating schemes: low grade heat recovered from process', '50': 'Community heating schemes: electricity for pumping in distribution network', '51': 'Community heating schemes: heat from mains gas', '52': 'Community heating schemes: heat from LPG', '53': 'Community heating schemes: heat from oil', '54': 'Community heating schemes: heat from coal', '55': 'Community heating schemes: heat from B30D', '56': 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel', '57': 'Community heating schemes: heat from boilers using biodiesel from any biomass source', '58': 'Community heating schemes: biodiesel from vegetable oil only', '71': 'biodiesel from any biomass source', '72': 'biodiesel from used cooking oil only', '73': 'biodiesel from vegetable oil only', '74': 'appliances able to use mineral oil or liquid biofuel', '75': 'B30K', '76': 'bioethanol from any biomass source', '99': 'Fuel data from pcdb'}
                         map_values = {'Gas: mains gas': '1', 'Gas: bulk LPG': '2', 'Gas: bottled LPG': '3', 'Oil: heating oil': '4', 'Gas: biogas': '7', 'LNG': '8', 'LPG subject to Special Condition 18': '9', 'Solid fuel: dual fuel appliance (mineral and wood)': '10', 'Solid fuel: house coal': '11', 'Solid fuel: manufactured smokeless fuel': '12', 'Solid fuel: anthracite': '15', 'Solid fuel: wood logs': '20', 'Solid fuel: wood chips': '21', 'Solid fuel: wood pellets (in bags, for secondary heating)': '22', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)': '23', 'Electricity: electricity sold to grid': '36', 'Electricity: electricity displaced from grid': '37', 'Electricity: electricity, unspecified tariff': '39', 'Community heating schemes: heat from electric heat pump': '41', 'Community heating schemes: heat from boilers - waste combustion': '42', 'Community heating schemes: heat from boilers - biomass': '43', 'Community heating schemes: heat from boilers - biogas': '44', 'Community heating schemes: waste heat from power stations': '45', 'Community heating schemes: geothermal heat source': '46', 'Community heating schemes: high grade heat recovered from process': '47', 'Community heating schemes: heat from CHP': '48', 'Community heating schemes: low grade heat recovered from process': '49', 'Community heating schemes: electricity for pumping in distribution network': '50', 'Community heating schemes: heat from mains gas': '51', 'Community heating schemes: heat from LPG': '52', 'Community heating schemes: heat from oil': '53', 'Community heating schemes: heat from coal': '54', 'Community heating schemes: heat from B30D': '55', 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel': '56', 'Community heating schemes: heat from boilers using biodiesel from any biomass source': '57', 'Community heating schemes: biodiesel from vegetable oil only': '58', 'biodiesel from any biomass source': '71', 'biodiesel from used cooking oil only': '72', 'biodiesel from vegetable oil only': '73', 'appliances able to use mineral oil or liquid biofuel': '74', 'B30K': '75', 'bioethanol from any biomass source': '76', 'Fuel data from pcdb': '99'}
@@ -10234,7 +10464,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10262,12 +10492,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:positiveInteger"
                         class_name = "Secondary_Heating_PCDF_Fuel_Index"
-                        documentation = """PCDF index number of the fuel type, only if Secondary-Fuel-Type is 99 (fuel from database)."""
+                        documentation = r"""PCDF index number of the fuel type, only if Secondary-Fuel-Type is 99 (fuel from database)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -10283,7 +10514,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10300,11 +10531,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "FlueTypeCode"
                         class_name = "Secondary_Heating_Flue_Type"
-                        documentation = """Secondary flue type; only if secondary efficiency is manufacturer declaration and if there is a flue."""
+                        documentation = r"""Secondary flue type; only if secondary efficiency is manufacturer declaration and if there is a flue."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'open flue', '2': 'balanced flue', '3': 'chimney', '4': 'omitted (boiler is in an outhouse, so its flue arrangements are not relevant)', '5': 'unknown (there is a flue, but its type could not be determined)'}
                         map_values = {'open flue': '1', 'balanced flue': '2', 'chimney': '3', 'omitted (boiler is in an outhouse, so its flue arrangements are not relevant)': '4', 'unknown (there is a flue, but its type could not be determined)': '5'}
@@ -10317,7 +10549,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10345,11 +10577,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-ThermalStoreCode"
                         class_name = "Thermal_Store"
-                        documentation = """The type of thermal store; not used if main heating system is community heating scheme."""
+                        documentation = r"""The type of thermal store; not used if main heating system is community heating scheme."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'none', '2': 'hot water only', '3': 'integrated'}
                         map_values = {'none': '1', 'hot water only': '2', 'integrated': '3'}
@@ -10362,7 +10595,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10390,11 +10623,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Has_Fixed_Air_Conditioning"
-                        documentation = """Fixed air conditioning?"""
+                        documentation = r"""Fixed air conditioning?"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -10407,7 +10641,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10435,11 +10669,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "ImmersionHeatingTypeCode"
                         class_name = "Immersion_Heating_Type"
-                        documentation = """The type of immersion heating; only if immersion."""
+                        documentation = r"""The type of immersion heating; only if immersion."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'Dual', '2': 'Single'}
                         map_values = {'Dual': '1', 'Single': '2'}
@@ -10452,7 +10687,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10480,11 +10715,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Heat_Pump_Assisted_By_Immersion"
-                        documentation = """Is heat pump assisted by immersion? Applicable only to hot water only heat pumps"""
+                        documentation = r"""Is heat pump assisted by immersion? Applicable only to hot water only heat pumps"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -10497,7 +10733,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10525,11 +10761,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Heat_Pump_Installed_To_MIS"
-                        documentation = """Is heat pump installed to MIS standard? Only if water heating from hot water only heat pump."""
+                        documentation = r"""Is heat pump installed to MIS standard? Only if water heating from hot water only heat pump."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -10542,7 +10779,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10570,11 +10807,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Immersion_For_Summer_Use"
-                        documentation = """Immersion for summer use? Only if main heating is solid fuel fire or room heater with boiler."""
+                        documentation = r"""Immersion for summer use? Only if main heating is solid fuel fire or room heater with boiler."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -10587,7 +10825,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10615,11 +10853,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Secondary_Heating_HETAS_Approved"
-                        documentation = """Secondary heating appliance is HETAS approved? Only if solid fuel."""
+                        documentation = r"""Secondary heating appliance is HETAS approved? Only if solid fuel."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -10632,7 +10871,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10660,11 +10899,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Hot_Water_Store_Manufacturer"
-                        documentation = """Store Manufacturer name."""
+                        documentation = r"""Store Manufacturer name."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -10694,11 +10934,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Hot_Water_Store_Model"
-                        documentation = """Store Model name."""
+                        documentation = r"""Store Model name."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -10728,11 +10969,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Hot_Water_Store_Commissioning_Certificate"
-                        documentation = """Store comissioning certificate number."""
+                        documentation = r"""Store comissioning certificate number."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -10762,11 +11004,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Hot_Water_Store_Installer_Engineer_Registration"
-                        documentation = """Store installer engineer registration number."""
+                        documentation = r"""Store installer engineer registration number."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -10796,12 +11039,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Hot_Water_Store_Size"
-                        documentation = """Hot water store size in litres; if there is a hot water store. Store refers to hot water store type which can be cylinder (if thermal store is "none"), hot-water only thermal store or integrated thermal store. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
+                        documentation = r"""Hot water store size in litres; if there is a hot water store. Store refers to hot water store type which can be cylinder (if thermal store is "none"), hot-water only thermal store or integrated thermal store. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -10817,7 +11061,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10834,12 +11078,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:decimal"
                         class_name = "Hot_Water_Store_Heat_Transfer_Area"
-                        documentation = """Used when a heat pump is associated with a separate and specified hot water vessel."""
+                        documentation = r"""Used when a heat pump is associated with a separate and specified hot water vessel."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -10855,7 +11100,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10872,11 +11117,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-NonDatabaseSourceCode"
                         class_name = "Hot_Water_Store_Heat_Loss_Source"
-                        documentation = """The source of the hot water store heat loss information; if there is a hot water store. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
+                        documentation = r"""The source of the hot water store heat loss information; if there is a hot water store. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'2': 'from manufacturer declaration', '3': 'from SAP table'}
                         map_values = {'from manufacturer declaration': '2', 'from SAP table': '3'}
@@ -10889,7 +11135,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -10917,12 +11163,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Hot_Water_Store_Heat_Loss"
-                        documentation = """Hot water store declared loss in kWh/day; only if there is a hot water store and if manufacturer declared loss. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
+                        documentation = r"""Hot water store declared loss in kWh/day; only if there is a hot water store and if manufacturer declared loss. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -10938,7 +11185,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -10955,11 +11202,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "HotWaterStoreInsulationTypeCode"
                         class_name = "Hot_Water_Store_Insulation_Type"
-                        documentation = """Hot water store insulation; only if there is a hot water store and if loss from SAP table. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
+                        documentation = r"""Hot water store insulation; only if there is a hot water store and if loss from SAP table. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'factory-applied', '2': 'loose jacket'}
                         map_values = {'factory-applied': '1', 'loose jacket': '2'}
@@ -10972,7 +11220,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11000,12 +11248,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Hot_Water_Store_Insulation_Thickness"
-                        documentation = """Hot water store insulation thickness in mm; only if there is a hot water store and if loss from SAP table. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
+                        documentation = r"""Hot water store insulation thickness in mm; only if there is a hot water store and if loss from SAP table. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -11021,7 +11270,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -11038,11 +11287,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Thermal_Store_Near_Boiler"
-                        documentation = """Thermal store connected to boiler by no more than 1.5 m of insulated pipework? Only if thermal store. Not applicable if combi boiler or instantaneous water heater."""
+                        documentation = r"""Thermal store connected to boiler by no more than 1.5 m of insulated pipework? Only if thermal store. Not applicable if combi boiler or instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -11055,7 +11305,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11083,11 +11333,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Thermal_Store_Or_CPSU_In_Airing_Cupboard"
-                        documentation = """Thermal store or CPSU in airing cupboard? Only if (a) boiler with integrated or hot-water-only thermal store, or (b) main heating is CPSU."""
+                        documentation = r"""Thermal store or CPSU in airing cupboard? Only if (a) boiler with integrated or hot-water-only thermal store, or (b) main heating is CPSU."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -11100,7 +11351,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11128,11 +11379,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Has_Cylinder_Thermostat"
-                        documentation = """Hot water cylinder thermostat? Not applicable if combi boiler or instantaneous water heater."""
+                        documentation = r"""Hot water cylinder thermostat? Not applicable if combi boiler or instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -11145,7 +11397,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11173,11 +11425,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Cylinder_In_Heated_Space"
-                        documentation = """Hot water cylinder in heated space? Not applicable if combi boiler or instantaneous water heater."""
+                        documentation = r"""Hot water cylinder in heated space? Not applicable if combi boiler or instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -11190,7 +11443,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11218,11 +11471,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Hot_Water_Separately_Timed"
-                        documentation = """Hot water separately timed? Not applicable if combi boiler or instantaneous water heater."""
+                        documentation = r"""Hot water separately timed? Not applicable if combi boiler or instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -11235,7 +11489,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11268,6 +11522,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -11302,6 +11557,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -11332,10 +11588,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         element_type = "SAP-Community-Heating-Systems"
                         class_name = "SAP_Community_Heating_Systems"
                         documentation = None
-                        type_documentation = """Community heating systems used by the property."""
+                        type_documentation = r"""Community heating systems used by the property."""
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -11360,10 +11617,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             element_type = "SAP-Community-Heating-System"
                             class_name = "SAP_Community_Heating_System"
                             documentation = None
-                            type_documentation = """Details of a community system which heats the Main Building."""
+                            type_documentation = r"""Details of a community system which heats the Main Building."""
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 2
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -11471,11 +11729,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "Community_Heating_Name"
-                                documentation = """The name of the community heating system"""
+                                documentation = r"""The name of the community heating system"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -11505,12 +11764,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Community_Heating_CO2_Emission_Factor"
-                                documentation = """the community heating CO2 emission factor"""
+                                documentation = r"""the community heating CO2 emission factor"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Community_Heating_System"
@@ -11526,7 +11786,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -11543,12 +11803,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Community_Heating_Primary_Energy_Factor"
-                                documentation = """The community heating Primary Energy Factor"""
+                                documentation = r"""The community heating Primary Energy Factor"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Community_Heating_System"
@@ -11564,7 +11825,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -11581,11 +11842,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-CommunityHeatingUseCode"
                                 class_name = "Community_Heating_Use"
-                                documentation = """Specifies what kind of heating the community system is used for."""
+                                documentation = r"""Specifies what kind of heating the community system is used for."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'space heating only', '2': 'water heating only', '3': 'space and water heating'}
                                 map_values = {'space heating only': '1', 'water heating only': '2', 'space and water heating': '3'}
@@ -11598,7 +11860,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11626,11 +11888,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Is_Community_Heating_Cylinder_In_Dwelling"
-                                documentation = """Community heating, cylinder in dwelling?"""
+                                documentation = r"""Community heating, cylinder in dwelling?"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -11643,7 +11906,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11671,11 +11934,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Is_HIU_In_Dwelling"
-                                documentation = """Community heating, HIU in dwelling?"""
+                                documentation = r"""Community heating, HIU in dwelling?"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -11688,7 +11952,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11716,12 +11980,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:positiveInteger"
                                 class_name = "HIU_Index_Number"
-                                documentation = """Heat Interface Unit index number, if present."""
+                                documentation = r"""Heat Interface Unit index number, if present."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Community_Heating_System"
@@ -11737,7 +12002,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -11754,11 +12019,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-HeatingDistributionCode"
                                 class_name = "Community_Heating_Distribution_Type"
-                                documentation = """Community heating distribution"""
+                                documentation = r"""Community heating distribution"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'5': 'calculated', '6': 'unknown', '7': 'Network not compliant with Code of Practice', '8': 'Network compliant with Code of Practice', '9': 'Two adjoining dwellings'}
                                 map_values = {'calculated': '5', 'unknown': '6', 'Network not compliant with Code of Practice': '7', 'Network compliant with Code of Practice': '8', 'Two adjoining dwellings': '9'}
@@ -11771,7 +12037,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11799,11 +12065,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Community-Heat-Sources"
                                 class_name = "Community_Heat_Sources"
-                                documentation = """To be provided when there is no Heat-Network-Index-Number."""
+                                documentation = r"""To be provided when there is no Heat-Network-Index-Number."""
                                 type_documentation = None
                                 has_text_node = False
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -11832,6 +12099,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = False
                                     min_occurs = 1
                                     max_occurs = 5
+                                    python_type = None
                                     python_type_convertor = None
                                     map_codes = None
                                     map_values = None
@@ -11902,6 +12170,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
+                                        python_type = str
                                         python_type_convertor = str
                                         map_codes = {'1': 'CHP', '2': 'boilers', '3': 'heat pump', '4': 'waste heat', '5': 'geothermal'}
                                         map_values = {'CHP': '1', 'boilers': '2', 'heat pump': '3', 'waste heat': '4', 'geothermal': '5'}
@@ -11914,7 +12183,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self):
+                                        def value(self): 
                                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                             else:
                                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -11942,12 +12211,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                         element_type = "xs:decimal"
                                         class_name = "Heat_Fraction"
-                                        documentation = """Fraction of heat for the system provided by this heat source."""
+                                        documentation = r"""Fraction of heat for the system provided by this heat source."""
                                         type_documentation = None
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
-                                        python_type_convertor = float
+                                        python_type = float
+                                        python_type_convertor = lambda x: x if x is None else float(x)
                                         map_codes = None
                                         map_values = None
                                         parent_class_name = "Community_Heat_Source"
@@ -11963,7 +12233,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             try:
                                                 return self.__class__.python_type_convertor(self.text)
                                             except ValueError:
-                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -11985,6 +12255,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
+                                        python_type = str
                                         python_type_convertor = str
                                         map_codes = {'1': 'Gas: mains gas', '2': 'Gas: bulk LPG', '3': 'Gas: bottled LPG', '4': 'Oil: heating oil', '7': 'Gas: biogas', '8': 'LNG', '9': 'LPG subject to Special Condition 18', '10': 'Solid fuel: dual fuel appliance (mineral and wood)', '11': 'Solid fuel: house coal', '12': 'Solid fuel: manufactured smokeless fuel', '15': 'Solid fuel: anthracite', '20': 'Solid fuel: wood logs', '21': 'Solid fuel: wood chips', '22': 'Solid fuel: wood pellets (in bags, for secondary heating)', '23': 'Solid fuel: wood pellets (bulk supply in bags, for main heating)', '36': 'Electricity: electricity sold to grid', '37': 'Electricity: electricity displaced from grid', '39': 'Electricity: electricity, unspecified tariff', '41': 'Community heating schemes: heat from electric heat pump', '42': 'Community heating schemes: heat from boilers - waste combustion', '43': 'Community heating schemes: heat from boilers - biomass', '44': 'Community heating schemes: heat from boilers - biogas', '45': 'Community heating schemes: waste heat from power stations', '46': 'Community heating schemes: geothermal heat source', '47': 'Community heating schemes: high grade heat recovered from process', '48': 'Community heating schemes: heat from CHP', '49': 'Community heating schemes: low grade heat recovered from process', '50': 'Community heating schemes: electricity for pumping in distribution network', '51': 'Community heating schemes: heat from mains gas', '52': 'Community heating schemes: heat from LPG', '53': 'Community heating schemes: heat from oil', '54': 'Community heating schemes: heat from coal', '55': 'Community heating schemes: heat from B30D', '56': 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel', '57': 'Community heating schemes: heat from boilers using biodiesel from any biomass source', '58': 'Community heating schemes: biodiesel from vegetable oil only', '71': 'biodiesel from any biomass source', '72': 'biodiesel from used cooking oil only', '73': 'biodiesel from vegetable oil only', '74': 'appliances able to use mineral oil or liquid biofuel', '75': 'B30K', '76': 'bioethanol from any biomass source', '99': 'Fuel data from pcdb'}
                                         map_values = {'Gas: mains gas': '1', 'Gas: bulk LPG': '2', 'Gas: bottled LPG': '3', 'Oil: heating oil': '4', 'Gas: biogas': '7', 'LNG': '8', 'LPG subject to Special Condition 18': '9', 'Solid fuel: dual fuel appliance (mineral and wood)': '10', 'Solid fuel: house coal': '11', 'Solid fuel: manufactured smokeless fuel': '12', 'Solid fuel: anthracite': '15', 'Solid fuel: wood logs': '20', 'Solid fuel: wood chips': '21', 'Solid fuel: wood pellets (in bags, for secondary heating)': '22', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)': '23', 'Electricity: electricity sold to grid': '36', 'Electricity: electricity displaced from grid': '37', 'Electricity: electricity, unspecified tariff': '39', 'Community heating schemes: heat from electric heat pump': '41', 'Community heating schemes: heat from boilers - waste combustion': '42', 'Community heating schemes: heat from boilers - biomass': '43', 'Community heating schemes: heat from boilers - biogas': '44', 'Community heating schemes: waste heat from power stations': '45', 'Community heating schemes: geothermal heat source': '46', 'Community heating schemes: high grade heat recovered from process': '47', 'Community heating schemes: heat from CHP': '48', 'Community heating schemes: low grade heat recovered from process': '49', 'Community heating schemes: electricity for pumping in distribution network': '50', 'Community heating schemes: heat from mains gas': '51', 'Community heating schemes: heat from LPG': '52', 'Community heating schemes: heat from oil': '53', 'Community heating schemes: heat from coal': '54', 'Community heating schemes: heat from B30D': '55', 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel': '56', 'Community heating schemes: heat from boilers using biodiesel from any biomass source': '57', 'Community heating schemes: biodiesel from vegetable oil only': '58', 'biodiesel from any biomass source': '71', 'biodiesel from used cooking oil only': '72', 'biodiesel from vegetable oil only': '73', 'appliances able to use mineral oil or liquid biofuel': '74', 'B30K': '75', 'bioethanol from any biomass source': '76', 'Fuel data from pcdb': '99'}
@@ -11997,7 +12268,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self):
+                                        def value(self): 
                                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                             else:
                                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12030,7 +12301,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         has_text_node = True
                                         min_occurs = 0
                                         max_occurs = 1
-                                        python_type_convertor = int
+                                        python_type = int
+                                        python_type_convertor = lambda x: x if x is None else int(x)
                                         map_codes = None
                                         map_values = None
                                         parent_class_name = "Community_Heat_Source"
@@ -12046,7 +12318,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             try:
                                                 return self.__class__.python_type_convertor(self.text)
                                             except ValueError:
-                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -12063,12 +12335,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                         element_type = "xs:decimal"
                                         class_name = "Heat_Efficiency"
-                                        documentation = """Heat efficiency in %."""
+                                        documentation = r"""Heat efficiency in %."""
                                         type_documentation = None
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
-                                        python_type_convertor = float
+                                        python_type = float
+                                        python_type_convertor = lambda x: x if x is None else float(x)
                                         map_codes = None
                                         map_values = None
                                         parent_class_name = "Community_Heat_Source"
@@ -12084,7 +12357,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             try:
                                                 return self.__class__.python_type_convertor(self.text)
                                             except ValueError:
-                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -12101,12 +12374,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                         element_type = "xs:decimal"
                                         class_name = "Power_Efficiency"
-                                        documentation = """Power efficiency in %. Include when heat source is CHP."""
+                                        documentation = r"""Power efficiency in %. Include when heat source is CHP."""
                                         type_documentation = None
                                         has_text_node = True
                                         min_occurs = 0
                                         max_occurs = 1
-                                        python_type_convertor = float
+                                        python_type = float
+                                        python_type_convertor = lambda x: x if x is None else float(x)
                                         map_codes = None
                                         map_values = None
                                         parent_class_name = "Community_Heat_Source"
@@ -12122,7 +12396,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             try:
                                                 return self.__class__.python_type_convertor(self.text)
                                             except ValueError:
-                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -12144,6 +12418,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         has_text_node = True
                                         min_occurs = 0
                                         max_occurs = 1
+                                        python_type = str
                                         python_type_convertor = str
                                         map_codes = None
                                         map_values = None
@@ -12173,11 +12448,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                         element_type = "SAP-CHPElectricityGenerationCode"
                                         class_name = "CHP_Electricity_Generation"
-                                        documentation = """CHP Electricity generation options from table 12f."""
+                                        documentation = r"""CHP Electricity generation options from table 12f."""
                                         type_documentation = None
                                         has_text_node = True
                                         min_occurs = 0
                                         max_occurs = 1
+                                        python_type = str
                                         python_type_convertor = str
                                         map_codes = {'81': 'New CHP, export only.', '82': 'New CHP, flexible operation.', '83': 'New CHP, standard.', '84': 'Existing CHP (2015+), export only.', '85': 'Existing CHP (2015+), flexible operation.', '86': 'Existing CHP (2015+),standard.', '87': 'Existing CHP (pre-2015), export only.', '88': 'Existing CHP (pre-2015), flexible operation.', '89': 'Existing CHP (pre-2015), standard.'}
                                         map_values = {'New CHP, export only.': '81', 'New CHP, flexible operation.': '82', 'New CHP, standard.': '83', 'Existing CHP (2015+), export only.': '84', 'Existing CHP (2015+), flexible operation.': '85', 'Existing CHP (2015+),standard.': '86', 'Existing CHP (pre-2015), export only.': '87', 'Existing CHP (pre-2015), flexible operation.': '88', 'Existing CHP (pre-2015), standard.': '89'}
@@ -12190,7 +12466,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def community_heat_source(self): return self.getparent()
                                     
                                         @property
-                                        def value(self):
+                                        def value(self): 
                                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                             else:
                                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12218,12 +12494,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Community_Heating_Distribution_Loss_Factor"
-                                documentation = """Used when Community-Heating-Distribution-Type is calculated."""
+                                documentation = r"""Used when Community-Heating-Distribution-Type is calculated."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Community_Heating_System"
@@ -12239,7 +12516,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12256,11 +12533,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Charging_Linked_To_Heat_Use"
-                                documentation = """Used for hot-water-only systems."""
+                                documentation = r"""Used for hot-water-only systems."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -12273,7 +12551,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12301,12 +12579,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:positiveInteger"
                                 class_name = "Heat_Network_Index_Number"
-                                documentation = """Index number of heat network, if applicable."""
+                                documentation = r"""Index number of heat network, if applicable."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Community_Heating_System"
@@ -12322,7 +12601,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12339,11 +12618,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "Sub_Network_Name"
-                                documentation = """The name by which the sub community heat network is known."""
+                                documentation = r"""The name by which the sub community heat network is known."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -12373,11 +12653,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Heat_Network_Existing"
-                                documentation = """Whether the heat network is existing or new."""
+                                documentation = r"""Whether the heat network is existing or new."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -12390,7 +12671,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12418,11 +12699,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Heat_Network_Assessed_As_New"
-                                documentation = """Whether the heat network is assessed as a new heat network (post June 2022) for Eng with a standalone gas boiler notional building."""
+                                documentation = r"""Whether the heat network is assessed as a new heat network (post June 2022) for Eng with a standalone gas boiler notional building."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -12435,7 +12717,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_community_heating_system(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12468,6 +12750,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -12496,6 +12779,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 2
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -12819,12 +13103,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "None"
                                 class_name = "Main_Heating_Number"
-                                documentation = """Identifies the main heating as system 1 or system 2. System 1 must always be present, system 2 is included only when there are two systems."""
+                                documentation = r"""Identifies the main heating as system 1 or system 2. System 1 must always be present, system 2 is included only when there are two systems."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -12840,7 +13125,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12857,11 +13142,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-MainHeatingCategoryCode"
                                 class_name = "Main_Heating_Category"
-                                documentation = """Category of heating system for the main heating system."""
+                                documentation = r"""Category of heating system for the main heating system."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'none', '2': 'boiler with radiators or underfloor heating', '3': 'micro-cogeneration', '4': 'heat pump with radiators or underfloor heating', '5': 'heat pump with warm air distribution', '6': 'community heating system', '7': 'electric storage heaters', '8': 'electric underfloor heating', '9': 'warm air system (not heat pump)', '10': 'room heaters', '11': 'other system'}
                                 map_values = {'none': '1', 'boiler with radiators or underfloor heating': '2', 'micro-cogeneration': '3', 'heat pump with radiators or underfloor heating': '4', 'heat pump with warm air distribution': '5', 'community heating system': '6', 'electric storage heaters': '7', 'electric underfloor heating': '8', 'warm air system (not heat pump)': '9', 'room heaters': '10', 'other system': '11'}
@@ -12874,7 +13160,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12902,11 +13188,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-DataSourceCode"
                                 class_name = "Main_Heating_Data_Source"
-                                documentation = """Source of main heating system data."""
+                                documentation = r"""Source of main heating system data."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'from database', '2': 'from manufacturer declaration', '3': 'from SAP table'}
                                 map_values = {'from database': '1', 'from manufacturer declaration': '2', 'from SAP table': '3'}
@@ -12919,7 +13206,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -12947,12 +13234,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:positiveInteger"
                                 class_name = "Main_Heating_Index_Number"
-                                documentation = """The ID of the heating system from the product database, if system from database."""
+                                documentation = r"""The ID of the heating system from the product database, if system from database."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -12968,7 +13256,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -12990,6 +13278,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -13024,6 +13313,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -13058,6 +13348,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -13087,11 +13378,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "Main_Heating_Installation_Engineer"
-                                documentation = """Main heating installation engineer registration reference."""
+                                documentation = r"""Main heating installation engineer registration reference."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -13121,11 +13413,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Is_Condensing_Boiler"
-                                documentation = """Is the boiler a condensing boiler? If boiler efficiency is manufacturer declaration."""
+                                documentation = r"""Is the boiler a condensing boiler? If boiler efficiency is manufacturer declaration."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -13138,7 +13431,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13166,12 +13459,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:positiveInteger"
                                 class_name = "Condensing_Boiler_Heat_Distribution"
-                                documentation = """The temperature distribution of the condensing boiler."""
+                                documentation = r"""The temperature distribution of the condensing boiler."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -13187,7 +13481,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13204,12 +13498,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:positiveInteger"
                                 class_name = "Heat_Pump_Heat_Distribution"
-                                documentation = """The temperature distribution of the heat pump, for wet systems only."""
+                                documentation = r"""The temperature distribution of the heat pump, for wet systems only."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -13225,7 +13520,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13242,11 +13537,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-GasOrOilBoilerTypeCode"
                                 class_name = "Gas_Or_Oil_Boiler_Type"
-                                documentation = """Boiler type; if boiler efficiency is manufacturer declaration and fuel is gas or oil."""
+                                documentation = r"""Boiler type; if boiler efficiency is manufacturer declaration and fuel is gas or oil."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'regular', '2': 'combi', '3': 'CPSU', '4': 'range cooker'}
                                 map_values = {'regular': '1', 'combi': '2', 'CPSU': '3', 'range cooker': '4'}
@@ -13259,7 +13555,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13287,11 +13583,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-CombiBoilerTypeCode"
                                 class_name = "Combi_Boiler_Type"
-                                documentation = """Combi boiler type; if it is a combi boiler and boiler efficiency is manufacturer declaration."""
+                                documentation = r"""Combi boiler type; if it is a combi boiler and boiler efficiency is manufacturer declaration."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'instantaneous, no store or keep hot', '2': 'primary storage', '3': 'secondary storage', '4': 'CPSU', '5': 'untimed keep-hot by fuel', '6': 'timed keep hot by fuel', '7': 'untimed keep-hot by electricity', '8': 'timed keep hot by electricity', '9': 'untimed keep-hot by fuel and electricity', '10': 'timed keep hot by fuel and electricity'}
                                 map_values = {'instantaneous, no store or keep hot': '1', 'primary storage': '2', 'secondary storage': '3', 'CPSU': '4', 'untimed keep-hot by fuel': '5', 'timed keep hot by fuel': '6', 'untimed keep-hot by electricity': '7', 'timed keep hot by electricity': '8', 'untimed keep-hot by fuel and electricity': '9', 'timed keep hot by fuel and electricity': '10'}
@@ -13304,7 +13601,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13332,12 +13629,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Case_Heat_Emission"
-                                documentation = """Case heat emission at full load in kW; if it is a range cooker boiler and boiler efficiency is manufacturer declaration."""
+                                documentation = r"""Case heat emission at full load in kW; if it is a range cooker boiler and boiler efficiency is manufacturer declaration."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -13353,7 +13651,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13370,12 +13668,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Heat_Transfer_To_Water"
-                                documentation = """Heat transfer to water at full load in kW; if it is a range cooker boiler and boiler efficiency is manufacturer declaration."""
+                                documentation = r"""Heat transfer to water at full load in kW; if it is a range cooker boiler and boiler efficiency is manufacturer declaration."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -13391,7 +13690,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13408,11 +13707,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-SolidFuelBoilerType"
                                 class_name = "Solid_Fuel_Boiler_Type"
-                                documentation = """Boiler type; if boiler efficiency is manufacturer declaration and fuel is solid."""
+                                documentation = r"""Boiler type; if boiler efficiency is manufacturer declaration and fuel is solid."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'independent', '2': 'open fire', '3': 'closed room heater', '4': 'range cooker'}
                                 map_values = {'independent': '1', 'open fire': '2', 'closed room heater': '3', 'range cooker': '4'}
@@ -13425,7 +13725,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13453,12 +13753,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-SpaceHeatingCode"
                                 class_name = "Main_Heating_Code"
-                                documentation = """Main heating code; when heating data source is SAP table."""
+                                documentation = r"""Main heating code; when heating data source is SAP table."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -13474,7 +13775,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13491,11 +13792,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "HeatingFuelTypeCode"
                                 class_name = "Main_Fuel_Type"
-                                documentation = """The type of fuel used to power the central heating e.g. Gas, Electricity; not used if main heating system is community heating scheme."""
+                                documentation = r"""The type of fuel used to power the central heating e.g. Gas, Electricity; not used if main heating system is community heating scheme."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'Gas: mains gas', '2': 'Gas: bulk LPG', '3': 'Gas: bottled LPG', '4': 'Oil: heating oil', '7': 'Gas: biogas', '8': 'LNG', '9': 'LPG subject to Special Condition 18', '10': 'Solid fuel: dual fuel appliance (mineral and wood)', '11': 'Solid fuel: house coal', '12': 'Solid fuel: manufactured smokeless fuel', '15': 'Solid fuel: anthracite', '20': 'Solid fuel: wood logs', '21': 'Solid fuel: wood chips', '22': 'Solid fuel: wood pellets (in bags, for secondary heating)', '23': 'Solid fuel: wood pellets (bulk supply in bags, for main heating)', '36': 'Electricity: electricity sold to grid', '37': 'Electricity: electricity displaced from grid', '39': 'Electricity: electricity, unspecified tariff', '41': 'Community heating schemes: heat from electric heat pump', '42': 'Community heating schemes: heat from boilers - waste combustion', '43': 'Community heating schemes: heat from boilers - biomass', '44': 'Community heating schemes: heat from boilers - biogas', '45': 'Community heating schemes: waste heat from power stations', '46': 'Community heating schemes: geothermal heat source', '47': 'Community heating schemes: high grade heat recovered from process', '48': 'Community heating schemes: heat from CHP', '49': 'Community heating schemes: low grade heat recovered from process', '50': 'Community heating schemes: electricity for pumping in distribution network', '51': 'Community heating schemes: heat from mains gas', '52': 'Community heating schemes: heat from LPG', '53': 'Community heating schemes: heat from oil', '54': 'Community heating schemes: heat from coal', '55': 'Community heating schemes: heat from B30D', '56': 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel', '57': 'Community heating schemes: heat from boilers using biodiesel from any biomass source', '58': 'Community heating schemes: biodiesel from vegetable oil only', '71': 'biodiesel from any biomass source', '72': 'biodiesel from used cooking oil only', '73': 'biodiesel from vegetable oil only', '74': 'appliances able to use mineral oil or liquid biofuel', '75': 'B30K', '76': 'bioethanol from any biomass source', '99': 'Fuel data from pcdb'}
                                 map_values = {'Gas: mains gas': '1', 'Gas: bulk LPG': '2', 'Gas: bottled LPG': '3', 'Oil: heating oil': '4', 'Gas: biogas': '7', 'LNG': '8', 'LPG subject to Special Condition 18': '9', 'Solid fuel: dual fuel appliance (mineral and wood)': '10', 'Solid fuel: house coal': '11', 'Solid fuel: manufactured smokeless fuel': '12', 'Solid fuel: anthracite': '15', 'Solid fuel: wood logs': '20', 'Solid fuel: wood chips': '21', 'Solid fuel: wood pellets (in bags, for secondary heating)': '22', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)': '23', 'Electricity: electricity sold to grid': '36', 'Electricity: electricity displaced from grid': '37', 'Electricity: electricity, unspecified tariff': '39', 'Community heating schemes: heat from electric heat pump': '41', 'Community heating schemes: heat from boilers - waste combustion': '42', 'Community heating schemes: heat from boilers - biomass': '43', 'Community heating schemes: heat from boilers - biogas': '44', 'Community heating schemes: waste heat from power stations': '45', 'Community heating schemes: geothermal heat source': '46', 'Community heating schemes: high grade heat recovered from process': '47', 'Community heating schemes: heat from CHP': '48', 'Community heating schemes: low grade heat recovered from process': '49', 'Community heating schemes: electricity for pumping in distribution network': '50', 'Community heating schemes: heat from mains gas': '51', 'Community heating schemes: heat from LPG': '52', 'Community heating schemes: heat from oil': '53', 'Community heating schemes: heat from coal': '54', 'Community heating schemes: heat from B30D': '55', 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel': '56', 'Community heating schemes: heat from boilers using biodiesel from any biomass source': '57', 'Community heating schemes: biodiesel from vegetable oil only': '58', 'biodiesel from any biomass source': '71', 'biodiesel from used cooking oil only': '72', 'biodiesel from vegetable oil only': '73', 'appliances able to use mineral oil or liquid biofuel': '74', 'B30K': '75', 'bioethanol from any biomass source': '76', 'Fuel data from pcdb': '99'}
@@ -13508,7 +13810,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13536,12 +13838,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:positiveInteger"
                                 class_name = "PCDF_Fuel_Index"
-                                documentation = """PCDF index number of the fuel type, only if Main-Fuel-Type is 99 (fuel from database)."""
+                                documentation = r"""PCDF index number of the fuel type, only if Main-Fuel-Type is 99 (fuel from database)."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -13557,7 +13860,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13574,12 +13877,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-HeatingControlCode"
                                 class_name = "Main_Heating_Control"
-                                documentation = """Type of Main Control for the Heating System."""
+                                documentation = r"""Type of Main Control for the Heating System."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -13595,7 +13899,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -13612,11 +13916,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "HeatEmitterCode"
                                 class_name = "Heat_Emitter_Type"
-                                documentation = """Identifies the means by which the central heating system (if present) emits heat; only when wet system (radiators or underfloor)."""
+                                documentation = r"""Identifies the means by which the central heating system (if present) emits heat; only when wet system (radiators or underfloor)."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'radiators', '2': 'underfloor', '3': 'both radiators and underfloor', '4': 'fan coil units'}
                                 map_values = {'radiators': '1', 'underfloor': '2', 'both radiators and underfloor': '3', 'fan coil units': '4'}
@@ -13629,7 +13934,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13657,11 +13962,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "UnderfloorHeatEmitterCode"
                                 class_name = "Underfloor_Heat_Emitter_Type"
-                                documentation = """Means by which an underfloor heating system (if present) emits heat; only when wet system (underfloor)."""
+                                documentation = r"""Means by which an underfloor heating system (if present) emits heat; only when wet system (underfloor)."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'in concrete slab', '2': 'in screed above insulation', '3': 'in timber floor'}
                                 map_values = {'in concrete slab': '1', 'in screed above insulation': '2', 'in timber floor': '3'}
@@ -13674,7 +13980,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13702,11 +14008,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "FlueTypeCode"
                                 class_name = "Main_Heating_Flue_Type"
-                                documentation = """The type of main heating flue; only if flued appliance."""
+                                documentation = r"""The type of main heating flue; only if flued appliance."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'open flue', '2': 'balanced flue', '3': 'chimney', '4': 'omitted (boiler is in an outhouse, so its flue arrangements are not relevant)', '5': 'unknown (there is a flue, but its type could not be determined)'}
                                 map_values = {'open flue': '1', 'balanced flue': '2', 'chimney': '3', 'omitted (boiler is in an outhouse, so its flue arrangements are not relevant)': '4', 'unknown (there is a flue, but its type could not be determined)': '5'}
@@ -13719,7 +14026,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13747,11 +14054,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Is_Flue_Fan_Present"
-                                documentation = """Indicates whether the heating system contains a fan flue; only if boiler."""
+                                documentation = r"""Indicates whether the heating system contains a fan flue; only if boiler."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -13764,7 +14072,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13792,11 +14100,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Is_Central_Heating_Pump_In_Heated_Space"
-                                documentation = """Central heating pump in heated space? Only when wet system (radiators or underfloor)."""
+                                documentation = r"""Central heating pump in heated space? Only when wet system (radiators or underfloor)."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -13809,7 +14118,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13837,11 +14146,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Is_Oil_Pump_In_Heated_Space"
-                                documentation = """Oil pump in heated space? Only if oil boiler."""
+                                documentation = r"""Oil pump in heated space? Only if oil boiler."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -13854,7 +14164,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13882,11 +14192,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Is_Interlocked_System"
-                                documentation = """Interlocked system? Only when wet system (radiators or underfloor)."""
+                                documentation = r"""Interlocked system? Only when wet system (radiators or underfloor)."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -13899,7 +14210,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13927,11 +14238,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Has_Separate_Delayed_Start"
-                                documentation = """True if there is a delayed start control separate from a controller in the database."""
+                                documentation = r"""True if there is a delayed start control separate from a controller in the database."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -13944,7 +14256,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -13972,11 +14284,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-BoilerFuelFeedCode"
                                 class_name = "Boiler_Fuel_Feed"
-                                documentation = """The type of boiler fuel feed; only if solid fuel boiler with manufacturer declaration."""
+                                documentation = r"""The type of boiler fuel feed; only if solid fuel boiler with manufacturer declaration."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'gravity', '2': 'manual', '3': 'screw', '4': 'other'}
                                 map_values = {'gravity': '1', 'manual': '2', 'screw': '3', 'other': '4'}
@@ -13989,7 +14302,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14017,11 +14330,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Is_Main_Heating_HETAS_Approved"
-                                documentation = """Main heating appliance is HETAS approved? Only if solid fuel."""
+                                documentation = r"""Main heating appliance is HETAS approved? Only if solid fuel."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -14034,7 +14348,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14062,12 +14376,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Electric_CPSU_Operating_Temperature"
-                                documentation = """Electric CPSU operating temperature in Celcius; only if main heating is electric CPSU."""
+                                documentation = r"""Electric CPSU operating temperature in Celcius; only if main heating is electric CPSU."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -14083,7 +14398,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -14100,12 +14415,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Main_Heating_Fraction"
-                                documentation = """Fraction of main heating provided by this system, is 1 if only one main system."""
+                                documentation = r"""Fraction of main heating provided by this system, is 1 if only one main system."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -14121,7 +14437,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -14143,6 +14459,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'unknown', '2': 'on/off (gas and oil burners)', '3': 'modulating (gas and oil boilers)', '4': 'manual (solid fuel boilers)', '5': 'electrical (solid fuel boilers)'}
                                 map_values = {'unknown': '1', 'on/off (gas and oil burners)': '2', 'modulating (gas and oil boilers)': '3', 'manual (solid fuel boilers)': '4', 'electrical (solid fuel boilers)': '5'}
@@ -14155,7 +14472,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14188,6 +14505,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'not gas or oil boiler', '2': 'SEDBUK(2005)', '3': 'SEDBUK(2009)', '4': 'winter and summer'}
                                 map_values = {'not gas or oil boiler': '1', 'SEDBUK(2005)': '2', 'SEDBUK(2009)': '3', 'winter and summer': '4'}
@@ -14200,7 +14518,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14228,12 +14546,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Main_Heating_Efficiency_Winter"
-                                documentation = """To be used if main heating data is manufacturer declaration and Efficiency-Type is winter and summer."""
+                                documentation = r"""To be used if main heating data is manufacturer declaration and Efficiency-Type is winter and summer."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -14249,7 +14568,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -14266,12 +14585,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Main_Heating_Efficiency_Summer"
-                                documentation = """To be used if main heating data is manufacturer declaration and Efficiency-Type is winter and summer."""
+                                documentation = r"""To be used if main heating data is manufacturer declaration and Efficiency-Type is winter and summer."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -14287,7 +14607,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -14304,12 +14624,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Main_Heating_Efficiency"
-                                documentation = """If main heating is any system other than heat network."""
+                                documentation = r"""If main heating is any system other than heat network."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -14325,7 +14646,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -14342,11 +14663,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "Main_Heating_System_Type"
-                                documentation = """Main heating system type or technology, for e.g., combi boiler, air source heat pump, etc."""
+                                documentation = r"""Main heating system type or technology, for e.g., combi boiler, air source heat pump, etc."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -14376,11 +14698,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "Has_FGHRS"
-                                documentation = """Flue Gas Heat Recovery System."""
+                                documentation = r"""Flue Gas Heat Recovery System."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -14393,7 +14716,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14421,12 +14744,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:nonNegativeInteger"
                                 class_name = "FGHRS_Index_Number"
-                                documentation = """FGHRS index number; only if FGHRS."""
+                                documentation = r"""FGHRS index number; only if FGHRS."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -14442,7 +14766,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -14460,10 +14784,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 element_type = "SAP-Energy-Source"
                                 class_name = "FGHRS_Energy_Source"
                                 documentation = None
-                                type_documentation = """Details of the main Electricity supply to the Property."""
+                                type_documentation = r"""Details of the main Electricity supply to the Property."""
                                 has_text_node = False
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -14528,6 +14853,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = False
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = None
                                     python_type_convertor = None
                                     map_codes = None
                                     map_values = None
@@ -14556,6 +14882,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         has_text_node = False
                                         min_occurs = 1
                                         max_occurs = 3
+                                        python_type = None
                                         python_type_convertor = None
                                         map_codes = None
                                         map_values = None
@@ -14621,12 +14948,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "Measurement"
                                             class_name = "Peak_Power"
-                                            documentation = """Peak kW of photovoltaics (PVs) (kWp); 0.0 if none."""
+                                            documentation = r"""Peak kW of photovoltaics (PVs) (kWp); 0.0 if none."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 1
                                             max_occurs = 1
-                                            python_type_convertor = float
+                                            python_type = float
+                                            python_type_convertor = lambda x: x if x is None else float(x)
                                             map_codes = None
                                             map_values = None
                                             parent_class_name = "PV_Array"
@@ -14642,7 +14970,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                                 try:
                                                     return self.__class__.python_type_convertor(self.text)
                                                 except ValueError:
-                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -14659,11 +14987,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "SAP-CompassDirectionCode"
                                             class_name = "Orientation"
-                                            documentation = """PV orientation; only if peak kWp > 0."""
+                                            documentation = r"""PV orientation; only if peak kWp > 0."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
+                                            python_type = str
                                             python_type_convertor = str
                                             map_codes = {'1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', 'ND': 'To be used when the pitch is horizontal', 'NR': 'not recorded - for backwards compatibility only; do not use'}
                                             map_values = {'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'To be used when the pitch is horizontal': 'ND', 'not recorded - for backwards compatibility only; do not use': 'NR'}
@@ -14676,7 +15005,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self):
+                                            def value(self): 
                                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                                 else:
                                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14704,11 +15033,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "SAP-VerticalPitchCode"
                                             class_name = "Pitch"
-                                            documentation = """PV pitch; only if peak kWp > 0."""
+                                            documentation = r"""PV pitch; only if peak kWp > 0."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
+                                            python_type = str
                                             python_type_convertor = str
                                             map_codes = {'1': 'horizontal', '2': '30 degrees', '3': '45 degrees', '4': '60 degrees', '5': 'vertical'}
                                             map_values = {'horizontal': '1', '30 degrees': '2', '45 degrees': '3', '60 degrees': '4', 'vertical': '5'}
@@ -14721,7 +15051,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self):
+                                            def value(self): 
                                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                                 else:
                                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14749,11 +15079,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "SAP-SolarCollectorOvershadingCode"
                                             class_name = "Overshading"
-                                            documentation = """PV overshading; only if peak kWp > 0 and no MCS certificate."""
+                                            documentation = r"""PV overshading; only if peak kWp > 0 and no MCS certificate."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
+                                            python_type = str
                                             python_type_convertor = str
                                             map_codes = {'1': 'none or very little', '2': 'modest', '3': 'significant', '4': 'heavy', '5': 'severe', 'ND': 'for backwards compatability only; do not use'}
                                             map_values = {'none or very little': '1', 'modest': '2', 'significant': '3', 'heavy': '4', 'severe': '5', 'for backwards compatability only; do not use': 'ND'}
@@ -14766,7 +15097,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self):
+                                            def value(self): 
                                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                                 else:
                                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14794,11 +15125,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "xs:boolean"
                                             class_name = "MCS_Certificate"
-                                            documentation = """Does the installation have a MCS certificate."""
+                                            documentation = r"""Does the installation have a MCS certificate."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
+                                            python_type = bool
                                             python_type_convertor = bool
                                             map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                             map_values = {True: '1', False: '0'}
@@ -14811,7 +15143,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def pv_array(self): return self.getparent()
                                         
                                             @property
-                                            def value(self):
+                                            def value(self): 
                                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                                 else:
                                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -14839,11 +15171,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "xs:string"
                                             class_name = "MCS_Certificate_Reference"
-                                            documentation = """MCS certificate reference number"""
+                                            documentation = r"""MCS certificate reference number"""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
+                                            python_type = str
                                             python_type_convertor = str
                                             map_codes = None
                                             map_values = None
@@ -14873,11 +15206,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "xs:string"
                                             class_name = "PV_Panel_Manufacturer_Name"
-                                            documentation = """Manufacturer of PV panels"""
+                                            documentation = r"""Manufacturer of PV panels"""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
+                                            python_type = str
                                             python_type_convertor = str
                                             map_codes = None
                                             map_values = None
@@ -14907,12 +15241,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "xs:decimal"
                                             class_name = "Overshading_MCS"
-                                            documentation = """Overshading factor calculated according to MCS."""
+                                            documentation = r"""Overshading factor calculated according to MCS."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
-                                            python_type_convertor = float
+                                            python_type = float
+                                            python_type_convertor = lambda x: x if x is None else float(x)
                                             map_codes = None
                                             map_values = None
                                             parent_class_name = "PV_Array"
@@ -14928,7 +15263,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                                 try:
                                                     return self.__class__.python_type_convertor(self.text)
                                                 except ValueError:
-                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -14950,6 +15285,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = False
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = None
                                     python_type_convertor = None
                                     map_codes = None
                                     map_values = None
@@ -14978,6 +15314,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         has_text_node = False
                                         min_occurs = 1
                                         max_occurs = 99
+                                        python_type = None
                                         python_type_convertor = None
                                         map_codes = None
                                         map_values = None
@@ -15019,11 +15356,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "xs:string"
                                             class_name = "Wind_Turbine_Manufacturer_Name"
-                                            documentation = """Wind turbine manufacturer name."""
+                                            documentation = r"""Wind turbine manufacturer name."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
+                                            python_type = str
                                             python_type_convertor = str
                                             map_codes = None
                                             map_values = None
@@ -15053,11 +15391,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "xs:string"
                                             class_name = "Wind_Turbine_Certificate"
-                                            documentation = """Wind turbine certificate."""
+                                            documentation = r"""Wind turbine certificate."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 0
                                             max_occurs = 1
+                                            python_type = str
                                             python_type_convertor = str
                                             map_codes = None
                                             map_values = None
@@ -15087,12 +15426,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "Measurement"
                                             class_name = "Wind_Turbine_Rotor_Diameter"
-                                            documentation = """Wind turbine rotor diameter in metres; only if wind turbine."""
+                                            documentation = r"""Wind turbine rotor diameter in metres; only if wind turbine."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 1
                                             max_occurs = 1
-                                            python_type_convertor = float
+                                            python_type = float
+                                            python_type_convertor = lambda x: x if x is None else float(x)
                                             map_codes = None
                                             map_values = None
                                             parent_class_name = "Wind_Turbine"
@@ -15108,7 +15448,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                                 try:
                                                     return self.__class__.python_type_convertor(self.text)
                                                 except ValueError:
-                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -15125,12 +15465,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "Measurement"
                                             class_name = "Wind_Turbine_Hub_Height"
-                                            documentation = """Wind turbine hub height above building in metres; only if wind turbine."""
+                                            documentation = r"""Wind turbine hub height above building in metres; only if wind turbine."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 1
                                             max_occurs = 1
-                                            python_type_convertor = float
+                                            python_type = float
+                                            python_type_convertor = lambda x: x if x is None else float(x)
                                             map_codes = None
                                             map_values = None
                                             parent_class_name = "Wind_Turbine"
@@ -15146,7 +15487,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                                 try:
                                                     return self.__class__.python_type_convertor(self.text)
                                                 except ValueError:
-                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -15163,11 +15504,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "SAP-ElectricityTariffCode"
                                     class_name = "Electricity_Tariff"
-                                    documentation = """Type of electricity tariff."""
+                                    documentation = r"""Type of electricity tariff."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'1': 'standard tariff', '2': 'off-peak 7 hour', '3': 'off-peak 10 hour', '4': '24 hour', '5': 'off-peak 18 hour', 'ND': 'not applicable'}
                                     map_values = {'standard tariff': '1', 'off-peak 7 hour': '2', 'off-peak 10 hour': '3', '24 hour': '4', 'off-peak 18 hour': '5', 'not applicable': 'ND'}
@@ -15180,7 +15522,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def fghrs_energy_source(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15208,12 +15550,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:decimal"
                                     class_name = "Hydro_Electric_Generation"
-                                    documentation = """Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided."""
+                                    documentation = r"""Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "FGHRS_Energy_Source"
@@ -15229,7 +15572,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -15246,11 +15589,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:string"
                                     class_name = "Hydro_Electric_Certificate"
-                                    documentation = """Reference to certification of hydro electric output."""
+                                    documentation = r"""Reference to certification of hydro electric output."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -15280,11 +15624,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Hydro-Electric-Generation-Months"
                                     class_name = "Hydro_Electric_Generation_Months"
-                                    documentation = """Electricity generated by hydro-electric generator, in kWh/month. To be provided if Hydro-Electric-Generation is not provided."""
+                                    documentation = r"""Electricity generated by hydro-electric generator, in kWh/month. To be provided if Hydro-Electric-Generation is not provided."""
                                     type_documentation = None
                                     has_text_node = False
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = None
                                     python_type_convertor = None
                                     map_codes = None
                                     map_values = None
@@ -15313,6 +15658,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         has_text_node = False
                                         min_occurs = 12
                                         max_occurs = 12
+                                        python_type = None
                                         python_type_convertor = None
                                         map_codes = None
                                         map_values = None
@@ -15347,6 +15693,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             has_text_node = True
                                             min_occurs = 1
                                             max_occurs = 1
+                                            python_type = str
                                             python_type_convertor = str
                                             map_codes = {'Jan': '', 'Feb': '', 'Mar': '', 'Apr': '', 'May': '', 'Jun': '', 'Jul': '', 'Aug': '', 'Sep': '', 'Oct': '', 'Nov': '', 'Dec': ''}
                                             map_values = {'': 'Dec'}
@@ -15359,7 +15706,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             def hydro_electric_generation_month(self): return self.getparent()
                                         
                                             @property
-                                            def value(self):
+                                            def value(self): 
                                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                                 else:
                                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15387,12 +15734,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                             element_type = "xs:decimal"
                                             class_name = "Hydro_Value"
-                                            documentation = """Hydro electricity in kWh in month."""
+                                            documentation = r"""Hydro electricity in kWh in month."""
                                             type_documentation = None
                                             has_text_node = True
                                             min_occurs = 1
                                             max_occurs = 1
-                                            python_type_convertor = float
+                                            python_type = float
+                                            python_type_convertor = lambda x: x if x is None else float(x)
                                             map_codes = None
                                             map_values = None
                                             parent_class_name = "Hydro_Electric_Generation_Month"
@@ -15408,7 +15756,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                                 try:
                                                     return self.__class__.python_type_convertor(self.text)
                                                 except ValueError:
-                                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                         
                                             @value.setter
                                             def value(self, value): self.text = str(value)
@@ -15425,11 +15773,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:boolean"
                                     class_name = "Is_Hydro_Output_Connected_To_Dwelling_Meter"
-                                    documentation = """Whether the hydro-electric station is connected to dwelling's electricity meter"""
+                                    documentation = r"""Whether the hydro-electric station is connected to dwelling's electricity meter"""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = bool
                                     python_type_convertor = bool
                                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                     map_values = {True: '1', False: '0'}
@@ -15442,7 +15791,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def fghrs_energy_source(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15475,6 +15824,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = False
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -15515,7 +15865,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "Main_Heating_Declared_Values"
@@ -15531,7 +15882,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -15553,6 +15904,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -15587,6 +15939,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -15621,6 +15974,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = False
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -15649,6 +16003,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = False
                                     min_occurs = 1
                                     max_occurs = 4
+                                    python_type = None
                                     python_type_convertor = None
                                     map_codes = None
                                     map_values = None
@@ -15684,12 +16039,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                         element_type = "xs:positiveInteger"
                                         class_name = "Number_Of_Heaters"
-                                        documentation = """The number of storage heaters with this index number."""
+                                        documentation = r"""The number of storage heaters with this index number."""
                                         type_documentation = None
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
-                                        python_type_convertor = int
+                                        python_type = int
+                                        python_type_convertor = lambda x: x if x is None else int(x)
                                         map_codes = None
                                         map_values = None
                                         parent_class_name = "Storage_Heater"
@@ -15705,7 +16061,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             try:
                                                 return self.__class__.python_type_convertor(self.text)
                                             except ValueError:
-                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -15722,12 +16078,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                         element_type = "xs:positiveInteger"
                                         class_name = "Index_Number"
-                                        documentation = """The index number of the heater from the product database."""
+                                        documentation = r"""The index number of the heater from the product database."""
                                         type_documentation = None
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
-                                        python_type_convertor = int
+                                        python_type = int
+                                        python_type_convertor = lambda x: x if x is None else int(x)
                                         map_codes = None
                                         map_values = None
                                         parent_class_name = "Storage_Heater"
@@ -15743,7 +16100,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             try:
                                                 return self.__class__.python_type_convertor(self.text)
                                             except ValueError:
-                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -15760,11 +16117,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                         element_type = "xs:boolean"
                                         class_name = "High_Heat_Retention"
-                                        documentation = """Whether heater is high heat retention type."""
+                                        documentation = r"""Whether heater is high heat retention type."""
                                         type_documentation = None
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
+                                        python_type = bool
                                         python_type_convertor = bool
                                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                         map_values = {True: '1', False: '0'}
@@ -15777,7 +16135,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def storage_heater(self): return self.getparent()
                                     
                                         @property
-                                        def value(self):
+                                        def value(self): 
                                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                             else:
                                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15805,11 +16163,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "EmitterTemperatureCode"
                                 class_name = "Emitter_Temperature"
-                                documentation = """Gas and oil boilers and heat pump from database: 0, 1, 3 or 4 Other heat pump 0, 2 or 4. Other systems NA."""
+                                documentation = r"""Gas and oil boilers and heat pump from database: 0, 1, 3 or 4 Other heat pump 0, 2 or 4. Other systems NA."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'unknown', '1': 'over 45degC', '2': 'over 35degC', '3': 'over 35degC and less than or equal to 45degC', '4': 'less than or equal to 35degC', 'NA': 'not applicable for the heating system'}
                                 map_values = {'unknown': '0', 'over 45degC': '1', 'over 35degC': '2', 'over 35degC and less than or equal to 45degC': '3', 'less than or equal to 35degC': '4', 'not applicable for the heating system': 'NA'}
@@ -15822,7 +16181,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15850,11 +16209,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "MCS_Installed_Heat_Pump"
-                                documentation = """Whether heat pump was installed under the Microgeneration Certification Scheme."""
+                                documentation = r"""Whether heat pump was installed under the Microgeneration Certification Scheme."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -15867,7 +16227,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15895,11 +16255,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "PumpAge"
                                 class_name = "Central_Heating_Pump_Age"
-                                documentation = """Included for systems with a central heating pump, i.e. wet system."""
+                                documentation = r"""Included for systems with a central heating pump, i.e. wet system."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'0': 'unknown', '1': '2012 or earlier', '2': '2013 or later'}
                                 map_values = {'unknown': '0', '2012 or earlier': '1', '2013 or later': '2'}
@@ -15912,7 +16273,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def main_heating(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -15940,12 +16301,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:positiveInteger"
                                 class_name = "Control_Index_Number"
-                                documentation = """The ID of the controller from the product database."""
+                                documentation = r"""The ID of the controller from the product database."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Main_Heating"
@@ -15961,7 +16323,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -15983,6 +16345,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -16017,6 +16380,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -16051,6 +16415,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -16085,6 +16450,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -16119,6 +16485,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': '<= 125 litres per person per day'}
                         map_values = {'<= 125 litres per person per day': '1'}
@@ -16131,7 +16498,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16164,6 +16531,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'both main heating systems provide heat to the whole property', '2': 'the main heating systems are separate and heat different parts of the property'}
                         map_values = {'both main heating systems provide heat to the whole property': '1', 'the main heating systems are separate and heat different parts of the property': '2'}
@@ -16176,7 +16544,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16204,11 +16572,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Heating-Declared-Values"
                         class_name = "Secondary_Heating_Declared_Values"
-                        documentation = """Use when manufacturer's declared values."""
+                        documentation = r"""Use when manufacturer's declared values."""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -16249,7 +16618,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Secondary_Heating_Declared_Values"
@@ -16265,7 +16635,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16287,6 +16657,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -16321,6 +16692,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -16350,11 +16722,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "PipeworkInsulationCode"
                         class_name = "Primary_Pipework_Insulation"
-                        documentation = """Not applicable to combi boiler or instantaneous water heater."""
+                        documentation = r"""Not applicable to combi boiler or instantaneous water heater."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'not insulated', '2': 'first 1 metre from cylinder insulated', '3': 'all accessible pipework insulated', '4': 'fully insulated'}
                         map_values = {'not insulated': '1', 'first 1 metre from cylinder insulated': '2', 'all accessible pipework insulated': '3', 'fully insulated': '4'}
@@ -16367,7 +16740,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_heating(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16400,6 +16773,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -16537,11 +16911,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:string"
                             class_name = "Solar_Heating_Collector_Manufacturer"
-                            documentation = """Panel manufacturer"""
+                            documentation = r"""Panel manufacturer"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -16571,11 +16946,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:string"
                             class_name = "Solar_Heating_Certificate"
-                            documentation = """Solar heating certificate"""
+                            documentation = r"""Solar heating certificate"""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -16605,12 +16981,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "Measurement"
                             class_name = "Solar_Panel_Aperture_Area"
-                            documentation = """Panel aperture area in square metres."""
+                            documentation = r"""Panel aperture area in square metres."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -16626,7 +17003,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16643,11 +17020,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "SAP-SolarCollectorTypeCode"
                             class_name = "Solar_Panel_Collector_Type"
-                            documentation = """Type of solar panel collector."""
+                            documentation = r"""Type of solar panel collector."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'unglazed', '2': 'flat panel', '3': 'evacuated tube', 'ND': 'for backwards compatability only; do not use'}
                             map_values = {'unglazed': '1', 'flat panel': '2', 'evacuated tube': '3', 'for backwards compatability only; do not use': 'ND'}
@@ -16660,7 +17038,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16688,11 +17066,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "SAP-SolarCollectorDataSourceCode"
                             class_name = "Solar_Panel_Collector_Data_Source"
-                            documentation = """Source of solar panel collector data."""
+                            documentation = r"""Source of solar panel collector data."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'default', '2': 'declared values', 'ND': 'for backwards compatability only; do not use'}
                             map_values = {'default': '1', 'declared values': '2', 'for backwards compatability only; do not use': 'ND'}
@@ -16705,7 +17084,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16733,12 +17112,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "Percentage"
                             class_name = "Solar_Panel_Collector_Zero_Loss_Efficiency"
-                            documentation = """Collector zero-loss efficiency; only if declared values."""
+                            documentation = r"""Collector zero-loss efficiency; only if declared values."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -16754,7 +17134,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16771,12 +17151,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "Solar_Panel_Collector_Heat_Loss_Rate"
-                            documentation = """Collector heat loss rate; for backward compatibility only, do not use."""
+                            documentation = r"""Collector heat loss rate; for backward compatibility only, do not use."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -16792,7 +17173,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16809,12 +17190,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "Solar_Panel_Collector_Linear_Heat_Loss_Coefficient"
-                            documentation = """Collector linear heat loss coefficient; only if declared values."""
+                            documentation = r"""Collector linear heat loss coefficient; only if declared values."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -16830,7 +17212,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16847,12 +17229,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "Solar_Panel_Collector_Second_Order_Heat_Loss_Coefficient"
-                            documentation = """Collector 2nd order heat loss coefficient; only if declared values."""
+                            documentation = r"""Collector 2nd order heat loss coefficient; only if declared values."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -16868,7 +17251,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16885,11 +17268,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "SAP-CompassDirectionCode"
                             class_name = "Solar_Panel_Collector_Orientation"
-                            documentation = """Collector orientation."""
+                            documentation = r"""Collector orientation."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', 'ND': 'To be used when the pitch is horizontal', 'NR': 'not recorded - for backwards compatibility only; do not use'}
                             map_values = {'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'To be used when the pitch is horizontal': 'ND', 'not recorded - for backwards compatibility only; do not use': 'NR'}
@@ -16902,7 +17286,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -16935,7 +17319,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -16951,7 +17336,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -16973,6 +17358,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'none or very little', '2': 'modest', '3': 'significant', '4': 'heavy', '5': 'severe', 'ND': 'for backwards compatability only; do not use'}
                             map_values = {'none or very little': '1', 'modest': '2', 'significant': '3', 'heavy': '4', 'severe': '5', 'for backwards compatability only; do not use': 'ND'}
@@ -16985,7 +17371,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17018,6 +17404,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = bool
                             python_type_convertor = bool
                             map_codes = {'true': True, '1': True, 'false': False, '0': False}
                             map_values = {True: '1', False: '0'}
@@ -17030,7 +17417,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17063,6 +17450,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = bool
                             python_type_convertor = bool
                             map_codes = {'true': True, '1': True, 'false': False, '0': False}
                             map_values = {True: '1', False: '0'}
@@ -17075,7 +17463,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17103,12 +17491,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "Measurement"
                             class_name = "Solar_Store_Volume"
-                            documentation = """Dedicated solar store volume in litres."""
+                            documentation = r"""Dedicated solar store volume in litres."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -17124,7 +17513,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17141,12 +17530,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "Collector_Loop_Efficiency"
-                            documentation = """Collector loop efficiency; only if declared values."""
+                            documentation = r"""Collector loop efficiency; only if declared values."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -17162,7 +17552,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17179,12 +17569,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "Incidence_Angle_Modifier"
-                            documentation = """Incidence angle modifier; only if declared values."""
+                            documentation = r"""Incidence angle modifier; only if declared values."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -17200,7 +17591,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17222,6 +17613,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = bool
                             python_type_convertor = bool
                             map_codes = {'true': True, '1': True, 'false': False, '0': False}
                             map_values = {True: '1', False: '0'}
@@ -17234,7 +17626,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17267,6 +17659,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'space and water heating', '2': 'space heating only', '3': 'water heating only'}
                             map_values = {'space and water heating': '1', 'space heating only': '2', 'water heating only': '3'}
@@ -17279,7 +17672,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def solar_heating_details(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -17307,12 +17700,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "Overall_Heat_Loss"
-                            documentation = """Overall heat loss coefficient of system; only if declared values."""
+                            documentation = r"""Overall heat loss coefficient of system; only if declared values."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Solar_Heating_Details"
@@ -17328,7 +17722,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17345,11 +17739,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Instantaneous-WWHRS"
                         class_name = "Instantaneous_WWHRS"
-                        documentation = """Waste Water Heat Recovery System."""
+                        documentation = r"""Waste Water Heat Recovery System."""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -17420,7 +17815,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Instantaneous_WWHRS"
@@ -17436,7 +17832,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17453,12 +17849,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:positiveInteger"
                             class_name = "WWHRS_Index_Number2"
-                            documentation = """Omit if no second system."""
+                            documentation = r"""Omit if no second system."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Instantaneous_WWHRS"
@@ -17474,7 +17871,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17496,7 +17893,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Instantaneous_WWHRS"
@@ -17512,7 +17910,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17534,6 +17932,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -17568,6 +17967,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -17602,7 +18002,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Instantaneous_WWHRS"
@@ -17618,7 +18019,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17640,6 +18041,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -17674,6 +18076,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -17708,6 +18111,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -17760,7 +18164,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Storage_WWHRS"
@@ -17776,7 +18181,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17793,12 +18198,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "Measurement"
                             class_name = "WWHRS_Store_Volume"
-                            documentation = """Dedicated store volume in litres."""
+                            documentation = r"""Dedicated store volume in litres."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Storage_WWHRS"
@@ -17814,7 +18220,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17836,7 +18242,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "Storage_WWHRS"
@@ -17852,7 +18259,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -17874,6 +18281,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -17908,6 +18316,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -17938,10 +18347,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         element_type = "Shower-Outlets"
                         class_name = "Shower_Outlets"
                         documentation = None
-                        type_documentation = """Shower outlets present in the dwelling. If there are more than 5 then only include the 5 with the highest flow rates used."""
+                        type_documentation = r"""Shower outlets present in the dwelling. If there are more than 5 then only include the 5 with the highest flow rates used."""
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -17966,10 +18376,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             element_type = "Shower-Outlet"
                             class_name = "Shower_Outlet"
                             documentation = None
-                            type_documentation = """Various details for each shower outlet."""
+                            type_documentation = r"""Various details for each shower outlet."""
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 5
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -18011,11 +18422,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "ShowerOutletTypeCode"
                                 class_name = "Shower_Outlet_Type"
-                                documentation = """Hot water type for this shower outlet."""
+                                documentation = r"""Hot water type for this shower outlet."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'Vented hot water system', '2': 'Vented hot water system + pump', '3': 'Unvented hot water system', '4': 'Instantaneous electric shower', '5': 'Part G 2015 compliant'}
                                 map_values = {'Vented hot water system': '1', 'Vented hot water system + pump': '2', 'Unvented hot water system': '3', 'Instantaneous electric shower': '4', 'Part G 2015 compliant': '5'}
@@ -18028,7 +18440,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def shower_outlet(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18056,12 +18468,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Shower_Flow_Rate"
-                                documentation = """The flow rate. Only when a shower is not instantaneous electric. Leave blank if NO flow limiter fitted."""
+                                documentation = r"""The flow rate. Only when a shower is not instantaneous electric. Leave blank if NO flow limiter fitted."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Shower_Outlet"
@@ -18077,7 +18490,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -18094,12 +18507,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Shower_Power"
-                                documentation = """The shower power, only if shower outlet type is instantaneous electric."""
+                                documentation = r"""The shower power, only if shower outlet type is instantaneous electric."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Shower_Outlet"
@@ -18115,7 +18529,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -18132,11 +18546,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "ShowerWWHRSCode"
                                 class_name = "Shower_WWHRS"
-                                documentation = """The WWHRS with which the shower is connected. If shower outlet type is instantaneous electric shower then only a storage WWHRS can be selected or none."""
+                                documentation = r"""The WWHRS with which the shower is connected. If shower outlet type is instantaneous electric shower then only a storage WWHRS can be selected or none."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'none', '2': 'Instantaneous WWHRS 1', '3': 'Instantaneous WWHRS 2', '4': 'Storage WWHRS'}
                                 map_values = {'none': '1', 'Instantaneous WWHRS 1': '2', 'Instantaneous WWHRS 2': '3', 'Storage WWHRS': '4'}
@@ -18149,7 +18564,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def shower_outlet(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18182,7 +18597,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -18198,7 +18614,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -18220,7 +18636,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Heating"
@@ -18236,7 +18653,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -18254,10 +18671,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Energy-Source"
                     class_name = "SAP_Energy_Source"
                     documentation = None
-                    type_documentation = """Details of the main Electricity supply to the Property."""
+                    type_documentation = r"""Details of the main Electricity supply to the Property."""
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -18322,6 +18740,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -18350,6 +18769,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 3
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -18415,12 +18835,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Peak_Power"
-                                documentation = """Peak kW of photovoltaics (PVs) (kWp); 0.0 if none."""
+                                documentation = r"""Peak kW of photovoltaics (PVs) (kWp); 0.0 if none."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "PV_Array"
@@ -18436,7 +18857,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -18453,11 +18874,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-CompassDirectionCode"
                                 class_name = "Orientation"
-                                documentation = """PV orientation; only if peak kWp > 0."""
+                                documentation = r"""PV orientation; only if peak kWp > 0."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', 'ND': 'To be used when the pitch is horizontal', 'NR': 'not recorded - for backwards compatibility only; do not use'}
                                 map_values = {'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'To be used when the pitch is horizontal': 'ND', 'not recorded - for backwards compatibility only; do not use': 'NR'}
@@ -18470,7 +18892,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18498,11 +18920,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-VerticalPitchCode"
                                 class_name = "Pitch"
-                                documentation = """PV pitch; only if peak kWp > 0."""
+                                documentation = r"""PV pitch; only if peak kWp > 0."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'horizontal', '2': '30 degrees', '3': '45 degrees', '4': '60 degrees', '5': 'vertical'}
                                 map_values = {'horizontal': '1', '30 degrees': '2', '45 degrees': '3', '60 degrees': '4', 'vertical': '5'}
@@ -18515,7 +18938,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18543,11 +18966,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-SolarCollectorOvershadingCode"
                                 class_name = "Overshading"
-                                documentation = """PV overshading; only if peak kWp > 0 and no MCS certificate."""
+                                documentation = r"""PV overshading; only if peak kWp > 0 and no MCS certificate."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'none or very little', '2': 'modest', '3': 'significant', '4': 'heavy', '5': 'severe', 'ND': 'for backwards compatability only; do not use'}
                                 map_values = {'none or very little': '1', 'modest': '2', 'significant': '3', 'heavy': '4', 'severe': '5', 'for backwards compatability only; do not use': 'ND'}
@@ -18560,7 +18984,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18588,11 +19012,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:boolean"
                                 class_name = "MCS_Certificate"
-                                documentation = """Does the installation have a MCS certificate."""
+                                documentation = r"""Does the installation have a MCS certificate."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = bool
                                 python_type_convertor = bool
                                 map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                 map_values = {True: '1', False: '0'}
@@ -18605,7 +19030,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def pv_array(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -18633,11 +19058,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "MCS_Certificate_Reference"
-                                documentation = """MCS certificate reference number"""
+                                documentation = r"""MCS certificate reference number"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -18667,11 +19093,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "PV_Panel_Manufacturer_Name"
-                                documentation = """Manufacturer of PV panels"""
+                                documentation = r"""Manufacturer of PV panels"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -18701,12 +19128,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Overshading_MCS"
-                                documentation = """Overshading factor calculated according to MCS."""
+                                documentation = r"""Overshading factor calculated according to MCS."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "PV_Array"
@@ -18722,7 +19150,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -18744,6 +19172,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -18772,6 +19201,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 99
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -18813,11 +19243,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "Wind_Turbine_Manufacturer_Name"
-                                documentation = """Wind turbine manufacturer name."""
+                                documentation = r"""Wind turbine manufacturer name."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -18847,11 +19278,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "Wind_Turbine_Certificate"
-                                documentation = """Wind turbine certificate."""
+                                documentation = r"""Wind turbine certificate."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -18881,12 +19313,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Wind_Turbine_Rotor_Diameter"
-                                documentation = """Wind turbine rotor diameter in metres; only if wind turbine."""
+                                documentation = r"""Wind turbine rotor diameter in metres; only if wind turbine."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Wind_Turbine"
@@ -18902,7 +19335,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -18919,12 +19352,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Wind_Turbine_Hub_Height"
-                                documentation = """Wind turbine hub height above building in metres; only if wind turbine."""
+                                documentation = r"""Wind turbine hub height above building in metres; only if wind turbine."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Wind_Turbine"
@@ -18940,7 +19374,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -18957,11 +19391,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-ElectricityTariffCode"
                         class_name = "Electricity_Tariff"
-                        documentation = """Type of electricity tariff."""
+                        documentation = r"""Type of electricity tariff."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'standard tariff', '2': 'off-peak 7 hour', '3': 'off-peak 10 hour', '4': '24 hour', '5': 'off-peak 18 hour', 'ND': 'not applicable'}
                         map_values = {'standard tariff': '1', 'off-peak 7 hour': '2', 'off-peak 10 hour': '3', '24 hour': '4', 'off-peak 18 hour': '5', 'not applicable': 'ND'}
@@ -18974,7 +19409,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_energy_source(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19002,12 +19437,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:decimal"
                         class_name = "Hydro_Electric_Generation"
-                        documentation = """Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided."""
+                        documentation = r"""Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Energy_Source"
@@ -19023,7 +19459,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -19040,11 +19476,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Hydro_Electric_Certificate"
-                        documentation = """Reference to certification of hydro electric output."""
+                        documentation = r"""Reference to certification of hydro electric output."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -19074,11 +19511,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Hydro-Electric-Generation-Months"
                         class_name = "Hydro_Electric_Generation_Months"
-                        documentation = """Electricity generated by hydro-electric generator, in kWh/month. To be provided if Hydro-Electric-Generation is not provided."""
+                        documentation = r"""Electricity generated by hydro-electric generator, in kWh/month. To be provided if Hydro-Electric-Generation is not provided."""
                         type_documentation = None
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -19107,6 +19545,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = False
                             min_occurs = 12
                             max_occurs = 12
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -19141,6 +19580,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'Jan': '', 'Feb': '', 'Mar': '', 'Apr': '', 'May': '', 'Jun': '', 'Jul': '', 'Aug': '', 'Sep': '', 'Oct': '', 'Nov': '', 'Dec': ''}
                                 map_values = {'': 'Dec'}
@@ -19153,7 +19593,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def hydro_electric_generation_month(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19181,12 +19621,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Hydro_Value"
-                                documentation = """Hydro electricity in kWh in month."""
+                                documentation = r"""Hydro electricity in kWh in month."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Hydro_Electric_Generation_Month"
@@ -19202,7 +19643,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -19219,11 +19660,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Is_Hydro_Output_Connected_To_Dwelling_Meter"
-                        documentation = """Whether the hydro-electric station is connected to dwelling's electricity meter"""
+                        documentation = r"""Whether the hydro-electric station is connected to dwelling's electricity meter"""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -19236,7 +19678,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_energy_source(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19265,10 +19707,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Building-Parts"
                     class_name = "SAP_Building_Parts"
                     documentation = None
-                    type_documentation = """Details of the significant building parts that comprise the main habitable building in the property. The main habitable area generally consists of a single main building but can over time be extended to include extensions such as new wings and additional storeys. For the purpose of calculating the overall Energy Assessment for the property details of each distinct Building Part, such as its construction, have to be gathered because different materials have different insulation ratings (obviously) which affects the overall rating."""
+                    type_documentation = r"""Details of the significant building parts that comprise the main habitable building in the property. The main habitable area generally consists of a single main building but can over time be extended to include extensions such as new wings and additional storeys. For the purpose of calculating the overall Energy Assessment for the property details of each distinct Building Part, such as its construction, have to be gathered because different materials have different insulation ratings (obviously) which affects the overall rating."""
                     has_text_node = False
                     min_occurs = 1
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -19293,10 +19736,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         element_type = "SAP-Building-Part"
                         class_name = "SAP_Building_Part"
                         documentation = None
-                        type_documentation = """A permanent structure that forms part of the Property and is built primarily for human habitation. A Building Part is usually made up of one or more Storey's and may contain a number of Internal Structural Features. An extension is also a Building Part."""
+                        type_documentation = r"""A permanent structure that forms part of the Property and is built primarily for human habitation. A Building Part is usually made up of one or more Storey's and may contain a number of Internal Structural Features. An extension is also a Building Part."""
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = "unbounded"
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -19368,12 +19812,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:positiveInteger"
                             class_name = "Building_Part_Number"
-                            documentation = """An integer value which uniquely identifies the building part in the property. The value "1" must be assigned to the main dwelling."""
+                            documentation = r"""An integer value which uniquely identifies the building part in the property. The value "1" must be assigned to the main dwelling."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Building_Part"
@@ -19389,7 +19834,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -19406,11 +19851,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "IDString"
                             class_name = "Identifier"
-                            documentation = """Identifier for the Building part - generally only required if there are more that one Building Parts of the same type e.g. "West Wing" and "East Wing" Extensions"""
-                            type_documentation = """A string containing a unique identifier for something. The underlying assumption is that each instance of a class or entity will have a unique identifier assigned to it which can then be assigned to any referencing entity as a reference to the entity instance. This is a very similar concept to XML ID datatype but is locally defined because of the need to extend the datatype with domain specific attributes."""
+                            documentation = r"""Identifier for the Building part - generally only required if there are more that one Building Parts of the same type e.g. "West Wing" and "East Wing" Extensions"""
+                            type_documentation = r"""A string containing a unique identifier for something. The underlying assumption is that each instance of a class or entity will have a unique identifier assigned to it which can then be assigned to any referencing entity as a reference to the entity instance. This is a very similar concept to XML ID datatype but is locally defined because of the need to extend the datatype with domain specific attributes."""
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -19440,12 +19886,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:nonNegativeInteger"
                             class_name = "Construction_Year"
-                            documentation = """The year when this building part was constructed. Not used if 'Construction-Age-Band' is used."""
+                            documentation = r"""The year when this building part was constructed. Not used if 'Construction-Age-Band' is used."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = int
+                            python_type = int
+                            python_type_convertor = lambda x: x if x is None else int(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Building_Part"
@@ -19461,7 +19908,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -19478,11 +19925,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "ConstructionDateCode"
                             class_name = "Construction_Age_Band"
-                            documentation = """The age band when this building part was constructed. Not used if 'Construction-Year' is used."""
+                            documentation = r"""The age band when this building part was constructed. Not used if 'Construction-Year' is used."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'A': 'England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919', 'B': 'England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929', 'C': 'England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949', 'D': 'England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973', 'E': 'England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977', 'F': 'England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985', 'G': 'England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991', 'H': 'England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999', 'I': 'England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006', 'J': 'England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable', 'K': 'England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013', 'L': 'England and Wales: 2012 onwards; Scotland: 2012 onwards; Northern Ireland: 2014 onwards'}
                             map_values = {'England and Wales: before 1900; Scotland: before 1919; Northern Ireland: before 1919': 'A', 'England and Wales: 1900-1929; Scotland: 1919-1929; Northern Ireland: 1919-1929': 'B', 'England and Wales: 1930-1949; Scotland: 1930-1949; Northern Ireland: 1930-1949': 'C', 'England and Wales: 1950-1966; Scotland: 1950-1964; Northern Ireland: 1950-1973': 'D', 'England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977': 'E', 'England and Wales: 1976-1982; Scotland: 1976-1983; Northern Ireland: 1978-1985': 'F', 'England and Wales: 1983-1990; Scotland: 1984-1991; Northern Ireland: 1986-1991': 'G', 'England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999': 'H', 'England and Wales: 1996-2002; Scotland: 1999-2002; Northern Ireland: 2000-2006': 'I', 'England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable': 'J', 'England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013': 'K', 'England and Wales: 2012 onwards; Scotland: 2012 onwards; Northern Ireland: 2014 onwards': 'L'}
@@ -19495,7 +19943,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_building_part(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19524,10 +19972,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             element_type = "SAP-Openings"
                             class_name = "SAP_Openings"
                             documentation = None
-                            type_documentation = """Exposed openings that make up a particular Building-Part."""
+                            type_documentation = r"""Exposed openings that make up a particular Building-Part."""
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -19552,10 +20001,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 element_type = "SAP-Opening"
                                 class_name = "SAP_Opening"
                                 documentation = None
-                                type_documentation = """Various measurements for each exposed opening that makes up a particular Building-Part."""
+                                type_documentation = r"""Various measurements for each exposed opening that makes up a particular Building-Part."""
                                 has_text_node = False
                                 min_occurs = 1
                                 max_occurs = "unbounded"
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -19615,11 +20065,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:string"
                                     class_name = "Name"
-                                    documentation = """Unique name which identifies this opening. Can be just a number, e.g. "1". However, an opening cannot have the same name as a wall."""
+                                    documentation = r"""Unique name which identifies this opening. Can be just a number, e.g. "1". However, an opening cannot have the same name as a wall."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -19649,11 +20100,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:string"
                                     class_name = "Type"
-                                    documentation = """The name of the SAP-Opening-Type for this opening."""
+                                    documentation = r"""The name of the SAP-Opening-Type for this opening."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -19683,11 +20135,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:string"
                                     class_name = "Location"
-                                    documentation = """Name of the wall or roof which contains the opening."""
+                                    documentation = r"""Name of the wall or roof which contains the opening."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -19717,11 +20170,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "SAP-OrientationCode"
                                     class_name = "Orientation"
-                                    documentation = """Compass direction in which the opening faces."""
+                                    documentation = r"""Compass direction in which the opening faces."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'0': 'unknown or unspecified', '1': 'North', '2': 'North East', '3': 'East', '4': 'South East', '5': 'South', '6': 'South West', '7': 'West', '8': 'North West', '9': 'Horizontal (windows and roof windows only)'}
                                     map_values = {'unknown or unspecified': '0', 'North': '1', 'North East': '2', 'East': '3', 'South East': '4', 'South': '5', 'South West': '6', 'West': '7', 'North West': '8', 'Horizontal (windows and roof windows only)': '9'}
@@ -19734,7 +20188,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_opening(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -19762,12 +20216,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Width"
-                                    documentation = """The width of the opening in metres. If the Width field is used to record the opening area, set the Height to 1."""
+                                    documentation = r"""The width of the opening in metres. If the Width field is used to record the opening area, set the Height to 1."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Opening"
@@ -19783,7 +20238,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19800,12 +20255,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Height"
-                                    documentation = """The height of the opening in metres. If the Height field is used to record the opening area, set the Width to 1."""
+                                    documentation = r"""The height of the opening in metres. If the Height field is used to record the opening area, set the Width to 1."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Opening"
@@ -19821,7 +20277,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19838,12 +20294,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "SAP-VerticalPitch"
                                     class_name = "Pitch"
-                                    documentation = """Pitch of roof containing roof window."""
+                                    documentation = r"""Pitch of roof containing roof window."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
-                                    python_type_convertor = int
+                                    python_type = int
+                                    python_type_convertor = lambda x: x if x is None else int(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Opening"
@@ -19859,7 +20316,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -19877,10 +20334,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             element_type = "SAP-Roofs"
                             class_name = "SAP_Roofs"
                             documentation = None
-                            type_documentation = """Exposed roofs that make up a particular Building-Part."""
+                            type_documentation = r"""Exposed roofs that make up a particular Building-Part."""
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -19905,10 +20363,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 element_type = "SAP-Roof"
                                 class_name = "SAP_Roof"
                                 documentation = None
-                                type_documentation = """Various measurements for each exposed roof that makes up a particular Building-Part."""
+                                type_documentation = r"""Various measurements for each exposed roof that makes up a particular Building-Part."""
                                 has_text_node = False
                                 min_occurs = 1
                                 max_occurs = "unbounded"
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -19962,11 +20421,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:string"
                                     class_name = "Name"
-                                    documentation = """Unique name which identifies this roof. Can be just a number, e.g. "1". However, a roof cannot have the same name as a wall."""
+                                    documentation = r"""Unique name which identifies this roof. Can be just a number, e.g. "1". However, a roof cannot have the same name as a wall."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -19996,11 +20456,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Sentence"
                                     class_name = "Description"
-                                    documentation = """Descriptive notes about the roof."""
-                                    type_documentation = """String value with a language code for natural-language text."""
+                                    documentation = r"""Descriptive notes about the roof."""
+                                    type_documentation = r"""String value with a language code for natural-language text."""
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -20035,6 +20496,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'2': 'exposed roof', '4': 'party ceiling'}
                                     map_values = {'exposed roof': '2', 'party ceiling': '4'}
@@ -20047,7 +20509,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_roof(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20075,12 +20537,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Total_Roof_Area"
-                                    documentation = """Total roof area in square metres, inclusive of any openings."""
+                                    documentation = r"""Total roof area in square metres, inclusive of any openings."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Roof"
@@ -20096,7 +20559,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20113,12 +20576,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:decimal"
                                     class_name = "U_Value"
-                                    documentation = """Exposed roof U-value."""
+                                    documentation = r"""Exposed roof U-value."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Roof"
@@ -20134,7 +20598,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20151,12 +20615,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:decimal"
                                     class_name = "Kappa_Value"
-                                    documentation = """Heat capacity per unit area in kJ/m2K."""
+                                    documentation = r"""Heat capacity per unit area in kJ/m2K."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Roof"
@@ -20172,7 +20637,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20190,10 +20655,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             element_type = "SAP-Floor-Dimensions"
                             class_name = "SAP_Floor_Dimensions"
                             documentation = None
-                            type_documentation = """Storeys that make up a particular Building-Part."""
+                            type_documentation = r"""Storeys that make up a particular Building-Part."""
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -20218,10 +20684,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 element_type = "SAP-Floor-Dimension"
                                 class_name = "SAP_Floor_Dimension"
                                 documentation = None
-                                type_documentation = """Various measurements for the floor of a particular storey."""
+                                type_documentation = r"""Various measurements for the floor of a particular storey."""
                                 has_text_node = False
                                 min_occurs = 1
                                 max_occurs = "unbounded"
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -20299,11 +20766,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:string"
                                     class_name = "Name"
-                                    documentation = """A name describing the floor dimensioned."""
+                                    documentation = r"""A name describing the floor dimensioned."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -20333,11 +20801,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "SAP-StoreyFloorCode"
                                     class_name = "Storey"
-                                    documentation = """Building storey on which the floor is located."""
+                                    documentation = r"""Building storey on which the floor is located."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'-1': 'Lower ground', '0': 'Ground', '1': '1st', '2': '2nd', '3': '3rd', '4': '4th', '5': '5th', '6': '6th', '99': 'Roof rooms'}
                                     map_values = {'Lower ground': '-1', 'Ground': '0', '1st': '1', '2nd': '2', '3rd': '3', '4th': '4', '5th': '5', '6th': '6', 'Roof rooms': '99'}
@@ -20350,7 +20819,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20378,11 +20847,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Sentence"
                                     class_name = "Description"
-                                    documentation = """Descriptive notes about the floor."""
-                                    type_documentation = """String value with a language code for natural-language text."""
+                                    documentation = r"""Descriptive notes about the floor."""
+                                    type_documentation = r"""String value with a language code for natural-language text."""
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -20412,11 +20882,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "SAP-FloorTypeCode"
                                     class_name = "Floor_Type"
-                                    documentation = """Type of floor (exposure)."""
+                                    documentation = r"""Type of floor (exposure)."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'1': 'basement floor', '2': 'ground floor', '3': 'upper floor (if heat loss area > 0, this area is an exposed floor)', '4': 'party floor'}
                                     map_values = {'basement floor': '1', 'ground floor': '2', 'upper floor (if heat loss area > 0, this area is an exposed floor)': '3', 'party floor': '4'}
@@ -20429,7 +20900,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_floor_dimension(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20457,12 +20928,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Total_Floor_Area"
-                                    documentation = """The total floor area of the storey in square metres."""
+                                    documentation = r"""The total floor area of the storey in square metres."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Floor_Dimension"
@@ -20478,7 +20950,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20495,12 +20967,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Storey_Height"
-                                    documentation = """Average height of the storey in metres."""
+                                    documentation = r"""Average height of the storey in metres."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Floor_Dimension"
@@ -20516,7 +20989,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20533,12 +21006,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Heat_Loss_Area"
-                                    documentation = """The estimated total heat loss area for the floor in square metres."""
+                                    documentation = r"""The estimated total heat loss area for the floor in square metres."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Floor_Dimension"
@@ -20554,7 +21028,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20571,12 +21045,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:decimal"
                                     class_name = "U_Value"
-                                    documentation = """Heat loss floor U-value."""
+                                    documentation = r"""Heat loss floor U-value."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Floor_Dimension"
@@ -20592,7 +21067,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20609,12 +21084,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:decimal"
                                     class_name = "Kappa_Value"
-                                    documentation = """Heat capacity of floor per unit area in kJ/m2K."""
+                                    documentation = r"""Heat capacity of floor per unit area in kJ/m2K."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Floor_Dimension"
@@ -20630,7 +21106,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20647,12 +21123,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:decimal"
                                     class_name = "Kappa_Value_From_Below"
-                                    documentation = """Heat capacity of ceiling below. Applies to the non-heat-loss area of an upper floor."""
+                                    documentation = r"""Heat capacity of ceiling below. Applies to the non-heat-loss area of an upper floor."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Floor_Dimension"
@@ -20668,7 +21145,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20686,10 +21163,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             element_type = "SAP-Thermal-Bridges"
                             class_name = "SAP_Thermal_Bridges"
                             documentation = None
-                            type_documentation = """Thermal bridges that make up a particular Building-Part."""
+                            type_documentation = r"""Thermal bridges that make up a particular Building-Part."""
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -20731,11 +21209,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "SAP-ThermalBridgeCode"
                                 class_name = "Thermal_Bridge_Code"
-                                documentation = """Code which indicates how the thermal bridge data has been recorded."""
+                                documentation = r"""Code which indicates how the thermal bridge data has been recorded."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'default', '2': '2002 regulations. For backwards compatibility only, do not use.', '3': 'accredited. For backwards compatibility only, do not use.', '4': 'user defined (global y-value)', '5': 'user defined (individual values)'}
                                 map_values = {'default': '1', '2002 regulations. For backwards compatibility only, do not use.': '2', 'accredited. For backwards compatibility only, do not use.': '3', 'user defined (global y-value)': '4', 'user defined (individual values)': '5'}
@@ -20748,7 +21227,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def sap_thermal_bridges(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20776,12 +21255,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "User_Defined_Y_Value"
-                                documentation = """Global y-value for all thermal bridges in watts per square metre per kelvin; only if thermal bridge code is: user defined (global y-value)"""
+                                documentation = r"""Global y-value for all thermal bridges in watts per square metre per kelvin; only if thermal bridge code is: user defined (global y-value)"""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "SAP_Thermal_Bridges"
@@ -20797,7 +21277,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -20814,11 +21294,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:string"
                                 class_name = "Calculation_Reference"
-                                documentation = """Reference to the details of the calculation of the global y-value; only if thermal bridging is user defined global y-value."""
+                                documentation = r"""Reference to the details of the calculation of the global y-value; only if thermal bridging is user defined global y-value."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = None
                                 map_values = None
@@ -20849,10 +21330,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 element_type = "SAP-Thermal-Bridge"
                                 class_name = "SAP_Thermal_Bridge"
                                 documentation = None
-                                type_documentation = """Various measurements for each thermal bridge that makes up a particular Building-Part."""
+                                type_documentation = r"""Various measurements for each thermal bridge that makes up a particular Building-Part."""
                                 has_text_node = False
                                 min_occurs = 0
                                 max_occurs = "unbounded"
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -20900,11 +21382,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "SAP-ThermalBridgeTypeCode"
                                     class_name = "Thermal_Bridge_Type"
-                                    documentation = """Code to indicate a particular type of thermal bridge; only if thermal bridge code is: user defined (individual values)."""
+                                    documentation = r"""Code to indicate a particular type of thermal bridge; only if thermal bridge code is: user defined (individual values)."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'ND': 'not defined (for backward compatibility only, do not use)', 'E1': 'Steel lintel with perforated steel base plate', 'E2': 'Other lintels (including other steel lintels)', 'E3': 'Sill', 'E4': 'Jamb', 'E5': 'Ground floor (normal)', 'E6': 'Intermediate floor within a dwelling', 'E7': 'Party floor between dwellings (in blocks of flats)', 'E8': 'Balcony within a dwelling, wall insulation continuous', 'E9': 'Balcony between dwellings, wall insulation continuous', 'E10': 'Eaves (insulation at ceiling level)', 'E11': 'Eaves (insulation at rafter level)', 'E12': 'Gable (insulation at ceiling level)', 'E13': 'Gable (insulation at rafter level)', 'E14': 'Flat roof', 'E15': 'Flat roof with parapet', 'E16': 'Corner (normal)', 'E17': 'Corner (inverted - internal area greater than external area)', 'E18': 'Party wall between dwellings', 'E19': 'Ground floor (inverted)', 'E20': 'Exposed floor (normal)', 'E21': 'Exposed floor (inverted)', 'E22': 'Basement floor', 'E23': 'Balcony within or between dwellings, balcony support penetrates wall insulation', 'E24': 'Eaves (insulation at ceiling level - inverted)', 'E25': 'Staggered party wall between dwellings', 'P1': 'Ground floor', 'P2': 'Intermediate floor within a dwelling', 'P3': 'Intermediate floor between dwellings (in blocks of flats)', 'P4': 'Roof (insulation at ceiling level)', 'P5': 'Roof (insulation at rafter level)', 'P6': 'Ground floor (inverted)', 'P7': 'Exposed floor (normal)', 'P8': 'Exposed floor (inverted)', 'R1': 'Head of roof window', 'R2': 'Sill of roof window', 'R3': 'Jamb of roof window', 'R4': 'Ridge (vaulted ceiling)', 'R5': 'Ridge (inverted)', 'R6': 'Flat ceiling', 'R7': 'Flat ceiling (inverted)', 'R8': 'Roof to wall (rafter)', 'R9': 'Roof to wall (flat ceiling)', 'R10': 'All other roof or room-in-roof junctions', 'R11': 'Upstands or kerbs of rooflights', 'O1': 'other type 1', 'O2': 'other type 2'}
                                     map_values = {'not defined (for backward compatibility only, do not use)': 'ND', 'Steel lintel with perforated steel base plate': 'E1', 'Other lintels (including other steel lintels)': 'E2', 'Sill': 'E3', 'Jamb': 'E4', 'Ground floor (normal)': 'E5', 'Intermediate floor within a dwelling': 'P2', 'Party floor between dwellings (in blocks of flats)': 'E7', 'Balcony within a dwelling, wall insulation continuous': 'E8', 'Balcony between dwellings, wall insulation continuous': 'E9', 'Eaves (insulation at ceiling level)': 'E10', 'Eaves (insulation at rafter level)': 'E11', 'Gable (insulation at ceiling level)': 'E12', 'Gable (insulation at rafter level)': 'E13', 'Flat roof': 'E14', 'Flat roof with parapet': 'E15', 'Corner (normal)': 'E16', 'Corner (inverted - internal area greater than external area)': 'E17', 'Party wall between dwellings': 'E18', 'Ground floor (inverted)': 'P6', 'Exposed floor (normal)': 'P7', 'Exposed floor (inverted)': 'P8', 'Basement floor': 'E22', 'Balcony within or between dwellings, balcony support penetrates wall insulation': 'E23', 'Eaves (insulation at ceiling level - inverted)': 'E24', 'Staggered party wall between dwellings': 'E25', 'Ground floor': 'P1', 'Intermediate floor between dwellings (in blocks of flats)': 'P3', 'Roof (insulation at ceiling level)': 'P4', 'Roof (insulation at rafter level)': 'P5', 'Head of roof window': 'R1', 'Sill of roof window': 'R2', 'Jamb of roof window': 'R3', 'Ridge (vaulted ceiling)': 'R4', 'Ridge (inverted)': 'R5', 'Flat ceiling': 'R6', 'Flat ceiling (inverted)': 'R7', 'Roof to wall (rafter)': 'R8', 'Roof to wall (flat ceiling)': 'R9', 'All other roof or room-in-roof junctions': 'R10', 'Upstands or kerbs of rooflights': 'R11', 'other type 1': 'O1', 'other type 2': 'O2'}
@@ -20917,7 +21400,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_thermal_bridge(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -20945,12 +21428,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Length"
-                                    documentation = """Length of the thermal bridge in metres; only if thermal bridge code is: user defined (individual values)."""
+                                    documentation = r"""Length of the thermal bridge in metres; only if thermal bridge code is: user defined (individual values)."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Thermal_Bridge"
@@ -20966,7 +21450,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -20983,12 +21467,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Psi_Value"
-                                    documentation = """Linear thermal transmittance (psi-value); only if thermal bridging is user defined individual values."""
+                                    documentation = r"""Linear thermal transmittance (psi-value); only if thermal bridging is user defined individual values."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Thermal_Bridge"
@@ -21004,7 +21489,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -21026,6 +21511,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'1': 'calculated by person with suitable expertise', '2': 'government-approved scheme', '3': 'not government-approved scheme', '4': 'SAP table default'}
                                     map_values = {'calculated by person with suitable expertise': '1', 'government-approved scheme': '2', 'not government-approved scheme': '3', 'SAP table default': '4'}
@@ -21038,7 +21524,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_thermal_bridge(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21066,11 +21552,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:string"
                                     class_name = "Psi_Value_Calculation_Reference"
-                                    documentation = """Reference to the details of the calculation of the psi-value."""
+                                    documentation = r"""Reference to the details of the calculation of the psi-value."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -21101,10 +21588,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             element_type = "SAP-Walls"
                             class_name = "SAP_Walls"
                             documentation = None
-                            type_documentation = """Exposed walls that make up a particular Storey."""
+                            type_documentation = r"""Exposed walls that make up a particular Storey."""
                             has_text_node = False
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -21129,10 +21617,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 element_type = "SAP-Wall"
                                 class_name = "SAP_Wall"
                                 documentation = None
-                                type_documentation = """Various measurements for each wall of a particular storey."""
+                                type_documentation = r"""Various measurements for each wall of a particular storey."""
                                 has_text_node = False
                                 min_occurs = 1
                                 max_occurs = "unbounded"
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -21192,11 +21681,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:string"
                                     class_name = "Name"
-                                    documentation = """Unique name which identifies this wall within its storey. Can be just a number, e.g. "1". However, a wall cannot have the same name as an opening or a roof."""
+                                    documentation = r"""Unique name which identifies this wall within its storey. Can be just a number, e.g. "1". However, a wall cannot have the same name as an opening or a roof."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -21226,11 +21716,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Sentence"
                                     class_name = "Description"
-                                    documentation = """Descriptive notes about the wall."""
-                                    type_documentation = """String value with a language code for natural-language text."""
+                                    documentation = r"""Descriptive notes about the wall."""
+                                    type_documentation = r"""String value with a language code for natural-language text."""
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = None
                                     map_values = None
@@ -21260,11 +21751,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "SAP-WallTypeCode"
                                     class_name = "Wall_Type"
-                                    documentation = """Type of wall (exposure)."""
+                                    documentation = r"""Type of wall (exposure)."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
+                                    python_type = str
                                     python_type_convertor = str
                                     map_codes = {'1': 'basement wall', '2': 'exposed wall', '3': 'sheltered wall', '4': 'party wall', '5': 'internal wall'}
                                     map_values = {'basement wall': '1', 'exposed wall': '2', 'sheltered wall': '3', 'party wall': '4', 'internal wall': '5'}
@@ -21277,7 +21769,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_wall(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21305,12 +21797,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "Measurement"
                                     class_name = "Total_Wall_Area"
-                                    documentation = """Total wall area in square metres, inclusive of any openings."""
+                                    documentation = r"""Total wall area in square metres, inclusive of any openings."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Wall"
@@ -21326,7 +21819,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -21343,12 +21836,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:decimal"
                                     class_name = "U_Value"
-                                    documentation = """Exposed wall U-value."""
+                                    documentation = r"""Exposed wall U-value."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 1
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Wall"
@@ -21364,7 +21858,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -21381,11 +21875,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:boolean"
                                     class_name = "Is_Curtain_Walling"
-                                    documentation = """Whether the wall is curtain walling, i.e. a facade construction consisting of a frame of aluminium vertical and horizontal members, infilled with glazing units and opaque panels."""
+                                    documentation = r"""Whether the wall is curtain walling, i.e. a facade construction consisting of a frame of aluminium vertical and horizontal members, infilled with glazing units and opaque panels."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
+                                    python_type = bool
                                     python_type_convertor = bool
                                     map_codes = {'true': True, '1': True, 'false': False, '0': False}
                                     map_values = {True: '1', False: '0'}
@@ -21398,7 +21893,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     def sap_wall(self): return self.getparent()
                                 
                                     @property
-                                    def value(self):
+                                    def value(self): 
                                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                         else:
                                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21426,12 +21921,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                     element_type = "xs:decimal"
                                     class_name = "Kappa_Value"
-                                    documentation = """Heat capacity per unit area in kJ/m2K."""
+                                    documentation = r"""Heat capacity per unit area in kJ/m2K."""
                                     type_documentation = None
                                     has_text_node = True
                                     min_occurs = 0
                                     max_occurs = 1
-                                    python_type_convertor = float
+                                    python_type = float
+                                    python_type_convertor = lambda x: x if x is None else float(x)
                                     map_codes = None
                                     map_values = None
                                     parent_class_name = "SAP_Wall"
@@ -21447,7 +21943,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         try:
                                             return self.__class__.python_type_convertor(self.text)
                                         except ValueError:
-                                            raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                            raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                 
                                     @value.setter
                                     def value(self, value): self.text = str(value)
@@ -21465,10 +21961,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Opening-Types"
                     class_name = "SAP_Opening_Types"
                     documentation = None
-                    type_documentation = """Types of exposed openings that make up a particular property. Opening types are used to capture common features shared by multiple openings, to avoid having to record the same data explicitly for each opening."""
+                    type_documentation = r"""Types of exposed openings that make up a particular property. Opening types are used to capture common features shared by multiple openings, to avoid having to record the same data explicitly for each opening."""
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -21493,10 +21990,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         element_type = "SAP-Opening-Type"
                         class_name = "SAP_Opening_Type"
                         documentation = None
-                        type_documentation = """Various measurements for a particular type of exposed opening that makes up a particular property. Opening types are used to capture common features shared by multiple openings, to avoid having to record the same data explicitly for each opening."""
+                        type_documentation = r"""Various measurements for a particular type of exposed opening that makes up a particular property. Opening types are used to capture common features shared by multiple openings, to avoid having to record the same data explicitly for each opening."""
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = "unbounded"
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -21586,11 +22084,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:string"
                             class_name = "Name"
-                            documentation = """Unique name which identifies this opening type. Can be just a number, e.g. "1"."""
+                            documentation = r"""Unique name which identifies this opening type. Can be just a number, e.g. "1"."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -21620,11 +22119,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "Sentence"
                             class_name = "Description"
-                            documentation = """Descriptive notes about the opening type."""
-                            type_documentation = """String value with a language code for natural-language text."""
+                            documentation = r"""Descriptive notes about the opening type."""
+                            type_documentation = r"""String value with a language code for natural-language text."""
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -21654,11 +22154,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "SAP-OpeningDataSourceCode"
                             class_name = "Data_Source"
-                            documentation = """The source of the data for this type of opening."""
+                            documentation = r"""The source of the data for this type of opening."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'2': 'manufacturer declaration', '3': 'SAP table', '4': 'BFRC data'}
                             map_values = {'manufacturer declaration': '2', 'SAP table': '3', 'BFRC data': '4'}
@@ -21671,7 +22172,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21699,11 +22200,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "SAP-OpeningTypeCode"
                             class_name = "Type"
-                            documentation = """The (physical) type of opening that this opening type represents."""
+                            documentation = r"""The (physical) type of opening that this opening type represents."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'solid door', '2': 'semi-glazed door', '3': 'door to corridor', '4': 'window', '5': 'roof window', '6': 'rooflight'}
                             map_values = {'solid door': '1', 'semi-glazed door': '2', 'door to corridor': '3', 'window': '4', 'roof window': '5', 'rooflight': '6'}
@@ -21716,7 +22218,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21744,11 +22246,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "SAP-GlazingTypeCode"
                             class_name = "Glazing_Type"
-                            documentation = """The type of glazing; if U-value is from BFRC or manufacturer declaration, give as one of - single - double - triple."""
+                            documentation = r"""The type of glazing; if U-value is from BFRC or manufacturer declaration, give as one of - single - double - triple."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'not applicable (non-glazed door)', '2': 'single', '3': 'double', '4': 'double low-E hard 0.2', '5': 'double low-E hard 0.15', '6': 'double low-E soft 0.1', '7': 'double low-E soft 0.05', '8': 'triple', '9': 'triple low-E hard 0.2', '10': 'triple low-E hard 0.15', '11': 'triple low-E soft 0.1', '12': 'triple low-E soft 0.05', '13': 'secondary glazing'}
                             map_values = {'not applicable (non-glazed door)': '1', 'single': '2', 'double': '3', 'double low-E hard 0.2': '4', 'double low-E hard 0.15': '5', 'double low-E soft 0.1': '6', 'double low-E soft 0.05': '7', 'triple': '8', 'triple low-E hard 0.2': '9', 'triple low-E hard 0.15': '10', 'triple low-E soft 0.1': '11', 'triple low-E soft 0.05': '12', 'secondary glazing': '13'}
@@ -21761,7 +22264,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21789,11 +22292,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "SAP-GlazingGapTypeCode"
                             class_name = "Glazing_Gap"
-                            documentation = """Gap between glass panes; only if SAP table and double, triple glazed or secondary glazing."""
+                            documentation = r"""Gap between glass panes; only if SAP table and double, triple glazed or secondary glazing."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': '6 mm', '2': '12 mm', '3': '16 mm or more'}
                             map_values = {'6 mm': '1', '12 mm': '2', '16 mm or more': '3'}
@@ -21806,7 +22310,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21834,11 +22338,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:boolean"
                             class_name = "IsArgonFilled"
-                            documentation = """Is the opening argon-filled? Only if SAP table."""
+                            documentation = r"""Is the opening argon-filled? Only if SAP table."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = bool
                             python_type_convertor = bool
                             map_codes = {'true': True, '1': True, 'false': False, '0': False}
                             map_values = {True: '1', False: '0'}
@@ -21851,7 +22356,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21879,11 +22384,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:boolean"
                             class_name = "IsKryptonFilled"
-                            documentation = """Is the opening krypton-filled? Only if SAP table."""
+                            documentation = r"""Is the opening krypton-filled? Only if SAP table."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = bool
                             python_type_convertor = bool
                             map_codes = {'true': True, '1': True, 'false': False, '0': False}
                             map_values = {True: '1', False: '0'}
@@ -21896,7 +22402,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21924,11 +22430,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "SAP-FrameTypeCode"
                             class_name = "Frame_Type"
-                            documentation = """The type of frame, only if data source is SAP table and it is a window, roof window or half-glazed door."""
+                            documentation = r"""The type of frame, only if data source is SAP table and it is a window, roof window or half-glazed door."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = {'1': 'wood', '2': 'PVC', '3': 'metal no break', '4': 'metal 4 mm break', '5': 'metal 8 mm break', '6': 'metal 12 mm break', '7': 'metal 20 mm break', '8': 'metal 32 mm break', '9': 'unknown'}
                             map_values = {'wood': '1', 'PVC': '2', 'metal no break': '3', 'metal 4 mm break': '4', 'metal 8 mm break': '5', 'metal 12 mm break': '6', 'metal 20 mm break': '7', 'metal 32 mm break': '8', 'unknown': '9'}
@@ -21941,7 +22448,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             def sap_opening_type(self): return self.getparent()
                         
                             @property
-                            def value(self):
+                            def value(self): 
                                 if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                 else:
                                     raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -21969,12 +22476,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "Solar_Transmittance"
-                            documentation = """The solar transmittance; not if a door."""
+                            documentation = r"""The solar transmittance; not if a door."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Opening_Type"
@@ -21990,7 +22498,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -22007,12 +22515,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "Frame_Factor"
-                            documentation = """The frame factor; not if a door."""
+                            documentation = r"""The frame factor; not if a door."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 0
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Opening_Type"
@@ -22028,7 +22537,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -22045,12 +22554,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                             element_type = "xs:decimal"
                             class_name = "U_Value"
-                            documentation = """The U-value. For rooflights, the U-value should be in the horizontal plane."""
+                            documentation = r"""The U-value. For rooflights, the U-value should be in the horizontal plane."""
                             type_documentation = None
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
-                            python_type_convertor = float
+                            python_type = float
+                            python_type_convertor = lambda x: x if x is None else float(x)
                             map_codes = None
                             map_values = None
                             parent_class_name = "SAP_Opening_Type"
@@ -22066,7 +22576,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 try:
                                     return self.__class__.python_type_convertor(self.text)
                                 except ValueError:
-                                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                         
                             @value.setter
                             def value(self, value): self.text = str(value)
@@ -22084,10 +22594,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Ventilation"
                     class_name = "SAP_Ventilation"
                     documentation = None
-                    type_documentation = """Details of the means by which the building is ventilated"""
+                    type_documentation = r"""Details of the means by which the building is ventilated"""
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -22381,12 +22892,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Closed_Flues_Count"
-                        documentation = """The number of Closed Flues or chimneys in the Property."""
+                        documentation = r"""The number of Closed Flues or chimneys in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22402,7 +22914,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22419,12 +22931,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Open_Flues_Count"
-                        documentation = """The number of Open Flues in the Property."""
+                        documentation = r"""The number of Open Flues in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22440,7 +22953,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22457,12 +22970,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Boilers_Flues_Count"
-                        documentation = """The number of Boiler Flues or chimneys in the Property."""
+                        documentation = r"""The number of Boiler Flues or chimneys in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22478,7 +22992,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22495,12 +23009,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Other_Flues_Count"
-                        documentation = """The number of Other Flues or chimneys in the Property."""
+                        documentation = r"""The number of Other Flues or chimneys in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22516,7 +23031,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22533,12 +23048,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Open_Chimneys_Count"
-                        documentation = """The number of Open Chimneys in the Property."""
+                        documentation = r"""The number of Open Chimneys in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22554,7 +23070,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22571,12 +23087,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Blocked_Chimneys_Count"
-                        documentation = """The number of Blocked Chimneys in the Property."""
+                        documentation = r"""The number of Blocked Chimneys in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22592,7 +23109,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22609,12 +23126,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Fans_Vents_Count"
-                        documentation = """For backward compatibility only, do not use."""
+                        documentation = r"""For backward compatibility only, do not use."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22630,7 +23148,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22647,12 +23165,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Flueless_Gas_Fires_Count"
-                        documentation = """The number of flueless gas fires in the Property."""
+                        documentation = r"""The number of flueless gas fires in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22668,7 +23187,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22685,11 +23204,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-PressureTestCode"
                         class_name = "Pressure_Test"
-                        documentation = """Whether there has been a pressure test, or whether an assumed value is used for the air permeability."""
+                        documentation = r"""Whether there has been a pressure test, or whether an assumed value is used for the air permeability."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'yes (new dwelling, value measured in this dwelling)', '2': 'yes (new dwelling, design value)', '3': 'no test, value assumed for calculation (new dwelling)', '4': 'no test, SAP algorithm used (existing dwelling)', '5': 'average for other dwellings of the same type (new dwelling)', '6': 'yes (existing dwelling)', '7': 'yes (measured value) - low-pressure pulse'}
                         map_values = {'yes (new dwelling, value measured in this dwelling)': '1', 'yes (new dwelling, design value)': '2', 'no test, value assumed for calculation (new dwelling)': '3', 'no test, SAP algorithm used (existing dwelling)': '4', 'average for other dwellings of the same type (new dwelling)': '5', 'yes (existing dwelling)': '6', 'yes (measured value) - low-pressure pulse': '7'}
@@ -22702,7 +23222,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -22730,11 +23250,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Pressure_Test_Certificate_Number"
-                        documentation = """The pressure test certificate number or test engineer reference."""
+                        documentation = r"""The pressure test certificate number or test engineer reference."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -22764,12 +23285,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:decimal"
                         class_name = "Air_Permeability"
-                        documentation = """Air permeability; only if pressure test (yes or assumed)."""
+                        documentation = r"""Air permeability; only if pressure test (yes or assumed)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22785,7 +23307,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22802,11 +23324,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-FloorConstructionCode"
                         class_name = "Ground_Floor_Type"
-                        documentation = """The type of ground floor; nly if no pressure test."""
+                        documentation = r"""The type of ground floor; nly if no pressure test."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'not suspended timber', '2': 'suspended timber, sealed', '3': 'suspended timber, unsealed'}
                         map_values = {'not suspended timber': '1', 'suspended timber, sealed': '2', 'suspended timber, unsealed': '3'}
@@ -22819,7 +23342,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -22847,11 +23370,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-WallConstructionCode"
                         class_name = "Wall_Type"
-                        documentation = """The construction of the walls; only if no pressure test."""
+                        documentation = r"""The construction of the walls; only if no pressure test."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'steel or timber frame', '2': 'other'}
                         map_values = {'steel or timber frame': '1', 'other': '2'}
@@ -22864,7 +23388,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -22892,11 +23416,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Has_Draught_Lobby"
-                        documentation = """Is there a draft lobby? Only if no pressure test."""
+                        documentation = r"""Is there a draft lobby? Only if no pressure test."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -22909,7 +23434,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -22937,12 +23462,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Percentage"
                         class_name = "DraughtStripping"
-                        documentation = """Draughtstripping percentage; only if no pressure test."""
+                        documentation = r"""Draughtstripping percentage; only if no pressure test."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22958,7 +23484,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -22975,12 +23501,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Sheltered_Sides_Count"
-                        documentation = """The number of sheltered sides in the Property."""
+                        documentation = r"""The number of sheltered sides in the Property."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -22996,7 +23523,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23013,11 +23540,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-VentilationTypeCode"
                         class_name = "Ventilation_Type"
-                        documentation = """The type of ventilation."""
+                        documentation = r"""The type of ventilation."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'natural with intermittent extract fans', '2': 'natural with passive vents', '3': 'positive input from loft', '4': 'positive input from outside', '5': 'mechanical extract, centralised (MEV c)', '6': 'mechanical extract, decentralised (MEV dc)', '7': 'balanced without heat recovery (MV)', '8': 'balanced with heat recovery (MVHR)', '9': 'natural with intermittent extract fans and/or passive vents. For backwards compatibility only, do not use.', '10': 'natural with intermittent extract fans and passive vents'}
                         map_values = {'natural with intermittent extract fans': '1', 'natural with passive vents': '2', 'positive input from loft': '3', 'positive input from outside': '4', 'mechanical extract, centralised (MEV c)': '5', 'mechanical extract, decentralised (MEV dc)': '6', 'balanced without heat recovery (MV)': '7', 'balanced with heat recovery (MVHR)': '8', 'natural with intermittent extract fans and/or passive vents. For backwards compatibility only, do not use.': '9', 'natural with intermittent extract fans and passive vents': '10'}
@@ -23030,7 +23558,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -23058,11 +23586,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-DataSourceCode"
                         class_name = "Mechanical_Ventilation_Data_Source"
-                        documentation = """Source of mechanical ventilation data; only if mechanical ventilation."""
+                        documentation = r"""Source of mechanical ventilation data; only if mechanical ventilation."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'from database', '2': 'from manufacturer declaration', '3': 'from SAP table'}
                         map_values = {'from database': '1', 'from manufacturer declaration': '2', 'from SAP table': '3'}
@@ -23075,7 +23604,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -23103,12 +23632,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:nonNegativeInteger"
                         class_name = "Mechanical_Vent_System_Index_Number"
-                        documentation = """Mechanical vent system index number; if mechanical vent data from database (MEV c, MEV dc, MV, MVHR)."""
+                        documentation = r"""Mechanical vent system index number; if mechanical vent data from database (MEV c, MEV dc, MV, MVHR)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23124,7 +23654,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23141,11 +23671,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Mechanical_Vent_Commissioning_Certificate_Number"
-                        documentation = """Mechanical ventilation Commissioning certificate number ."""
+                        documentation = r"""Mechanical ventilation Commissioning certificate number ."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -23175,11 +23706,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Mechanical_Vent_Installation_Engineer"
-                        documentation = """Mechanical ventilation installation engineer registration reference."""
+                        documentation = r"""Mechanical ventilation installation engineer registration reference."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -23209,11 +23741,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:string"
                         class_name = "Mechanical_Vent_System_Make_Model"
-                        documentation = """Mechanical ventilation system make and model."""
+                        documentation = r"""Mechanical ventilation system make and model."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = None
                         map_values = None
@@ -23243,12 +23776,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "NonZeroCount"
                         class_name = "Wet_Rooms_Count"
-                        documentation = """Number of wet rooms, including the kitchen; if mech vent data from manufacturer declaration or database (MEV c, MV, MVHR)."""
+                        documentation = r"""Number of wet rooms, including the kitchen; if mech vent data from manufacturer declaration or database (MEV c, MV, MVHR)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23264,7 +23798,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23281,12 +23815,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Mechanical_Vent_Specific_Fan_Power"
-                        documentation = """Mechanical vent specific fan power in watts per (litres per second); if mechanical vent data (PIV from outside, MEV c or dc, MV, MVHR)."""
+                        documentation = r"""Mechanical vent specific fan power in watts per (litres per second); if mechanical vent data (PIV from outside, MEV c or dc, MV, MVHR)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23302,7 +23837,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23319,12 +23854,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Percentage"
                         class_name = "Mechanical_Vent_Heat_Recovery_Efficiency"
-                        documentation = """Mechanical vent heat recovery efficiency percentage; if mechanical vent (MVHR)."""
+                        documentation = r"""Mechanical vent heat recovery efficiency percentage; if mechanical vent (MVHR)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23340,7 +23876,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23357,11 +23893,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-DuctTypeCode"
                         class_name = "Mechanical_Vent_Duct_Type"
-                        documentation = """Mechanical vent duct type; if MEV c, MV or MVHR."""
+                        documentation = r"""Mechanical vent duct type; if MEV c, MV or MVHR."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'flexible', '2': 'rigid', '3': 'semi-rigid'}
                         map_values = {'flexible': '1', 'rigid': '2', 'semi-rigid': '3'}
@@ -23374,7 +23911,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -23402,11 +23939,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-DuctInsulationCode"
                         class_name = "Mechanical_Vent_Duct_Insulation"
-                        documentation = """Mechanical vent duct insulation; if MVHR."""
+                        documentation = r"""Mechanical vent duct insulation; if MVHR."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'not insulated', '2': 'insulated'}
                         map_values = {'not insulated': '1', 'insulated': '2'}
@@ -23419,7 +23957,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -23447,11 +23985,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-DuctInsulationLevel"
                         class_name = "Mechanical_Vent_Duct_Insulation_Level"
-                        documentation = """Mechanical vent duct insulation; if MVHR."""
+                        documentation = r"""Mechanical vent duct insulation; if MVHR."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'level 1', '2': 'level 2'}
                         map_values = {'level 1': '1', 'level 2': '2'}
@@ -23464,7 +24003,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -23492,11 +24031,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-DuctPlacement"
                         class_name = "Mechanical_Vent_Duct_Placement"
-                        documentation = """Mechanical ventilation duct insulation; if MVHR."""
+                        documentation = r"""Mechanical ventilation duct insulation; if MVHR."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'inside heated envelope', '2': 'outside heated envelope'}
                         map_values = {'inside heated envelope': '1', 'outside heated envelope': '2'}
@@ -23509,7 +24049,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -23537,11 +24077,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:boolean"
                         class_name = "Mechanical_Vent_Measured_Installation"
-                        documentation = """Mechanical ventilation SPF measured in situ; if MVHR or balanced."""
+                        documentation = r"""Mechanical ventilation SPF measured in situ; if MVHR or balanced."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -23554,7 +24095,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -23582,12 +24123,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Kitchen_Room_Fans_Count"
-                        documentation = """MEV dc, number of fans in room, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, number of fans in room, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23603,7 +24145,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23620,12 +24162,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Kitchen_Room_Fans_Specific_Power"
-                        documentation = """MEV dc, specific fan power of fans in room, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, specific fan power of fans in room, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23641,7 +24184,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23658,12 +24201,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Non_Kitchen_Room_Fans_Count"
-                        documentation = """MEV dc, number of fans in room, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, number of fans in room, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23679,7 +24223,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23696,12 +24240,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Non_Kitchen_Room_Fans_Specific_Power"
-                        documentation = """MEV dc, specific fan power of fans in room, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, specific fan power of fans in room, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23717,7 +24262,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23734,12 +24279,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Kitchen_Duct_Fans_Count"
-                        documentation = """MEV dc, number of fans via duct, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, number of fans via duct, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23755,7 +24301,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23772,12 +24318,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Kitchen_Duct_Fans_Specific_Power"
-                        documentation = """MEV dc, specific fan power of fans via duct, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, specific fan power of fans via duct, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23793,7 +24340,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23810,12 +24357,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Non_Kitchen_Duct_Fans_Count"
-                        documentation = """MEV dc, number of fans via duct, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, number of fans via duct, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23831,7 +24379,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23848,12 +24396,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Non_Kitchen_Duct_Fans_Specific_Power"
-                        documentation = """MEV dc, specific fan power of fans via duct, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, specific fan power of fans via duct, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23869,7 +24418,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23886,12 +24435,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Kitchen_Wall_Fans_Count"
-                        documentation = """MEV dc, number of fans through wall, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, number of fans through wall, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23907,7 +24457,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23924,12 +24474,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Kitchen_Wall_Fans_Specific_Power"
-                        documentation = """MEV dc, specific fan power of fans through wall, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, specific fan power of fans through wall, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23945,7 +24496,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -23962,12 +24513,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Count"
                         class_name = "Non_Kitchen_Wall_Fans_Count"
-                        documentation = """MEV dc, number of fans through wall, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, number of fans through wall, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -23983,7 +24535,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -24000,12 +24552,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Measurement"
                         class_name = "Non_Kitchen_Wall_Fans_Specific_Power"
-                        documentation = """MEV dc, specific fan power of fans through wall, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
+                        documentation = r"""MEV dc, specific fan power of fans through wall, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc)."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -24021,7 +24574,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -24043,7 +24596,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -24059,7 +24613,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -24081,7 +24635,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -24097,7 +24652,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -24119,6 +24674,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = bool
                         python_type_convertor = bool
                         map_codes = {'true': True, '1': True, 'false': False, '0': False}
                         map_values = {True: '1', False: '0'}
@@ -24131,7 +24687,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_ventilation(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -24159,12 +24715,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:positiveInteger"
                         class_name = "Mechanical_Vent_Ducts_Index_Number"
-                        documentation = """Mechanical vent ducts index number; if applicable."""
+                        documentation = r"""Mechanical vent ducts index number; if applicable."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Ventilation"
@@ -24180,7 +24737,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -24198,10 +24755,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Lighting"
                     class_name = "SAP_Lighting"
                     documentation = None
-                    type_documentation = """Details of the main lighting for the property"""
+                    type_documentation = r"""Details of the main lighting for the property"""
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -24225,11 +24783,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "Fixed-Lights"
                         class_name = "Fixed_Lights"
-                        documentation = """The record of a lighting type within the building."""
-                        type_documentation = """Fixed lighting present in the property."""
+                        documentation = r"""The record of a lighting type within the building."""
+                        type_documentation = r"""Fixed lighting present in the property."""
                         has_text_node = False
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -24254,10 +24813,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             element_type = "Fixed-Light"
                             class_name = "Fixed_Light"
                             documentation = None
-                            type_documentation = """Various details for each fixed lighting type in the property."""
+                            type_documentation = r"""Various details for each fixed lighting type in the property."""
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = "unbounded"
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -24293,12 +24853,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Lighting_Efficacy"
-                                documentation = """The efficacy of the lighting type in lumens/Watt."""
+                                documentation = r"""The efficacy of the lighting type in lumens/Watt."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Fixed_Light"
@@ -24314,7 +24875,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -24331,12 +24892,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "xs:decimal"
                                 class_name = "Lighting_Power"
-                                documentation = """The power of the selected lighting type in Watts."""
+                                documentation = r"""The power of the selected lighting type in Watts."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Fixed_Light"
@@ -24352,7 +24914,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -24369,12 +24931,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Count"
                                 class_name = "Lighting_Outlets"
-                                documentation = """The number of light fitting outlets of that type."""
+                                documentation = r"""The number of light fitting outlets of that type."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = int
+                                python_type = int
+                                python_type_convertor = lambda x: x if x is None else int(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Fixed_Light"
@@ -24390,7 +24953,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -24408,10 +24971,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     element_type = "SAP-Deselected-Improvements"
                     class_name = "SAP_Deselected_Improvements"
                     documentation = None
-                    type_documentation = """There are 22 possible improvement measures, designated from A to V. This must record measures deselected by DEA (A to V is the full set, only E, N, U and V are considered at the moment for new build)."""
+                    type_documentation = r"""There are 22 possible improvement measures, designated from A to V. This must record measures deselected by DEA (A to V is the full set, only E, N, U and V are considered at the moment for new build)."""
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -24440,6 +25004,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = "unbounded"
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'A': 'Loft insulation', 'A2': 'Flat roof insulation', 'A3': 'Room-in-roof insulation', 'B': 'Cavity wall insulation', 'C': 'Hot water cylinder insulation', 'D': 'Draughtproofing', 'E': 'Low energy lights', 'F': 'Cylinder thermostat', 'G': 'Heating controls for wet central heating system', 'H': 'Heating controls for warm air system', 'I': 'Upgrade boiler, same fuel', 'J': 'Biomass boiler', 'J2': 'Biomass boiler as alternative improvement', 'K': 'Biomass room heater with boiler', 'L': 'New or replacement fan-assisted storage heaters', 'L2': 'New or replacement high heat retention storage heaters', 'M': 'Replacement warm-air unit', 'N': 'Solar water heating', 'O': 'Replacement double glazed windows', 'O3': 'Replacement double glazing units', 'P': 'Secondary glazing', 'Q': 'Solid wall insulation', 'Q2': 'External insulation with cavity wall insulation', 'R': 'Condensing oil boiler', 'S': 'Change heating to Band A gas condensing boiler (no fuel switch)', 'T': 'Change heating to Band A gas condensing boiler (fuel switch)', 'T2': 'Flue gas heat recovery', 'U': 'Photovoltaics', 'V': 'Wind turbine (roof mounted)', 'V2': 'Wind turbine (on mast)', 'W': 'Floor insulation', 'X': 'Insulated doors', 'Y': 'Instantaneous waste water heat recovery', 'Y2': 'Storage waste water heat recovery', 'Z1': 'Air or ground source heat pump', 'Z2': 'Air or ground source heat pump with underfloor heating', 'Z3': 'Micro-CHP'}
                         map_values = {'Loft insulation': 'A', 'Flat roof insulation': 'A2', 'Room-in-roof insulation': 'A3', 'Cavity wall insulation': 'B', 'Hot water cylinder insulation': 'C', 'Draughtproofing': 'D', 'Low energy lights': 'E', 'Cylinder thermostat': 'F', 'Heating controls for wet central heating system': 'G', 'Heating controls for warm air system': 'H', 'Upgrade boiler, same fuel': 'I', 'Biomass boiler': 'J', 'Biomass boiler as alternative improvement': 'J2', 'Biomass room heater with boiler': 'K', 'New or replacement fan-assisted storage heaters': 'L', 'New or replacement high heat retention storage heaters': 'L2', 'Replacement warm-air unit': 'M', 'Solar water heating': 'N', 'Replacement double glazed windows': 'O', 'Replacement double glazing units': 'O3', 'Secondary glazing': 'P', 'Solid wall insulation': 'Q', 'External insulation with cavity wall insulation': 'Q2', 'Condensing oil boiler': 'R', 'Change heating to Band A gas condensing boiler (no fuel switch)': 'S', 'Change heating to Band A gas condensing boiler (fuel switch)': 'T', 'Flue gas heat recovery': 'T2', 'Photovoltaics': 'U', 'Wind turbine (roof mounted)': 'V', 'Wind turbine (on mast)': 'V2', 'Floor insulation': 'W', 'Insulated doors': 'X', 'Instantaneous waste water heat recovery': 'Y', 'Storage waste water heat recovery': 'Y2', 'Air or ground source heat pump': 'Z1', 'Air or ground source heat pump with underfloor heating': 'Z2', 'Micro-CHP': 'Z3'}
@@ -24452,7 +25017,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_deselected_improvements(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -24485,6 +25050,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -24514,11 +25080,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-FlatLevelCode"
                         class_name = "Level"
-                        documentation = """Indication of where a flat is located in a building."""
+                        documentation = r"""Indication of where a flat is located in a building."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'0': 'basement', '1': 'ground floor', '2': 'mid floor', '3': 'top floor'}
                         map_values = {'basement': '0', 'ground floor': '1', 'mid floor': '2', 'top floor': '3'}
@@ -24531,7 +25098,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_flat_details(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -24559,12 +25126,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "NonZeroCount"
                         class_name = "Storeys"
-                        documentation = """Count of number of storeys present in the block of flats."""
+                        documentation = r"""Count of number of storeys present in the block of flats."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 1
                         max_occurs = 1
-                        python_type_convertor = int
+                        python_type = int
+                        python_type_convertor = lambda x: x if x is None else int(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Flat_Details"
@@ -24580,7 +25148,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -24602,6 +25170,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -24630,6 +25199,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = False
                         min_occurs = 1
                         max_occurs = "unbounded"
+                        python_type = None
                         python_type_convertor = None
                         map_codes = None
                         map_values = None
@@ -24670,6 +25240,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = True
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = str
                             python_type_convertor = str
                             map_codes = None
                             map_values = None
@@ -24704,6 +25275,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -24751,12 +25323,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Energy_Saved_Or_Generated"
-                                documentation = """Energy saved or generated in kWh/year."""
+                                documentation = r"""Energy saved or generated in kWh/year."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Energy_Feature"
@@ -24772,7 +25345,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -24794,6 +25367,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'Gas: mains gas', '2': 'Gas: bulk LPG', '3': 'Gas: bottled LPG', '4': 'Oil: heating oil', '7': 'Gas: biogas', '8': 'LNG', '9': 'LPG subject to Special Condition 18', '10': 'Solid fuel: dual fuel appliance (mineral and wood)', '11': 'Solid fuel: house coal', '12': 'Solid fuel: manufactured smokeless fuel', '15': 'Solid fuel: anthracite', '20': 'Solid fuel: wood logs', '21': 'Solid fuel: wood chips', '22': 'Solid fuel: wood pellets (in bags, for secondary heating)', '23': 'Solid fuel: wood pellets (bulk supply in bags, for main heating)', '36': 'Electricity: electricity sold to grid', '37': 'Electricity: electricity displaced from grid', '39': 'Electricity: electricity, unspecified tariff', '41': 'Community heating schemes: heat from electric heat pump', '42': 'Community heating schemes: heat from boilers - waste combustion', '43': 'Community heating schemes: heat from boilers - biomass', '44': 'Community heating schemes: heat from boilers - biogas', '45': 'Community heating schemes: waste heat from power stations', '46': 'Community heating schemes: geothermal heat source', '47': 'Community heating schemes: high grade heat recovered from process', '48': 'Community heating schemes: heat from CHP', '49': 'Community heating schemes: low grade heat recovered from process', '50': 'Community heating schemes: electricity for pumping in distribution network', '51': 'Community heating schemes: heat from mains gas', '52': 'Community heating schemes: heat from LPG', '53': 'Community heating schemes: heat from oil', '54': 'Community heating schemes: heat from coal', '55': 'Community heating schemes: heat from B30D', '56': 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel', '57': 'Community heating schemes: heat from boilers using biodiesel from any biomass source', '58': 'Community heating schemes: biodiesel from vegetable oil only', '71': 'biodiesel from any biomass source', '72': 'biodiesel from used cooking oil only', '73': 'biodiesel from vegetable oil only', '74': 'appliances able to use mineral oil or liquid biofuel', '75': 'B30K', '76': 'bioethanol from any biomass source', '99': 'Fuel data from pcdb'}
                                 map_values = {'Gas: mains gas': '1', 'Gas: bulk LPG': '2', 'Gas: bottled LPG': '3', 'Oil: heating oil': '4', 'Gas: biogas': '7', 'LNG': '8', 'LPG subject to Special Condition 18': '9', 'Solid fuel: dual fuel appliance (mineral and wood)': '10', 'Solid fuel: house coal': '11', 'Solid fuel: manufactured smokeless fuel': '12', 'Solid fuel: anthracite': '15', 'Solid fuel: wood logs': '20', 'Solid fuel: wood chips': '21', 'Solid fuel: wood pellets (in bags, for secondary heating)': '22', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)': '23', 'Electricity: electricity sold to grid': '36', 'Electricity: electricity displaced from grid': '37', 'Electricity: electricity, unspecified tariff': '39', 'Community heating schemes: heat from electric heat pump': '41', 'Community heating schemes: heat from boilers - waste combustion': '42', 'Community heating schemes: heat from boilers - biomass': '43', 'Community heating schemes: heat from boilers - biogas': '44', 'Community heating schemes: waste heat from power stations': '45', 'Community heating schemes: geothermal heat source': '46', 'Community heating schemes: high grade heat recovered from process': '47', 'Community heating schemes: heat from CHP': '48', 'Community heating schemes: low grade heat recovered from process': '49', 'Community heating schemes: electricity for pumping in distribution network': '50', 'Community heating schemes: heat from mains gas': '51', 'Community heating schemes: heat from LPG': '52', 'Community heating schemes: heat from oil': '53', 'Community heating schemes: heat from coal': '54', 'Community heating schemes: heat from B30D': '55', 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel': '56', 'Community heating schemes: heat from boilers using biodiesel from any biomass source': '57', 'Community heating schemes: biodiesel from vegetable oil only': '58', 'biodiesel from any biomass source': '71', 'biodiesel from used cooking oil only': '72', 'biodiesel from vegetable oil only': '73', 'appliances able to use mineral oil or liquid biofuel': '74', 'B30K': '75', 'bioethanol from any biomass source': '76', 'Fuel data from pcdb': '99'}
@@ -24806,7 +25380,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def energy_feature(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -24834,12 +25408,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Energy_Used"
-                                documentation = """Energy used in kWh/year."""
+                                documentation = r"""Energy used in kWh/year."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Energy_Feature"
@@ -24855,7 +25430,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -24877,6 +25452,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 has_text_node = True
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = str
                                 python_type_convertor = str
                                 map_codes = {'1': 'Gas: mains gas', '2': 'Gas: bulk LPG', '3': 'Gas: bottled LPG', '4': 'Oil: heating oil', '7': 'Gas: biogas', '8': 'LNG', '9': 'LPG subject to Special Condition 18', '10': 'Solid fuel: dual fuel appliance (mineral and wood)', '11': 'Solid fuel: house coal', '12': 'Solid fuel: manufactured smokeless fuel', '15': 'Solid fuel: anthracite', '20': 'Solid fuel: wood logs', '21': 'Solid fuel: wood chips', '22': 'Solid fuel: wood pellets (in bags, for secondary heating)', '23': 'Solid fuel: wood pellets (bulk supply in bags, for main heating)', '36': 'Electricity: electricity sold to grid', '37': 'Electricity: electricity displaced from grid', '39': 'Electricity: electricity, unspecified tariff', '41': 'Community heating schemes: heat from electric heat pump', '42': 'Community heating schemes: heat from boilers - waste combustion', '43': 'Community heating schemes: heat from boilers - biomass', '44': 'Community heating schemes: heat from boilers - biogas', '45': 'Community heating schemes: waste heat from power stations', '46': 'Community heating schemes: geothermal heat source', '47': 'Community heating schemes: high grade heat recovered from process', '48': 'Community heating schemes: heat from CHP', '49': 'Community heating schemes: low grade heat recovered from process', '50': 'Community heating schemes: electricity for pumping in distribution network', '51': 'Community heating schemes: heat from mains gas', '52': 'Community heating schemes: heat from LPG', '53': 'Community heating schemes: heat from oil', '54': 'Community heating schemes: heat from coal', '55': 'Community heating schemes: heat from B30D', '56': 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel', '57': 'Community heating schemes: heat from boilers using biodiesel from any biomass source', '58': 'Community heating schemes: biodiesel from vegetable oil only', '71': 'biodiesel from any biomass source', '72': 'biodiesel from used cooking oil only', '73': 'biodiesel from vegetable oil only', '74': 'appliances able to use mineral oil or liquid biofuel', '75': 'B30K', '76': 'bioethanol from any biomass source', '99': 'Fuel data from pcdb'}
                                 map_values = {'Gas: mains gas': '1', 'Gas: bulk LPG': '2', 'Gas: bottled LPG': '3', 'Oil: heating oil': '4', 'Gas: biogas': '7', 'LNG': '8', 'LPG subject to Special Condition 18': '9', 'Solid fuel: dual fuel appliance (mineral and wood)': '10', 'Solid fuel: house coal': '11', 'Solid fuel: manufactured smokeless fuel': '12', 'Solid fuel: anthracite': '15', 'Solid fuel: wood logs': '20', 'Solid fuel: wood chips': '21', 'Solid fuel: wood pellets (in bags, for secondary heating)': '22', 'Solid fuel: wood pellets (bulk supply in bags, for main heating)': '23', 'Electricity: electricity sold to grid': '36', 'Electricity: electricity displaced from grid': '37', 'Electricity: electricity, unspecified tariff': '39', 'Community heating schemes: heat from electric heat pump': '41', 'Community heating schemes: heat from boilers - waste combustion': '42', 'Community heating schemes: heat from boilers - biomass': '43', 'Community heating schemes: heat from boilers - biogas': '44', 'Community heating schemes: waste heat from power stations': '45', 'Community heating schemes: geothermal heat source': '46', 'Community heating schemes: high grade heat recovered from process': '47', 'Community heating schemes: heat from CHP': '48', 'Community heating schemes: low grade heat recovered from process': '49', 'Community heating schemes: electricity for pumping in distribution network': '50', 'Community heating schemes: heat from mains gas': '51', 'Community heating schemes: heat from LPG': '52', 'Community heating schemes: heat from oil': '53', 'Community heating schemes: heat from coal': '54', 'Community heating schemes: heat from B30D': '55', 'Community heating schemes: heat from boilers that can use mineral oil or biodiesel': '56', 'Community heating schemes: heat from boilers using biodiesel from any biomass source': '57', 'Community heating schemes: biodiesel from vegetable oil only': '58', 'biodiesel from any biomass source': '71', 'biodiesel from used cooking oil only': '72', 'biodiesel from vegetable oil only': '73', 'appliances able to use mineral oil or liquid biofuel': '74', 'B30K': '75', 'bioethanol from any biomass source': '76', 'Fuel data from pcdb': '99'}
@@ -24889,7 +25465,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 def energy_feature(self): return self.getparent()
                             
                                 @property
-                                def value(self):
+                                def value(self): 
                                     if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                     else:
                                         raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -24917,11 +25493,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Air-Change-Rates"
                                 class_name = "Air_Change_Rates"
-                                documentation = """For Appendix Q procedure that provides air change rates. Only one Special Feature can have data on air change rates."""
+                                documentation = r"""For Appendix Q procedure that provides air change rates. Only one Special Feature can have data on air change rates."""
                                 type_documentation = None
                                 has_text_node = False
                                 min_occurs = 0
                                 max_occurs = 1
+                                python_type = None
                                 python_type_convertor = None
                                 map_codes = None
                                 map_values = None
@@ -24950,6 +25527,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     has_text_node = False
                                     min_occurs = 12
                                     max_occurs = 12
+                                    python_type = None
                                     python_type_convertor = None
                                     map_codes = None
                                     map_values = None
@@ -24984,6 +25562,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
+                                        python_type = str
                                         python_type_convertor = str
                                         map_codes = {'Jan': '', 'Feb': '', 'Mar': '', 'Apr': '', 'May': '', 'Jun': '', 'Jul': '', 'Aug': '', 'Sep': '', 'Oct': '', 'Nov': '', 'Dec': ''}
                                         map_values = {'': 'Dec'}
@@ -24996,7 +25575,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         def air_change_rate(self): return self.getparent()
                                     
                                         @property
-                                        def value(self):
+                                        def value(self): 
                                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                                             else:
                                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -25024,12 +25603,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                         element_type = "xs:decimal"
                                         class_name = "Air_Change_Rate_Value"
-                                        documentation = """Air change rate in month."""
+                                        documentation = r"""Air change rate in month."""
                                         type_documentation = None
                                         has_text_node = True
                                         min_occurs = 1
                                         max_occurs = 1
-                                        python_type_convertor = float
+                                        python_type = float
+                                        python_type_convertor = lambda x: x if x is None else float(x)
                                         map_codes = None
                                         map_values = None
                                         parent_class_name = "Air_Change_Rate"
@@ -25045,7 +25625,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                             try:
                                                 return self.__class__.python_type_convertor(self.text)
                                             except ValueError:
-                                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                                     
                                         @value.setter
                                         def value(self, value): self.text = str(value)
@@ -25067,6 +25647,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             has_text_node = False
                             min_occurs = 1
                             max_occurs = 1
+                            python_type = None
                             python_type_convertor = None
                             map_codes = None
                             map_values = None
@@ -25096,12 +25677,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Emissions_Saved"
-                                documentation = """Emissions saved in kg/year."""
+                                documentation = r"""Emissions saved in kg/year."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Emissions_Feature"
@@ -25117,7 +25699,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -25134,12 +25716,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                                 element_type = "Measurement"
                                 class_name = "Emissions_Created"
-                                documentation = """Additional emissions in kg/year."""
+                                documentation = r"""Additional emissions in kg/year."""
                                 type_documentation = None
                                 has_text_node = True
                                 min_occurs = 1
                                 max_occurs = 1
-                                python_type_convertor = float
+                                python_type = float
+                                python_type_convertor = lambda x: x if x is None else float(x)
                                 map_codes = None
                                 map_values = None
                                 parent_class_name = "Emissions_Feature"
@@ -25155,7 +25738,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                                     try:
                                         return self.__class__.python_type_convertor(self.text)
                                     except ValueError:
-                                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                             
                                 @value.setter
                                 def value(self, value): self.text = str(value)
@@ -25172,11 +25755,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                     element_type = "DesignWaterUseCode"
                     class_name = "Design_Water_Use"
-                    documentation = """Design limit for total water use."""
+                    documentation = r"""Design limit for total water use."""
                     type_documentation = None
                     has_text_node = True
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = str
                     python_type_convertor = str
                     map_codes = {'1': '<= 125 litres per person per day'}
                     map_values = {'<= 125 litres per person per day': '1'}
@@ -25189,7 +25773,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     def sap_property_details(self): return self.getparent()
                 
                     @property
-                    def value(self):
+                    def value(self): 
                         if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                         else:
                             raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -25222,6 +25806,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     has_text_node = False
                     min_occurs = 0
                     max_occurs = 1
+                    python_type = None
                     python_type_convertor = None
                     map_codes = None
                     map_values = None
@@ -25268,7 +25853,8 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Cooling"
@@ -25284,7 +25870,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -25306,6 +25892,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'1': 'from database', '2': 'from manufacturer declaration', '3': 'from SAP table'}
                         map_values = {'from database': '1', 'from manufacturer declaration': '2', 'from SAP table': '3'}
@@ -25318,7 +25905,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_cooling(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -25346,11 +25933,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "SAP-CoolingSystemClassCode"
                         class_name = "Cooling_System_Class"
-                        documentation = """Data set includes either class or SEER, not both."""
+                        documentation = r"""Data set includes either class or SEER, not both."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
+                        python_type = str
                         python_type_convertor = str
                         map_codes = {'A+++': '', 'A++': '', 'A+': '', 'A': '', 'B': '', 'C': '', 'D': '', 'E': '', 'F': '', 'G': '', 'ND': '', 'Unknown': ''}
                         map_values = {'': 'Unknown'}
@@ -25363,7 +25951,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         def sap_cooling(self): return self.getparent()
                     
                         @property
-                        def value(self):
+                        def value(self): 
                             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
                             else:
                                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
@@ -25391,12 +25979,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                         element_type = "xs:decimal"
                         class_name = "System_Energy_Efficiency_Ratio"
-                        documentation = """SEER."""
+                        documentation = r"""SEER."""
                         type_documentation = None
                         has_text_node = True
                         min_occurs = 0
                         max_occurs = 1
-                        python_type_convertor = float
+                        python_type = float
+                        python_type_convertor = lambda x: x if x is None else float(x)
                         map_codes = None
                         map_values = None
                         parent_class_name = "SAP_Cooling"
@@ -25412,7 +26001,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                             try:
                                 return self.__class__.python_type_convertor(self.text)
                             except ValueError:
-                                raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                                raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
                     
                         @value.setter
                         def value(self, value): self.text = str(value)
@@ -25429,11 +26018,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "xs:base64Binary"
             class_name = "PDF"
-            documentation = """DEPRECATED - DO NOT USE This element is allowed for backwards-compatibility but any data sent here will not be read, processed or stored by the register."""
+            documentation = r"""DEPRECATED - DO NOT USE This element is allowed for backwards-compatibility but any data sent here will not be read, processed or stored by the register."""
             type_documentation = None
             has_text_node = True
             min_occurs = 0
             max_occurs = 1
+            python_type = base64.b64encode
             python_type_convertor = base64.b64encode
             map_codes = None
             map_values = None
@@ -25450,7 +26040,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 try:
                     return self.__class__.python_type_convertor(self.text)
                 except ValueError:
-                    raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                    raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
         
             @value.setter
             def value(self, value): self.text = str(value)
@@ -25468,10 +26058,11 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             element_type = "Insurance-Details"
             class_name = "Insurance_Details"
             documentation = None
-            type_documentation = """Details of the Professional Indemnity Insurance policy used to provide cover against a compensation claim against any particular Home Condition Report. A particular Home Condition Report may be covered by an Professional Indemnity Insurance policy in one of three different ways: * The Home Inspector has personal Professional Indemnity Insurance and the Home Condition Report is covered by this. * The Home Condition Report is covered by an umbrella Professional Indemnity Insurance policy held by the Home Condition Report Supplier that assigned the inspection to the Home Inspector. * An individual insurance policy is taken out to cover the individual report such as the case where the property is unusual and falls outside the Home Inspectors normal Professional Indemnity Insurance policy. A Home Inspector may use any or all of these methods to providing Professional Indemnity Insurance for a Home Condition Report on a case-by-case basis."""
+            type_documentation = r"""Details of the Professional Indemnity Insurance policy used to provide cover against a compensation claim against any particular Home Condition Report. A particular Home Condition Report may be covered by an Professional Indemnity Insurance policy in one of three different ways: * The Home Inspector has personal Professional Indemnity Insurance and the Home Condition Report is covered by this. * The Home Condition Report is covered by an umbrella Professional Indemnity Insurance policy held by the Home Condition Report Supplier that assigned the inspection to the Home Inspector. * An individual insurance policy is taken out to cover the individual report such as the case where the property is unusual and falls outside the Home Inspectors normal Professional Indemnity Insurance policy. A Home Inspector may use any or all of these methods to providing Professional Indemnity Insurance for a Home Condition Report on a case-by-case basis."""
             has_text_node = False
             min_occurs = 0
             max_occurs = 1
+            python_type = None
             python_type_convertor = None
             map_codes = None
             map_values = None
@@ -25519,11 +26110,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "xs:string"
                 class_name = "Insurer"
-                documentation = """The name of the insurance company that underwrites / issued the insurance policy"""
+                documentation = r"""The name of the insurance company that underwrites / issued the insurance policy"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -25553,11 +26145,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "xs:string"
                 class_name = "Policy_No"
-                documentation = """The policy number of the insurance policy"""
+                documentation = r"""The policy number of the insurance policy"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = str
                 python_type_convertor = str
                 map_codes = None
                 map_values = None
@@ -25587,11 +26180,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "xs:date"
                 class_name = "Effective_Date"
-                documentation = """The date that the insurance policy becomes effective (commences cover)"""
+                documentation = r"""The date that the insurance policy becomes effective (commences cover)"""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = datetime.date.fromisoformat
                 python_type_convertor = datetime.date.fromisoformat
                 map_codes = None
                 map_values = None
@@ -25608,7 +26202,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -25625,11 +26219,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "xs:date"
                 class_name = "Expiry_Date"
-                documentation = """The date that the insurance policy is supposed to expire."""
+                documentation = r"""The date that the insurance policy is supposed to expire."""
                 type_documentation = None
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
+                python_type = datetime.date.fromisoformat
                 python_type_convertor = datetime.date.fromisoformat
                 map_codes = None
                 map_values = None
@@ -25646,7 +26241,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -25663,12 +26258,13 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                 namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
                 element_type = "Money"
                 class_name = "PI_Limit"
-                documentation = """The upper limit of the Professional Indemnity cover provided by the insurance policy."""
-                type_documentation = """Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
+                documentation = r"""The upper limit of the Professional Indemnity cover provided by the insurance policy."""
+                type_documentation = r"""Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported."""
                 has_text_node = True
                 min_occurs = 1
                 max_occurs = 1
-                python_type_convertor = float
+                python_type = float
+                python_type_convertor = lambda x: x if x is None else float(x)
                 map_codes = None
                 map_values = None
                 parent_class_name = "Insurance_Details"
@@ -25684,7 +26280,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
                     try:
                         return self.__class__.python_type_convertor(self.text)
                     except ValueError:
-                        raise ValueError(f'text "{self.text}" cannot be converted to "{self.__class__.python_type_convertor.__name__}")')
+                        raise ValueError(f'The text value of a {self.__class__.element_name} XML element is incorrect ("{self.text}"). The value should be of type "{self.__class__.python_type.__name__}".')
             
                 @value.setter
                 def value(self, value): self.text = str(value)
@@ -25701,11 +26297,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "xs:string"
             class_name = "ExternalDefinitions_Revision_Number"
-            documentation = """A number indicating the version of related ExternalDefinitions.xsd"""
+            documentation = r"""A number indicating the version of related ExternalDefinitions.xsd"""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -25735,11 +26332,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
         element_type = "xs:string"
         class_name = "Client_Name"
-        documentation = """Name of the client. External to the EPC schema for GDPR purposes."""
+        documentation = r"""Name of the client. External to the EPC schema for GDPR purposes."""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -25769,11 +26367,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
         element_type = "xs:string"
         class_name = "Client_Company"
-        documentation = """Company name of the client. External to the EPC schema for GDPR purposes."""
+        documentation = r"""Company name of the client. External to the EPC schema for GDPR purposes."""
         type_documentation = None
         has_text_node = True
         min_occurs = 1
         max_occurs = 1
+        python_type = str
         python_type_convertor = str
         map_codes = None
         map_values = None
@@ -25803,11 +26402,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
         element_type = "AddressType"
         class_name = "Client_Address"
-        documentation = """Address of the client. External to the EPC schema for GDPR purposes."""
-        type_documentation = """An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
+        documentation = r"""Address of the client. External to the EPC schema for GDPR purposes."""
+        type_documentation = r"""An address is composed of a number of structured elements such as Postcode, Post-Town, Street etc."""
         has_text_node = False
         min_occurs = 1
         max_occurs = 1
+        python_type = None
         python_type_convertor = None
         map_codes = None
         map_values = None
@@ -25860,6 +26460,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -25894,6 +26495,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 0
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -25928,6 +26530,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 0
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -25962,6 +26565,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -25991,11 +26595,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
             namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
             element_type = "PostcodeType"
             class_name = "Postcode"
-            documentation = """The Postcode for the Address"""
+            documentation = r"""The Postcode for the Address"""
             type_documentation = None
             has_text_node = True
             min_occurs = 1
             max_occurs = 1
+            python_type = str
             python_type_convertor = str
             map_codes = None
             map_values = None
@@ -26025,11 +26630,12 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
         namespace = "https://epbr.digital.communities.gov.uk/xsd/sap"
         element_type = "xs:boolean"
         class_name = "Is_Multiple_Compliance"
-        documentation = """Is the compliance report part of a multiple compliance calculation."""
+        documentation = r"""Is the compliance report part of a multiple compliance calculation."""
         type_documentation = None
         has_text_node = True
         min_occurs = 0
         max_occurs = 1
+        python_type = bool
         python_type_convertor = bool
         map_codes = {'true': True, '1': True, 'false': False, '0': False}
         map_values = {True: '1', False: '0'}
@@ -26042,7 +26648,7 @@ class SAP_Compliance_Report(_Base, etree.ElementBase):
         def sap_compliance_report(self): return self.getparent()
     
         @property
-        def value(self):
+        def value(self): 
             if self.text in self.__class__.map_codes:            return self.__class__.map_codes[self.text]
             else:
                 raise ValueError(f'text "{self.text}" is not in "{str(list(self.__class__.map_codes))}")')
