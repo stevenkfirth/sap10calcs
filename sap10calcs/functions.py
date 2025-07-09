@@ -15,7 +15,7 @@ from .instances import RdSAP_Schema_21_0_0_parser
 def calculate(
         input_file = None,
         input_lxml = None,
-        calculation_method = 'Energy rating',
+        calculation_method = 'Energy rating',  # should perhaps be 'calculation_type' ??
         year = None,
         month = None,
         day = None,    
@@ -26,7 +26,7 @@ def calculate(
         ):
     ""
     
-    url = url + f'?calculation_method={calculation_method}'
+    url = url + f'?calculation_type={calculation_method}'
     
     if not year is None:
         url = url + f'&year={year}'
@@ -46,15 +46,6 @@ def calculate(
         raise Exception
         
     files = {'file': BytesIO(input_string)}
-        
-    if not year is None:
-        url = url + f'&year={year}'
-        
-    if not month is None:
-        url = url + f'&month={month}'
-        
-    if not day is None:
-        url = url + f'&day={day}'
         
     if not extra is None:
         files['extra'] = json.dumps(extra)

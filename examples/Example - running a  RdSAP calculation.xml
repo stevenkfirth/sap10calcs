@@ -2,11 +2,15 @@
 <SAP-Report xmlns="https://epbr.digital.communities.gov.uk/xsd/sap">
   <Schema-Version-Original>SAP-Schema-19.1.0</Schema-Version-Original>
   <SAP-Version>10.2</SAP-Version>
+  <Report-Header/>
   <SAP10-Data>
     <Data-Type>5</Data-Type>
     <SAP-Property-Details>
       <Cold-Water-Source>1</Cold-Water-Source>
       <Living-Area>75.0</Living-Area>
+      <Thermal-Mass-Parameter>250</Thermal-Mass-Parameter>
+      <Windows-Overshading>2</Windows-Overshading>
+      <Is-Dwelling-Export-Capable>0</Is-Dwelling-Export-Capable>
       <SAP-Building-Parts>
         <SAP-Building-Part>
           <Building-Part-Number>1</Building-Part-Number>
@@ -24,8 +28,25 @@
             <Thermal-Bridge-Code>4</Thermal-Bridge-Code>
             <User-Defined-Y-Value>0.15</User-Defined-Y-Value>
           </SAP-Thermal-Bridges>
+          <SAP-Walls>
+            <SAP-Wall>
+              <Name>Exposed_wall_building_part_1</Name>
+              <Wall-Type>2</Wall-Type>
+              <Total-Wall-Area>120.0</Total-Wall-Area>
+              <U-Value>1.0</U-Value>
+            </SAP-Wall>
+          </SAP-Walls>
+          <SAP-Roofs>
+            <SAP-Roof>
+              <Name>Roof_building_part_1</Name>
+              <Roof-Type>2</Roof-Type>
+              <Total-Roof-Area>100.0</Total-Roof-Area>
+              <U-Value>1.0</U-Value>
+            </SAP-Roof>
+          </SAP-Roofs>
         </SAP-Building-Part>
       </SAP-Building-Parts>
+      <SAP-Opening-Types/>
       <SAP-Ventilation>
         <Open-Chimneys-Count>0</Open-Chimneys-Count>
         <Open-Flues-Count>0</Open-Flues-Count>
@@ -38,6 +59,10 @@
         <Flueless-Gas-Fires-Count>0</Flueless-Gas-Fires-Count>
         <Pressure-Test>6</Pressure-Test>
         <Air-Permeability>0.0</Air-Permeability>
+        <Ground-Floor-Type>3</Ground-Floor-Type>
+        <Wall-Type>2</Wall-Type>
+        <Has-Draught-Lobby>0</Has-Draught-Lobby>
+        <DraughtStripping>50</DraughtStripping>
         <Sheltered-Sides-Count>0</Sheltered-Sides-Count>
         <Ventilation-Type>1</Ventilation-Type>
       </SAP-Ventilation>
@@ -60,8 +85,12 @@
           </Main-Heating>
         </Main-Heating-Details>
         <Has-Hot-Water-Cylinder>0</Has-Hot-Water-Cylinder>
+        <Is-Hot-Water-Separately-Timed>1</Is-Hot-Water-Separately-Timed>
         <Thermal-Store>1</Thermal-Store>
       </SAP-Heating>
+      <SAP-Energy-Source>
+        <Electricity-Tariff>1</Electricity-Tariff>
+      </SAP-Energy-Source>
     </SAP-Property-Details>
   </SAP10-Data>
 </SAP-Report>

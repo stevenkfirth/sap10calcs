@@ -32,7 +32,7 @@
           <Main-Heating>
             <Main-Heating-Number>1</Main-Heating-Number>
             <Main-Heating-Category>2</Main-Heating-Category>
-            <Main-Fuel-Type>1</Main-Fuel-Type>
+            <Main-Fuel-Type>26</Main-Fuel-Type>
             <Main-Heating-Control>2106</Main-Heating-Control>
             <Main-Heating-Data-Source>2</Main-Heating-Data-Source>
             <SAP-Main-Heating-Code>104</SAP-Main-Heating-Code>
@@ -57,7 +57,9 @@
         <Wind-Turbines-Terrain-Type>4</Wind-Turbines-Terrain-Type>
         <PV-Connection>0</PV-Connection>
         <Photovoltaic-Supply>
-          <None-Or-No-Details/>
+          <None-Or-No-Details>
+            <Percent-Roof-Area>0</Percent-Roof-Area>
+          </None-Or-No-Details>
         </Photovoltaic-Supply>
       </SAP-Energy-Source>
       <SAP-Building-Parts>
