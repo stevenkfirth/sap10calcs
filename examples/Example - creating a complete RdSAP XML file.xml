@@ -72,6 +72,7 @@
           <Roof-U-Value>1.0</Roof-U-Value>
           <Roof-Insulation-Location>2</Roof-Insulation-Location>
           <Wall-Construction>4</Wall-Construction>
+          <Wall-Dry-Lined>N</Wall-Dry-Lined>
           <Wall-U-Value>1.0</Wall-U-Value>
           <Wall-Insulation-Type>2</Wall-Insulation-Type>
           <Wall-Thickness-Measured>N</Wall-Thickness-Measured>

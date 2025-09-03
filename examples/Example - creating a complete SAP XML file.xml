@@ -2,6 +2,13 @@
 <SAP-Report xmlns="https://epbr.digital.communities.gov.uk/xsd/sap">
   <Schema-Version-Original>SAP-Schema-19.1.0</Schema-Version-Original>
   <SAP-Version>10.2</SAP-Version>
+  <Report-Header>
+    <Property>
+      <Address>
+        <Postcode>LE11 3TU</Postcode>
+      </Address>
+    </Property>
+  </Report-Header>
   <SAP10-Data>
     <Data-Type>1</Data-Type>
     <SAP-Property-Details>
