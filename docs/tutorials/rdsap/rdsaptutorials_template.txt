@@ -1,0 +1,60 @@
+.. _rdsap10_tutorials:
+
+RdSAP10 Tutorials
+=================
+
+.. _running_a_rdsap10_calculation:
+
+Running a RdSAP10 calculation
+-----------------------------
+
+An RdSAP10 calculation can be run using:
+
+.. code-block:: Python
+
+   # __CODE1__
+
+This uses the :py:func:`sap10calcs.rdsap` function:
+
+- ``input_file`` is an RdSAP10 XML file provided by the user and stored on the local computer.
+- ``auth_token`` is an authorization token for the remote API service provided by the user (see `here <https://netzeroapis.com/redoc#section/Authorization>`__ for details).
+- ``result`` is a Python dictionary which contains the final RdSAP calculated values (such as energy consumption and the SAP rating), the intermediate calculations and any error messages.
+
+In practice, I would use this in a wider function that also saves the complete output of the :py:func:`sap10calcs.rdsap` function, saves the final SAP10 XML file (ready for use in :py:func:`sap10calcs.calculate`) and prints out any error message. This might look like:
+
+..  code-block:: Python
+
+    # __CODE2__
+
+The SAP10 XML file is returned as a string in the ``result`` dictionary. So this is converted into a file-like object using `StringIO <https://docs.python.org/3/library/io.html#io.StringIO>`__ before being read using the :py:func:`sap10calcs.parse_xml` function.
+
+The ``tree`` variable is a standard `lxml ElementTree <https://lxml.de/tutorial.html>`__. The ``write`` method from the lxml package is used to save the XML to a local file.
+
+
+.. _editing_an_existing_rdsap_xml_file:
+
+Editing an existing RdSAP XML input file
+----------------------------------------
+
+This code uses the :py:func:`sap10calcs.parse_rsdap_xml` function to read an RdSAP XML file. It then updates the country code and the number of doors, and saves the XML file with a new name.
+
+.. code-block:: Python
+
+   # __CODE4__
+
+.. _creating_a_rdsap_xml_input_file_from_scratch:
+
+Creating a RdSAP XML input file from scratch
+--------------------------------------------
+
+This code uses the :py:func:`sap10calcs.create_rdsap_report_xml` function to create an empty :py:class:`~sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report` object, and then uses the object properties and methods to create a complete RdSAP input XML file.
+
+..  code-block:: python
+
+    # __CODE3__
+
+This creates the following XML file (shown below using the :py:func:`display` function):
+
+..  code-block:: XML
+
+    # __OUTPUT1__

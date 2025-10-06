@@ -1,0 +1,28 @@
+{
+    "tests": [
+        {
+            "id": "1",
+            "name": "Base case with a solar PV system",
+            "description": "House with a 2.5 kWp, south-facing solar PV system. Roof pitch is 30 degrees, overshading is 'modest, PV system is 'connected to the dwellings electricity meter and the dwelling is export capable.",
+            "answers": [
+                {
+                    "key": "E_PV",
+                    "value": 1727.24,
+                    "description": "The total annual PV generation in kWh. Using the rule of thumb of aroung 700 kWh/year generation for each kWp installed, this looks about right."
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Base case with a solar PV system - double area",
+            "description": "House with a 5 kWp, south-facing solar PV system. Roof pitch is 30 degrees, overshading is 'modest, PV system is 'connected to the dwellings electricity meter and the dwelling is export capable.",
+            "answers": [
+                {
+                    "key": "E_PV",
+                    "value": 3454.48,
+                    "description": "The total annual PV generation in kWh. This is double the answer in '1' which makes sense as the PV array area has doubled."
+                }
+            ]
+        }
+    ]
+}

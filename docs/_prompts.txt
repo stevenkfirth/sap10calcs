@@ -1,0 +1,9 @@
+make html
+make clean
+
+jupyter nbconvert --to Markdown case_studies/solar_photovoltaics/solar_photovoltaics.ipynb
+
+python -m _generate_xml_docs
+
+python -m _generate_xml_references
+

@@ -1,0 +1,12 @@
+{
+    "tests": [
+        {
+            "id": "1",
+            "name": "Detached house",
+            "description": "A base case of a detached house with a gas boiler",
+            "input_file": "1/in.xml",
+            "extra_file": null,
+            "result_file": "1/result.json"
+        }
+    ]
+}

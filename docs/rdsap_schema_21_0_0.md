@@ -792,7 +792,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *A number such as 125*
 - Parent element: [`Property-Summary`](#RdSAP-Report/Energy-Assessment/Property-Summary)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Property_Summary.Total_Floor_Area.<lambda> at 0x000001A0383894E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -817,7 +817,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *If all windows measured, fraction of windows that are multiply glazed to nearest 1%. If windows not measured, same as SAP-Data\Energy-Assessment\Property-Summary\Multiple-Glazed-Proportion.*
 - Parent element: [`Property-Summary`](#RdSAP-Report/Energy-Assessment/Property-Summary)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Property_Summary.Multiple_Glazed_Proportion.<lambda> at 0x000001A038389C60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -850,7 +850,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The Current Energy Rating of the Property*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Energy_Rating_Current.<lambda> at 0x000001A03838B7E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -861,7 +861,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The overall Energy Rating for the Property being assessed.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Energy_Rating_Potential.<lambda> at 0x000001A03838BBA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -872,7 +872,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Average SAP rating for the country concerned. 0 if unknown or not applicable*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Energy_Rating_Average.<lambda> at 0x000001A03838BF60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -883,7 +883,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The estimated current Environmental Impact Rating of the property*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Environmental_Impact_Current.<lambda> at 0x000001A038390360>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -894,7 +894,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The estimated potential Environmental Impact Rating of the property*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Environmental_Impact_Potential.<lambda> at 0x000001A038390720>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -906,7 +906,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Energy_Consumption_Current.<lambda> at 0x000001A038390AE0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -918,7 +918,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Energy_Consumption_Potential.<lambda> at 0x000001A038390EA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -930,7 +930,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.CO2_Emissions_Current.<lambda> at 0x000001A038391260>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -942,7 +942,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.CO2_Emissions_Current_Per_Floor_Area.<lambda> at 0x000001A038391620>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -954,7 +954,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.CO2_Emissions_Potential.<lambda> at 0x000001A0383919E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -966,7 +966,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Lighting_Cost_Current.<lambda> at 0x000001A038391DA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -978,7 +978,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Lighting_Cost_Potential.<lambda> at 0x000001A038392160>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -990,7 +990,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Heating_Cost_Current.<lambda> at 0x000001A038392520>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1002,7 +1002,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Heating_Cost_Potential.<lambda> at 0x000001A0383928E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1014,7 +1014,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Hot_Water_Cost_Current.<lambda> at 0x000001A038392CA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1026,7 +1026,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#RdSAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Energy_Use.Hot_Water_Cost_Potential.<lambda> at 0x000001A038393060>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1058,7 +1058,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced.*
 - Parent element: [`Improvement`](#RdSAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Suggested_Improvements.Improvement.Sequence.<lambda> at 0x000001A038394180>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1142,7 +1142,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Improvement`](#RdSAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Suggested_Improvements.Improvement.Typical_Saving.<lambda> at 0x000001A038394B80>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1153,7 +1153,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`Improvement`](#RdSAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Suggested_Improvements.Improvement.Energy_Performance_Rating.<lambda> at 0x000001A038394F40>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1164,7 +1164,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`Improvement`](#RdSAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Suggested_Improvements.Improvement.Environmental_Impact_Rating.<lambda> at 0x000001A038395300>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1491,7 +1491,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Renewable-Heat-Incentive`](#RdSAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Renewable_Heat_Incentive.Space_Heating_Existing_Dwelling.<lambda> at 0x000001A03839A020>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1503,7 +1503,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Renewable-Heat-Incentive`](#RdSAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Renewable_Heat_Incentive.Space_Heating_With_Loft_Insulation.<lambda> at 0x000001A03839A3E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1515,7 +1515,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Renewable-Heat-Incentive`](#RdSAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Renewable_Heat_Incentive.Space_Heating_With_Cavity_Insulation.<lambda> at 0x000001A03839A7A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1527,7 +1527,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Renewable-Heat-Incentive`](#RdSAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Renewable_Heat_Incentive.Space_Heating_With_Loft_And_Cavity_Insulation.<lambda> at 0x000001A03839AB60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1539,7 +1539,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Renewable-Heat-Incentive`](#RdSAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Renewable_Heat_Incentive.Water_Heating.<lambda> at 0x000001A03839AF20>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1550,7 +1550,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Reduction in space heating requirement with loft insulation (as negative value). Omit if not applicable*
 - Parent element: [`Renewable-Heat-Incentive`](#RdSAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Renewable_Heat_Incentive.Impact_Of_Loft_Insulation.<lambda> at 0x000001A03839B2E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1561,7 +1561,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Reduction in space heating requirement with cavity insulation (as negative value). Omit if not applicable*
 - Parent element: [`Renewable-Heat-Incentive`](#RdSAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Renewable_Heat_Incentive.Impact_Of_Cavity_Insulation.<lambda> at 0x000001A03839B6A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1572,7 +1572,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Reduction in space heating requirement with solid wall insulation (as negative value). Omit if not applicable*
 - Parent element: [`Renewable-Heat-Incentive`](#RdSAP-Report/Energy-Assessment/Renewable-Heat-Incentive)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Renewable_Heat_Incentive.Impact_Of_Solid_Wall_Insulation.<lambda> at 0x000001A03839BA60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1739,7 +1739,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Green-Deal-Package`](#RdSAP-Report/Energy-Assessment/Green-Deal-Package)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Green_Deal_Package.Electricity_Saving.<lambda> at 0x000001A0383A0720>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1751,7 +1751,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Green-Deal-Package`](#RdSAP-Report/Energy-Assessment/Green-Deal-Package)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Green_Deal_Package.Gas_Saving.<lambda> at 0x000001A0383A1120>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1763,7 +1763,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Green-Deal-Package`](#RdSAP-Report/Energy-Assessment/Green-Deal-Package)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Green_Deal_Package.Other_Fuel_Saving.<lambda> at 0x000001A0383A14E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1796,7 +1796,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced.*
 - Parent element: [`Improvement`](#RdSAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Alternative_Improvements.Improvement.Sequence.<lambda> at 0x000001A0383A25C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1880,7 +1880,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Improvement`](#RdSAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Alternative_Improvements.Improvement.Typical_Saving.<lambda> at 0x000001A0383A2FC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1891,7 +1891,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`Improvement`](#RdSAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Alternative_Improvements.Improvement.Energy_Performance_Rating.<lambda> at 0x000001A0383A3380>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1902,7 +1902,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`Improvement`](#RdSAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.Energy_Assessment.Alternative_Improvements.Improvement.Environmental_Impact_Rating.<lambda> at 0x000001A0383A3740>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2095,7 +2095,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of extensions added to the house.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Extensions_Count.<lambda> at 0x000001A0383A99E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2106,7 +2106,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Count of the number of habitable rooms within the property. This is the number of Reception Rooms (including Living Rooms, Sitting Rooms, Dining Rooms), Bedrooms, Study and similar rooms but excludes hall, stairs, kitchen, utility rooms, bathrooms, cloakrooms, en-suites and similar rooms.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Habitable_Room_Count.<lambda> at 0x000001A0383A9DA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2117,7 +2117,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The numbewr of heated rooms in the property if more than half of the abitable rooms are not heated.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Heated_Room_Count.<lambda> at 0x000001A0383AA160>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2128,7 +2128,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *If exact number of CFL and LED not known, provide number of low energy fixed lighting outlets.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Low_Energy_Fixed_Lighting_Bulbs_Count.<lambda> at 0x000001A0383AA520>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2139,7 +2139,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Number of incandescent fixed bulbs.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Incandescent_Fixed_Lighting_Bulbs_Count.<lambda> at 0x000001A0383AA8E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2150,7 +2150,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Number of LED fixed bulbs.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.LED_Fixed_Lighting_Bulbs_Count.<lambda> at 0x000001A0383AACA0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2161,7 +2161,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Number of CFL fixed bulbs.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.CFL_Fixed_Lighting_Bulbs_Count.<lambda> at 0x000001A0383AB060>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2214,7 +2214,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Relevant when mechanical ventilation system is from PCDB.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Wet_Rooms_Count.<lambda> at 0x000001A0383ABD80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2250,7 +2250,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Air permeability; only if pressure test (yes or assumed).*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Air_Permeability.<lambda> at 0x000001A0383B07C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2276,7 +2276,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of Open Chimneys in the Property.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Open_Chimneys_Count.<lambda> at 0x000001A0383B0F40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2287,7 +2287,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of Blocked Chimneys in the Property.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Blocked_Chimneys_Count.<lambda> at 0x000001A0383B1300>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2298,7 +2298,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of Open Flues in the Property.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Open_Flues_Count.<lambda> at 0x000001A0383B16C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2309,7 +2309,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Chimney/Flues attached to closed fires.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Closed_Flues_Count.<lambda> at 0x000001A0383B1A80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2320,7 +2320,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of Boiler Flues or chimneys in the Property.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Boilers_Flues_Count.<lambda> at 0x000001A0383B1E40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2331,7 +2331,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of Other Flues or chimneys in the Property.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Other_Flues_Count.<lambda> at 0x000001A0383B2200>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2341,7 +2341,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Extract_Fans_Count.<lambda> at 0x000001A0383B25C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2352,7 +2352,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Number of passive vents.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.PSV_Count.<lambda> at 0x000001A0383B2980>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2363,7 +2363,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of flueless gas fires in the Property.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Flueless_Gas_Fires_Count.<lambda> at 0x000001A0383B2D40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2374,7 +2374,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Relevant when mechanical ventilation system is from PCDB.*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Mechanical_Ventilation_Index_Number.<lambda> at 0x000001A0383B3100>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2486,7 +2486,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *MEV dc, number of fans in room, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Kitchen_Room_Fans_Count.<lambda> at 0x000001A0383B4C20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2497,7 +2497,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *MEV dc, number of fans in room, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Non_Kitchen_Room_Fans_Count.<lambda> at 0x000001A0383B4FE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2508,7 +2508,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *MEV dc, number of fans via duct, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Kitchen_Duct_Fans_Count.<lambda> at 0x000001A0383B53A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2519,7 +2519,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *MEV dc, number of fans via duct, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Non_Kitchen_Duct_Fans_Count.<lambda> at 0x000001A0383B5760>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2530,7 +2530,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *MEV dc, number of fans through wall, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Kitchen_Wall_Fans_Count.<lambda> at 0x000001A0383B5B20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2541,7 +2541,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *MEV dc, number of fans through wall, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Non_Kitchen_Wall_Fans_Count.<lambda> at 0x000001A0383B5EE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2741,7 +2741,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Cylinder_Size_Measured.<lambda> at 0x000001A0383BD6C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2767,7 +2767,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Cylinder_Heat_Loss.<lambda> at 0x000001A0383BDDA0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2844,7 +2844,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Identifies the main heating as system 1 or system 2. System 1 must always be present, system 2 is included only when there are two systems.*
 - Parent element: [`Main-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Number.<lambda> at 0x000001A0383C9260>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3030,7 +3030,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Fraction of total floor area served by this system.*
 - Parent element: [`Main-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Fraction.<lambda> at 0x000001A0383CB560>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3054,7 +3054,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *FGHRS index number; only if FGHRS*
 - Parent element: [`Main-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_Index_Number.<lambda> at 0x000001A0383CBC40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3066,7 +3066,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Main-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_PV_Peak_Power.<lambda> at 0x000001A038054040>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3129,7 +3129,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The ID of the controller from the product database.*
 - Parent element: [`Main-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Compensating_Controller_Index_Number.<lambda> at 0x000001A038054D60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3140,7 +3140,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The ID of the time and temperature zone control from the product database.*
 - Parent element: [`Main-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.TTZC_Index_Number.<lambda> at 0x000001A038055120>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3151,7 +3151,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *index number of heat network, if applicable, community space heating or community space and water heating.*
 - Parent element: [`Main-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Community_Heat_Network_Index_Number.<lambda> at 0x000001A0380554E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3226,7 +3226,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of storage heaters with this index number.*
 - Parent element: [`Storage-Heater`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Storage_Heaters.Storage_Heater.Number_Of_Heaters.<lambda> at 0x000001A038056980>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3237,7 +3237,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The index number of the heater from the product database.*
 - Parent element: [`Storage-Heater`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Storage_Heaters.Storage_Heater.Index_Number.<lambda> at 0x000001A038056D40>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3421,7 +3421,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Solar-Collector-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details/Solar-Collector-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Solar_Collector_Details.Aperture_Area.<lambda> at 0x000001A03805EAC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3446,7 +3446,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Collector zero-loss efficiency.*
 - Parent element: [`Solar-Collector-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details/Solar-Collector-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Solar_Collector_Details.Zero_Loss_Efficiency.<lambda> at 0x000001A03805F1A0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3457,7 +3457,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Collector heat loss rate; for backward compatibility only, do not use.*
 - Parent element: [`Solar-Collector-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details/Solar-Collector-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Solar_Collector_Details.Heat_Loss_Rate.<lambda> at 0x000001A03805F560>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3468,7 +3468,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Collector linear heat loss coefficient.*
 - Parent element: [`Solar-Collector-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details/Solar-Collector-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Solar_Collector_Details.Linear_Heat_Loss_Coefficient.<lambda> at 0x000001A03805F920>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3479,7 +3479,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Collector 2nd order heat loss coefficient.*
 - Parent element: [`Solar-Collector-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details/Solar-Collector-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Solar_Collector_Details.Second_Order_Heat_Loss_Coefficient.<lambda> at 0x000001A03805FCE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3502,7 +3502,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Solar-Volume-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details/Solar-Volume-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Solar_Volume_Details.Total_Store_Volume.<lambda> at 0x000001A038060540>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3514,7 +3514,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Solar-Volume-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details/Solar-Volume-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Solar_Volume_Details.Dedicated_Solar_Volume.<lambda> at 0x000001A038060900>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3554,7 +3554,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Collector loop efficiency; only if declared values.*
 - Parent element: [`Solar-Water-Heating-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Collector_Loop_Efficiency.<lambda> at 0x000001A038061260>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3565,7 +3565,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Incidence angle modifier; only if declared values.*
 - Parent element: [`Solar-Water-Heating-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Incidence_Angle_Modifier.<lambda> at 0x000001A038061620>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3603,7 +3603,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Overall heat loss coefficient of system; only if declared values.*
 - Parent element: [`Solar-Water-Heating-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Solar-Water-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Solar_Water_Heating_Details.Overall_Heat_Loss.<lambda> at 0x000001A0380620C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3624,7 +3624,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Instantaneous-WWHRS`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Instantaneous_WWHRS.WWHRS_Index_Number1.<lambda> at 0x000001A0380627A0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3635,7 +3635,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Omit if no second system.*
 - Parent element: [`Instantaneous-WWHRS`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Instantaneous_WWHRS.WWHRS_Index_Number2.<lambda> at 0x000001A038062B60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3655,7 +3655,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Storage-WWHRS`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Storage_WWHRS.WWHRS_Index_Number.<lambda> at 0x000001A038063240>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3667,7 +3667,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Storage-WWHRS`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Storage_WWHRS.WWHRS_Store_Volume.<lambda> at 0x000001A038063600>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3730,7 +3730,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`SAP-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Number_Baths.<lambda> at 0x000001A038063B00>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3740,7 +3740,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`SAP-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Number_Baths_WWHRS.<lambda> at 0x000001A03806C860>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3751,7 +3751,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *index number of heat network, if applicable, community water heating only.*
 - Parent element: [`SAP-Heating`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Heating.Community_DHW_Network_Index_Number.<lambda> at 0x000001A03806CC20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3894,7 +3894,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Number of wind turbines; 0 if none.*
 - Parent element: [`SAP-Energy-Source`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Energy_Source.Wind_Turbines_Count.<lambda> at 0x000001A03806FE20>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3932,7 +3932,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Wind-Turbine-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbine-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Energy_Source.Wind_Turbine_Details.Rotor_Diameter.<lambda> at 0x000001A038070900>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3944,7 +3944,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Wind-Turbine-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbine-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Energy_Source.Wind_Turbine_Details.Hub_Height.<lambda> at 0x000001A038070CC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3986,7 +3986,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`PV-Array`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source/Photovoltaic-Supply/PV-Arrays/PV-Array)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Energy_Source.Photovoltaic_Supply.PV_Arrays.PV_Array.Peak_Power.<lambda> at 0x000001A038071C60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4059,7 +4059,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Photovoltaic area as percentage of total roof area. 0% indicates that a photovoltaic supply is not present in the property.*
 - Parent element: [`None-Or-No-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source/Photovoltaic-Supply/None-Or-No-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Energy_Source.Photovoltaic_Supply.None_Or_No_Details.Percent_Roof_Area.<lambda> at 0x000001A038072AC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4098,7 +4098,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`SAP-Energy-Source`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Energy_Source.PV_Battery_Count.<lambda> at 0x000001A038073420>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4129,7 +4129,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Battery capacity in kWh. defaults to 5kW in unknown.*
 - Parent element: [`PV-Battery`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source/PV-Batteries/PV-Battery)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Energy_Source.PV_Batteries.PV_Battery.Battery_Capacity.<lambda> at 0x000001A038073CE0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4140,7 +4140,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided.*
 - Parent element: [`SAP-Energy-Source`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Energy_Source.Hydro_Electric_Generation.<lambda> at 0x000001A0380739C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4202,7 +4202,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Integral-Conservatory`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Integral-Conservatory)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Integral_Conservatory.Floor_Area.<lambda> at 0x000001A03807D3A0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4214,7 +4214,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Integral-Conservatory`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Integral-Conservatory)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Integral_Conservatory.Glazed_Perimeter.<lambda> at 0x000001A03807D760>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4252,7 +4252,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *An integer value which uniquely identifies the building part in the property. The value "1" must be assigned to the main dwelling.*
 - Parent element: [`SAP-Building-Part`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.Building_Part_Number.<lambda> at 0x000001A0380800E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4323,7 +4323,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Floor-Dimension`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Heat_Loss_Perimeter.<lambda> at 0x000001A038081760>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4335,7 +4335,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Floor-Dimension`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Room_Height.<lambda> at 0x000001A038081B20>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4347,7 +4347,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Floor-Dimension`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Total_Floor_Area.<lambda> at 0x000001A038081EE0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4406,7 +4406,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Floor-Dimension`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Party_Wall_Length.<lambda> at 0x000001A038082C00>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4417,7 +4417,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Only one of Floor-Insulation-Thickness and Floor-U-Value is included*
 - Parent element: [`SAP-Building-Part`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.Floor_U_Value.<lambda> at 0x000001A038080CC0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4506,7 +4506,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Include one of Roof-U-Value, Roof-Insulation-Thickness, Rafter-Insulation-Thickness, Flat-Roof-Insulation-Thickness, Sloping-Ceiling-Insulation-Thickness*
 - Parent element: [`SAP-Building-Part`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.Roof_U_Value.<lambda> at 0x000001A038083EC0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4681,7 +4681,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Wall thickness in mm. Omitted if Wall-Thickness-Measured is false*
 - Parent element: [`SAP-Building-Part`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.Wall_Thickness.<lambda> at 0x000001A03808D8A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4704,7 +4704,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Only one of Wall-Insulation-Thickness and Wall-U-Value is included*
 - Parent element: [`SAP-Building-Part`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.Wall_U_Value.<lambda> at 0x000001A03808DF80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4737,7 +4737,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included*
 - Parent element: [`SAP-Building-Part`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.Wall_Insulation_Thickness_Measured.<lambda> at 0x000001A03808E660>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4772,7 +4772,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Room-In-Roof`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Floor_Area.<lambda> at 0x000001A03808F4C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4819,7 +4819,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Flat_Ceiling_Length_1.<lambda> at 0x000001A0380976A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4830,7 +4830,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Flat_Ceiling_Height_1.<lambda> at 0x000001A038097A60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4840,7 +4840,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Flat_Ceiling_U_Value_1.<lambda> at 0x000001A038097E20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4912,7 +4912,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Flat_Ceiling_Length_2.<lambda> at 0x000001A038098B80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4923,7 +4923,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Flat_Ceiling_Height_2.<lambda> at 0x000001A038098F40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4933,7 +4933,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Flat_Ceiling_U_Value_2.<lambda> at 0x000001A038099300>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5005,7 +5005,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Stud_Wall_Length_1.<lambda> at 0x000001A03809A020>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5016,7 +5016,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Stud_Wall_Height_1.<lambda> at 0x000001A03809A3E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5026,7 +5026,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Stud_Wall_U_Value_1.<lambda> at 0x000001A03809A7A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5079,7 +5079,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Stud_Wall_Length_2.<lambda> at 0x000001A03809B1A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5090,7 +5090,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Stud_Wall_Height_2.<lambda> at 0x000001A03809B560>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5100,7 +5100,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Stud_Wall_U_Value_2.<lambda> at 0x000001A03809B920>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5153,7 +5153,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Slope_Length_1.<lambda> at 0x000001A0380A0360>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5164,7 +5164,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Slope_Height_1.<lambda> at 0x000001A0380A0720>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5174,7 +5174,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Slope_U_Value_1.<lambda> at 0x000001A0380A0AE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5227,7 +5227,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Slope_Length_2.<lambda> at 0x000001A0380A14E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5238,7 +5238,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Slope_Height_2.<lambda> at 0x000001A0380A18A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5248,7 +5248,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Slope_U_Value_2.<lambda> at 0x000001A0380A1C60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5301,7 +5301,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Gable_Wall_Length_1.<lambda> at 0x000001A0380A2660>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5312,7 +5312,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Gable_Wall_Height_1.<lambda> at 0x000001A0380A2A20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5322,7 +5322,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Gable_Wall_U_Value_1.<lambda> at 0x000001A0380A2DE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5348,7 +5348,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Gable_Wall_Length_2.<lambda> at 0x000001A0380A34C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5359,7 +5359,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Gable_Wall_Height_2.<lambda> at 0x000001A0380A3880>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5369,7 +5369,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Gable_Wall_U_Value_2.<lambda> at 0x000001A0380A3C40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5395,7 +5395,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Common_Wall_Length_1.<lambda> at 0x000001A0380A8360>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5406,7 +5406,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Common_Wall_Height_1.<lambda> at 0x000001A0380A8720>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5416,7 +5416,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Common_Wall_U_Value_1.<lambda> at 0x000001A0380A8AE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5427,7 +5427,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Common_Wall_Length_2.<lambda> at 0x000001A0380A8EA0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5438,7 +5438,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Common_Wall_Height_2.<lambda> at 0x000001A0380A9260>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5448,7 +5448,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Room-In-Roof-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Details.Common_Wall_U_Value_2.<lambda> at 0x000001A0380A9620>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5470,7 +5470,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-1`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-1)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_1.Gable_Wall_Length_1.<lambda> at 0x000001A0380A9F80>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5495,7 +5495,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-1`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-1)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_1.Gable_Wall_Length_2.<lambda> at 0x000001A0380AA660>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5531,7 +5531,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_2.Gable_Wall_Length_1.<lambda> at 0x000001A0380ABA60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5542,7 +5542,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_2.Gable_Wall_Height_1.<lambda> at 0x000001A0380ABE20>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5567,7 +5567,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_2.Gable_Wall_Length_2.<lambda> at 0x000001A0380B0540>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5578,7 +5578,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_2.Gable_Wall_Height_2.<lambda> at 0x000001A0380B0900>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5603,7 +5603,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_2.Common_Wall_Length_1.<lambda> at 0x000001A0380B0FE0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5614,7 +5614,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_2.Common_Wall_Height_1.<lambda> at 0x000001A0380B13A0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5625,7 +5625,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_2.Common_Wall_Length_2.<lambda> at 0x000001A0380B1760>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5636,7 +5636,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Room-In-Roof-Type-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Type-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Room_In_Roof.Room_In_Roof_Type_2.Common_Wall_Height_2.<lambda> at 0x000001A0380B1B20>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5695,7 +5695,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Alternative-Wall-1`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Alternative-Wall-1)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Alternative_Wall_1.Wall_Area.<lambda> at 0x000001A0380B32E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5718,7 +5718,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Wall thickness in mm*
 - Parent element: [`SAP-Alternative-Wall-1`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Alternative-Wall-1)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Alternative_Wall_1.Wall_Thickness.<lambda> at 0x000001A0380B39C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5729,7 +5729,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Only one of Wall-Insulation-Thickness and Wall-U-Value is included*
 - Parent element: [`SAP-Alternative-Wall-1`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Alternative-Wall-1)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Alternative_Wall_1.Wall_U_Value.<lambda> at 0x000001A0380B3D80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5762,7 +5762,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included*
 - Parent element: [`SAP-Alternative-Wall-1`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Alternative-Wall-1)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Alternative_Wall_1.Wall_Insulation_Thickness_Measured.<lambda> at 0x000001A0380B84A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5861,7 +5861,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Alternative-Wall-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Alternative-Wall-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Alternative_Wall_2.Wall_Area.<lambda> at 0x000001A0380BA660>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5884,7 +5884,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Wall thickness in mm*
 - Parent element: [`SAP-Alternative-Wall-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Alternative-Wall-2)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Alternative_Wall_2.Wall_Thickness.<lambda> at 0x000001A0380BAD40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5895,7 +5895,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Only one of Wall-Insulation-Thickness and Wall-U-Value is included*
 - Parent element: [`SAP-Alternative-Wall-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Alternative-Wall-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Alternative_Wall_2.Wall_U_Value.<lambda> at 0x000001A0380BB100>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5928,7 +5928,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Only one of Wall-Insulation-Thickness is measured and Wall-U-Value is included*
 - Parent element: [`SAP-Alternative-Wall-2`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Alternative-Wall-2)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Alternative_Wall_2.Wall_Insulation_Thickness_Measured.<lambda> at 0x000001A0380BB7E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6040,7 +6040,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The number of Storeys in the Apartment Block.*
 - Parent element: [`SAP-Flat-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Flat-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Flat_Details.Storey_Count.<lambda> at 0x000001A0380BD260>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6095,7 +6095,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Flat-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Flat-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Flat_Details.Unheated_Corridor_Length.<lambda> at 0x000001A0380BDF80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6143,7 +6143,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Window`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Windows/SAP-Window)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Windows.SAP_Window.Window_Height.<lambda> at 0x000001A0380BFB00>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6154,7 +6154,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`SAP-Window`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Windows/SAP-Window)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Windows.SAP_Window.Window_Width.<lambda> at 0x000001A0380BFEC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6257,7 +6257,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Window-Transmission-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Windows/SAP-Window/Window-Transmission-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Windows.SAP_Window.Window_Transmission_Details.U_Value.<lambda> at 0x000001A0380C58A0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6267,7 +6267,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Window-Transmission-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Windows/SAP-Window/Window-Transmission-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Windows.SAP_Window.Window_Transmission_Details.Solar_Transmittance.<lambda> at 0x000001A0380C5C60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6307,7 +6307,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *include when frame factor is known.*
 - Parent element: [`SAP-Window`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Windows/SAP-Window)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Windows.SAP_Window.Frame_Factor.<lambda> at 0x000001A0380C6660>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6385,7 +6385,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Windows-Transmission-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/Windows-Transmission-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Windows_Transmission_Details.U_Value.<lambda> at 0x000001A0380C7B00>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6395,7 +6395,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`Windows-Transmission-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details/Windows-Transmission-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Windows_Transmission_Details.Solar_Transmittance.<lambda> at 0x000001A0380C7EC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6472,7 +6472,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Number of external doors*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Door_Count.<lambda> at 0x000001A0380CC400>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6483,7 +6483,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Number of insulated external doors*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Insulated_Door_Count.<lambda> at 0x000001A0380CCAE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6494,7 +6494,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Number of draught proofed external doors*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Draughtproofed_Door_Count.<lambda> at 0x000001A0380CCEA0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6504,7 +6504,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Insulated_Door_U_Value.<lambda> at 0x000001A0380CD260>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6515,7 +6515,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Percentage of windows and doors with adequate draught proofing*
 - Parent element: [`SAP-Property-Details`](#RdSAP-Report/SAP-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.Percent_Draughtproofed.<lambda> at 0x000001A0380CD620>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6567,7 +6567,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Energy-Feature`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Energy_Feature.Energy_Saved_Or_Generated.<lambda> at 0x000001A0380CEC00>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6632,7 +6632,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Energy-Feature`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Energy_Feature.Energy_Used.<lambda> at 0x000001A0380CF2E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6739,7 +6739,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Air change rate in month.*
 - Parent element: [`Air-Change-Rate`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Energy_Feature.Air_Change_Rates.Air_Change_Rate.Air_Change_Rate_Value.<lambda> at 0x000001A0380D4360>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6761,7 +6761,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Emissions-Feature`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Emissions_Feature.Emissions_Saved.<lambda> at 0x000001A0380D4900>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6773,7 +6773,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *A measurement of something such as a length or area. All measurements are to 2 decimal places and must be positive.*
 - Parent element: [`Emissions-Feature`](#RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.SAP_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Emissions_Feature.Emissions_Created.<lambda> at 0x000001A0380D4CC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6806,7 +6806,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Date of site visit.*
 - Parent element: [`Report-Header`](#RdSAP-Report/Report-Header)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6831,7 +6831,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Date of completion of report. Equal to or later than Inspection-Date and before or equal to Registration-Date.*
 - Parent element: [`Report-Header`](#RdSAP-Report/Report-Header)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6842,7 +6842,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *Date when report submitted to register.*
 - Parent element: [`Report-Header`](#RdSAP-Report/Report-Header)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7353,7 +7353,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The date that the insurance policy becomes effective (commences cover)*
 - Parent element: [`Insurance-Details`](#RdSAP-Report/Insurance-Details)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7364,7 +7364,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation: *The date that the insurance policy is supposed to expire.*
 - Parent element: [`Insurance-Details`](#RdSAP-Report/Insurance-Details)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7376,7 +7376,7 @@ The root XML element is a [RdSAP-Report](#RdSAP-Report) element.
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Insurance-Details`](#RdSAP-Report/Insurance-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function RdSAP_Report.Insurance_Details.PI_Limit.<lambda> at 0x000001A0380ECB80>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 

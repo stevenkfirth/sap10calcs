@@ -93,7 +93,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Revision Number of the PCDF file used for the calculations.*
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.PCDF_Revision_Number.<lambda> at 0x000001A037BF8A40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -168,7 +168,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The date that the inspection was actually carried out by the Home Inspector.*
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -194,7 +194,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The date that the Home Inspector completed the report. This will be after the Inspection Date but generally before the Registration Date.*
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -205,7 +205,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The date that the report was submitted to the HCR Registration Organisation for lodging in the HCR Register.*
 - Parent element: [`Report-Header`](#SAP-Compliance-Report/SAP-Report/Report-Header)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -722,7 +722,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Date of assessment.*
 - Parent element: [`Energy-Assessment`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1360,7 +1360,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Is a number such as 125*
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Property_Summary.Total_Floor_Area.<lambda> at 0x000001A037C15080>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1371,7 +1371,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Fraction of windows that are multiply glazed to nearest 1%.*
 - Parent element: [`Property-Summary`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Property-Summary)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Property_Summary.Multiple_Glazed_Percentage.<lambda> at 0x000001A037C15440>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1420,7 +1420,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The DER of the Property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.DER.<lambda> at 0x000001A037C17B00>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1431,7 +1431,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The TER of the Property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.TER.<lambda> at 0x000001A037C17EC0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1442,7 +1442,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The DPER of the Property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.DPER.<lambda> at 0x000001A037C182C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1453,7 +1453,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The TPER of the Property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.TPER.<lambda> at 0x000001A037C18680>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1464,7 +1464,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The DFEE of the Property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.DFEE.<lambda> at 0x000001A037C18A40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1475,7 +1475,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The TFEE of the Property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.TFEE.<lambda> at 0x000001A037C18E00>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -1486,7 +1486,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The Current Energy Rating of the Property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Energy_Rating_Current.<lambda> at 0x000001A037C191C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1497,7 +1497,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The overall Energy Rating for the Property being assessed.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Energy_Rating_Potential.<lambda> at 0x000001A037C19580>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1508,7 +1508,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Average SAP rating for the country concerned. 0 if unknown or not applicable*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Energy_Rating_Average.<lambda> at 0x000001A037C19940>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1519,7 +1519,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The estimated current Environmental Impact Rating of the property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Environmental_Impact_Current.<lambda> at 0x000001A037C19D00>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1530,7 +1530,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The estimated potential Environmental Impact Rating of the property*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Environmental_Impact_Potential.<lambda> at 0x000001A037C1A0C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1541,7 +1541,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Energy_Consumption_Current.<lambda> at 0x000001A037C1A480>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1552,7 +1552,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Estimated total energy consumption for the Property in a 12 month period. Value is Kilowatt Hours per Square Metre (kWh/m2)*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Energy_Consumption_Potential.<lambda> at 0x000001A037C1A840>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1563,7 +1563,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *CO2 emissions per year in tonnes/year.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.CO2_Emissions_Current.<lambda> at 0x000001A037C1AC00>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1574,7 +1574,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *CO2 emissions per square metre floor area per year in kg/m2.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.CO2_Emissions_Current_Per_Floor_Area.<lambda> at 0x000001A037C1AFC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1585,7 +1585,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Estimated value in Tonnes per Year of the total CO2 emissions produced by the Property in 12 month period.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.CO2_Emissions_Potential.<lambda> at 0x000001A037C1B380>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1597,7 +1597,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Lighting_Cost_Current.<lambda> at 0x000001A037C1B740>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1609,7 +1609,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Lighting_Cost_Potential.<lambda> at 0x000001A037C1BB00>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1621,7 +1621,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Heating_Cost_Current.<lambda> at 0x000001A037C1BEC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1633,7 +1633,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Heating_Cost_Potential.<lambda> at 0x000001A037C202C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1645,7 +1645,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Hot_Water_Cost_Current.<lambda> at 0x000001A037C20680>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1657,7 +1657,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Energy-Use`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Energy-Use)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Energy_Use.Hot_Water_Cost_Potential.<lambda> at 0x000001A037C20A40>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1690,7 +1690,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced.*
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Suggested_Improvements.Improvement.Sequence.<lambda> at 0x000001A037C21C60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1767,7 +1767,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Suggested_Improvements.Improvement.Typical_Saving.<lambda> at 0x000001A037C22660>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1778,7 +1778,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Suggested_Improvements.Improvement.Energy_Performance_Rating.<lambda> at 0x000001A037C22A20>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -1789,7 +1789,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Suggested-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Suggested_Improvements.Improvement.Environmental_Impact_Rating.<lambda> at 0x000001A037C22DE0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2004,7 +2004,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Space heating requirement.*
 - Parent element: [`RHI-New-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_New_Dwelling.Space_Heating.<lambda> at 0x000001A037C25760>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2015,7 +2015,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Water heating requirement.*
 - Parent element: [`RHI-New-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-New-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_New_Dwelling.Water_Heating.<lambda> at 0x000001A037C25B20>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2036,7 +2036,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Space heating requirement for existing dwelling.*
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_Existing_Dwelling.Space_Heating_Existing_Dwelling.<lambda> at 0x000001A037C26980>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2047,7 +2047,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Space heating requirement after implementation of loft insulation recommendation, omit if loft insulation not recommended. For backwards compatibility only, do not use*
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_Existing_Dwelling.Space_Heating_With_Loft_Insulation.<lambda> at 0x000001A037C26D40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2058,7 +2058,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Space heating requirement after implementation of cavity insulation recommendation, omit if cavity insulation not recommended. For backwards compatibility only, do not use*
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_Existing_Dwelling.Space_Heating_With_Cavity_Insulation.<lambda> at 0x000001A037C27100>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2069,7 +2069,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Space heating requirement after implementation of loft and cavity insulation recommendations, same as existing dwelling if neither is recommended. For backwards compatibility only, do not use*
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_Existing_Dwelling.Space_Heating_With_Loft_And_Cavity_Insulation.<lambda> at 0x000001A037C274C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2080,7 +2080,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Water heating requirement.*
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_Existing_Dwelling.Water_Heating.<lambda> at 0x000001A037C27880>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2091,7 +2091,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Reduction in space heating requirement with loft insulation (as negative value). Omit if not applicable*
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_Existing_Dwelling.Impact_Of_Loft_Insulation.<lambda> at 0x000001A037C27C40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2102,7 +2102,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Reduction in space heating requirement with cavity insulation (as negative value). Omit if not applicable*
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_Existing_Dwelling.Impact_Of_Cavity_Insulation.<lambda> at 0x000001A037C28040>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2113,7 +2113,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Reduction in space heating requirement with solid wall insulation (as negative value). Omit if not applicable*
 - Parent element: [`RHI-Existing-Dwelling`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Renewable-Heat-Incentive/RHI-Existing-Dwelling)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Renewable_Heat_Incentive.RHI_Existing_Dwelling.Impact_Of_Solid_Wall_Insulation.<lambda> at 0x000001A037C28400>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2258,7 +2258,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Green_Deal_Package.Electricity_Saving.<lambda> at 0x000001A037C28FE0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2270,7 +2270,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Green_Deal_Package.Gas_Saving.<lambda> at 0x000001A037C299E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2282,7 +2282,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Green-Deal-Package`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Green-Deal-Package)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Green_Deal_Package.Other_Fuel_Saving.<lambda> at 0x000001A037C29DA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2315,7 +2315,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Sequence of the Suggested Improvements within the set of Suggested Improvements. This is used to order the Recommendations on the output HCR / EPC so that the cumulative Ratings make sense. The Improved Energy Ratings that result from carrying out a Suggested Improvement are cumulative and assume that the improvements have been installed in the order they appear in the list. Hence they must be sequenced.*
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Alternative_Improvements.Improvement.Sequence.<lambda> at 0x000001A037C2AFC0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2392,7 +2392,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Alternative_Improvements.Improvement.Typical_Saving.<lambda> at 0x000001A037C2B9C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2403,7 +2403,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The estimated Energy performance rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Alternative_Improvements.Improvement.Energy_Performance_Rating.<lambda> at 0x000001A037C2BD80>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2414,7 +2414,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The estimated Environmental Impact rating of the Property after the Suggested Improvement has been carried out providing any preceding Suggested Improvement has also been carried out. 0 if not assessed*
 - Parent element: [`Improvement`](#SAP-Compliance-Report/SAP-Report/Energy-Assessment/Alternative-Improvements/Improvement)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Energy_Assessment.Alternative_Improvements.Improvement.Environmental_Impact_Rating.<lambda> at 0x000001A037C30180>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2742,7 +2742,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The size of the living area in square metres. The living area is the room marked on a plan as the lounge or living room, or the largest public room (irrespective of usage by particular occupants), together with any rooms not separated from the lounge or living room by doors, and including any cupboards directly accessed from the lounge or living room. Living area does not, however, extend over more than one storey, even when stairs enter the living area directly.*
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.Living_Area.<lambda> at 0x000001A037C3B7E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2753,7 +2753,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The Area of the lowest storey in square meters including unheated or communal areas such as garages or corridors.*
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.Lowest_Storey_Area.<lambda> at 0x000001A037C3BBA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -2841,7 +2841,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *For backwards compatibility only, do not use.*
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.Energy_Saved_Or_Generated.<lambda> at 0x000001A037C3CFE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -2906,7 +2906,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *For backwards compatibility only, do not use.*
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.Energy_Used.<lambda> at 0x000001A037C3D6C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3013,7 +3013,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Average thermal mass parameter for the dwelling in kJ/m2K. If omitted it is calculated using the kappa values of each element.*
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.Thermal_Mass_Parameter.<lambda> at 0x000001A037C3E700>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3024,7 +3024,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Additional allowable electricity generation applicable to this dwelling in kWh per square metre; only if Zero Carbon Home assessment.*
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.Additional_Allowable_Electricity_Generation.<lambda> at 0x000001A037C3EAC0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3105,7 +3105,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Battery capacity if diverter present.*
 - Parent element: [`SAP-Property-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.Battery_Capacity.<lambda> at 0x000001A037C440E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3142,7 +3142,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The type of Water Heating present in the Property.*
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Water_Heating_Code.<lambda> at 0x000001A037C485E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3247,7 +3247,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Secondary_Heating_Efficiency.<lambda> at 0x000001A037C496C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3280,7 +3280,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Type of secondary heating present in the property; only if required and if heating data source is SAP table.*
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Secondary_Heating_Code.<lambda> at 0x000001A037C4A0C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3345,7 +3345,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *PCDF index number of the fuel type, only if Secondary-Fuel-Type is 99 (fuel from database).*
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Secondary_Heating_PCDF_Fuel_Index.<lambda> at 0x000001A037C4A7A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3518,7 +3518,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Hot water store size in litres; if there is a hot water store. Store refers to hot water store type which can be cylinder (if thermal store is "none"), hot-water only thermal store or integrated thermal store. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater.*
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Hot_Water_Store_Size.<lambda> at 0x000001A037785440>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3529,7 +3529,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Used when a heat pump is associated with a separate and specified hot water vessel.*
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Hot_Water_Store_Heat_Transfer_Area.<lambda> at 0x000001A037785800>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3553,7 +3553,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Hot water store declared loss in kWh/day; only if there is a hot water store and if manufacturer declared loss. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater.*
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Hot_Water_Store_Heat_Loss.<lambda> at 0x000001A037785EE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3577,7 +3577,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Hot water store insulation thickness in mm; only if there is a hot water store and if loss from SAP table. Not applicable if (a) combi boiler whose data source database or (b) instantaneous combi boiler or (c) combi boiler from SAP table or (d) instantaneous water heater.*
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Hot_Water_Store_Insulation_Thickness.<lambda> at 0x000001A0377865C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3716,7 +3716,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *the community heating CO2 emission factor*
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.Community_Heating_CO2_Emission_Factor.<lambda> at 0x000001A037789C60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3727,7 +3727,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The community heating Primary Energy Factor*
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.Community_Heating_Primary_Energy_Factor.<lambda> at 0x000001A03778A020>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3782,7 +3782,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Heat Interface Unit index number, if present.*
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.HIU_Index_Number.<lambda> at 0x000001A03778AE80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3845,7 +3845,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Fraction of heat for the system provided by this heat source.*
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.Community_Heat_Sources.Community_Heat_Source.Heat_Fraction.<lambda> at 0x000001A037790680>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3908,7 +3908,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.Community_Heat_Sources.Community_Heat_Source.PCDF_Fuel_Index.<lambda> at 0x000001A037790D60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3919,7 +3919,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Heat efficiency in %.*
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.Community_Heat_Sources.Community_Heat_Source.Heat_Efficiency.<lambda> at 0x000001A037791120>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3930,7 +3930,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Power efficiency in %. Include when heat source is CHP.*
 - Parent element: [`Community-Heat-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources/Community-Heat-Source)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.Community_Heat_Sources.Community_Heat_Source.Power_Efficiency.<lambda> at 0x000001A0377914E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3971,7 +3971,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Used when Community-Heating-Distribution-Type is calculated.*
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.Community_Heating_Distribution_Loss_Factor.<lambda> at 0x000001A03778B740>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -3997,7 +3997,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Index number of heat network, if applicable.*
 - Parent element: [`SAP-Community-Heating-System`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.SAP_Community_Heating_Systems.SAP_Community_Heating_System.Heat_Network_Index_Number.<lambda> at 0x000001A037792520>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4069,7 +4069,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Identifies the main heating as system 1 or system 2. System 1 must always be present, system 2 is included only when there are two systems.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Number.<lambda> at 0x000001A03779B600>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4116,7 +4116,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The ID of the heating system from the product database, if system from database.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Index_Number.<lambda> at 0x000001A03779C040>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4183,7 +4183,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The temperature distribution of the condensing boiler.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Condensing_Boiler_Heat_Distribution.<lambda> at 0x000001A03779D440>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4194,7 +4194,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The temperature distribution of the heat pump, for wet systems only.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Heat_Pump_Heat_Distribution.<lambda> at 0x000001A03779D800>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4241,7 +4241,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Case heat emission at full load in kW; if it is a range cooker boiler and boiler efficiency is manufacturer declaration.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Case_Heat_Emission.<lambda> at 0x000001A03779E200>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4252,7 +4252,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Heat transfer to water at full load in kW; if it is a range cooker boiler and boiler efficiency is manufacturer declaration.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Heat_Transfer_To_Water.<lambda> at 0x000001A03779E5C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4278,7 +4278,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Main heating code; when heating data source is SAP table.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Code.<lambda> at 0x000001A03779ECA0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4343,7 +4343,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *PCDF index number of the fuel type, only if Main-Fuel-Type is 99 (fuel from database).*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.PCDF_Fuel_Index.<lambda> at 0x000001A03779F380>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4354,7 +4354,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Type of Main Control for the Heating System.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Control.<lambda> at 0x000001A03779F740>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4515,7 +4515,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Electric CPSU operating temperature in Celcius; only if main heating is electric CPSU.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Electric_CPSU_Operating_Temperature.<lambda> at 0x000001A0377A5E40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4526,7 +4526,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Fraction of main heating provided by this system, is 1 if only one main system.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Fraction.<lambda> at 0x000001A0377A6200>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4566,7 +4566,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *To be used if main heating data is manufacturer declaration and Efficiency-Type is winter and summer.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Efficiency_Winter.<lambda> at 0x000001A0377A6C00>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4577,7 +4577,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *To be used if main heating data is manufacturer declaration and Efficiency-Type is winter and summer.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Efficiency_Summer.<lambda> at 0x000001A0377A6FC0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4588,7 +4588,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *If main heating is any system other than heat network.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Efficiency.<lambda> at 0x000001A0377A7380>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4625,7 +4625,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *FGHRS index number; only if FGHRS.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_Index_Number.<lambda> at 0x000001A0377A7E20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4667,7 +4667,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Peak kW of photovoltaics (PVs) (kWp); 0.0 if none.*
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_Energy_Source.PV_Arrays.PV_Array.Peak_Power.<lambda> at 0x000001A0377AD9E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4769,7 +4769,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Overshading factor calculated according to MCS.*
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/PV-Arrays/PV-Array)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_Energy_Source.PV_Arrays.PV_Array.Overshading_MCS.<lambda> at 0x000001A0377AF100>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4822,7 +4822,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Wind turbine rotor diameter in metres; only if wind turbine.*
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_Energy_Source.Wind_Turbines.Wind_Turbine.Wind_Turbine_Rotor_Diameter.<lambda> at 0x000001A0377B42C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4833,7 +4833,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Wind turbine hub height above building in metres; only if wind turbine.*
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_Energy_Source.Wind_Turbines.Wind_Turbine.Wind_Turbine_Hub_Height.<lambda> at 0x000001A0377B4680>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4861,7 +4861,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided.*
 - Parent element: [`FGHRS-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_Energy_Source.Hydro_Electric_Generation.<lambda> at 0x000001A0377B4C20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -4926,7 +4926,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Hydro electricity in kWh in month.*
 - Parent element: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/FGHRS-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.FGHRS_Energy_Source.Hydro_Electric_Generation_Months.Hydro_Electric_Generation_Month.Hydro_Value.<lambda> at 0x000001A0377B5C60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -4961,7 +4961,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Main-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Main-Heating-Declared-Values)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Main_Heating_Declared_Values.Efficiency.<lambda> at 0x000001A0377B6700>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5012,7 +5012,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of storage heaters with this index number.*
 - Parent element: [`Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Storage_Heaters.Storage_Heater.Number_Of_Heaters.<lambda> at 0x000001A0377B77E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5023,7 +5023,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The index number of the heater from the product database.*
 - Parent element: [`Storage-Heater`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating/Storage-Heaters/Storage-Heater)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Storage_Heaters.Storage_Heater.Index_Number.<lambda> at 0x000001A0377B7BA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5095,7 +5095,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The ID of the controller from the product database.*
 - Parent element: [`Main-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Main-Heating-Details/Main-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Main_Heating_Details.Main_Heating.Control_Index_Number.<lambda> at 0x000001A0377BCC20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5179,7 +5179,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Secondary-Heating-Declared-Values`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Secondary-Heating-Declared-Values)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Secondary_Heating_Declared_Values.Efficiency.<lambda> at 0x000001A0377BE660>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5257,7 +5257,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Panel aperture area in square metres.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Solar_Panel_Aperture_Area.<lambda> at 0x000001A0377C14E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5297,7 +5297,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Collector zero-loss efficiency; only if declared values.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Solar_Panel_Collector_Zero_Loss_Efficiency.<lambda> at 0x000001A0377C1EE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5308,7 +5308,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Collector heat loss rate; for backward compatibility only, do not use.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Solar_Panel_Collector_Heat_Loss_Rate.<lambda> at 0x000001A0377C22A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5319,7 +5319,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Collector linear heat loss coefficient; only if declared values.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Solar_Panel_Collector_Linear_Heat_Loss_Coefficient.<lambda> at 0x000001A0377C2660>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5330,7 +5330,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Collector 2nd order heat loss coefficient; only if declared values.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Solar_Panel_Collector_Second_Order_Heat_Loss_Coefficient.<lambda> at 0x000001A0377C2A20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5361,7 +5361,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Solar_Panel_Collector_Pitch.<lambda> at 0x000001A0377C3100>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5416,7 +5416,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Dedicated solar store volume in litres.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Solar_Store_Volume.<lambda> at 0x000001A0377C3F60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5427,7 +5427,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Collector loop efficiency; only if declared values.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Collector_Loop_Efficiency.<lambda> at 0x000001A0377CC360>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5438,7 +5438,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Incidence angle modifier; only if declared values.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Incidence_Angle_Modifier.<lambda> at 0x000001A0377CC720>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5476,7 +5476,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Overall heat loss coefficient of system; only if declared values.*
 - Parent element: [`Solar-Heating-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Solar-Heating-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Solar_Heating_Details.Overall_Heat_Loss.<lambda> at 0x000001A0377CD1C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5497,7 +5497,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Instantaneous_WWHRS.WWHRS_Index_Number1.<lambda> at 0x000001A0377CE020>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5508,7 +5508,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Omit if no second system.*
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Instantaneous_WWHRS.WWHRS_Index_Number2.<lambda> at 0x000001A0377CE3E0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5518,7 +5518,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Instantaneous_WWHRS.WWHRS_Efficiency1.<lambda> at 0x000001A0377CE7A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5548,7 +5548,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Instantaneous-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Instantaneous-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Instantaneous_WWHRS.WWHRS_Efficiency2.<lambda> at 0x000001A0377CF1A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5588,7 +5588,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Storage_WWHRS.WWHRS_Index_Number.<lambda> at 0x000001A0377D02C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5599,7 +5599,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Dedicated store volume in litres.*
 - Parent element: [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Storage_WWHRS.WWHRS_Store_Volume.<lambda> at 0x000001A0377D0680>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5609,7 +5609,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`Storage-WWHRS`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Storage-WWHRS)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Storage_WWHRS.Storage_WWHRS_Efficiency.<lambda> at 0x000001A0377D0A40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5678,7 +5678,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The flow rate. Only when a shower is not instantaneous electric. Leave blank if NO flow limiter fitted.*
 - Parent element: [`Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Shower_Outlets.Shower_Outlet.Shower_Flow_Rate.<lambda> at 0x000001A0377D1F80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5689,7 +5689,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The shower power, only if shower outlet type is instantaneous electric.*
 - Parent element: [`Shower-Outlet`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/Shower-Outlets/Shower-Outlet)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Shower_Outlets.Shower_Outlet.Shower_Power.<lambda> at 0x000001A0377D2340>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5714,7 +5714,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Number_Baths.<lambda> at 0x000001A0377D1580>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5724,7 +5724,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`SAP-Heating`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Heating.Number_Baths_WWHRS.<lambda> at 0x000001A0377D2CA0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5766,7 +5766,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Peak kW of photovoltaics (PVs) (kWp); 0.0 if none.*
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Energy_Source.PV_Arrays.PV_Array.Peak_Power.<lambda> at 0x000001A0377D87C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5868,7 +5868,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Overshading factor calculated according to MCS.*
 - Parent element: [`PV-Array`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/PV-Arrays/PV-Array)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Energy_Source.PV_Arrays.PV_Array.Overshading_MCS.<lambda> at 0x000001A0377D9EE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -5921,7 +5921,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Wind turbine rotor diameter in metres; only if wind turbine.*
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Energy_Source.Wind_Turbines.Wind_Turbine.Wind_Turbine_Rotor_Diameter.<lambda> at 0x000001A0377DB060>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5932,7 +5932,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Wind turbine hub height above building in metres; only if wind turbine.*
 - Parent element: [`Wind-Turbine`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Wind-Turbines/Wind-Turbine)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Energy_Source.Wind_Turbines.Wind_Turbine.Wind_Turbine_Hub_Height.<lambda> at 0x000001A0377DB420>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -5960,7 +5960,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Electricity generated by hydro-electric generator, in kWh/year. To be provided if Hydro-Electric-Generation-Month is not provided.*
 - Parent element: [`SAP-Energy-Source`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Energy_Source.Hydro_Electric_Generation.<lambda> at 0x000001A0377DB9C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6025,7 +6025,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Hydro electricity in kWh in month.*
 - Parent element: [`Hydro-Electric-Generation-Month`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source/Hydro-Electric-Generation-Months/Hydro-Electric-Generation-Month)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Energy_Source.Hydro_Electric_Generation_Months.Hydro_Electric_Generation_Month.Hydro_Value.<lambda> at 0x000001A0377E4A40>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6073,7 +6073,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *An integer value which uniquely identifies the building part in the property. The value "1" must be assigned to the main dwelling.*
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.Building_Part_Number.<lambda> at 0x000001A0377E5EE0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6096,7 +6096,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The year when this building part was constructed. Not used if 'Construction-Age-Band' is used.*
 - Parent element: [`SAP-Building-Part`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.Construction_Year.<lambda> at 0x000001A0377E65C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6206,7 +6206,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The width of the opening in metres. If the Width field is used to record the opening area, set the Height to 1.*
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Openings.SAP_Opening.Width.<lambda> at 0x000001A0377EC5E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6217,7 +6217,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The height of the opening in metres. If the Height field is used to record the opening area, set the Width to 1.*
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Openings.SAP_Opening.Height.<lambda> at 0x000001A0377EC9A0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6228,7 +6228,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Pitch of roof containing roof window.*
 - Parent element: [`SAP-Opening`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Openings/SAP-Opening)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Openings.SAP_Opening.Pitch.<lambda> at 0x000001A0377ECD60>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6296,7 +6296,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Total roof area in square metres, inclusive of any openings.*
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Roofs.SAP_Roof.Total_Roof_Area.<lambda> at 0x000001A0377EE480>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6307,7 +6307,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Exposed roof U-value.*
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Roofs.SAP_Roof.U_Value.<lambda> at 0x000001A0377EE840>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6318,7 +6318,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Heat capacity per unit area in kJ/m2K.*
 - Parent element: [`SAP-Roof`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Roofs/SAP-Roof)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Roofs.SAP_Roof.Kappa_Value.<lambda> at 0x000001A0377EEC00>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6409,7 +6409,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The total floor area of the storey in square metres.*
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Total_Floor_Area.<lambda> at 0x000001A0377F8B80>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6420,7 +6420,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Average height of the storey in metres.*
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Storey_Height.<lambda> at 0x000001A0377F8F40>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6431,7 +6431,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The estimated total heat loss area for the floor in square metres.*
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Heat_Loss_Area.<lambda> at 0x000001A0377F9300>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6442,7 +6442,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Heat loss floor U-value.*
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.U_Value.<lambda> at 0x000001A0377F96C0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6453,7 +6453,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Heat capacity of floor per unit area in kJ/m2K.*
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Kappa_Value.<lambda> at 0x000001A0377F9A80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6464,7 +6464,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Heat capacity of ceiling below. Applies to the non-heat-loss area of an upper floor.*
 - Parent element: [`SAP-Floor-Dimension`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Floor_Dimensions.SAP_Floor_Dimension.Kappa_Value_From_Below.<lambda> at 0x000001A0377F9E40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6502,7 +6502,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Global y-value for all thermal bridges in watts per square metre per kelvin; only if thermal bridge code is: user defined (global y-value)*
 - Parent element: [`SAP-Thermal-Bridges`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Thermal_Bridges.User_Defined_Y_Value.<lambda> at 0x000001A0377FAA20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6593,7 +6593,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Length of the thermal bridge in metres; only if thermal bridge code is: user defined (individual values).*
 - Parent element: [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Thermal_Bridges.SAP_Thermal_Bridge.Length.<lambda> at 0x000001A0377FBBA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6604,7 +6604,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Linear thermal transmittance (psi-value); only if thermal bridging is user defined individual values.*
 - Parent element: [`SAP-Thermal-Bridge`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Thermal-Bridges/SAP-Thermal-Bridge)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Thermal_Bridges.SAP_Thermal_Bridge.Psi_Value.<lambda> at 0x000001A0377FBF60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6701,7 +6701,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Total wall area in square metres, inclusive of any openings.*
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Walls.SAP_Wall.Total_Wall_Area.<lambda> at 0x000001A0377FDE40>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6712,7 +6712,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Exposed wall U-value.*
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Walls.SAP_Wall.U_Value.<lambda> at 0x000001A0377FE200>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6738,7 +6738,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Heat capacity per unit area in kJ/m2K.*
 - Parent element: [`SAP-Wall`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Walls/SAP-Wall)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Building_Parts.SAP_Building_Part.SAP_Walls.SAP_Wall.Kappa_Value.<lambda> at 0x000001A0377FE980>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6913,7 +6913,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The solar transmittance; not if a door.*
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Opening_Types.SAP_Opening_Type.Solar_Transmittance.<lambda> at 0x000001A037805B20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6924,7 +6924,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The frame factor; not if a door.*
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Opening_Types.SAP_Opening_Type.Frame_Factor.<lambda> at 0x000001A037805EE0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -6935,7 +6935,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The U-value. For rooflights, the U-value should be in the horizontal plane.*
 - Parent element: [`SAP-Opening-Type`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types/SAP-Opening-Type)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Opening_Types.SAP_Opening_Type.U_Value.<lambda> at 0x000001A0378062A0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6957,7 +6957,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of Closed Flues or chimneys in the Property.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Closed_Flues_Count.<lambda> at 0x000001A03780E020>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6968,7 +6968,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of Open Flues in the Property.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Open_Flues_Count.<lambda> at 0x000001A03780E3E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6979,7 +6979,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of Boiler Flues or chimneys in the Property.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Boilers_Flues_Count.<lambda> at 0x000001A03780E7A0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -6990,7 +6990,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of Other Flues or chimneys in the Property.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Other_Flues_Count.<lambda> at 0x000001A03780EB60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7001,7 +7001,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of Open Chimneys in the Property.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Open_Chimneys_Count.<lambda> at 0x000001A03780EF20>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7012,7 +7012,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of Blocked Chimneys in the Property.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Blocked_Chimneys_Count.<lambda> at 0x000001A03780F2E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7023,7 +7023,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *For backward compatibility only, do not use.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Fans_Vents_Count.<lambda> at 0x000001A03780F6A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7034,7 +7034,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of flueless gas fires in the Property.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Flueless_Gas_Fires_Count.<lambda> at 0x000001A03780FA60>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7074,7 +7074,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Air permeability; only if pressure test (yes or assumed).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Air_Permeability.<lambda> at 0x000001A0378144A0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7127,7 +7127,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Draughtstripping percentage; only if no pressure test.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.DraughtStripping.<lambda> at 0x000001A037815260>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7138,7 +7138,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of sheltered sides in the Property.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Sheltered_Sides_Count.<lambda> at 0x000001A037815620>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7184,7 +7184,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Mechanical vent system index number; if mechanical vent data from database (MEV c, MEV dc, MV, MVHR).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Mechanical_Vent_System_Index_Number.<lambda> at 0x000001A037816020>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7228,7 +7228,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Number of wet rooms, including the kitchen; if mech vent data from manufacturer declaration or database (MEV c, MV, MVHR).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Wet_Rooms_Count.<lambda> at 0x000001A037816D40>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7239,7 +7239,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Mechanical vent specific fan power in watts per (litres per second); if mechanical vent data (PIV from outside, MEV c or dc, MV, MVHR).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Mechanical_Vent_Specific_Fan_Power.<lambda> at 0x000001A037817100>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7250,7 +7250,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Mechanical vent heat recovery efficiency percentage; if mechanical vent (MVHR).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Mechanical_Vent_Heat_Recovery_Efficiency.<lambda> at 0x000001A0378174C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7329,7 +7329,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, number of fans in room, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Kitchen_Room_Fans_Count.<lambda> at 0x000001A03781C900>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7340,7 +7340,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, specific fan power of fans in room, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Kitchen_Room_Fans_Specific_Power.<lambda> at 0x000001A03781CCC0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7351,7 +7351,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, number of fans in room, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Non_Kitchen_Room_Fans_Count.<lambda> at 0x000001A03781D080>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7362,7 +7362,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, specific fan power of fans in room, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Non_Kitchen_Room_Fans_Specific_Power.<lambda> at 0x000001A03781D440>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7373,7 +7373,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, number of fans via duct, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Kitchen_Duct_Fans_Count.<lambda> at 0x000001A03781D800>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7384,7 +7384,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, specific fan power of fans via duct, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Kitchen_Duct_Fans_Specific_Power.<lambda> at 0x000001A03781DBC0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7395,7 +7395,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, number of fans via duct, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Non_Kitchen_Duct_Fans_Count.<lambda> at 0x000001A03781DF80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7406,7 +7406,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, specific fan power of fans via duct, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Non_Kitchen_Duct_Fans_Specific_Power.<lambda> at 0x000001A03781E340>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7417,7 +7417,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, number of fans through wall, kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Kitchen_Wall_Fans_Count.<lambda> at 0x000001A03781E700>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7428,7 +7428,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, specific fan power of fans through wall, kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Kitchen_Wall_Fans_Specific_Power.<lambda> at 0x000001A03781EAC0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7439,7 +7439,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, number of fans through wall, rooms other than kitchen; if mechanical vent data from database or manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Non_Kitchen_Wall_Fans_Count.<lambda> at 0x000001A03781EE80>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7450,7 +7450,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *MEV dc, specific fan power of fans through wall, rooms other than kitchen, in watts per (litres per second); if mechanical vent data from manufacturer declaration (MEV dc).*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Non_Kitchen_Wall_Fans_Specific_Power.<lambda> at 0x000001A03781F240>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7460,7 +7460,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Extract_Fans_Count.<lambda> at 0x000001A03781F600>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7470,7 +7470,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.PSV_Count.<lambda> at 0x000001A03781F9C0>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7495,7 +7495,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Mechanical vent ducts index number; if applicable.*
 - Parent element: [`SAP-Ventilation`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Ventilation.Mechanical_Vent_Ducts_Index_Number.<lambda> at 0x000001A037824180>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7540,7 +7540,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The efficacy of the lighting type in lumens/Watt.*
 - Parent element: [`Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Lighting.Fixed_Lights.Fixed_Light.Lighting_Efficacy.<lambda> at 0x000001A037824EA0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7551,7 +7551,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The power of the selected lighting type in Watts.*
 - Parent element: [`Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Lighting.Fixed_Lights.Fixed_Light.Lighting_Power.<lambda> at 0x000001A037825260>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7562,7 +7562,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The number of light fitting outlets of that type.*
 - Parent element: [`Fixed-Light`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting/Fixed-Lights/Fixed-Light)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Lighting.Fixed_Lights.Fixed_Light.Lighting_Outlets.<lambda> at 0x000001A037825620>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7656,7 +7656,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Count of number of storeys present in the block of flats.*
 - Parent element: [`SAP-Flat-Details`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details)
 - Has text value: *True*
-- Data type: *<class 'int'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Flat_Details.Storeys.<lambda> at 0x000001A0378263E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7707,7 +7707,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Energy saved or generated in kWh/year.*
 - Parent element: [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Energy_Feature.Energy_Saved_Or_Generated.<lambda> at 0x000001A037827920>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7771,7 +7771,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Energy used in kWh/year.*
 - Parent element: [`Energy-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Energy_Feature.Energy_Used.<lambda> at 0x000001A037828040>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7878,7 +7878,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Air change rate in month.*
 - Parent element: [`Air-Change-Rate`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Energy-Feature/Air-Change-Rates/Air-Change-Rate)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Energy_Feature.Air_Change_Rates.Air_Change_Rate.Air_Change_Rate_Value.<lambda> at 0x000001A037829080>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7899,7 +7899,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Emissions saved in kg/year.*
 - Parent element: [`Emissions-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Emissions_Feature.Emissions_Saved.<lambda> at 0x000001A037829620>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7910,7 +7910,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *Additional emissions in kg/year.*
 - Parent element: [`Emissions-Feature`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features/SAP-Special-Feature/Emissions-Feature)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Special_Features.SAP_Special_Feature.Emissions_Feature.Emissions_Created.<lambda> at 0x000001A0378299E0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -7942,7 +7942,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 
 - Parent element: [`SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Cooling.Cooled_Area.<lambda> at 0x000001A03782A520>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -7989,7 +7989,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *SEER.*
 - Parent element: [`SAP-Cooling`](#SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.SAP10_Data.SAP_Property_Details.SAP_Cooling.System_Energy_Efficiency_Ratio.<lambda> at 0x000001A03782AF20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -8000,7 +8000,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *DEPRECATED - DO NOT USE This element is allowed for backwards-compatibility but any data sent here will not be read, processed or stored by the register.*
 - Parent element: [`SAP-Report`](#SAP-Compliance-Report/SAP-Report)
 - Has text value: *True*
-- Data type: *<function b64encode at 0x000002459A85FB80>*
+- Data type: *<function b64encode at 0x000001A037BF0680>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
@@ -8044,7 +8044,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The date that the insurance policy becomes effective (commences cover)*
 - Parent element: [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -8055,7 +8055,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation: *The date that the insurance policy is supposed to expire.*
 - Parent element: [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
 - Has text value: *True*
-- Data type: *<built-in method fromisoformat of type object at 0x00007FFB580DD990>*
+- Data type: *<built-in method fromisoformat of type object at 0x00007FFB9B0071F0>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -8067,7 +8067,7 @@ The root XML element can be either a [SAP-Compliance-Report](#SAP-Compliance-Rep
 - Documentation2: *Extension of a Decimal value for use with monetary values where a currency code needs to be specified. The currency code is actually metadata about the value so, in line with good XML practice, the Currency Code is declared as an XML-Attribute of the Money datatype rather than as a separate XML-Element. The currency attribute should then include a list of valid currencies codes that are supported.*
 - Parent element: [`Insurance-Details`](#SAP-Compliance-Report/SAP-Report/Insurance-Details)
 - Has text value: *True*
-- Data type: *<class 'float'>*
+- Data type: *<function SAP_Compliance_Report.SAP_Report.Insurance_Details.PI_Limit.<lambda> at 0x000001A037830860>*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
