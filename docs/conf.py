@@ -26,6 +26,9 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_old',
                     'index.md', 'rdsap_schema_21_0_0.md', 'sap_schema_19_1_0.md']
 
+html_extra_path = [
+    'CNAME'   # This is needed to that the GitHub action copies this file to the gh-pages branch. This is used to link with the custom domain name (DNS).
+]
 
 
 # -- Options for HTML output -------------------------------------------------
