@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The SAP calculation methodology &mdash; sap10calcs 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e6a37869" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=47de8214"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="RdSAP10 Tutorials" href="rdsaptutorials.html" />
+    <link rel="prev" title="What are SAP XML files?" href="sapinputfiles.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            sap10calcs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">What is sap10calcs?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sapinputfiles.html">What are SAP XML files?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The SAP calculation methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sap10-calculation-method">SAP10 calculation method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rdsap10-calculation-method">RdSAP10 calculation method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-epc-calculation-method">The EPC calculation method</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rdsaptutorials.html">RdSAP10 Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saptutorials.html">SAP10 Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demos.html">Demos and Case Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdsap_schema_21_0_0.html">RdSAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sap_schema_19_1_0.html">SAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing and the Test Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developersnotes.html">Developers Notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sap10calcs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The SAP calculation methodology</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sapcalculationmethod.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-sap-calculation-methodology">
+<h1>The SAP calculation methodology<a class="headerlink" href="#the-sap-calculation-methodology" title="Link to this heading"></a></h1>
+<section id="sap10-calculation-method">
+<span id="sap-10-calculation-method"></span><h2>SAP10 calculation method<a class="headerlink" href="#sap10-calculation-method" title="Link to this heading"></a></h2>
+<p>The SAP10 calculation method firstly takes a SAP10 XML file as an input file.</p>
+<p>This XML file contains a mix of information including:</p>
+<ul class="simple">
+<li><p>The geometry of the building (floor area, room height, number of storeys, window area etc.)</p></li>
+<li><p>The U-values of the walls, roof, floor and windows.</p></li>
+<li><p>The space heating and cooling system (boiler type, efficiency, heat distribution system etc.)</p></li>
+<li><p>The water heating system (type, efficiency, cylinder or thermal store etc.)</p></li>
+<li><p>The ventilation system (air tightness, infiltration, natural or mechanical ventilation etc.)</p></li>
+</ul>
+<p>This input data can be used to run different types of SAP calculations. In <cite>sap10calcs</cite> there are three SAP calculation options:</p>
+<ul class="simple">
+<li><p><strong>New dwelling as designed - dwelling emissions</strong>: This is used to calculate the carbon emissions as a part of Building Regulations compliance. It uses the UK Average climate data.</p></li>
+<li><p><strong>Energy rating</strong>: This is used to calculate the SAP rating (energy-efficiency band) as a part of an Energy Performance Certificate calculation. It uses the UK Average climate data and the fixed fuel costs in the <a class="reference external" href="https://bregroup.com/documents/d/bre-group/sap-10-2-14-03-2025">SAP10 specification</a>.</p></li>
+<li><p><strong>EPC costs, emissions and primary energy</strong>: This is used to calculate the energy and running costs as a part an Energy Performance Certificate calculation. This uses climate data based on the location of the building and the latest updates fuel prices from the PCDB (an online database).</p></li>
+</ul>
+<p>Next, various lookups are employed to gather additional information to supplement the XML input data. This comes from:</p>
+<ul class="simple">
+<li><p>The SAP10 tables: These data tables are provided in the SAP10 document and include information such as regional climate data and heating system efficiency.</p></li>
+<li><p>The <a class="reference external" href="https://www.ncm-pcdb.org.uk/sap/index.jsp">Product Characterictic Database</a> (PCDB): This is an online database which contains detailed information on specific models of boilers and other heating systems, the latest updated fuel prices and climate data based on postcodes.</p></li>
+</ul>
+<p>Next, the calculation process itself begins. This done by following the steps in the SAP Worksheet of the <a class="reference external" href="https://bregroup.com/documents/d/bre-group/sap-10-2-14-03-2025">SAP10 specification</a>:</p>
+<ol class="arabic simple">
+<li><p>Overall dwelling dimensions.</p></li>
+<li><p>Ventilation rate.</p></li>
+<li><p>Heat loss and heat loss parameter.</p></li>
+<li><p>Water heating energy requirements.</p></li>
+<li><p>Internal gains.</p></li>
+<li><p>Solar gains.</p></li>
+<li><p>Mean internal temperature.</p></li>
+<li><p>Space heating requirement.</p></li>
+<li><p>Energy requirements.</p></li>
+<li><p>Fuel costs.</p></li>
+<li><p>SAP rating.</p></li>
+<li><p>CO2 emissions.</p></li>
+<li><p>Primary energy.</p></li>
+</ol>
+<p>The outputs to a SAP calculation are the calculated values from the SAP worksheet, such as monthly energy requirements, annual fuel costs and the SAP rating.</p>
+</section>
+<section id="rdsap10-calculation-method">
+<h2>RdSAP10 calculation method<a class="headerlink" href="#rdsap10-calculation-method" title="Link to this heading"></a></h2>
+<p>The RdSAP10 calculation method firstly takes a RdSAP10 XML file as an input file.</p>
+<p>This input file contains similar information to the SAP10 XML files, but in less detail.</p>
+<p>The goal of the RdSAP10 calculation is to convert this less-detailed input data into a full set of SAP10 inputs (i.e. a SAP10 XML file), which can then be run thought a SAP10 calculation.</p>
+<p>This process is described in the <a class="reference external" href="https://bregroup.com/documents/d/bre-group/rdsap-10-specification-10-06-2025">RdSAP10 Specification</a>. This involves calculations of:</p>
+<ol class="arabic simple">
+<li><p>Areas and dimensions</p></li>
+<li><p>Ventilation</p></li>
+<li><p>Construction types and insulation (U-values)</p></li>
+<li><p>Conservatories</p></li>
+<li><p>Solar gains</p></li>
+<li><p>Windows and doors</p></li>
+<li><p>Room count and living area</p></li>
+<li><p>Space and water heating</p></li>
+<li><p>Additional items</p></li>
+<li><p>Electricity tariff</p></li>
+</ol>
+<p>This is done by using equations and lookup tables which are all located within the <a class="reference external" href="https://bregroup.com/documents/d/bre-group/rdsap-10-specification-10-06-2025">RdSAP10 Specification</a> document.</p>
+<p>The output of the RdSAP10 calculation is a full SAP10 XML input file.</p>
+</section>
+<section id="the-epc-calculation-method">
+<h2>The EPC calculation method<a class="headerlink" href="#the-epc-calculation-method" title="Link to this heading"></a></h2>
+<p>The calculation method for Energy Performance Certificates actually involves several different calculations.</p>
+<p>An EPC calculation will start with an RdSAP10 XML input file. The calculation then proceeds as:</p>
+<ol class="arabic simple">
+<li><p>The RdSAP10 XML file is converted to a full SAP10 XML file.</p></li>
+<li><p>A SAP10 calculation is run using the <strong>Energy rating</strong> method, to calculate the SAP rating for the EPC.</p></li>
+<li><p>A SAP10 calculation is run using the <strong>EPC costs, emissions and primary energy</strong> method, to calculate the current energy consumption and running costs for the EPC.</p></li>
+<li><p>Energy-efficiency recommendations are then applied to the dwelling, using the logic in Section 21 of the <a class="reference external" href="https://bregroup.com/documents/d/bre-group/rdsap-10-specification-10-06-2025">RdSAP10 Specification</a>. This might include additional insulation, replacement heating systems and renewable energy systems.</p></li>
+<li><p>Steps 1, 2 and 3 are then rerun for each new RdSAP10 XML file that is created by applying the recommendations logic in Step 4.</p></li>
+</ol>
+<p>So, an EPC with 4 energy-efficiency recommendations would have 5 RdSAP10 XML files, 5 SAP10 XML files and 10 SAP10 calculations.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sapinputfiles.html" class="btn btn-neutral float-left" title="What are SAP XML files?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rdsaptutorials.html" class="btn btn-neutral float-right" title="RdSAP10 Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Steven Firth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

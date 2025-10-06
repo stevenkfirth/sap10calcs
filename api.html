@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API reference &mdash; sap10calcs 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e6a37869" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=47de8214"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="RdSAP XML reference" href="rdsap_schema_21_0_0.html" />
+    <link rel="prev" title="Solar photovoltaics" href="case_studies/solar_photovoltaics/solar_photovoltaics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            sap10calcs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">What is sap10calcs?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sapinputfiles.html">What are SAP XML files?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sapcalculationmethod.html">The SAP calculation methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdsaptutorials.html">RdSAP10 Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saptutorials.html">SAP10 Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demos.html">Demos and Case Studies</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#copy"><code class="docutils literal notranslate"><span class="pre">copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#display"><code class="docutils literal notranslate"><span class="pre">display()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sap_xml_properties"><code class="docutils literal notranslate"><span class="pre">sap_xml_properties</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sap_xml_methods"><code class="docutils literal notranslate"><span class="pre">sap_xml_methods</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sap_xml_codes"><code class="docutils literal notranslate"><span class="pre">sap_xml_codes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code"><code class="docutils literal notranslate"><span class="pre">code</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#value"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_calculation_software_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_calculation_software_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_calculation_software_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_calculation_software_version()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_user_interface_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_user_interface_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_schema_version_original"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_schema_version_original()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_schema_version_current"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_schema_version_current()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_sap_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_sap_version()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_pcdf_revision_number"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_pcdf_revision_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_energy_assessment"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_energy_assessment()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_previous_epc_check"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_previous_epc_check()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_sap_data"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_sap_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_report_header"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_report_header()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_insurance_details"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_insurance_details()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_externaldefinitions_revision_number"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_externaldefinitions_revision_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.calculation_software_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.calculation_software_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.calculation_software_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.calculation_software_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.user_interface_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.user_interface_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.schema_version_original"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.schema_version_original</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.schema_version_current"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.schema_version_current</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.sap_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.sap_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.pcdf_revision_number"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.pcdf_revision_number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.previous_epc_check"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.previous_epc_check</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.energy_assessment"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.energy_assessment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.sap_data"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.sap_data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.report_header"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.report_header</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.insurance_details"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.insurance_details</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.externaldefinitions_revision_number"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.externaldefinitions_revision_number</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_schema_version_original"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_schema_version_original()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_schema_version_current"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_schema_version_current()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap_version()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap_data_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap_data_version()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_pcdf_revision_number"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_pcdf_revision_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_calculation_software_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_calculation_software_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_calculation_software_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_calculation_software_version()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_user_interface_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_user_interface_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_user_interface_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_user_interface_version()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_report_header"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_report_header()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_energy_assessment"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_energy_assessment()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap10_data"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap10_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_pdf"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_pdf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_insurance_details"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_insurance_details()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_externaldefinitions_revision_number"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_externaldefinitions_revision_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_compliance_report"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_compliance_report</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.schema_version_original"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.schema_version_original</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.schema_version_current"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.schema_version_current</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_data_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_data_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.pcdf_revision_number"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.pcdf_revision_number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.calculation_software_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.calculation_software_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.calculation_software_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.calculation_software_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.user_interface_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.user_interface_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.user_interface_version"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.user_interface_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.report_header"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.report_header</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.energy_assessment"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.energy_assessment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap10_data"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap10_data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.pdf"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.pdf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.insurance_details"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.insurance_details</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.externaldefinitions_revision_number"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.externaldefinitions_revision_number</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_sap_report"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_sap_report()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_company"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_company()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_address"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_address()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_is_multiple_compliance"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_is_multiple_compliance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.sap_report"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.sap_report</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_name"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_company"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_company</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_address"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_address</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.is_multiple_compliance"><code class="docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.is_multiple_compliance</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rdsap_schema_21_0_0.html">RdSAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sap_schema_19_1_0.html">SAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing and the Test Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developersnotes.html">Developers Notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sap10calcs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-reference">
+<h1>API reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
+<p>This is the API reference for the <cite>sap10calcs</cite> package.</p>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
+</section>
+<section id="classes">
+<span id="id1"></span><h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<p><cite>sap10calcs</cite> contains hundreds of classes, one for each of the XML elements described in the <a class="reference internal" href="rdsap_schema_21_0_0.html#rdsap-xml-reference"><span class="std std-ref">RdSAP XML reference</span></a> and <a class="reference internal" href="sap_schema_19_1_0.html#sap-xml-reference"><span class="std std-ref">SAP XML reference</span></a>.</p>
+<p>Below are the three starting elements for RdSAP and SAP XML files. The remaining classes are not documented here but follow a similar pattern to the three elements described below.</p>
+<p>All classes have the following methods and properties:</p>
+<blockquote>
+<div><dl class="py method">
+<dt class="sig sig-object py" id="copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#copy" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A copy of the Element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="display">
+<span class="sig-name descname"><span class="pre">display</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#display" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A string of the XML document with the codes replaced by the codes and values.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap_xml_properties">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_xml_properties</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span></em><a class="headerlink" href="#sap_xml_properties" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of all SAP-related properties of the Element (read-only).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap_xml_methods">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_xml_methods</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span></em><a class="headerlink" href="#sap_xml_methods" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of all SAP-related methods of the Element (read-only).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap_xml_codes">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_xml_codes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#sap_xml_codes" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary of the SAP-related codes used by the Element (read-only).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div></blockquote>
+<p>Elements with text values also have the following methods and attributes.</p>
+<blockquote>
+<div><dl class="py property">
+<dt class="sig sig-object py" id="code">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">code</span></span><a class="headerlink" href="#code" title="Link to this definition"></a></dt>
+<dd><p>A setter and getter for the text of the Element. When setting the text, this will raise an error if the text does not one of the codes as specified in the schema.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="value">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#value" title="Link to this definition"></a></dt>
+<dd><p>Similar to the <cite>code</cite> property but uses the values rather than codes.</p>
+</dd></dl>
+
+</div></blockquote>
+<p>The remaining methods and properties of the classes are then used to either add or return the child Elements. An additional property is also present to return the parent Element.</p>
+<dl class="py class" id="rdsap-report">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sap10calcs.classes_RdSAP_Schema_21_0_0.</span></span><span class="sig-name descname"><span class="pre">RdSAP_Report</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report" title="Link to this definition"></a></dt>
+<dd><p>Represents a <a class="reference internal" href="rdsap_schema_21_0_0.html#rdsap-report"><span class="std std-ref">RdSAP-Report</span></a> element.</p>
+<p>This is a subclass of a lxml Element, providing additional properties and methods to the Element as listed below:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_calculation_software_name">
+<span class="sig-name descname"><span class="pre">add_calculation_software_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_calculation_software_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_calculation_software_version">
+<span class="sig-name descname"><span class="pre">add_calculation_software_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_calculation_software_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_user_interface_name">
+<span class="sig-name descname"><span class="pre">add_user_interface_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_user_interface_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_schema_version_original">
+<span class="sig-name descname"><span class="pre">add_schema_version_original</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_schema_version_original" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_schema_version_current">
+<span class="sig-name descname"><span class="pre">add_schema_version_current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_schema_version_current" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_sap_version">
+<span class="sig-name descname"><span class="pre">add_sap_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_sap_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_pcdf_revision_number">
+<span class="sig-name descname"><span class="pre">add_pcdf_revision_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_pcdf_revision_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_energy_assessment">
+<span class="sig-name descname"><span class="pre">add_energy_assessment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_energy_assessment" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_previous_epc_check">
+<span class="sig-name descname"><span class="pre">add_previous_epc_check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_previous_epc_check" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_sap_data">
+<span class="sig-name descname"><span class="pre">add_sap_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_sap_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_report_header">
+<span class="sig-name descname"><span class="pre">add_report_header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_report_header" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_insurance_details">
+<span class="sig-name descname"><span class="pre">add_insurance_details</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_insurance_details" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_externaldefinitions_revision_number">
+<span class="sig-name descname"><span class="pre">add_externaldefinitions_revision_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.add_externaldefinitions_revision_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.calculation_software_name">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calculation_software_name</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.calculation_software_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.calculation_software_version">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calculation_software_version</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.calculation_software_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.user_interface_name">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">user_interface_name</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.user_interface_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.schema_version_original">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema_version_original</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.schema_version_original" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.schema_version_current">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema_version_current</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.schema_version_current" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.sap_version">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_version</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.sap_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.pcdf_revision_number">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcdf_revision_number</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.pcdf_revision_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.previous_epc_check">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">previous_epc_check</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.previous_epc_check" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.energy_assessment">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">energy_assessment</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.energy_assessment" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.sap_data">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_data</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.sap_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.report_header">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">report_header</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.report_header" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.insurance_details">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">insurance_details</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.insurance_details" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.externaldefinitions_revision_number">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">externaldefinitions_revision_number</span></span><a class="headerlink" href="#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report.externaldefinitions_revision_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.</span></span><span class="sig-name descname"><span class="pre">SAP_Report</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report" title="Link to this definition"></a></dt>
+<dd><p>Represents a <a class="reference internal" href="sap_schema_19_1_0.html#sap-compliance-report-sap-report"><span class="std std-ref">SAP-Report</span></a> element.</p>
+<p>This is a subclass of a lxml Element, providing additional properties and methods to the Element as listed below:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_schema_version_original">
+<span class="sig-name descname"><span class="pre">add_schema_version_original</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_schema_version_original" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_schema_version_current">
+<span class="sig-name descname"><span class="pre">add_schema_version_current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_schema_version_current" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap_version">
+<span class="sig-name descname"><span class="pre">add_sap_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap_data_version">
+<span class="sig-name descname"><span class="pre">add_sap_data_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap_data_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_pcdf_revision_number">
+<span class="sig-name descname"><span class="pre">add_pcdf_revision_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_pcdf_revision_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_calculation_software_name">
+<span class="sig-name descname"><span class="pre">add_calculation_software_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_calculation_software_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_calculation_software_version">
+<span class="sig-name descname"><span class="pre">add_calculation_software_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_calculation_software_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_user_interface_name">
+<span class="sig-name descname"><span class="pre">add_user_interface_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_user_interface_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_user_interface_version">
+<span class="sig-name descname"><span class="pre">add_user_interface_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_user_interface_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_report_header">
+<span class="sig-name descname"><span class="pre">add_report_header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_report_header" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_energy_assessment">
+<span class="sig-name descname"><span class="pre">add_energy_assessment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_energy_assessment" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap10_data">
+<span class="sig-name descname"><span class="pre">add_sap10_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_sap10_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_pdf">
+<span class="sig-name descname"><span class="pre">add_pdf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_pdf" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_insurance_details">
+<span class="sig-name descname"><span class="pre">add_insurance_details</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_insurance_details" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_externaldefinitions_revision_number">
+<span class="sig-name descname"><span class="pre">add_externaldefinitions_revision_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.add_externaldefinitions_revision_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_compliance_report">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_compliance_report</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_compliance_report" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.schema_version_original">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema_version_original</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.schema_version_original" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.schema_version_current">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema_version_current</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.schema_version_current" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_version">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_version</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_data_version">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_data_version</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap_data_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.pcdf_revision_number">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcdf_revision_number</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.pcdf_revision_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.calculation_software_name">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calculation_software_name</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.calculation_software_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.calculation_software_version">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calculation_software_version</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.calculation_software_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.user_interface_name">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">user_interface_name</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.user_interface_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.user_interface_version">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">user_interface_version</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.user_interface_version" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.report_header">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">report_header</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.report_header" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.energy_assessment">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">energy_assessment</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.energy_assessment" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap10_data">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap10_data</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.sap10_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.pdf">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pdf</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.pdf" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.insurance_details">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">insurance_details</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.insurance_details" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.externaldefinitions_revision_number">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">externaldefinitions_revision_number</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.externaldefinitions_revision_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.</span></span><span class="sig-name descname"><span class="pre">SAP_Compliance_Report</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report" title="Link to this definition"></a></dt>
+<dd><p>Represents a <a class="reference internal" href="sap_schema_19_1_0.html#sap-compliance-report"><span class="std std-ref">SAP-Compliance-Report</span></a> element.</p>
+<p>This is a subclass of a lxml Element, providing additional properties and methods to the Element as listed below:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_sap_report">
+<span class="sig-name descname"><span class="pre">add_sap_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_sap_report" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_name">
+<span class="sig-name descname"><span class="pre">add_client_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_company">
+<span class="sig-name descname"><span class="pre">add_client_company</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_company" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_address">
+<span class="sig-name descname"><span class="pre">add_client_address</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_client_address" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_is_multiple_compliance">
+<span class="sig-name descname"><span class="pre">add_is_multiple_compliance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.add_is_multiple_compliance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.sap_report">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sap_report</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.sap_report" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_name">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">client_name</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_company">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">client_company</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_company" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_address">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">client_address</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.client_address" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.is_multiple_compliance">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_multiple_compliance</span></span><a class="headerlink" href="#sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report.is_multiple_compliance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="case_studies/solar_photovoltaics/solar_photovoltaics.html" class="btn btn-neutral float-left" title="Solar photovoltaics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rdsap_schema_21_0_0.html" class="btn btn-neutral float-right" title="RdSAP XML reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Steven Firth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
