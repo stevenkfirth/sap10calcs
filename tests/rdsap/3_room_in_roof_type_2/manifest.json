@@ -1,0 +1,16 @@
+{
+    "tests": [
+        {
+            "id": "1_base",
+            "name": "Base case with room in roof type 1",
+            "description": "",
+            "answers": [
+                {
+                    "xpath": "/sap:SAP-Report/sap:SAP10-Data/sap:SAP-Property-Details/ sap:SAP-Building-Parts/sap:SAP-Building-Part/sap:SAP-Floor-Dimensions/sap:SAP-Floor-Dimension[2]/sap:Total-Floor-Area", 
+                    "value": 80,
+                    "description": "A second floor is added."
+                }
+            ]
+        }
+    ]
+}

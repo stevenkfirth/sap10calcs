@@ -1,8 +1,8 @@
 {
-    "api_call_datetime": "2025-09-09T13:31:56.177569",
+    "api_call_datetime": "2025-10-18T06:41:22.291925",
     "api_call_url": "http://127.0.0.1:8000/calc/sap10?calculation_type=Energy%20rating",
     "api_call_filename": "file",
-    "api_call_server_time_seconds": 0.014159300000756048,
+    "api_call_server_time_seconds": 0.03284159999748226,
     "licenses": [
         "https://netzeroapis.com/terms_and_conditions",
         "https://creativecommons.org/publicdomain/zero/1.0/"

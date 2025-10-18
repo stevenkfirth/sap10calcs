@@ -1,0 +1,16 @@
+{
+    "tests": [
+        {
+            "id": "1_detached",
+            "name": "Base case detached house",
+            "description": "",
+            "answers": [
+                {
+                    "xpath": "/sap:SAP-Report/sap:SAP10-Data/sap:SAP-Property-Details/sap:Property-Type",
+                    "value": "House",
+                    "description": "The SAP property type is the same as the RdSAP property type."
+                }
+            ]
+        }
+    ]
+}

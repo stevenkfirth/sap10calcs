@@ -1,8 +1,8 @@
 {
-    "api_call_datetime": "2025-09-09T13:31:56.154923",
+    "api_call_datetime": "2025-10-18T06:41:22.244712",
     "api_call_url": "http://127.0.0.1:8000/calc/rdsap10",
     "api_call_filename": "file",
-    "api_call_server_time_seconds": 0.004382099999929778,
+    "api_call_server_time_seconds": 0.01438350000535138,
     "licenses": [
         "https://netzeroapis.com/terms_and_conditions",
         "https://creativecommons.org/publicdomain/zero/1.0/"
