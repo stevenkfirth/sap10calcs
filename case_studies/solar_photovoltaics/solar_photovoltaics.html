@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar photovoltaics &mdash; sap10calcs 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=e6a37869" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=47de8214"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="API reference" href="../../api.html" />
+    <link rel="prev" title="Demos and Case Studies" href="../../demos.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            sap10calcs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">What is sap10calcs?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sapinputfiles.html">What are SAP XML files?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sapcalculationmethod.html">The SAP calculation methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rdsaptutorials.html">RdSAP10 Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../saptutorials.html">SAP10 Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../demos.html">Demos and Case Studies</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Solar photovoltaics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sap10-xml-files">SAP10 XML files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rdsap10-xml-files">RdSAP10 XML files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-sample-calculation-with-a-solar-pv-system">A sample calculation with a solar PV system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monthly-solar-pv-generation">Monthly solar PV generation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rdsap_schema_21_0_0.html">RdSAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sap_schema_19_1_0.html">SAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testing.html">Testing and the Test Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developersnotes.html">Developers Notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sap10calcs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../demos.html">Demos and Case Studies</a></li>
+      <li class="breadcrumb-item active">Solar photovoltaics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/case_studies/solar_photovoltaics/solar_photovoltaics.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="solar-photovoltaics">
+<h1>Solar photovoltaics<a class="headerlink" href="#solar-photovoltaics" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>In SAP10 and RdSAP10, it is possible to specify that a dwelling has one or more solar photovoltaic systems installed. These PV systems will typically be located on the roof of the dwelling and will generate electricity which can be used directly by the house or exported to the mains electricity grid.</p>
+<p>The method for solar PV systems is described in Appendix M1 in the SAP10.2 Specification.</p>
+</section>
+<section id="sap10-xml-files">
+<h2>SAP10 XML files<a class="headerlink" href="#sap10-xml-files" title="Link to this heading"></a></h2>
+<p>In SAP10 XML files, solar PV systems are specified as a <a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#pv-array-1"><code class="docutils literal notranslate"><span class="pre">&lt;PV-Array&gt;</span></code></a> with the following child elements:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#peak-power-1"><code class="docutils literal notranslate"><span class="pre">&lt;Peak-Power&gt;</span></code></a>: The rating of the solar PV system in kWp.</p></li>
+<li><p><a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#orientation-2"><code class="docutils literal notranslate"><span class="pre">&lt;Orientation</span></code></a>: The orientation of the solar PV system: One of:</p>
+<ul>
+<li><p>“North” (1)</p></li>
+<li><p>“North East” (2)</p></li>
+<li><p>“East” (3)</p></li>
+<li><p>“South East” (4)</p></li>
+<li><p>“South” (5)</p></li>
+<li><p>“South West” (6)</p></li>
+<li><p>“West” (7)</p></li>
+<li><p>“North West” (8)</p></li>
+<li><p>“To be used when the pitch is horizontal” (NR)</p></li>
+<li><p>“not recorded - for backwards compatibility only; do not use” (NR)</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#pitch-1"><code class="docutils literal notranslate"><span class="pre">&lt;Pitch&gt;</span></code></a>: The pitch (angle from the horizontal) of the solar PV system: One of:</p>
+<ul>
+<li><p>“horizontal” (1)</p></li>
+<li><p>“30 degrees” (2)</p></li>
+<li><p>“45 degrees” (3)</p></li>
+<li><p>“60 degrees” (4)</p></li>
+<li><p>“vertical” (5)</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#overshading-1"><code class="docutils literal notranslate"><span class="pre">&lt;Overshading&gt;</span></code></a>: The overshading of the PV system. One of:</p>
+<ul>
+<li><p>“none or very little” (1)</p></li>
+<li><p>“modest” (2)</p></li>
+<li><p>“significant” (3)</p></li>
+<li><p>“heavy” (4)</p></li>
+<li><p>“severe” (5)</p></li>
+<li><p>“for backwards compatability only; do not use” (ND).</p></li>
+</ul>
+</li>
+<li><p>Plus additional information not required for the calculation.</p></li>
+</ul>
+<p>For example, this is a 2.5 kWp south-facing solar PV system on a 30 degree pitch roof with modest overshading:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;PV-Arrays&gt;</span>
+<span class="w">  </span><span class="nt">&lt;PV-Array&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Peak-Power&gt;</span>2.5<span class="nt">&lt;/Peak-Power&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Orientation&gt;</span>5<span class="nt">&lt;/Orientation&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Pitch&gt;</span>2<span class="nt">&lt;/Pitch&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Overshading&gt;</span>2<span class="nt">&lt;/Overshading&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/PV-Array&gt;</span>
+<span class="nt">&lt;/PV-Arrays&gt;</span>
+</pre></div>
+</div>
+<p>In SAP10 XML files, solar PV systems can be specified in the <a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#sap-energy-source"><code class="docutils literal notranslate"><span class="pre">&lt;SAP-Energy-Source&gt;</span></code></a> and <a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#fghrs-energy-source"><code class="docutils literal notranslate"><span class="pre">&lt;FGHRS-Energy-Source&gt;</span></code></a> (FGHRS = flue gas heat recovery system) elements. A maximum of three solar PV systems (for each element) is allowed.</p>
+<p>In addition, the following elements connect the solar PV system to the dwelling’s electricity supply and enable the export of PV generated electricity to the mains electricity grid:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#pv-connection"><code class="docutils literal notranslate"><span class="pre">&lt;PV-Connection&gt;</span></code></a>: One of:</p>
+<ul>
+<li><p>“not applicable (FGHRS)” (0)</p></li>
+<li><p>“not connected to dwelling’s electricity meter” (1)</p></li>
+<li><p>“connected to dwelling’s electricity meter” (2)</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#is-dwelling-export-capable"><code class="docutils literal notranslate"><span class="pre">&lt;Is-Dwelling-Export-Capable&gt;</span></code></a>: One of:</p>
+<ul>
+<li><p>True (true)</p></li>
+<li><p>False (false)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="rdsap10-xml-files">
+<h2>RdSAP10 XML files<a class="headerlink" href="#rdsap10-xml-files" title="Link to this heading"></a></h2>
+<p>In RdSAP10 XML files, solar PV systems are specified in a similar way using the <a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/rdsap_schema_21_0_0.html#pv-array"><code class="docutils literal notranslate"><span class="pre">&lt;PV-Array&gt;</span></code></a> element.</p>
+<p>Note that in RdSAP XML files the <a class="reference external" href="https://stevenkfirth.github.io/sap10calcs/rdsap_schema_21_0_0.html#photovoltaic-supply"><code class="docutils literal notranslate"><span class="pre">&lt;Photovoltaic-Supply&gt;</span></code></a> element is required. If there is no solar PV system present in the dwelling then this is specified as:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Photovoltaic-Supply&gt;</span>
+<span class="w">  </span><span class="nt">&lt;None-Or-No-Details&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Percent-Roof-Area&gt;</span>0<span class="nt">&lt;/Percent-Roof-Area&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/None-Or-No-Details&gt;</span>
+<span class="nt">&lt;/Photovoltaic-Supply&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="a-sample-calculation-with-a-solar-pv-system">
+<h2>A sample calculation with a solar PV system<a class="headerlink" href="#a-sample-calculation-with-a-solar-pv-system" title="Link to this heading"></a></h2>
+<p>Here is a SAP10 calculation for a dwelling with a 1 kWp PV system:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sap10calcs</span>
+<span class="n">tree</span><span class="p">,</span> <span class="n">sap_report</span> <span class="o">=</span> <span class="n">sap10calcs</span><span class="o">.</span><span class="n">parse_xml</span><span class="p">(</span><span class="s1">&#39;in.xml&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sap_report</span><span class="o">.</span><span class="n">sap10_data</span><span class="o">.</span><span class="n">sap_property_details</span><span class="o">.</span><span class="n">sap_energy_source</span><span class="o">.</span><span class="n">pv_arrays</span><span class="o">.</span><span class="n">display</span><span class="p">())</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">sap10calcs</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span>
+    <span class="n">input_file</span> <span class="o">=</span> <span class="s1">&#39;in.xml&#39;</span><span class="p">,</span>
+    <span class="n">auth_token</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+<span class="n">output_dict</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;sap_calculation_output_dict&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Annual PV generation (kWh):&#39;</span><span class="p">,</span> <span class="n">output_dict</span><span class="p">[</span><span class="s1">&#39;E_PV&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;PV-Arrays xmlns=&quot;https://epbr.digital.communities.gov.uk/xsd/sap&quot;&gt;
+  &lt;PV-Array&gt;
+    &lt;Peak-Power&gt;1&lt;/Peak-Power&gt;
+    &lt;Orientation&gt;5 [&#39;South&#39;]&lt;/Orientation&gt;
+    &lt;Pitch&gt;2 [&#39;30 degrees&#39;]&lt;/Pitch&gt;
+    &lt;Overshading&gt;1 [&#39;none or very little&#39;]&lt;/Overshading&gt;
+  &lt;/PV-Array&gt;
+&lt;/PV-Arrays&gt;
+
+Annual PV generation (kWh): 863.6196964310479
+</pre></div>
+</div>
+<p>This result of 864 kWh per year looks about right using the “rule of thumb” for solar PV generation in the UK climate. The SAP10.2 Specification states:</p>
+<blockquote>
+<div><p>In the UK climate, an installation with 1 kWp typically produces about 720 to 940 kWh
+of electricity per year (at favourable orientation and not over shaded, depending on latitude) (p92).</p>
+</div></blockquote>
+</section>
+<section id="monthly-solar-pv-generation">
+<h2>Monthly solar PV generation<a class="headerlink" href="#monthly-solar-pv-generation" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">calendar</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">calendar</span><span class="o">.</span><span class="n">month_name</span><span class="p">[</span><span class="n">i</span><span class="p">][:</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">output_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;E_PV_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;PV electricity generation&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;kWh&#39;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">output_dict</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;solar_radiation_on_horizontal_plane_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)]</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Horizontal solar radiation&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;W/m$^2$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="png" src="../../_images/solar_photovoltaics_4_0.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../demos.html" class="btn btn-neutral float-left" title="Demos and Case Studies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../api.html" class="btn btn-neutral float-right" title="API reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Steven Firth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

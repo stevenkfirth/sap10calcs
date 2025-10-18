@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What are SAP XML files? &mdash; sap10calcs 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e6a37869" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=47de8214"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The SAP calculation methodology" href="sapcalculationmethod.html" />
+    <link rel="prev" title="Quick Start" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            sap10calcs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">What is sap10calcs?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What are SAP XML files?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-an-xml-file">What is an XML file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-does-a-sap10-xml-file-look-like">What does a SAP10 XML file look like?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-an-xml-schema">What is an XML schema?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-the-the-format-of-sap-xml-files">What is the the format of SAP XML files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ok-how-do-i-read-these-xml-schemas">OK, how do I read these XML schemas?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#so-how-do-i-work-with-sap10-and-rdsap10-input-files">So how do I work with SAP10 and RdSAP10 input files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-do-i-do-if-there-is-an-error">What do I do if there is an error?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sapcalculationmethod.html">The SAP calculation methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdsaptutorials.html">RdSAP10 Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saptutorials.html">SAP10 Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demos.html">Demos and Case Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdsap_schema_21_0_0.html">RdSAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sap_schema_19_1_0.html">SAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing and the Test Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developersnotes.html">Developers Notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sap10calcs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What are SAP XML files?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sapinputfiles.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="what-are-sap-xml-files">
+<h1>What are SAP XML files?<a class="headerlink" href="#what-are-sap-xml-files" title="Link to this heading"></a></h1>
+<p>SAP10 and RdSAP10 use XML files for the inputs to the SAP calculations. These files also store some of the outputs of the calculations.</p>
+<section id="what-is-an-xml-file">
+<h2>What is an XML file?<a class="headerlink" href="#what-is-an-xml-file" title="Link to this heading"></a></h2>
+<p>An XML file is a text file which can be stored on the local computer. These text files store information using a specific <a class="reference external" href="https://www.w3.org/TR/xml/">set of rules</a> which allow them to be read, edited and queried. XML files are used to transfer information between software programmes and can be read by most programming languages. In Python I uses the <a class="reference external" href="https://lxml.de/">lxml package</a> to work with XML.</p>
+<p>XML files have three main constructs:</p>
+<ul class="simple">
+<li><p>Elements, such as <code class="docutils literal notranslate"><span class="pre">&lt;SAP10-Data&gt;</span></code>. The elements are in a tree-like structure with a root (start) element and parent/child elements.</p></li>
+<li><p>Element text, such as <code class="docutils literal notranslate"><span class="pre">&lt;Postcode&gt;LE11</span> <span class="pre">3TU&lt;/Postcode&gt;</span></code>. Here the “Postcode” element has the text “LE11 3TU”.</p></li>
+<li><p>Element attributes, such as <code class="docutils literal notranslate"><span class="pre">&lt;SAP-Report</span> <span class="pre">xmlns=&quot;https://epbr.digital.communities.gov.uk/xsd/sap&quot;&gt;</span></code>. Here the “SAP-Report” element has a “xmlns” attribute.</p></li>
+</ul>
+</section>
+<section id="what-does-a-sap10-xml-file-look-like">
+<h2>What does a SAP10 XML file look like?<a class="headerlink" href="#what-does-a-sap10-xml-file-look-like" title="Link to this heading"></a></h2>
+<p>A SAP10 XML file looks like this (note this in a shortened version):</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;</span>
+<span class="nt">&lt;SAP-Report</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://epbr.digital.communities.gov.uk/xsd/sap&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Schema-Version-Original&gt;</span>SAP-Schema-19.1.0<span class="nt">&lt;/Schema-Version-Original&gt;</span>
+<span class="w">   </span><span class="nt">&lt;SAP-Version&gt;</span>10.2<span class="nt">&lt;/SAP-Version&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Report-Header&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Address&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Postcode&gt;</span>LE11<span class="w"> </span>3TU<span class="nt">&lt;/Postcode&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Address&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Property&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/Report-Header&gt;</span>
+<span class="w">   </span><span class="nt">&lt;SAP10-Data&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Data-Type&gt;</span>1<span class="nt">&lt;/Data-Type&gt;</span>
+<span class="w">      </span><span class="nt">&lt;SAP-Property-Details&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Cold-Water-Source&gt;</span>1<span class="nt">&lt;/Cold-Water-Source&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Living-Area&gt;</span>30<span class="nt">&lt;/Living-Area&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Windows-Overshading&gt;</span>2<span class="nt">&lt;/Windows-Overshading&gt;</span>
+<span class="w">      </span><span class="nt">&lt;SAP-Building-Parts&gt;</span>
+<span class="w">         </span>...
+<span class="w">      </span><span class="nt">&lt;/SAP-Building-Parts&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/SAP10-Data&gt;</span>
+<span class="nt">&lt;/SAP-Report&gt;</span>
+</pre></div>
+</div>
+<p>This is a text file and this is how it would look if opened in, say, Notepad.</p>
+<p>There are three questions here:</p>
+<ul class="simple">
+<li><p>What is the meaning of the different elements (<code class="docutils literal notranslate"><span class="pre">SAP-Report</span></code>, <code class="docutils literal notranslate"><span class="pre">Schema-Version-Original</span></code> etc.)?</p></li>
+<li><p>How should the different elements be structured (which should come first, what are the child elements of <code class="docutils literal notranslate"><span class="pre">SAP-Report</span></code> etc.)?</p></li>
+<li><p>What is the meaning of the text being used (i.e. what does <code class="docutils literal notranslate"><span class="pre">Cold-Water-Source</span></code> = “1” refer to)?</p></li>
+</ul>
+<p>These questions are answered by the use of an XML Schema.</p>
+</section>
+<section id="what-is-an-xml-schema">
+<h2>What is an XML schema?<a class="headerlink" href="#what-is-an-xml-schema" title="Link to this heading"></a></h2>
+<p>An <a class="reference external" href="https://www.w3.org/TR/xmlschema-1/">XML schema</a> is an additional set of rules for an XML document. Schemas are designed to work with a particular application and define the elements and structure of XML files for that application. For example, an XML schema for a building energy application might define the elements <code class="docutils literal notranslate"><span class="pre">&lt;Building&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;Room&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;SolarPanel&gt;</span></code> etc.</p>
+</section>
+<section id="what-is-the-the-format-of-sap-xml-files">
+<h2>What is the the format of SAP XML files?<a class="headerlink" href="#what-is-the-the-format-of-sap-xml-files" title="Link to this heading"></a></h2>
+<p>SAP10 XML files use the schema given on the GitHub page for the Ministry of Housing, Communities and Local Government here: <a class="reference external" href="https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.1.0/SAP">https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.1.0/SAP</a></p>
+<p>An example of a SAP10 XML input file which follows this schema can be seen here: <a class="reference internal" href="quickstart.html#an-example-input-file"><span class="std std-ref">An example SAP10 input file</span></a>.</p>
+<p>RdSAP10 XML files use the schema given on the GitHub page for the Ministry of Housing, Communities and Local Government here:
+<a class="reference external" href="https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/RdSAP-Schema-21.0.0/RdSAP">https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/RdSAP-Schema-21.0.0/RdSAP</a></p>
+</section>
+<section id="ok-how-do-i-read-these-xml-schemas">
+<h2>OK, how do I read these XML schemas?<a class="headerlink" href="#ok-how-do-i-read-these-xml-schemas" title="Link to this heading"></a></h2>
+<p>If you look at these XML schemas on GitHub you will see that they are difficult to understand. This is because:</p>
+<ul class="simple">
+<li><p>The XML schema language itself isn’t easy to read.</p></li>
+<li><p>The SAP10 and RdSAP10 schemas are actually multiple files with links between them.</p></li>
+<li><p>The SAP10 and RdSAP10 schemas use numerical codes (such as the code “1” for the value “detached”) which makes them difficult to visually inspect.</p></li>
+</ul>
+</section>
+<section id="so-how-do-i-work-with-sap10-and-rdsap10-input-files">
+<h2>So how do I work with SAP10 and RdSAP10 input files?<a class="headerlink" href="#so-how-do-i-work-with-sap10-and-rdsap10-input-files" title="Link to this heading"></a></h2>
+<p>Here is my guide to the SAP10 and RdSAP10 XML files:</p>
+<ul>
+<li><p>Use the online references to the XML schemas which I have created here (this is much easier than working with the XML schemas directly):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="sap_schema_19_1_0.html#sap-xml-reference"><span class="std std-ref">SAP XML reference</span></a></p></li>
+<li><p><a class="reference internal" href="rdsap_schema_21_0_0.html#rdsap-xml-reference"><span class="std std-ref">RdSAP XML reference</span></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>SAP10 XML files always start with either a <a class="reference internal" href="sap_schema_19_1_0.html#sap-compliance-report"><span class="std std-ref">SAP-Compliance-Report</span></a> or a <a class="reference internal" href="sap_schema_19_1_0.html#sap-compliance-report-sap-report"><span class="std std-ref">SAP-Report</span></a> element.</p></li>
+<li><p>RdSAP10 XML files always start with the <a class="reference internal" href="rdsap_schema_21_0_0.html#rdsap-report"><span class="std std-ref">RdSAP-Report</span></a> element.</p></li>
+<li><p>For manual editing:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Use <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> (or similar) for manual editing of the XML files.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>For editing with Python:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Use the <code class="xref py py-func docutils literal notranslate"><span class="pre">sap10calcs.parse_xml()</span></code> or <code class="xref py py-func docutils literal notranslate"><span class="pre">sap10calcs.parse_rdsap_xml()</span></code> methods to read in the XML files using Python. Then use the <cite>display</cite> method on one of the XML elements (such as <code class="xref py py-meth docutils literal notranslate"><span class="pre">sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report.display()</span></code>) to display the XML files in an easier-to-read format.</p></li>
+<li><p>Use the <a class="reference internal" href="api.html#classes"><span class="std std-ref">sap10calcs XML classes</span></a> to work with and edit the XML files.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="what-do-i-do-if-there-is-an-error">
+<h2>What do I do if there is an error?<a class="headerlink" href="#what-do-i-do-if-there-is-an-error" title="Link to this heading"></a></h2>
+<p>It is very easy to create a SAP XML file that isn’t correctly structured and will cause an error if used in a SAP calculation.</p>
+<p>This is because the original SAP and RdSAP XML schemas are not particularly well structured and it is difficult to tell what information is required.</p>
+<p>For example, changing the heating system from a gas boiler to a heat pump requires some XML elements to be removed and additional XML elements to be created.</p>
+<p><cite>sap10calcs</cite> should provide a useful error message to say when an XML element is missing or if an incorrect code has been used in an XML element. If instead there is a general error, then please contact me and I will fix this.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sapcalculationmethod.html" class="btn btn-neutral float-right" title="The SAP calculation methodology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Steven Firth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

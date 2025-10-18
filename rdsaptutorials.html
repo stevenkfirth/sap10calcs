@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RdSAP10 Tutorials &mdash; sap10calcs 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e6a37869" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=47de8214"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SAP10 Tutorials" href="saptutorials.html" />
+    <link rel="prev" title="The SAP calculation methodology" href="sapcalculationmethod.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            sap10calcs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">What is sap10calcs?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sapinputfiles.html">What are SAP XML files?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sapcalculationmethod.html">The SAP calculation methodology</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RdSAP10 Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-a-rdsap10-calculation">Running a RdSAP10 calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-an-existing-rdsap-xml-input-file">Editing an existing RdSAP XML input file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-rdsap-xml-input-file-from-scratch">Creating a RdSAP XML input file from scratch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="saptutorials.html">SAP10 Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demos.html">Demos and Case Studies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdsap_schema_21_0_0.html">RdSAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sap_schema_19_1_0.html">SAP XML reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing and the Test Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developersnotes.html">Developers Notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sap10calcs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">RdSAP10 Tutorials</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/rdsaptutorials.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rdsap10-tutorials">
+<span id="id1"></span><h1>RdSAP10 Tutorials<a class="headerlink" href="#rdsap10-tutorials" title="Link to this heading"></a></h1>
+<section id="running-a-rdsap10-calculation">
+<span id="id2"></span><h2>Running a RdSAP10 calculation<a class="headerlink" href="#running-a-rdsap10-calculation" title="Link to this heading"></a></h2>
+<p>An RdSAP10 calculation can be run using:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sap10calcs</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">sap10calcs</span><span class="o">.</span><span class="n">rdsap</span><span class="p">(</span>
+    <span class="n">input_file</span> <span class="o">=</span> <span class="s1">&#39;my_rdsap10_file.xml&#39;</span><span class="p">,</span>
+    <span class="n">auth_token</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>This uses the <code class="xref py py-func docutils literal notranslate"><span class="pre">sap10calcs.rdsap()</span></code> function:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">input_file</span></code> is an RdSAP10 XML file provided by the user and stored on the local computer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auth_token</span></code> is an authorization token for the remote API service provided by the user (see <a class="reference external" href="https://netzeroapis.com/redoc#section/Authorization">here</a> for details).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code> is a Python dictionary which contains the final RdSAP calculated values (such as energy consumption and the SAP rating), the intermediate calculations and any error messages.</p></li>
+</ul>
+<p>In practice, I would use this in a wider function that also saves the complete output of the <code class="xref py py-func docutils literal notranslate"><span class="pre">sap10calcs.rdsap()</span></code> function, saves the final SAP10 XML file (ready for use in <code class="xref py py-func docutils literal notranslate"><span class="pre">sap10calcs.calculate()</span></code>) and prints out any error message. This might look like:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sap10calcs</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+
+<span class="k">def</span> <span class="nf">run_rdsap</span><span class="p">(</span>
+    <span class="n">fp_in</span><span class="p">,</span>  <span class="c1"># filepath to the input RdSAP10 XML file.</span>
+    <span class="n">fp_out_json</span><span class="p">,</span>  <span class="c1"># filepath for the output from the sap10calcs.rdsap function.</span>
+    <span class="n">fp_out_xml</span><span class="p">,</span>  <span class="c1"># filepath for the final SAP10 XML file.</span>
+    <span class="n">auth_token</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">):</span>
+    <span class="s2">&quot;&quot;</span>
+    <span class="c1"># run RdSAP engine</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">sap10calcs</span><span class="o">.</span><span class="n">rdsap</span><span class="p">(</span>
+        <span class="n">input_file</span> <span class="o">=</span> <span class="n">fp_in</span><span class="p">,</span>
+        <span class="n">auth_token</span> <span class="o">=</span> <span class="n">auth_token</span>
+    <span class="p">)</span>
+
+    <span class="c1"># save full output - useful for fixing errors...</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp_out_json</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+
+    <span class="c1"># print error message if present</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;rdsap_calculation_error_traceback&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;rdsap_calculation_error_traceback&#39;</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># save SAP10 XML file</span>
+        <span class="n">tree</span><span class="p">,</span> <span class="n">sap_report</span> <span class="o">=</span> <span class="n">sap10calcs</span><span class="o">.</span><span class="n">parse_xml</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;sap_xml&#39;</span><span class="p">]))</span>
+        <span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">fp_out_xml</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">xml_declaration</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pretty_print</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">run_rdsap</span><span class="p">(</span><span class="s1">&#39;my_rdsap10_file.xml&#39;</span><span class="p">,</span> <span class="s1">&#39;rdsap_result.json&#39;</span><span class="p">,</span> <span class="s1">&#39;my_sap10_file.xml&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The SAP10 XML file is returned as a string in the <code class="docutils literal notranslate"><span class="pre">result</span></code> dictionary. So this is converted into a file-like object using <a class="reference external" href="https://docs.python.org/3/library/io.html#io.StringIO">StringIO</a> before being read using the <code class="xref py py-func docutils literal notranslate"><span class="pre">sap10calcs.parse_xml()</span></code> function.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tree</span></code> variable is a standard <a class="reference external" href="https://lxml.de/tutorial.html">lxml ElementTree</a>. The <code class="docutils literal notranslate"><span class="pre">write</span></code> method from the lxml package is used to save the XML to a local file.</p>
+</section>
+<section id="editing-an-existing-rdsap-xml-input-file">
+<span id="editing-an-existing-rdsap-xml-file"></span><h2>Editing an existing RdSAP XML input file<a class="headerlink" href="#editing-an-existing-rdsap-xml-input-file" title="Link to this heading"></a></h2>
+<p>This code uses the <code class="xref py py-func docutils literal notranslate"><span class="pre">sap10calcs.parse_rsdap_xml()</span></code> function to read an RdSAP XML file. It then updates the country code and the number of doors, and saves the XML file with a new name.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sap10calcs</span>
+<span class="n">tree</span><span class="p">,</span> <span class="n">rdsap_report</span> <span class="o">=</span> <span class="n">sap10calcs</span><span class="o">.</span><span class="n">parse_rdsap_xml</span><span class="p">(</span><span class="s1">&#39;my_rdsap10_file.xml&#39;</span><span class="p">)</span>
+<span class="n">rdsap_report</span><span class="o">.</span><span class="n">report_header</span><span class="o">.</span><span class="n">country_code</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Wales&#39;</span>
+<span class="n">rdsap_report</span><span class="o">.</span><span class="n">sap_data</span><span class="o">.</span><span class="n">sap_property_details</span><span class="o">.</span><span class="n">door_count</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;my_rdsap10_file_edited.xml&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">xml_declaration</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pretty_print</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-a-rdsap-xml-input-file-from-scratch">
+<span id="id3"></span><h2>Creating a RdSAP XML input file from scratch<a class="headerlink" href="#creating-a-rdsap-xml-input-file-from-scratch" title="Link to this heading"></a></h2>
+<p>This code uses the <code class="xref py py-func docutils literal notranslate"><span class="pre">sap10calcs.create_rdsap_report_xml()</span></code> function to create an empty <a class="reference internal" href="api.html#sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report" title="sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">RdSAP_Report</span></code></a> object, and then uses the object properties and methods to create a complete RdSAP input XML file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sap10calcs</span>
+
+<span class="c1"># create new rdsap_report element</span>
+<span class="n">tree</span><span class="p">,</span> <span class="n">rdsap_report</span> <span class="o">=</span> <span class="n">sap10calcs</span><span class="o">.</span><span class="n">create_rdsap_report_xml</span><span class="p">()</span>
+
+<span class="c1"># report_header</span>
+<span class="n">report_header</span> <span class="o">=</span> <span class="n">rdsap_report</span><span class="o">.</span><span class="n">add_report_header</span><span class="p">()</span>
+<span class="n">report_header</span><span class="o">.</span><span class="n">add_country_code</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;England&#39;</span>
+
+<span class="c1"># sap_data</span>
+<span class="n">sap_data</span> <span class="o">=</span> <span class="n">rdsap_report</span><span class="o">.</span><span class="n">add_sap_data</span><span class="p">()</span>
+
+<span class="c1"># sap_property_details</span>
+<span class="n">sap_property_details</span> <span class="o">=</span> <span class="n">sap_data</span><span class="o">.</span><span class="n">add_sap_property_details</span><span class="p">()</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_property_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;House&#39;</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_built_form</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Detached&#39;</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_extensions_count</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_habitable_room_count</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_heated_room_count</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_low_energy_fixed_lighting_bulbs_count</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_incandescent_fixed_lighting_bulbs_count</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_measurement_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Internal&#39;</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_solar_water_heating</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;No&#39;</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_pressure_test</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;yes - measured at 50 Pa&#39;</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_air_permeability</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_mechanical_ventilation</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;natural&#39;</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_conservatory_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;no conservatory&#39;</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_door_count</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_percent_draughtproofed</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># sap_heating</span>
+<span class="n">sap_heating</span> <span class="o">=</span> <span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_sap_heating</span><span class="p">()</span>
+<span class="n">sap_heating</span><span class="o">.</span><span class="n">add_water_heating_fuel</span><span class="p">()</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="s1">&#39;26&#39;</span>
+<span class="n">sap_heating</span><span class="o">.</span><span class="n">add_water_heating_code</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">901</span>  <span class="c1"># From main heating system</span>
+<span class="n">sap_heating</span><span class="o">.</span><span class="n">add_immersion_heating_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;not applicable&#39;</span>
+<span class="n">sap_heating</span><span class="o">.</span><span class="n">add_cylinder_size</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;No Cylinder&#39;</span>
+<span class="n">sap_heating</span><span class="o">.</span><span class="n">add_has_fixed_air_conditioning</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># main_heating_details</span>
+<span class="n">main_heating_details</span> <span class="o">=</span> <span class="n">sap_heating</span><span class="o">.</span><span class="n">add_main_heating_details</span><span class="p">()</span>
+
+<span class="c1"># main_heating_1</span>
+<span class="n">main_heating_1</span> <span class="o">=</span> <span class="n">main_heating_details</span><span class="o">.</span><span class="n">add_main_heating</span><span class="p">()</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_main_heating_number</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_main_heating_category</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;boiler with radiators or underfloor heating&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_main_fuel_type</span><span class="p">()</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="s1">&#39;26&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_main_heating_control</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">2106</span>  <span class="c1"># &quot;Programmer, room thermostat and TRVs&quot;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_main_heating_data_source</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;SAP Table&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_sap_main_heating_code</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">104</span>
+    <span class="c1"># &quot;Gas boilers (including mains gas, LPG and biogas) 1998 or later: Condensing combi with automatic ignition&quot;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_boiler_ignition_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;auto-ignition&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_boiler_flue_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;open&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_fan_flue_present</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Yes&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_heat_emitter_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;radiators&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_main_heating_fraction</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_has_fghrs</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;No&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_emitter_temperature</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;unknown&#39;</span>
+<span class="n">main_heating_1</span><span class="o">.</span><span class="n">add_central_heating_pump_age</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;unknown&#39;</span>
+
+<span class="c1"># sap_energy_source</span>
+<span class="n">sap_energy_source</span> <span class="o">=</span> <span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_sap_energy_source</span><span class="p">()</span>
+<span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_meter_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Single&#39;</span>
+<span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_mains_gas</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;mains gas available in the property&#39;</span>
+<span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_electricity_smart_meter_present</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_gas_smart_meter_present</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_is_dwelling_export_capable</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_wind_turbines_count</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_wind_turbines_terrain_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;not recorded&#39;</span>
+<span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_pv_connection</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;not applicable (FGHRS or no PV)&#39;</span>
+
+<span class="c1"># photovoltaic_supply</span>
+<span class="n">photovoltaic_supply</span> <span class="o">=</span> <span class="n">sap_energy_source</span><span class="o">.</span><span class="n">add_photovoltaic_supply</span><span class="p">()</span>
+<span class="n">photovoltaic_supply</span><span class="o">.</span><span class="n">add_none_or_no_details</span><span class="p">()</span><span class="o">.</span><span class="n">add_percent_roof_area</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># sap_building_parts</span>
+<span class="n">sap_building_parts</span> <span class="o">=</span> <span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_sap_building_parts</span><span class="p">()</span>
+
+<span class="c1"># sap_building_part_1</span>
+<span class="n">sap_building_part_1</span> <span class="o">=</span> <span class="n">sap_building_parts</span><span class="o">.</span><span class="n">add_sap_building_part</span><span class="p">()</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_building_part_number</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_construction_age_band</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> \
+    <span class="s1">&#39;England and Wales: 1991-1995; Scotland: 1992-1998; Northern Ireland: 1992-1999&#39;</span>
+<span class="c1">#sap_building_part_1.add_floor_insulation_thickness().value = &#39;50mm&#39;</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_floor_u_value</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_floor_heat_loss</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Ground floor&#39;</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_roof_construction</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Pitched (slates or tiles), access to loft&#39;</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_roof_u_value</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_roof_insulation_location</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Joists&#39;</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_wall_construction</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;cavity&#39;</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_wall_dry_lined</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;No&#39;</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_wall_u_value</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_wall_insulation_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;filled cavity&#39;</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_wall_thickness_measured</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;No&#39;</span>
+<span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_party_wall_construction</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> \
+    <span class="s1">&#39;not applicable (detached property or no party wall in this building part)&#39;</span>
+
+<span class="c1"># sap_floor_dimensions_1</span>
+<span class="n">sap_floor_dimensions_1</span> <span class="o">=</span> <span class="n">sap_building_part_1</span><span class="o">.</span><span class="n">add_sap_floor_dimensions</span><span class="p">()</span>
+
+<span class="c1"># sap_floor_dimension_1_1</span>
+<span class="n">sap_floor_dimension_1_1</span> <span class="o">=</span> <span class="n">sap_floor_dimensions_1</span><span class="o">.</span><span class="n">add_sap_floor_dimension</span><span class="p">()</span>
+<span class="n">sap_floor_dimension_1_1</span><span class="o">.</span><span class="n">add_heat_loss_perimeter</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">sap_floor_dimension_1_1</span><span class="o">.</span><span class="n">add_room_height</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">sap_floor_dimension_1_1</span><span class="o">.</span><span class="n">add_total_floor_area</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">sap_floor_dimension_1_1</span><span class="o">.</span><span class="n">add_floor</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;lowest occupied&#39;</span>
+<span class="n">sap_floor_dimension_1_1</span><span class="o">.</span><span class="n">add_floor_construction</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;suspended timber&#39;</span>
+<span class="n">sap_floor_dimension_1_1</span><span class="o">.</span><span class="n">add_floor_insulation</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;as built&#39;</span>
+<span class="n">sap_floor_dimension_1_1</span><span class="o">.</span><span class="n">add_party_wall_length</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># sap_windows</span>
+<span class="n">sap_windows</span> <span class="o">=</span> <span class="n">sap_property_details</span><span class="o">.</span><span class="n">add_sap_windows</span><span class="p">()</span>
+
+<span class="c1"># sap_window_1</span>
+<span class="n">sap_window_1</span> <span class="o">=</span> <span class="n">sap_windows</span><span class="o">.</span><span class="n">add_sap_window</span><span class="p">()</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_window_location</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Main Property&#39;</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_window_height</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_window_width</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_draught_proofed</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_glazing_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;single glazing&#39;</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_window_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;window&#39;</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_orientation</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;South&#39;</span>
+<span class="n">window_transmission_details_1</span> <span class="o">=</span> <span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_window_transmission_details</span><span class="p">()</span>
+<span class="n">window_transmission_details_1</span><span class="o">.</span><span class="n">add_data_source</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;manufacturer data&#39;</span>
+<span class="n">window_transmission_details_1</span><span class="o">.</span><span class="n">add_u_value</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">window_transmission_details_1</span><span class="o">.</span><span class="n">add_solar_transmittance</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_frame_factor</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_pvc_frame</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_window_wall_type</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;External wall type 1&#39;</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_permanent_shutters_present</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;No&#39;</span>
+<span class="n">sap_window_1</span><span class="o">.</span><span class="n">add_permanent_shutters_insulated</span><span class="p">()</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;No&#39;</span>
+
+<span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;my_rdsap10_file.xml&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">xml_declaration</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pretty_print</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This creates the following XML file (shown below using the <a class="reference internal" href="api.html#display" title="display"><code class="xref py py-func docutils literal notranslate"><span class="pre">display()</span></code></a> function):</p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;RdSAP-Report</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://epbr.digital.communities.gov.uk/xsd/rdsap&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Schema-Version-Original&gt;</span>RdSAP-Schema-21.0.0<span class="nt">&lt;/Schema-Version-Original&gt;</span>
+<span class="w">  </span><span class="nt">&lt;SAP-Version&gt;</span>10.2<span class="w"> </span>[&#39;SAP<span class="w"> </span>version<span class="w"> </span>10.2,<span class="w"> </span>dated<span class="w"> </span>April<span class="w"> </span>2023&#39;]<span class="nt">&lt;/SAP-Version&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Report-Header&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Country-Code&gt;</span>ENG<span class="w"> </span>[&#39;England&#39;]<span class="nt">&lt;/Country-Code&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Report-Header&gt;</span>
+<span class="w">  </span><span class="nt">&lt;SAP-Data&gt;</span>
+<span class="w">    </span><span class="nt">&lt;SAP-Property-Details&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Property-Type&gt;</span>0<span class="w"> </span>[&#39;House&#39;]<span class="nt">&lt;/Property-Type&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Built-Form&gt;</span>1<span class="w"> </span>[&#39;Detached&#39;]<span class="nt">&lt;/Built-Form&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Extensions-Count&gt;</span>0<span class="nt">&lt;/Extensions-Count&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Habitable-Room-Count&gt;</span>1<span class="nt">&lt;/Habitable-Room-Count&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Heated-Room-Count&gt;</span>1<span class="nt">&lt;/Heated-Room-Count&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Low-Energy-Fixed-Lighting-Bulbs-Count&gt;</span>0<span class="nt">&lt;/Low-Energy-Fixed-Lighting-Bulbs-Count&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Incandescent-Fixed-Lighting-Bulbs-Count&gt;</span>0<span class="nt">&lt;/Incandescent-Fixed-Lighting-Bulbs-Count&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Measurement-Type&gt;</span>1<span class="w"> </span>[&#39;Internal&#39;]<span class="nt">&lt;/Measurement-Type&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Solar-Water-Heating&gt;</span>N<span class="w"> </span>[&#39;No&#39;]<span class="nt">&lt;/Solar-Water-Heating&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Pressure-Test&gt;</span>6<span class="w"> </span>[&#39;yes<span class="w"> </span>-<span class="w"> </span>measured<span class="w"> </span>at<span class="w"> </span>50<span class="w"> </span>Pa&#39;]<span class="nt">&lt;/Pressure-Test&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Air-Permeability&gt;</span>0<span class="nt">&lt;/Air-Permeability&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Mechanical-Ventilation&gt;</span>0<span class="w"> </span>[&#39;natural&#39;]<span class="nt">&lt;/Mechanical-Ventilation&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Conservatory-Type&gt;</span>1<span class="w"> </span>[&#39;no<span class="w"> </span>conservatory&#39;]<span class="nt">&lt;/Conservatory-Type&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Door-Count&gt;</span>0<span class="nt">&lt;/Door-Count&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Percent-Draughtproofed&gt;</span>0<span class="nt">&lt;/Percent-Draughtproofed&gt;</span>
+<span class="w">      </span><span class="nt">&lt;SAP-Heating&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Water-Heating-Fuel&gt;</span>26<span class="w"> </span>[&#39;mains<span class="w"> </span>gas<span class="w"> </span>(not<span class="w"> </span>community)&#39;]<span class="nt">&lt;/Water-Heating-Fuel&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Water-Heating-Code&gt;</span>901<span class="nt">&lt;/Water-Heating-Code&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Immersion-Heating-Type&gt;</span>NA<span class="w"> </span>[&#39;not<span class="w"> </span>applicable&#39;]<span class="nt">&lt;/Immersion-Heating-Type&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Cylinder-Size&gt;</span>1<span class="w"> </span>[&#39;No<span class="w"> </span>Cylinder&#39;]<span class="nt">&lt;/Cylinder-Size&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Has-Fixed-Air-Conditioning&gt;</span>0<span class="w"> </span>[&#39;False&#39;]<span class="nt">&lt;/Has-Fixed-Air-Conditioning&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Main-Heating-Details&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Main-Heating&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Main-Heating-Number&gt;</span>1<span class="nt">&lt;/Main-Heating-Number&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Main-Heating-Category&gt;</span>2<span class="w"> </span>[&#39;boiler<span class="w"> </span>with<span class="w"> </span>radiators<span class="w"> </span>or<span class="w"> </span>underfloor<span class="w"> </span>heating&#39;]<span class="nt">&lt;/Main-Heating-Category&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Main-Fuel-Type&gt;</span>26<span class="w"> </span>[&#39;mains<span class="w"> </span>gas<span class="w"> </span>(not<span class="w"> </span>community)&#39;]<span class="nt">&lt;/Main-Fuel-Type&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Main-Heating-Control&gt;</span>2106<span class="nt">&lt;/Main-Heating-Control&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Main-Heating-Data-Source&gt;</span>2<span class="w"> </span>[&#39;SAP<span class="w"> </span>Table&#39;]<span class="nt">&lt;/Main-Heating-Data-Source&gt;</span>
+<span class="w">            </span><span class="nt">&lt;SAP-Main-Heating-Code&gt;</span>104<span class="nt">&lt;/SAP-Main-Heating-Code&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Boiler-Ignition-Type&gt;</span>1<span class="w"> </span>[&#39;auto-ignition&#39;]<span class="nt">&lt;/Boiler-Ignition-Type&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Boiler-Flue-Type&gt;</span>1<span class="w"> </span>[&#39;open&#39;]<span class="nt">&lt;/Boiler-Flue-Type&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Fan-Flue-Present&gt;</span>Y<span class="w"> </span>[&#39;Yes&#39;]<span class="nt">&lt;/Fan-Flue-Present&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Heat-Emitter-Type&gt;</span>1<span class="w"> </span>[&#39;radiators&#39;]<span class="nt">&lt;/Heat-Emitter-Type&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Main-Heating-Fraction&gt;</span>1<span class="nt">&lt;/Main-Heating-Fraction&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Has-FGHRS&gt;</span>N<span class="w"> </span>[&#39;No&#39;]<span class="nt">&lt;/Has-FGHRS&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Emitter-Temperature&gt;</span>0<span class="w"> </span>[&#39;unknown&#39;]<span class="nt">&lt;/Emitter-Temperature&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Central-Heating-Pump-Age&gt;</span>0<span class="w"> </span>[&#39;unknown&#39;]<span class="nt">&lt;/Central-Heating-Pump-Age&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/Main-Heating&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Main-Heating-Details&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/SAP-Heating&gt;</span>
+<span class="w">      </span><span class="nt">&lt;SAP-Energy-Source&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Meter-Type&gt;</span>2<span class="w"> </span>[&#39;Single&#39;]<span class="nt">&lt;/Meter-Type&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Mains-Gas&gt;</span>Y<span class="w"> </span>[&#39;mains<span class="w"> </span>gas<span class="w"> </span>available<span class="w"> </span>in<span class="w"> </span>the<span class="w"> </span>property&#39;]<span class="nt">&lt;/Mains-Gas&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Electricity-Smart-Meter-Present&gt;</span>0<span class="w"> </span>[&#39;False&#39;]<span class="nt">&lt;/Electricity-Smart-Meter-Present&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Gas-Smart-Meter-Present&gt;</span>0<span class="w"> </span>[&#39;False&#39;]<span class="nt">&lt;/Gas-Smart-Meter-Present&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Is-Dwelling-Export-Capable&gt;</span>0<span class="w"> </span>[&#39;False&#39;]<span class="nt">&lt;/Is-Dwelling-Export-Capable&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Wind-Turbines-Count&gt;</span>0<span class="nt">&lt;/Wind-Turbines-Count&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Wind-Turbines-Terrain-Type&gt;</span>4<span class="w"> </span>[&#39;not<span class="w"> </span>recorded&#39;]<span class="nt">&lt;/Wind-Turbines-Terrain-Type&gt;</span>
+<span class="w">        </span><span class="nt">&lt;PV-Connection&gt;</span>0<span class="w"> </span>[&#39;not<span class="w"> </span>applicable<span class="w"> </span>(FGHRS<span class="w"> </span>or<span class="w"> </span>no<span class="w"> </span>PV)&#39;]<span class="nt">&lt;/PV-Connection&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Photovoltaic-Supply&gt;</span>
+<span class="w">          </span><span class="nt">&lt;None-Or-No-Details&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Percent-Roof-Area&gt;</span>0<span class="nt">&lt;/Percent-Roof-Area&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/None-Or-No-Details&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/Photovoltaic-Supply&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/SAP-Energy-Source&gt;</span>
+<span class="w">      </span><span class="nt">&lt;SAP-Building-Parts&gt;</span>
+<span class="w">        </span><span class="nt">&lt;SAP-Building-Part&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Building-Part-Number&gt;</span>1<span class="nt">&lt;/Building-Part-Number&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Construction-Age-Band&gt;</span>H<span class="w"> </span>[&#39;England<span class="w"> </span>and<span class="w"> </span>Wales:<span class="w"> </span>1991-1995;<span class="w"> </span>Scotland:<span class="w"> </span>1992-1998;<span class="w"> </span>Northern<span class="w"> </span>Ireland:<span class="w"> </span>1992-1999&#39;]<span class="nt">&lt;/Construction-Age-Band&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Floor-U-Value&gt;</span>1.0<span class="nt">&lt;/Floor-U-Value&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Floor-Heat-Loss&gt;</span>7<span class="w"> </span>[&#39;Ground<span class="w"> </span>floor&#39;]<span class="nt">&lt;/Floor-Heat-Loss&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Roof-Construction&gt;</span>4<span class="w"> </span>[&#39;Pitched<span class="w"> </span>(slates<span class="w"> </span>or<span class="w"> </span>tiles),<span class="w"> </span>access<span class="w"> </span>to<span class="w"> </span>loft&#39;]<span class="nt">&lt;/Roof-Construction&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Roof-U-Value&gt;</span>1.0<span class="nt">&lt;/Roof-U-Value&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Roof-Insulation-Location&gt;</span>2<span class="w"> </span>[&#39;Joists&#39;]<span class="nt">&lt;/Roof-Insulation-Location&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Wall-Construction&gt;</span>4<span class="w"> </span>[&#39;cavity&#39;]<span class="nt">&lt;/Wall-Construction&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Wall-Dry-Lined&gt;</span>N<span class="w"> </span>[&#39;No&#39;]<span class="nt">&lt;/Wall-Dry-Lined&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Wall-U-Value&gt;</span>1.0<span class="nt">&lt;/Wall-U-Value&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Wall-Insulation-Type&gt;</span>2<span class="w"> </span>[&#39;filled<span class="w"> </span>cavity&#39;]<span class="nt">&lt;/Wall-Insulation-Type&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Wall-Thickness-Measured&gt;</span>N<span class="w"> </span>[&#39;No&#39;]<span class="nt">&lt;/Wall-Thickness-Measured&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Party-Wall-Construction&gt;</span>NA<span class="w"> </span>[&#39;not<span class="w"> </span>applicable<span class="w"> </span>(detached<span class="w"> </span>property<span class="w"> </span>or<span class="w"> </span>no<span class="w"> </span>party<span class="w"> </span>wall<span class="w"> </span>in<span class="w"> </span>this<span class="w"> </span>building<span class="w"> </span>part)&#39;]<span class="nt">&lt;/Party-Wall-Construction&gt;</span>
+<span class="w">          </span><span class="nt">&lt;SAP-Floor-Dimensions&gt;</span>
+<span class="w">            </span><span class="nt">&lt;SAP-Floor-Dimension&gt;</span>
+<span class="w">              </span><span class="nt">&lt;Heat-Loss-Perimeter&gt;</span>40<span class="nt">&lt;/Heat-Loss-Perimeter&gt;</span>
+<span class="w">              </span><span class="nt">&lt;Room-Height&gt;</span>3<span class="nt">&lt;/Room-Height&gt;</span>
+<span class="w">              </span><span class="nt">&lt;Total-Floor-Area&gt;</span>100<span class="nt">&lt;/Total-Floor-Area&gt;</span>
+<span class="w">              </span><span class="nt">&lt;Floor&gt;</span>0<span class="w"> </span>[&#39;lowest<span class="w"> </span>occupied&#39;]<span class="nt">&lt;/Floor&gt;</span>
+<span class="w">              </span><span class="nt">&lt;Floor-Construction&gt;</span>2<span class="w"> </span>[&#39;suspended<span class="w"> </span>timber&#39;]<span class="nt">&lt;/Floor-Construction&gt;</span>
+<span class="w">              </span><span class="nt">&lt;Floor-Insulation&gt;</span>1<span class="w"> </span>[&#39;as<span class="w"> </span>built&#39;]<span class="nt">&lt;/Floor-Insulation&gt;</span>
+<span class="w">              </span><span class="nt">&lt;Party-Wall-Length&gt;</span>0<span class="nt">&lt;/Party-Wall-Length&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/SAP-Floor-Dimension&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/SAP-Floor-Dimensions&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/SAP-Building-Part&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/SAP-Building-Parts&gt;</span>
+<span class="w">      </span><span class="nt">&lt;SAP-Windows&gt;</span>
+<span class="w">        </span><span class="nt">&lt;SAP-Window&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Window-Location&gt;</span>0<span class="w"> </span>[&#39;Main<span class="w"> </span>Property&#39;]<span class="nt">&lt;/Window-Location&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Window-Height&gt;</span>1<span class="nt">&lt;/Window-Height&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Window-Width&gt;</span>1<span class="nt">&lt;/Window-Width&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Draught-Proofed&gt;</span>0<span class="w"> </span>[&#39;False&#39;]<span class="nt">&lt;/Draught-Proofed&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Glazing-Type&gt;</span>5<span class="w"> </span>[&#39;single<span class="w"> </span>glazing&#39;]<span class="nt">&lt;/Glazing-Type&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Window-Type&gt;</span>1<span class="w"> </span>[&#39;window&#39;]<span class="nt">&lt;/Window-Type&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Orientation&gt;</span>5<span class="w"> </span>[&#39;South&#39;]<span class="nt">&lt;/Orientation&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Window-Transmission-Details&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Data-Source&gt;</span>2<span class="w"> </span>[&#39;manufacturer<span class="w"> </span>data&#39;]<span class="nt">&lt;/Data-Source&gt;</span>
+<span class="w">            </span><span class="nt">&lt;U-Value&gt;</span>1<span class="nt">&lt;/U-Value&gt;</span>
+<span class="w">            </span><span class="nt">&lt;Solar-Transmittance&gt;</span>0.8<span class="nt">&lt;/Solar-Transmittance&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/Window-Transmission-Details&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Frame-Factor&gt;</span>0.9<span class="nt">&lt;/Frame-Factor&gt;</span>
+<span class="w">          </span><span class="nt">&lt;PVC-Frame&gt;</span>1<span class="w"> </span>[&#39;True&#39;]<span class="nt">&lt;/PVC-Frame&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Window-Wall-Type&gt;</span>1<span class="w"> </span>[&#39;External<span class="w"> </span>wall<span class="w"> </span>type<span class="w"> </span>1&#39;]<span class="nt">&lt;/Window-Wall-Type&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Permanent-Shutters-Present&gt;</span>N<span class="w"> </span>[&#39;No&#39;]<span class="nt">&lt;/Permanent-Shutters-Present&gt;</span>
+<span class="w">          </span><span class="nt">&lt;Permanent-Shutters-Insulated&gt;</span>N<span class="w"> </span>[&#39;No&#39;]<span class="nt">&lt;/Permanent-Shutters-Insulated&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/SAP-Window&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/SAP-Windows&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/SAP-Property-Details&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/SAP-Data&gt;</span>
+<span class="nt">&lt;/RdSAP-Report&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sapcalculationmethod.html" class="btn btn-neutral float-left" title="The SAP calculation methodology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="saptutorials.html" class="btn btn-neutral float-right" title="SAP10 Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Steven Firth.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
