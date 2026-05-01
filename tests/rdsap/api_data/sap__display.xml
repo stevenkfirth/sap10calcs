@@ -1,0 +1,258 @@
+<SAP-Report xmlns="https://epbr.digital.communities.gov.uk/xsd/sap">
+  <Schema-Version-Original>SAP-Schema-19.1.0</Schema-Version-Original>
+  <SAP-Version>10.2 ['SAP version 10.2, dated Oct 2020']</SAP-Version>
+  <Report-Header>
+    <Completion-Date>2026-02-10</Completion-Date>
+    <Property>
+      <Address>
+        <Postcode>SW5 9UB</Postcode>
+      </Address>
+    </Property>
+  </Report-Header>
+  <SAP10-Data>
+    <Data-Type>5 ['existing dwelling']</Data-Type>
+    <SAP-Property-Details>
+      <Property-Type>2 ['Flat']</Property-Type>
+      <Living-Area>22.4775</Living-Area>
+      <Lowest-Storey-Area>29.97</Lowest-Storey-Area>
+      <Orientation>0 ['unknown or unspecified']</Orientation>
+      <Conservatory-Type>1 ['no conservatory']</Conservatory-Type>
+      <Terrain-Type>1 ['urban']</Terrain-Type>
+      <Is-In-Smoke-Control-Area>unknown ['']</Is-In-Smoke-Control-Area>
+      <Cold-Water-Source>2 ['header tank']</Cold-Water-Source>
+      <Windows-Overshading>2 ['average or unknown']</Windows-Overshading>
+      <Thermal-Mass-Parameter>250</Thermal-Mass-Parameter>
+      <Gas-Smart-Meter-Present>0 ['False']</Gas-Smart-Meter-Present>
+      <Electricity-Smart-Meter-Present>0 ['False']</Electricity-Smart-Meter-Present>
+      <Is-Dwelling-Export-Capable>0 ['False']</Is-Dwelling-Export-Capable>
+      <PV-Connection>0 ['not applicable (FGHRS)']</PV-Connection>
+      <SAP-Heating>
+        <Water-Heating-Code>901</Water-Heating-Code>
+        <Water-Fuel-Type>51 ['Community heating schemes: heat from mains gas']</Water-Fuel-Type>
+        <Has-Hot-Water-Cylinder>0 ['False']</Has-Hot-Water-Cylinder>
+        <Secondary-Heating-Category>1 ['none']</Secondary-Heating-Category>
+        <Thermal-Store>1 ['none']</Thermal-Store>
+        <Has-Fixed-Air-Conditioning>0 ['False']</Has-Fixed-Air-Conditioning>
+        <Is-Secondary-Heating-HETAS-Approved>0 ['False']</Is-Secondary-Heating-HETAS-Approved>
+        <Has-Cylinder-Thermostat>0 ['False']</Has-Cylinder-Thermostat>
+        <Is-Hot-Water-Separately-Timed>1 ['True']</Is-Hot-Water-Separately-Timed>
+        <Main-Heating-Details>
+          <Main-Heating>
+            <Main-Heating-Number>1</Main-Heating-Number>
+            <Main-Heating-Category>6 ['community heating system']</Main-Heating-Category>
+            <Main-Heating-Data-Source>3 ['from SAP table']</Main-Heating-Data-Source>
+            <Main-Heating-Code>301</Main-Heating-Code>
+            <Main-Fuel-Type>51 ['Community heating schemes: heat from mains gas']</Main-Fuel-Type>
+            <Main-Heating-Control>2307</Main-Heating-Control>
+            <Is-Central-Heating-Pump-In-Heated-Space>1 ['True']</Is-Central-Heating-Pump-In-Heated-Space>
+            <Is-Interlocked-System>1 ['True']</Is-Interlocked-System>
+            <Has-Separate-Delayed-Start>0 ['False']</Has-Separate-Delayed-Start>
+            <Main-Heating-Fraction>0.01</Main-Heating-Fraction>
+          </Main-Heating>
+        </Main-Heating-Details>
+        <Shower-Outlets>
+          <Shower-Outlet>
+            <Shower-Outlet-Type>1 ['Vented hot water system']</Shower-Outlet-Type>
+            <Shower-WWHRS>1 ['none']</Shower-WWHRS>
+          </Shower-Outlet>
+        </Shower-Outlets>
+        <Number-Baths>0</Number-Baths>
+        <Number-Baths-WWHRS>0</Number-Baths-WWHRS>
+      </SAP-Heating>
+      <SAP-Energy-Source>
+        <Electricity-Tariff>1 ['standard tariff']</Electricity-Tariff>
+      </SAP-Energy-Source>
+      <SAP-Building-Parts>
+        <SAP-Building-Part>
+          <Building-Part-Number>1</Building-Part-Number>
+          <SAP-Openings>
+            <SAP-Opening>
+              <Name>Door_0</Name>
+              <Type>Door_Type_0</Type>
+              <Location>Exposed_wall_building_part_1</Location>
+              <Orientation>5 ['South']</Orientation>
+              <Width>1</Width>
+              <Height>1.85</Height>
+            </SAP-Opening>
+            <SAP-Opening>
+              <Name>Opening_0</Name>
+              <Type>Opening_Type_0</Type>
+              <Location>Exposed_wall_building_part_1</Location>
+              <Orientation>8 ['North West']</Orientation>
+              <Width>1.16</Width>
+              <Height>1.58</Height>
+            </SAP-Opening>
+            <SAP-Opening>
+              <Name>Opening_1</Name>
+              <Type>Opening_Type_1</Type>
+              <Location>Exposed_wall_building_part_1</Location>
+              <Orientation>8 ['North West']</Orientation>
+              <Width>1.16</Width>
+              <Height>1.58</Height>
+            </SAP-Opening>
+            <SAP-Opening>
+              <Name>Opening_2</Name>
+              <Type>Opening_Type_2</Type>
+              <Location>Exposed_wall_building_part_1</Location>
+              <Orientation>8 ['North West']</Orientation>
+              <Width>1.16</Width>
+              <Height>1.58</Height>
+            </SAP-Opening>
+            <SAP-Opening>
+              <Name>Opening_3</Name>
+              <Type>Opening_Type_3</Type>
+              <Location>Exposed_wall_building_part_1</Location>
+              <Orientation>8 ['North West']</Orientation>
+              <Width>1.16</Width>
+              <Height>1.58</Height>
+            </SAP-Opening>
+            <SAP-Opening>
+              <Name>Opening_4</Name>
+              <Type>Opening_Type_4</Type>
+              <Location>Exposed_wall_building_part_1</Location>
+              <Orientation>8 ['North West']</Orientation>
+              <Width>1.16</Width>
+              <Height>1.58</Height>
+            </SAP-Opening>
+          </SAP-Openings>
+          <SAP-Roofs>
+            <SAP-Roof>
+              <Name>Exposed_roof_building_part_1</Name>
+              <Roof-Type>2 ['exposed roof']</Roof-Type>
+              <Total-Roof-Area>29.97</Total-Roof-Area>
+              <U-Value>0</U-Value>
+            </SAP-Roof>
+          </SAP-Roofs>
+          <SAP-Floor-Dimensions>
+            <SAP-Floor-Dimension>
+              <Storey>0 ['Ground']</Storey>
+              <Floor-Type>2 ['ground floor']</Floor-Type>
+              <Total-Floor-Area>29.97</Total-Floor-Area>
+              <Storey-Height>3.06</Storey-Height>
+              <Heat-Loss-Area>29.97</Heat-Loss-Area>
+              <U-Value>0.6274607568429446</U-Value>
+            </SAP-Floor-Dimension>
+          </SAP-Floor-Dimensions>
+          <SAP-Thermal-Bridges>
+            <Thermal-Bridge-Code>4 ['user defined (global y-value)']</Thermal-Bridge-Code>
+            <User-Defined-Y-Value>0.15</User-Defined-Y-Value>
+          </SAP-Thermal-Bridges>
+          <SAP-Walls>
+            <SAP-Wall>
+              <Name>Exposed_wall_building_part_1</Name>
+              <Wall-Type>2 ['exposed wall']</Wall-Type>
+              <Total-Wall-Area>33.2316</Total-Wall-Area>
+              <U-Value>1.7</U-Value>
+            </SAP-Wall>
+            <SAP-Wall>
+              <Name>Exposed_alternative_wall_1_building_part_1</Name>
+              <Wall-Type>2 ['exposed wall']</Wall-Type>
+              <Total-Wall-Area>16.616</Total-Wall-Area>
+              <U-Value>2.5</U-Value>
+            </SAP-Wall>
+          </SAP-Walls>
+        </SAP-Building-Part>
+      </SAP-Building-Parts>
+      <SAP-Opening-Types>
+        <SAP-Opening-Type>
+          <Name>Door_Type_0</Name>
+          <Data-Source>3 ['SAP table']</Data-Source>
+          <Type>1 ['solid door']</Type>
+          <U-Value>1.4</U-Value>
+        </SAP-Opening-Type>
+        <SAP-Opening-Type>
+          <Name>Opening_Type_0</Name>
+          <Data-Source>3 ['SAP table']</Data-Source>
+          <Type>4 ['window']</Type>
+          <Glazing-Type>13 ['secondary glazing']</Glazing-Type>
+          <IsArgonFilled>0 ['False']</IsArgonFilled>
+          <IsKryptonFilled>0 ['False']</IsKryptonFilled>
+          <Frame-Type>9 ['unknown']</Frame-Type>
+          <Solar-Transmittance>0.85</Solar-Transmittance>
+          <Frame-Factor>0.8</Frame-Factor>
+          <U-Value>2.9</U-Value>
+        </SAP-Opening-Type>
+        <SAP-Opening-Type>
+          <Name>Opening_Type_1</Name>
+          <Data-Source>3 ['SAP table']</Data-Source>
+          <Type>4 ['window']</Type>
+          <Glazing-Type>13 ['secondary glazing']</Glazing-Type>
+          <IsArgonFilled>0 ['False']</IsArgonFilled>
+          <IsKryptonFilled>0 ['False']</IsKryptonFilled>
+          <Frame-Type>9 ['unknown']</Frame-Type>
+          <Solar-Transmittance>0.85</Solar-Transmittance>
+          <Frame-Factor>0.8</Frame-Factor>
+          <U-Value>2.9</U-Value>
+        </SAP-Opening-Type>
+        <SAP-Opening-Type>
+          <Name>Opening_Type_2</Name>
+          <Data-Source>3 ['SAP table']</Data-Source>
+          <Type>4 ['window']</Type>
+          <Glazing-Type>13 ['secondary glazing']</Glazing-Type>
+          <IsArgonFilled>0 ['False']</IsArgonFilled>
+          <IsKryptonFilled>0 ['False']</IsKryptonFilled>
+          <Frame-Type>9 ['unknown']</Frame-Type>
+          <Solar-Transmittance>0.85</Solar-Transmittance>
+          <Frame-Factor>0.8</Frame-Factor>
+          <U-Value>2.9</U-Value>
+        </SAP-Opening-Type>
+        <SAP-Opening-Type>
+          <Name>Opening_Type_3</Name>
+          <Data-Source>3 ['SAP table']</Data-Source>
+          <Type>4 ['window']</Type>
+          <Glazing-Type>13 ['secondary glazing']</Glazing-Type>
+          <IsArgonFilled>0 ['False']</IsArgonFilled>
+          <IsKryptonFilled>0 ['False']</IsKryptonFilled>
+          <Frame-Type>9 ['unknown']</Frame-Type>
+          <Solar-Transmittance>0.85</Solar-Transmittance>
+          <Frame-Factor>0.8</Frame-Factor>
+          <U-Value>2.9</U-Value>
+        </SAP-Opening-Type>
+        <SAP-Opening-Type>
+          <Name>Opening_Type_4</Name>
+          <Data-Source>3 ['SAP table']</Data-Source>
+          <Type>4 ['window']</Type>
+          <Glazing-Type>13 ['secondary glazing']</Glazing-Type>
+          <IsArgonFilled>0 ['False']</IsArgonFilled>
+          <IsKryptonFilled>0 ['False']</IsKryptonFilled>
+          <Frame-Type>9 ['unknown']</Frame-Type>
+          <Solar-Transmittance>0.85</Solar-Transmittance>
+          <Frame-Factor>0.8</Frame-Factor>
+          <U-Value>2.9</U-Value>
+        </SAP-Opening-Type>
+      </SAP-Opening-Types>
+      <SAP-Ventilation>
+        <Closed-Flues-Count>0</Closed-Flues-Count>
+        <Open-Flues-Count>0</Open-Flues-Count>
+        <Boilers-Flues-Count>0</Boilers-Flues-Count>
+        <Other-Flues-Count>0</Other-Flues-Count>
+        <Open-Chimneys-Count>0</Open-Chimneys-Count>
+        <Blocked-Chimneys-Count>0</Blocked-Chimneys-Count>
+        <Flueless-Gas-Fires-Count>0</Flueless-Gas-Fires-Count>
+        <Pressure-Test>4 ['no test, SAP algorithm used (existing dwelling)']</Pressure-Test>
+        <Ground-Floor-Type>3 ['suspended timber, unsealed']</Ground-Floor-Type>
+        <Wall-Type>2 ['other']</Wall-Type>
+        <Has-Draught-Lobby>0 ['False']</Has-Draught-Lobby>
+        <DraughtStripping>0</DraughtStripping>
+        <Sheltered-Sides-Count>2</Sheltered-Sides-Count>
+        <Ventilation-Type>1 ['natural with intermittent extract fans']</Ventilation-Type>
+        <Extract-Fans-Count>0</Extract-Fans-Count>
+        <PSV-Count>0</PSV-Count>
+      </SAP-Ventilation>
+      <SAP-Lighting>
+        <Fixed-Lights>
+          <Fixed-Light>
+            <Lighting-Efficacy>11.2</Lighting-Efficacy>
+            <Lighting-Power>60</Lighting-Power>
+            <Lighting-Outlets>1</Lighting-Outlets>
+          </Fixed-Light>
+          <Fixed-Light>
+            <Lighting-Efficacy>55</Lighting-Efficacy>
+            <Lighting-Power>19</Lighting-Power>
+            <Lighting-Outlets>1</Lighting-Outlets>
+          </Fixed-Light>
+        </Fixed-Lights>
+      </SAP-Lighting>
+    </SAP-Property-Details>
+  </SAP10-Data>
+</SAP-Report>

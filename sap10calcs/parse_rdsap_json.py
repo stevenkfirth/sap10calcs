@@ -9,7 +9,8 @@ import copy
 
 
 def parse_rdsap_json(
-    input_file
+    input_file,
+    input_json = None
 ):
     """ Parses a RdSAP json file and returns an RdSAP XML file.
 
@@ -22,6 +23,8 @@ def parse_rdsap_json(
     """
 
     # load json
+    if not input_json is None:
+        j0 = input_json
     with open(input_file) as f:
         j0 = json.load(f)
     j = copy.deepcopy(j0)
@@ -70,6 +73,18 @@ def parse_rdsap_json(
                     j['data']['sap_windows'][sap_window_index]['window_width'] = j['data']['sap_windows'][sap_window_index]['window_width']['value']
         if 'sap_building_parts' in j['data']:
             for sap_building_part_index in range(len(j['data']['sap_building_parts'])):
+                if ('floor_area' in j['data']['sap_building_parts'][sap_building_part_index] 
+                    and isinstance(j['data']['sap_building_parts'][sap_building_part_index]['floor_area'], dict)):
+                    j['data']['sap_building_parts'][sap_building_part_index]['floor_area'] = \
+                        j['data']['sap_building_parts'][sap_building_part_index]['floor_area']['value']
+                if ('glazed_perimeter' in j['data']['sap_building_parts'][sap_building_part_index] 
+                    and isinstance(j['data']['sap_building_parts'][sap_building_part_index]['glazed_perimeter'], dict)):
+                    j['data']['sap_building_parts'][sap_building_part_index]['glazed_perimeter'] = \
+                        j['data']['sap_building_parts'][sap_building_part_index]['glazed_perimeter']['value']  
+                if 'sap_room_in_roof' in j['data']['sap_building_parts'][sap_building_part_index]: 
+                    if 'floor_area' in j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']:
+                        if isinstance(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['floor_area'], dict):
+                            j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['floor_area'] = j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['floor_area']['value']
                 if 'sap_floor_dimensions' in j['data']['sap_building_parts'][sap_building_part_index]:
                     for sap_floor_dimension_index in range(len(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'])):
                         if ('heat_loss_perimeter' in j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index] 
@@ -94,6 +109,10 @@ def parse_rdsap_json(
         if 'lighting_cost_potential' in j['data'] and isinstance(j['data']['lighting_cost_potential'], dict): j['data']['lighting_cost_potential'] = j['data']['lighting_cost_potential']['value']
         if 'hot_water_cost_current' in j['data'] and isinstance(j['data']['hot_water_cost_current'], dict): j['data']['hot_water_cost_current'] = j['data']['hot_water_cost_current']['value']
         if 'hot_water_cost_potential' in j['data'] and isinstance(j['data']['hot_water_cost_potential'], dict): j['data']['hot_water_cost_potential'] = j['data']['hot_water_cost_potential']['value']
+        if 'sap_flat_details' in j['data'] and 'unheated_corridor_length' in j['data']['sap_flat_details']:
+            if isinstance(j['data']['sap_flat_details']['unheated_corridor_length'], dict): 
+                j['data']['sap_flat_details']['unheated_corridor_length'] = j['data']['sap_flat_details']['unheated_corridor_length']['value']
+
     # - other
         if 'sap_energy_source' in j['data'] and 'photovoltaic_supply' in j['data']['sap_energy_source'] and isinstance(j['data']['sap_energy_source']['photovoltaic_supply'], list):
             j['data']['sap_energy_source']['photovoltaic_supply'] = {'pv_arrays': j['data']['sap_energy_source']['photovoltaic_supply']}
@@ -104,11 +123,15 @@ def parse_rdsap_json(
                         j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index] = j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index][0]
                     else:
                         raise Exception
+                if 'peak_power' in j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index]:
+                    if isinstance(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index]['peak_power'], dict):
+                        j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index]['peak_power'] = j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index]['peak_power']['value']
         if 'sap_energy_source' in j['data'] and 'pv_batteries' in j['data']['sap_energy_source']:
             for pv_battery_index in range(len(j['data']['sap_energy_source']['pv_batteries'])):
                 if not 'pv_battery' in j['data']['sap_energy_source']['pv_batteries'][pv_battery_index]:
                     j['data']['sap_energy_source']['pv_batteries'][pv_battery_index] = {'pv_battery': j['data']['sap_energy_source']['pv_batteries'][pv_battery_index]}
         
+
 
     # remove JSON values that don't parse to the RdSAP XML (no equivalent XML elements available)
     if 'error' in j['data']: del j['data']['error']
@@ -1086,7 +1109,9 @@ def parse_rdsap_json(
 
                                     # Main-Heating-Fraction
                                     try: 
-                                        main_heating.add_main_heating_fraction().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_fraction'))
+                                        main_heating_fraction = j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_fraction')
+        
+                                        main_heating.add_main_heating_fraction().code = str(float(main_heating_fraction)/100.0)
                                     except KeyError: pass
 
                                     # Emitter-Temperature
