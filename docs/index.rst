@@ -23,8 +23,8 @@ Author: `Steven Firth <https://www.stevenfirth.com/>`__
    saptutorials
    demos
    api
-   rdsap_schema_21_0_0
-   sap_schema_19_1_0
+   rdsap_schema_21_0_1
+   sap_schema_19_2_0
    testing
    developersnotes
 

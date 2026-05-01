@@ -1,0 +1,543 @@
+{
+    "data": {
+        "uprn": 1710025903,
+        "roofs": [
+            {
+                "description": "Pitched, insulated (assumed)",
+                "energy_efficiency_rating": 3,
+                "environmental_efficiency_rating": 3
+            },
+            {
+                "description": "Pitched, insulated",
+                "energy_efficiency_rating": 4,
+                "environmental_efficiency_rating": 4
+            }
+        ],
+        "walls": [
+            {
+                "description": "Cavity wall, filled cavity",
+                "energy_efficiency_rating": 4,
+                "environmental_efficiency_rating": 4
+            }
+        ],
+        "floors": [
+            {
+                "description": "Solid, no insulation (assumed)",
+                "energy_efficiency_rating": 0,
+                "environmental_efficiency_rating": 0
+            },
+            {
+                "description": "Solid, insulated (assumed)",
+                "energy_efficiency_rating": 0,
+                "environmental_efficiency_rating": 0
+            }
+        ],
+        "status": "entered",
+        "tenure": 1,
+        "window": {
+            "description": "Fully double glazed",
+            "energy_efficiency_rating": 3,
+            "environmental_efficiency_rating": 3
+        },
+        "addendum": {
+            "addendum_numbers": [
+                8,
+                16
+            ]
+        },
+        "lighting": {
+            "description": "Excellent lighting efficiency",
+            "energy_efficiency_rating": 5,
+            "environmental_efficiency_rating": 5
+        },
+        "postcode": "GU34 2SD",
+        "hot_water": {
+            "description": "From main system, plus solar",
+            "energy_efficiency_rating": 5,
+            "environmental_efficiency_rating": 5
+        },
+        "post_town": "ALTON",
+        "built_form": 1,
+        "created_at": "2026-02-05 15:46:55",
+        "door_count": 1,
+        "region_code": 16,
+        "report_type": 2,
+        "sap_heating": {
+            "number_baths": 1,
+            "cylinder_size": 2,
+            "shower_outlets": [
+                {
+                    "shower_wwhrs": 1,
+                    "shower_outlet_type": 1
+                },
+                {
+                    "shower_wwhrs": 1,
+                    "shower_outlet_type": 1
+                }
+            ],
+            "number_baths_wwhrs": 0,
+            "water_heating_code": 901,
+            "water_heating_fuel": 26,
+            "cylinder_thermostat": "Y",
+            "main_heating_details": [
+                {
+                    "has_fghrs": "N",
+                    "main_fuel_type": 26,
+                    "boiler_flue_type": 2,
+                    "fan_flue_present": "Y",
+                    "heat_emitter_type": 1,
+                    "emitter_temperature": 0,
+                    "main_heating_number": 1,
+                    "main_heating_control": 2106,
+                    "main_heating_category": 2,
+                    "main_heating_fraction": 1,
+                    "central_heating_pump_age": 0,
+                    "main_heating_data_source": 1,
+                    "main_heating_index_number": 17498
+                }
+            ],
+            "immersion_heating_type": "NA",
+            "cylinder_insulation_type": 1,
+            "has_fixed_air_conditioning": "false",
+            "solar_water_heating_details": {
+                "shower_types": 1,
+                "solar_water_pump": 1,
+                "service_provision": 3,
+                "is_community_solar": "false",
+                "store_volume_details_known": "N",
+                "solar_panel_collector_pitch": 2,
+                "solar_panel_collector_data_source": 1,
+                "solar_panel_collector_orientation": 6,
+                "solar_panel_collector_overshading": 2
+            },
+            "cylinder_insulation_thickness": 50
+        },
+        "sap_version": 10.2,
+        "sap_windows": [
+            {
+                "pvc_frame": "true",
+                "orientation": 8,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 2.16,
+                "window_height": 2.08,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 8,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 2.04,
+                "window_height": 0.96,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 8,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 0.88,
+                "window_height": 0.69,
+                "draught_proofed": "true",
+                "window_location": 1,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 8,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 0.88,
+                "window_height": 0.69,
+                "draught_proofed": "true",
+                "window_location": 1,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 6,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 2.75,
+                "window_height": 2.02,
+                "draught_proofed": "true",
+                "window_location": 1,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 3,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 1.6,
+                "window_height": 0.99,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 4,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 1.59,
+                "window_height": 1.05,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 2,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 1.59,
+                "window_height": 1.05,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 4,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 1.27,
+                "window_height": 1.06,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 4,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 1.27,
+                "window_height": 2.05,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 4,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 1.25,
+                "window_height": 1.02,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 8,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 2.06,
+                "window_height": 1.28,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            },
+            {
+                "pvc_frame": "true",
+                "orientation": 8,
+                "window_type": 1,
+                "glazing_type": 2,
+                "window_width": 2.06,
+                "window_height": 1.28,
+                "draught_proofed": "true",
+                "window_location": 0,
+                "window_wall_type": 1,
+                "permanent_shutters_present": "N",
+                "permanent_shutters_insulated": "N"
+            }
+        ],
+        "schema_type": "RdSAP-Schema-21.0.1",
+        "uprn_source": "Energy Assessor",
+        "country_code": "ENG",
+        "main_heating": [
+            {
+                "description": "Boiler and radiators, mains gas",
+                "energy_efficiency_rating": 4,
+                "environmental_efficiency_rating": 4
+            }
+        ],
+        "air_tightness": {
+            "description": "(not tested)",
+            "energy_efficiency_rating": 0,
+            "environmental_efficiency_rating": 0
+        },
+        "dwelling_type": "Detached house",
+        "language_code": 1,
+        "pressure_test": 4,
+        "property_type": 0,
+        "address_line_1": "27 Curtis Road",
+        "assessment_type": "RdSAP",
+        "completion_date": "2026-02-05",
+        "inspection_date": "2025-08-05",
+        "extensions_count": 1,
+        "measurement_type": 1,
+        "total_floor_area": 172,
+        "transaction_type": 1,
+        "conservatory_type": 1,
+        "heated_room_count": 8,
+        "registration_date": "2026-02-05",
+        "sap_energy_source": {
+            "mains_gas": "Y",
+            "meter_type": 2,
+            "pv_batteries": [
+                {
+                    "battery_capacity": 5
+                },
+                {
+                    "battery_capacity": 4.9
+                }
+            ],
+            "pv_connection": 2,
+            "pv_battery_count": 2,
+            "photovoltaic_supply": [
+                [
+                    {
+                        "pitch": 3,
+                        "peak_power": 2.4,
+                        "orientation": 4,
+                        "overshading": 1
+                    }
+                ],
+                [
+                    {
+                        "pitch": 3,
+                        "peak_power": 3.2,
+                        "orientation": 8,
+                        "overshading": 1
+                    }
+                ]
+            ],
+            "wind_turbines_count": 0,
+            "gas_smart_meter_present": "true",
+            "is_dwelling_export_capable": "true",
+            "wind_turbines_terrain_type": 2,
+            "electricity_smart_meter_present": "true"
+        },
+        "secondary_heating": {
+            "description": "None",
+            "energy_efficiency_rating": 0,
+            "environmental_efficiency_rating": 0
+        },
+        "lzc_energy_sources": [
+            10,
+            11
+        ],
+        "sap_building_parts": [
+            {
+                "identifier": "Main Dwelling",
+                "wall_dry_lined": "N",
+                "wall_thickness": 300,
+                "floor_heat_loss": 7,
+                "roof_construction": 5,
+                "wall_construction": 4,
+                "building_part_number": 1,
+                "sap_floor_dimensions": [
+                    {
+                        "floor": 0,
+                        "room_height": {
+                            "value": 2.4,
+                            "quantity": "metres"
+                        },
+                        "floor_insulation": 1,
+                        "total_floor_area": {
+                            "value": 85,
+                            "quantity": "square metres"
+                        },
+                        "party_wall_length": {
+                            "value": 0,
+                            "quantity": "metres"
+                        },
+                        "floor_construction": 1,
+                        "heat_loss_perimeter": {
+                            "value": 36.73,
+                            "quantity": "metres"
+                        }
+                    },
+                    {
+                        "floor": 1,
+                        "room_height": {
+                            "value": 2.4,
+                            "quantity": "metres"
+                        },
+                        "total_floor_area": {
+                            "value": 73.01,
+                            "quantity": "square metres"
+                        },
+                        "party_wall_length": {
+                            "value": 0,
+                            "quantity": "metres"
+                        },
+                        "heat_loss_perimeter": {
+                            "value": 34.18,
+                            "quantity": "metres"
+                        }
+                    }
+                ],
+                "wall_insulation_type": 2,
+                "construction_age_band": "E",
+                "party_wall_construction": "NA",
+                "wall_thickness_measured": "Y",
+                "roof_insulation_location": 4,
+                "roof_insulation_thickness": "ND",
+                "wall_insulation_thickness": "NI",
+                "floor_insulation_thickness": "NI"
+            },
+            {
+                "identifier": "Extension 1",
+                "wall_dry_lined": "N",
+                "wall_thickness": 300,
+                "floor_heat_loss": 7,
+                "roof_construction": 8,
+                "wall_construction": 4,
+                "building_part_number": 2,
+                "sap_floor_dimensions": [
+                    {
+                        "floor": 0,
+                        "room_height": {
+                            "value": 2,
+                            "quantity": "metres"
+                        },
+                        "floor_insulation": 1,
+                        "total_floor_area": {
+                            "value": 14.46,
+                            "quantity": "square metres"
+                        },
+                        "party_wall_length": {
+                            "value": 0,
+                            "quantity": "metres"
+                        },
+                        "floor_construction": 1,
+                        "heat_loss_perimeter": {
+                            "value": 11.52,
+                            "quantity": "metres"
+                        }
+                    }
+                ],
+                "wall_insulation_type": 4,
+                "construction_age_band": "L",
+                "party_wall_construction": "NA",
+                "wall_thickness_measured": "Y",
+                "roof_insulation_location": 7,
+                "wall_insulation_thickness": "NI",
+                "floor_insulation_thickness": "NI",
+                "sloping_ceiling_insulation_thickness": "AB"
+            }
+        ],
+        "solar_water_heating": "Y",
+        "habitable_room_count": 8,
+        "heating_cost_current": {
+            "value": 1437,
+            "currency": "GBP"
+        },
+        "insulated_door_count": 0,
+        "co2_emissions_current": 4.3,
+        "energy_rating_average": 60,
+        "energy_rating_current": 86,
+        "lighting_cost_current": {
+            "value": 80,
+            "currency": "GBP"
+        },
+        "main_heating_controls": [
+            {
+                "description": "Programmer, room thermostat and TRVs",
+                "energy_efficiency_rating": 4,
+                "environmental_efficiency_rating": 4
+            }
+        ],
+        "has_hot_water_cylinder": "true",
+        "heating_cost_potential": {
+            "value": 1334,
+            "currency": "GBP"
+        },
+        "hot_water_cost_current": {
+            "value": 212,
+            "currency": "GBP"
+        },
+        "mechanical_ventilation": 0,
+        "percent_draughtproofed": 100,
+        "suggested_improvements": [
+            {
+                "sequence": 1,
+                "typical_saving": {
+                    "value": 102,
+                    "currency": "GBP"
+                },
+                "indicative_cost": "\u00a35,000 - \u00a310,000",
+                "improvement_type": "W2",
+                "improvement_details": {
+                    "improvement_number": 58
+                },
+                "improvement_category": 5,
+                "energy_performance_rating": 88,
+                "environmental_impact_rating": 75
+            }
+        ],
+        "co2_emissions_potential": 4.0,
+        "energy_rating_potential": 88,
+        "lighting_cost_potential": {
+            "value": 80,
+            "currency": "GBP"
+        },
+        "schema_version_original": "21.0.1",
+        "hot_water_cost_potential": {
+            "value": 212,
+            "currency": "GBP"
+        },
+        "renewable_heat_incentive": {
+            "water_heating": 2463.93,
+            "space_heating_existing_dwelling": 17356.78
+        },
+        "draughtproofed_door_count": 1,
+        "energy_consumption_current": 124,
+        "has_fixed_air_conditioning": "false",
+        "multiple_glazed_proportion": 100,
+        "calculation_software_version": "5.02r0332",
+        "energy_consumption_potential": 113,
+        "environmental_impact_current": 73,
+        "current_energy_efficiency_band": "B",
+        "environmental_impact_potential": 75,
+        "led_fixed_lighting_bulbs_count": 28,
+        "has_heated_separate_conservatory": "false",
+        "potential_energy_efficiency_band": "B",
+        "co2_emissions_current_per_floor_area": 25,
+        "incandescent_fixed_lighting_bulbs_count": 0
+    }
+}

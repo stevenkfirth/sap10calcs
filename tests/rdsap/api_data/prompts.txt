@@ -1,0 +1,9 @@
+
+
+--- local testing ---
+--- launch local browser
+[ANACONDA PROMPT]
+cd "C:\Users\cvskf\OneDrive - Loughborough University\_Git\stevenkfirth\sap10_heroku"
+conda activate sap10_heroku
+set DATABASE_URL=postgresql://postgres:postgres@localhost:5432
+uvicorn app.main:app --reload

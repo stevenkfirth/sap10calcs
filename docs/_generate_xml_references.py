@@ -4,7 +4,7 @@
 
 print('START')
 
-from sap10calcs import classes_SAP_Schema_19_1_0, classes_RdSAP_Schema_21_0_0
+from sap10calcs import classes_SAP_Schema_19_2_0, classes_RdSAP_Schema_21_0_1
 import datetime
 
 def write_subclass(f, kls):
@@ -77,18 +77,18 @@ def write_class(f, kls):
 
 
 
-with open('sap_schema_19_1_0.rst', 'w') as f:
+with open('sap_schema_19_2_0.rst', 'w') as f:
 
     f.write('.. _sap_xml_reference:\n\n')
 
     f.write('SAP XML reference\n')
     f.write('=================\n\n')
 
-    f.write('This page contains the documentation for the XML schema `SAP-Schema-19.1.0 <https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.1.0/SAP>`__.\n\n')
+    f.write('This page contains the documentation for the XML schema `SAP-Schema-19.2.0 <https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.2.0/SAP>`__.\n\n')
     f.write('This XML schema describes the format of the XML input files for SAP 10.2 calculations.\n\n')
     f.write('The root XML element can be either a :ref:`SAP-Compliance-Report` or a :ref:`SAP-Compliance-Report/SAP-Report` element.\n\n')
     
-    SAP_Compliance_Report = classes_SAP_Schema_19_1_0.SAP_Compliance_Report
+    SAP_Compliance_Report = classes_SAP_Schema_19_2_0.SAP_Compliance_Report
     SAP_Compliance_Report._parent_class = None
     SAP_Compliance_Report._expanded_name = SAP_Compliance_Report.element_name
     
@@ -96,18 +96,18 @@ with open('sap_schema_19_1_0.rst', 'w') as f:
     write_subclass(f, SAP_Compliance_Report)
 
 
-with open('rdsap_schema_21_0_0.rst', 'w') as f:
+with open('rdsap_schema_21_0_1.rst', 'w') as f:
 
     f.write('.. _rdsap_xml_reference:\n\n')
 
     f.write('RdSAP XML reference\n')
     f.write('===================\n\n')
 
-    f.write('This page contains the documentation for the XML schema `RdSAP-Schema-21.0.0 <https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/RdSAP-Schema-21.0.0/RdSAP>`__.\n\n')
+    f.write('This page contains the documentation for the XML schema `RdSAP-Schema-21.0.1 <https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/RdSAP-Schema-21.0.1/RdSAP>`__.\n\n')
     f.write('This XML schema describes the format of the XML input files for RdSAP 10 calculations.\n\n')
     f.write('The root XML element is a :ref:`RdSAP-Report` element.\n\n')
     
-    RdSAP_Report = classes_RdSAP_Schema_21_0_0.RdSAP_Report
+    RdSAP_Report = classes_RdSAP_Schema_21_0_1.RdSAP_Report
     RdSAP_Report._parent_class = None
     RdSAP_Report._expanded_name = RdSAP_Report.element_name
     RdSAP_Report._ref = f'#{RdSAP_Report.element_name.lower()}'

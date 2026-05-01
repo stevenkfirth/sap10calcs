@@ -3,7 +3,7 @@
 RdSAP XML reference
 ===================
 
-This page contains the documentation for the XML schema `RdSAP-Schema-21.0.0 <https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/RdSAP-Schema-21.0.0/RdSAP>`__.
+This page contains the documentation for the XML schema `RdSAP-Schema-21.0.1 <https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/RdSAP-Schema-21.0.1/RdSAP>`__.
 
 This XML schema describes the format of the XML input files for RdSAP 10 calculations.
 
@@ -1675,8 +1675,12 @@ Addendum-Number
     - **"10"** - *10. Dual electricity meter selected but there is also an electricity meter for standard tariff*
     - **"11"** - *11. Single electricity meter selected but there is also an electricity meter for an off-peak tariff*
     - **"12"** - *12. Dwelling is using a biomass fuel that is not in the RdSAP fuel options*
-    - **"13"** - *13. Park Home*
-    - **"14"** - *14. Dwelling has a special energy saving feature*
+    - **"13"** - *13. Dwelling has a special energy saving feature*
+    - **"14"** - *14. Conservation area*
+    - **"15"** - *15. PV recommended*
+    - **"16"** - *16. PV-independent battery storage present*
+    - **"17"** - *17. 'Phase changing' heat storage present*
+    - **"18"** - *18. Party wall insulation*
 - Minimum occurrence: *0*
 - Maximum occurrence: *unbounded*
 
@@ -3158,6 +3162,7 @@ Secondary-Fuel-Type
     - **"35"** - *biodiesel from used cooking oil only*
     - **"36"** - *biodiesel from vegetable oil only (not community)*
     - **"37"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"38"** - *Gas: bottled LPG (for secondary heating)*
     - **"51"** - *biogas (not community)*
     - **"56"** - *heat from boilers that can use mineral oil or biodiesel (community)*
     - **"57"** - *heat from boilers using biodiesel from any biomass source (community)*
@@ -3215,6 +3220,7 @@ Water-Heating-Fuel
     - **"35"** - *biodiesel from used cooking oil only*
     - **"36"** - *biodiesel from vegetable oil only (not community)*
     - **"37"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"38"** - *Gas: bottled LPG (for secondary heating)*
     - **"51"** - *biogas (not community)*
     - **"56"** - *heat from boilers that can use mineral oil or biodiesel (community)*
     - **"57"** - *heat from boilers using biodiesel from any biomass source (community)*
@@ -3504,6 +3510,7 @@ Main-Fuel-Type
     - **"35"** - *biodiesel from used cooking oil only*
     - **"36"** - *biodiesel from vegetable oil only (not community)*
     - **"37"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"38"** - *Gas: bottled LPG (for secondary heating)*
     - **"51"** - *biogas (not community)*
     - **"56"** - *heat from boilers that can use mineral oil or biodiesel (community)*
     - **"57"** - *heat from boilers using biodiesel from any biomass source (community)*
@@ -4990,7 +4997,7 @@ PV-Battery
 - Child elements: <:ref:`RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source/PV-Batteries/PV-Battery/Battery-Capacity`>
 - Has text value: *False*
 - Minimum occurrence: *1*
-- Maximum occurrence: *20*
+- Maximum occurrence: *4*
 
 .. _RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Energy-Source/PV-Batteries/PV-Battery/Battery-Capacity:
 
@@ -5197,7 +5204,7 @@ Construction-Age-Band
     - **"J"** - *England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable*
     - **"K"** - *England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013*
     - **"L"** - *England and Wales: 2012-2021; Scotland: 2012-2022; Northern Ireland: 2014 onwards*
-    - **"M"** - *England and Wales: 2022 onwards; Scotland: 2023 onwards (TBA); Northern Ireland: 2014 onwards (TBA)*
+    - **"M"** - *England and Wales: 2022 onwards; Scotland: 2024 onwards; Northern Ireland: 2023 onwards*
     - **"0"** - *Not applicable*
     - **"NR"** - *Not recorded*
 - Minimum occurrence: *1*
@@ -5797,7 +5804,7 @@ Construction-Age-Band
     - **"J"** - *England and Wales: 2003-2006; Scotland: 2003-2007; Northern Ireland: not applicable*
     - **"K"** - *England and Wales: 2007-2011; Scotland: 2008-2011; Northern Ireland: 2007-2013*
     - **"L"** - *England and Wales: 2012-2021; Scotland: 2012-2022; Northern Ireland: 2014 onwards*
-    - **"M"** - *England and Wales: 2022 onwards; Scotland: 2023 onwards (TBA); Northern Ireland: 2014 onwards (TBA)*
+    - **"M"** - *England and Wales: 2022 onwards; Scotland: 2024 onwards; Northern Ireland: 2023 onwards*
     - **"0"** - *Not applicable*
     - **"NR"** - *Not recorded*
 - Minimum occurrence: *1*
@@ -5869,6 +5876,7 @@ Flat-Ceiling-Insulation-Thickness-1
 - Parent element: <:ref:`RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details`>
 - Has text value: *True*
 - Codes:
+    - **"AB"** - *as built*
     - **"NI"** - *unknown*
     - **"0"** - *None*
     - **"12mm"** - *12mm*
@@ -5980,6 +5988,7 @@ Flat-Ceiling-Insulation-Thickness-2
 - Parent element: <:ref:`RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details`>
 - Has text value: *True*
 - Codes:
+    - **"AB"** - *as built*
     - **"NI"** - *unknown*
     - **"0"** - *None*
     - **"12mm"** - *12mm*
@@ -6091,6 +6100,7 @@ Stud-Wall-Insulation-Thickness-1
 - Parent element: <:ref:`RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details`>
 - Has text value: *True*
 - Codes:
+    - **"AB"** - *as built*
     - **"NI"** - *unknown*
     - **"0"** - *None*
     - **"12mm"** - *12mm*
@@ -6180,6 +6190,7 @@ Stud-Wall-Insulation-Thickness-2
 - Parent element: <:ref:`RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details`>
 - Has text value: *True*
 - Codes:
+    - **"AB"** - *as built*
     - **"NI"** - *unknown*
     - **"0"** - *None*
     - **"12mm"** - *12mm*
@@ -6269,6 +6280,7 @@ Slope-Insulation-Thickness-1
 - Parent element: <:ref:`RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details`>
 - Has text value: *True*
 - Codes:
+    - **"AB"** - *as built*
     - **"NI"** - *unknown*
     - **"0"** - *None*
     - **"12mm"** - *12mm*
@@ -6358,6 +6370,7 @@ Slope-Insulation-Thickness-2
 - Parent element: <:ref:`RdSAP-Report/SAP-Data/SAP-Property-Details/SAP-Building-Parts/SAP-Building-Part/SAP-Room-In-Roof/Room-In-Roof-Details`>
 - Has text value: *True*
 - Codes:
+    - **"AB"** - *as built*
     - **"NI"** - *unknown*
     - **"0"** - *None*
     - **"12mm"** - *12mm*
@@ -7502,6 +7515,7 @@ Glazing-Type
     - **"12"** - *secondary glazing, low emissivity*
     - **"13"** - *double glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI*
     - **"14"** - *triple glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI*
+    - **"15"** - *single glazing, known data*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -8011,6 +8025,7 @@ Saved-Or-Generated-Fuel
     - **"35"** - *biodiesel from used cooking oil only*
     - **"36"** - *biodiesel from vegetable oil only (not community)*
     - **"37"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"38"** - *Gas: bottled LPG (for secondary heating)*
     - **"51"** - *biogas (not community)*
     - **"56"** - *heat from boilers that can use mineral oil or biodiesel (community)*
     - **"57"** - *heat from boilers using biodiesel from any biomass source (community)*
@@ -8082,6 +8097,7 @@ Energy-Used-Fuel
     - **"35"** - *biodiesel from used cooking oil only*
     - **"36"** - *biodiesel from vegetable oil only (not community)*
     - **"37"** - *appliances able to use mineral oil or liquid biofuel*
+    - **"38"** - *Gas: bottled LPG (for secondary heating)*
     - **"51"** - *biogas (not community)*
     - **"56"** - *heat from boilers that can use mineral oil or biodiesel (community)*
     - **"57"** - *heat from boilers using biodiesel from any biomass source (community)*

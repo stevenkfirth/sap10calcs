@@ -3,7 +3,7 @@
 SAP XML reference
 =================
 
-This page contains the documentation for the XML schema `SAP-Schema-19.1.0 <https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.1.0/SAP>`__.
+This page contains the documentation for the XML schema `SAP-Schema-19.2.0 <https://github.com/communitiesuk/epb-register-api/tree/master/api/schemas/xml/SAP-Schema-19.2.0/SAP>`__.
 
 This XML schema describes the format of the XML input files for SAP 10.2 calculations.
 
@@ -82,6 +82,7 @@ SAP-Version
     - **"9.91"** - *SAP version 9.91, dated Jan 2012*
     - **"9.92"** - *SAP version 9.92, dated Oct 2013*
     - **"10.2"** - *SAP version 10.2, dated Oct 2020*
+    - **"10.3"** - *SAP version 10.3, dated Sep 2025*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -104,6 +105,7 @@ SAP-Data-Version
     - **"9.91"** - *SAP version 9.91, dated Jan 2012*
     - **"9.92"** - *SAP version 9.92, dated Oct 2013*
     - **"10.2"** - *SAP version 10.2, dated Oct 2020*
+    - **"10.3"** - *SAP version 10.3, dated Sep 2025*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
 
@@ -3285,7 +3287,7 @@ SAP-Property-Details
 
 - Documentation2: *Various measurements a particular Property.*
 - Parent element: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data`>
-- Child elements: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Property-Type`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Built-Form`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Living-Area`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Lowest-Storey-Area`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Orientation`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Conservatory-Type`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Terrain-Type`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Has-Special-Feature`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Special-Feature-Description`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Saved-Or-Generated`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Saved-Or-Generated-Fuel`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used-Fuel`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-In-Smoke-Control-Area`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Windows-Overshading`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Thermal-Mass-Parameter`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Additional-Allowable-Electricity-Generation`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Gas-Smart-Meter-Present`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Electricity-Smart-Meter-Present`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Dwelling-Export-Capable`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Connection`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Diverter`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Battery-Capacity`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Wind-Turbine-Connected-To-Dwelling-Meter`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Design-Water-Use`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling`>
+- Child elements: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Property-Type`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Built-Form`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Living-Area`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Lowest-Storey-Area`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Orientation`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Conservatory-Type`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Terrain-Type`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Has-Special-Feature`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Special-Feature-Description`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Saved-Or-Generated`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Saved-Or-Generated-Fuel`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Energy-Used-Fuel`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-In-Smoke-Control-Area`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Part-O-Cooling-Required`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Windows-Overshading`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Thermal-Mass-Parameter`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Additional-Allowable-Electricity-Generation`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Gas-Smart-Meter-Present`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Electricity-Smart-Meter-Present`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Dwelling-Export-Capable`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Connection`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/PV-Diverter`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Battery-Capacity`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Is-Wind-Turbine-Connected-To-Dwelling-Meter`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Energy-Source`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Building-Parts`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Opening-Types`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Ventilation`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Lighting`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Deselected-Improvements`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Flat-Details`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Special-Features`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Design-Water-Use`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Cooling`>
 - Has text value: *False*
 - Minimum occurrence: *1*
 - Maximum occurrence: *1*
@@ -3476,8 +3478,9 @@ Saved-Or-Generated-Fuel
 - Codes:
     - **"1"** - *Gas: mains gas*
     - **"2"** - *Gas: bulk LPG*
-    - **"3"** - *Gas: bottled LPG*
+    - **"3"** - *Gas: bottled LPG (for main heating)*
     - **"4"** - *Oil: heating oil*
+    - **"5"** - *Gas: bottled LPG (for secondary heating)*
     - **"7"** - *Gas: biogas*
     - **"8"** - *LNG*
     - **"9"** - *LPG subject to Special Condition 18*
@@ -3547,8 +3550,9 @@ Energy-Used-Fuel
 - Codes:
     - **"1"** - *Gas: mains gas*
     - **"2"** - *Gas: bulk LPG*
-    - **"3"** - *Gas: bottled LPG*
+    - **"3"** - *Gas: bottled LPG (for main heating)*
     - **"4"** - *Oil: heating oil*
+    - **"5"** - *Gas: bottled LPG (for secondary heating)*
     - **"7"** - *Gas: biogas*
     - **"8"** - *LNG*
     - **"9"** - *LPG subject to Special Condition 18*
@@ -3606,6 +3610,24 @@ Is-In-Smoke-Control-Area
     - **"true"** - **
     - **"unknown"** - **
 - Minimum occurrence: *1*
+- Maximum occurrence: *1*
+
+.. _SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Part-O-Cooling-Required:
+
+Part-O-Cooling-Required
+-----------------------
+
+<:ref:`SAP-Compliance-Report`>/<:ref:`SAP-Compliance-Report/SAP-Report`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Part-O-Cooling-Required`>/
+
+- Documentation: *Has a Part O analysis indicating that active cooling is required in the dwelling? Default is 'no'.*
+- Parent element: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`>
+- Has text value: *True*
+- Codes:
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
+- Minimum occurrence: *0*
 - Maximum occurrence: *1*
 
 .. _SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/Cold-Water-Source:
@@ -3828,8 +3850,9 @@ Water-Fuel-Type
 - Codes:
     - **"1"** - *Gas: mains gas*
     - **"2"** - *Gas: bulk LPG*
-    - **"3"** - *Gas: bottled LPG*
+    - **"3"** - *Gas: bottled LPG (for main heating)*
     - **"4"** - *Oil: heating oil*
+    - **"5"** - *Gas: bottled LPG (for secondary heating)*
     - **"7"** - *Gas: biogas*
     - **"8"** - *LNG*
     - **"9"** - *LPG subject to Special Condition 18*
@@ -3990,8 +4013,9 @@ Secondary-Fuel-Type
 - Codes:
     - **"1"** - *Gas: mains gas*
     - **"2"** - *Gas: bulk LPG*
-    - **"3"** - *Gas: bottled LPG*
+    - **"3"** - *Gas: bottled LPG (for main heating)*
     - **"4"** - *Oil: heating oil*
+    - **"5"** - *Gas: bottled LPG (for secondary heating)*
     - **"7"** - *Gas: biogas*
     - **"8"** - *LNG*
     - **"9"** - *LPG subject to Special Condition 18*
@@ -4473,7 +4497,7 @@ SAP-Community-Heating-System
 
 - Documentation2: *Details of a community system which heats the Main Building.*
 - Parent element: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems`>
-- Child elements: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Name`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-CO2-Emission-Factor`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Primary-Energy-Factor`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Use`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-Community-Heating-Cylinder-In-Dwelling`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-HIU-In-Dwelling`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/HIU-Index-Number`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Type`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Loss-Factor`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Charging-Linked-To-Heat-Use`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Index-Number`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Sub-Network-Name`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Existing`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Assessed-As-New`>
+- Child elements: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Name`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-CO2-Emission-Factor`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Primary-Energy-Factor`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Use`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-Community-Heating-Cylinder-In-Dwelling`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Is-HIU-In-Dwelling`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/HIU-Index-Number`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Type`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heat-Sources`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Community-Heating-Distribution-Loss-Factor`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Charging-Linked-To-Heat-Use`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Index-Number`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Sub-Network-Name`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Existing`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Sleeved`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Community-Heating`> <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Assessed-As-New`>
 - Has text value: *False*
 - Minimum occurrence: *1*
 - Maximum occurrence: *2*
@@ -4677,8 +4701,9 @@ Fuel-Type
 - Codes:
     - **"1"** - *Gas: mains gas*
     - **"2"** - *Gas: bulk LPG*
-    - **"3"** - *Gas: bottled LPG*
+    - **"3"** - *Gas: bottled LPG (for main heating)*
     - **"4"** - *Oil: heating oil*
+    - **"5"** - *Gas: bottled LPG (for secondary heating)*
     - **"7"** - *Gas: biogas*
     - **"8"** - *LNG*
     - **"9"** - *LPG subject to Special Condition 18*
@@ -4866,6 +4891,42 @@ Heat-Network-Existing
 <:ref:`SAP-Compliance-Report`>/<:ref:`SAP-Compliance-Report/SAP-Report`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Existing`>/
 
 - Documentation: *Whether the heat network is existing or new.*
+- Parent element: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`>
+- Has text value: *True*
+- Codes:
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
+- Minimum occurrence: *0*
+- Maximum occurrence: *1*
+
+.. _SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Sleeved:
+
+Heat-Network-Sleeved
+--------------------
+
+<:ref:`SAP-Compliance-Report`>/<:ref:`SAP-Compliance-Report/SAP-Report`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Sleeved`>/
+
+- Documentation: *Whether the heat network is sleeved.*
+- Parent element: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`>
+- Has text value: *True*
+- Codes:
+    - **"true"** - *True*
+    - **"1"** - *True*
+    - **"false"** - *False*
+    - **"0"** - *False*
+- Minimum occurrence: *0*
+- Maximum occurrence: *1*
+
+.. _SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Community-Heating:
+
+Heat-Network-Community-Heating
+------------------------------
+
+<:ref:`SAP-Compliance-Report`>/<:ref:`SAP-Compliance-Report/SAP-Report`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`>/<:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System/Heat-Network-Community-Heating`>/
+
+- Documentation: *Whether the heat network is defined as community heating.*
 - Parent element: <:ref:`SAP-Compliance-Report/SAP-Report/SAP10-Data/SAP-Property-Details/SAP-Heating/SAP-Community-Heating-Systems/SAP-Community-Heating-System`>
 - Has text value: *True*
 - Codes:
@@ -5204,8 +5265,9 @@ Main-Fuel-Type
 - Codes:
     - **"1"** - *Gas: mains gas*
     - **"2"** - *Gas: bulk LPG*
-    - **"3"** - *Gas: bottled LPG*
+    - **"3"** - *Gas: bottled LPG (for main heating)*
     - **"4"** - *Oil: heating oil*
+    - **"5"** - *Gas: bottled LPG (for secondary heating)*
     - **"7"** - *Gas: biogas*
     - **"8"** - *LNG*
     - **"9"** - *LPG subject to Special Condition 18*
@@ -9448,8 +9510,9 @@ Saved-Or-Generated-Fuel
 - Codes:
     - **"1"** - *Gas: mains gas*
     - **"2"** - *Gas: bulk LPG*
-    - **"3"** - *Gas: bottled LPG*
+    - **"3"** - *Gas: bottled LPG (for main heating)*
     - **"4"** - *Oil: heating oil*
+    - **"5"** - *Gas: bottled LPG (for secondary heating)*
     - **"7"** - *Gas: biogas*
     - **"8"** - *LNG*
     - **"9"** - *LPG subject to Special Condition 18*
@@ -9518,8 +9581,9 @@ Energy-Used-Fuel
 - Codes:
     - **"1"** - *Gas: mains gas*
     - **"2"** - *Gas: bulk LPG*
-    - **"3"** - *Gas: bottled LPG*
+    - **"3"** - *Gas: bottled LPG (for main heating)*
     - **"4"** - *Oil: heating oil*
+    - **"5"** - *Gas: bottled LPG (for secondary heating)*
     - **"7"** - *Gas: biogas*
     - **"8"** - *LNG*
     - **"9"** - *LPG subject to Special Condition 18*
@@ -9776,7 +9840,7 @@ PDF
 - Documentation: *DEPRECATED - DO NOT USE This element is allowed for backwards-compatibility but any data sent here will not be read, processed or stored by the register.*
 - Parent element: <:ref:`SAP-Compliance-Report/SAP-Report`>
 - Has text value: *True*
-- Data type: *<function b64encode at 0x000001EE417E0680>*
+- Data type: *<function b64encode at 0x0000015AA38C8C20>*
 - Minimum occurrence: *0*
 - Maximum occurrence: *1*
 

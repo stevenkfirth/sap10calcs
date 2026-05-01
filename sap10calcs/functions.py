@@ -5,7 +5,11 @@ from lxml import etree
 from io import StringIO, BytesIO
 import json
 
-from .instances import SAP_Schema_19_1_0_parser
+# TO BE REMOVED
+from .parse_rdsap_json import parse_rdsap_json
+
+
+from .instances import SAP_Schema_19_2_0_parser
 from .instances import RdSAP_Schema_21_0_0_parser
 
 
@@ -140,7 +144,7 @@ def create_sap_report_xml():
 
     tree = etree.parse(
         StringIO(xml),
-        parser = SAP_Schema_19_1_0_parser
+        parser = SAP_Schema_19_2_0_parser
         )
     
     root = tree.getroot() 
@@ -174,6 +178,9 @@ def create_rdsap_report_xml():
     
     return tree, root
     
+#def parse_rdsap_json():
+    # TO BE ADDED
+
     
 def parse_rdsap_xml(
         input_file
@@ -206,13 +213,13 @@ def parse_xml(
     See also: :ref:`editing_an_existing_sap_xml_file`.
     
     :returns: A two-item tuple containing an `lxml ElementTree <https://lxml.de/tutorial.html>`__ and the root node of the XML file (a a `SAP-Report <https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#sap-report>`__ element or a `SAP-Compliance-Report <https://stevenkfirth.github.io/sap10calcs/sap_schema_19_1_0.html#sap-compliance-report>`__ element).
-    :rtype: (`lxml.etree.ElementTree <https://lxml.de/tutorial.html#the-elementtree-class>`__, :py:class:`sap10calcs.classes_RdSAP_Schema_21_0_0.RdSAP_Report` or :py:class:`sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report`)
+    :rtype: (`lxml.etree.ElementTree <https://lxml.de/tutorial.html#the-elementtree-class>`__, :py:class:`sap10calcs.classes_SAP_Schema_19_1_0.SAP_Report` or :py:class:`sap10calcs.classes_SAP_Schema_19_1_0.SAP_Compliance_Report`)
 
     """
     
     tree = etree.parse(
         input_file,
-        parser = SAP_Schema_19_1_0_parser
+        parser = SAP_Schema_19_2_0_parser
         )
     
     root = tree.getroot() 

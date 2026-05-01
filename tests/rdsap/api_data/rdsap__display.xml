@@ -1,0 +1,491 @@
+<RdSAP-Report xmlns="https://epbr.digital.communities.gov.uk/xsd/rdsap">
+  <Schema-Version-Original>RdSAP-Schema-21.0.0</Schema-Version-Original>
+  <SAP-Version>10.2 ['SAP version 10.2, dated April 2023']</SAP-Version>
+  <Calculation-Software-Version>5.02r0332</Calculation-Software-Version>
+  <Schema-Version-Original>21.0.1</Schema-Version-Original>
+  <SAP-Version>10.2 ['SAP version 10.2, dated April 2023']</SAP-Version>
+  <Energy-Assessment>
+    <Property-Summary>
+      <Wall>
+        <Description>Cavity wall, filled cavity</Description>
+        <Energy-Efficiency-Rating>4 ['Good']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>4 ['Good']</Environmental-Efficiency-Rating>
+      </Wall>
+      <Roof>
+        <Description>Pitched, insulated (assumed)</Description>
+        <Energy-Efficiency-Rating>3 ['Average']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>3 ['Average']</Environmental-Efficiency-Rating>
+      </Roof>
+      <Roof>
+        <Description>Pitched, insulated</Description>
+        <Energy-Efficiency-Rating>4 ['Good']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>4 ['Good']</Environmental-Efficiency-Rating>
+      </Roof>
+      <Floor>
+        <Description>Solid, no insulation (assumed)</Description>
+        <Energy-Efficiency-Rating>0 ['N/A']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>0 ['N/A']</Environmental-Efficiency-Rating>
+      </Floor>
+      <Floor>
+        <Description>Solid, insulated (assumed)</Description>
+        <Energy-Efficiency-Rating>0 ['N/A']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>0 ['N/A']</Environmental-Efficiency-Rating>
+      </Floor>
+      <Window>
+        <Description>Fully double glazed</Description>
+        <Energy-Efficiency-Rating>3 ['Average']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>3 ['Average']</Environmental-Efficiency-Rating>
+      </Window>
+      <Air-Tightness>
+        <Description>(not tested)</Description>
+        <Energy-Efficiency-Rating>0 ['N/A']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>0 ['N/A']</Environmental-Efficiency-Rating>
+      </Air-Tightness>
+      <Main-Heating>
+        <Description>Boiler and radiators, mains gas</Description>
+        <Energy-Efficiency-Rating>4 ['Good']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>4 ['Good']</Environmental-Efficiency-Rating>
+      </Main-Heating>
+      <Main-Heating-Controls>
+        <Description>Programmer, room thermostat and TRVs</Description>
+        <Energy-Efficiency-Rating>4 ['Good']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>4 ['Good']</Environmental-Efficiency-Rating>
+      </Main-Heating-Controls>
+      <Hot-Water>
+        <Description>From main system, plus solar</Description>
+        <Energy-Efficiency-Rating>5 ['Very Good']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>5 ['Very Good']</Environmental-Efficiency-Rating>
+      </Hot-Water>
+      <Lighting>
+        <Description>Excellent lighting efficiency</Description>
+        <Energy-Efficiency-Rating>5 ['Very Good']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>5 ['Very Good']</Environmental-Efficiency-Rating>
+      </Lighting>
+      <Secondary-Heating>
+        <Description>None</Description>
+        <Energy-Efficiency-Rating>0 ['N/A']</Energy-Efficiency-Rating>
+        <Environmental-Efficiency-Rating>0 ['N/A']</Environmental-Efficiency-Rating>
+      </Secondary-Heating>
+      <Has-Hot-Water-Cylinder>true ['True']</Has-Hot-Water-Cylinder>
+      <Has-Heated-Separate-Conservatory>false ['False']</Has-Heated-Separate-Conservatory>
+      <Dwelling-Type>Detached house</Dwelling-Type>
+      <Total-Floor-Area>172</Total-Floor-Area>
+      <Has-Fixed-Air-Conditioning>false ['False']</Has-Fixed-Air-Conditioning>
+      <Multiple-Glazed-Proportion>100</Multiple-Glazed-Proportion>
+    </Property-Summary>
+    <Energy-Use>
+      <Energy-Rating-Current>86</Energy-Rating-Current>
+      <Energy-Rating-Potential>88</Energy-Rating-Potential>
+      <Energy-Rating-Average>60</Energy-Rating-Average>
+      <Environmental-Impact-Current>73</Environmental-Impact-Current>
+      <Environmental-Impact-Potential>75</Environmental-Impact-Potential>
+      <Energy-Consumption-Current>124</Energy-Consumption-Current>
+      <Energy-Consumption-Potential>113</Energy-Consumption-Potential>
+      <CO2-Emissions-Current>4.3</CO2-Emissions-Current>
+      <CO2-Emissions-Current-Per-Floor-Area>25</CO2-Emissions-Current-Per-Floor-Area>
+      <CO2-Emissions-Potential>4.0</CO2-Emissions-Potential>
+      <Lighting-Cost-Current>80</Lighting-Cost-Current>
+      <Lighting-Cost-Potential>80</Lighting-Cost-Potential>
+      <Heating-Cost-Current>1437</Heating-Cost-Current>
+      <Heating-Cost-Potential>1334</Heating-Cost-Potential>
+      <Hot-Water-Cost-Current>212</Hot-Water-Cost-Current>
+      <Hot-Water-Cost-Potential>212</Hot-Water-Cost-Potential>
+    </Energy-Use>
+    <Suggested-Improvements>
+      <Improvement>
+        <Sequence>1</Sequence>
+        <Improvement-Category>5 ['Normal measure']</Improvement-Category>
+        <Improvement-Type>W2 ['Insulation of solid ground floor']</Improvement-Type>
+        <Typical-Saving>{'value': 102, 'currency': 'GBP'}</Typical-Saving>
+        <Energy-Performance-Rating>88</Energy-Performance-Rating>
+        <Environmental-Impact-Rating>75</Environmental-Impact-Rating>
+        <Improvement-Details/>
+        <Indicative-Cost>&#163;5,000 - &#163;10,000</Indicative-Cost>
+      </Improvement>
+    </Suggested-Improvements>
+    <LZC-Energy-Sources>
+      <LZC-Energy-Source>10 ['Solar water heating']</LZC-Energy-Source>
+      <LZC-Energy-Source>11 ['Solar photovoltaics']</LZC-Energy-Source>
+    </LZC-Energy-Sources>
+    <Addendum>
+      <Addendum-Number>8 ['8. PVs or wind turbine present on the property (England, Wales or Scotland)']</Addendum-Number>
+      <Addendum-Number>16 ['16. PV-independent battery storage present']</Addendum-Number>
+    </Addendum>
+    <Renewable-Heat-Incentive>
+      <Space-Heating-Existing-Dwelling>17356.78</Space-Heating-Existing-Dwelling>
+      <Water-Heating>2463.93</Water-Heating>
+    </Renewable-Heat-Incentive>
+  </Energy-Assessment>
+  <SAP-Data>
+    <SAP-Property-Details>
+      <Built-Form>1 ['Detached']</Built-Form>
+      <Extensions-Count>1</Extensions-Count>
+      <Habitable-Room-Count>8</Habitable-Room-Count>
+      <Heated-Room-Count>8</Heated-Room-Count>
+      <Incandescent-Fixed-Lighting-Bulbs-Count>0</Incandescent-Fixed-Lighting-Bulbs-Count>
+      <LED-Fixed-Lighting-Bulbs-Count>28</LED-Fixed-Lighting-Bulbs-Count>
+      <Measurement-Type>1 ['Internal']</Measurement-Type>
+      <Property-Type>0 ['House']</Property-Type>
+      <Solar-Water-Heating>Y ['Yes']</Solar-Water-Heating>
+      <Pressure-Test>4 ['no test, SAP algorithm used']</Pressure-Test>
+      <Mechanical-Ventilation>0 ['natural']</Mechanical-Ventilation>
+      <Mechanical-Vent-Duct-Insulation>1 ['not insulated']</Mechanical-Vent-Duct-Insulation>
+      <Mechanical-Vent-Duct-Insulation-Level>1 ['level 1']</Mechanical-Vent-Duct-Insulation-Level>
+      <Kitchen-Room-Fans-Count>0</Kitchen-Room-Fans-Count>
+      <Non-Kitchen-Room-Fans-Count>0</Non-Kitchen-Room-Fans-Count>
+      <Kitchen-Duct-Fans-Count>0</Kitchen-Duct-Fans-Count>
+      <Non-Kitchen-Duct-Fans-Count>0</Non-Kitchen-Duct-Fans-Count>
+      <Kitchen-Wall-Fans-Count>0</Kitchen-Wall-Fans-Count>
+      <Non-Kitchen-Wall-Fans-Count>0</Non-Kitchen-Wall-Fans-Count>
+      <Conservatory-Type>1 ['no conservatory']</Conservatory-Type>
+      <SAP-Heating>
+        <Water-Heating-Fuel>26 ['mains gas (not community)']</Water-Heating-Fuel>
+        <Water-Heating-Code>901</Water-Heating-Code>
+        <Immersion-Heating-Type>NA ['not applicable']</Immersion-Heating-Type>
+        <Cylinder-Size>2 ['Normal - up to 130 litres']</Cylinder-Size>
+        <Cylinder-Insulation-Type>1 ['factory-applied']</Cylinder-Insulation-Type>
+        <Cylinder-Insulation-Thickness>50 ['50 mm']</Cylinder-Insulation-Thickness>
+        <Cylinder-Thermostat>Y ['Yes']</Cylinder-Thermostat>
+        <Has-Fixed-Air-Conditioning>false ['False']</Has-Fixed-Air-Conditioning>
+        <Main-Heating-Details>
+          <Main-Heating>
+            <Main-Heating-Number>1</Main-Heating-Number>
+            <Main-Heating-Category>2 ['boiler with radiators or underfloor heating']</Main-Heating-Category>
+            <Main-Fuel-Type>26 ['mains gas (not community)']</Main-Fuel-Type>
+            <Main-Heating-Control>2106</Main-Heating-Control>
+            <Main-Heating-Index-Number>17498</Main-Heating-Index-Number>
+            <Main-Heating-Data-Source>1 ['database']</Main-Heating-Data-Source>
+            <Has-FGHRS>N ['No']</Has-FGHRS>
+            <Boiler-Flue-Type>2 ['room-sealed']</Boiler-Flue-Type>
+            <Fan-Flue-Present>Y ['Yes']</Fan-Flue-Present>
+            <Heat-Emitter-Type>1 ['radiators']</Heat-Emitter-Type>
+            <Main-Heating-Fraction>1</Main-Heating-Fraction>
+            <Emitter-Temperature>0 ['unknown']</Emitter-Temperature>
+            <Central-Heating-Pump-Age>0 ['unknown']</Central-Heating-Pump-Age>
+          </Main-Heating>
+        </Main-Heating-Details>
+        <Solar-Water-Heating-Details>
+          <Solar-Panel-Collector-Data-Source>1 ['default']</Solar-Panel-Collector-Data-Source>
+          <Solar-Panel-Collector-Orientation>6 ['South West']</Solar-Panel-Collector-Orientation>
+          <Solar-Panel-Collector-Pitch>2 ['30 degrees']</Solar-Panel-Collector-Pitch>
+          <Solar-Panel-Collector-Overshading>2 ['modest']</Solar-Panel-Collector-Overshading>
+          <Solar-Water-Pump>1 ['electrically powered']</Solar-Water-Pump>
+          <Store-Volume-Details-Known>N ['No']</Store-Volume-Details-Known>
+          <Shower-Types>1 ['non-electric shower(s) only']</Shower-Types>
+          <Is-Community-Solar>false ['False']</Is-Community-Solar>
+          <Service-Provision>3 ['water heating only']</Service-Provision>
+        </Solar-Water-Heating-Details>
+        <Shower-Outlets>
+          <Shower-Outlet>
+            <Shower-Outlet-Type>1 ['non-electric shower(s) only']</Shower-Outlet-Type>
+            <Shower-WWHRS>1 ['none']</Shower-WWHRS>
+          </Shower-Outlet>
+          <Shower-Outlet>
+            <Shower-Outlet-Type>1 ['non-electric shower(s) only']</Shower-Outlet-Type>
+            <Shower-WWHRS>1 ['none']</Shower-WWHRS>
+          </Shower-Outlet>
+        </Shower-Outlets>
+        <Number-Baths>1</Number-Baths>
+        <Number-Baths-WWHRS>0</Number-Baths-WWHRS>
+      </SAP-Heating>
+      <SAP-Energy-Source>
+        <Meter-Type>2 ['Single']</Meter-Type>
+        <Mains-Gas>Y ['mains gas available in the property']</Mains-Gas>
+        <Electricity-Smart-Meter-Present>true ['True']</Electricity-Smart-Meter-Present>
+        <Gas-Smart-Meter-Present>true ['True']</Gas-Smart-Meter-Present>
+        <Is-Dwelling-Export-Capable>true ['True']</Is-Dwelling-Export-Capable>
+        <Wind-Turbines-Count>0</Wind-Turbines-Count>
+        <Wind-Turbines-Terrain-Type>2 ['suburban']</Wind-Turbines-Terrain-Type>
+        <Photovoltaic-Supply>
+          <PV-Arrays>
+            <PV-Array>
+              <Peak-Power>2.4</Peak-Power>
+              <Orientation>4 ['South East']</Orientation>
+              <Pitch>3 ['45 degrees']</Pitch>
+              <Overshading>1 ['none or very little']</Overshading>
+            </PV-Array>
+          </PV-Arrays>
+          <PV-Arrays>
+            <PV-Array>
+              <Peak-Power>3.2</Peak-Power>
+              <Orientation>8 ['North West']</Orientation>
+              <Pitch>3 ['45 degrees']</Pitch>
+              <Overshading>1 ['none or very little']</Overshading>
+            </PV-Array>
+          </PV-Arrays>
+        </Photovoltaic-Supply>
+        <PV-Connection>2 ['connected to dwelling's electricity meter']</PV-Connection>
+        <PV-Battery-Count>2</PV-Battery-Count>
+        <PV-Batteries>
+          <PV-Battery>
+            <Battery-Capacity>5</Battery-Capacity>
+          </PV-Battery>
+          <PV-Battery>
+            <Battery-Capacity>4.9</Battery-Capacity>
+          </PV-Battery>
+        </PV-Batteries>
+      </SAP-Energy-Source>
+      <SAP-Building-Parts>
+        <SAP-Building-Part>
+          <Building-Part-Number>1</Building-Part-Number>
+          <Identifier>Main Dwelling</Identifier>
+          <Construction-Age-Band>E ['England and Wales: 1967-1975; Scotland: 1965-1975; Northern Ireland: 1974-1977']</Construction-Age-Band>
+          <SAP-Floor-Dimensions>
+            <SAP-Floor-Dimension>
+              <Heat-Loss-Perimeter>36.73</Heat-Loss-Perimeter>
+              <Room-Height>2.4</Room-Height>
+              <Total-Floor-Area>85</Total-Floor-Area>
+              <Floor>0 ['lowest occupied']</Floor>
+              <Floor-Construction>1 ['solid']</Floor-Construction>
+              <Floor-Insulation>1 ['as built']</Floor-Insulation>
+              <Party-Wall-Length>0</Party-Wall-Length>
+            </SAP-Floor-Dimension>
+            <SAP-Floor-Dimension>
+              <Heat-Loss-Perimeter>34.18</Heat-Loss-Perimeter>
+              <Room-Height>2.4</Room-Height>
+              <Total-Floor-Area>73.01</Total-Floor-Area>
+              <Floor>1 ['lowest+1']</Floor>
+              <Party-Wall-Length>0</Party-Wall-Length>
+            </SAP-Floor-Dimension>
+          </SAP-Floor-Dimensions>
+          <Floor-Insulation-Thickness>NI ['unknown']</Floor-Insulation-Thickness>
+          <Floor-Heat-Loss>7 ['Ground floor']</Floor-Heat-Loss>
+          <Roof-Construction>5 ['Pitched (slates or tiles), no access to loft']</Roof-Construction>
+          <Roof-Insulation-Location>4 ['Unknown']</Roof-Insulation-Location>
+          <Roof-Insulation-Thickness>ND ['Not Defined']</Roof-Insulation-Thickness>
+          <Wall-Construction>4 ['cavity']</Wall-Construction>
+          <Wall-Insulation-Type>2 ['filled cavity']</Wall-Insulation-Type>
+          <Wall-Thickness-Measured>Y ['Yes']</Wall-Thickness-Measured>
+          <Wall-Thickness>300</Wall-Thickness>
+          <Wall-Dry-Lined>N ['No']</Wall-Dry-Lined>
+          <Wall-Insulation-Thickness>NI ['unknown']</Wall-Insulation-Thickness>
+          <Party-Wall-Construction>NA ['not applicable (detached property or no party wall in this building part)']</Party-Wall-Construction>
+        </SAP-Building-Part>
+        <SAP-Building-Part>
+          <Building-Part-Number>2</Building-Part-Number>
+          <Identifier>Extension 1</Identifier>
+          <Construction-Age-Band>L ['England and Wales: 2012-2021; Scotland: 2012-2022; Northern Ireland: 2014 onwards']</Construction-Age-Band>
+          <SAP-Floor-Dimensions>
+            <SAP-Floor-Dimension>
+              <Heat-Loss-Perimeter>11.52</Heat-Loss-Perimeter>
+              <Room-Height>2</Room-Height>
+              <Total-Floor-Area>14.46</Total-Floor-Area>
+              <Floor>0 ['lowest occupied']</Floor>
+              <Floor-Construction>1 ['solid']</Floor-Construction>
+              <Floor-Insulation>1 ['as built']</Floor-Insulation>
+              <Party-Wall-Length>0</Party-Wall-Length>
+            </SAP-Floor-Dimension>
+          </SAP-Floor-Dimensions>
+          <Floor-Insulation-Thickness>NI ['unknown']</Floor-Insulation-Thickness>
+          <Floor-Heat-Loss>7 ['Ground floor']</Floor-Heat-Loss>
+          <Roof-Construction>8 ['Pitched roof with sloping ceiling']</Roof-Construction>
+          <Roof-Insulation-Location>7 ['Sloping ceiling insulation']</Roof-Insulation-Location>
+          <Sloping-Ceiling-Insulation-Thickness>AB ['as built']</Sloping-Ceiling-Insulation-Thickness>
+          <Wall-Construction>4 ['cavity']</Wall-Construction>
+          <Wall-Insulation-Type>4 ['as built']</Wall-Insulation-Type>
+          <Wall-Thickness-Measured>Y ['Yes']</Wall-Thickness-Measured>
+          <Wall-Thickness>300</Wall-Thickness>
+          <Wall-Dry-Lined>N ['No']</Wall-Dry-Lined>
+          <Wall-Insulation-Thickness>NI ['unknown']</Wall-Insulation-Thickness>
+          <Party-Wall-Construction>NA ['not applicable (detached property or no party wall in this building part)']</Party-Wall-Construction>
+        </SAP-Building-Part>
+      </SAP-Building-Parts>
+      <SAP-Windows>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>2.08</Window-Height>
+          <Window-Width>2.16</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>8 ['North West']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>0.96</Window-Height>
+          <Window-Width>2.04</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>8 ['North West']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>1 ['1st Extension']</Window-Location>
+          <Window-Height>0.69</Window-Height>
+          <Window-Width>0.88</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>8 ['North West']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>1 ['1st Extension']</Window-Location>
+          <Window-Height>0.69</Window-Height>
+          <Window-Width>0.88</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>8 ['North West']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>1 ['1st Extension']</Window-Location>
+          <Window-Height>2.02</Window-Height>
+          <Window-Width>2.75</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>6 ['South West']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>0.99</Window-Height>
+          <Window-Width>1.6</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>3 ['East']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>1.05</Window-Height>
+          <Window-Width>1.59</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>4 ['South East']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>1.05</Window-Height>
+          <Window-Width>1.59</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>2 ['North East']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>1.06</Window-Height>
+          <Window-Width>1.27</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>4 ['South East']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>2.05</Window-Height>
+          <Window-Width>1.27</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>4 ['South East']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>1.02</Window-Height>
+          <Window-Width>1.25</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>4 ['South East']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>1.28</Window-Height>
+          <Window-Width>2.06</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>8 ['North West']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+        <SAP-Window>
+          <Window-Location>0 ['Main Property']</Window-Location>
+          <Window-Height>1.28</Window-Height>
+          <Window-Width>2.06</Window-Width>
+          <Draught-Proofed>true ['True']</Draught-Proofed>
+          <Glazing-Type>2 ['double glazing installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI']</Glazing-Type>
+          <Window-Type>1 ['window']</Window-Type>
+          <Orientation>8 ['North West']</Orientation>
+          <PVC-Frame>true ['True']</PVC-Frame>
+          <Window-Wall-Type>1 ['External wall type 1']</Window-Wall-Type>
+          <Permanent-Shutters-Present>N ['No']</Permanent-Shutters-Present>
+          <Permanent-Shutters-Insulated>N ['No']</Permanent-Shutters-Insulated>
+        </SAP-Window>
+      </SAP-Windows>
+      <Door-Count>1</Door-Count>
+      <Insulated-Door-Count>0</Insulated-Door-Count>
+      <Draughtproofed-Door-Count>1</Draughtproofed-Door-Count>
+      <Percent-Draughtproofed>100</Percent-Draughtproofed>
+    </SAP-Property-Details>
+  </SAP-Data>
+  <Report-Header>
+    <Inspection-Date>2025-08-05</Inspection-Date>
+    <Report-Type>2 ['RdSAP Energy Performance Certificate']</Report-Type>
+    <Completion-Date>2026-02-05</Completion-Date>
+    <Registration-Date>2026-02-05</Registration-Date>
+    <Status>entered ['entered on the register']</Status>
+    <Language-Code>1 ['English']</Language-Code>
+    <Property-Type>0 ['House']</Property-Type>
+    <Region-Code>16 ['Southern England']</Region-Code>
+    <Country-Code>ENG ['England']</Country-Code>
+    <Transaction-Type>1 ['marketed sale']</Transaction-Type>
+    <Tenure>1 ['owner-occupied']</Tenure>
+    <Property>
+      <Address>
+        <Address-Line-1>27 Curtis Road</Address-Line-1>
+        <Postcode>GU34 2SD</Postcode>
+        <Post-Town>ALTON</Post-Town>
+      </Address>
+      <UPRN>1710025903</UPRN>
+    </Property>
+  </Report-Header>
+</RdSAP-Report>

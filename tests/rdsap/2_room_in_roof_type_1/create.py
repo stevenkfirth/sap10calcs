@@ -23,6 +23,7 @@ room_in_roof_type_1.add_gable_wall_type_2().value = 'exposed'
 
 
 tree.write(os.path.join(id_, 'in.xml'), encoding="utf-8", xml_declaration=True, pretty_print=True)
+with open(os.path.join(id_, 'in__display.xml'), 'w') as f: f.write(rdsap_report.display())  
 
 extra = {}
 with open(os.path.join(id_, 'extra.json'), 'w') as f: json.dump(extra, f, indent = 4)
