@@ -7,6 +7,7 @@ import json
 
 # TO BE REMOVED
 from .parse_rdsap_json import parse_rdsap_json
+from .parse_sap_json import parse_sap_json
 
 
 from .instances import SAP_Schema_19_2_0_parser

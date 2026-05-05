@@ -11,6 +11,7 @@ from .functions import create_sap_report_xml
 from .functions import parse_xml
 from .functions import create_rdsap_report_xml
 from .functions import parse_rdsap_json
+from .functions import parse_sap_json
 from .functions import parse_rdsap_xml
 
 
