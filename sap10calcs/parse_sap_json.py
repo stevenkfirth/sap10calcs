@@ -136,9 +136,9 @@ def parse_sap_json(
     # remove JSON values that don't parse to the RdSAP XML (no equivalent XML elements available)
     # if 'error' in j['data']: del j['data']['error']
     if 'created_at' in j['data']: del j['data']['created_at']
-    # if 'schema_type' in j['data']: del j['data']['schema_type']
-    # if 'uprn_source' in j['data']: del j['data']['uprn_source']
-    # if 'assessment_type' in j['data']: del j['data']['assessment_type']
+    if 'schema_type' in j['data']: del j['data']['schema_type']
+    if 'uprn_source' in j['data']: del j['data']['uprn_source']
+    if 'assessment_type' in j['data']: del j['data']['assessment_type']
     # if 'current_energy_efficiency_band' in j['data']: del j['data']['current_energy_efficiency_band']
     # if 'potential_energy_efficiency_band' in j['data']: del j['data']['potential_energy_efficiency_band']
 
@@ -168,11 +168,14 @@ def parse_sap_json(
     # except KeyError: pass
 
     # SAP-Version
-    # try: 
-    #     sap_report.add_sap_version().code = str(j['data'].pop('sap_version'))
-    # except KeyError: pass
+    try: 
+        sap_report.add_sap_version().code = str(j['data'].pop('sap_version'))
+    except KeyError: pass
 
     # SAP-Data-Version
+    try: 
+        sap_report.add_sap_data_version().code = str(j['data'].pop('sap_data_version'))
+    except KeyError: pass
 
     # PCDF-Revision-Number
 
@@ -194,9 +197,9 @@ def parse_sap_json(
         # RRN
 
         # Inspection-Date
-    #     try: 
-    #         report_header.add_inspection_date().code = str(j['data'].pop('inspection_date'))
-    #     except KeyError: pass
+        try: 
+            report_header.add_inspection_date().code = str(j['data'].pop('inspection_date'))
+        except KeyError: pass
 
         # Report-Type
         try: 
@@ -204,14 +207,14 @@ def parse_sap_json(
         except KeyError: pass
 
         # Completion-Date
-    #     try: 
-    #         report_header.add_completion_date().code = str(j['data'].pop('completion_date'))
-    #     except KeyError: pass
+        try: 
+            report_header.add_completion_date().code = str(j['data'].pop('completion_date'))
+        except KeyError: pass
     
         # Registration-Date
-    #     try: 
-    #         report_header.add_registration_date().code = str(j['data'].pop('registration_date'))
-    #     except KeyError: pass
+        try: 
+            report_header.add_registration_date().code = str(j['data'].pop('registration_date'))
+        except KeyError: pass
 
         # Status
         try: 
@@ -219,9 +222,9 @@ def parse_sap_json(
         except KeyError: pass
         
         # Language-Code
-    #     try: 
-    #         report_header.add_language_code().code = str(j['data'].pop('language_code'))
-    #     except KeyError: pass
+        try: 
+            report_header.add_language_code().code = str(j['data'].pop('language_code'))
+        except KeyError: pass
 
         # Tenure
         try: 
@@ -229,16 +232,16 @@ def parse_sap_json(
         except KeyError: pass
 
         # Transaction-Type
-    #     try: 
-    #         report_header.add_transaction_type().code = str(j['data'].pop('transaction_type'))
-    #     except KeyError: pass
+        try: 
+            report_header.add_transaction_type().code = str(j['data'].pop('transaction_type'))
+        except KeyError: pass
 
         # Seller-Commission-Report
 
         # Property-Type
-    #     try: 
-    #         report_header.add_property_type().code = sap_property_details.property_type.code
-    #     except KeyError: pass
+        try: 
+            report_header.add_property_type().code = str(j['data'].pop('property_type'))
+        except KeyError: pass
 
         # Home-Inspector
 
@@ -250,20 +253,20 @@ def parse_sap_json(
                 # --- Address ---
                 address = property_.add_address()
 
-    #             # Address-Line-1
-    #             try: 
-    #                 address.add_address_line_1().code = str(j['data'].pop('address_line_1'))
-    #             except KeyError: pass
+                # Address-Line-1
+                try: 
+                    address.add_address_line_1().code = str(j['data'].pop('address_line_1'))
+                except KeyError: pass
    
-    #             # Address-Line-2
-    #             try: 
-    #                 address.add_address_line_2().code = str(j['data'].pop('address_line_2'))
-    #             except KeyError: pass
+                # Address-Line-2
+                try: 
+                    address.add_address_line_2().code = str(j['data'].pop('address_line_2'))
+                except KeyError: pass
     
-    #             # Address-Line-3
-    #             try: 
-    #                 address.add_address_line_3().code = str(j['data'].pop('address_line_3'))
-    #             except KeyError: pass
+                # Address-Line-3
+                try: 
+                    address.add_address_line_3().code = str(j['data'].pop('address_line_3'))
+                except KeyError: pass
     
                 # Postcode
                 try: 
@@ -286,9 +289,9 @@ def parse_sap_json(
         except KeyError: pass
     
         # Country-Code
-    #     try: 
-    #         report_header.add_country_code().code = str(j['data'].pop('country_code'))
-    #     except KeyError: pass
+        try: 
+            report_header.add_country_code().code = str(j['data'].pop('country_code'))
+        except KeyError: pass
     
         # Related-Party-Disclosure
 
@@ -298,7 +301,9 @@ def parse_sap_json(
         energy_assessment = sap_report.add_energy_assessment()
 
         # Assessment-Date
-
+        try: 
+            energy_assessment.add_assessment_date().code = str(j['data'].pop('assessment_date'))
+        except KeyError: pass
         
         if True:
             # --- Property-Summary ---
@@ -434,33 +439,39 @@ def parse_sap_json(
                         print(etree.tostring(sap_report, pretty_print=True).decode())
                         raise Exception('j', 'data', 'windows', list(j['data']['windows'])[0])
                     
-#         if True:
-    #             # --- Main-Heating ---
-    #             if 'main_heating' in j['data']:
-    #                 c = []
-    #                 for main_heating_index in range(len(j['data']['main_heating'])):
-    #                     # 
-    #                     main_heating = property_summary.add_main_heating()
-    #                     # Description
-    #                     try: 
-    #                         main_heating.add_description().code = str(j['data']['main_heating'][main_heating_index].pop('description'))
-    #                     except KeyError: pass
-    #                     # Energy-Efficiency-Rating
-    #                     try: 
-    #                         main_heating.add_energy_efficiency_rating().code = str(j['data']['main_heating'][main_heating_index].pop('energy_efficiency_rating'))
-    #                     except KeyError: pass
-    #                     # Environmental-Efficiency-Rating
-    #                     try: 
-    #                         main_heating.add_environmental_efficiency_rating().code = str(j['data']['main_heating'][main_heating_index].pop('environmental_efficiency_rating'))
-    #                     except KeyError: pass
-    #                     #
-    #                     if len(j['data']['main_heating'][main_heating_index]) == 0:
-    #                         c.append(main_heating_index)
-    #                     else:
-    #                         print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                         raise Exception('j', 'data', 'main_heating', main_heating_index, list(j['data']['main_heating'][main_heating_index])[0])
-    #                 for c1 in c[::-1]: del j['data']['main_heating'][c1]
-    #                 if len(j['data']['main_heating']) == 0: del j['data']['main_heating']
+        if True:
+            # --- Main-Heating ---
+            if 'main_heating' in j['data']:
+                c = []
+                for main_heating_index in range(len(j['data']['main_heating'])):
+                    # 
+                    main_heating = property_summary.add_main_heating()
+                    # Description
+                    try: 
+                        x = j['data']['main_heating'][main_heating_index].pop('description')
+                        d = main_heating.add_description()
+                        if isinstance(x, dict):
+                            d.code = str(x.get('value',''))
+                            d.attrib['language'] = x.get('language', '')
+                        else:
+                            d.code = str(x)
+                    except KeyError: pass
+                    # Energy-Efficiency-Rating
+                    try: 
+                        main_heating.add_energy_efficiency_rating().code = str(j['data']['main_heating'][main_heating_index].pop('energy_efficiency_rating'))
+                    except KeyError: pass
+                    # Environmental-Efficiency-Rating
+                    try: 
+                        main_heating.add_environmental_efficiency_rating().code = str(j['data']['main_heating'][main_heating_index].pop('environmental_efficiency_rating'))
+                    except KeyError: pass
+                    #
+                    if len(j['data']['main_heating'][main_heating_index]) == 0:
+                        c.append(main_heating_index)
+                    else:
+                        print(etree.tostring(sap_report, pretty_print=True).decode())
+                        raise Exception('j', 'data', 'main_heating', main_heating_index, list(j['data']['main_heating'][main_heating_index])[0])
+                for c1 in c[::-1]: del j['data']['main_heating'][c1]
+                if len(j['data']['main_heating']) == 0: del j['data']['main_heating']
 
     #         if True:
     #             # --- Main-Heating-Controls ---
@@ -490,26 +501,32 @@ def parse_sap_json(
     #                 for c1 in c[::-1]: del j['data']['main_heating_controls'][c1]
     #                 if len(j['data']['main_heating_controls']) == 0: del j['data']['main_heating_controls']
 
-#         if True:
-    #             # --- Secondary-Heating ---
-    #             if 'secondary_heating' in j['data']:
-    #                 secondary_heating = property_summary.add_secondary_heating()
-    #                 # Description
-    #                 try: 
-    #                     secondary_heating.add_description().code = str(j['data']['secondary_heating'].pop('description'))
-    #                 except KeyError: pass
-    #                 # Energy-Efficiency-Rating
-    #                 try: 
-    #                     secondary_heating.add_energy_efficiency_rating().code = str(j['data']['secondary_heating'].pop('energy_efficiency_rating'))
-    #                 except KeyError: pass
-    #                 # Environmental-Efficiency-Rating
-    #                 try: 
-    #                     secondary_heating.add_environmental_efficiency_rating().code = str(j['data']['secondary_heating'].pop('environmental_efficiency_rating'))
-    #                 except KeyError: pass
-    #                 if len(j['data']['secondary_heating']) == 0:
-    #                     del j['data']['secondary_heating']
-    #                 else:
-    #                     raise Exception('j', 'data', 'secondary_heating', list(j['data']['secondary_heating'])[0])
+            if True:
+                # --- Secondary-Heating ---
+                if 'secondary_heating' in j['data']:
+                    secondary_heating = property_summary.add_secondary_heating()
+                    # Description
+                    try: 
+                        x = j['data']['secondary_heating'].pop('description')
+                        d = secondary_heating.add_description()
+                        if isinstance(x, dict):
+                            d.code = str(x.get('value',''))
+                            d.attrib['language'] = x.get('language', '')
+                        else:
+                            d.code = str(x)
+                    except KeyError: pass
+                    # Energy-Efficiency-Rating
+                    try: 
+                        secondary_heating.add_energy_efficiency_rating().code = str(j['data']['secondary_heating'].pop('energy_efficiency_rating'))
+                    except KeyError: pass
+                    # Environmental-Efficiency-Rating
+                    try: 
+                        secondary_heating.add_environmental_efficiency_rating().code = str(j['data']['secondary_heating'].pop('environmental_efficiency_rating'))
+                    except KeyError: pass
+                    if len(j['data']['secondary_heating']) == 0:
+                        del j['data']['secondary_heating']
+                    else:
+                        raise Exception('j', 'data', 'secondary_heating', list(j['data']['secondary_heating'])[0])
 
             if True:
                 # --- Hot-Water ---
@@ -570,26 +587,32 @@ def parse_sap_json(
 
 
 
-    #         if True:
-    #             # --- Air-Tightness ---
-    #             if 'air_tightness' in j['data']:
-    #                 air_tightness = property_summary.add_air_tightness()
-    #                 # Description
-    #                 try: 
-    #                     air_tightness.add_description().code = str(j['data']['air_tightness'].pop('description'))
-    #                 except KeyError: pass
-    #                 # Energy-Efficiency-Rating
-    #                 try: 
-    #                     air_tightness.add_energy_efficiency_rating().code = str(j['data']['air_tightness'].pop('energy_efficiency_rating'))
-    #                 except KeyError: pass
-    #                 # Environmental-Efficiency-Rating
-    #                 try: 
-    #                     air_tightness.add_environmental_efficiency_rating().code = str(j['data']['air_tightness'].pop('environmental_efficiency_rating'))
-    #                 except KeyError: pass
-    #                 if len(j['data']['air_tightness']) == 0:
-    #                     del j['data']['air_tightness']
-    #                 else:
-    #                     raise Exception('j', 'data', 'air_tightness', list(j['data']['air_tightness'])[0])
+            if True:
+                # --- Air-Tightness ---
+                if 'air_tightness' in j['data']:
+                    air_tightness = property_summary.add_air_tightness()
+                    # Description
+                    try: 
+                        x = j['data']['air_tightness'].pop('description')
+                        d = air_tightness.add_description()
+                        if isinstance(x, dict):
+                            d.code = str(x.get('value',''))
+                            d.attrib['language'] = x.get('language', '')
+                        else:
+                            d.code = str(x)
+                    except KeyError: pass
+                    # Energy-Efficiency-Rating
+                    try: 
+                        air_tightness.add_energy_efficiency_rating().code = str(j['data']['air_tightness'].pop('energy_efficiency_rating'))
+                    except KeyError: pass
+                    # Environmental-Efficiency-Rating
+                    try: 
+                        air_tightness.add_environmental_efficiency_rating().code = str(j['data']['air_tightness'].pop('environmental_efficiency_rating'))
+                    except KeyError: pass
+                    if len(j['data']['air_tightness']) == 0:
+                        del j['data']['air_tightness']
+                    else:
+                        raise Exception('j', 'data', 'air_tightness', list(j['data']['air_tightness'])[0])
                     
             # Has-Fixed-Air-Conditioning
     #         try: 
@@ -607,14 +630,14 @@ def parse_sap_json(
     #         except KeyError: pass
 
             # Dwelling-Type
-    #         try: 
-    #             property_summary.add_dwelling_type().code = str(j['data'].pop('dwelling_type'))
-    #         except KeyError: pass
+            try: 
+                property_summary.add_dwelling_type().code = str(j['data'].pop('dwelling_type'))
+            except KeyError: pass
 
             # Total-Floor-Area
-    #         try: 
-    #             property_summary.add_total_floor_area().code = str(j['data'].pop('total_floor_area'))
-    #         except KeyError: pass
+            try: 
+                property_summary.add_total_floor_area().code = str(j['data'].pop('total_floor_area'))
+            except KeyError: pass
 
             # Multiple-Glazed-Proportion
     #         try: 
@@ -653,8 +676,14 @@ def parse_sap_json(
             except KeyError: pass
 
             # DFEE
+            try: 
+                energy_use.add_dfee().code = str(j['data'].pop('dfee'))
+            except KeyError: pass
 
             # TFEE
+            try: 
+                energy_use.add_tfee().code = str(j['data'].pop('tfee'))
+            except KeyError: pass
 
             # Energy-Rating-Current
     #         try: 
@@ -990,12 +1019,15 @@ def parse_sap_json(
                 sap_property_details.add_orientation().code = str(j['data'].pop('orientation'))
             except KeyError: pass
 
-#         # Conservatory-Type
-    #         try: 
-    #             sap_property_details.add_conservatory_type().code = str(j['data'].pop('conservatory_type'))
-    #         except KeyError: pass  
+            # Conservatory-Type
+            try: 
+                sap_property_details.add_conservatory_type().code = str(j['data'].pop('conservatory_type'))
+            except KeyError: pass  
 
             # Terrian-Type
+            try: 
+                sap_property_details.add_terrain_type().code = str(j['data'].pop('terrain_type'))
+            except KeyError: pass
 
             # Has-Special-Feature
 
@@ -1014,6 +1046,9 @@ def parse_sap_json(
             # Part-O-Cooling-Required
 
             # Cold-Water-Source
+            try: 
+                sap_property_details.add_cold_water_source().code = str(j['data'].pop('cold_water_source'))
+            except KeyError: pass
 
             # Windows-Overshading
 
@@ -1028,6 +1063,9 @@ def parse_sap_json(
             # Is-Dwelling-Export-Capable
 
             # PV-Connection
+            try: 
+                sap_property_details.add_pv_connection().code = str(j['data'].pop('pv_connection'))
+            except KeyError: pass
 
             # PV-Diverter
 
@@ -1051,8 +1089,14 @@ def parse_sap_json(
                     except KeyError: pass
 
                     # Has-Hot-Water-Cylinder
+                    try: 
+                        sap_heating.add_has_hot_water_cylinder().code = str(j['data']['sap_heating'].pop('has_hot_water_cylinder'))
+                    except KeyError: pass
 
                     # Secondary-Heating-Category
+                    try: 
+                        sap_heating.add_secondary_heating_category().code = str(j['data']['sap_heating'].pop('secondary_heating_category'))
+                    except KeyError: pass
 
                     # Secondary-Heating-Data-Source
 
@@ -1076,9 +1120,9 @@ def parse_sap_json(
                     except KeyError: pass
 
                     # Has-Fixed-Air-Conditioning
-    #                 try: 
-    #                     sap_heating.add_has_fixed_air_conditioning().code = str(j['data']['sap_heating'].pop('has_fixed_air_conditioning'))
-    #                 except KeyError: pass  
+                    try: 
+                        sap_heating.add_has_fixed_air_conditioning().code = str(j['data']['sap_heating'].pop('has_fixed_air_conditioning'))
+                    except KeyError: pass  
     
                     # Immersion-Heating-Type
                     #                 try: 
@@ -1086,10 +1130,19 @@ def parse_sap_json(
     #                 except KeyError: pass
 
                     # Is-Heat-Pump-Assisted-By-Immersion
+                    try: 
+                        sap_heating.add_is_heat_pump_assisted_by_immersion().code = str(j['data']['sap_heating'].pop('is_heat_pump_assisted_by_immersion'))
+                    except KeyError: pass
 
                     # Is-Heat-Pump-Installed-To-MIS
+                    try: 
+                        sap_heating.add_is_heat_pump_installed_to_mis().code = str(j['data']['sap_heating'].pop('is_heat_pump_installed_to_mis'))
+                    except KeyError: pass 
 
                     # Is-Immersion-For-Summer-Use
+                    try: 
+                        sap_heating.add_is_immersion_for_summer_use().code = str(j['data']['sap_heating'].pop('is_immersion_for_summer_use'))
+                    except KeyError: pass  
 
                     # Is-Secondary-Heating-HETAS-Approved
 
@@ -1118,10 +1171,16 @@ def parse_sap_json(
                     # Is-Thermal-Store-Or-CPSU-In-Airing-Cupboard
 
                     # Has-Cylinder-Thermostat
+                    try: 
+                        sap_heating.add_has_cylinder_thermostat().code = str(j['data']['sap_heating'].pop('has_cylinder_thermostat'))
+                    except KeyError: pass
 
                     # Is-Cylinder-In-Heated-Space
 
                     # Is-Hot-Water-Separately-Timed
+                    try: 
+                        sap_heating.add_is_hot_water_separately_timed().code = str(j['data']['sap_heating'].pop('is_hot_water_separately_timed'))
+                    except KeyError: pass
 
                     # Hot-Water-Controls-Manufacturer
 
@@ -1131,234 +1190,259 @@ def parse_sap_json(
 
                     if True:
                         # --- Main-Heating-Details ---
-                            if 'main_heating_details' in j['data']['sap_heating']:
-                                main_heating_details = sap_heating.add_main_heating_details()
-                                main_heating_details_c = []
-                                for main_heating_index in range(len(j['data']['sap_heating']['main_heating_details'])):
-                                    # --- Main-Heating ---
-                                    main_heating = main_heating_details.add_main_heating()
+                        if 'main_heating_details' in j['data']['sap_heating']:
+                            main_heating_details = sap_heating.add_main_heating_details()
+                            main_heating_details_c = []
+                            for main_heating_index in range(len(j['data']['sap_heating']['main_heating_details'])):
+                                # --- Main-Heating ---
+                                main_heating = main_heating_details.add_main_heating()
 
-                                    # Main-Heating-Number
-                                    try: 
-                                        main_heating.add_main_heating_number().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_number'))
-                                    except KeyError: pass
+                                # Main-Heating-Number
+                                try: 
+                                    main_heating.add_main_heating_number().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_number'))
+                                except KeyError: pass
 
-                                    # Main-Heating-Category
-                                    try: 
-                                        main_heating.add_main_heating_category().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_category'))
-                                    except KeyError: pass
+                                # Main-Heating-Category
+                                try: 
+                                    main_heating.add_main_heating_category().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_category'))
+                                except KeyError: pass
 
-                                    # Main-Heating-Data-Source
-                                    try: 
-                                        main_heating.add_main_heating_data_source().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_data_source'))
-                                    except KeyError: pass
+                                # Main-Heating-Data-Source
+                                try: 
+                                    main_heating.add_main_heating_data_source().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_data_source'))
+                                except KeyError: pass
 
-                                    # Main-Heating-Index-Number
-                                    try: 
-                                        main_heating.add_main_heating_index_number().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_index_number'))
-                                    except KeyError: pass
+                                # Main-Heating-Index-Number
+                                try: 
+                                    main_heating.add_main_heating_index_number().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_index_number'))
+                                except KeyError: pass
 
-                                    # Main-Heating-Manufacturer
+                                # Main-Heating-Manufacturer
 
-                                    # Main-Heating-Model
+                                # Main-Heating-Model
 
-                                    # Main-Heating-Commissioning-Certificate
+                                # Main-Heating-Commissioning-Certificate
 
-                                    # Main-Heating-Installation-Engineer
+                                # Main-Heating-Installation-Engineer
 
-                                    # Is-Condensing-Boiler
-                                    try: 
-                                        main_heating.add_is_condensing_boiler().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_condensing_boiler'))
-                                    except KeyError: pass
+                                # Is-Condensing-Boiler
+                                try: 
+                                    main_heating.add_is_condensing_boiler().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_condensing_boiler'))
+                                except KeyError: pass
 
-                                    # Condensing-Boiler-Heat-Distribution
+                                # Condensing-Boiler-Heat-Distribution
+                                try: 
+                                    main_heating.add_condensing_boiler_heat_distribution().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('condensing_boiler_heat_distribution'))
+                                except KeyError: pass
 
-                                    # Heat-Pump-Heat-Distribution
+                                # Heat-Pump-Heat-Distribution
 
-                                    # Gas-Or-Oil-Boiler-Type
+                                # Gas-Or-Oil-Boiler-Type
+                                try: 
+                                    main_heating.add_gas_or_oil_boiler_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('gas_or_oil_boiler_type'))
+                                except KeyError: pass
 
-                                    # Combi-Boiler-Type
+                                # Combi-Boiler-Type
+                                try: 
+                                    main_heating.add_combi_boiler_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('combi_boiler_type'))
+                                except KeyError: pass
 
-                                    # Case-Heat-Emission
+                                # Case-Heat-Emission
 
-                                    # Heat-Transfer-To-Water
+                                # Heat-Transfer-To-Water
 
-                                    # Solid-Fuel-Boiler-Type
+                                # Solid-Fuel-Boiler-Type
 
-                                    # Main-Heating-Code
-                                    try: 
-                                        main_heating.add_main_heating_code().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_code'))
-                                    except KeyError: pass
+                                # Main-Heating-Code
+                                try: 
+                                    main_heating.add_main_heating_code().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_code'))
+                                except KeyError: pass
 
-                                    # Main-Fuel-Type
-                                    try: 
-                                        main_heating.add_main_fuel_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_fuel_type'))
-                                    except KeyError: pass
+                                # Main-Fuel-Type
+                                try: 
+                                    main_heating.add_main_fuel_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_fuel_type'))
+                                except KeyError: pass
 
-                                    # PCDF-Fuel-Index
+                                # PCDF-Fuel-Index
 
-                                    # Main-Heating-Control
-                                    try: 
-                                        main_heating.add_main_heating_control().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_control'))
-                                    except KeyError: pass
+                                # Main-Heating-Control
+                                try: 
+                                    main_heating.add_main_heating_control().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_control'))
+                                except KeyError: pass
 
-                                    # Heat-Emitter-Type
-    #                                 try: 
-    #                                     main_heating.add_heat_emitter_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('heat_emitter_type'))
-    #                                 except KeyError: pass
-    
-                                    # Underfloor-Heat-Emitter-Type
+                                # Heat-Emitter-Type
+                                try: 
+                                    main_heating.add_heat_emitter_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('heat_emitter_type'))
+                                except KeyError: pass
 
-                                    # Main-Heating-Flue-Type
+                                # Underfloor-Heat-Emitter-Type
 
-                                    # Is-Fan-Flue-Present
-    #                                 try: 
-    #                                     main_heating.add_is_fan_flue_present().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_fan_flue_present'))
-    #                                 except KeyError: pass
+                                # Main-Heating-Flue-Type
+                                try: 
+                                    main_heating.add_main_heating_flue_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_flue_type'))
+                                except KeyError: pass
 
-                                    # Is-Central-Heating-Pump-In-Heated-Space
+                                # Is-Flue-Fan-Present
+                                try: 
+                                    main_heating.add_is_flue_fan_present().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_flue_fan_present'))
+                                except KeyError: pass
 
-                                    # Is-Oil-Pump-In-Heated-Space
-                                    try: 
-                                        main_heating.add_is_oil_pump_in_heated_space().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_oil_pump_in_heated_space'))
-                                    except KeyError: pass
+                                # Is-Central-Heating-Pump-In-Heated-Space
+                                try: 
+                                    main_heating.add_is_central_heating_pump_in_heated_space().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_central_heating_pump_in_heated_space'))
+                                except KeyError: pass
 
-                                    # Is-Interlocked-System
+                                # Is-Oil-Pump-In-Heated-Space
+                                try: 
+                                    main_heating.add_is_oil_pump_in_heated_space().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_oil_pump_in_heated_space'))
+                                except KeyError: pass
 
-                                    # Has-Separate-Delayed-Start
+                                # Is-Interlocked-System
+                                try: 
+                                    main_heating.add_is_interlocked_system().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_interlocked_system'))
+                                except KeyError: pass
 
-                                    # Boiler-Fuel-Feed
+                                # Has-Separate-Delayed-Start
+                                try: 
+                                    main_heating.add_has_separate_delayed_start().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('has_separate_delayed_start'))
+                                except KeyError: pass
 
-                                    # Is-Main-Heating-HETAS-Approved
-                                    try: 
-                                        main_heating.add_is_main_heating_hetas_approved().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_main_heating_hetas_approved'))
-                                    except KeyError: pass
+                                # Boiler-Fuel-Feed
 
-                                    # Electric-CPSU-Operating-Temperature
+                                # Is-Main-Heating-HETAS-Approved
+                                try: 
+                                    main_heating.add_is_main_heating_hetas_approved().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('is_main_heating_hetas_approved'))
+                                except KeyError: pass
 
-                                    # Main-Heating-Fraction
-                                    try: 
-                                        main_heating_fraction = j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_fraction')
-                                        main_heating.add_main_heating_fraction().code = str(float(main_heating_fraction)/100.0)
-                                    except KeyError: pass
+                                # Electric-CPSU-Operating-Temperature
 
-                                    # Burner-Control
+                                # Main-Heating-Fraction
+                                try: 
+                                    main_heating_fraction = j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_fraction')
+                                    main_heating.add_main_heating_fraction().code = str(float(main_heating_fraction)/100.0)
+                                except KeyError: pass
 
-                                    # Efficiency-Type
+                                # Burner-Control
 
-                                    # Main-Heating-Efficiency-Winter
+                                # Efficiency-Type
 
-                                    # Main-Heating-Efficiency-Summer
+                                # Main-Heating-Efficiency-Winter
 
-                                    # Main-Heating-Efficiency
+                                # Main-Heating-Efficiency-Summer
 
-                                    # Main-Heating-System-Type
+                                # Main-Heating-Efficiency
 
-                                    # Has-FGHRS
-                                    try: 
-                                        main_heating.add_has_fghrs().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('has_fghrs'))
-                                    except KeyError: pass
+                                # Main-Heating-System-Type
 
-                                    # FGHRS-Index-Number
-    #                                 try: 
-    #                                     main_heating.add_fghrs_index_number().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('fghrs_index_number'))
-    #                                 except KeyError: pass
+                                # Has-FGHRS
+                                try: 
+                                    main_heating.add_has_fghrs().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('has_fghrs'))
+                                except KeyError: pass
 
-                                    # FGHRS-Energy-Source
+                                # FGHRS-Index-Number
+#                                 try: 
+#                                     main_heating.add_fghrs_index_number().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('fghrs_index_number'))
+#                                 except KeyError: pass
 
-                                    # Main-Heating-Declared-Values                                 
+                                # FGHRS-Energy-Source
 
-    #                                 if True:
-    #                                     # --- Storage-Heaters ---
-    #                                     if 'storage_heaters' in j['data']['sap_heating']['main_heating_details'][main_heating_index]:
-    #                                         storage_heaters = main_heating.add_storage_heaters()
-    #                                         storage_heaters_c = []
-    #                                         for storage_heater_index in range(len(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'])):
-    #                                             storage_heater = storage_heaters.add_storage_heater()
+                                # Main-Heating-Declared-Values                                 
 
-    #                                             # Number-Of-Heaters
-    #                                             try: 
-    #                                                 storage_heater.add_number_of_heaters().code = \
-    #                                                     str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index].pop('number_of_heaters'))
-    #                                             except KeyError: pass
+#                                 if True:
+#                                     # --- Storage-Heaters ---
+#                                     if 'storage_heaters' in j['data']['sap_heating']['main_heating_details'][main_heating_index]:
+#                                         storage_heaters = main_heating.add_storage_heaters()
+#                                         storage_heaters_c = []
+#                                         for storage_heater_index in range(len(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'])):
+#                                             storage_heater = storage_heaters.add_storage_heater()
 
-    #                                             # Index-Number
-    #                                             try: 
-    #                                                 storage_heater.add_index_number().code = \
-    #                                                     str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index].pop('index_number'))
-    #                                             except KeyError: pass
+#                                             # Number-Of-Heaters
+#                                             try: 
+#                                                 storage_heater.add_number_of_heaters().code = \
+#                                                     str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index].pop('number_of_heaters'))
+#                                             except KeyError: pass
 
-    #                                             # High-Heat-Retention
-    #                                             try: 
-    #                                                 storage_heater.add_high_heat_retention().code = \
-    #                                                     str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index].pop('high_heat_retention'))
-    #                                             except KeyError: pass
+#                                             # Index-Number
+#                                             try: 
+#                                                 storage_heater.add_index_number().code = \
+#                                                     str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index].pop('index_number'))
+#                                             except KeyError: pass
 
-    #                                             #
-    #                                             if len(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index]) == 0:
-    #                                                 storage_heaters_c.append(storage_heater_index)
-    #                                             else:
-    #                                                 print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                                                 raise Exception('j', 'data', 'sap_heating', 'main_heating_details', main_heating_index, 'storage_heaters', storage_heater_index, 
-    #                                                                 list(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index])[0])
-    #                                         for c1 in storage_heaters_c[::-1]: del j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][c1]
-    #                                         if len(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters']) == 0: del j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters']
+#                                             # High-Heat-Retention
+#                                             try: 
+#                                                 storage_heater.add_high_heat_retention().code = \
+#                                                     str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index].pop('high_heat_retention'))
+#                                             except KeyError: pass
 
-
-    # #                                 elif k3 == 'storage_heaters':  # 0000-4241-0922-8599-3963.json
-    # #                                     storage_heaters = main_heating.add_storage_heaters()
-    # #                                     for index2 in range(len(v3)):
-    # #                                         for k4, v4 in v3[index2].items():
-    # #                                             storage_heater = storage_heaters.add_storage_heater()
-    # #                                             if k4 == 'index_number':
-    # #                                                 storage_heater.add_index_number().code = str(v4)
-    # #                                             elif k4 == 'number_of_heaters':
-    # #                                                 storage_heater.add_number_of_heaters().code = str(v4)
-    # #                                             elif k4 == 'high_heat_retention':
-    # #                                                 storage_heater.add_high_heat_retention().code = str(v4)
-    # #                                             else:
-    # #                                                 raise Exception(f'{input_file} {k0} {k1} {k2} {index} {k3} {index2} {k4}')
-
-
-                                    # Emitter-Temperature
-    #                                 try: 
-    #                                     main_heating.add_emitter_temperature().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('emitter_temperature'))
-    #                                 except KeyError: pass
-
-                                    # MCS-Installed-Heat-Pump
-    #                                 try: 
-    #                                     main_heating.add_mcs_installed_heat_pump().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('mcs_installed_heat_pump'))
-    #                                 except KeyError: pass
-
-                                    # Central-Heating-Pump-Age
-    #                                 try: 
-    #                                     main_heating.add_central_heating_pump_age().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('central_heating_pump_age'))
-    #                                 except KeyError: pass
-
-                                    # Control-Index-Number
-
-                                    # Heating-Controller-Function
-
-                                    # Heating-Controller-Ecodesign-Class
-
-                                    # Heating-Controller-Manufacturer
-
-                                    # Heating-Controller-Model
+#                                             #
+#                                             if len(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index]) == 0:
+#                                                 storage_heaters_c.append(storage_heater_index)
+#                                             else:
+#                                                 print(etree.tostring(sap_report, pretty_print=True).decode())
+#                                                 raise Exception('j', 'data', 'sap_heating', 'main_heating_details', main_heating_index, 'storage_heaters', storage_heater_index, 
+#                                                                 list(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][storage_heater_index])[0])
+#                                         for c1 in storage_heaters_c[::-1]: del j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters'][c1]
+#                                         if len(j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters']) == 0: del j['data']['sap_heating']['main_heating_details'][main_heating_index]['storage_heaters']
 
 
+# #                                 elif k3 == 'storage_heaters':  # 0000-4241-0922-8599-3963.json
+# #                                     storage_heaters = main_heating.add_storage_heaters()
+# #                                     for index2 in range(len(v3)):
+# #                                         for k4, v4 in v3[index2].items():
+# #                                             storage_heater = storage_heaters.add_storage_heater()
+# #                                             if k4 == 'index_number':
+# #                                                 storage_heater.add_index_number().code = str(v4)
+# #                                             elif k4 == 'number_of_heaters':
+# #                                                 storage_heater.add_number_of_heaters().code = str(v4)
+# #                                             elif k4 == 'high_heat_retention':
+# #                                                 storage_heater.add_high_heat_retention().code = str(v4)
+# #                                             else:
+# #                                                 raise Exception(f'{input_file} {k0} {k1} {k2} {index} {k3} {index2} {k4}')
 
-                                    if len(j['data']['sap_heating']['main_heating_details'][main_heating_index]) == 0:
-                                        main_heating_details_c.append(main_heating_index)
-                                    else:
-                                        print(etree.tostring(sap_report, pretty_print=True).decode())
-                                        raise Exception('j', 'data', 'sap_heating', 'main_heating_details', main_heating_index, list(j['data']['sap_heating']['main_heating_details'][main_heating_index])[0])
-                                for c1 in main_heating_details_c[::-1]: del j['data']['sap_heating']['main_heating_details'][c1]
-                                if len(j['data']['sap_heating']['main_heating_details']) == 0: del j['data']['sap_heating']['main_heating_details']
-                                
+
+                                # Emitter-Temperature
+#                                 try: 
+#                                     main_heating.add_emitter_temperature().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('emitter_temperature'))
+#                                 except KeyError: pass
+
+                                # MCS-Installed-Heat-Pump
+#                                 try: 
+#                                     main_heating.add_mcs_installed_heat_pump().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('mcs_installed_heat_pump'))
+#                                 except KeyError: pass
+
+                                # Central-Heating-Pump-Age
+                                try: 
+                                    main_heating.add_central_heating_pump_age().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('central_heating_pump_age'))
+                                except KeyError: pass
+
+                                # Control-Index-Number
+
+                                # Heating-Controller-Function
+
+                                # Heating-Controller-Ecodesign-Class
+
+                                # Heating-Controller-Manufacturer
+
+                                # Heating-Controller-Model
+
+
+
+                                if len(j['data']['sap_heating']['main_heating_details'][main_heating_index]) == 0:
+                                    main_heating_details_c.append(main_heating_index)
+                                else:
+                                    print(etree.tostring(sap_report, pretty_print=True).decode())
+                                    raise Exception('j', 'data', 'sap_heating', 'main_heating_details', main_heating_index, list(j['data']['sap_heating']['main_heating_details'][main_heating_index])[0])
+                            for c1 in main_heating_details_c[::-1]: del j['data']['sap_heating']['main_heating_details'][c1]
+                            if len(j['data']['sap_heating']['main_heating_details']) == 0: del j['data']['sap_heating']['main_heating_details']
+                            
 
                     # SAP-Heating-Design-Water-Use
 
                     # Main-Heating-Systems-Interaction
+                    try: 
+                        sap_heating.add_main_heating_systems_interaction().code = str(j['data']['sap_heating'].pop('main_heating_systems_interaction'))
+                    except KeyError: pass
+
 
                     # Secondary-Heating-Declared-Values
 
@@ -1529,131 +1613,68 @@ def parse_sap_json(
                         raise Exception('j', 'data', 'sap_heating', list(j['data']['sap_heating'])[0])
 
 
- #         if True:
-    #             # --- SAP-Energy-Source ---
-    #             if 'sap_energy_source' in j['data']:
-    #                 sap_energy_source = sap_property_details.add_sap_energy_source()
+        if True:
+            # --- SAP-Energy-Source ---
+            if 'sap_energy_source' in j['data']:
+                sap_energy_source = sap_property_details.add_sap_energy_source()
+                # --- PV-Arrays ---
+                if 'pv_arrays' in j['data']['sap_energy_source']:
+                    pv_arrays = sap_energy_source.add_pv_arrays()
+                    pv_arrays_c = []
+                    for pv_array_index in range(len(j['data']['sap_energy_source']['pv_arrays'])):
+                        # --- PV-Array ---
+                        pv_array = pv_arrays.add_pv_array()
+                        # Peak-Power
+                        try: 
+                            pv_array.add_peak_power().code = str(j['data']['sap_energy_source']['pv_arrays'][pv_array_index].pop('peak_power'))
+                        except KeyError: pass
+                        # Orientation
+                        try: 
+                            pv_array.add_orientation().code = str(j['data']['sap_energy_source']['pv_arrays'][pv_array_index].pop('orientation'))
+                        except KeyError: pass
+                        # Pitch
+                        try: 
+                            pv_array.add_pitch().code = str(j['data']['sap_energy_source']['pv_arrays'][pv_array_index].pop('pitch'))
+                        except KeyError: pass
+                        # Overshading
+                        try: 
+                            pv_array.add_overshading().code = str(j['data']['sap_energy_source']['pv_arrays'][pv_array_index].pop('overshading'))
+                        except KeyError: pass
+
+                        # MSC-Certificate
+
+                        # MCS-Certificate-Reference
+
+                        # PV-Panel-Manufacturer-Name
+
+                        # Overshading-MCS
+                                        
+                        #
+                        if len(j['data']['sap_energy_source']['pv_arrays'][pv_array_index]) == 0:
+                            pv_arrays_c.append(pv_array_index)
+                        else:
+                            print(etree.tostring(sap_report, pretty_print=True).decode())
+                            raise Exception('j', 'data', 'sap_energy_source', 'pv_arrays', pv_array_index, 
+                                            list(j['data']['sap_energy_source']['pv_arrays'][pv_array_index])[0])
+                    #    
+                    for c1 in pv_arrays_c[::-1]: del j['data']['sap_energy_source']['pv_arrays'][c1]
+                    if len(j['data']['sap_energy_source']['pv_arrays']) == 0: del j['data']['sap_energy_source']['pv_arrays']
+                
+                
+
+
+                    # --- Wind-Turbines ---
 
     #                 if True:
+    #                     # --- Wind-Turbine ---
     #                     
-    #                             # --- PV-Arrays ---
-    #                             if 'pv_arrays' in j['data']['sap_energy_source']['photovoltaic_supply']:
-    #                                 c = []
-    #                                 for pv_array_index in range(len(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'])):
-    #                                     pv_arrays = photovoltaic_supply.add_pv_arrays()
-                                        # --- PV-Array ---
-    #                                     pv_array = pv_arrays.add_pv_array()
+                        # Wind-Turbine-Manufacturer-Name
 
-    #                                     # Peak-Power
-    #                                     try: 
-    #                                         pv_array.add_peak_power().code = str(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index].pop('peak_power'))
-    #                                     except KeyError: pass
+                        # Wind-Turbine-Certificate
 
-    #                                     # Orientation
-    #                                     try: 
-    #                                         pv_array.add_orientation().code = str(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index].pop('orientation'))
-    #                                     except KeyError: pass
+                        # Wind-Turbine-Rotor-Diameter
 
-    #                                     # Pitch
-    #                                     try: 
-    #                                         pv_array.add_pitch().code = str(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index].pop('pitch'))
-    #                                     except KeyError: pass
-
-    #                                     # Overshading
-    #                                     try: 
-    #                                         pv_array.add_overshading().code = str(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index].pop('overshading'))
-    #                                     except KeyError: pass
-
-                                        # MSC-Certificate
-
-                                        # MCS-Certificate-Reference
-
-                                        # PV-Panel-Manufacturer-Name
-                                        
-                                        # Overshading-MCS
-                                        
-    #                                     #
-    #                                     if len(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index]) == 0:
-    #                                         c.append(pv_array_index)
-    #                                     else:
-    #                                         print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                                         raise Exception('j', 'data', 'sap_energy_source', 'photovoltaic_supply', 'pv_arrays', pv_array_index, 
-    #                                                         list(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][pv_array_index])[0])
-    #                                 for c1 in c[::-1]: del j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays'][c1]
-    #                                 if len(j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays']) == 0: del j['data']['sap_energy_source']['photovoltaic_supply']['pv_arrays']
-
-    #                             # --- None-Or-No-Details ---
-    #                             if 'none_or_no_details' in j['data']['sap_energy_source']['photovoltaic_supply']:
-    #                                 none_or_no_details = photovoltaic_supply.add_none_or_no_details()
-    #                                 # Percent-Roof-Area
-    #                                 try: 
-    #                                     none_or_no_details.add_percent_roof_area().code = str(j['data']['sap_energy_source']['photovoltaic_supply']['none_or_no_details'].pop('percent_roof_area'))
-    #                                 except KeyError: pass
-
-    #                                 #
-    #                                 if len(j['data']['sap_energy_source']['photovoltaic_supply']['none_or_no_details']) == 0:
-    #                                     del j['data']['sap_energy_source']['photovoltaic_supply']['none_or_no_details']
-    #                                 else:
-    #                                     raise Exception('j', 'data', 'sap_energy_source', 'photovoltaic_supply', 'none_or_no_details', 
-    #                                                     list(j['data']['sap_energy_source']['photovoltaic_supply']['none_or_no_details'])[0])
-
-    #                         #
-    #                         if len(j['data']['sap_energy_source']['photovoltaic_supply']) == 0:
-    #                             del j['data']['sap_energy_source']['photovoltaic_supply']
-    #                         else:
-    #                             print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                             raise Exception('j', 'data', 'sap_energy_source', 'photovoltaic_supply', list(j['data']['sap_energy_source']['photovoltaic_supply'])[0])
-
-
-    #                 # Meter-Type
-    #                 try: 
-    #                     sap_energy_source.add_meter_type().code = str(j['data']['sap_energy_source'].pop('meter_type'))
-    #                 except KeyError: pass
-
-    #                 # Mains-Gas
-    #                 try: 
-    #                     sap_energy_source.add_mains_gas().code = str(j['data']['sap_energy_source'].pop('mains_gas'))
-    #                 except KeyError: pass
-
-    #                 # Electricity-Smart-Meter-Present
-    #                 try: 
-    #                     sap_energy_source.add_electricity_smart_meter_present().code = str(j['data']['sap_energy_source'].pop('electricity_smart_meter_present'))
-    #                 except KeyError: pass
-
-    #                 # Gas-Smart-Meter-Present
-    #                 try: 
-    #                     sap_energy_source.add_gas_smart_meter_present().code = str(j['data']['sap_energy_source'].pop('gas_smart_meter_present'))
-    #                 except KeyError: pass
-
-    #                 # Is-Dwelling-Export-Capable
-    #                 try: 
-    #                     sap_energy_source.add_is_dwelling_export_capable().code = str(j['data']['sap_energy_source'].pop('is_dwelling_export_capable'))
-    #                 except KeyError: pass
-
-    #                 # Wind-Turbine-Count
-    #                 try: 
-    #                     sap_energy_source.add_wind_turbines_count().code = str(j['data']['sap_energy_source'].pop('wind_turbines_count'))
-    #                 except KeyError: pass
-
-    #                 # Wind-Turbine-Terrian-Type
-    #                 try: 
-    #                     sap_energy_source.add_wind_turbines_terrain_type().code = str(j['data']['sap_energy_source'].pop('wind_turbines_terrain_type'))
-    #                 except KeyError: pass
-
-    #                 if True:
-    #                     # --- Wind-Turbine-Details
-    #                     if 'wind_turbine_details' in j['data']['sap_energy_source']:
-    #                         wind_turbine_details = sap_energy_source.add_wind_turbine_details()
-
-    #                         # Rotor-Diameter
-    #                         try: 
-    #                             wind_turbine_details.add_rotor_diameter().code = str(j['data']['sap_energy_source']['wind_turbine_details'].pop('rotor_diameter'))
-    #                         except KeyError: pass
-
-    #                         # Hub-Height
-    #                         try: 
-    #                             wind_turbine_details.add_hub_height().code = str(j['data']['sap_energy_source']['wind_turbine_details'].pop('hub_height'))
-    #                         except KeyError: pass
+                        # Wind-Turbine-Hub-Height
 
     #                         #
     #                         if len(j['data']['sap_energy_source']['wind_turbine_details']) == 0:
@@ -1662,69 +1683,26 @@ def parse_sap_json(
     #                             print(etree.tostring(sap_report, pretty_print=True).decode())
     #                             raise Exception('j', 'data', 'sap_energy_source', 'wind_turbine_details', list(j['data']['sap_energy_source']['wind_turbine_details'])[0])
 
-    
-    #                 # PV-Connection
-    #                 try: 
-    #                     sap_energy_source.add_pv_connection().code = str(j['data']['sap_energy_source'].pop('pv_connection'))
-    #                 except KeyError: pass
 
-    #                 # PV-Diverter
-    #                 try: 
-    #                     sap_energy_source.add_pv_diverter().code = str(j['data']['sap_energy_source'].pop('pv_diverter'))
-    #                 except KeyError: pass
+                    # Electricity-Tariff
+                    try: 
+                        sap_energy_source.add_electricity_tariff().code = str(j['data']['sap_energy_source'].pop('electricity_tariff'))
+                    except KeyError: pass
 
-    #                 # PV-Battery-Count
-    #                 try: 
-    #                     sap_energy_source.add_pv_battery_count().code = str(j['data']['sap_energy_source'].pop('pv_battery_count'))
-    #                 except KeyError: pass
+                    # Hydro-Electric-Generation
 
-    #                 if True:
-    #                     # --- PV-Batteries ---
-    #                     if 'pv_batteries' in j['data']['sap_energy_source']:
-    #                         pv_batteries = sap_energy_source.add_pv_batteries()
-    #                         pv_batteries_c = []
-    #                         for pv_battery_index in range(len(j['data']['sap_energy_source']['pv_batteries'])):
-                                
-    #                             # --- PV-Battery ---
-    #                             if 'pv_battery' in j['data']['sap_energy_source']['pv_batteries'][pv_battery_index]:
-    #                                 pv_battery = pv_batteries.add_pv_battery()
+                    # Hydro-Electric-Certificate
 
-    #                                 # Battery-Capacity
-    #                                 try: 
-    #                                     pv_battery.add_battery_capacity().code = str(j['data']['sap_energy_source']['pv_batteries'][pv_battery_index]['pv_battery'].pop('battery_capacity'))
-    #                                 except KeyError: pass
+                    # Hydro-Electric-Generation-Months
 
-    #                                 #
-    #                                 if len(j['data']['sap_energy_source']['pv_batteries'][pv_battery_index]['pv_battery']) == 0:
-    #                                     del j['data']['sap_energy_source']['pv_batteries'][pv_battery_index]['pv_battery']
-    #                                 else:
-    #                                     raise Exception('j', 'data', 'sap_energy_source', 'pv_batteries', pv_battery_index, 'pv_battery', 
-    #                                                     list(j['data']['sap_energy_source']['pv_batteries'][pv_battery_index]['pv_battery'])[0])
+                    # Is-Hydro-Output-Connected-To-Dwelling-Meter
 
-    #                             #
-    #                             if len(j['data']['sap_energy_source']['pv_batteries'][pv_battery_index]) == 0:
-    #                                 pv_batteries_c.append(pv_battery_index)
-    #                             else:
-    #                                 print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                                 raise Exception('j', 'data', 'sap_energy_source', 'pv_batteries', pv_battery_index, list(j['data']['sap_energy_source']['pv_batteries'][pv_battery_index])[0])
-    #                         for c1 in pv_batteries_c[::-1]: del j['data']['sap_energy_source']['pv_batteries'][c1]
-    #                         if len(j['data']['sap_energy_source']['pv_batteries']) == 0: del j['data']['sap_energy_source']['pv_batteries']
 
-    #                 # Hydro-Electric-Generation
-    #                 try: 
-    #                     sap_energy_source.add_hydro_electric_generation().code = str(j['data']['sap_energy_source'].pop('hydro_electric_generation'))
-    #                 except KeyError: pass
-
-    #                 # Is-Hydro-Output-Connected-To-Dwelling-Meter
-    #                 try: 
-    #                     sap_energy_source.add_is_hydro_output_connected_to_dwelling_meter().code = str(j['data']['sap_energy_source'].pop('is_hydro_output_connected_to_dwelling_meter'))
-    #                 except KeyError: pass
-
-    #                 #
-    #                 if len(j['data']['sap_energy_source']) == 0:
-    #                     del j['data']['sap_energy_source']
-    #                 else:
-    #                     raise Exception('j', 'data', 'sap_energy_source', list(j['data']['sap_energy_source'])[0])
+                #
+                if len(j['data']['sap_energy_source']) == 0:
+                    del j['data']['sap_energy_source']
+                else:
+                    raise Exception('j', 'data', 'sap_energy_source', list(j['data']['sap_energy_source'])[0])
 
     #         if True:
     #             # --- SAP-Building-Parts ---
@@ -1747,10 +1725,48 @@ def parse_sap_json(
     #                             sap_building_part.add_identifier().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('identifier'))
     #                         except KeyError: pass
 
+                            # Construction-Year
+
     #                         # Construction-Age-Band
     #                         try: 
     #                             sap_building_part.add_construction_age_band().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('construction_age_band'))
     #                         except KeyError: pass
+
+                            # --- SAP-Openings ---
+
+                                # --- SAP-Opening ---
+
+                                    # Name
+
+                                    # Type
+
+                                    # Location
+
+                                    # Orientation
+
+                                    # Width
+
+                                    # Height
+
+                                    # Pitch
+
+                            # --- SAP-Roofs ---
+
+                                # --- SAP-Roof ---
+
+                                    # Name
+
+                                    # Description
+
+                                    # Roof-Type
+
+                                    # Total-Roof-Area
+
+                                    # U-Value
+
+                                    # Kappa-Value
+
+
 
     #                         if True:
     #                             # --- SAP-Floor-Dimensions ---
@@ -1758,7 +1774,24 @@ def parse_sap_json(
     #                                 sap_floor_dimensions = sap_building_part.add_sap_floor_dimensions()
     #                                 sap_floor_dimensions_c = []
     #                                 for sap_floor_dimension_index in range(len(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'])):
+                                        # --- SAP-Floor-Dimension ---
     #                                     sap_floor_dimension = sap_floor_dimensions.add_sap_floor_dimension()
+
+                                        # Name
+
+                                        # Storey
+
+                                        # Description
+
+                                        # Floor-Type
+
+                                        # Total-Floor-Area
+    #                                     try: 
+    #                                         sap_floor_dimension.add_total_floor_area().code = \
+    #                                             str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('total_floor_area'))
+    #                                     except KeyError: pass
+
+                                        # Storey-Height
 
     #                                     # Heat-Loss-Perimeter
     #                                     try: 
@@ -1766,41 +1799,11 @@ def parse_sap_json(
     #                                             str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('heat_loss_perimeter'))
     #                                     except KeyError: pass
 
-    #                                     # Room-Height
-    #                                     try: 
-    #                                         sap_floor_dimension.add_room_height().code = \
-    #                                             str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('room_height'))
-    #                                     except KeyError: pass
+                                        # U-Value
 
-    #                                     # Total-Floor-Area
-    #                                     try: 
-    #                                         sap_floor_dimension.add_total_floor_area().code = \
-    #                                             str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('total_floor_area'))
-    #                                     except KeyError: pass
+                                        # Kappa-Value
 
-    #                                     # Floor
-    #                                     try: 
-    #                                         sap_floor_dimension.add_floor().code = \
-    #                                             str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('floor'))
-    #                                     except KeyError: pass
-
-    #                                     # Floor-Construction
-    #                                     try: 
-    #                                         sap_floor_dimension.add_floor_construction().code = \
-    #                                             str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('floor_construction'))
-    #                                     except KeyError: pass
-
-    #                                     # Floor-Insulation
-    #                                     try: 
-    #                                         sap_floor_dimension.add_floor_insulation().code = \
-    #                                             str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('floor_insulation'))
-    #                                     except KeyError: pass
-
-    #                                     # Party-Wall-Length
-    #                                     try: 
-    #                                         sap_floor_dimension.add_party_wall_length().code = \
-    #                                             str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('party_wall_length'))
-    #                                     except KeyError: pass
+                                        # Kappa-Value-From-Below
 
     #                                     #
     #                                     if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index]) == 0:
@@ -1813,1161 +1816,372 @@ def parse_sap_json(
     #                                 if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions']) == 0: 
     #                                     del j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions']
 
-    #                         # Floor-U-Value
-    #                         try: 
-    #                             sap_building_part.add_floor_u_value().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('floor_u_value'))
-    #                         except KeyError: pass
-
-    #                         # Floor-Insulation-Thickness
-    #                         try: 
-    #                             sap_building_part.add_floor_insulation_thickness().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('floor_insulation_thickness'))
-    #                         except KeyError: pass
-
-    #                         # Floor-Heat-Loss
-    #                         try: 
-    #                             sap_building_part.add_floor_heat_loss().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('floor_heat_loss'))
-    #                         except KeyError: pass
-
-    #                         # Roof-Construction
-    #                         try: 
-    #                             sap_building_part.add_roof_construction().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('roof_construction'))
-    #                         except KeyError: pass
-
-    #                         # Roof-Insulation-Location
-    #                         try: 
-    #                             sap_building_part.add_roof_insulation_location().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('roof_insulation_location'))
-    #                         except KeyError: pass
-
-    #                         # Roof-U-Value
-    #                         try: 
-    #                             sap_building_part.add_roof_u_value().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('roof_u_value'))
-    #                         except KeyError: pass
-
-    #                         # Roof-Insulation-Thickness
-    #                         try: 
-    #                             sap_building_part.add_roof_insulation_thickness().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('roof_insulation_thickness'))
-    #                         except KeyError: pass
-
-    #                         # Rafter-Insulation-Thickness
-    #                         try: 
-    #                             sap_building_part.add_rafter_insulation_thickness().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('rafter_insulation_thickness'))
-    #                         except KeyError: pass
-
-    #                         # Flat-Roof-Insulation-Thickness
-    #                         try: 
-    #                             sap_building_part.add_flat_roof_insulation_thickness().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('flat_roof_insulation_thickness'))
-    #                         except KeyError: pass
-
-    #                         # Sloping-Ceiling-Insulation-Thickness
-    #                         try: 
-    #                             sap_building_part.add_sloping_ceiling_insulation_thickness().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('sloping_ceiling_insulation_thickness'))
-    #                         except KeyError: pass
-
-    #                         # Wall-Construction
-    #                         try: 
-    #                             sap_building_part.add_wall_construction().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_construction'))
-    #                         except KeyError: pass
-
-    #                         # Wall-Insulation-Type
-    #                         try: 
-    #                             sap_building_part.add_wall_insulation_type().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_insulation_type'))
-    #                         except KeyError: pass
-
-    #                         # Wall-Thickness-Measured
-    #                         try: 
-    #                             sap_building_part.add_wall_thickness_measured().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_thickness_measured'))
-    #                         except KeyError: pass
-
-    #                         # Wall-Thickness
-    #                         try: 
-    #                             sap_building_part.add_wall_thickness().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_thickness'))
-    #                         except KeyError: pass
-
-    #                         # Wall-Dry-Lined
-    #                         try: 
-    #                             sap_building_part.add_wall_dry_lined().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_dry_lined'))
-    #                         except KeyError: pass
-
-    #                         # Wall-U-Value
-    #                         try: 
-    #                             sap_building_part.add_wall_u_value().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_u_value'))
-    #                         except KeyError: pass
-
-    #                         # Wall-Insulation-Thickness
-    #                         try: 
-    #                             sap_building_part.add_wall_insulation_thickness().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_insulation_thickness'))
-    #                         except KeyError: pass
-
-    #                         # Wall-Insulation-Thickness-Measured
-    #                         try: 
-    #                             sap_building_part.add_wall_insulation_thickness_measured().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_insulation_thickness_measured'))
-    #                         except KeyError: pass
-
-    #                         # Wall-Insulation-Thermal-Conductivity
-    #                         try: 
-    #                             sap_building_part.add_wall_insulation_thermal_conductivity().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('wall_insulation_thermal_conductivity'))
-    #                         except KeyError: pass
-
-    #                         if True:
-    #                             # --- SAP-Room-In-Roof ---
-    #                             if 'sap_room_in_roof' in j['data']['sap_building_parts'][sap_building_part_index]:
-    #                                 sap_room_in_roof = sap_building_part.add_sap_room_in_roof()
-
-    #                                 # Floor-Area
-    #                                 try: 
-    #                                     sap_room_in_roof.add_floor_area().code = str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof'].pop('floor_area'))
-    #                                 except KeyError: pass
-
-    #                                 # Construction-Age-Band
-    #                                 try: 
-    #                                     sap_room_in_roof.add_construction_age_band().code = str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof'].pop('construction_age_band'))
-    #                                 except KeyError: pass
-
-    #                                 if True:
-    #                                     # --- Room-In-Roof-Details ---
-    #                                     if 'room_in_roof_details' in j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']:
-    #                                         room_in_roof_details = sap_room_in_roof.add_room_in_roof_details()
-
-    #                                         # Flat-Ceiling-Length-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_length_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_length_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Height-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_height_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_height_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-U-Value-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_u_value_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_u_value_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Insulation-Thickness-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_insulation_thickness_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_insulation_thickness_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Insulation-Type-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_insulation_type_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_insulation_type_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Insulation-Location-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_insulation_location_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_insulation_location_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Length-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_length_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_length_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Height-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_height_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_height_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-U-Value-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_u_value_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_u_value_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Insulation-Thickness-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_insulation_thickness_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_insulation_thickness_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Insulation-Type-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_insulation_type_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_insulation_type_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Flat-Ceiling-Insulation-Location-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_flat_ceiling_insulation_location_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('flat_ceiling_insulation_location_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-Length-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_length_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_length_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-Height-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_height_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_height_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-U-Value-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_u_value_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_u_value_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-Insulation-Thickness-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_insulation_thickness_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_insulation_thickness_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-Insulation-Type-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_insulation_type_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_insulation_type_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-Length-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_length_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_length_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-Height-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_height_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_height_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-U-Value-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_u_value_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_u_value_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-Insulation-Thickness-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_insulation_thickness_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_insulation_thickness_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Stud-Wall-Insulation-Type-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_stud_wall_insulation_type_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('stud_wall_insulation_type_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-Length-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_length_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_length_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-Height-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_height_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_height_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-U-Value-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_u_value_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_u_value_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-Insulation-Thickness-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_insulation_thickness_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_insulation_thickness_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-Insulation-Type-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_insulation_type_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_insulation_type_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-Length-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_length_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_length_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-Height-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_height_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_height_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-U-Value-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_u_value_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_u_value_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-Insulation-Thickness-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_insulation_thickness_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_insulation_thickness_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Slope-Insulation-Type-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_slope_insulation_type_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('slope_insulation_type_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Type-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_gable_wall_type_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('gable_wall_type_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Length-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_gable_wall_length_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('gable_wall_length_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Height-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_gable_wall_height_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('gable_wall_height_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-U-Value-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_gable_wall_u_value_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('gable_wall_u_value_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Type-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_gable_wall_type_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('gable_wall_type_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Length-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_gable_wall_length_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('gable_wall_length_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Height-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_gable_wall_height_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('gable_wall_height_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-U-Value-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_gable_wall_u_value_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('gable_wall_u_value_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-Length-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_common_wall_length_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('common_wall_length_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-Height-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_common_wall_height_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('common_wall_height_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-U-Value-1
-    #                                         try: 
-    #                                             room_in_roof_details.add_common_wall_u_value_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('common_wall_u_value_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-Length-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_common_wall_length_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('common_wall_length_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-Height-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_common_wall_height_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('common_wall_height_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-U-Value-2
-    #                                         try: 
-    #                                             room_in_roof_details.add_common_wall_u_value_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'].pop('common_wall_u_value_2'))
-    #                                         except KeyError: pass
-
-    #                                         #
-    #                                         if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details']) == 0:
-    #                                             del j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details']
-    #                                         else:
-    #                                             raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, 'sap_room_in_roof', 'room_in_roof_details',
-    #                                                             list(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_details'])[0])
-                                            
-
-    #                                 if True:
-    #                                     # --- Room-In-Roof-Type-1 ---
-    #                                     if 'room_in_roof_type_1' in j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']:
-    #                                         room_in_roof_type_1 = sap_room_in_roof.add_room_in_roof_type_1()
-
-    #                                         # Gable-Wall-Length-1
-    #                                         try: 
-    #                                             room_in_roof_type_1.add_gable_wall_length_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_1'].pop('gable_wall_length_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Type-1
-    #                                         try: 
-    #                                             room_in_roof_type_1.add_gable_wall_type_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_1'].pop('gable_wall_type_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Length-2
-    #                                         try: 
-    #                                             room_in_roof_type_1.add_gable_wall_length_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_1'].pop('gable_wall_length_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Type-2
-    #                                         try: 
-    #                                             room_in_roof_type_1.add_gable_wall_type_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_1'].pop('gable_wall_type_2'))
-    #                                         except KeyError: pass
-
-    #                                         #
-    #                                         if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_1']) == 0:
-    #                                             del j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_1']
-    #                                         else:
-    #                                             raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, 'sap_room_in_roof', 'room_in_roof_type_1',
-    #                                                             list(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_1'])[0])
-                                            
-    #                                 if True:
-    #                                     # --- Room-In-Roof-Type-2 ---
-    #                                     if 'room_in_roof_type_2' in j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']:
-    #                                         room_in_roof_type_2 = sap_room_in_roof.add_room_in_roof_type_2()
-
-    #                                         # Gable-Wall-Length-1
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_gable_wall_length_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('gable_wall_length_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Height-1
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_gable_wall_height_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('gable_wall_height_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Type-1
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_gable_wall_type_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('gable_wall_type_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Length-2
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_gable_wall_length_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('gable_wall_length_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Height-2
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_gable_wall_height_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('gable_wall_height_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Gable-Wall-Type-2
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_gable_wall_type_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('gable_wall_type_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-Length-1
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_common_wall_length_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('common_wall_length_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-Height-1
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_common_wall_height_1().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('common_wall_height_1'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-Length-2
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_common_wall_length_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('common_wall_length_2'))
-    #                                         except KeyError: pass
-
-    #                                         # Common-Wall-Height-2
-    #                                         try: 
-    #                                             room_in_roof_type_2.add_common_wall_height_2().code = \
-    #                                                 str(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'].pop('common_wall_height_2'))
-    #                                         except KeyError: pass
-
-    #                                         #
-    #                                         if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2']) == 0:
-    #                                             del j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2']
-    #                                         else:
-    #                                             raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, 'sap_room_in_roof', 'room_in_roof_type_2',
-    #                                                             list(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']['room_in_roof_type_2'])[0])
-                                            
-    #                                 #
-    #                                 if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']) == 0:
-    #                                     del j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof']
-    #                                 else:
-    #                                     print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                                     raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, 'sap_room_in_roof', 
-    #                                                     list(j['data']['sap_building_parts'][sap_building_part_index]['sap_room_in_roof'])[0])
-
-
-    #                         if True:
-    #                             # --- SAP-Alternative-Wall-1 ---
-    #                             if 'sap_alternative_wall_1' in j['data']['sap_building_parts'][sap_building_part_index]:
-    #                                 sap_alternative_wall_1 = sap_building_part.add_sap_alternative_wall_1()
-
-    #                                 # Wall-Construction
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_construction().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_construction'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Insulation-Type
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_insulation_type().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_insulation_type'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Area
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_area().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_area'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Thickness-Measured
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_thickness_measured().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_thickness_measured'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Thickness
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_thickness().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_thickness'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-U-Value
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_u_value().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_u_value'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Insulation-Thickness
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_insulation_thickness().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_insulation_thickness'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Insulation-Thickness-Measured
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_insulation_thickness_measured().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_insulation_thickness_measured'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Insulation-Thermal-Conductivity
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_insulation_thermal_conductivity().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_insulation_thermal_conductivity'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Dry-Lined
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_wall_dry_lined().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('wall_dry_lined'))
-    #                                 except KeyError: pass
-
-    #                                 # Sheltered-Wall
-    #                                 try: 
-    #                                     sap_alternative_wall_1.add_sheltered_wall().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'].pop('sheltered_wall'))
-    #                                 except KeyError: pass
-
-    #                                 #
-    #                                 if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1']) == 0:
-    #                                     del j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1']
-    #                                 else:
-    #                                     print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                                     raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, 'sap_alternative_wall_1', 
-    #                                                     list(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_1'])[0])
-
-
-    #                         if True:
-    #                             # --- SAP-Alternative-Wall-2 ---
-    #                             if 'sap_alternative_wall_2' in j['data']['sap_building_parts'][sap_building_part_index]:
-    #                                 sap_alternative_wall_2 = sap_building_part.add_sap_alternative_wall_2()
-
-    #                                 # Wall-Construction
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_construction().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_construction'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Insulation-Type
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_insulation_type().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_insulation_type'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Area
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_area().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_area'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Thickness-Measured
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_thickness_measured().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_thickness_measured'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Insulation-Thermal-Conductivity
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_insulation_thermal_conductivity().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_insulation_thermal_conductivity'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Thickness
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_thickness().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_thickness'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Insulation-Thickness
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_insulation_thickness().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_insulation_thickness'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Insulation-Thickness-Measured
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_insulation_thickness_measured().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_insulation_thickness_measured'))
-    #                                 except KeyError: pass
-
-    #                                 # Wall-Dry-Lined
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_wall_dry_lined().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('wall_dry_lined'))
-    #                                 except KeyError: pass
-
-    #                                 # Sheltered-Wall
-    #                                 try: 
-    #                                     sap_alternative_wall_2.add_sheltered_wall().code = \
-    #                                         str(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'].pop('sheltered_wall'))
-    #                                 except KeyError: pass
-
-    #                                 #
-    #                                 if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2']) == 0:
-    #                                     del j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2']
-    #                                 else:
-    #                                     print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                                     raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, 'sap_alternative_wall_2', 
-    #                                                     list(j['data']['sap_building_parts'][sap_building_part_index]['sap_alternative_wall_2'])[0])
-
-    #                         # Party-Wall-Construction
-    #                         try: 
-    #                             sap_building_part.add_party_wall_construction().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('party_wall_construction'))
-    #                         except KeyError: pass
-
-    #                     else:
-    #                         # --- SAP-Integral-Conservatory ---
-    #                         sap_integral_conservatory = sap_building_parts.add_sap_integral_conservatory()
-
-    #                         # Double-Glazed
-    #                         try: 
-    #                             sap_integral_conservatory.add_double_glazed().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('double_glazed'))
-    #                         except KeyError: pass
-
-    #                         # Floor-Area
-    #                         try: 
-    #                             sap_integral_conservatory.add_floor_area().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('floor_area'))
-    #                         except KeyError: pass
-
-    #                         # Room-Height
-    #                         try: 
-    #                             sap_integral_conservatory.add_room_height().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('room_height'))
-    #                         except KeyError: pass
-
-    #                         # Glazed-Perimeter
-    #                         try: 
-    #                             sap_integral_conservatory.add_glazed_perimeter().code = str(j['data']['sap_building_parts'][sap_building_part_index].pop('glazed_perimeter'))
-    #                         except KeyError: pass
-
-    #                     #
-    #                     if len(j['data']['sap_building_parts'][sap_building_part_index]) == 0:
-    #                         c.append(sap_building_part_index)
-    #                     else:
-    #                         print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                         raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, list(j['data']['sap_building_parts'][sap_building_part_index])[0])
-    #                 for c1 in c[::-1]: del j['data']['sap_building_parts'][c1]
-    #                 if len(j['data']['sap_building_parts']) == 0: del j['data']['sap_building_parts']
-
-            # SAP-Opening-Types
-
+                            # --- SAP-Thermal-Bridges ---
+
+                                # Thermal-Bridge-Code
+
+                                # User-Defined-Y-Value
+
+                                # Calculation-Reference
+
+                                # --- SAP-Thermal-Bridge ---
+
+                                    # Thermal-Bridge-Type
+
+                                    # Length
+
+                                    # Psi-Value
+
+                                    # Psi-Value-Source
+
+                                    # Psi-Value-Calculation-Reference
+
+                            # --- SAP-Walls ---
+
+                                # --- SAP_Wall ---
+
+                                    # Name
+
+                                    # Description
+
+                                    # Wall-Type
+
+                                    # Total-Wall-Area
+
+                                    # U-Value
+
+                                    # Is-Curtain-Walling
+
+                                    # Kappa-Value
+
+
+        if True:
+            # --- SAP-Opening-Types ---
+            if 'sap_opening_types' in j['data']:
+                sap_opening_types = sap_property_details.add_sap_opening_types()
+                sap_opening_types_c = []
+                for sap_opening_index in range(len(j['data']['sap_opening_types'])):
+                    # --- SAP-Opening-Type ---
+                    sap_opening_type = sap_opening_types.add_sap_opening_type()
+                    # Name
+                    try: 
+                        sap_opening_type.add_name().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('name'))
+                    except KeyError: pass
+                    # Description
+                    try: 
+                        sap_opening_type.add_description().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('description'))
+                    except KeyError: pass
+                    # Data-Source
+                    try: 
+                        sap_opening_type.add_data_source().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('data_source'))
+                    except KeyError: pass
+                    # Type
+                    try: 
+                        sap_opening_type.add_type().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('type'))
+                    except KeyError: pass
+                    # Glazing-Type
+                    try: 
+                        sap_opening_type.add_glazing_type().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('glazing_type'))
+                    except KeyError: pass
+                    # Glazing-Gap
+                    # IsArgonFilled
+                    try: 
+                        sap_opening_type.add_isargonfilled().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('isargonfilled'))
+                    except KeyError: pass
+                    # IsKryptonFilled
+                    # Frame-Type
+                    # Solar-Transmittance
+                    try: 
+                        sap_opening_type.add_solar_transmittance().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('solar_transmittance'))
+                    except KeyError: pass
+                    # Frame-Factor
+                    try: 
+                        sap_opening_type.add_frame_factor().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('frame_factor'))
+                    except KeyError: pass
+                    # U-Value
+                    try: 
+                        sap_opening_type.add_u_value().code = str(j['data']['sap_opening_types'][sap_opening_index].pop('u_value'))
+                    except KeyError: pass
+
+                    if len(j['data']['sap_opening_types'][sap_opening_index]) == 0:
+                        sap_opening_types_c.append(sap_opening_index)
+                    else:
+                        print(etree.tostring(sap_report, pretty_print=True).decode())
+                        raise Exception('j', 'data', 'sap_opening_types', sap_opening_index, list(j['data']['sap_opening_types'][sap_opening_index])[0])
+                #    
+                for c1 in sap_opening_types_c[::-1]: del j['data']['sap_opening_types'][c1]
+                if len(j['data']['sap_opening_types']) == 0: del j['data']['sap_opening_types']
+                
+            
+
+        if True:
             # --- SAP-Ventilation ---
+            if 'sap_ventilation' in j['data']:
+                sap_ventilation = sap_property_details.add_sap_ventilation()
+                # Closed-Flues-Count
+                try: 
+                    sap_ventilation.add_closed_flues_count().code = str(j['data']['sap_ventilation'].pop('closed_flues_count'))
+                except KeyError: pass
+                # Open-Flues-Count
+                try: 
+                    sap_ventilation.add_open_flues_count().code = str(j['data']['sap_ventilation'].pop('open_flues_count'))
+                except KeyError: pass
+                # Boilers-Flues-Count
+                try: 
+                    sap_ventilation.add_boilers_flues_count().code = str(j['data']['sap_ventilation'].pop('boilers_flues_count'))
+                except KeyError: pass
+                # Other-Flues-Count
+                try: 
+                    sap_ventilation.add_other_flues_count().code = str(j['data']['sap_ventilation'].pop('other_flues_count'))
+                except KeyError: pass
+                # Open-Chimneys-Count
+                try: 
+                    sap_ventilation.add_open_chimneys_count().code = str(j['data']['sap_ventilation'].pop('open_chimneys_count'))
+                except KeyError: pass
+                # Blocked-Chimneys-Count
+                try: 
+                    sap_ventilation.add_blocked_chimneys_count().code = str(j['data']['sap_ventilation'].pop('blocked_chimneys_count'))
+                except KeyError: pass
+
+                # Fans-Vent-Count
+
+                # Flueless-Gas-Fire-Count
+                try: 
+                    sap_ventilation.add_flueless_gas_fires_count().code = str(j['data']['sap_ventilation'].pop('flueless_gas_fires_count'))
+                except KeyError: pass
+                # Pressure-Test
+                try: 
+                    sap_ventilation.add_pressure_test().code = str(j['data']['sap_ventilation'].pop('pressure_test'))
+                except KeyError: pass
+        
+        #         # Pressure-Test-Certificate-Number
+        #         try: 
+        #             sap_ventilation.add_pressure_test_certificate_number().code = str(j['data']['sap_ventilation'].pop('pressure_test_certificate_number'))
+        #         except KeyError: pass
+
+                # Air-Permeability
+                try: 
+                    sap_ventilation.add_air_permeability().code = str(j['data']['sap_ventilation'].pop('air_permeability'))
+                except KeyError: pass
+                # Ground-Floor-Type
+
+                # Wall-Type
+                try: 
+                    sap_ventilation.add_wall_type().code = str(j['data']['sap_ventilation'].pop('wall_type'))
+                except KeyError: pass
+                # Has-Draught-Lobby
+                try: 
+                    sap_ventilation.add_has_draught_lobby().code = str(j['data']['sap_ventilation'].pop('has_draught_lobby'))
+                except KeyError: pass
+
+                # DraughtStripping
+
+                # Sheltered-Sides-Count
+                try: 
+                    sap_ventilation.add_sheltered_sides_count().code = str(j['data']['sap_ventilation'].pop('sheltered_sides_count'))
+                except KeyError: pass
+                # Ventilation-Type
+                try: 
+                    sap_ventilation.add_ventilation_type().code = str(j['data']['sap_ventilation'].pop('ventilation_type'))
+                except KeyError: pass
+                # Mechanical-Ventilation-Data-Source
+                try: 
+                    sap_ventilation.add_mechanical_ventilation_data_source().code = str(j['data']['sap_ventilation'].pop('mechanical_ventilation_data_source'))
+                except KeyError: pass
+                # Mechanical-Vent-System-Index-Number
+                try: 
+                    sap_ventilation.add_mechanical_vent_system_index_number().code = str(j['data']['sap_ventilation'].pop('mechanical_vent_system_index_number'))
+                except KeyError: pass
+
+                # Mechanical-Vent-Commissioning-Certificate-Number
+
+                # Mechanical-Vent-Installation-Engineer
+
+                # Mechanical-Vent-System-Make-Model
+
+                # Wet-Rooms-Count
+                try: 
+                    sap_ventilation.add_wet_rooms_count().code = str(j['data']['sap_ventilation'].pop('wet_rooms_count'))
+                except KeyError: pass
+
+                # Mechanical-Vent-Specific-Fan-Power
+
+                # Mechanical-Vent-Heat-Recovery-Efficiency
+
+                # Mechanical-Vent-Duct-Type
+                try: 
+                    sap_ventilation.add_mechanical_vent_duct_type().code = str(j['data']['sap_ventilation'].pop('mechanical_vent_duct_type'))
+                except KeyError: pass
+
+                # Mechanical-Vent-Duct-Insulation
+
+                # Mechanical-Vent-Duct-Insulation-Level
+                try: 
+                    sap_ventilation.add_mechanical_vent_duct_insulation_level().code = str(j['data']['sap_ventilation'].pop('mechanical_vent_duct_insulation_level'))
+                except KeyError: pass
+
+                # Mechanical-Vent-Duct-Placement
+                try: 
+                    sap_ventilation.add_mechanical_vent_duct_placement().code = str(j['data']['sap_ventilation'].pop('mechanical_vent_duct_placement'))
+                except KeyError: pass
+
+                # Mechanical-Vent-Measured-Installation
+
+                # Kitchen-Room-Fans-Count
+
+                # Kitchen-Room-Fans-Specific-Power
+
+                # Non-Kitchen-Room-Fans-Count
+
+                # Non-Kitchen-Room-Fans-Specific-Power
+
+                # Kitchen-Duct-Fans-Count
+
+                # Kitchen-Duct-Fans-Specific-Power
+
+                # Non-Kitchen-Duct-Fans-Count
+
+                # Non-Kitchen-Duct-Fans-Specific-Power
+
+                # Kitchen-Wall-Fans-Count
+
+                # Kitchen-Wall-Fans-Specific-Power
+
+                # Non-Kitchen-Wall-Fans-Count
+
+                # Non-Kitchen-Wall-Fans-Specific-Power
+
+                # Extract-Fans-Count
+                try: 
+                    sap_ventilation.add_extract_fans_count().code = str(j['data']['sap_ventilation'].pop('extract_fans_count'))
+                except KeyError: pass
+
+                # PSV-Count
+                try: 
+                    sap_ventilation.add_psv_count().code = str(j['data']['sap_ventilation'].pop('psv_count'))
+                except KeyError: pass
+
+                # Is-Mechanical-Vent-Approved-Installer-Scheme
+                try: 
+                    sap_ventilation.add_is_mechanical_vent_approved_installer_scheme().code = str(j['data']['sap_ventilation'].pop('is_mechanical_vent_approved_installer_scheme'))
+                except KeyError: pass
+
+                # Mechanical-Vent-Ducts-Index-Number
+
+                if len(j['data']['sap_ventilation']) == 0:
+                    del j['data']['sap_ventilation']
+                else:
+                    raise Exception('j', 'data', 'sap_ventilation', list(j['data']['sap_ventilation'])[0])
+
+        if True:
+            # --- SAP-Lighting ---
+            if 'sap_lighting' in j['data']:
+                sap_lighting = sap_property_details.add_sap_lighting()
+                # --- Fixed-Lights ---
+                if len(j['data']['sap_lighting']) > 0:
+                    fixed_lights = sap_lighting.add_fixed_lights()
+                #
+                fixed_light_c = []
+                for fixed_light_index in range(len(j['data']['sap_lighting'])):
+                    if isinstance(j['data']['sap_lighting'][fixed_light_index], list):
+                        fixed_light_c2 = []
+                        for fixed_light_index2 in range(len(j['data']['sap_lighting'][fixed_light_index])):
+                            # --- Fixed-Light ---
+                            fixed_light = fixed_lights.add_fixed_light()
+                            # Lighting-Efficacy
+                            try: 
+                                fixed_light.add_lighting_efficacy().code = str(j['data']['sap_lighting'][fixed_light_index][fixed_light_index2].pop('lighting_efficacy'))
+                            except KeyError: pass
+                            # Lighting-Power
+                            try: 
+                                fixed_light.add_lighting_power().code = str(j['data']['sap_lighting'][fixed_light_index][fixed_light_index2].pop('lighting_power'))
+                            except KeyError: pass
+                            # Lighting-Outlets
+                            try: 
+                                fixed_light.add_lighting_outlets().code = str(j['data']['sap_lighting'][fixed_light_index][fixed_light_index2].pop('lighting_outlets'))
+                            except KeyError: pass
+                            #
+                            if len(j['data']['sap_lighting'][fixed_light_index][fixed_light_index2]) == 0:
+                                fixed_light_c2.append(fixed_light_index2)
+                            else:
+                                print(etree.tostring(sap_report, pretty_print=True).decode())
+                                raise Exception('j', 'data', 'sap_lighting', fixed_light_index, fixed_light_index2, list(j['data']['sap_lighting'][fixed_light_index][fixed_light_index2])[0])
+                        for c1 in fixed_light_c2[::-1]: del j['data']['sap_lighting'][fixed_light_index][c1]
+                    #
+                    if len(j['data']['sap_lighting'][fixed_light_index]) == 0:
+                        fixed_light_c.append(fixed_light_index)
+                    else:
+                        print(etree.tostring(sap_report, pretty_print=True).decode())
+                        raise Exception('j', 'data', 'sap_lighting', fixed_light_index, list(j['data']['sap_lighting'][fixed_light_index])[0])
+                for c1 in fixed_light_c[::-1]: del j['data']['sap_lighting'][c1]
+                if len(j['data']['sap_lighting']) == 0: del j['data']['sap_lighting']
+                    
+
+            # --- SAP-Deselected-Improvements ---
+
+                # --- Deselected-Improvement-Measure ---
+
+                # Deselected-Improvement-Measure
+
+        if True:
+            # --- SAP-Flat-Details ---
+            if 'sap_flat_details' in j['data']:
+                sap_flat_details = sap_property_details.add_sap_flat_details()
+                # Level
+                try: 
+                    sap_flat_details.add_level().code = str(j['data']['sap_flat_details'].pop('level'))
+                except KeyError: pass
+                # Storeys
+                try: 
+                    sap_flat_details.add_storeys().code = str(j['data']['sap_flat_details'].pop('storeys'))
+                except KeyError: pass
+                #
+                if len(j['data']['sap_flat_details']) == 0:
+                    del j['data']['sap_flat_details']
+                else:
+                    raise Exception('j', 'data', 'sap_flat_details', list(j['data']['sap_flat_details'])[0])
 
 
-    #         # Extensions-Count
-    #         try: 
-    #             sap_property_details.add_extensions_count().code = str(j['data'].pop('extensions_count'))
-    #         except KeyError: pass
+            # --- SAP-Special-Features ---
 
-    #         # Habitable-Room-Count
-    #         try: 
-    #             sap_property_details.add_habitable_room_count().code = str(j['data'].pop('habitable_room_count'))
-    #         except KeyError: pass
-    
-    #         # Heated-Room-Count
-    #         try: 
-    #             sap_property_details.add_heated_room_count().code = str(j['data'].pop('heated_room_count'))
-    #         except KeyError: pass
+                # --- SAP-Special-Feature
 
-    #         # Low-Energy-Fixed-Lighting-Bulbs-Count
-    #         try: 
-    #             sap_property_details.add_low_energy_fixed_lighting_bulbs_count().code = str(j['data'].pop('low_energy_fixed_lighting_bulbs_count'))
-    #         except KeyError: pass
+                    # Description
 
-    #         # Incandescent-Fixed-Lighting-Bulbs-Count
-    #         try: 
-    #             sap_property_details.add_incandescent_fixed_lighting_bulbs_count().code = str(j['data'].pop('incandescent_fixed_lighting_bulbs_count'))
-    #         except KeyError: pass
+                    # --- Energy-Feature ---
 
-    #         # LED-Fixed-Lighting-Bulbs-Count
-    #         try: 
-    #             sap_property_details.add_led_fixed_lighting_bulbs_count().code = str(j['data'].pop('led_fixed_lighting_bulbs_count'))
-    #         except KeyError: pass
+                        # Energy-Saved-Or-Generated
 
-    #         # CFL-Fixed-Lighting-Bulbs-Count
-    #         try: 
-    #             sap_property_details.add_cfl_fixed_lighting_bulbs_count().code = str(j['data'].pop('cfl_fixed_lighting_bulbs_count'))
-    #         except KeyError: pass
+                        # Saved-Or-Generated-Fuel
+                        
+                        # Energy-Used
 
-    #         # Measurement-Type
-    #         try: 
-    #             sap_property_details.add_measurement_type().code = str(j['data'].pop('measurement_type'))
-    #         except KeyError: pass
+                        # Energy-Used-Fuel
 
-    
+                        # Air-Change-Rates
 
-    #         # Solar-Water-Heating
-    #         try: 
-    #             sap_property_details.add_solar_water_heating().code = str(j['data'].pop('solar_water_heating'))
-    #         except KeyError: pass
-    
-    #         # Wet-Rooms-Count
-    #         try: 
-    #             sap_property_details.add_wet_rooms_count().code = str(j['data'].pop('wet_rooms_count'))
-    #         except KeyError: pass
+                    # --- Emissions-Feature ---
 
-    #         # Pressure-Test
-    #         try: 
-    #             sap_property_details.add_pressure_test().code = str(j['data'].pop('pressure_test'))
-    #         except KeyError: pass
+                    # Emissions-Saved
 
-    #         # Pressure-Test-Certificate-Number
-    #         try: 
-    #             sap_property_details.add_pressure_test_certificate_number().code = str(j['data'].pop('pressure_test_certificate_number'))
-    #         except KeyError: pass
+                    # Emissions-Created
 
-    #         # Air-Permeability
-    #         try: 
-    #             sap_property_details.add_air_permeability().code = str(j['data'].pop('air_permeability'))
-    #         except KeyError: pass
 
-    #         # Has-Draught-Lobby
-    #         try: 
-    #             sap_property_details.add_has_draught_lobby().code = str(j['data'].pop('has_draught_lobby'))
-    #         except KeyError: pass
-
-    #         # Open-Chimneys-Count
-    #         try: 
-    #             sap_property_details.add_open_chimneys_count().code = str(j['data'].pop('open_chimneys_count'))
-    #         except KeyError: pass
-
-    #         # Blocked-Chimneys-Count
-    #         try: 
-    #             sap_property_details.add_blocked_chimneys_count().code = str(j['data'].pop('blocked_chimneys_count'))
-    #         except KeyError: pass
-
-    #         # Open-Flues-Count
-    #         try: 
-    #             sap_property_details.add_open_flues_count().code = str(j['data'].pop('open_flues_count'))
-    #         except KeyError: pass
-
-    #         # Closed-Flues-Count
-    #         try: 
-    #             sap_property_details.add_closed_flues_count().code = str(j['data'].pop('closed_flues_count'))
-    #         except KeyError: pass
-
-    #         # Boilers-Flues-Count
-    #         try: 
-    #             sap_property_details.add_boilers_flues_count().code = str(j['data'].pop('boilers_flues_count'))
-    #         except KeyError: pass
-
-    #         # Other-Flues-Count
-    #         try: 
-    #             sap_property_details.add_other_flues_count().code = str(j['data'].pop('other_flues_count'))
-    #         except KeyError: pass
-
-    #         # Extract-Fans-Count
-    #         try: 
-    #             sap_property_details.add_extract_fans_count().code = str(j['data'].pop('extract_fans_count'))
-    #         except KeyError: pass
-
-    #         # PSV-Count
-    #         try: 
-    #             sap_property_details.add_psv_count().code = str(j['data'].pop('psv_count'))
-    #         except KeyError: pass
-
-    #         # Flueless-Gas-Fire-Count
-    #         try: 
-    #             sap_property_details.add_flueless_gas_fires_count().code = str(j['data'].pop('flueless_gas_fires_count'))
-    #         except KeyError: pass
-
-    #         # Mechanical-Ventilation-Index-Number
-    #         try: 
-    #             sap_property_details.add_mechanical_ventilation_index_number().code = str(j['data'].pop('mechanical_ventilation_index_number'))
-    #         except KeyError: pass
-             
-    #         # Mechanical-Ventilation
-    #         try: 
-    #             sap_property_details.add_mechanical_ventilation().code = str(j['data'].pop('mechanical_ventilation'))
-    #         except KeyError: pass
-
-    #         # Mechanical-Vent-Duct-Type
-    #         try: 
-    #             sap_property_details.add_mechanical_vent_duct_type().code = str(j['data'].pop('mechanical_vent_duct_type'))
-    #         except KeyError: pass
-
-    #         # Mechanical-Vent-Duct-Placement
-    #         try: 
-    #             sap_property_details.add_mechanical_vent_duct_placement().code = str(j['data'].pop('mechanical_vent_duct_placement'))
-    #         except KeyError: pass
-
-    #         # Mechanical-Vent-Duct-Insulation
-    #         try: 
-    #             sap_property_details.add_mechanical_vent_duct_insulation().code = str(j['data'].pop('mechanical_vent_duct_insulation'))
-    #         except KeyError: 
-    #             sap_property_details.add_mechanical_vent_duct_insulation().code = '1'  # not insulated
-
-    #         # Mechanical-Vent-Duct-Insulation-Level
-    #         try: 
-    #             sap_property_details.add_mechanical_vent_duct_insulation_level().code = str(j['data'].pop('mechanical_vent_duct_insulation_level'))
-    #         except KeyError: 
-    #             sap_property_details.add_mechanical_vent_duct_insulation_level().code = '1'  # level 1
-
-    #         # Mechanical-Vent-Measured-Installation
-    #         try: 
-    #             sap_property_details.add_mechanical_vent_measured_installation().code = str(j['data'].pop('mechanical_vent_measured_installation'))
-    #         except KeyError: pass
-
-    #         # Is-Mechanical-Vent-Approved-Installer-Scheme
-    #         try: 
-    #             sap_property_details.add_is_mechanical_vent_approved_installer_scheme().code = str(j['data'].pop('is_mechanical_vent_approved_installer_scheme'))
-    #         except KeyError: pass
-
-    #         # Kitchen-Rooms-Fans-Count
-    #         try: 
-    #             sap_property_details.add_kitchen_room_fans_count().code = str(j['data'].pop('kitchen_room_fans_count'))
-    #         except KeyError: 
-    #             sap_property_details.add_kitchen_room_fans_count().code = '0'
-
-    #         # Non-Kitchen-Rooms-Fans-Count
-    #         try: 
-    #             sap_property_details.add_non_kitchen_room_fans_count().code = str(j['data'].pop('non_kitchen_room_fans_count'))
-    #         except KeyError: 
-    #             sap_property_details.add_non_kitchen_room_fans_count().code = '0'
-
-    #         # Kitchen-Duct-Fans-Count
-    #         try: 
-    #             sap_property_details.add_kitchen_duct_fans_count().code = str(j['data'].pop('kitchen_duct_fans_count'))
-    #         except KeyError: 
-    #             sap_property_details.add_kitchen_duct_fans_count().code = '0'
-
-    #         # Non-Kitchen-Duct-Fans-Count
-    #         try: 
-    #             sap_property_details.add_non_kitchen_duct_fans_count().code = str(j['data'].pop('non_kitchen_duct_fans_count'))
-    #         except KeyError: 
-    #             sap_property_details.add_non_kitchen_duct_fans_count().code = '0'
-
-    #         # Kitchen-Walls-Fans-Count
-    #         try: 
-    #             sap_property_details.add_kitchen_wall_fans_count().code = str(j['data'].pop('kitchen_wall_fans_count'))
-    #         except KeyError: 
-    #             sap_property_details.add_kitchen_wall_fans_count().code = '0'
-
-    #         # Non-Kitchen-Walls-Fans-Count
-    #         try: 
-    #             sap_property_details.add_non_kitchen_wall_fans_count().code = str(j['data'].pop('non_kitchen_wall_fans_count'))
-    #         except KeyError: 
-    #             sap_property_details.add_non_kitchen_wall_fans_count().code = '0'
-
-    #         # Non-Kitchen-Walls-Fans-Count
-    #         try: 
-    #             sap_property_details.add_non_kitchen_duct_fans_count().code = str(j['data'].pop('non_kitchen_duct_fans_count'))
-    #         except KeyError: pass
-             
-    
-
-            # SAP-Lighting
-
-            # SAP-Deselected-Improvements
-
-            # SAP-Flat-Details
-
-            # SAP-Special-Features
 
             # Design-Water-Use
+            try: 
+                sap_property_details.add_design_water_use().code = str(j['data'].pop('design_water_use'))
+            except KeyError: pass
 
-            # SAP-Cooling
+            # --- SAP-Cooling ---
 
+                # Cooled-Area
 
+                # Cooling-System-Data-Source
 
+                # Cooling-System-Class
 
-    
-            
-    
-
-    
-
-    #         if True:
-    #             # --- SAP-Flat-Details ---
-    #             if 'sap_flat_details' in j['data']:
-    #                 sap_flat_details = sap_property_details.add_sap_flat_details()
-
-    #                 # Flat-Location
-    #                 try: 
-    #                     code = str(j['data']['sap_flat_details'].pop('flat_location'))
-    #                     if len(str(code)) == 1: code = f'0{code}'  # left padding zeros
-    #                     sap_flat_details.add_flat_location().code = code
-    #                 except KeyError: pass
-
-    #                 # Storey-Count
-    #                 try: 
-    #                     sap_flat_details.add_storey_count().code = str(j['data']['sap_flat_details'].pop('storey_count'))
-    #                 except KeyError: pass
-
-    #                 # Level
-    #                 try: 
-    #                     sap_flat_details.add_level().code = str(j['data']['sap_flat_details'].pop('level'))
-    #                 except KeyError: pass
-
-    #                 # Top-Storey
-    #                 try: 
-    #                     sap_flat_details.add_top_storey().code = str(j['data']['sap_flat_details'].pop('top_storey'))
-    #                 except KeyError: pass
-
-    #                 # Heat-Loss-Corridor
-    #                 try: 
-    #                     sap_flat_details.add_heat_loss_corridor().code = str(j['data']['sap_flat_details'].pop('heat_loss_corridor'))
-    #                 except KeyError: pass
-
-    #                 # Unheated-Corridor-Length
-    #                 try: 
-    #                     sap_flat_details.add_unheated_corridor_length().code = str(j['data']['sap_flat_details'].pop('unheated_corridor_length'))
-    #                 except KeyError: pass
-
-    #                 if len(j['data']['sap_flat_details']) == 0:
-    #                     del j['data']['sap_flat_details']
-    #                 else:
-    #                     raise Exception('j', 'data', 'sap_flat_details', list(j['data']['sap_flat_details'])[0])
-
-    #         if True:
-    #             # --- SAP-Windows ---
-    #             if 'sap_windows' in j['data']:
-    #                 sap_windows = sap_property_details.add_sap_windows()
-    #                 c = []
-    #                 for sap_window_index in range(len(j['data']['sap_windows'])):
-
-    #                     # --- SAP-Window ---
-    #                     sap_window = sap_windows.add_sap_window()
-
-    #                     # Window-Location
-    #                     try: 
-    #                         sap_window.add_window_location().code = str(j['data']['sap_windows'][sap_window_index].pop('window_location'))
-    #                     except KeyError: pass
-
-    #                     # Window-Height
-    #                     try: 
-    #                         sap_window.add_window_height().code = str(j['data']['sap_windows'][sap_window_index].pop('window_height'))
-    #                     except KeyError: pass
-
-
-    #                     # Window-Width
-    #                     try: 
-    #                         sap_window.add_window_width().code = str(j['data']['sap_windows'][sap_window_index].pop('window_width'))
-    #                     except KeyError: pass
-
-    #                     # Draught-Proofed
-    #                     try: 
-    #                         sap_window.add_draught_proofed().code = str(j['data']['sap_windows'][sap_window_index].pop('draught_proofed'))
-    #                     except KeyError: pass
-
-    #                     # Glazing-Type
-    #                     try: 
-    #                         sap_window.add_glazing_type().code = str(j['data']['sap_windows'][sap_window_index].pop('glazing_type'))
-    #                     except KeyError: pass
-
-    #                     # Window-Type
-    #                     try: 
-    #                         sap_window.add_window_type().code = str(j['data']['sap_windows'][sap_window_index].pop('window_type'))
-    #                     except KeyError: pass
-
-    #                     # Orientation
-    #                     try: 
-    #                         sap_window.add_orientation().code = str(j['data']['sap_windows'][sap_window_index].pop('orientation'))
-    #                     except KeyError: pass
-                        
-    #                     if True:
-    #                         # --- Window-Transmission-Details ---
-    #                         if 'window_transmission_details' in j['data']['sap_windows'][sap_window_index]:
-    #                             window_transmission_details = sap_window.add_window_transmission_details()
-
-    #                             # Data-Source
-    #                             try: 
-    #                                 window_transmission_details.add_data_source().code = str(j['data']['sap_windows'][sap_window_index]['window_transmission_details'].pop('data_source'))
-    #                             except KeyError: pass
-
-    #                             # U-Value
-    #                             try: 
-    #                                 window_transmission_details.add_u_value().code = str(j['data']['sap_windows'][sap_window_index]['window_transmission_details'].pop('u_value'))
-    #                             except KeyError: pass
-
-    #                             # Solar-Transmittance
-    #                             try: 
-    #                                 window_transmission_details.add_solar_transmittance().code = str(j['data']['sap_windows'][sap_window_index]['window_transmission_details'].pop('solar_transmittance'))
-    #                             except KeyError: pass
-
-    #                             #
-    #                             if len(j['data']['sap_windows'][sap_window_index]['window_transmission_details']) == 0:
-    #                                 del j['data']['sap_windows'][sap_window_index]['window_transmission_details']
-    #                             else:
-    #                                 raise Exception('j', 'data', 'sap_windows', sap_window_index, 'window_transmission_details', 
-    #                                                 list(j['data']['sap_windows'][sap_window_index]['window_transmission_details'])[0])
-    
-    #                     # PVC-Frame
-    #                     try: 
-    #                         sap_window.add_pvc_frame().code = str(j['data']['sap_windows'][sap_window_index].pop('pvc_frame'))
-    #                     except KeyError: pass
-
-    #                     # Glazing-Gap
-    #                     try: 
-    #                         sap_window.add_glazing_gap().code = str(j['data']['sap_windows'][sap_window_index].pop('glazing_gap'))
-    #                     except KeyError: pass
-
-    #                     # Frame-Factor
-    #                     try: 
-    #                         sap_window.add_frame_factor().code = str(j['data']['sap_windows'][sap_window_index].pop('frame_factor'))
-    #                     except KeyError: pass
-    
-    #                     # Window-Wall-Type
-    #                     try: 
-    #                         sap_window.add_window_wall_type().code = str(j['data']['sap_windows'][sap_window_index].pop('window_wall_type'))
-    #                     except KeyError: pass
-    
-    #                     # Permenant-Shutters-Present
-    #                     try: 
-    #                         sap_window.add_permanent_shutters_present().code = str(j['data']['sap_windows'][sap_window_index].pop('permanent_shutters_present'))
-    #                     except KeyError: pass
-
-    #                     # Permenant-Shutters-Insulated
-    #                     try: 
-    #                         sap_window.add_permanent_shutters_insulated().code = str(j['data']['sap_windows'][sap_window_index].pop('permanent_shutters_insulated'))
-    #                     except KeyError: pass
-
-    #                     if len(j['data']['sap_windows'][sap_window_index]) == 0:
-    #                         c.append(sap_window_index)
-    #                     else:
-    #                         print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                         raise Exception('j', 'data', 'sap_windows', sap_window_index, list(j['data']['sap_windows'][sap_window_index])[0])
-    #                 for c1 in c[::-1]: del j['data']['sap_windows'][c1]
-    #                 if len(j['data']['sap_windows']) == 0: del j['data']['sap_windows']
-
-    #         if True:
-    #             # --- SAP-Deselected-Improvements ---
-    #             if 'sap_deselected_improvements' in j['data']:
-    #                 sap_deselected_improvements = sap_property_details.add_sap_deselected_improvements()
-    #                 for code in j['data']['sap_deselected_improvements']:
-    #                     sap_deselected_improvements.add_deselected_improvement_measure().code = str(code)
-    #                 del j['data']['sap_deselected_improvements']
-
-    #         # Door-Count
-    #         try: 
-    #             sap_property_details.add_door_count().code = str(j['data'].pop('door_count'))
-    #         except KeyError: pass  
-
-    #         # Insulated-Door-Count
-    #         try: 
-    #             sap_property_details.add_insulated_door_count().code = str(j['data'].pop('insulated_door_count'))
-    #         except KeyError: pass  
-
-    #         # Insulated-Door-U-Value
-    #         try: 
-    #             sap_property_details.add_insulated_door_u_value().code = str(j['data'].pop('insulated_door_u_value'))
-    #         except KeyError: pass  
-
-    #         # Draughtproofed-Door-Count
-    #         try: 
-    #             sap_property_details.add_draughtproofed_door_count().code = str(j['data'].pop('draughtproofed_door_count'))
-    #         except KeyError: pass  
-
-    #         # Percent-Draughtproofed
-    #         try: 
-    #             sap_property_details.add_percent_draughtproofed().code = str(j['data'].pop('percent_draughtproofed'))
-    #         except KeyError: pass  
-    
-    
-
-    #                         if True:
-    #                             # --- Emissions-Feature
-    #                             if 'emissions_feature' in j['data']['sap_special_features'][sap_special_feature_index]:
-    #                                 emissions_feature = sap_special_feature.add_emissions_feature()
-
-    #                                 # Emissions-Saved
-    #                                 try: 
-    #                                     emissions_feature.add_emissions_saved().code = str(j['data']['sap_special_features'][sap_special_feature_index]['emissions_feature'].pop('emissions_saved'))
-    #                                 except KeyError: pass
-
-    #                                 # Emissions-Created
-    #                                 try: 
-    #                                     emissions_feature.add_emissions_created().code = str(j['data']['sap_special_features'][sap_special_feature_index]['emissions_feature'].pop('emissions_created'))
-    #                                 except KeyError: pass
-
-    #                                 #
-    #                                 if len(j['data']['sap_special_features'][sap_special_feature_index]['emissions_feature']) == 0:
-    #                                     del j['data']['sap_special_features'][sap_special_feature_index]['emissions_feature']
-    #                                 else:
-    #                                     print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                                     raise Exception('j', 'data', 'sap_special_features', sap_special_feature_index, 'emissions_feature', 
-    #                                                     list(j['data']['sap_special_features'][sap_special_feature_index]['emissions_feature'])[0])
-
-    #                         #
-    #                         if len(j['data']['sap_special_features'][sap_special_feature_index]) == 0:
-    #                             sap_special_features_c.append(sap_special_feature_index)
-    #                         else:
-    #                             print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                             raise Exception('j', 'data', 'sap_special_features', sap_special_feature_index, list(j['data']['sap_special_features'][sap_special_feature_index])[0])
-        
-    #                 for c1 in sap_special_features_c[::-1]: del j['data']['sap_special_features'][c1]
-    #                 if len(j['data']['sap_special_features']) == 0: del j['data']['sap_special_features']
+                # System-Energy-Efficiency-Ratio
 
     
     if len(j['data']) == 0:
