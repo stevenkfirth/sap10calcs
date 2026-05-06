@@ -27,7 +27,7 @@ url_sap = 'http://127.0.0.1:8000/calc/sap10' if local else 'https://netzeroapis.
 
 for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
 
-    if i < 228: continue
+    if i < 95173: continue
 
     print(i, fn)
 

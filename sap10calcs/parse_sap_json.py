@@ -134,7 +134,7 @@ def parse_sap_json(
 
 
     # remove JSON values that don't parse to the RdSAP XML (no equivalent XML elements available)
-    # if 'error' in j['data']: del j['data']['error']
+    if 'error' in j['data']: del j['data']['error']
     if 'created_at' in j['data']: del j['data']['created_at']
     if 'schema_type' in j['data']: del j['data']['schema_type']
     if 'uprn_source' in j['data']: del j['data']['uprn_source']
@@ -289,6 +289,16 @@ def parse_sap_json(
             # UPRN
             try: 
                 property_.add_uprn().code = str(j['data'].pop('uprn'))
+            except KeyError: pass
+
+            # Site-Reference
+            try: 
+                property_.add_site_reference().code = str(j['data'].pop('site_reference'))
+            except KeyError: pass
+
+            # Plot-Reference
+            try: 
+                property_.add_plot_reference().code = str(j['data'].pop('plot_reference'))
             except KeyError: pass
 
         # Region-Code
@@ -662,6 +672,9 @@ def parse_sap_json(
     #         except KeyError: pass
 
             # Is-Zero-Carbon-Home
+            try: 
+                property_summary.add_is_zero_carbon_home().code = str(j['data'].pop('is_zero_carbon_home'))
+            except KeyError: pass
 
         if True:
             # --- Energy-Use ---
@@ -1295,8 +1308,14 @@ def parse_sap_json(
                                 except KeyError: pass
 
                                 # Main-Heating-Manufacturer
+                                try: 
+                                    main_heating.add_main_heating_manufacturer().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_manufacturer'))
+                                except KeyError: pass
 
                                 # Main-Heating-Model
+                                try: 
+                                    main_heating.add_main_heating_model().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_model'))
+                                except KeyError: pass
 
                                 # Main-Heating-Commissioning-Certificate
 
@@ -1332,6 +1351,9 @@ def parse_sap_json(
                                 # Heat-Transfer-To-Water
 
                                 # Solid-Fuel-Boiler-Type
+                                try: 
+                                    main_heating.add_solid_fuel_boiler_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('solid_fuel_boiler_type'))
+                                except KeyError: pass
 
                                 # Main-Heating-Code
                                 try: 
@@ -1391,6 +1413,9 @@ def parse_sap_json(
                                 except KeyError: pass
 
                                 # Boiler-Fuel-Feed
+                                try: 
+                                    main_heating.add_boiler_fuel_feed().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('boiler_fuel_feed'))
+                                except KeyError: pass
 
                                 # Is-Main-Heating-HETAS-Approved
                                 try: 
@@ -1406,16 +1431,28 @@ def parse_sap_json(
                                 except KeyError: pass
 
                                 # Burner-Control
+                                try: 
+                                    main_heating.add_burner_control().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('burner_control'))
+                                except KeyError: pass
 
                                 # Efficiency-Type
+                                try: 
+                                    main_heating.add_efficiency_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('efficiency_type'))
+                                except KeyError: pass
 
                                 # Main-Heating-Efficiency-Winter
 
                                 # Main-Heating-Efficiency-Summer
 
                                 # Main-Heating-Efficiency
+                                try: 
+                                    main_heating.add_main_heating_efficiency().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_efficiency'))
+                                except KeyError: pass
 
                                 # Main-Heating-System-Type
+                                try: 
+                                    main_heating.add_main_heating_system_type().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_system_type'))
+                                except KeyError: pass
 
                                 # Has-FGHRS
                                 try: 
@@ -1432,7 +1469,10 @@ def parse_sap_json(
                                     main_heating.add_fghrs_energy_source().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('fghrs_energy_source'))
                                 except KeyError: pass
 
-                                # Main-Heating-Declared-Values                                 
+                                # Main-Heating-Declared-Values 
+                                try: 
+                                    main_heating.add_main_heating_declared_values().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_declared_values'))
+                                except KeyError: pass                                
 
                                 
                                 #
@@ -1529,69 +1569,109 @@ def parse_sap_json(
                         sap_heating.add_primary_pipework_insulation().code = str(j['data']['sap_heating'].pop('primary_pipework_insulation'))
                     except KeyError: pass
 
-    #                 if True:
-    #                     # --- Solar-Heating-Details ---
-    #                     if 'solar_water_heating_details' in j['data']['sap_heating']:
-    #                         solar_water_heating_details = sap_heating.add_solar_water_heating_details()
+                    if True:
+                        # --- Solar-Heating-Details ---
+                        if 'solar_heating_details' in j['data']['sap_heating']:
+                            solar_heating_details = sap_heating.add_solar_heating_details()
 
                             # Solar-Heating-Collector-Manufactuer
 
                             # Solar-Heating-Certificate
 
                             # Solar-Panel-Aperture-Area
+                            try: 
+                                solar_heating_details.add_solar_panel_aperture_area().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_aperture_area'))
+                            except KeyError: pass
 
                             # Solar-Panel-Collector-Type
+                            try: 
+                                solar_heating_details.add_solar_panel_collector_type().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_collector_type'))
+                            except KeyError: pass
 
                             # Solar-Panel-Collector-Data-Source
-    #                         try: 
-    #                             solar_water_heating_details.add_solar_panel_collector_data_source().code = str(j['data']['sap_heating']['solar_water_heating_details'].pop('solar_panel_collector_data_source'))
-    #                         except KeyError: pass
+                            try: 
+                                solar_heating_details.add_solar_panel_collector_data_source().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_collector_data_source'))
+                            except KeyError: pass
 
                             # Solar-Panel-Collector-Zero-Loss-Efficiency
+                            try: 
+                                solar_heating_details.add_solar_panel_collector_zero_loss_efficiency().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_collector_zero_loss_efficiency'))
+                            except KeyError: pass
 
                             # Solar-Panel-Collector-Heat-Loss-Rate
 
                             # Solar-Panel-Collector-Linear-Heat-Loss-Coefficient
+                            try: 
+                                solar_heating_details.add_solar_panel_collector_linear_heat_loss_coefficient().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_collector_linear_heat_loss_coefficient'))
+                            except KeyError: pass
 
                             # Solar-Panel-Collector-Second-Order-Heat-Loss-Coefficient
+                            try: 
+                                solar_heating_details.add_solar_panel_collector_second_order_heat_loss_coefficient().code = \
+                                    str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_collector_second_order_heat_loss_coefficient'))
+                            except KeyError: pass
 
                             # Solar-Panel-Collector-Orientation
-    #                         try: 
-    #                             solar_water_heating_details.add_solar_panel_collector_orientation().code = str(j['data']['sap_heating']['solar_water_heating_details'].pop('solar_panel_collector_orientation'))
-    #                         except KeyError: pass
+                            try: 
+                                solar_heating_details.add_solar_panel_collector_orientation().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_collector_orientation'))
+                            except KeyError: pass
 
                             # Solar-Panel-Collector-Pitch
-    #                         try: 
-    #                             solar_water_heating_details.add_solar_panel_collector_pitch().code = str(j['data']['sap_heating']['solar_water_heating_details'].pop('solar_panel_collector_pitch'))
-    #                         except KeyError: pass
+                            try: 
+                                solar_heating_details.add_solar_panel_collector_pitch().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_collector_pitch'))
+                            except KeyError: pass
 
                             # Solar-Panel-Collector-Overshading
-    #                         try: 
-    #                             solar_water_heating_details.add_solar_panel_collector_overshading().code = str(j['data']['sap_heating']['solar_water_heating_details'].pop('solar_panel_collector_overshading'))
-    #                         except KeyError: pass
+                            try: 
+                                solar_heating_details.add_solar_panel_collector_overshading().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_panel_collector_overshading'))
+                            except KeyError: pass
 
                             # Has-Solar-Powered-Pump
+                            try: 
+                                solar_heating_details.add_has_solar_powered_pump().code = str(j['data']['sap_heating']['solar_heating_details'].pop('has_solar_powered_pump'))
+                            except KeyError: pass
 
                             # Is-Solar-Store-Combined-Cylinder
+                            try: 
+                                solar_heating_details.add_is_solar_store_combined_cylinder().code = str(j['data']['sap_heating']['solar_heating_details'].pop('is_solar_store_combined_cylinder'))
+                            except KeyError: pass
 
                             # Solar-Store-Volume
+                            try: 
+                                solar_heating_details.add_solar_store_volume().code = str(j['data']['sap_heating']['solar_heating_details'].pop('solar_store_volume'))
+                            except KeyError: pass
 
                             # Collector-Loop-Efficiency
+                            try: 
+                                solar_heating_details.add_collector_loop_efficiency().code = str(j['data']['sap_heating']['solar_heating_details'].pop('collector_loop_efficiency'))
+                            except KeyError: pass
 
                             # Incidence-Angle-Modifier
+                            try: 
+                                solar_heating_details.add_incidence_angle_modifier().code = str(j['data']['sap_heating']['solar_heating_details'].pop('incidence_angle_modifier'))
+                            except KeyError: pass
 
                             # Is-Community-Solar
+                            try: 
+                                solar_heating_details.add_is_community_solar().code = str(j['data']['sap_heating']['solar_heating_details'].pop('is_community_solar'))
+                            except KeyError: pass
 
                             # Service-Provision
+                            try: 
+                                solar_heating_details.add_service_provision().code = str(j['data']['sap_heating']['solar_heating_details'].pop('service_provision'))
+                            except KeyError: pass
 
                             # Overall-Heat-Loss
+                            try: 
+                                solar_heating_details.add_overall_heat_loss().code = str(j['data']['sap_heating']['solar_heating_details'].pop('overall_heat_loss'))
+                            except KeyError: pass
 
-    #                         #
-    #                         if len(j['data']['sap_heating']['solar_water_heating_details']) == 0:
-    #                             del j['data']['sap_heating']['solar_water_heating_details']
-    #                         else:
-    #                             print(etree.tostring(sap_report, pretty_print=True).decode())
-    #                             raise Exception('j', 'data', 'sap_heating', 'solar_water_heating_details', list(j['data']['sap_heating']['solar_water_heating_details'])[0])
+                            #
+                            if len(j['data']['sap_heating']['solar_heating_details']) == 0:
+                                del j['data']['sap_heating']['solar_heating_details']
+                            else:
+                                print(etree.tostring(sap_report, pretty_print=True).decode())
+                                raise Exception('j', 'data', 'sap_heating', 'solar_heating_details', list(j['data']['sap_heating']['solar_heating_details'])[0])
 
 
                     if True:
@@ -1610,16 +1690,34 @@ def parse_sap_json(
                             except KeyError: pass
 
                             # WWHRS-Efficiency1
+                            try: 
+                                instantaneous_wwhrs.add_wwhrs_efficiency1().code = str(j['data']['sap_heating']['instantaneous_wwhrs'].pop('wwhrs_efficiency1'))
+                            except KeyError: pass
 
                             # WWHRS-Manufacturer1
+                            try: 
+                                instantaneous_wwhrs.add_wwhrs_manufacturer1().code = str(j['data']['sap_heating']['instantaneous_wwhrs'].pop('wwhrs_manufacturer1'))
+                            except KeyError: pass
 
                             # WWHRS-Model1
+                            try: 
+                                instantaneous_wwhrs.add_wwhrs_model1().code = str(j['data']['sap_heating']['instantaneous_wwhrs'].pop('wwhrs_model1'))
+                            except KeyError: pass
 
                             # WWHRS-Efficiency2
+                            try: 
+                                instantaneous_wwhrs.add_wwhrs_efficiency2().code = str(j['data']['sap_heating']['instantaneous_wwhrs'].pop('wwhrs_efficiency2'))
+                            except KeyError: pass
 
                             # WWHRS-Manufacturer2
+                            try: 
+                                instantaneous_wwhrs.add_wwhrs_manufacturer2().code = str(j['data']['sap_heating']['instantaneous_wwhrs'].pop('wwhrs_manufacturer2'))
+                            except KeyError: pass
 
                             # WWHRS-Model2
+                            try: 
+                                instantaneous_wwhrs.add_wwhrs_model2().code = str(j['data']['sap_heating']['instantaneous_wwhrs'].pop('wwhrs_model2'))
+                            except KeyError: pass
 
                             #
                             if len(j['data']['sap_heating']['instantaneous_wwhrs']) == 0:
@@ -1683,9 +1781,9 @@ def parse_sap_json(
                     except KeyError: pass
 
                     # Number-Baths-WWHRS
-    #                 try: 
-    #                     sap_heating.add_number_baths_wwhrs().code = str(j['data']['sap_heating'].pop('number_baths_wwhrs'))
-    #                 except KeyError: pass
+                    try: 
+                        sap_heating.add_number_baths_wwhrs().code = str(j['data']['sap_heating'].pop('number_baths_wwhrs'))
+                    except KeyError: pass
 
                     #
                     if len(j['data']['sap_heating']) == 0:
@@ -1698,7 +1796,9 @@ def parse_sap_json(
         if True:
             # --- SAP-Energy-Source ---
             if 'sap_energy_source' in j['data']:
+
                 sap_energy_source = sap_property_details.add_sap_energy_source()
+
                 # --- PV-Arrays ---
                 if 'pv_arrays' in j['data']['sap_energy_source']:
                     pv_arrays = sap_energy_source.add_pv_arrays()
@@ -1729,8 +1829,14 @@ def parse_sap_json(
                         except KeyError: pass
 
                         # MCS-Certificate-Reference
+                        try: 
+                            pv_array.add_mcs_certificate_reference().code = str(j['data']['sap_energy_source']['pv_arrays'][pv_array_index].pop('mcs_certificate_reference'))
+                        except KeyError: pass
 
                         # PV-Panel-Manufacturer-Name
+                        try: 
+                            pv_array.add_pv_panel_manufacturer_name().code = str(j['data']['sap_energy_source']['pv_arrays'][pv_array_index].pop('pv_panel_manufacturer_name'))
+                        except KeyError: pass
 
                         # Overshading-MCS
                         try: 
@@ -1750,26 +1856,36 @@ def parse_sap_json(
                 
                         
 
+        
+                # --- Wind-Turbines ---
+                if 'wind_turbines' in j['data']['sap_energy_source']:
+                    wind_turbines = sap_energy_source.add_wind_turbines()
+                    wind_turbines_c = []
+                    for wind_turbine_index in range(len(j['data']['sap_energy_source']['wind_turbines'])):
+                        # --- Wind-Turbine ---
+                        wind_turbine = wind_turbines.add_wind_turbine()
+                        # Wind-Turbine-Manufacturer-Name
 
-                    # --- Wind-Turbines ---
+                        # Wind-Turbine-Certificate
 
-#                 if True:
-#                     # --- Wind-Turbine ---
-#                     
-                    # Wind-Turbine-Manufacturer-Name
-
-                    # Wind-Turbine-Certificate
-
-                    # Wind-Turbine-Rotor-Diameter
-
-                    # Wind-Turbine-Hub-Height
-
-#                         #
-#                         if len(j['data']['sap_energy_source']['wind_turbine_details']) == 0:
-#                             del j['data']['sap_energy_source']['wind_turbine_details']
-#                         else:
-#                             print(etree.tostring(sap_report, pretty_print=True).decode())
-#                             raise Exception('j', 'data', 'sap_energy_source', 'wind_turbine_details', list(j['data']['sap_energy_source']['wind_turbine_details'])[0])
+                        # Wind-Turbine-Rotor-Diameter
+                        try: 
+                            wind_turbine.add_wind_turbine_rotor_diameter().code = str(j['data']['sap_energy_source']['wind_turbines'][wind_turbine_index].pop('wind_turbine_rotor_diameter'))
+                        except KeyError: pass
+                        # Wind-Turbine-Hub-Height
+                        try: 
+                            wind_turbine.add_wind_turbine_hub_height().code = str(j['data']['sap_energy_source']['wind_turbines'][wind_turbine_index].pop('wind_turbine_hub_height'))
+                        except KeyError: pass
+                        #                    
+                        if len(j['data']['sap_energy_source']['wind_turbines'][wind_turbine_index]) == 0:
+                            wind_turbines_c.append(wind_turbine_index)
+                        else:
+                            print(etree.tostring(sap_report, pretty_print=True).decode())
+                            raise Exception('j', 'data', 'sap_energy_source', 'wind_turbines', wind_turbine_index, 
+                                            list(j['data']['sap_energy_source']['wind_turbines'][wind_turbine_index])[0])
+                    #    
+                    for c1 in wind_turbines_c[::-1]: del j['data']['sap_energy_source']['wind_turbines'][c1]
+                    if len(j['data']['sap_energy_source']['wind_turbines']) == 0: del j['data']['sap_energy_source']['wind_turbines']
 
 
                 # Electricity-Tariff
@@ -1918,6 +2034,9 @@ def parse_sap_json(
                                     # --- SAP-Floor-Dimension ---
                                     sap_floor_dimension = sap_floor_dimensions.add_sap_floor_dimension()
                                     # Name
+                                    try: 
+                                        sap_floor_dimension.add_name().code = str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('name'))
+                                    except KeyError: pass
                                     # Storey
                                     try: 
                                         sap_floor_dimension.add_storey().code = str(j['data']['sap_building_parts'][sap_building_part_index]['sap_floor_dimensions'][sap_floor_dimension_index].pop('storey'))
@@ -1991,21 +2110,29 @@ def parse_sap_json(
                                     sap_thermal_bridge = sap_thermal_bridges.add_sap_thermal_bridge()
                                     # Thermal-Bridge-Type
                                     try: 
-                                        sap_thermal_bridge.add_thermal_bridge_type().code = str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('thermal_bridge_type'))
+                                        sap_thermal_bridge.add_thermal_bridge_type().code = \
+                                            str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('thermal_bridge_type'))
                                     except KeyError: pass                                         
                                     # Length
                                     try: 
-                                        sap_thermal_bridge.add_length().code = str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('length'))
+                                        sap_thermal_bridge.add_length().code = \
+                                            str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('length'))
                                     except KeyError: pass 
                                     # Psi-Value
                                     try: 
-                                        sap_thermal_bridge.add_psi_value().code = str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('psi_value'))
+                                        sap_thermal_bridge.add_psi_value().code = \
+                                            str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('psi_value'))
                                     except KeyError: pass 
                                     # Psi-Value-Source
                                     try: 
-                                        sap_thermal_bridge.add_psi_value_source().code = str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('psi_value_source'))
+                                        sap_thermal_bridge.add_psi_value_source().code = \
+                                            str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('psi_value_source'))
                                     except KeyError: pass 
                                     # Psi-Value-Calculation-Reference
+                                    try: 
+                                        sap_thermal_bridge.add_psi_value_calculation_reference().code = \
+                                            str(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index].pop('psi_value_calculation_reference'))
+                                    except KeyError: pass
                                     #
                                     if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_thermal_bridges']['thermal_bridges'][thermal_bridge_index]) == 0:
                                         thermal_bridges_c.append(thermal_bridge_index)
@@ -2073,15 +2200,15 @@ def parse_sap_json(
                             #    
                             for c1 in sap_walls_c[::-1]: del j['data']['sap_building_parts'][sap_building_part_index]['sap_walls'][c1]
                             if len(j['data']['sap_building_parts'][sap_building_part_index]['sap_walls']) == 0: del j['data']['sap_building_parts'][sap_building_part_index]['sap_walls']
-                    #
-                    if len(j['data']['sap_building_parts'][sap_building_part_index]) == 0:
-                        sap_building_parts_c.append(sap_building_part_index)
-                    else:
-                        print(etree.tostring(sap_report, pretty_print=True).decode())
-                        raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, list(j['data']['sap_building_parts'][sap_building_part_index])[0])
-                #    
-                for c1 in sap_building_parts_c[::-1]: del j['data']['sap_building_parts'][c1]
-                if len(j['data']['sap_building_parts']) == 0: del j['data']['sap_building_parts']
+                        #
+                        if len(j['data']['sap_building_parts'][sap_building_part_index]) == 0:
+                            sap_building_parts_c.append(sap_building_part_index)
+                        else:
+                            print(etree.tostring(sap_report, pretty_print=True).decode())
+                            raise Exception('j', 'data', 'sap_building_parts', sap_building_part_index, list(j['data']['sap_building_parts'][sap_building_part_index])[0])
+                    #    
+                    for c1 in sap_building_parts_c[::-1]: del j['data']['sap_building_parts'][c1]
+                    if len(j['data']['sap_building_parts']) == 0: del j['data']['sap_building_parts']
             
         if True:
             # --- SAP-Opening-Types ---
@@ -2524,15 +2651,20 @@ def parse_sap_json(
                 sap_cooling = sap_property_details.add_sap_cooling()
                 # Cooled-Area
                 try: 
-                    emissions_feature.add_emissions_created().code = str(j['data']['sap_special_features'][sap_special_feature_index]['emissions_feature'].pop('emissions_created'))
+                    sap_cooling.add_cooled_area().code = str(j['data']['sap_cooling'].pop('cooled_area'))
                 except KeyError: pass
-
                 # Cooling-System-Data-Source
-
+                try: 
+                    sap_cooling.add_cooling_system_data_source().code = str(j['data']['sap_cooling'].pop('cooling_system_data_source'))
+                except KeyError: pass
                 # Cooling-System-Class
-
+                try: 
+                    sap_cooling.add_cooling_system_class().code = str(j['data']['sap_cooling'].pop('cooling_system_class'))
+                except KeyError: pass
                 # System-Energy-Efficiency-Ratio
-
+                try: 
+                    sap_cooling.add_system_energy_efficiency_ratio().code = str(j['data']['sap_cooling'].pop('system_energy_efficiency_ratio'))
+                except KeyError: pass
                 #
                 if len(j['data']['sap_cooling']) == 0:
                     del j['data']['sap_cooling']
