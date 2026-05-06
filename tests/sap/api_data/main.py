@@ -27,7 +27,7 @@ url_sap = 'http://127.0.0.1:8000/calc/sap10' if local else 'https://netzeroapis.
 
 for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
 
-    if i < 0: continue
+    if i < 228: continue
 
     print(i, fn)
 
@@ -45,6 +45,7 @@ for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
             continue
         else:
             with open('rdsap.json', 'w') as f: json.dump(j, f, indent = 4)
+            print(i, fn)
             raise err
         
     continue

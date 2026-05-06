@@ -1,29 +1,29 @@
 {
     "data": {
-        "der": 14.11,
-        "ter": 14.31,
-        "dfee": 41.6,
-        "dper": 74.54,
-        "tfee": 42.5,
-        "tper": 75.17,
-        "uprn": 10007324589,
+        "der": 2.49,
+        "ter": 6.89,
+        "dfee": 42.5,
+        "dper": 22.68,
+        "tfee": 42.6,
+        "tper": 37.72,
+        "uprn": 10007280433,
         "roofs": [
             {
-                "description": "Average thermal transmittance 0.1 W/m\u00b2K",
+                "description": "Average thermal transmittance 0.12 W/m\u00b2K",
                 "energy_efficiency_rating": 5,
                 "environmental_efficiency_rating": 5
             }
         ],
         "walls": [
             {
-                "description": "Average thermal transmittance 0.16 W/m\u00b2K",
+                "description": "Average thermal transmittance 0.18 W/m\u00b2K",
                 "energy_efficiency_rating": 5,
                 "environmental_efficiency_rating": 5
             }
         ],
         "floors": [
             {
-                "description": "Average thermal transmittance 0.1 W/m\u00b2K",
+                "description": "Average thermal transmittance 0.14 W/m\u00b2K",
                 "energy_efficiency_rating": 5,
                 "environmental_efficiency_rating": 5
             }
@@ -40,20 +40,26 @@
             "energy_efficiency_rating": 5,
             "environmental_efficiency_rating": 5
         },
-        "postcode": "GL4 6LP",
+        "postcode": "PE9 2LX",
         "data_type": 2,
         "hot_water": {
             "description": "From main system",
-            "energy_efficiency_rating": 5,
-            "environmental_efficiency_rating": 4
+            "energy_efficiency_rating": 3,
+            "environmental_efficiency_rating": 5
         },
-        "post_town": "GLOUCESTER",
-        "built_form": 2,
-        "created_at": "2024-02-19 11:20:17",
-        "living_area": 30.1,
-        "orientation": 3,
-        "region_code": 12,
+        "post_town": "Stamford",
+        "built_form": 1,
+        "created_at": "2025-09-09 08:46:15",
+        "living_area": 26.63,
+        "orientation": 1,
+        "pv_diverter": "true",
+        "region_code": 3,
         "report_type": 3,
+        "sap_cooling": {
+            "cooled_area": 76.33,
+            "cooling_system_class": "A++",
+            "cooling_system_data_source": 3
+        },
         "sap_heating": {
             "number_baths": 1,
             "thermal_store": 1,
@@ -62,42 +68,96 @@
                     "shower_wwhrs": 1,
                     "shower_flow_rate": 8,
                     "shower_outlet_type": 3
+                },
+                {
+                    "shower_wwhrs": 1,
+                    "shower_flow_rate": 8,
+                    "shower_outlet_type": 3
+                },
+                {
+                    "shower_wwhrs": 1,
+                    "shower_flow_rate": 8,
+                    "shower_outlet_type": 3
+                },
+                {
+                    "shower_wwhrs": 1,
+                    "shower_flow_rate": 8,
+                    "shower_outlet_type": 3
+                },
+                {
+                    "shower_wwhrs": 1,
+                    "shower_flow_rate": 8,
+                    "shower_outlet_type": 3
                 }
             ],
-            "water_fuel_type": 1,
+            "water_fuel_type": 39,
             "water_heating_code": 901,
+            "secondary_fuel_type": 20,
+            "hot_water_store_size": 400,
             "main_heating_details": [
                 {
                     "has_fghrs": "false",
-                    "main_fuel_type": 1,
-                    "combi_boiler_type": 1,
-                    "heat_emitter_type": 1,
+                    "main_fuel_type": 39,
+                    "heat_emitter_type": 2,
                     "is_flue_fan_present": "true",
                     "main_heating_number": 1,
+                    "main_heating_control": 2207,
+                    "is_interlocked_system": "false",
+                    "main_heating_category": 4,
+                    "main_heating_fraction": 0.9,
+                    "main_heating_flue_type": 5,
+                    "main_heating_data_source": 1,
+                    "main_heating_index_number": 106483,
+                    "heat_pump_heat_distribution": 80,
+                    "is_oil_pump_in_heated_space": "false",
+                    "underfloor_heat_emitter_type": 2,
+                    "is_main_heating_hetas_approved": "false",
+                    "is_central_heating_pump_in_heated_space": "true"
+                },
+                {
+                    "has_fghrs": "false",
+                    "main_fuel_type": 1,
+                    "heat_emitter_type": 2,
+                    "is_flue_fan_present": "true",
+                    "main_heating_number": 2,
                     "is_condensing_boiler": "true",
                     "main_heating_control": 2110,
                     "is_interlocked_system": "false",
                     "main_heating_category": 2,
-                    "main_heating_fraction": 1,
-                    "gas_or_oil_boiler_type": 2,
+                    "main_heating_fraction": 0.1,
                     "main_heating_flue_type": 5,
-                    "central_heating_pump_age": 2,
+                    "central_heating_pump_age": 0,
                     "main_heating_data_source": 1,
-                    "main_heating_index_number": 18759,
+                    "main_heating_index_number": 18509,
                     "has_separate_delayed_start": "false",
-                    "is_oil_pump_in_heated_space": "true",
+                    "is_oil_pump_in_heated_space": "false",
+                    "underfloor_heat_emitter_type": 2,
                     "is_main_heating_hetas_approved": "false",
                     "condensing_boiler_heat_distribution": 80,
                     "is_central_heating_pump_in_heated_space": "true"
                 }
             ],
-            "has_hot_water_cylinder": "false",
+            "has_hot_water_cylinder": "true",
             "has_cylinder_thermostat": "true",
-            "has_fixed_air_conditioning": "false",
-            "secondary_heating_category": 1,
+            "hot_water_store_heat_loss": 1.6,
+            "has_fixed_air_conditioning": "true",
+            "secondary_heating_category": 10,
+            "is_cylinder_in_heated_space": "true",
             "is_immersion_for_summer_use": "false",
+            "primary_pipework_insulation": 4,
+            "secondary_heating_flue_type": 5,
+            "is_heat_pump_installed_to_mis": "false",
             "is_hot_water_separately_timed": "true",
-            "is_heat_pump_assisted_by_immersion": "false"
+            "secondary_heating_data_source": 2,
+            "hot_water_store_heat_loss_source": 2,
+            "main_heating_systems_interaction": 1,
+            "secondary_heating_declared_values": {
+                "efficiency": 79.7,
+                "make_model": "Firecracker  129-L-Fcraker",
+                "test_method": "BS EN 13240"
+            },
+            "is_heat_pump_assisted_by_immersion": "false",
+            "is_secondary_heating_hetas_approved": "false"
         },
         "sap_version": 10.2,
         "schema_type": "SAP-Schema-19.1.0",
@@ -105,67 +165,71 @@
         "country_code": "ENG",
         "main_heating": [
             {
-                "description": "Boiler and radiators, mains gas",
+                "description": "Air source heat pump, underfloor, electric",
                 "energy_efficiency_rating": 5,
+                "environmental_efficiency_rating": 5
+            },
+            {
+                "description": "Boiler and underfloor heating, mains gas",
+                "energy_efficiency_rating": 4,
                 "environmental_efficiency_rating": 4
             }
         ],
         "sap_lighting": [
             [
                 {
-                    "lighting_power": 7,
+                    "lighting_power": 5,
                     "lighting_outlets": 30,
-                    "lighting_efficacy": 100
+                    "lighting_efficacy": 103
                 }
             ]
         ],
-        "terrain_type": 2,
+        "terrain_type": 1,
         "air_tightness": {
-            "description": "Air permeability [AP50] = 6.46 m\u00b3/h.m\u00b2 (as tested)",
+            "description": "Air permeability [AP50] = 3.74 m\u00b3/h.m\u00b2 (as tested)",
             "energy_efficiency_rating": 4,
             "environmental_efficiency_rating": 4
         },
-        "dwelling_type": "Semi-detached house",
+        "dwelling_type": "Detached house",
         "language_code": 1,
         "property_type": 0,
         "pv_connection": 2,
-        "address_line_1": "38B",
-        "address_line_2": "Birchall Avenue",
-        "address_line_3": "Matson",
-        "assessment_date": "2024-02-19",
+        "address_line_1": "2 The Warenne",
+        "address_line_2": "Kettering Road",
+        "assessment_date": "2025-09-09",
         "assessment_type": "SAP",
-        "completion_date": "2024-02-19",
-        "inspection_date": "2024-02-19",
+        "completion_date": "2025-09-09",
+        "inspection_date": "2025-09-09",
         "sap_ventilation": {
             "psv_count": 0,
-            "wall_type": 1,
+            "wall_type": 2,
             "pressure_test": 1,
-            "air_permeability": 6.46,
+            "air_permeability": 3.74,
             "open_flues_count": 0,
             "ventilation_type": 1,
             "has_draught_lobby": "false",
             "other_flues_count": 0,
             "closed_flues_count": 0,
-            "extract_fans_count": 3,
+            "extract_fans_count": 8,
             "boilers_flues_count": 0,
             "open_chimneys_count": 0,
-            "sheltered_sides_count": 1,
+            "sheltered_sides_count": 2,
             "blocked_chimneys_count": 0,
             "flueless_gas_fires_count": 0
         },
         "design_water_use": 1,
         "sap_data_version": 10.2,
-        "total_floor_area": 61,
+        "total_floor_area": 449,
         "transaction_type": 6,
         "cold_water_source": 1,
         "conservatory_type": 1,
-        "registration_date": "2024-02-19",
+        "registration_date": "2025-09-09",
         "sap_energy_source": {
             "pv_arrays": [
                 {
-                    "pitch": 2,
-                    "peak_power": 3,
-                    "orientation": 3,
+                    "pitch": 3,
+                    "peak_power": 4.15,
+                    "orientation": 5,
                     "overshading": 1
                 }
             ],
@@ -175,30 +239,48 @@
             {
                 "name": "Doors (1)",
                 "type": 1,
-                "u_value": 1,
-                "data_source": 2,
+                "u_value": 1.2,
+                "data_source": 3,
+                "description": "As per spec",
                 "glazing_type": 1,
                 "isargonfilled": "false"
+            },
+            {
+                "name": "Roof window",
+                "type": 6,
+                "u_value": 1.2,
+                "frame_type": 2,
+                "data_source": 3,
+                "description": "As per spec",
+                "glazing_gap": 3,
+                "frame_factor": 0.7,
+                "glazing_type": 6,
+                "isargonfilled": "true",
+                "solar_transmittance": 0.63
             },
             {
                 "name": "Windows (1)",
                 "type": 4,
                 "u_value": 1.2,
-                "data_source": 2,
-                "description": "Standard Window",
+                "frame_type": 2,
+                "data_source": 3,
+                "description": "As per spec",
+                "glazing_gap": 3,
                 "frame_factor": 0.7,
-                "glazing_type": 7,
+                "glazing_type": 6,
                 "isargonfilled": "true",
                 "solar_transmittance": 0.63
             }
         ],
         "secondary_heating": {
-            "description": "None",
+            "description": "Room heaters, wood logs",
             "energy_efficiency_rating": 0,
             "environmental_efficiency_rating": 0
         },
-        "lowest_storey_area": 30.7,
+        "lowest_storey_area": 254.05,
         "lzc_energy_sources": [
+            4,
+            9,
             11
         ],
         "sap_building_parts": [
@@ -206,27 +288,42 @@
                 "sap_roofs": [
                     {
                         "name": "Roof (1)",
-                        "u_value": 0.1,
+                        "u_value": 0.13,
                         "roof_type": 2,
                         "kappa_value": 9,
-                        "total_roof_area": 30.7
+                        "total_roof_area": 53.12
+                    },
+                    {
+                        "name": "Roof (3)",
+                        "u_value": 0.11,
+                        "roof_type": 2,
+                        "kappa_value": 9,
+                        "total_roof_area": 194.61
+                    },
+                    {
+                        "name": "Roof (2)",
+                        "u_value": 0.17,
+                        "roof_type": 2,
+                        "kappa_value": 9,
+                        "total_roof_area": 13.07
                     }
                 ],
                 "sap_walls": [
                     {
                         "name": "Walls (1)",
-                        "u_value": 0.16,
+                        "u_value": 0.18,
                         "wall_type": 2,
-                        "kappa_value": 9,
-                        "total_wall_area": 89.46,
+                        "description": "new",
+                        "kappa_value": 60,
+                        "total_wall_area": 386.14,
                         "is_curtain_walling": "false"
                     },
                     {
-                        "name": "Party wall",
+                        "name": "Internal wall (1)",
                         "u_value": 0,
-                        "wall_type": 4,
-                        "kappa_value": 20,
-                        "total_wall_area": 23.4,
+                        "wall_type": 5,
+                        "kappa_value": 9,
+                        "total_wall_area": 722.83,
                         "is_curtain_walling": "false"
                     }
                 ],
@@ -234,151 +331,359 @@
                 "sap_openings": [
                     {
                         "name": 1,
-                        "type": "Windows (1)",
-                        "width": 2.94,
-                        "height": 2.1,
-                        "location": "Walls (1)",
-                        "orientation": 7
+                        "type": "Roof window",
+                        "width": 0.75,
+                        "height": 1.1,
+                        "location": "Roof (2)",
+                        "orientation": 0
                     },
                     {
                         "name": 2,
-                        "type": "Windows (1)",
-                        "width": 0.57,
-                        "height": 1.21,
-                        "location": "Walls (1)",
-                        "orientation": 3
+                        "type": "Roof window",
+                        "width": 0.95,
+                        "height": 1.1,
+                        "location": "Roof (2)",
+                        "orientation": 0
                     },
                     {
                         "name": 3,
-                        "type": "Windows (1)",
-                        "width": 1.25,
-                        "height": 1.21,
-                        "location": "Walls (1)",
-                        "orientation": 3
+                        "type": "Roof window",
+                        "width": 0.55,
+                        "height": 0.75,
+                        "location": "Roof (2)",
+                        "orientation": 0
                     },
                     {
                         "name": 4,
-                        "type": "Windows (1)",
-                        "width": 1.25,
-                        "height": 1.21,
-                        "location": "Walls (1)",
-                        "orientation": 3
+                        "type": "Roof window",
+                        "width": 0.95,
+                        "height": 1.1,
+                        "location": "Roof (2)",
+                        "orientation": 0
                     },
                     {
                         "name": 5,
                         "type": "Windows (1)",
-                        "width": 1.25,
-                        "height": 1.21,
+                        "width": 2.13,
+                        "height": 1.2,
                         "location": "Walls (1)",
                         "orientation": 3
                     },
                     {
                         "name": 6,
                         "type": "Windows (1)",
-                        "width": 0.57,
-                        "height": 1.06,
+                        "width": 0.62,
+                        "height": 1.2,
                         "location": "Walls (1)",
-                        "orientation": 7
+                        "orientation": 3
                     },
                     {
                         "name": 7,
                         "type": "Windows (1)",
-                        "width": 1.25,
-                        "height": 1.06,
+                        "width": 1.08,
+                        "height": 1.8,
                         "location": "Walls (1)",
-                        "orientation": 7
+                        "orientation": 3
                     },
                     {
                         "name": 8,
                         "type": "Windows (1)",
-                        "width": 1.25,
-                        "height": 1.06,
+                        "width": 0.76,
+                        "height": 1.8,
+                        "location": "Walls (1)",
+                        "orientation": 3
+                    },
+                    {
+                        "name": 9,
+                        "type": "Windows (1)",
+                        "width": 0.77,
+                        "height": 1.8,
                         "location": "Walls (1)",
                         "orientation": 7
                     },
                     {
-                        "name": 9,
-                        "type": "Doors (1)",
-                        "width": 1,
+                        "name": 10,
+                        "type": "Windows (1)",
+                        "width": 0.9,
                         "height": 2.1,
                         "location": "Walls (1)",
-                        "orientation": 3
+                        "orientation": 7
+                    },
+                    {
+                        "name": 11,
+                        "type": "Windows (1)",
+                        "width": 0.6,
+                        "height": 1.2,
+                        "location": "Walls (1)",
+                        "orientation": 7
+                    },
+                    {
+                        "name": 12,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.2,
+                        "location": "Walls (1)",
+                        "orientation": 7
+                    },
+                    {
+                        "name": 13,
+                        "type": "Windows (1)",
+                        "width": 0.62,
+                        "height": 1.2,
+                        "location": "Walls (1)",
+                        "orientation": 7
+                    },
+                    {
+                        "name": 14,
+                        "type": "Windows (1)",
+                        "width": 0.62,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 7
+                    },
+                    {
+                        "name": 15,
+                        "type": "Windows (1)",
+                        "width": 0.62,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 7
+                    },
+                    {
+                        "name": 16,
+                        "type": "Windows (1)",
+                        "width": 4.1,
+                        "height": 2.1,
+                        "location": "Walls (1)",
+                        "orientation": 5
+                    },
+                    {
+                        "name": 17,
+                        "type": "Windows (1)",
+                        "width": 6.95,
+                        "height": 2.4,
+                        "location": "Walls (1)",
+                        "orientation": 5
+                    },
+                    {
+                        "name": 18,
+                        "type": "Windows (1)",
+                        "width": 2,
+                        "height": 2.1,
+                        "location": "Walls (1)",
+                        "orientation": 5
+                    },
+                    {
+                        "name": 19,
+                        "type": "Windows (1)",
+                        "width": 2.34,
+                        "height": 2.1,
+                        "location": "Walls (1)",
+                        "orientation": 5
+                    },
+                    {
+                        "name": 20,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 5
+                    },
+                    {
+                        "name": 21,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 5
+                    },
+                    {
+                        "name": 22,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 5
+                    },
+                    {
+                        "name": 23,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 5
+                    },
+                    {
+                        "name": 24,
+                        "type": "Windows (1)",
+                        "width": 1.6,
+                        "height": 0.35,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 25,
+                        "type": "Windows (1)",
+                        "width": 1.08,
+                        "height": 1.8,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 26,
+                        "type": "Windows (1)",
+                        "width": 1.08,
+                        "height": 1.8,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 27,
+                        "type": "Windows (1)",
+                        "width": 1.08,
+                        "height": 1.8,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 28,
+                        "type": "Windows (1)",
+                        "width": 1.08,
+                        "height": 1.8,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 29,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 30,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 31,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 32,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 33,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 34,
+                        "type": "Windows (1)",
+                        "width": 1.06,
+                        "height": 1.58,
+                        "location": "Walls (1)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 35,
+                        "type": "Doors (1)",
+                        "width": 1.6,
+                        "height": 2.05,
+                        "location": "Walls (1)",
+                        "orientation": 1
                     }
                 ],
-                "construction_year": 2024,
+                "construction_year": 2025,
                 "sap_thermal_bridges": {
                     "thermal_bridges": [
                         {
-                            "length": 10,
-                            "psi_value": 0.04,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "E3"
-                        },
-                        {
-                            "length": 10,
-                            "psi_value": 0.15,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "E2"
-                        },
-                        {
-                            "length": 24.06,
-                            "psi_value": 0.05,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "E4"
-                        },
-                        {
-                            "length": 17.9,
-                            "psi_value": 0.05,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "E5"
-                        },
-                        {
-                            "length": 17.9,
-                            "psi_value": 0.065,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "E6"
-                        },
-                        {
-                            "length": 13.45,
-                            "psi_value": 0.043,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "E10"
-                        },
-                        {
-                            "length": 4.45,
-                            "psi_value": 0.051,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "E12"
-                        },
-                        {
-                            "length": 14.7,
-                            "psi_value": 0.05,
+                            "length": 42.6,
+                            "psi_value": 0.09,
                             "psi_value_source": 1,
                             "thermal_bridge_type": "E16"
                         },
                         {
-                            "length": 9.8,
-                            "psi_value": 0.086,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "E18"
-                        },
-                        {
-                            "length": 4.45,
-                            "psi_value": 0.069,
-                            "psi_value_source": 1,
-                            "thermal_bridge_type": "P1"
-                        },
-                        {
-                            "length": 4.45,
+                            "length": 19.6,
                             "psi_value": 0,
                             "psi_value_source": 1,
-                            "thermal_bridge_type": "P2"
+                            "thermal_bridge_type": "E17"
                         },
                         {
-                            "length": 4.45,
-                            "psi_value": 0,
+                            "length": 79.4,
+                            "psi_value": 0.06,
                             "psi_value_source": 1,
-                            "thermal_bridge_type": "P4"
+                            "thermal_bridge_type": "E5"
+                        },
+                        {
+                            "length": 31.97,
+                            "psi_value": 0.08,
+                            "psi_value_source": 1,
+                            "thermal_bridge_type": "E14"
+                        },
+                        {
+                            "length": 56.5,
+                            "psi_value": 0.14,
+                            "psi_value_source": 1,
+                            "thermal_bridge_type": "E6"
+                        },
+                        {
+                            "length": 65.36,
+                            "psi_value": 0.08,
+                            "psi_value_source": 1,
+                            "thermal_bridge_type": "E11"
+                        },
+                        {
+                            "length": 23.82,
+                            "psi_value": 0.08,
+                            "psi_value_source": 1,
+                            "thermal_bridge_type": "E12"
+                        },
+                        {
+                            "length": 32.68,
+                            "psi_value": 0.06,
+                            "psi_value_source": 1,
+                            "thermal_bridge_type": "R8"
+                        },
+                        {
+                            "length": 65.3,
+                            "psi_value": 0.06,
+                            "psi_value_source": 1,
+                            "thermal_bridge_type": "R6"
+                        },
+                        {
+                            "length": 43.28,
+                            "psi_value": 0.03,
+                            "psi_value_source": 2,
+                            "thermal_bridge_type": "E3"
+                        },
+                        {
+                            "length": 43.28,
+                            "psi_value": 0.04,
+                            "psi_value_source": 2,
+                            "thermal_bridge_type": "E2"
+                        },
+                        {
+                            "length": 101.5,
+                            "psi_value": 0.03,
+                            "psi_value_source": 2,
+                            "thermal_bridge_type": "E4"
                         }
                     ],
                     "thermal_bridge_code": 5
@@ -387,21 +692,23 @@
                 "sap_floor_dimensions": [
                     {
                         "storey": 0,
-                        "u_value": 0.1,
+                        "u_value": 0.14,
                         "floor_type": 2,
-                        "description": "level 0",
+                        "description": "new",
                         "kappa_value": 110,
-                        "storey_height": 2.33,
-                        "heat_loss_area": 30.7,
-                        "total_floor_area": 30.7
+                        "storey_height": 3.02,
+                        "heat_loss_area": 254.05,
+                        "total_floor_area": 254.05
                     },
                     {
                         "storey": 1,
                         "u_value": 0,
                         "floor_type": 3,
-                        "storey_height": 2.55,
+                        "kappa_value": 18,
+                        "storey_height": 2.9,
                         "heat_loss_area": 0,
-                        "total_floor_area": 30.7
+                        "total_floor_area": 194.97,
+                        "kappa_value_from_below": 9
                     }
                 ]
             }
@@ -409,14 +716,14 @@
         "user_interface_name": "JPA Designer 10",
         "windows_overshading": 2,
         "heating_cost_current": {
-            "value": 250,
+            "value": 1494,
             "currency": "GBP"
         },
-        "co2_emissions_current": 0.7,
+        "co2_emissions_current": 1.0,
         "energy_rating_average": 60,
-        "energy_rating_current": 94,
+        "energy_rating_current": 89,
         "lighting_cost_current": {
-            "value": 35,
+            "value": 172,
             "currency": "GBP"
         },
         "main_heating_controls": [
@@ -424,45 +731,49 @@
                 "description": "Time and temperature zone control",
                 "energy_efficiency_rating": 5,
                 "environmental_efficiency_rating": 5
+            },
+            {
+                "description": "Time and temperature zone control",
+                "energy_efficiency_rating": 5,
+                "environmental_efficiency_rating": 5
             }
         ],
-        "has_hot_water_cylinder": "false",
+        "has_hot_water_cylinder": "true",
         "heating_cost_potential": {
-            "value": 250,
+            "value": 1494,
             "currency": "GBP"
         },
         "hot_water_cost_current": {
-            "value": 166,
+            "value": 523,
             "currency": "GBP"
         },
-        "thermal_mass_parameter": 100,
-        "user_interface_version": "2.0.33.1",
-        "co2_emissions_potential": 0.7,
-        "energy_rating_potential": 94,
-        "gas_smart_meter_present": "false",
+        "user_interface_version": "2.0.53.1",
+        "co2_emissions_potential": 1.0,
+        "energy_rating_potential": 89,
+        "gas_smart_meter_present": "true",
         "lighting_cost_potential": {
-            "value": 35,
+            "value": 172,
             "currency": "GBP"
         },
         "schema_version_original": "SAP-Schema-19.1.0",
         "hot_water_cost_potential": {
-            "value": 166,
+            "value": 523,
             "currency": "GBP"
         },
         "is_in_smoke_control_area": "unknown",
         "seller_commission_report": "Y",
-        "energy_consumption_current": 62,
-        "has_fixed_air_conditioning": "false",
+        "energy_consumption_current": 21,
+        "has_fixed_air_conditioning": "true",
         "is_dwelling_export_capable": "true",
         "multiple_glazed_percentage": 100,
         "calculation_software_version": "10.2.2.0",
-        "energy_consumption_potential": 62,
-        "environmental_impact_current": 89,
-        "current_energy_efficiency_band": "A",
-        "environmental_impact_potential": 89,
-        "electricity_smart_meter_present": "false",
+        "energy_consumption_potential": 21,
+        "environmental_impact_current": 97,
+        "current_energy_efficiency_band": "B",
+        "environmental_impact_potential": 97,
+        "electricity_smart_meter_present": "true",
         "has_heated_separate_conservatory": "false",
-        "potential_energy_efficiency_band": "A",
-        "co2_emissions_current_per_floor_area": 11.8
+        "potential_energy_efficiency_band": "B",
+        "co2_emissions_current_per_floor_area": 2.3
     }
 }
