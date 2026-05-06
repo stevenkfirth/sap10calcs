@@ -1518,9 +1518,9 @@ def parse_sap_json(
                                 except KeyError: pass
 
                                 # MCS-Installed-Heat-Pump
-#                                 try: 
-#                                     main_heating.add_mcs_installed_heat_pump().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('mcs_installed_heat_pump'))
-#                                 except KeyError: pass
+                                try: 
+                                    main_heating.add_mcs_installed_heat_pump().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('mcs_installed_heat_pump'))
+                                except KeyError: pass
 
                                 # Central-Heating-Pump-Age
                                 try: 
@@ -1725,18 +1725,30 @@ def parse_sap_json(
                             else:
                                 print(etree.tostring(sap_report, pretty_print=True).decode())
                                 raise Exception('j', 'data', 'sap_heating', 'instantaneous_wwhrs', list(j['data']['sap_heating']['instantaneous_wwhrs'])[0])
+                    if True:
+                        # --- Storage-WWHRS ---
+                        if 'storage_wwhrs'in j['data']['sap_heating']:
+                            storage_wwhrs = sap_heating.add_storage_wwhrs()
+                            # WWHRS-Index-Number
+                            try: 
+                                storage_wwhrs.add_wwhrs_index_number().code = str(j['data']['sap_heating']['storage_wwhrs'].pop('wwhrs_index_number'))
+                            except KeyError: pass
+                            # WWHRS-Store-Volume
+                            try: 
+                                storage_wwhrs.add_wwhrs_store_volume().code = str(j['data']['sap_heating']['storage_wwhrs'].pop('wwhrs_store_volume'))
+                            except KeyError: pass
+                            # Storage-WWHRS-Efficiency
 
-                    # --- Storage-WWHRS ---
+                            # Storage-WWHRS-Manufacturer
+                            
+                            # Storage-WWHRS-Model
 
-                        # WWHRS-Index-Number
-
-                        # WWHRS-Store-Volume
-
-                        # Storage-WWHRS-Efficiency
-
-                        # Storage-WWHRS-Manufacturer
-                        
-                        # Storage-WWHRS-Model
+                            #
+                            if len(j['data']['sap_heating']['storage_wwhrs']) == 0:
+                                del j['data']['sap_heating']['storage_wwhrs']
+                            else:
+                                print(etree.tostring(sap_report, pretty_print=True).decode())
+                                raise Exception('j', 'data', 'sap_heating', 'storage_wwhrs', list(j['data']['sap_heating']['storage_wwhrs'])[0])
 
                     # Shower-Outlets
                     if 'shower_outlets'in j['data']['sap_heating']:
