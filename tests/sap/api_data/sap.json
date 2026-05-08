@@ -1,0 +1,442 @@
+{
+    "data": {
+        "der": 22.19,
+        "ter": 11.69,
+        "dfee": 51.6,
+        "dper": 126.77,
+        "tfee": 28.7,
+        "tper": 61.46,
+        "uprn": 12215130,
+        "roofs": [
+            {
+                "description": "Average thermal transmittance 0.15 W/m\u00b2K",
+                "energy_efficiency_rating": 5,
+                "environmental_efficiency_rating": 5
+            }
+        ],
+        "walls": [
+            {
+                "description": "Average thermal transmittance 0.18 W/m\u00b2K",
+                "energy_efficiency_rating": 5,
+                "environmental_efficiency_rating": 5
+            }
+        ],
+        "floors": [
+            {
+                "description": "Average thermal transmittance 0.14 W/m\u00b2K",
+                "energy_efficiency_rating": 5,
+                "environmental_efficiency_rating": 5
+            }
+        ],
+        "status": "entered",
+        "tenure": "ND",
+        "windows": {
+            "description": "High performance glazing",
+            "energy_efficiency_rating": 5,
+            "environmental_efficiency_rating": 5
+        },
+        "lighting": {
+            "description": "Excellent lighting efficiency",
+            "energy_efficiency_rating": 5,
+            "environmental_efficiency_rating": 5
+        },
+        "postcode": "W3 8SB",
+        "data_type": 4,
+        "hot_water": {
+            "description": "From main system",
+            "energy_efficiency_rating": 4,
+            "environmental_efficiency_rating": 4
+        },
+        "post_town": "London",
+        "built_form": 3,
+        "created_at": "2025-10-20 08:55:51",
+        "living_area": 22,
+        "orientation": 2,
+        "region_code": 17,
+        "report_type": 3,
+        "sap_heating": {
+            "thermal_store": 1,
+            "shower_outlets": [
+                {
+                    "shower_wwhrs": 1,
+                    "shower_flow_rate": 14,
+                    "shower_outlet_type": 3
+                }
+            ],
+            "water_fuel_type": 1,
+            "water_heating_code": 901,
+            "main_heating_details": [
+                {
+                    "has_fghrs": "false",
+                    "main_fuel_type": 1,
+                    "combi_boiler_type": 1,
+                    "heat_emitter_type": 1,
+                    "is_flue_fan_present": "false",
+                    "main_heating_number": 1,
+                    "is_condensing_boiler": "true",
+                    "main_heating_control": 2106,
+                    "is_interlocked_system": "false",
+                    "main_heating_category": 2,
+                    "main_heating_fraction": 0.92,
+                    "gas_or_oil_boiler_type": 2,
+                    "main_heating_flue_type": 5,
+                    "central_heating_pump_age": 2,
+                    "main_heating_data_source": 1,
+                    "main_heating_index_number": 18830,
+                    "has_separate_delayed_start": "false",
+                    "is_oil_pump_in_heated_space": "false",
+                    "is_main_heating_hetas_approved": "false",
+                    "condensing_boiler_heat_distribution": 80,
+                    "is_central_heating_pump_in_heated_space": "true"
+                },
+                {
+                    "has_fghrs": "false",
+                    "main_fuel_type": 39,
+                    "main_heating_code": 422,
+                    "main_heating_number": 2,
+                    "main_heating_control": 2204,
+                    "main_heating_category": 8,
+                    "main_heating_fraction": 0.08,
+                    "main_heating_data_source": 3,
+                    "is_oil_pump_in_heated_space": "false",
+                    "is_main_heating_hetas_approved": "false"
+                }
+            ],
+            "has_hot_water_cylinder": "false",
+            "has_cylinder_thermostat": "true",
+            "has_fixed_air_conditioning": "false",
+            "secondary_heating_category": 1,
+            "is_immersion_for_summer_use": "false",
+            "is_hot_water_separately_timed": "true",
+            "main_heating_systems_interaction": 2,
+            "is_heat_pump_assisted_by_immersion": "false"
+        },
+        "sap_version": 10.2,
+        "schema_type": "SAP-Schema-19.1.0",
+        "uprn_source": "Address Matched",
+        "country_code": "ENG",
+        "main_heating": [
+            {
+                "description": "Boiler and radiators, mains gas",
+                "energy_efficiency_rating": 5,
+                "environmental_efficiency_rating": 4
+            }
+        ],
+        "sap_lighting": [
+            [
+                {
+                    "lighting_power": 5,
+                    "lighting_outlets": 10,
+                    "lighting_efficacy": 103
+                }
+            ]
+        ],
+        "terrain_type": 1,
+        "air_tightness": {
+            "description": "Air permeability [AP50] = 4.54 m\u00b3/h.m\u00b2 (as tested)",
+            "energy_efficiency_rating": 4,
+            "environmental_efficiency_rating": 4
+        },
+        "dwelling_type": "Mid-floor flat",
+        "language_code": 1,
+        "property_type": 2,
+        "pv_connection": 2,
+        "address_line_1": "Flat 2",
+        "address_line_2": "2 Crown Street",
+        "address_line_3": "Acton",
+        "assessment_date": "2025-10-09",
+        "assessment_type": "SAP",
+        "completion_date": "2025-10-20",
+        "inspection_date": "2025-10-09",
+        "sap_ventilation": {
+            "psv_count": 0,
+            "wall_type": 2,
+            "pressure_test": 1,
+            "wet_rooms_count": 1,
+            "air_permeability": 4.54,
+            "open_flues_count": 0,
+            "ventilation_type": 8,
+            "has_draught_lobby": "false",
+            "other_flues_count": 0,
+            "closed_flues_count": 0,
+            "extract_fans_count": 0,
+            "boilers_flues_count": 0,
+            "open_chimneys_count": 0,
+            "sheltered_sides_count": 2,
+            "blocked_chimneys_count": 0,
+            "flueless_gas_fires_count": 0,
+            "mechanical_vent_duct_type": 2,
+            "mechanical_vent_duct_placement": 1,
+            "mechanical_vent_duct_insulation": 2,
+            "mechanical_ventilation_data_source": 1,
+            "mechanical_vent_system_index_number": 500140,
+            "mechanical_vent_duct_insulation_level": 2,
+            "is_mechanical_vent_approved_installer_scheme": "true"
+        },
+        "design_water_use": 1,
+        "sap_data_version": 10.2,
+        "sap_flat_details": {
+            "level": 2,
+            "storeys": 3
+        },
+        "total_floor_area": 60,
+        "transaction_type": 6,
+        "cold_water_source": 1,
+        "conservatory_type": 1,
+        "registration_date": "2025-10-20",
+        "sap_energy_source": {
+            "electricity_tariff": 1
+        },
+        "sap_opening_types": [
+            {
+                "name": "Doors (1)",
+                "type": 1,
+                "u_value": 1.2,
+                "data_source": 3,
+                "description": "As per spec",
+                "glazing_type": 1,
+                "isargonfilled": "false"
+            },
+            {
+                "name": "Windows (1)",
+                "type": 4,
+                "u_value": 1.2,
+                "frame_type": 2,
+                "data_source": 3,
+                "description": "As per spec",
+                "glazing_gap": 3,
+                "frame_factor": 0.7,
+                "glazing_type": 7,
+                "isargonfilled": "true",
+                "solar_transmittance": 0.63
+            }
+        ],
+        "secondary_heating": {
+            "description": "None",
+            "energy_efficiency_rating": 0,
+            "environmental_efficiency_rating": 0
+        },
+        "lowest_storey_area": 0,
+        "sap_building_parts": [
+            {
+                "sap_roofs": [
+                    {
+                        "name": "Roof (1)",
+                        "u_value": 0.15,
+                        "roof_type": 2,
+                        "kappa_value": 9,
+                        "total_roof_area": 0.62
+                    },
+                    {
+                        "name": "Party ceilings (1)",
+                        "u_value": 0,
+                        "roof_type": 4,
+                        "kappa_value": 20,
+                        "total_roof_area": 59.1
+                    }
+                ],
+                "sap_walls": [
+                    {
+                        "name": "Walls (2)",
+                        "u_value": 0.18,
+                        "wall_type": 2,
+                        "description": "refurb superfoil",
+                        "kappa_value": 9,
+                        "total_wall_area": 52.44,
+                        "is_curtain_walling": "false"
+                    },
+                    {
+                        "name": "Walls (1)",
+                        "u_value": 0.18,
+                        "wall_type": 2,
+                        "description": "sheltered to lobby superfoil",
+                        "kappa_value": 9,
+                        "total_wall_area": 10.49,
+                        "is_curtain_walling": "false"
+                    },
+                    {
+                        "name": "Party wall",
+                        "u_value": 0,
+                        "wall_type": 4,
+                        "description": "party",
+                        "kappa_value": 20,
+                        "total_wall_area": 16.87,
+                        "is_curtain_walling": "false"
+                    },
+                    {
+                        "name": "Internal wall (1)",
+                        "u_value": 0,
+                        "wall_type": 5,
+                        "description": "internal stud",
+                        "kappa_value": 9,
+                        "total_wall_area": 97.74,
+                        "is_curtain_walling": "false"
+                    }
+                ],
+                "identifier": "Main Dwelling",
+                "sap_openings": [
+                    {
+                        "name": 1,
+                        "type": "Windows (1)",
+                        "width": 0.65,
+                        "height": 1.4,
+                        "location": "Walls (2)",
+                        "orientation": 6
+                    },
+                    {
+                        "name": 2,
+                        "type": "Windows (1)",
+                        "width": 1.05,
+                        "height": 2.3,
+                        "location": "Walls (2)",
+                        "orientation": 8
+                    },
+                    {
+                        "name": 3,
+                        "type": "Windows (1)",
+                        "width": 0.9,
+                        "height": 1.9,
+                        "location": "Walls (2)",
+                        "orientation": 6
+                    },
+                    {
+                        "name": 4,
+                        "type": "Windows (1)",
+                        "width": 0.75,
+                        "height": 2.3,
+                        "location": "Walls (2)",
+                        "orientation": 8
+                    },
+                    {
+                        "name": 5,
+                        "type": "Windows (1)",
+                        "width": 1.3,
+                        "height": 2.3,
+                        "location": "Walls (2)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 6,
+                        "type": "Windows (1)",
+                        "width": 1.05,
+                        "height": 2.3,
+                        "location": "Walls (2)",
+                        "orientation": 8
+                    },
+                    {
+                        "name": 7,
+                        "type": "Windows (1)",
+                        "width": 0.65,
+                        "height": 2.3,
+                        "location": "Walls (2)",
+                        "orientation": 3
+                    },
+                    {
+                        "name": 8,
+                        "type": "Windows (1)",
+                        "width": 1.15,
+                        "height": 2.3,
+                        "location": "Walls (2)",
+                        "orientation": 2
+                    },
+                    {
+                        "name": 9,
+                        "type": "Windows (1)",
+                        "width": 0.65,
+                        "height": 2.3,
+                        "location": "Walls (2)",
+                        "orientation": 1
+                    },
+                    {
+                        "name": 10,
+                        "type": "Doors (1)",
+                        "width": 1,
+                        "height": 2,
+                        "location": "Walls (1)",
+                        "orientation": 0
+                    }
+                ],
+                "construction_year": 2025,
+                "sap_thermal_bridges": {
+                    "thermal_bridge_code": 1
+                },
+                "building_part_number": 1,
+                "sap_floor_dimensions": [
+                    {
+                        "storey": 1,
+                        "u_value": 0.14,
+                        "floor_type": 3,
+                        "description": "FF",
+                        "kappa_value": 18,
+                        "storey_height": 2.28,
+                        "heat_loss_area": 59.72,
+                        "total_floor_area": 59.72,
+                        "kappa_value_from_below": 9
+                    }
+                ]
+            }
+        ],
+        "user_interface_name": "JPA Designer 10",
+        "windows_overshading": 2,
+        "heating_cost_current": {
+            "value": 349,
+            "currency": "GBP"
+        },
+        "co2_emissions_current": 1.2,
+        "energy_rating_average": 60,
+        "energy_rating_current": 78,
+        "lighting_cost_current": {
+            "value": 42,
+            "currency": "GBP"
+        },
+        "main_heating_controls": [
+            {
+                "description": "Programmer, room thermostat and TRVs",
+                "energy_efficiency_rating": 4,
+                "environmental_efficiency_rating": 4
+            },
+            {
+                "description": "Programmer and room thermostat",
+                "energy_efficiency_rating": 3,
+                "environmental_efficiency_rating": 3
+            }
+        ],
+        "has_hot_water_cylinder": "false",
+        "heating_cost_potential": {
+            "value": 349,
+            "currency": "GBP"
+        },
+        "hot_water_cost_current": {
+            "value": 216,
+            "currency": "GBP"
+        },
+        "user_interface_version": "2.0.54.3",
+        "co2_emissions_potential": 1.2,
+        "energy_rating_potential": 78,
+        "gas_smart_meter_present": "true",
+        "lighting_cost_potential": {
+            "value": 42,
+            "currency": "GBP"
+        },
+        "schema_version_original": "SAP-Schema-19.1.0",
+        "hot_water_cost_potential": {
+            "value": 216,
+            "currency": "GBP"
+        },
+        "is_in_smoke_control_area": "unknown",
+        "seller_commission_report": "Y",
+        "energy_consumption_current": 115,
+        "has_fixed_air_conditioning": "false",
+        "is_dwelling_export_capable": "false",
+        "multiple_glazed_percentage": 100,
+        "calculation_software_version": "10.2.2.0",
+        "energy_consumption_potential": 115,
+        "environmental_impact_current": 83,
+        "current_energy_efficiency_band": "C",
+        "environmental_impact_potential": 83,
+        "electricity_smart_meter_present": "true",
+        "has_heated_separate_conservatory": "false",
+        "potential_energy_efficiency_band": "C",
+        "co2_emissions_current_per_floor_area": 20.1
+    }
+}

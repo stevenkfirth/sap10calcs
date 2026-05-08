@@ -1022,10 +1022,10 @@ def parse_sap_json(
             # --- SAP-Property-Details ---
             sap_property_details = sap10_data.add_sap_property_details()
 
-#         # Property-Type
-    #         try: 
-    #             sap_property_details.add_property_type().code = str(j['data'].pop('property_type'))
-    #         except KeyError: pass
+            # Property-Type
+            try: 
+                sap_property_details.add_property_type().code = report_header.property_type.code 
+            except AttributeError: pass  # AttributeError: 'NoneType' object has no attribute 'code'
 
             # Built-Form
             try: 
@@ -1469,10 +1469,31 @@ def parse_sap_json(
                                     main_heating.add_fghrs_energy_source().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('fghrs_energy_source'))
                                 except KeyError: pass
 
-                                # Main-Heating-Declared-Values 
-                                try: 
-                                    main_heating.add_main_heating_declared_values().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index].pop('main_heating_declared_values'))
-                                except KeyError: pass                                
+                                if 'main_heating_declared_values' in j['data']['sap_heating']['main_heating_details'][main_heating_index]:
+                                    # ---Main-Heating-Declared-Values ---
+                                    main_heating_declared_values = main_heating.add_main_heating_declared_values()
+                                    # Efficiency
+                                    try: 
+                                        main_heating_declared_values.add_efficiency().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['main_heating_declared_values'].pop('efficiency'))
+                                    except KeyError: pass
+                                    # Make-Model
+                                    try: 
+                                        main_heating_declared_values.add_make_model().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['main_heating_declared_values'].pop('make_model'))
+                                    except KeyError: pass
+                                    # Test-Method
+                                    try: 
+                                        main_heating_declared_values.add_test_method().code = str(j['data']['sap_heating']['main_heating_details'][main_heating_index]['main_heating_declared_values'].pop('test_method'))
+                                    except KeyError: pass
+                                    #
+                                    if len(j['data']['sap_heating']['main_heating_details'][main_heating_index]['main_heating_declared_values']) == 0:
+                                        del j['data']['sap_heating']['main_heating_details'][main_heating_index]['main_heating_declared_values']
+                                    else:
+                                        print(etree.tostring(sap_report, pretty_print=True).decode())
+                                        raise Exception('j', 'data', 'sap_heating', 'main_heating_details', main_heating_index, 'main_heating_declared_values',
+                                                        list(j['data']['sap_heating']['main_heating_details'][main_heating_index]['main_heating_declared_values'])[0])
+
+
+                                                       
 
                                 
                                 #

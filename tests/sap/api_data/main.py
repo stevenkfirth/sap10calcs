@@ -27,7 +27,7 @@ url_sap = 'http://127.0.0.1:8000/calc/sap10' if local else 'https://netzeroapis.
 
 for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
 
-    if i < 140795: continue
+    if i < 2685: continue
 
     print(i, fn)
 
@@ -44,67 +44,74 @@ for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
             logging.error(f'{i}, {fn}, {str(err)}')
             continue
         else:
-            with open('rdsap.json', 'w') as f: json.dump(j, f, indent = 4)
+            with open('sap.json', 'w') as f: json.dump(j, f, indent = 4)
             print(i, fn)
             raise err
         
-    continue
+    with open(os.path.join('output_data', 'sap_xml', fn.replace('.json', '.xml')), 'w') as f: f.write(etree.tostring(sap_report, pretty_print=True).decode())
+    with open('sap__display.xml', 'w') as f: f.write(sap_report.display())
 
-    response_rdsap = sap10calcs.rdsap(
-        input_lxml = rdsap_report,
-        auth_token = None,
-        url = url_rdsap
-    )
-
-    if response_rdsap['rdsap_calculation_success'] == False:
-        msg = response_rdsap['rdsap_calculation_error_message']
-        if (
-            msg.startswith('The text value of the Window-Wall-Type XML element is incorrect')
-            or msg.startswith('The text value of the Wall-Thickness XML element is incorrect ("0")')
-            or msg.startswith('The text value of the Measurement-Type XML element is incorrect (current value is "2")')
-            or msg.startswith('The text value of the Room-Height XML element is incorrect ("0.0")')
-            or msg.startswith('The Description XML element is missing. This is a child element of the [0] SAP-Special-Feature XML element.')
-            or msg.startswith('The Energy-Feature XML element is missing.')
-            or msg.startswith('The Emissions-Feature XML element is missing.')
-            or msg.startswith('The text value of the Wall-Area XML element is incorrect ("0.0").')
-            or msg.startswith('The text value of the Cylinder-Size XML element is incorrect (actual size included in Solar-Water-Heating-Details).')
-        ):  
-            print(i, fn, response_rdsap['rdsap_calculation_error_message'])
-            logging.error(f'{i}, {fn}, {response_rdsap['rdsap_calculation_error_message']}')
-        else:
-            with open('rdsap.json', 'w') as f: json.dump(j, f, indent = 4)
-            with open('rdsap.xml', 'w') as f: f.write(etree.tostring(rdsap_report, pretty_print=True).decode())
-            with open('rdsap__display.xml', 'w') as f: f.write(rdsap_report.display())
-            with open('rdsap_response.json', 'w') as f: json.dump(response_rdsap, f, indent = 4)
-            raise Exception(response_rdsap['rdsap_calculation_error_traceback'])
-        
-    #continue
-
-    tree_sap, sap_report = sap10calcs.parse_xml(StringIO(response_rdsap['sap_xml'])) 
+    # ignore cases
+    flag = False
+    # no data
+    if len(sap_report.sap10_data.sap_property_details) == 0:
+        continue
+    # - heat pumps or community heating
+    for main_heating in sap_report.sap10_data.sap_property_details.sap_heating.main_heating_details:
+        if main_heating.main_heating_category.code in ['4', '5', '6', '7', '9']:
+            flag = True
+        if main_heating.heat_pump_heat_distribution is not None:
+            flag = True
+    if flag: continue
+    
     response_sap = sap10calcs.calculate(
         input_lxml = sap_report,
+        calculation_method='Energy rating',
         auth_token = None,
         url = url_sap
     )
     if response_sap['sap_calculation_success'] == False:
-        with open('rdsap.json', 'w') as f: json.dump(j, f, indent = 4)
-        with open('rdsap.xml', 'w') as f: f.write(etree.tostring(rdsap_report, pretty_print=True).decode())
-        with open('rdsap__display.xml', 'w') as f: f.write(rdsap_report.display())
-        with open('rdsap_response.json', 'w') as f: json.dump(response_rdsap, f, indent = 4)
+        if (
+            response_sap['sap_calculation_error_message'].startswith('The text value of a Storey-Height XML element is incorrect ("0.0").')
+            or response_sap['sap_calculation_error_message'].startswith('PV diverter calculations still to be implemented. Please request this.')
+            or response_sap['sap_calculation_error_message'].startswith('G6, 7b, p66, FGHRS, storage combi boiler')
+            or response_sap['sap_calculation_error_message'].startswith('Table D1')
+            or response_sap['sap_calculation_error_message'].startswith('A SAP-Opening-Type XML element with the name')
+            or response_sap['sap_calculation_error_message'].startswith('The Hot-Water-Storage-Size XML element is missing.')
+            or response_sap['sap_calculation_error_message'].startswith('The Efficiency XML element is missing. This is the child element of the Secondary-Heating-Declared-Values XML element.')
+            or response_sap['sap_calculation_error_message'].startswith('The value of the Has-Hot-Water-Cylinder XML element is incorrect')
+            or response_sap['sap_calculation_error_message'].startswith('table_12a_high_rate_fraction')
+            or response_sap['sap_calculation_error_message'].startswith('The Hot-Water-Store-Insulation-Thickness XML element is missing.')
+            or response_sap['sap_calculation_error_message'].startswith('The value of the FGHRS-Index-Number XML element')
+            or response_sap['sap_calculation_error_message'].startswith('The text value of a U_Value XML element is incorrect ("0.0").')
+            or response_sap['sap_calculation_error_message'].startswith('The Water-Fuel-Type XML element is missing.')
+            or response_sap['sap_calculation_error_message'].startswith('SAP cooling is still to be implemented in the API.')
+            or response_sap['sap_calculation_error_message'].startswith('A Is-Central-Heating-Pump-In-Heated-Space XML element is missing.')
+            or response_sap['sap_calculation_error_message'].startswith('A Heat-Emitter-Type XML element is missing.')
+            or response_sap['sap_calculation_error_message'].startswith('has_thermal_store_or_CPSU_separate_timer_for_heating_the_store')
+            or response_sap['sap_calculation_error_message'].startswith('type_of_water_storage')
+            or response_sap['sap_calculation_error_message'].startswith('Proportion of solar heating to water heating')
+            ):
+            print((i, fn, response_sap['sap_calculation_error_message']))
+            logging.error(f'{i}, {fn}, {response_sap['sap_calculation_error_message']}')
+            continue
+        with open('sap.json', 'w') as f: json.dump(j, f, indent = 4)
         with open('sap.xml', 'w') as f: f.write(etree.tostring(sap_report, pretty_print=True).decode())
         with open('sap__display.xml', 'w') as f: f.write(sap_report.display())
         with open('sap_response.json', 'w') as f: json.dump(response_sap, f, indent = 4)
         raise Exception(response_sap['sap_calculation_error_traceback'])
+    
+    with open(os.path.join('output_data', 'energy_rating', fn), 'w') as f: json.dump(response_sap, f, indent = 4)
 
 
-    #break
+    
 
     #fn_out = os.path.join('output_data', 'rdsap_xml_display', fn.replace('.json', '__display.xml'))
     #with open(fn_out, 'w') as f: f.write(root.display())
 
     #print(etree.tostring(root, pretty_print=True).decode())
 
-    #break
+    
 
 
 
