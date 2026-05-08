@@ -762,32 +762,68 @@ def parse_sap_json(
 
             # Lighting-Cost-Current
             try: 
-                energy_use.add_lighting_cost_current().code = str(j['data'].pop('lighting_cost_current'))
+                x = j['data'].pop('lighting_cost_current')
+                d = energy_use.add_lighting_cost_current()
+                if isinstance(x, dict):
+                    d.code = str(x.get('value',''))
+                    d.attrib['currency'] = x.get('currency', '')
+                else:
+                    d.code = str(x)
             except KeyError: pass
 
             # Lighting-Cost-Potential
             try: 
-                energy_use.add_lighting_cost_potential().code = str(j['data'].pop('lighting_cost_potential'))
+                x = j['data'].pop('lighting_cost_potential')
+                d = energy_use.add_lighting_cost_potential()
+                if isinstance(x, dict):
+                    d.code = str(x.get('value',''))
+                    d.attrib['currency'] = x.get('currency', '')
+                else:
+                    d.code = str(x)
             except KeyError: pass
 
             # Heating-Cost-Current
             try: 
-                energy_use.add_heating_cost_current().code = str(j['data'].pop('heating_cost_current'))
+                x = j['data'].pop('heating_cost_current')
+                d = energy_use.add_heating_cost_current()
+                if isinstance(x, dict):
+                    d.code = str(x.get('value',''))
+                    d.attrib['currency'] = x.get('currency', '')
+                else:
+                    d.code = str(x)
             except KeyError: pass
 
             # Heating-Cost-Potential
             try: 
-                energy_use.add_heating_cost_potential().code = str(j['data'].pop('heating_cost_potential'))
+                x = j['data'].pop('heating_cost_potential')
+                d = energy_use.add_heating_cost_potential()
+                if isinstance(x, dict):
+                    d.code = str(x.get('value',''))
+                    d.attrib['currency'] = x.get('currency', '')
+                else:
+                    d.code = str(x)
             except KeyError: pass
 
             # Hot-Water-Cost-Current
             try: 
-                energy_use.add_hot_water_cost_current().code = str(j['data'].pop('hot_water_cost_current'))
+                x = j['data'].pop('hot_water_cost_current')
+                d = energy_use.add_hot_water_cost_current()
+                if isinstance(x, dict):
+                    d.code = str(x.get('value',''))
+                    d.attrib['currency'] = x.get('currency', '')
+                else:
+                    d.code = str(x)
             except KeyError: pass
 
             # Hot-Water-Cost-Potential
             try: 
-                energy_use.add_hot_water_cost_potential().code = str(j['data'].pop('hot_water_cost_potential'))
+                x = j['data'].pop('hot_water_cost_potential')
+                d = energy_use.add_hot_water_cost_potential()
+                if isinstance(x, dict):
+                    d.code = str(x.get('value',''))
+                    d.attrib['currency'] = x.get('currency', '')
+                else:
+                    d.code = str(x)
             except KeyError: pass
 
         if True:

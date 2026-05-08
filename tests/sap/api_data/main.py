@@ -27,7 +27,7 @@ url_sap = 'http://127.0.0.1:8000/calc/sap10' if local else 'https://netzeroapis.
 
 for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
 
-    if i < 2685: continue
+    if i < 26014: continue
 
     print(i, fn)
 
@@ -64,6 +64,7 @@ for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
             flag = True
     if flag: continue
     
+    # energy_rating
     response_sap = sap10calcs.calculate(
         input_lxml = sap_report,
         calculation_method='Energy rating',
@@ -91,6 +92,23 @@ for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
             or response_sap['sap_calculation_error_message'].startswith('has_thermal_store_or_CPSU_separate_timer_for_heating_the_store')
             or response_sap['sap_calculation_error_message'].startswith('type_of_water_storage')
             or response_sap['sap_calculation_error_message'].startswith('Proportion of solar heating to water heating')
+            or response_sap['sap_calculation_error_message'].startswith('space_heating_main_system_2_other_fuel_price')
+            or response_sap['sap_calculation_error_message'].startswith('The Ground-Floor-Type XML element is missing.')
+            or response_sap['sap_calculation_error_message'].startswith('table_6b')
+            or response_sap['sap_calculation_error_message'].startswith('get_water_heating_fuel_category')
+            or response_sap['sap_calculation_error_message'].startswith('get_responsiveness')
+            or response_sap['sap_calculation_error_message'].startswith('G5, 7a, p66, FGHRS, combi boiler, keep hot facility')
+            or response_sap['sap_calculation_error_message'].startswith('A Main-Fuel-Type XML element is missing.')
+            or response_sap['sap_calculation_error_message'].startswith('get_table_9_Th2__NA')
+            or response_sap['sap_calculation_error_message'].startswith('table_371 referred to with control_index_number')
+            or response_sap['sap_calculation_error_message'].startswith('The value of a Main-Fuel-Type XML element')  # ...does not match the fuel used by the specified heating system.
+            or response_sap['sap_calculation_error_message'].startswith('is_storage_and_direct_acting_system')
+            or response_sap['sap_calculation_error_message'].startswith('The value of the Has-Hot-Water-Cylinder XML element should be True')
+            or response_sap['sap_calculation_error_message'].startswith('value_241a - Space heating - main system 2 (electric off-peak tariff), High-rate fraction')
+            or fn == '0300-3346-7180-2225-7015.json'
+            or fn == '0310-3650-5030-2274-8845.json'
+            or fn == '0320-3597-1050-2625-5901.json'
+            or fn == '0330-3563-6090-2125-8961.json'
             ):
             print((i, fn, response_sap['sap_calculation_error_message']))
             logging.error(f'{i}, {fn}, {response_sap['sap_calculation_error_message']}')
@@ -100,10 +118,31 @@ for i, fn in enumerate(os.listdir(os.path.join('input_data', 'json_indented'))):
         with open('sap__display.xml', 'w') as f: f.write(sap_report.display())
         with open('sap_response.json', 'w') as f: json.dump(response_sap, f, indent = 4)
         raise Exception(response_sap['sap_calculation_error_traceback'])
-    
     with open(os.path.join('output_data', 'energy_rating', fn), 'w') as f: json.dump(response_sap, f, indent = 4)
 
-
+    # epc
+    response_sap = sap10calcs.calculate(
+        input_lxml = sap_report,
+        calculation_method='EPC costs, emissions and primary energy',
+        auth_token = None,
+        url = url_sap,
+        year = sap_report.report_header.completion_date.value.year,
+        month = sap_report.report_header.completion_date.value.month,
+        day = sap_report.report_header.completion_date.value.day,
+    )
+    if response_sap['sap_calculation_success'] == False:
+        if (
+            'the Postcode XML element is not valid' in response_sap['sap_calculation_error_message']
+        ):
+            print((i, fn, response_sap['sap_calculation_error_message']))
+            logging.error(f'{i}, {fn}, {response_sap['sap_calculation_error_message']}')
+            continue
+        with open('sap.json', 'w') as f: json.dump(j, f, indent = 4)
+        with open('sap.xml', 'w') as f: f.write(etree.tostring(sap_report, pretty_print=True).decode())
+        with open('sap__display.xml', 'w') as f: f.write(sap_report.display())
+        with open('sap_response.json', 'w') as f: json.dump(response_sap, f, indent = 4)
+        raise Exception(response_sap['sap_calculation_error_traceback'])
+    with open(os.path.join('output_data', 'epc', fn), 'w') as f: json.dump(response_sap, f, indent = 4)
     
 
     #fn_out = os.path.join('output_data', 'rdsap_xml_display', fn.replace('.json', '__display.xml'))
